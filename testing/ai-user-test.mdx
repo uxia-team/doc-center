@@ -5,45 +5,98 @@ description: "Run AI usability tests on prototypes, live products, or design flo
 icon: "mouse-pointer-click"
 ---
 
+An AI User Test lets you validate your product with synthetic testers — AI-generated users who independently explore your design, attempt a real goal, and narrate their reasoning as they go. You get the depth of unmoderated usability testing without recruiting, scheduling, or waiting for participants.
 
-
-- **Mission**: the overall goal you want testers to achieve (e.g. _"Find and purchase a pair of running shoes under \$100"_)
-- **Scenario** — optional context that sets the scene for the tester (e.g. _"You're shopping for a gift and have a fixed budget"_)
-- **Designs or URL** — upload a Figma file, image, or prototype link for AI User Tests; paste a live URL for AI Live Website Tests
-
-An AI User Test lets you validate your product with synthetic testers — AI-generated users who independently explore your design, attempt real goals, and narrate their reasoning as they go. You get the depth of unmoderated usability testing without scheduling, recruiting, or waiting for participants.
+This page walks through the full test builder, step by step, so you know exactly what to enter at each stage.
 
 ## What you can test
 
 Uxia's AI testers work across a wide range of formats and environments:
 
-- Figma prototypes (interactive and static)
-- Live websites and web applications
-- Staging and pre-production environments
-- Gated products (provide credentials to unlock authenticated flows)
-- Complex multi-step flows and non-standard interfaces
-- Partially built or in-progress products
+- Live websites and web applications (public, staging, or pre-production)
+- Prototypes and generated apps from Figma Make, Figma prototypes, Lovable, Base44, Google Stitch, and Claude
+- Gated products — provide credentials to unlock authenticated flows
+- Static designs, image sets, and video walkthroughs
+- Complex multi-step flows, and partially built or in-progress products
 
-## How to set up an AI User Test
+## Building an AI User Test
+
+The builder runs through six steps — **Source**, **Mission & Scenario**, **Post-Test Questions**, **Audience**, **Advanced settings**, and **Test Summary**. A progress bar at the bottom tracks how far along you are, and you can move back and forth between steps at any time.
 
 <Steps>
-  <Step title="Create a new test">
-    From your Uxia dashboard, select **AI User Test** and give your test a name. Choose the type of design you're testing — a Figma prototype, a live URL, or a static design file.
+  <Step title="Create the test">
+    From the dashboard, click **Create test** and choose **AI User Test**. Give the test a title and, optionally, assign it to a project, then click **Create test** to open the builder.
   </Step>
-  <Step title="Define your synthetic audience">
-    Configure the profile of your synthetic testers. Set demographics (age range, location, occupation), psychographic attributes (tech-savviness, domain familiarity, attitudes), or upload a persona file to construct testers who match your real users.
+  <Step title="Choose your source">
+    Pick how you want to build the test.
+
+    <Tabs>
+      <Tab title="Live Source">
+        Test a live website or a live prototype by entering its URL. Compatible with Figma Make, Figma Proto, Lovable, Base44, Google Stitch, Claude, and any browser-accessible site.
+
+        - **URL** — paste a valid public URL (`www.example.com` or `https://example.com`). Uxia fetches a snapshot automatically and verifies compatibility, which usually takes a few seconds. Testers will navigate the exact URL you enter.
+        - **Viewport** — choose the screen size testers experience: Desktop (1920×1080), Laptop (1366×768), Tablet (1024×768), Mobile (390×844), or a Custom size.
+      </Tab>
+      <Tab title="Media Source">
+        Upload images or a video and set up the flow you want testers to follow. Use this when you're testing static screens or a recorded walkthrough rather than a live, interactive product.
+      </Tab>
+    </Tabs>
   </Step>
-  <Step title="Write your mission and scenario">
-    Give testers a **mission** — the specific goal they need to accomplish — and a **scenario** that frames the context of their visit. A clear mission produces focused, actionable results. For example: _"You're looking for a project management tool for a remote team of five. Explore this app and sign up for a plan."_
+  <Step title="Write the mission and scenario">
+    This is where you tell testers what to do and why.
+
+    **Tester Mission** _(required)_ — a short, clear instruction describing what you want the AI user to achieve. It defines the goal of the session and keeps feedback focused and actionable. Keep it as specific and granular as possible.
+
+    <Tip>
+      Good missions read like a single concrete task:
+
+      - "Complete the registration flow using a social login."
+      - "Upgrade your plan from free to premium using a credit card."
+      - "Find and purchase one ticket for tonight's 9:00 PM showing."
+    </Tip>
+
+    **Stop Condition** _(required for live sources)_ — define exactly when the run should stop, so testers know when the goal is reached. For example: _"Stop once I have completed checkout and reached the order confirmation page."_
+
+    **Test Scenario** _(optional)_ — a short backstory that gives context to the test. It helps testers imagine a realistic situation so their behavior is closer to a real user's. It's not about _what_ to do (that's the mission), but _what's happening in the tester's life_ that leads to the action. For example: _"You've just moved to another country and want to open a bank account to receive your salary."_
+
+    <Note>
+      Each field has a **Review** helper that refines your wording for clarity. Note that certain flows aren't supported by AI participants — if a mission depends on one, you'll see a prompt to learn more.
+    </Note>
   </Step>
-  <Step title="Attach your designs">
-    Upload your Figma prototype link, paste a live URL, or provide credentials for a gated product. If you're testing an authenticated flow, add the login details testers will need to access it.
+  <Step title="Add post-test questions (optional)">
+    Add questions testers answer _after_ they finish the flow — useful for capturing perceived difficulty, expectations, or specific pain points.
+
+    Type one question at a time (up to 200 characters each) and press **Enter** to add it. You can add up to 10 questions, and the **Rewrite Question** helper will tighten any of them for you.
   </Step>
-  <Step title="Launch the test">
-    Review your configuration and launch. Synthetic testers begin immediately — no scheduling or participant coordination required.
+  <Step title="Choose your audience">
+    Select a reusable audience or create a new one so Uxia recruits testers that match your ideal customers. Saved audiences show how many testers are selected, plus age range, gender mix, and filters at a glance — search to find one and click a card to select it.
+
+    To build a new audience, click **Create audience** and configure:
+
+    - **Core filters** — Age Range, Gender mix, and Languages testers must speak.
+    - **Additional filters** — Tech Literacy, Nationality, Country of Residence, Marital Status, Education, Employment Status, Industry, Role, Household Income, Personal Income, and Custom Details.
+    - **Enrichment** _(premium)_ — upload your own personas, ICPs, or segment data to train testers that reflect your real audience.
+
+    Click **Find Testers** to preview and save the audience. See [Audience Enrichment](/concepts/audience-enrichment) for more on building high-fidelity synthetic audiences.
   </Step>
-  <Step title="Review and share your report">
-    Once testing is complete, open your report to explore transcripts, friction points, and scores. Download a shareable insights report to distribute findings to your team or stakeholders.
+  <Step title="Configure advanced settings (optional)">
+    Two optional sections, each toggled on only if you need it.
+
+    **Credentials & custom fields** — add the login details and custom field values testers use to complete the flow. Choose how accounts are handled:
+
+    - **Dedicated per tester** _(recommended)_ — one account per AI participant, so testers navigate independently without session conflicts.
+    - **Shared account** — all participants log in with the same account. Faster to set up, but testers may collide in-session and affect each other's flows.
+
+    Use **Add field** for any extra values the flow needs (for example, an account number).
+
+    <Warning>
+      Only ever use dedicated test accounts — never enter production credentials. Credentials are stored encrypted at rest, used only to run this test flow, and are never shared with any AI model.
+    </Warning>
+
+    **Files** — import files testers can upload during the flow (for example, attaching a document). Files are only used when the flow requires an upload and are never passed to testers as context. Supported formats: PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, PNG, JPG, WEBP, JSON, MP3, WAV, AIFF, MP4, MOV, AVI, WEBM — up to 10 MB each, and up to 5 files.
+  </Step>
+  <Step title="Review and launch">
+    The **Test Summary** step recaps every section — source, mission, scenario, stop condition, post-test questions, audience, and advanced settings — each with an **Edit** button to jump back. When everything looks right, click **Launch Test**. Synthetic testers begin immediately, with no scheduling or coordination required.
   </Step>
 </Steps>
 
@@ -59,7 +112,9 @@ After your test completes, Uxia produces a structured report covering:
 - **Per-tester transcripts** — step-by-step think-aloud recordings showing exactly what each tester thought and did
 - **Behavioral patterns** — recurring confusion points, drop-off moments, and navigation trends
 - **Standardized metrics** — SUS (System Usability Scale) scores, SUPR-Q equivalents, and the Uxia Optimization Score
-- **Industry benchmarks** — see how your product compares against established baselines for your category
+- **Industry benchmarks** — how your product compares against established baselines for your category
+
+See [Transcripts & Insights](/concepts/transcripts-and-insights) and [UX Benchmarks](/concepts/ux-benchmarks) for how to read your results.
 
 ## Combining AI and human testing
 
@@ -71,18 +126,22 @@ AI testing gives you fast, scalable signal — but you can go deeper by layering
 
 <AccordionGroup>
   <Accordion title="What is a synthetic user?">
-    A synthetic user is an AI-generated tester that simulates how a real person interacts with your product. Each synthetic user has a defined profile, goals, and behavioral tendencies. They navigate independently, make decisions based on what they see, and think aloud throughout — producing realistic interaction data without the need for human recruitment.
+    A synthetic user is an AI-generated tester that simulates how a real person interacts with your product. Each one has a defined profile, goals, and behavioral tendencies. They navigate independently, make decisions based on what they see, and think aloud throughout — producing realistic interaction data without human recruitment.
   </Accordion>
 
-  <Accordion title="How is this different from traditional unmoderated testing?">
-    AI User Tests work the same way as unmoderated usability testing — testers complete tasks on their own, without a moderator present. The key difference is that synthetic testers are available instantly. You don't need to recruit participants, wait for completion windows, or manage scheduling. You can run a full round of testing in minutes.
+  <Accordion title="What makes a good tester mission?">
+    A good mission is a single, specific, granular task with a clear end state — for example, "Sign up with a social login and create a beginner account." Avoid broad prompts like "explore the site." The more concrete the goal, the more focused and actionable your results will be. Pair it with a **stop condition** so testers know exactly when they've finished.
+  </Accordion>
+
+  <Accordion title="What's the difference between a mission and a scenario?">
+    The **mission** is _what_ you want the tester to accomplish. The **scenario** is _why_ — a short backstory that sets a realistic context so testers behave like genuine users rather than task-followers. The mission is required; the scenario is optional but improves the realism of the feedback.
   </Accordion>
 
   <Accordion title="Can I test a product that requires a login?">
-    Yes. When setting up your test, you can provide credentials for gated or authenticated areas of your product. Synthetic testers will use those credentials to access the relevant flows, so you can validate onboarding, dashboards, checkout, and any other post-login experience.
+    Yes. In **Advanced settings**, add credentials for gated or authenticated areas of your product. Use dedicated test accounts only — never production logins. You can give each participant their own account (recommended) or have them share one. Credentials are encrypted at rest, used only for that test, and never shared with any AI model.
   </Accordion>
 
-  <Accordion title="How many synthetic testers should I use?">
-    For most usability tests, five testers surface the majority of significant UX issues. You can run more testers to increase coverage, explore edge cases, or segment by audience profile. Uxia lets you configure the number and characteristics of testers before you launch.
+  <Accordion title="How is this different from traditional unmoderated testing?">
+    AI User Tests work like unmoderated usability testing — testers complete tasks on their own, without a moderator. The difference is that synthetic testers are available instantly. There's no recruiting, no completion windows, and no scheduling, so you can run a full round of testing in minutes.
   </Accordion>
 </AccordionGroup>
