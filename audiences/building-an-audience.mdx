@@ -1,0 +1,64 @@
+---
+title: "Building an Audience"
+sidebarTitle: "Building an Audience"
+description: "Create a Uxia audience step by step: set filters or use Quick Fill, generate synthetic testers, then review and select the participants who run your test."
+icon: "sliders"
+---
+
+This page covers the mechanics of creating an audience and choosing your testers. For the concepts behind it — the three layers and how synthetic testers work — see the [Overview](/account/audiences).
+
+## Where audiences live
+
+Audiences are reusable, so you can build one once and use it across tests. Each is shown as a card with its name, tester count, age range, and gender mix, plus a menu to **Select Testers**, **Review filters**, **Rename**, **Clone**, or **Delete**. Cloning copies the criteria but not the generated testers — handy when you want a variation on an existing segment.
+
+## Setting up filters
+
+In the builder, give the audience a name, then switch filters on from the picker on the right; active filters collect on the left. New audiences start with the three core filters already active:
+
+- **Age** — a range anywhere from 18 to 100
+- **Gender** — male, female, or both
+- **Languages** — defaults to English, with the option to match any or all selected languages
+
+Beyond those, a wider set lets you tighten the segment: country of residence and nationality, tech literacy, education, marital and employment status, industry, role, and household or personal income. There's also a free-text **Custom Details** field for lifestyle, motivations, routines, or other traits. You don't need to fill everything in — anything you leave blank is auto-populated to keep each tester coherent.
+
+<Note>
+  Advanced filters and Quick Fill are gated by plan. On lower tiers you'll see an **Unlock more audience filters** prompt where they'd otherwise appear.
+</Note>
+
+### Quick Fill
+
+If you'd rather not set filters by hand, **Quick Fill** (top right) does it for you in one of two ways:
+
+- **Smart URL** — paste a product or website URL and Uxia scrapes the page, infers who the product is for, and proposes a matching set of filters for you to review and adjust.
+- **Manual** — describe your target users in free text (an audience blueprint) and let Uxia translate that into filters.
+
+If you continue with no filters set, Uxia warns that it will generate random testers.
+
+<Warning>
+  Once you generate testers, the audience's filters and details are **locked**. To change them, create a new audience — cloning an existing one is the quickest way to reuse the same criteria.
+</Warning>
+
+## Generating and selecting testers
+
+After you save the audience, Uxia takes you to tester selection and starts generating profiles that match your criteria. If none exist yet it auto-generates a first batch, and **Generate more testers** widens the pool whenever you want more choices.
+
+Each tester appears as a card with two views:
+
+- a **demographic / lifestyle** view — nationality, country, languages, tech literacy, education, industry, role, employment, income, and a short description, with Defined and Auto-Populated attributes marked by their badges
+- a **psychological profile** view — the OCEAN radar chart plus a narrative of the tester's motivations and decision-making style
+
+Testers built with enrichment carry an **Enriched** badge. If one isn't quite right, **Replace tester** swaps it for a fresh profile that still matches all your criteria.
+
+Click a card to select it. A sticky progress bar tracks your selection (`x / y selected`) and flags when you've hit the minimum or fully allocated your slots; the cap depends on your plan. **Review Audience Filters** opens a side panel where you can revisit the filters and search, review, or edit the tester list before launching.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Audience Enrichment" href="/account/audiences/audience-enrichment">
+    Go further with testers built from your own personas, interviews, and research.
+  </Card>
+
+  <Card title="Overview" href="/account/audiences">
+    Revisit the three layers behind every Uxia audience.
+  </Card>
+</CardGroup>

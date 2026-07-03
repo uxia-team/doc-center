@@ -2,16 +2,55 @@
 title: "Human Insights"
 ---
 
-The **Human Insights** tab closes the research loop. From an AI User Test, it lets you generate a shareable link that carries the exact same setup and configuration your AI testers ran — the same mission, scenario, and flow — and share it with your own human participants in a **bring-your-own-testers** mode. Their sessions come back into this tab, so you can validate the AI findings against real people and get a full hybrid methodology in one place.
+The **Human Insights** tab closes the research loop. From an AI User Test, it lets you generate a shareable link that carries the exact same setup and configuration your AI testers ran — the same mission, scenario, and flow — and share it with your own human participants in a **bring-your-own-testers** mode. Their recordings, transcripts, and interaction data come back into this tab, so you can validate the AI findings against real people and get a full hybrid methodology in one place.
 
 ## How it works
 
-1. Open **Human Insights** on a completed AI User Test.
-2. Generate the shareable link — it replicates the AI test's setup exactly, so humans complete the identical task.
-3. Share it with your testers and collect their sessions.
-4. Review the results here and compare them against the synthetic findings to confirm what holds up.
+<Steps>
+  <Step title="Run an AI test first">
+    Human Insights builds on a completed AI User Test — it reuses the same mission, scenario, and prototype you configured for your synthetic testers, so no duplicate setup is required and your AI and human results stay directly comparable.
+  </Step>
+  <Step title="Generate your shareable link">
+    Open **Human Insights** on the finished test and create the link. It replicates the AI test's setup exactly, so every human completes the identical task.
+  </Step>
+  <Step title="Send the link to your participants">
+    Share it with your own users, customers, recruited participants, or panel members via email, Slack, social media, or any channel you use to reach them.
+  </Step>
+  <Step title="Participants complete the test">
+    Each participant opens the link, reads the mission and scenario, grants recording permissions, and completes the test independently — no moderator or scheduling needed.
+  </Step>
+  <Step title="Review combined AI and human results">
+    Human sessions land back in this tab alongside your synthetic results. Compare AI and human findings side by side — including SUS scores, the UXIA-Q Score, the Usability Optimization Score, and per-tester transcripts — to see where synthetic and human responses align and where they diverge, then download or share the combined report.
+  </Step>
+</Steps>
 
-See [Human Test](/testing/human-test) for the full reference on the human-testing capability.
+## What gets captured
+
+Every human session records a rich set of data automatically:
+
+- **Screen recording** — a full video of everything the participant saw and did during the session
+- **Face recording** _(optional)_ — captures facial expressions and emotional reactions via webcam
+- **Microphone audio** — records spoken commentary and natural reactions throughout the session
+- **Click and interaction data** — every tap, click, scroll, and input is logged
+- **Heatmaps** — visualize where participants focused, clicked, and hovered across each screen
+- **Auto-generated transcripts** — every session is transcribed automatically, so you can search, skim, and quote without rewatching video
+
+## The participant experience
+
+Participants don't need an account or any prior knowledge of Uxia. When they open your link, they:
+
+1. Read the mission and scenario — the same context your AI testers received
+2. Review and agree to recording permissions (screen, face, and microphone)
+3. Complete the test at their own pace, interacting with your prototype or live product naturally
+4. Submit when they're done — the session is processed and appears in this tab automatically
+
+The experience is low-friction, so participants can focus entirely on the task rather than the tooling.
+
+## Participant sourcing
+
+<Note>
+  Uxia does not recruit participants on your behalf. You bring your own — existing customers, internal users, a panel you manage, or participants recruited through another channel. This keeps you in control of who provides feedback and ensures your results reflect the audience that matters most to your product.
+</Note>
 
 ## Overview
 
@@ -49,6 +88,32 @@ Each session carries a status so you can triage what's worth reviewing:
 | **Abandoned** | The tester left before completing |
 | **Missing questions** | The session finished but some post-test questions went unanswered |
 | **Recording failed** | The session couldn't be captured |
+
+## Why combine AI and human testing
+
+<Tip>
+  AI tests give you results in minutes and let you run as many rounds as you need. Human sessions add the emotional depth, lived context, and unpredictable behavior that only real users bring. Running both gives you the best of both worlds: use AI to iterate fast and narrow down issues, then use human sessions to confirm findings, surface edge cases, and build stakeholder confidence in your decisions.
+</Tip>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to run an AI test before collecting human sessions?">
+    Yes. Human Insights is built on top of an existing AI test — it reuses the same mission, scenario, and prototype configuration. This keeps your AI and human results directly comparable, since every tester followed the same brief.
+  </Accordion>
+
+  <Accordion title="Can participants use any device?">
+    Human sessions are designed to work in a standard web browser, so participants can join from desktop or laptop. Screen and microphone capture are handled through the browser without any downloads. Face recording via webcam is optional and requires webcam access.
+  </Accordion>
+
+  <Accordion title="How are transcripts generated?">
+    Transcripts are generated automatically from the microphone audio captured during each session. They're available as soon as the session is processed, typically within a few minutes of completion, and you can read, search, and quote from them without watching the full recording.
+  </Accordion>
+
+  <Accordion title="How many human participants should I include?">
+    There's no fixed requirement — the right number depends on your goals. For usability testing, five to eight participants typically surface the most actionable issues. If you're comparing segments or building statistical confidence, you may want more. You can send your link to as many participants as you need and review results as sessions come in.
+  </Accordion>
+</AccordionGroup>
 
 <Card title="Next: Test Details" icon="arrow-right" href="/test-set-up-confidence">
   See the setup, audience, and participants behind the test.

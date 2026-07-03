@@ -25,19 +25,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Home",
+          "anchor": "Platform",
           "icon": "house",
-          "href": "https://www.uxia.app/"
+          "href": "https://platform.uxia.app/"
         },
         {
           "anchor": "Website",
           "icon": "globe",
           "href": "https://uxia.app"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "mailto:hello@uxia.app"
         }
       ]
     },
@@ -52,8 +47,15 @@
           "how-it-works"
         ]
       },
-      "account/security-and-sso",
-      "account/audiences",
+      {
+        "group": "Audiences",
+        "icon": "users-round",
+        "pages": [
+          "audiences/overview",
+          "audiences/building-an-audience",
+          "audiences/enrichment"
+        ]
+      },
       "account/projects",
       {
         "group": "AI User Test",
@@ -169,38 +171,28 @@
           "account/usage"
         ]
       },
+      "account/security-and-sso",
       {
         "group": "Test Types",
         "expanded": true,
         "pages": [
-          "testing/accessibility-test",
           "testing/ai-live-website",
-          "testing/ai-user-research",
-          "testing/human-test"
+          "testing/ai-user-research"
         ]
       },
       {
         "group": "Guides",
         "pages": [
-          "guides/ai-user-test",
-          "guides/testing-live-websites",
           "guides/concept-testing",
-          "guides/hybrid-research",
-          "guides/accessibility-workflow"
-        ]
-      },
-      {
-        "group": "Core Concepts",
-        "pages": [
-          "concepts/audience-enrichment",
-          "concepts/ai-participants"
+          "guides/hybrid-research"
         ]
       }
     ]
   },
   "logo": {
     "light": "/images/logomint.svg",
-    "dark": "/images/white_logomint.svg"
+    "dark": "/images/white_logomint.svg",
+    "href": "https://uxia.app"
   },
   "navbar": {
     "links": [],
@@ -267,6 +259,21 @@
     {
       "source": "/account/security",
       "destination": "/account/security-and-sso",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/audience-enrichment",
+      "destination": "/account/audiences/audience-enrichment",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/ai-participants",
+      "destination": "/account/audiences",
+      "permanent": true
+    },
+    {
+      "source": "/testing/human-test",
+      "destination": "/human-insights",
       "permanent": true
     }
   ]
