@@ -5,77 +5,196 @@ description: "Automatically check your designs against WCAG 2.2 AA and AAA crite
 icon: "person-standing"
 ---
 
-Catching accessibility issues in design is dramatically cheaper and faster than fixing them in code — and research shows that 67% of accessibility problems originate at the design stage. Uxia's Accessibility Test automatically reviews your designs against WCAG 2.2 standards and delivers a clear, actionable report so your team can resolve issues before a single line of code is written.
+Uxia's Accessibility Test helps product teams review designs against WCAG 2.2 before handoff. Instead of discovering accessibility issues late in QA or implementation, you can audit screens early, understand which criteria need attention, and route each issue to the right owner.
 
-## What Uxia checks
+## What this test is for
 
-Uxia evaluates your designs against the full range of **WCAG 2.2 AA and AAA criteria**, including:
+Use the Accessibility Test when you want to:
 
-- Color contrast ratios for text, icons, and interactive elements
-- Touch and click target sizes
-- Focus order and keyboard navigation paths
-- Text alternatives for non-text content
-- Form labels, error states, and input instructions
-- Motion, animation, and timing controls
-- Visual indicators for state changes and interactive elements
+- Check product screens against **WCAG 2.2** criteria
+- Review accessibility risk before development starts
+- Separate likely **design** fixes from likely **code** fixes
+- Give designers and engineers a shared checklist to work from
+- Re-test a flow after updates and track progress over time
 
-If you provide a live URL alongside your design file, Uxia can run additional checks that require a rendered environment — expanding the coverage of your report.
+## What you can upload
 
-## What the report includes
+The current Accessibility Test flow accepts these file types:
 
-Your accessibility report gives you everything you need to understand, prioritize, and fix issues:
+- Images: **PNG, JPEG, WEBP**
+- Videos: **MP4, MOV, AVI**
 
-- **Passed criteria** — a clear record of what already meets the standard, so you know what not to change
-- **Failed criteria** — specific violations with references to the relevant WCAG success criterion
-- **Review-needed items** — criteria that require human judgment or context beyond automated checking
-- **Actionable checklist** — a prioritized list of fixes your team can work through directly
-- **Plain-language explanations** — every issue is described in plain English, not just WCAG codes, so designers and developers can understand the impact without specialist knowledge
-- **Design vs. code scope assignment** — each issue is flagged as a design-layer fix or a development-layer fix, so the right person gets the right task
+Current limits in the UI:
 
-## How to run an accessibility test
+- Up to **10 files** per test
+- Up to **100 MB** per file
+
+<Note>
+  Uxia requires at least one uploaded file before you can continue past the upload step.
+</Note>
+
+## How to set up the test
 
 <Steps>
-  <Step title="Upload your designs or provide a URL">
-    Connect your Figma file or paste a live URL. If you have both, providing the URL enables additional automated checks on top of the design review.
+  <Step title="Create the test">
+    From **Home** or **Tests**, click **Create test** and choose **Accessibility Test**.
   </Step>
-  <Step title="Launch the test">
-    Uxia automatically evaluates your designs against WCAG 2.2 AA and AAA criteria. No manual configuration is required — the check runs end to end.
+  <Step title="Add the test name and optional project">
+    Give the run a clear title so it is easy to find later. You can also assign it to a project, or leave the project field empty.
   </Step>
-  <Step title="Review your report">
-    Open your report to see passed, failed, and review-needed criteria alongside plain-language explanations and a prioritized checklist.
+  <Step title="Choose the WCAG target level">
+    Uxia asks you to choose the target conformance level before upload.
+
+    - **Recommended (AA)** is the default and the right choice for most teams
+    - **Advanced (AAA)** is the stricter option for teams aiming for the highest coverage level
+
+    The in-product tooltip explains that WCAG levels are cumulative. That means **AA** includes **A**, and **AAA** includes **A**, **AA**, and **AAA** criteria.
   </Step>
-  <Step title="Assign and fix issues">
-    Use the design vs. code scope labels to route each fix to the right team member. Work through the checklist and re-run the test to verify improvements.
+  <Step title="Review the accessibility explainer if needed">
+    The **How accessibility testing works** section provides context on what Uxia checks and includes FAQs around legal standards, code-level review, and how the WCAG levels relate.
   </Step>
-  <Step title="Share your report">
-    Download or share your accessibility report with your broader team, including developers and stakeholders, so everyone has visibility into what needs to be addressed and who owns each fix.
+  <Step title="Upload frames or recordings">
+    Continue to **Upload Frames** and add the screens or videos you want Uxia to analyze.
+  </Step>
+  <Step title="Review the Summary and launch">
+    Once the files are attached, continue to **Summary** to review your setup and start the audit.
   </Step>
 </Steps>
 
-## Important limitation
+## AA vs. AAA
 
-<Warning>
-  Uxia's Accessibility Test helps your team catch issues early in the design process, but it does not replace a formal legal accessibility audit or specialist certification. Automated tools can detect a subset of WCAG criteria — some issues require manual expert review, assistive technology testing, and disabled user involvement to fully evaluate. If you have legal compliance requirements, engage a qualified accessibility specialist in addition to using Uxia.
-</Warning>
+| Level | When to use it | What it means |
+| --- | --- | --- |
+| **AA** | Most teams and most compliance-driven product reviews | The practical baseline. Covers the most common accessibility barriers and aligns with the level most organizations should target first. |
+| **AAA** | Teams with stricter internal standards or broader inclusion goals | The highest level of coverage. Best for programs that want to go beyond baseline compliance. |
+
+## What Uxia checks
+
+In the current product flow, Uxia explains that the Accessibility Test evaluates areas such as:
+
+- **WCAG 2.2 conformance**
+- **Low-vision support**
+- **Mobile and touch interactions**
+- **Cognitive accessibility**
+
+Across those areas, the report helps teams review issues such as:
+
+- Contrast and non-text contrast
+- Visual hierarchy and readability
+- Target size for touch interactions
+- Input labels and instructions
+- Reading order and structure
+- Navigation consistency
+- Error prevention and messaging
+- Focus and keyboard-related implementation requirements
+
+## What the report includes
+
+A completed Accessibility Test report is organized into three tabs:
+
+- **Accessibility Results**
+- **Vision Simulation**
+- **Test Details**
+
+### Accessibility Results
+
+This is the main review tab. It includes:
+
+- A frame selector
+- A summary card with **Passed**, **Failed**, and **Review** counts
+- Filters for **Status**, **Review Scope**, and **Level**
+- Search across success criteria
+- A detailed criteria table with:
+  - **WCAG Code**
+  - **Success Criterion**
+  - **Level**
+  - **Category**
+  - **Status**
+  - **Review Scope**
+
+Each criterion row can include:
+
+- A status badge
+- A review-scope label such as **Design** or **Code**
+- A **Mark as Passed** action
+- A **See More** drawer with the detailed explanation
+
+### Vision Simulation
+
+This tab shows side-by-side previews of the same frame under different visual conditions. It helps teams review whether hierarchy, contrast, and emphasis still work when visual perception changes.
+
+### Test Details
+
+This tab acts as the record of the run. It surfaces the selected conformance level, the uploaded frames, and the explainer content again for later reference.
+
+## How to interpret findings
+
+### Statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Passed** | Uxia considers the criterion satisfied for the current evidence. |
+| **Failed** | A confirmed issue was detected and should be addressed. |
+| **Review** | The item needs human judgment, implementation confirmation, or additional context before it can be cleared. |
+
+### Review scope
+
+| Scope | Meaning |
+| --- | --- |
+| **Design** | The likely fix belongs in layout, contrast, copy, sizing, spacing, or visual structure. |
+| **Code** | The likely fix belongs in implementation, semantics, labels, keyboard behavior, or accessibility attributes. |
+| **Both** | The issue spans both design intent and implementation. |
+
+## What you see in the criterion drawer
+
+Click **See More** on any row to open the right-side detail panel. In the current UI, the drawer includes:
+
+- The criterion code and title
+- Status, scope, and WCAG level badges
+- A preview of the frame
+- A plain-language **Description**
+- A **How To Verify** section
+- A practical **Checklist**
+- Actions such as **WCAG Criteria** and **Mark as Passed**
+
+This drawer is the most actionable part of the report because it gives the team a concrete explanation of what to review and how to validate the fix.
+
+## Recommended usage pattern
+
+1. Run the test once the core flow is stable enough to review.
+2. Resolve **Failed** items first.
+3. Triage **Review** items by owner using the **Design** and **Code** scope labels.
+4. Use the criterion drawer as the working checklist.
+5. Re-run the test after fixes.
 
 ---
 
 ## Frequently asked questions
 
 <AccordionGroup>
-  <Accordion title="Does Uxia check both AA and AAA WCAG 2.2 criteria?">
-    Yes. Uxia checks against both AA and AAA success criteria. AA is the widely adopted compliance baseline required by most legal standards. AAA criteria go further and represent best-practice accessibility. Your report clearly distinguishes between the two levels so you can prioritize accordingly.
+  <Accordion title="Should I choose AA or AAA?">
+    Start with **AA** unless your team has a specific reason to target AAA. AA is the default recommendation in the product and the right baseline for most accessibility programs.
   </Accordion>
 
-  <Accordion title="Do I need a live URL, or can I test Figma designs only?">
-    You can run an accessibility test on Figma designs alone. Providing a live URL expands the scope of the test by enabling checks that require a rendered page — such as dynamic focus behavior and some interactive state evaluations — but it's optional.
+  <Accordion title="Can I upload videos as well as images?">
+    Yes. In the current flow, Uxia accepts image files (**PNG, JPEG, WEBP**) and video files (**MP4, MOV, AVI**).
   </Accordion>
 
-  <Accordion title="Who should use the accessibility report — designers or developers?">
-    Both. The report uses the design vs. code scope labels to route each issue to the right person. Design-layer issues (color choices, spacing, component structure) go to designers. Development-layer issues (ARIA attributes, semantic HTML, keyboard handling) go to developers. Everyone gets a task list relevant to their role.
+  <Accordion title="What does Review mean in the report?">
+    **Review** means the criterion cannot be fully cleared by automation alone. It usually needs human judgment, implementation confirmation, or additional context before the team can decide whether the item is satisfied.
   </Accordion>
 
-  <Accordion title="Can I re-run the test after making fixes?">
-    Yes. You can re-run your accessibility test at any point to check your progress, verify that issues have been resolved, and catch any new problems introduced by design changes. Running the test iteratively throughout your design process is the most effective way to ship accessible products.
+  <Accordion title="Who should work from the report: designers or developers?">
+    Both. Uxia labels each issue by likely review scope so teams can split work cleanly. Designers can focus on layout, contrast, and visual treatment; developers can focus on implementation, semantics, labels, and keyboard behavior.
+  </Accordion>
+
+  <Accordion title="Does this replace a formal accessibility audit?">
+    No. Uxia helps teams catch issues early, but it does not replace a formal legal accessibility audit, specialist review, or certification process.
   </Accordion>
 </AccordionGroup>
+
+<CardGroup cols={1}>
+  <Card title="Accessibility Audits" icon="map" href="/guides/accessibility-workflow">
+    Step-by-step workflow for setting up the test and using the results in a real team process.
+  </Card>
+</CardGroup>
