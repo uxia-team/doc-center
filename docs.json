@@ -57,7 +57,6 @@
         ]
       },
       "account/projects",
-      "account/security-and-sso",
       {
         "group": "AI User Test",
         "icon": "mouse-pointer-click",
@@ -175,6 +174,15 @@
             ]
           }
         ]
+      },
+      {
+        "group": "Security",
+        "icon": "shield-check",
+        "pages": [
+          "account/security/data-privacy",
+          "account/security/sso",
+          "account/security/policies"
+        ]
       }
     ]
   },
@@ -263,6 +271,11 @@
     {
       "source": "/testing/human-test",
       "destination": "/human-insights",
+      "permanent": true
+    },
+    {
+      "source": "/account/security-and-sso",
+      "destination": "/account/security/data-privacy",
       "permanent": true
     }
   ]
