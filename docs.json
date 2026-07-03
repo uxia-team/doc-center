@@ -1,0 +1,200 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Uxia",
+  "description": "AI-powered user testing and research platform. Get actionable UX insights from synthetic testers in minutes — no recruiting needed.",
+  "colors": {
+    "primary": "#18463c",
+    "light": "#18463c",
+    "dark": "#18463c"
+  },
+  "favicon": {
+    "light": "/images/uxia-logoo.svg",
+    "dark": "/images/uxia-logoo.svg"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "href": "https://www.uxia.app/"
+        },
+        {
+          "anchor": "Website",
+          "icon": "globe",
+          "href": "https://uxia.app"
+        },
+        {
+          "anchor": "Help",
+          "icon": "life-buoy",
+          "href": "mailto:hello@uxia.app"
+        }
+      ]
+    },
+    "directory": "card",
+    "pages": [
+      {
+        "group": "Get Started",
+        "icon": "rocket",
+        "expanded": true,
+        "pages": [
+          "introduction",
+          "quickstart",
+          "how-it-works"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "icon": "book-open",
+        "pages": [
+          "concepts/ai-participants",
+          "concepts/audience-enrichment",
+          "concepts/transcripts-and-insights",
+          "concepts/ux-benchmarks"
+        ]
+      },
+      {
+        "group": "Guides",
+        "icon": "map",
+        "pages": [
+          "guides/testing-prototypes",
+          "guides/testing-live-websites",
+          "guides/concept-testing",
+          "guides/hybrid-research",
+          "guides/accessibility-workflow"
+        ]
+      },
+      {
+        "group": "Test Types",
+        "icon": "flask-conical",
+        "expanded": true,
+        "pages": [
+          "testing/ai-user-test",
+          "testing/accessibility-test",
+          "testing/ai-live-website",
+          "testing/ai-user-research",
+          "testing/human-test"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "icon": "plug",
+        "pages": [
+          "integrations/overview",
+          "integrations/figma",
+          "integrations/enterprise-auth",
+          "integrations/jira",
+          "integrations/notion",
+          "integrations/linear",
+          "integrations/slack",
+          {
+            "group": "MCP",
+            "pages": [
+              "guides/mcp",
+              "guides/untitled-page",
+              "guides/untitled-page-1",
+              "guides/untitled-page-2",
+              "guides/claude-code",
+              "guides/claude-desktop-app",
+              "guides/untitled-page-3",
+              "guides/lovable"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Account & Plans",
+        "icon": "settings",
+        "pages": [
+          "account/plans-and-credits",
+          "account/workspaces",
+          "account/people",
+          "account/usage"
+        ]
+      },
+      "account/security-and-sso"
+    ]
+  },
+  "logo": {
+    "light": "/images/logomint.svg",
+    "dark": "/images/white_logomint.svg"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://platform.uxia.app"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/uxiaapp",
+      "linkedin": "https://linkedin.com/company/uxia"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 500
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "thumbnails": {
+    "appearance": "light",
+    "background": "/images/web-preview_mint.png",
+    "fonts": {
+      "family": "Inter"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/account/workspace",
+      "destination": "/account/organizations/workspaces",
+      "permanent": true
+    },
+    {
+      "source": "/account/organizations/overview",
+      "destination": "/account/workspaces",
+      "permanent": true
+    },
+    {
+      "source": "/account/organizations/workspaces",
+      "destination": "/account/workspaces",
+      "permanent": true
+    },
+    {
+      "source": "/account/organizations/people",
+      "destination": "/account/people",
+      "permanent": true
+    },
+    {
+      "source": "/account/organizations/usage",
+      "destination": "/account/usage",
+      "permanent": true
+    },
+    {
+      "source": "/account/organizations/sso-and-provisioning",
+      "destination": "/account/security-and-sso",
+      "permanent": true
+    },
+    {
+      "source": "/account/security",
+      "destination": "/account/security-and-sso",
+      "permanent": true
+    }
+  ]
+}

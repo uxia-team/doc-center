@@ -1,0 +1,82 @@
+---
+title: "Run Accessibility Audits on Designs Before Development"
+sidebarTitle: "Accessibility Audits"
+description: "Use Uxia's Accessibility Test to check designs against WCAG 2.2 AA and AAA standards and get plain-language fixes before handing off to engineering."
+---
+
+Around 67% of accessibility issues originate in design decisions — color contrast choices, touch target sizes, reading order, icon-only buttons — long before a developer writes the first component. By the time these issues surface in QA or a legal audit, fixing them is expensive and disruptive. Uxia's Accessibility Test catches them at the design stage, where a fix takes minutes, not sprints.
+
+## What Uxia Checks
+
+Uxia evaluates your designs and live pages against **WCAG 2.2 AA and AAA** criteria — the internationally recognized standards for web accessibility. The audit covers both design-layer issues (contrast ratios, text sizing, layout) and code-layer issues (semantic HTML, ARIA attributes, keyboard navigability) when testing a live URL.
+
+Checks include, but are not limited to:
+
+- **Color contrast** — text and interactive elements against their backgrounds
+- **Text alternatives** — images, icons, and non-text content
+- **Keyboard accessibility** — whether all interactive elements are reachable without a mouse
+- **Focus indicators** — visible and meaningful focus states
+- **Touch target sizing** — minimum interactive area for mobile interfaces
+- **Reading and navigation order** — logical structure for screen reader users
+- **Form labels and error handling** — inputs that are properly labeled and errors that are clearly communicated
+- **Motion and animation** — content that respects reduced-motion preferences
+
+## Step-by-Step Guide
+
+<Steps>
+  <Step title="Upload your design screens or provide a live URL">
+    Choose your input: upload static design screens (JPG, PNG, or PDF) for a design-stage audit, or paste a live URL to evaluate a built product or staging environment. You can also test a Figma prototype link. Start with the screens or flows that are furthest along in the design process or closest to handoff.
+  </Step>
+
+  <Step title="Launch the Accessibility Test">
+    From your Uxia dashboard, click **New Test** and select **Accessibility Test**. Confirm your input, add any context about the intended audience or device type if relevant, and click **Launch**. The audit runs automatically.
+  </Step>
+
+  <Step title="Review the report: passed, failed, and review-needed criteria">
+    The Accessibility Report lists every evaluated criterion with one of three statuses. Work through the **Failed** items first, then address **Review Needed** items with your team. See the status definitions below.
+  </Step>
+
+  <Step title="Assign issues to design or development using scope labels">
+    Each issue in the report is tagged with a scope label — **Design**, **Code**, or **Both**. Use these labels to route issues directly to the right person: designers handle contrast, sizing, and layout; developers handle semantic markup, ARIA, and keyboard behavior.
+  </Step>
+
+  <Step title="Fix and retest">
+    Once your team has addressed the flagged issues, run a new Accessibility Test on the updated designs or build. Track your progress over time by comparing report scores across test runs.
+  </Step>
+</Steps>
+
+## Understanding the Report: Three Statuses
+
+Every criterion in the Accessibility Report carries one of three statuses:
+
+| Status | Meaning |
+|---|---|
+| **Passed ✓** | The criterion is met. No action required, but note it as a baseline to preserve in future iterations. |
+| **Failed ✗** | The criterion is not met. This is a confirmed accessibility issue that needs to be fixed before the design or build goes further. |
+| **Review Needed ?** | Uxia has flagged a potential issue that requires human judgment to confirm. These often involve context-dependent criteria — such as whether an image is truly decorative or whether a label is meaningful in context. |
+
+## Design vs. Code Scope
+
+<Note>
+  Uxia distinguishes whether each issue needs to be fixed in **design**, in **code**, or in **both**. This scope label removes ambiguity in handoff: designers don't need to understand ARIA, and developers don't need to second-guess color choices. Each person receives a clear, actionable list of issues that belong to them.
+</Note>
+
+## Using the Report as a Living Checklist
+
+The Accessibility Report is most valuable when you treat it as a working document, not a one-time snapshot. Export failed and review-needed criteria as tasks in your project management tool, assign them to designers and developers with the scope labels as context, and retest after each fix cycle. As your team builds accessibility into the design process, you'll see your pass rate improve over time and spend less time catching issues late.
+
+<Info>
+  A WCAG glossary is included in every accessibility report to help non-specialist team members understand the criteria. If your team is new to accessibility, the glossary explains each standard in plain language — no prior WCAG knowledge required to read and act on the report.
+</Info>
+
+<Warning>
+  Uxia's accessibility test is not a substitute for a full legal accessibility audit or specialist certification. Use it to catch and fix issues early in the design process. For legal compliance, regulatory filings, or formal certification (such as VPAT preparation), engage a qualified accessibility specialist in addition to using Uxia.
+</Warning>
+
+## Related Pages
+
+<CardGroup cols={1}>
+  <Card title="Accessibility Test" icon="universal-access" href="/testing/accessibility-test">
+    Full reference for the Accessibility Test type, supported standards, and report structure.
+  </Card>
+</CardGroup>

@@ -1,0 +1,92 @@
+---
+title: "Figma Integration: Import and Edit Prototypes in Uxia"
+sidebarTitle: "Figma"
+description: "Connect Figma to turn designs into actionable prototypes in Uxia. Import your built Figma prototypes and modify them freely inside the Uxia canvas."
+---
+
+Connect Figma to turn designs into actionable prototypes in Uxia. Sync projects and keep product, design, and development aligned.
+
+## Native Figma integration
+
+Uxia's native Figma integration lets you import your built Figma prototypes directly into Uxia in one click — no exporting, screenshotting, or rebuilding flows. Once imported, your prototype is fully editable inside the Uxia canvas:
+
+- Rearrange screens and update flow connections
+- Edit, add, or remove interactions and hotspots
+- Adjust starting points and task entry screens
+- Make on-the-fly changes between test runs without going back to Figma
+
+This means you can refine the prototype based on AI tester feedback and re-run tests immediately, keeping your research loop tight.
+
+## Where the Figma integration is available
+
+The Figma import flow is available when you are creating or editing a **prototype-based** test in Uxia.
+
+To access it:
+
+<Steps>
+  <Step title="Open the test">
+    Open the test you want to import a Figma prototype into.
+  </Step>
+  <Step title="Go to the Prototype step">
+    Navigate to the **Prototype** step of the test builder.
+  </Step>
+  <Step title="Select Interactive flow">
+    Choose **Interactive flow** as the prototype type.
+  </Step>
+  <Step title="Open the import dialog">
+    Click **Import designs** on an empty canvas, or **Import Files** if the canvas already has frames.
+  </Step>
+</Steps>
+
+<Note>
+  Figma import is available for **Interactive flow** only. If **Sequential flow** is selected, the Figma option is disabled.
+</Note>
+
+## Import a Figma prototype
+
+Once the **Import files** modal opens:
+
+<Steps>
+  <Step title="Select Figma">
+    Choose **Figma** as the source.
+  </Step>
+  <Step title="Confirm fetch flows">
+    Confirm the card labeled **Fetch flows from Figma**.
+  </Step>
+  <Step title="Connect your account">
+    Click **OAuth with Figma** to connect your Figma account.
+  </Step>
+  <Step title="Paste your Figma URL">
+    Paste a Figma **proto**, **file**, or **design** URL into the **Figma URL** field.
+  </Step>
+  <Step title="Wait for flow detection">
+    Wait for Uxia to detect the available flows in your file.
+  </Step>
+  <Step title="Select a flow">
+    In **Select a flow**, choose the flow you want to import.
+  </Step>
+</Steps>
+
+Uxia then imports the screens from that flow into the prototype canvas, where you can edit them freely before launching your test.
+
+## Tips and best practices
+
+- Use one Figma file per flow when possible — it makes imports cleaner and easier to review.
+- Make sure your Figma prototype has a **Flow starting point** set, or Uxia may not detect any flows.
+- Keep each imported flow focused and within your frame limit.
+- Use a real prototype flow, not a loose design file with no clickable path.
+- If your browser blocks pop-ups, allow them so the Figma OAuth window can open.
+- If you already have frames on the canvas, importing a Figma flow will replace the existing frames.
+- Larger Figma files can take longer to load, so simpler files generally import faster.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Test Prototypes" href="/guides/testing-prototypes">
+    Full walkthrough for testing Figma prototypes and design screens with AI synthetic testers.
+  </Card>
+
+  <Card title="AI User Test" href="/testing/ai-user-test">
+    Run AI usability tests on the prototypes you import from Figma.
+  </Card>
+</CardGroup>

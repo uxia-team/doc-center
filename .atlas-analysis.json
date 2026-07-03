@@ -1,0 +1,85 @@
+{
+  "projectType": "saas",
+  "projectName": "Uxia",
+  "projectDescription": "Uxia is an AI-powered user testing and research platform that delivers actionable UX insights in minutes using synthetic testers — no recruiting, scheduling, or moderation required.",
+  "theme": "willow",
+  "primaryColor": "#04c45c",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works"
+            ]
+          },
+          {
+            "group": "Testing Types",
+            "pages": [
+              "testing/ai-user-test",
+              "testing/ai-live-website",
+              "testing/ai-user-research",
+              "testing/accessibility-test",
+              "testing/human-test"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/synthetic-testers",
+              "concepts/audience-enrichment",
+              "concepts/transcripts-and-insights",
+              "concepts/ux-benchmarks"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/testing-prototypes",
+              "guides/testing-live-websites",
+              "guides/concept-testing",
+              "guides/hybrid-research",
+              "guides/accessibility-workflow"
+            ]
+          },
+          {
+            "group": "Account & Plans",
+            "pages": [
+              "account/plans-and-credits",
+              "account/workspace",
+              "account/security"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI User Test — synthetic testers explore designs and surface UX frictions",
+    "AI Live Website Test — paste a URL and get instant UX feedback from AI testers",
+    "AI User Research — ask targeted questions to synthetic audiences for qualitative feedback",
+    "Accessibility Test — automated WCAG 2.2 AA/AAA compliance review",
+    "Human Test — turn any AI test into a shareable link for real human participants",
+    "Audience Enrichment — build synthetic audiences from your own persona data",
+    "Think-aloud Transcripts — detailed session commentary from every synthetic tester",
+    "UX Benchmarking — SUS, SUPR-Q, and Uxia Optimization Score metrics",
+    "Hybrid Research — combine synthetic and human testing in one platform",
+    "Instant Reports — actionable findings generated automatically after each test"
+  ],
+  "publicApiSurface": [
+    "Create test (AI User Test, AI Live Website, AI User Research, Accessibility Test, Human Test)",
+    "Define synthetic audience (demographics, psychographics, persona upload)",
+    "Launch test with mission, scenario, and designs/URL",
+    "View transcripts per tester",
+    "Download/share insights report",
+    "Audience Enrichment via custom data upload",
+    "Human Test shareable link generation",
+    "SUS / SUPR-Q / Uxia Optimization Score results"
+  ]
+}

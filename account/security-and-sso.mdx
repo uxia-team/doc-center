@@ -1,0 +1,103 @@
+---
+title: "Security, Privacy, SSO, and Provisioning in Uxia"
+sidebarTitle: "Security & SSO"
+description: "How Uxia handles your designs, test data, and participant recordings — plus SSO, SCIM, JIT, domains, audit logs, and log streaming for enterprise organizations."
+icon: "shield-check"
+---
+
+Uxia is built to handle sensitive research assets with care. Whether you're uploading design files, sharing live URLs, capturing human participant recordings, or testing behind authenticated flows, every piece of data you bring into the platform is processed with security and privacy as a baseline — not an afterthought. This page explains how your data is handled and how to configure enterprise identity features from the **SSO and provisioning** tab on the Organization page.
+
+## Your Design and URL Data
+
+When you upload a design file or provide a URL for an AI test, Uxia processes that asset securely to generate and run the tester session.
+
+- **Your data is never used to train models.** Designs, URLs, and test content you submit are not used to improve or fine-tune any AI model — for Uxia or any third party.
+- **Your data is not shared with other users or organizations.** Each workspace is isolated; your test assets are only accessible to you and the teammates you explicitly invite.
+- **Assets are stored only as long as needed.** Uploaded files and URLs are retained for the duration of the test and to support your ongoing access to results and reports. They are not kept indefinitely beyond what is required to deliver the service.
+
+## Participant Recordings (Human Test)
+
+When you run a Human Test, Uxia captures session recordings of real participants interacting with your product or prototype. These recordings are:
+
+- **Stored securely** within the Uxia platform and accessible only within your workspace
+- **Not shared with third parties** — recordings remain private to your organization
+- **Available for review and analysis** inside your workspace dashboard, alongside the AI-generated insights for that test
+
+Recordings give you the qualitative depth to complement the AI-synthesized findings and are retained in your workspace for as long as your account is active.
+
+## Credentials for Gated and Authenticated Tests
+
+If the product or area you're testing sits behind a login screen, you can provide credentials so that AI testers can access protected flows. When you do:
+
+- Credentials are used solely to run the tester session and are not stored beyond that session
+- Uxia does not retain, log, or share login credentials after the test completes
+- You remain in control of those credentials and can rotate them after each test run if your security policy requires it
+
+This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience without exposing long-lived credentials.
+
+## SSO and Provisioning
+
+For organizations with stricter identity and access management requirements, the **SSO and provisioning** tab on the Organization page is where you configure enterprise identity features.
+
+Depending on your plan and enabled features, this tab may let you:
+
+- Add and manage verified organization domains.
+- Check whether a domain is configured, pending, missing, failed, or verified.
+- Open the SSO admin panel.
+- Open the provisioning panel for SCIM setup.
+- Turn on or off **automatic account creation (JIT)**.
+- Turn on or off whether invitations from external domains are allowed.
+- Open audit logs setup.
+- Open log streaming setup.
+
+### Single Sign-On (SSO)
+
+SSO lets your team log in to Uxia using your existing company identity provider — such as Okta, Azure AD, or Google Workspace. This means:
+
+- Team members authenticate through a system your IT team already manages and trusts.
+- You maintain centralized control over who has access to Uxia.
+- Offboarding a team member from your identity provider automatically revokes their Uxia access.
+
+### SCIM Provisioning
+
+SCIM (System for Cross-domain Identity Management) automates user provisioning and deprovisioning across your organization. When you add or remove a user in your identity provider, that change is reflected in Uxia automatically — no manual seat management required.
+
+### Just-in-Time (JIT) Account Creation
+
+With JIT enabled, new users from a verified domain can sign in via SSO and have their Uxia account created automatically on first login — no manual invite required.
+
+### Audit Logs and Log Streaming
+
+Audit logs capture key actions taken inside your organization. Log streaming forwards those events to your SIEM or observability platform so your security team can monitor activity alongside the rest of your infrastructure.
+
+<Note>
+  SSO, SCIM, JIT, audit logs, and log streaming are available on the Custom plan. If SSO or provisioning is not enabled for your organization, the page will prompt you to contact Uxia. Reach out at [hello@uxia.app](mailto:hello@uxia.app) to configure enterprise authentication.
+</Note>
+
+## Legal and Compliance
+
+Review Uxia's full legal and policy documentation below.
+
+<CardGroup cols={2}>
+  <Card title="Privacy Policy" icon="hand" href="https://uxia.app/privacy-policy">
+    How Uxia collects, uses, and protects your personal data.
+  </Card>
+
+  <Card title="Security Policy" icon="lock" href="https://uxia.app/security-policy">
+    Technical and organizational measures Uxia uses to keep your data safe.
+  </Card>
+
+  <Card title="Cookie Policy" icon="cookie" href="https://uxia.app/cookie-policy">
+    What cookies Uxia uses and how to manage your preferences.
+  </Card>
+
+  <Card title="Terms & Conditions" icon="handshake" href="https://uxia.app/terms-conditions">
+    The agreement governing your use of the Uxia platform.
+  </Card>
+</CardGroup>
+
+## About the Company
+
+Uxia is operated by **UXIA TESTING SOLUTIONS, S.L.**, a company incorporated in Spain. Uxia is certified by ENISA (Spain's national innovation agency) under Spain's Startup Law (Law 28/2022), recognizing it as an innovative technology company subject to the regulatory framework established for emerging tech businesses in the European Union.
+
+If you have security-related questions or need to report a concern, reach out directly at [hello@uxia.app](mailto:hello@uxia.app).

@@ -1,0 +1,105 @@
+---
+title: "Connect Uxia to Claude, Cursor, and Other AI Tools via MCP"
+sidebarTitle: "Getting Started"
+description: "Use the Uxia MCP server to query your tests, transcripts, and insights directly from Claude Code, Cursor, Codex, v0, and other MCP-compatible AI tools."
+---
+
+The Uxia MCP server lets your favorite AI tools talk directly to your Uxia workspace. Once connected, Claude Code, Cursor, Codex, v0, and other [Model Context Protocol](https://modelcontextprotocol.io) clients can pull your tests, transcripts, insights, and benchmark scores into the same chat where you're writing code or iterating on design — no copy-paste, no context switching.
+
+## Setup
+
+Connecting Uxia takes three steps: make sure your workspace is on a paid plan, pick the AI tool you want to use, and run the registration command in your terminal.
+
+<Steps>
+  <Step title="Upgrade to a paid plan">
+    MCP access is included on all paid plans. If your workspace is still on the Free Trial, upgrade from your [Plans & Credits](/account/plans-and-credits) page first.
+
+    <Note>
+      MCP is not available on the Free Trial. You'll see the **Upgrade** button in your workspace under **Settings → Integrations → MCP** if you haven't upgraded yet.
+    </Note>
+  </Step>
+  <Step title="Pick your AI tool">
+    Supported clients out of the box:
+
+    | Client | Type | Notes |
+    | --- | --- | --- |
+    | **Claude Code** | CLI / IDE | Recommended for engineers working in the terminal or VS Code. |
+    | **Cursor** | IDE | Native MCP support — pulls Uxia data into Cursor chat. |
+    | **Codex** | CLI | For OpenAI Codex CLI workflows. |
+    | **v0** | Web | Bring Uxia insights into v0 design generation. |
+    | **Other** | Any MCP client | Use the generic HTTP transport for Claude Desktop, custom agents, and other clients. |
+
+    You can also connect non-coding tools like **Claude Desktop**. See the full list of supported clients in your workspace.
+  </Step>
+  <Step title="Register the Uxia MCP server">
+    Open a terminal and run the command Uxia generated for your chosen tool.
+
+    #### Claude code:
+
+    ```bash
+    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp/mcp
+    ```
+
+    #### Cursor:
+
+    In Cursor, go to Settings → Tools & MCPs and click "New MCP server" to open your `mcp.json`file.
+
+    ```bash
+    {
+      "mcpServers": {
+        "Uxia": {
+          "type": "http",
+          "url": "https://platform.uxia.app/api/mcp/mcp",
+          "headers": {}
+        }
+      }
+    }
+    ```
+
+    #### Codex:
+
+    ```bash
+    codex mcp add uxia --url https://platform.uxia.app/api/mcp/mcp
+    ```
+
+    #### Other:
+
+    Add a new HTTP MCP server and paste the URL below.
+
+    ```text
+    https://platform.uxia.app/api/mcp/mcp
+    ```
+  </Step>
+  <Step title="Authenticate">
+    The first time your client calls the Uxia MCP server, you'll be redirected to sign in to your Uxia workspace and authorize the connection. After that, your AI tool has scoped access to the tests and reports and data.
+  </Step>
+  <Step title="Try it out">
+    In your AI tool, ask something like:
+
+    - _"List my last 5 Uxia tests."_
+    - _"Summarize the insights report for the checkout flow test."_
+    - _"What were the top insights points in the latest AI Live Website Test?"_
+
+    Your client will call the Uxia MCP server, fetch the relevant data, and answer with real context from your workspace.
+  </Step>
+</Steps>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Transcripts & Insights" icon="scroll-text" href="/concepts/transcripts-and-insights">
+    Understand the data your AI tool will pull through MCP — transcripts, insights, and benchmark scores.
+  </Card>
+
+  <Card title="Plans & Credits" icon="credit-card" href="/account/plans-and-credits">
+    See which plans include MCP access and how credits work across MCP-driven queries.
+  </Card>
+
+  <Card title="Workspace" icon="users" href="/account/workspace">
+    Manage team access and permissions — MCP connections respect the same scopes.
+  </Card>
+
+  <Card title="Security" icon="shield-check" href="/account/security">
+    Learn how Uxia handles authentication, data access, and revocation for integrations like MCP.
+  </Card>
+</CardGroup>

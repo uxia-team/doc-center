@@ -1,0 +1,32 @@
+---
+title: "Antigravity 2.0"
+---
+
+## Setup
+
+1. Open the MCP config file at `~/.gemini/config/mcp_config.json` (create the file if it does not exist).
+2. Add the UXIA server to the `mcpServers` object:
+   ```json
+   {
+     "mcpServers": {
+       "Uxia": {
+         "serverUrl": "https://platform.uxia.app/api/mcp/mcp"
+       }
+     }
+   }
+   ```
+   json
+3. In Antigravity, go to **Settings** \> **Customizations**.
+4. Scroll down to **Installed MCP Servers** and click **Refresh**.
+5. Click **Authenticate** next to the Uxia entry.
+6. A browser window will open. Sign in with your Uxia account and click **Continue** to authorize access.
+7. Copy the auth code from the callback page, paste it into the auth code field in Antigravity, and click **Submit**.
+8. Antigravity should automatically refresh the MCP servers. If it does not, click the **Refresh** button. Once refreshed, the Uxia MCP server should appear as active and enabled.
+
+## Usage
+
+Once connected, you can ask Antigravity 2.0 to Uxia:
+
+```plaintext
+Create a new test thats tests my new app www.google.com 
+```

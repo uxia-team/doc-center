@@ -1,0 +1,87 @@
+---
+title: "Test Live Websites and Staging Environments with AI"
+sidebarTitle: "Test Live Sites"
+description: "Paste any public or gated URL into Uxia's AI Live Website Test to let synthetic testers navigate your product and surface usability issues in minutes."
+---
+
+Usability problems don't appear only at launch — they exist in your staging environment right now, and they ship to production if you don't catch them first. Uxia's AI Live Website Test lets you point synthetic testers at any URL — public site, staging build, or login-gated product — and get think-aloud feedback on real, interactive pages in minutes. Use it before launch to validate the build, and after launch to run continuous quality checks whenever you ship something new.
+
+## What You Can Test
+
+Uxia's AI testers can navigate any web-based environment accessible via URL:
+
+- **Public websites** — marketing sites, landing pages, documentation, e-commerce storefronts
+- **Staging and preview environments** — Vercel previews, staging subdomains, feature branches
+- **Gated and authenticated products** — SaaS dashboards, account areas, checkout flows (provide credentials during setup)
+- **Partially built products** — even incomplete flows yield useful data on what's working and what's confusing
+
+## Step-by-Step Guide
+
+<Steps>
+  <Step title="Create a new AI Live Website Test">
+    From your Uxia dashboard, click **New Test** and select **AI Live Website Test**. Name the test to reflect the URL, environment, or hypothesis — for example, "Checkout flow — staging v2.4".
+  </Step>
+
+  <Step title="Paste the URL">
+    Enter the full URL where you want synthetic testers to begin. This should be the starting page of the flow you want tested — a homepage, a specific landing page, or a post-login screen if you're providing credentials.
+  </Step>
+
+  <Step title="Provide credentials or context files for gated pages (optional)">
+    If your test covers a login-protected area, supply the necessary credentials in the test setup. You can also attach context files — for example, a brief product description or a note about what the feature is supposed to do — to give testers the background a real user would have.
+
+    <Note>
+      Credentials are entered securely in the test setup screen. Uxia uses them only to authenticate the synthetic tester's session and does not store or expose them after the test completes. If your staging environment uses IP allowlisting or other network restrictions, whitelist Uxia's testing infrastructure before launching.
+    </Note>
+  </Step>
+
+  <Step title="Define your audience">
+    Set the demographic and behavioral profile for your testers: age range, location, occupation, device familiarity, and any persona characteristics relevant to your product. A well-defined audience produces results that reflect the people who actually use — or will use — your product.
+  </Step>
+
+  <Step title="Write the mission">
+    Describe what testers should try to accomplish, not how to do it. A strong mission is goal-oriented and scenario-based. See the tips section below for guidance on writing missions that produce honest, useful think-aloud data.
+  </Step>
+
+  <Step title="Select testers">
+    Browse available synthetic tester profiles and select 5–10 whose demographics, behaviors, and tech literacy match your target users. A broader selection surfaces a wider range of usability patterns.
+  </Step>
+
+  <Step title="Launch and review">
+    Click **Launch**. Results typically arrive in under 20 minutes. Open the **Insights Report** for synthesized findings and UX benchmark scores, then read individual **think-aloud transcripts** to trace each tester's path through your site.
+  </Step>
+</Steps>
+
+## What AI Testers Can and Cannot Access
+
+Uxia's synthetic testers navigate your site as a real browser session would. They can interact with standard web elements: navigation menus, forms, buttons, modals, scroll interactions, and multi-page flows.
+
+<Warning>
+  Some technically complex or highly interactive flows — such as those requiring CAPTCHA completion, third-party OAuth popups, native device permissions, or real-time WebSocket interactions — may have limitations. If you're unsure whether your flow is supported, contact **hello@uxia.app** before launching, and the team can advise on the best approach or alternative setup.
+</Warning>
+
+## Tips for Writing an Effective Mission
+
+Keep your mission goal-oriented, realistic, and free of step-by-step instruction. The goal is to learn where users struggle on their own — not to confirm they can follow directions.
+
+<Tip>
+  **Frame the mission as a realistic user goal.** "You're evaluating project management tools for your team. Visit this site and decide whether you'd consider signing up for a trial." This puts testers in the mindset of a real user, not a QA tester.
+</Tip>
+
+<Tip>
+  **Don't describe the interface.** Avoid phrases like "use the top navigation" or "find the dropdown." Let testers discover the interface on their own — that's the whole point.
+</Tip>
+
+<Tip>
+  **End with a decision point.** Good missions have a natural conclusion: a form submitted, a page reached, a decision made. This gives testers a clear moment to stop and reflect, and gives you a clear success metric to evaluate.
+</Tip>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="AI Live Website Test" icon="globe" href="/testing/ai-live-website">
+    Full reference for the AI Live Website Test type, configuration, and credential handling.
+  </Card>
+  <Card title="Transcripts and Insights" icon="file-lines" href="/concepts/transcripts-and-insights">
+    Understand think-aloud transcripts, the insights report, and UX benchmark scores.
+  </Card>
+</CardGroup>
