@@ -57,6 +57,7 @@
         ]
       },
       "account/projects",
+      "account/security-and-sso",
       {
         "group": "AI User Test",
         "icon": "mouse-pointer-click",
@@ -92,28 +93,6 @@
         ]
       },
       {
-        "group": "AI Accessibility Test",
-        "icon": "person-standing",
-        "pages": [
-          {
-            "group": "Creating an AI Accessibility Test",
-            "pages": [
-              "wcag-conformance-level",
-              "frame-upload"
-            ]
-          },
-          {
-            "group": "Results",
-            "pages": [
-              "criteria-evaluation",
-              "vision-simulation"
-            ]
-          },
-          "about-1",
-          "use-cases-1"
-        ]
-      },
-      {
         "group": "AI User Research Test",
         "icon": "telescope",
         "pages": [
@@ -123,7 +102,8 @@
             "group": "Creating an AI User Research tTest",
             "pages": [
               "question-types"
-            ]
+            ],
+            "icon": "pencil-ruler"
           },
           {
             "group": "Results",
@@ -131,8 +111,43 @@
               "responses",
               "charts",
               "chat-with-testers"
+            ],
+            "icon": "notebook-text"
+          }
+        ]
+      },
+      {
+        "group": "AI Accessibility Test",
+        "icon": "person-standing",
+        "pages": [
+          "about-1",
+          "use-cases-1",
+          {
+            "group": "Creating an AI Accessibility Test",
+            "icon": "pencil-ruler",
+            "pages": [
+              "wcag-conformance-level",
+              "frame-upload"
+            ]
+          },
+          {
+            "group": "Results",
+            "icon": "notebook-text",
+            "pages": [
+              "criteria-evaluation",
+              "vision-simulation"
             ]
           }
+        ]
+      },
+      {
+        "group": "Account & Plans",
+        "icon": "settings",
+        "pages": [
+          "account/plans-and-credits",
+          "account/workspaces",
+          "account/people",
+          "account/usage"
         ]
       },
       {
@@ -159,32 +174,6 @@
               "guides/lovable"
             ]
           }
-        ]
-      },
-      {
-        "group": "Account & Plans",
-        "icon": "settings",
-        "pages": [
-          "account/plans-and-credits",
-          "account/workspaces",
-          "account/people",
-          "account/usage"
-        ]
-      },
-      "account/security-and-sso",
-      {
-        "group": "Test Types",
-        "expanded": true,
-        "pages": [
-          "testing/ai-live-website",
-          "testing/ai-user-research"
-        ]
-      },
-      {
-        "group": "Guides",
-        "pages": [
-          "guides/concept-testing",
-          "guides/hybrid-research"
         ]
       }
     ]
