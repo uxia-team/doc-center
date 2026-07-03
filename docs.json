@@ -99,9 +99,7 @@
           "use-cases-2",
           {
             "group": "Creating an AI User Research Test",
-            "pages": [
-              "question-types"
-            ],
+            "pages": [],
             "icon": "pencil-ruler"
           },
           {
