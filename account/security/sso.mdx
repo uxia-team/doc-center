@@ -1,0 +1,43 @@
+---
+title: "SSO and User Provisioning in Uxia"
+sidebarTitle: "SSO"
+description: "Configure SSO, SCIM, JIT account creation, verified domains, audit logs, and log streaming for your enterprise organization."
+icon: "key-round"
+---
+
+For organizations with stricter identity and access management requirements, the **SSO and provisioning** tab on the Organization page is where you configure enterprise identity features.
+
+Depending on your plan and enabled features, this tab may let you:
+
+- Add and manage verified organization domains.
+- Check whether a domain is configured, pending, missing, failed, or verified.
+- Open the SSO admin panel.
+- Open the provisioning panel for SCIM setup.
+- Turn on or off **automatic account creation (JIT)**.
+- Turn on or off whether invitations from external domains are allowed.
+- Open audit logs setup.
+- Open log streaming setup.
+
+## Single Sign-On (SSO)
+
+SSO lets your team log in to Uxia using your existing company identity provider — such as Okta, Azure AD, or Google Workspace. This means:
+
+- Team members authenticate through a system your IT team already manages and trusts.
+- You maintain centralized control over who has access to Uxia.
+- Offboarding a team member from your identity provider automatically revokes their Uxia access.
+
+## SCIM Provisioning
+
+SCIM (System for Cross-domain Identity Management) automates user provisioning and deprovisioning across your organization. When you add or remove a user in your identity provider, that change is reflected in Uxia automatically — no manual seat management required.
+
+## Just-in-Time (JIT) Account Creation
+
+With JIT enabled, new users from a verified domain can sign in via SSO and have their Uxia account created automatically on first login — no manual invite required.
+
+## Audit Logs and Log Streaming
+
+Audit logs capture key actions taken inside your organization. Log streaming forwards those events to your SIEM or observability platform so your security team can monitor activity alongside the rest of your infrastructure.
+
+<Note>
+  SSO, SCIM, JIT, audit logs, and log streaming are available on the Custom plan. If SSO or provisioning is not enabled for your organization, the page will prompt you to contact Uxia. Reach out at [hello@uxia.app](mailto:hello@uxia.app) to configure enterprise authentication.
+</Note>
