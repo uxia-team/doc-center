@@ -91,6 +91,8 @@
         "group": "AI Accessibility Test",
         "icon": "person-standing",
         "pages": [
+          "about-1",
+          "use-cases-1",
           {
             "group": "Creating an AI Accessibility Test",
             "pages": [
@@ -104,9 +106,7 @@
               "criteria-evaluation",
               "vision-simulation"
             ]
-          },
-          "about-1",
-          "use-cases-1"
+          }
         ]
       },
       {
@@ -171,7 +171,6 @@
         "group": "Test Types",
         "expanded": true,
         "pages": [
-          "testing/ai-user-test",
           "testing/accessibility-test",
           "testing/ai-live-website",
           "testing/ai-user-research",
@@ -181,7 +180,6 @@
       {
         "group": "Guides",
         "pages": [
-          "guides/ai-user-test",
           "guides/testing-live-websites",
           "guides/concept-testing",
           "guides/hybrid-research",
@@ -192,8 +190,6 @@
         "group": "Core Concepts",
         "pages": [
           "concepts/audience-enrichment",
-          "concepts/transcripts-and-insights",
-          "concepts/ux-benchmarks",
           "concepts/ai-participants"
         ]
       }

@@ -1,3 +1,39 @@
 ---
 title: "Criteria Evaluation"
 ---
+
+Once an audit finishes, its results open on a dedicated page — and the **Accessibility Results** tab is where you'll spend most of your time.
+
+## Finding a completed test
+
+On the **Tests** page, use the type filter (All, AI User Test, Accessibility, AI User Research) and open the **Accessibility** tab. Completed runs carry a green **Completed** badge. Opening one lands you on the results page, with breadcrumbs back to the project, a **Share** button, the completion date, and three tabs: **Accessibility Results**, [**Vision Simulation**](/vision-simulation), and **Test Details**.
+
+## The summary card
+
+At the top of the Accessibility Results tab, a frame selector sits alongside a summary card showing:
+
+- **Conformance Level Tested** — for example, A & AA (cumulative: AA includes A, and AAA includes A and AA)
+- **Passed**, **Failed**, and **Review** counts
+
+## Working through the criteria
+
+Filter and search to focus your review — search by success criterion, and filter by **Status**, **Review Scope**, and **Level**. The table lists each criterion with:
+
+| Column | What it shows |
+| --- | --- |
+| **WCAG Code** | The criterion number, e.g. 1.3.1 |
+| **Success Criterion** | Its name |
+| **Level** | A, AA, or AAA |
+| **Category** | The area it falls under |
+| **Status** | Passed, Failed, or Review |
+| **Review Scope** | Where the fix likely belongs |
+
+Statuses read as **Passed** (satisfied for the current evidence), **Failed** (a confirmed issue to fix), and **Review** (needs human judgment or implementation confirmation before it can be cleared). **Review Scope** tags each item **Design** (layout, contrast, copy, sizing, structure), **Code** (implementation, semantics, labels, keyboard behavior), or both — the tooltip notes some criteria need review in both scopes. You can **Mark as Passed** on review items straight from the row.
+
+## The criterion drawer
+
+Click **See More** on any row to open the detail drawer — the most actionable part of the report. It shows the criterion code and name (e.g. 1.3.1 Info and Relationships), status / scope / level badges, a frame preview, a plain-language **Description**, a **How To Verify** section, and a **Checklist**, plus **WCAG Criteria** and **Mark as Passed** actions. Work through it as your validation checklist: clear **Failed** items first, then triage **Review** items by owner using the scope labels.
+
+<Card title="Next: Vision Simulation" icon="arrow-right" href="/vision-simulation">
+  See how your frames hold up under different vision conditions.
+</Card>

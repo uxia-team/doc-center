@@ -1,3 +1,37 @@
 ---
 title: "WCAG Conformance Level"
 ---
+
+Setting up an Accessibility Test starts the same way as any Uxia test, then asks you to pick a WCAG target level before you upload anything.
+
+## Creating the test
+
+Start from **Home → Create test** or **Tests → Create test**. In the **Create new test** modal, choose **Accessibility Test** from the three test types, give it a clear title (optionally assign it to a project), and click **Create test**. Uxia opens the Accessibility Test wizard, which runs through three steps: **Test Details**, **Upload Frames**, and **Summary**.
+
+## Choosing the conformance level
+
+On the **Test Details** step, you pick the WCAG target level:
+
+- **Recommended (AA)** — preselected, and the right choice for most teams. It addresses the most common accessibility barriers and is positioned as the industry and legal baseline.
+- **Advanced (AAA)** — the highest level of coverage, best when you're aiming for the most inclusive experience or working to a stricter internal standard.
+
+<Note>
+  WCAG levels are cumulative. To pass **AA**, a product must also satisfy **A**; to pass **AAA**, it must satisfy **A**, **AA**, and **AAA**. Leave AA selected unless your team explicitly needs AAA.
+</Note>
+
+## How accessibility testing works
+
+The expandable **How accessibility testing works** section explains what Uxia evaluates:
+
+- WCAG 2.2 conformance (AA / AAA)
+- Low-vision support
+- Mobile and touch interactions
+- Cognitive accessibility
+
+It also includes FAQ-style entries on legal standards — the European Accessibility Act (EAA), the ADA, and other countries — whether WCAG 2.2 still applies when a law references 2.1, whether the test covers code-level issues, and how the A / AA / AAA levels relate.
+
+Confirm your title, leave AA selected unless you need AAA, then click **Next** to move on to uploading frames.
+
+<Card title="Next: Frame Upload" icon="arrow-right" href="/frame-upload">
+  Add the screens and recordings Uxia will audit.
+</Card>
