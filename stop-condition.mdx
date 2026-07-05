@@ -2,21 +2,39 @@
 title: "Stop Condition"
 ---
 
-The **Stop Condition** defines exactly when a run should end — the moment a tester knows the goal has been reached. It's required for [live sources](/source), because a tester navigating a real, open-ended website needs a clear signal for when to stop rather than wandering indefinitely.
+The **Stop Condition** defines exactly when a run should end - the moment a tester knows the goal has been reached. It's required for [live sources](/source), because a tester navigating a real, open-ended website / prototype needs a clear signal for when to stop rather than wandering indefinitely.
 
 ## Writing a stop condition
 
 State the end state in plain language, tied to something observable on screen. For example:
 
-> "Stop once I have completed checkout and reached the order confirmation page."
+> "Stop once you reached the order confirmation page."
 
-> "Stop when the new account has been created and I land on the dashboard."
+> "Stop when the new account has been created and you land on the dashboard."
+
+> "Stop when card information is requested."
 
 A good stop condition pairs naturally with a good [mission](/mission): the mission says what to accomplish, and the stop condition says how you'll know it's done. Anchoring it to a specific page, confirmation message, or state change keeps runs clean and comparable across testers.
 
 <Tip>
-  If testers are stopping too early or running long, tighten the stop condition before anything else — it's usually the fastest fix for inconsistent runs.
+  If testers are stopping too early or running long, tighten the stop condition before anything else.
 </Tip>
+
+<Warning>
+  **Differentiate between Mission, Scenario, Stop Condition and Audience**
+
+  While the Mission represents the task (the "What"), the Audience represents who is performing that task (the "Who"), the Stop Condition is when to stop the test (the "Until when"), and the Scenario represents the situational context (the "Why" or the circumstances in which the task is performed).
+
+  For example:
+
+  **Mission**: Purchase a 1-hour travel ticket in this subway app.
+
+  **Scenario**: You have just landed in New York for the first time for a 10-day summer holiday, and you need a way to get around the city using the subway.
+
+  **Stop Condition**: Stop when you reach the credit card information screen.
+
+  **Audience**: Male or female, 25-40 years old, born in the UK, full-time employed, etc.
+</Warning>
 
 <Card title="Next: Post-test Questions" icon="arrow-right" href="/post-test-questions">
   Ask testers what they thought once they're done.
