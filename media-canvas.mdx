@@ -2,7 +2,7 @@
 title: "Media canvas"
 ---
 
-The **media canvas** is where you build a test flow from your own media instead of pointing testers at a live URL. Upload your screens or a recorded walkthrough, arrange them, and define how testers move between them — Uxia turns that into a navigable prototype the AI testers can explore.
+The **media canvas** is where you build a test flow from your own media instead of pointing testers at a live URL. Upload your screens or a recorded walkthrough, arrange them, draw the interactive areas and define how testers move between them - Uxia turns that into a navigable prototype the AI testers can explore.
 
 ## When to use it
 
@@ -11,12 +11,86 @@ Reach for the media canvas when you're testing:
 - Static design screens exported from Figma, Sketch, or any design tool (JPG, PNG, or PDF)
 - An image set representing a flow that isn't built yet
 - A recorded video walkthrough of a product or concept
+- Very early iterations of designs where you haven't built a prototype
 
 It's the counterpart to a [live source](/source): the same test, the same missions and testers, but you supply and wire up the screens yourself rather than having Uxia navigate a live site.
 
 ## Building the flow
 
-On the canvas, you lay out your screens and connect them into the path you want testers to follow — defining which screen leads to the next so testers' actions move them through the flow the way a real interface would. Once the flow is set, the rest of the builder — [mission](/mission), [scenario](/test-scenario), audience, and [advanced settings](/advanced-settings) — works exactly as it does for a live test.
+On the canvas, you lay out your screens and connect them into the path you want testers to follow - defining which screen leads to the next so testers' actions move them through the flow the way a real interface would. Once the flow is set, the rest of the builder - [mission](/mission), [scenario](/test-scenario) and [audience](/audiences/overview) - work exactly as it does for a live test.
+
+## Canvas Controls
+
+### Click Mode
+
+- **Enabled:** Drag screens to reposition them.
+- **Disabled:** Drag to move around the canvas.
+
+### Create Interaction Areas
+
+Draw interactive regions on a screen and connect them to the next step in your flow.
+
+### Import Files
+
+Upload additional screens without leaving the canvas.
+
+### Fit All Screens
+
+Automatically adjust the view to display every screen on the canvas.
+
+### Zoom In
+
+Zoom in for a closer view using the **\+** button, mouse wheel, or trackpad.
+
+### Zoom Out
+
+Zoom out to see more of your prototype at once.
+
+### Pan
+
+Move around the canvas by dragging, using your trackpad, mouse wheel, or holding the **Spacebar**.
+
+### Help
+
+Open this guide to learn about the available canvas tools.
+
+## Actions
+
+### Click
+
+Use for buttons, links, or any element that navigates to another screen after being clicked.
+
+### Input
+
+Use for text fields or search bars to simulate typing before moving to the next screen.
+
+### Scroll & Swipe
+
+Use for long pages, carousels, or swipeable content. Supports vertical and horizontal movement.
+
+### Drag
+
+Use when the user must drag an element, such as a slider or draggable object.
+
+## Understanding Screens & Connections
+
+Each uploaded image is a screen. The navigation flow is defined by the interaction areas and their connections - not by the screen numbers.
+
+When opening a step from a transcript, the canvas automatically centers on the corresponding screen so you can understand what the tester was seeing.
+
+## How do I create a full-screen scroll?
+
+Create an interaction area covering the entire screen, assign it the **Scroll & Swipe** action, and connect it to the next screen showing the scrolled state.
+
+## How do I simulate text input?
+
+Create an **Input** interaction over the empty field and connect it to another screen where the field appears completed.
+
+For forms with multiple fields, you can either complete them all in one step or create separate screens for a more realistic experience.
+
+## Do testers experience transition effects?
+
+No. Transition animations shown in the Preview are only for building and reviewing the prototype. Testers only experience the interactions and resulting screens.
 
 <Card title="Next: Results" icon="arrow-right" href="/results">
   See what every completed test gives you back.

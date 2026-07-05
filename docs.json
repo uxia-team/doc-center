@@ -73,8 +73,7 @@
               "post-test-questions",
               "advanced-settings",
               "media-canvas"
-            ],
-            "icon": "pencil-ruler"
+            ]
           },
           {
             "group": "Results",
@@ -86,8 +85,7 @@
               "human-insights",
               "test-set-up-confidence",
               "ask-ai"
-            ],
-            "icon": "notebook-text"
+            ]
           }
         ]
       },
@@ -101,8 +99,7 @@
             "group": "Creating an AI User Research Test",
             "pages": [
               "question-types-1"
-            ],
-            "icon": "pencil-ruler"
+            ]
           },
           {
             "group": "Results",
@@ -110,8 +107,7 @@
               "responses",
               "charts",
               "chat-with-testers"
-            ],
-            "icon": "notebook-text"
+            ]
           }
         ]
       },
@@ -123,7 +119,6 @@
           "use-cases-1",
           {
             "group": "Creating an AI Accessibility Test",
-            "icon": "pencil-ruler",
             "pages": [
               "wcag-conformance-level",
               "frame-upload"
@@ -131,7 +126,6 @@
           },
           {
             "group": "Results",
-            "icon": "notebook-text",
             "pages": [
               "criteria-evaluation",
               "vision-simulation"

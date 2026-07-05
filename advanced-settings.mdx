@@ -2,26 +2,28 @@
 title: "Advanced Settings"
 ---
 
-**Advanced settings** are optional — turn on only the sections your flow actually needs.
+**Advanced settings** are optional and only available when using a live website as prototype (Live source).
+
+Find below the different Advanced Settings we offer:
 
 ## Credentials & custom fields
 
-If your test covers a gated or authenticated area, add the login details and any custom field values testers need to complete the flow. Choose how accounts are handled:
+If your test covers a gated or authenticated flow, add the login details and any custom field values testers need to complete the flow. Choose how accounts are handled:
 
-- **Dedicated per tester** _(recommended)_ — each AI participant gets its own account, so testers navigate independently without session conflicts.
-- **Shared account** — all participants log in with the same account. Faster to set up, but testers may collide mid-session and affect each other's flows.
+- **Dedicated per tester** _(recommended)_ - each AI participant gets its own account, so testers navigate independently without session conflicts.
+- **Shared account** - all participants log in with the same account. Faster to set up, but testers may collide mid-session and affect each other's flows.
 
-Use **Add field** for any extra values the flow needs, such as an account number.
+Use **Add field** for any extra values the flow needs, such as an account number, ID or any other specific text / numerical field needed to complete the flow.
 
 <Warning>
-  Only ever use dedicated test accounts — never enter production credentials. Credentials are stored encrypted at rest, used only to run this test flow, and are never shared with any AI model.
+  Credentials are stored encrypted at rest, used only to run this test flow, and are never shared with any AI model. We recommend testing with special test credentials.
 </Warning>
 
 ## Files
 
-Import files testers can upload during the flow — for example, a document to attach at some step. Files are only used when the flow requires an upload, and are never passed to testers as context.
+Import files testers can upload during the flow - for example, a document to attach at some step. Files are only used when the flow requires an upload, and are never passed to testers as context.
 
-Supported formats: PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, PNG, JPG, WEBP, JSON, MP3, WAV, AIFF, MP4, MOV, AVI, WEBM — up to 10 MB each, and up to 5 files.
+Supported formats: PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, PNG, JPG, WEBP, JSON, MP3, WAV, AIFF, MP4, MOV, AVI, WEBM - up to 10 MB each, and up to 5 files.
 
 <Card title="Next: Media canvas" icon="arrow-right" href="/media-canvas">
   Build a test flow from your own screens or a recorded walkthrough.
