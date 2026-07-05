@@ -5,7 +5,7 @@
   "description": "AI-powered user testing and research platform. Get actionable UX insights from synthetic testers in minutes — no recruiting needed.",
   "colors": {
     "primary": "#18463c",
-    "light": "#18463c",
+    "light": "#ffffff",
     "dark": "#18463c"
   },
   "favicon": {
@@ -278,5 +278,8 @@
       "destination": "/account/security/data-privacy",
       "permanent": true
     }
-  ]
+  ],
+  "appearance": {
+    "default": "light"
+  }
 }
