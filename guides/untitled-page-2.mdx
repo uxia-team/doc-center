@@ -1,21 +1,39 @@
 ---
 title: "ChatGPT"
-hidden: true
 ---
+
+Uxia is available directly in the ChatGPT [plugin directory](https://chatgpt.com/plugins) — approved by OpenAI for distribution as both a plugin and an MCP connector. That means you can connect it in a couple of clicks, with no developer mode or manual server URL required.
 
 ## Setup
 
-1. Go to the [Mobbin app page on ChatGPT](https://chatgpt.com/apps/mobbin/asdk_app_69fdb9081018819193707354f21b366e).
-2. Click **Connect**, which will bring up an "Add Mobbin to ChatGPT" dialog.
-3. Click **Sign in with Mobbin** on that dialog.
-4. Sign in with your Mobbin account to authorize access.
+<Steps>
+  <Step title="Open the directory">
+    In ChatGPT, go to **Settings → Apps → Directory**, or open [chatgpt.com/plugins](https://chatgpt.com/plugins) directly, and search for **Uxia**.
+  </Step>
+  <Step title="Connect Uxia">
+    Open the Uxia listing and click **Connect**. ChatGPT will bring up an authorization dialog.
+  </Step>
+  <Step title="Authenticate">
+    Sign in with your Uxia account to authorize the connection. Once approved, Uxia is linked to your ChatGPT account with scoped access to your tests, transcripts, and insights.
+  </Step>
+</Steps>
+
+<Note>
+  MCP access is included on all paid Uxia plans. If your workspace is still on the Free Trial, upgrade from your [Plans & Credits](/account/plans-and-credits) page before connecting.
+</Note>
+
+<Note>
+  If your ChatGPT workspace is on a Business, Enterprise, or Edu plan, an admin or owner may need to enable the Uxia app for your workspace first. Members will see a **Disabled by admin** label until it's turned on — admins can enable Uxia from **Workspace settings → Apps**.
+</Note>
 
 ## Usage
 
-Once connected, you can ask ChatGPT to search Mobbin directly:
+Once connected, you can ask ChatGPT to talk to Uxia directly:
 
 ```plaintext
-Search Mobbin for onboarding screens from banking apps
+Create a new test that tests my new app www.google.com
 ```
 
-plaintext
+```plaintext
+List my last 5 Uxia tests and summarize the top insights from each.
+```
