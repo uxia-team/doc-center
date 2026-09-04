@@ -16,10 +16,10 @@ You need:
 
 <Steps>
   <Step title="Open Cursor's MCP settings">
-    In Cursor, open **Settings → Tools & MCPs** and click **New MCP server**. Cursor opens your `mcp.json` file.
+    In Cursor, go to **Customize → MCP → New MCP Server**.
   </Step>
   <Step title="Add the Uxia server configuration">
-    Paste this configuration into `mcp.json`:
+    Paste the following JSON configuration:
 
     ```json
     {
@@ -33,10 +33,10 @@ You need:
     }
     ```
 
-    If your `mcp.json` file already contains servers, add the `Uxia` entry inside the existing `mcpServers` object.
+    If you already have MCP servers configured, add the `Uxia` entry inside the existing `mcpServers` object.
   </Step>
   <Step title="Authenticate Uxia">
-    Return to **Settings → Tools & MCPs** in Cursor and enable **Uxia**. When Cursor first calls the server, a browser window opens. Sign in to Uxia and approve access to the workspace.
+    Return to **Customize → MCP** in Cursor and enable **Uxia**. When Cursor first calls the server, a browser window opens. Sign in to Uxia and approve access to the workspace.
   </Step>
   <Step title="Start asking questions">
     Open Cursor Chat and ask Uxia-aware questions, such as:
@@ -62,7 +62,7 @@ Once connected, Cursor can use your Uxia data as context while you work:
 
 ## Troubleshooting
 
-If Uxia does not appear as connected in Cursor, confirm the URL is exactly `https://platform.uxia.app/api/mcp/mcp`, save `mcp.json`, then restart Cursor. If authentication does not open automatically, disable and re-enable the Uxia server from **Tools & MCPs**.
+If Uxia does not appear as connected in Cursor, confirm the URL is exactly `https://platform.uxia.app/api/mcp/mcp`, save the MCP server configuration, then restart Cursor. If authentication does not open automatically, disable and re-enable the Uxia server from **Customize → MCP**.
 
 <Card title="MCP getting started" icon="plug" href="/integrations/mcp">
   Learn about Uxia MCP access, supported clients, and general setup.
