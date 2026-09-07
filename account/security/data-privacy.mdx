@@ -28,8 +28,9 @@ Recordings give you the qualitative depth to complement the AI-synthesized findi
 
 If the product or area you're testing sits behind a login screen, you can provide credentials so that AI testers can access protected flows. When you do:
 
-- Credentials are used solely to run the tester session and are not stored beyond that session
-- Uxia does not retain, log, or share login credentials after the test completes
-- You remain in control of those credentials and can rotate them after each test run if your security policy requires it
+- Credentials are encrypted in transit and at rest, and are decrypted only when a tester session needs to use them
+- They are never placed in an AI model's prompt or context — values are injected directly into the browser, so they cannot appear in transcripts, insights, or reports
+- They stay scoped to the test they were added to and are visible only inside your workspace, never to other organizations
+- You remain in control of those credentials and can update or rotate them after each test run if your security policy requires it
 
-This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience without exposing long-lived credentials.
+This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience. For the full breakdown, see [Tester credentials](/tester-credentials).
