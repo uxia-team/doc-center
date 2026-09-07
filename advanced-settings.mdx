@@ -23,7 +23,7 @@ Use **Add field** for any extra values the flow needs, such as an account number
 
 Import files testers can upload during the flow - for example, a document to attach at some step. Files are only used when the flow requires an upload, and are never passed to testers as context.
 
-Supported formats: PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, PNG, JPG, WEBP, JSON, MP3, WAV, AIFF, MP4, MOV, AVI, WEBM - up to 10 MB each, and up to 5 files.
+Any file type is accepted except executables, scripts, active web files and macro-enabled documents - up to 100 MB each, and up to 5 files.
 
 <Warning>
   Files are stored encrypted at rest, used only for upload steps in this test flow, and their contents are never read by any AI model. We recommend uploading synthetic documents rather than real ones. See [Tester Files](/tester-files) for the full details.

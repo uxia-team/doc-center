@@ -28,21 +28,22 @@ Import any file the flow might ask for. Common cases:
 
 <CardGroup cols={2}>
   <Card title="Formats" icon="file">
-    **Documents** — PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, JSON
+    **Any file type**, except:
 
-    **Images** — PNG, JPG, WEBP
-
-    **Audio** — MP3, WAV, AIFF
-
-    **Video** — MP4, MOV, AVI, WEBM
+    - Executables
+    - Scripts
+    - Active web files
+    - Macro-enabled documents
   </Card>
 
   <Card title="Limits" icon="gauge">
-    **Up to 10 MB** per file
+    **Up to 100 MB** per file
 
     **Up to 5 files** per test
   </Card>
 </CardGroup>
+
+Those exclusions exist because the file is handed to a real browser during the session. Anything that could execute code is blocked, for your protection and ours.
 
 <Tip>
   If the flow has more than one upload step, import a file for each. Give them names that describe what they are — `cv.pdf` or `id-document.png` — so it's clear which file belongs at which step.
@@ -92,7 +93,7 @@ The safest file is one that wouldn't matter if someone else saw it.
     If you must start from a real document, replace names, emails, phone numbers, addresses and ID numbers with test values first.
   </Step>
   <Step title="Keep files small and simple">
-    A one-page PDF uploads faster and fails less often than a 9 MB scan. The tester only needs the upload to succeed, not the document to be realistic.
+    The ceiling is 100 MB, but a one-page PDF uploads faster and fails less often than a large scan. The tester only needs the upload to succeed, not the document to be realistic.
   </Step>
   <Step title="Match the format the flow expects">
     If the form only accepts PDF, importing a DOCX will make the flow fail at the upload step — and that failure will show up in your results as a usability issue that isn't one.
