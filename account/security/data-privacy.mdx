@@ -33,4 +33,15 @@ If the product or area you're testing sits behind a login screen, you can provid
 - They stay scoped to the test they were added to and are visible only inside your workspace, never to other organizations
 - You remain in control of those credentials and can update or rotate them after each test run if your security policy requires it
 
-This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience. For the full breakdown, see [Tester credentials](/tester-credentials).
+This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience. For the full breakdown, see [Tester Credentials](/tester-credentials).
+
+## Files Used During a Test
+
+If your flow asks testers to upload something — a CV, an ID, a spreadsheet — you can import files for them to use. When you do:
+
+- Files are encrypted in transit and at rest, and are retrieved only when a tester session reaches an upload step
+- Their contents are never read by an AI model — the file is attached directly to the input, so nothing inside it can appear in transcripts, insights, or reports
+- They stay scoped to the test they were imported into and are visible only inside your workspace
+- You can remove them at any time
+
+We recommend uploading synthetic documents rather than real ones. See [Tester Files](/tester-files) for the full breakdown.
