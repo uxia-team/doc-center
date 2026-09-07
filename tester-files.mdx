@@ -1,0 +1,123 @@
+---
+title: "Tester Files"
+sidebarTitle: "Tester Files"
+description: "How to give AI testers the files they need to complete a mission — and exactly how Uxia stores, isolates, and protects them."
+---
+
+Some missions can't be completed without something to upload. If your flow asks the tester to attach a CV to a job application, upload an ID for verification, import a CSV, or add a profile picture, they need a real file to hand over.
+
+That's what **files** are for. You import them once when creating the test, and testers use them whenever the flow reaches an upload step.
+
+<Note>
+  Files are available on **Live source** tests, under **Advanced settings → Files**.
+</Note>
+
+## What you can upload
+
+Import any file the flow might ask for. Common cases:
+
+| Use case | Typical file |
+| --- | --- |
+| Job application | A CV or cover letter in PDF |
+| Identity or verification step | A scanned document or photo |
+| Data import | A CSV or spreadsheet |
+| Profile setup | An avatar or profile image |
+| Media upload | A short video or audio clip |
+
+### Supported formats and limits
+
+<CardGroup cols={2}>
+  <Card title="Formats" icon="file">
+    **Documents** — PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, JSON
+
+    **Images** — PNG, JPG, WEBP
+
+    **Audio** — MP3, WAV, AIFF
+
+    **Video** — MP4, MOV, AVI, WEBM
+  </Card>
+
+  <Card title="Limits" icon="gauge">
+    **Up to 10 MB** per file
+
+    **Up to 5 files** per test
+  </Card>
+</CardGroup>
+
+<Tip>
+  If the flow has more than one upload step, import a file for each. Give them names that describe what they are — `cv.pdf` or `id-document.png` — so it's clear which file belongs at which step.
+</Tip>
+
+## How Uxia handles your files
+
+A file you upload can carry far more personal data than a form field, so it's handled with the same care as [credentials](/tester-credentials).
+
+### Encrypted in transit and at rest
+
+Files travel over TLS and are stored encrypted at rest. They stay attached to the test you imported them into, so you can re-run that test without re-uploading, and they are retrieved only when a tester session reaches an upload step.
+
+### Never read by the AI model
+
+Files are **not passed to testers as context**. The AI tester never opens the file, never reads its contents, and never reasons about what's inside it.
+
+When the flow reaches an upload input, the file is attached directly — the same way a person would pick it from their file picker. As a result, nothing inside your file can leak into session transcripts, insights, or reports.
+
+<Note>
+  This also means the tester can't act on what a file contains. If your mission depends on the tester knowing something — a name, a date, a reference number — put that in the [mission](/mission) or in a [credential field](/tester-credentials), not inside the file.
+</Note>
+
+### Never used for training
+
+Nothing you submit to Uxia is used to train or fine-tune any model, for Uxia or for any third party. Files are excluded from this by design, since their contents never reach a model in the first place.
+
+### Scoped to your workspace
+
+Files belong to the test they were imported into, inside your workspace. They are visible only to you and the teammates you have explicitly invited — never to other organizations, and never to other Uxia customers.
+
+If you remove someone from the workspace, they lose access to the test and its files along with it.
+
+<Warning>
+  Treat workspace membership as the access boundary. Anyone who can open a test can download the files attached to it, so only invite teammates who should have that level of access.
+</Warning>
+
+## Best practices
+
+The safest file is one that wouldn't matter if someone else saw it.
+
+<Steps>
+  <Step title="Use fake documents, not real ones">
+    A CV for a made-up candidate works exactly as well as a real one for testing an upload flow. Never upload a real applicant's CV, a real customer's contract, or your own ID.
+  </Step>
+  <Step title="Strip personal data before uploading">
+    If you must start from a real document, replace names, emails, phone numbers, addresses and ID numbers with test values first.
+  </Step>
+  <Step title="Keep files small and simple">
+    A one-page PDF uploads faster and fails less often than a 9 MB scan. The tester only needs the upload to succeed, not the document to be realistic.
+  </Step>
+  <Step title="Match the format the flow expects">
+    If the form only accepts PDF, importing a DOCX will make the flow fail at the upload step — and that failure will show up in your results as a usability issue that isn't one.
+  </Step>
+  <Step title="Remove files you no longer need">
+    Files stay attached to the test until you delete them. Clear out anything you're done with.
+  </Step>
+</Steps>
+
+<Warning>
+  Avoid uploading anything covered by a confidentiality agreement, or any document containing real personal data of a third party. Use a synthetic equivalent instead.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Advanced settings" icon="sliders" href="/advanced-settings">
+    Where credentials, custom fields, and file imports are configured.
+  </Card>
+
+  <Card title="Tester Credentials" icon="key" href="/tester-credentials">
+    Giving testers logins and custom field values for gated flows.
+  </Card>
+</CardGroup>
+
+<Card title="Next: Media Canvas" icon="arrow-right" href="/media-canvas">
+  Build a test flow from your own screens or a recorded walkthrough.
+</Card>

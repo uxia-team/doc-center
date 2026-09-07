@@ -25,6 +25,10 @@ Import files testers can upload during the flow - for example, a document to att
 
 Supported formats: PDF, DOC, DOCX, TXT, CSV, XLS, XLSX, PNG, JPG, WEBP, JSON, MP3, WAV, AIFF, MP4, MOV, AVI, WEBM - up to 10 MB each, and up to 5 files.
 
-<Card title="Next: Tester credentials" icon="arrow-right" href="/tester-credentials">
+<Warning>
+  Files are stored encrypted at rest, used only for upload steps in this test flow, and their contents are never read by any AI model. We recommend uploading synthetic documents rather than real ones. See [Tester Files](/tester-files) for the full details.
+</Warning>
+
+<Card title="Next: Tester Credentials" icon="arrow-right" href="/tester-credentials">
   How Uxia stores, isolates, and protects the credentials you give testers.
 </Card>
