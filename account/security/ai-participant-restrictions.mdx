@@ -1,0 +1,49 @@
+---
+title: "AI Participant Restrictions in Uxia"
+sidebarTitle: "AI Participant Restrictions"
+description: "Control what AI participants can reach and do during a test — scope them to a single target, keep tests in staging, and bound each session so participants never write data you don't want written."
+---
+
+AI participants are the synthetic testers Uxia runs against your product. They only ever act on the target you give them and within the boundaries of the test you configure — you decide what they can reach, which environment they touch, and how far a session is allowed to go. This page covers the controls you have for keeping AI participants tightly scoped.
+
+## Participants only act on the target you configure
+
+Every test runs against a single target that you provide, and participants stay within it.
+
+- **One target per test.** Each test runs against the single URL or prototype you set up. Participants navigate that target only.
+- **No wandering off.** Participants do not crawl beyond your target, follow links out to unrelated domains, or fetch external URLs you haven't configured.
+- **Limited blast radius.** Because a session is confined to the product you intend to test, there's no exposure to systems or sites outside that scope.
+
+## Test in staging or UAT
+
+You choose the environment participants run against, so you can keep every session away from production.
+
+- **You pick the endpoint.** Point participants at a staging, UAT, or pre-production URL and that is the only place they operate.
+- **Production stays untouched.** Since participants act only on the environment you provide, testing a non-production build keeps sessions away from live systems and real user data.
+- **Seeded data.** We recommend staging or UAT with seeded, non-production data for any flow that reads or writes sensitive information.
+
+## Bound what a session can do
+
+The **mission** and **stop condition** you set define how far a participant goes.
+
+- **Scope the mission** to the specific task you want observed. Participants act to complete that task and nothing more.
+- **Set a stop condition** that ends the session at a point you choose. If you don't want participants completing an action that writes data — submitting a form, placing an order, changing a setting — stop the session before that step, for example at the review or confirmation screen.
+- **Interaction stays on the target.** Participants only fill in and submit forms on the product you're testing, and only when the mission calls for it. They never submit data to external sites.
+
+## Keep a test observational
+
+When you want participants to look but not commit changes:
+
+- Design the mission around navigation and evaluation rather than completing a transactional step, and use a stop condition that ends before any submit or confirm action.
+- When a flow does need to write data — carts, bookings, sign-ups, settings — give each participant its own dedicated account so sessions stay isolated and never collide. See [Advanced Settings](/advanced-settings).
+
+## Scope credentials and files
+
+- **Credentials** for gated flows are scoped to the single test they're added to, encrypted, and injected straight into the browser — never placed in a model prompt. Rotate or remove them after a run. See [Tester Credentials](/tester-credentials).
+- **Files** you provide for upload steps are scoped to the test and are never read by a model. Use synthetic documents rather than real ones. See [Tester Files](/tester-files).
+
+## Full visibility into every action
+
+Every AI participant produces a step-by-step transcript of what it saw, the decisions it made, and the actions it took during the session. You can review exactly what happened and where — see [Test Transcripts](/test-transcripts).
+
+For how Uxia stores and protects the data involved in a test, see [Data Privacy](/account/security/data-privacy).

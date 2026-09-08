@@ -174,6 +174,7 @@
         "icon": "shield-check",
         "pages": [
           "account/security/data-privacy",
+          "account/security/ai-participant-restrictions",
           "account/security/sso",
           "account/security/policies"
         ]
