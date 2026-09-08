@@ -1,92 +1,95 @@
 ---
-title: "Figma integration: import frames and build prototypes in Uxia"
+title: "Figma integration and prototypes in Uxia"
 sidebarTitle: "Figma"
-description: "Connect Figma to turn designs into actionable prototypes in Uxia. Import your built Figma prototypes and modify them freely inside the Uxia canvas."
+description: "Use Figma with Uxia to sign in, import Figma page assets into the Uxia canvas, or test a public Figma prototype by link."
 ---
 
-Connect Figma to turn designs into actionable prototypes in Uxia. Sync projects and keep product, design, and development aligned.
+There are three ways to use Figma with Uxia. You can use Figma as a sign-in option, connect your Figma account to import assets into the Uxia canvas, or test a public Figma prototype by pasting its link. The first two use the deeper Figma integration; testing a public prototype does not require a Figma integration or login.
 
-## Native Figma integration
+## Use Figma to create your Uxia account
 
-Uxia's native Figma integration lets you import your built Figma prototypes directly into Uxia in one click — no exporting, screenshotting, or rebuilding flows. Once imported, your prototype is fully editable inside the Uxia canvas:
+Figma is available as a social login option. When you create an account or sign in to Uxia, you can use your Figma login instead of creating a separate Uxia password.
 
-- Rearrange screens and update flow connections
-- Edit, add, or remove interactions and hotspots
-- Adjust starting points and task entry screens
-- Make on-the-fly changes between test runs without going back to Figma
+This is separate from importing Figma assets or testing a Figma prototype. You can use Figma as your login provider without importing anything from Figma.
 
-This means you can refine the prototype based on AI tester feedback and re-run tests immediately, keeping your research loop tight.
+## Import Figma assets into the Uxia canvas
 
-## Where the Figma integration is available
+Use the Figma integration when you want to create a source or flow from a Figma file and then continue building the prototype inside Uxia. Uxia imports the assets from a specific Figma page into the canvas, where you can finish setting up the experience for your test.
 
-The Figma import flow is available when you are creating or editing a **prototype-based** test in Uxia.
-
-To access it:
+To import a Figma page:
 
 <Steps>
-  <Step title="Open the test">
-    Open the test you want to import a Figma prototype into.
+  <Step title="Open the user test">
+    Create or open the user test where you want to use the Figma assets.
   </Step>
-  <Step title="Go to the Prototype step">
-    Navigate to the **Prototype** step of the test builder.
+  <Step title="Choose the media source">
+    In the **Source** section, select **Media source** and then choose the Figma option.
   </Step>
-  <Step title="Select Interactive flow">
-    Choose **Interactive flow** as the prototype type.
+  <Step title="Connect Figma">
+    Sign in to or connect your Figma account when prompted.
   </Step>
-  <Step title="Open the import dialog">
-    Click **Import designs** on an empty canvas, or **Import Files** if the canvas already has frames.
+  <Step title="Select a file and page">
+    Choose the Figma file you want to use, then select the specific page to import.
+  </Step>
+  <Step title="Import the page">
+    Uxia imports all assets from the selected Figma page into the canvas.
+  </Step>
+  <Step title="Finish the prototype">
+    Use the Uxia canvas to arrange the imported assets, define the flow, and complete the prototype before launching the test.
   </Step>
 </Steps>
+
+This workflow is useful when you want to adapt the imported design, add interactions, or build the final testable flow in Uxia rather than testing the Figma file exactly as it exists.
+
+## Test a public Figma prototype by link
+
+If you already have a Figma prototype, you do not need to connect Figma or log in with Figma to test it in Uxia.
+
+Create a shareable Figma prototype and set its access so **anyone with the link** can open it. Then:
+
+<Steps>
+  <Step title="Open the user test">
+    Create or open the user test you want to run.
+  </Step>
+  <Step title="Choose the Figma prototype source">
+    In the **Source** setup, select the **Figma prototype** option.
+  </Step>
+  <Step title="Paste the prototype link">
+    Paste the shareable Figma prototype URL.
+  </Step>
+  <Step title="Continue setting up the test">
+    Finish the remaining test setup and launch the test.
+  </Step>
+</Steps>
+
+Because the prototype is publicly accessible, both AI and human participants in Uxia can open and use it. No Figma account connection is required for this workflow.
 
 <Note>
-  Figma import is available for **Interactive flow** only. If **Sequential flow** is selected, the Figma option is disabled.
+  Public-link testing and Figma importing are different workflows. Use a public prototype link when you want participants to test the prototype as it is. Use the Figma integration when you want to import a page's assets and continue building the prototype in the Uxia canvas.
 </Note>
 
-## Import a Figma prototype
+## Which workflow should you use?
 
-Once the **Import files** modal opens:
-
-<Steps>
-  <Step title="Select Figma">
-    Choose **Figma** as the source.
-  </Step>
-  <Step title="Confirm fetch flows">
-    Confirm the card labeled **Fetch flows from Figma**.
-  </Step>
-  <Step title="Connect your account">
-    Click **OAuth with Figma** to connect your Figma account.
-  </Step>
-  <Step title="Paste your Figma URL">
-    Paste a Figma **proto**, **file**, or **design** URL into the **Figma URL** field.
-  </Step>
-  <Step title="Wait for flow detection">
-    Wait for Uxia to detect the available flows in your file.
-  </Step>
-  <Step title="Select a flow">
-    In **Select a flow**, choose the flow you want to import.
-  </Step>
-</Steps>
-
-Uxia then imports the screens from that flow into the prototype canvas, where you can edit them freely before launching your test.
+- **Use Figma sign-in** when you want to create or access your Uxia account with your Figma credentials.
+- **Import a Figma page** when you want to bring assets into Uxia and modify or complete the prototype in the canvas.
+- **Paste a public prototype link** when you already have a shareable Figma prototype and want AI or human participants to test it without connecting Figma.
 
 ## Tips and best practices
 
-- Use one Figma file per flow when possible — it makes imports cleaner and easier to review.
-- Make sure your Figma prototype has a **Flow starting point** set, or Uxia may not detect any flows.
-- Keep each imported flow focused and within your frame limit.
-- Use a real prototype flow, not a loose design file with no clickable path.
-- If your browser blocks pop-ups, allow them so the Figma OAuth window can open.
-- If you already have frames on the canvas, importing a Figma flow will replace the existing frames.
-- Larger Figma files can take longer to load, so simpler files generally import faster.
+- For public-link testing, verify that the prototype opens for someone who is not signed in to Figma before starting the test.
+- Use the page import workflow when you need to edit the design, add interactions, or build the test flow in Uxia.
+- Select the Figma page that contains the assets you want to use; Uxia imports the assets from that page into the canvas.
+- Keep imported pages focused so the canvas is easier to organize and the test flow is easier to review.
+- If you import assets into a canvas that already contains a prototype, review the resulting canvas before launching the test.
 
 ## Related
 
 <CardGroup cols={2}>
   <Card title="Test Prototypes" href="/guides/testing-prototypes">
-    Full walkthrough for testing Figma prototypes and design screens with AI synthetic testers.
+    Learn how to test Figma prototypes and design screens with AI synthetic testers.
   </Card>
 
-  <Card title="AI User Test" href="/testing/ai-user-test">
-    Run AI usability tests on the prototypes you import from Figma.
+  <Card title="Source" href="/source">
+    Learn how to choose a live source or media source when creating a user test.
   </Card>
 </CardGroup>
