@@ -70,6 +70,8 @@
               "mission",
               "test-scenario",
               "stop-condition",
+              "sus",
+              "uxia-q-score",
               "post-test-questions",
               "advanced-settings",
               "tester-credentials",
