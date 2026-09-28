@@ -1,0 +1,85 @@
+---
+title: "Accessibility Check Block"
+sidebarTitle: "Overview"
+description: "Audit your screens against WCAG 2.2 AA or AAA at the design stage. No participants needed."
+---
+
+The **Accessibility check** block audits your screens against WCAG 2.2 before you write code. You upload your screens and pick a target conformance level. Uxia then checks each screen criterion by criterion. It flags what passes, what fails, and what needs a human review, and it tags each issue as a likely design fix or code fix.
+
+Because the audit runs on static screens rather than a live build, you catch accessibility problems at the design stage. That's where they're cheapest to fix, instead of late in QA or after launch.
+
+## What it checks
+
+- **WCAG 2.2 success criteria** at Level AA or AAA. The levels are cumulative, so an AA audit also covers Level A. See [WCAG conformance level](/wcag-conformance-level).
+- **All four WCAG principles**: Perceivable, Operable, Understandable, and Robust. This includes contrast, text alternatives, touch target size, focus visibility, and labels.
+- **Low-vision support**, with a [vision simulation](/vision-simulation) that shows each screen under color blindness, blurred vision, and field loss.
+- **Design and code scope**. Some criteria can't be confirmed from a screenshot, such as keyboard behavior. Uxia marks these for review and tags them **Code** so your engineers can verify them.
+
+## When to use it
+
+**Pre-development design review.** Audit screens before handoff, so accessibility problems surface in design rather than in QA or after code ships.
+
+**Splitting work between designers and engineers.** Every issue that needs work is tagged **Design** or **Code**. Both teams get a shared checklist and a clean way to divide the work.
+
+**Compliance-driven reviews.** Check against a recognized standard: AA as the common legal baseline, or AAA when you aim for the highest coverage.
+
+**Tracking progress over time.** Audit the updated screens after fixes and watch the Passed, Failed, and Review counts move in the right direction.
+
+## Add the block
+
+<Steps>
+  <Step title="Open the block picker">
+    In the **Build** phase, open **Add a block**. Under **Audits**, choose **Accessibility check**.
+  </Step>
+  <Step title="Choose a conformance level">
+    Keep **Recommended** (AA) or switch to **Advanced** (AAA). See [WCAG conformance level](/wcag-conformance-level).
+  </Step>
+  <Step title="Add your frames">
+    Upload up to 5 screens as image screenshots (PNG, JPEG, WebP, or GIF). You can add each screen's live URL for extra code-level checks. See [Frames](/frame-upload).
+  </Step>
+  <Step title="Launch the audit">
+    Click **Start recruiting**. If the test has no other blocks, you launch the audit straight from the Recruit summary. See [Run the audit](/frame-upload#run-the-audit).
+  </Step>
+</Steps>
+
+## Limits and credits
+
+| | Free plan | Paid plans (Starter, Pro, Custom) |
+|---|---|---|
+| Accessibility check block | Not available | 1 per test |
+| Frames | Not available | Up to 5 per test, 100 MB each |
+| Cost | Not available | 10 credits per frame |
+
+- On the Free plan, the block shows an **Upgrade** badge in the picker. Clicking it opens the **Upgrade to use accessibility** plans dialog.
+- A test can hold only one accessibility check block. Once you add one, it's disabled in the picker. You also can't duplicate the block.
+- The cost depends only on the number of frames. For example, an audit of 4 screens costs 40 credits, whatever participants the test has.
+- In a test with [A/B variants](/ab-variants), the frame cost applies to each variant.
+
+## Combine it with other blocks
+
+An accessibility check can sit in the same test as task, survey, and card sorting blocks. It doesn't need participants:
+
+- **AI participants.** The audit runs when you launch AI participants. Its frame credits are added to the launch total.
+- **Human participants.** Participants who join through a [test link](/test-links) or the [human panel](/human-panel) skip the block. If you only recruit human participants, the audit doesn't run.
+- **Accessibility only.** If the test has no other blocks, there's nothing to recruit. The Recruit phase tells you so, and you launch the audit from its summary.
+
+Results appear in the **Analyze** phase as their own block, next to your other results.
+
+<Note>
+  Uxia helps you catch issues early, but it doesn't replace a formal legal accessibility audit, a specialist review, or a certification.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="WCAG conformance level" icon="gauge" href="/wcag-conformance-level">
+    Choose between AA and AAA.
+  </Card>
+  <Card title="Frames" icon="image" href="/frame-upload">
+    Upload the screens Uxia will audit.
+  </Card>
+  <Card title="Criteria evaluation" icon="list-checks" href="/criteria-evaluation">
+    Read the results criterion by criterion.
+  </Card>
+  <Card title="Vision simulation" icon="eye" href="/vision-simulation">
+    See your screens under different vision conditions.
+  </Card>
+</CardGroup>

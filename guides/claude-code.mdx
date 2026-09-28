@@ -1,6 +1,7 @@
 ---
 title: "Claude"
 sidebarTitle: "Claude"
+description: "Connect Uxia to Claude Code and Claude Desktop through MCP to create tests and read results from Claude."
 ---
 
 ## Claude Code
@@ -11,7 +12,6 @@ sidebarTitle: "Claude"
    ```bash
    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp/mcp
    ```
-   bash
 
 Start a new Claude Code session in your terminal. In the list of MCP servers, select **Uxia**.
 
@@ -24,10 +24,10 @@ claude /mcp
 
 ### Usage
 
-Once connected, you can ask Claude perform actions in Uxia directly:
+Once connected, you can ask Claude to perform actions in Uxia directly:
 
 ```plaintext
-Create a new test thats tests my new app www.google.com 
+Create a new test that tests my new app at www.example.com
 ```
 
 ## Claude Desktop
@@ -52,5 +52,5 @@ If your Claude workspace is on a Team or Enterprise plan, you may need to ask yo
 Once connected, you can ask Claude to talk to Uxia directly:
 
 ```plaintext
-Create a new test thats tests my new app www.google.com 
+Create a new test that tests my new app at www.example.com
 ```

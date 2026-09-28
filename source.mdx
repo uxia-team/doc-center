@@ -1,36 +1,85 @@
 ---
-title: "Source"
+title: "Live Website and Figma Links"
+sidebarTitle: "Website and Figma Links"
+description: "Add the URL participants navigate in a live website or Figma prototype task, pick a viewport, and let Uxia verify the link."
 ---
 
-The Source step is where you tell Uxia what your testers should navigate. You have two options:
+Live website and Figma prototype tasks start from a link. You add it in the link modal, and Uxia checks that participants can reach it before you save.
 
-- Point testers at something live.
-- Upload your own media and build the flow yourself.
+To test your own images instead, use a [Media prototype task](/media-canvas).
 
-## Live source
+## Add a link
 
-Test a live website or a live prototype by entering its URL. Compatible with Figma Make, Figma prototypes, Lovable, Base44, Google Stitch, Claude, and any browser-accessible site.
+<Steps>
+  <Step title="Open the link modal">
+    On a **Live website task** or **Figma prototype task**, click **Add link**.
+  </Step>
+  <Step title="Paste the URL">
+    In **URL**, paste a public address, such as `www.example.com` or `https://example.com`. For a Figma prototype task, paste the prototype link, which starts with `https://www.figma.com/proto/`. Participants open the exact URL you enter.
+  </Step>
+  <Step title="Choose a viewport">
+    In **Viewport**, pick the screen size participants use. See [Viewports](#viewports).
+  </Step>
+  <Step title="Set the product status">
+    For a live website, choose **Work in progress** or **Production-ready**. See [Product status](#product-status).
+  </Step>
+  <Step title="Wait for verification, then save">
+    Uxia verifies the link automatically. When it succeeds, click **Save**.
+  </Step>
+</Steps>
 
-- **URL**: paste a valid public URL (`www.example.com` or `https://example.com`). Uxia fetches a snapshot and verifies compatibility automatically, usually within a few seconds. Testers navigate the exact URL you enter.
-- **Viewport**: choose the screen size testers experience: Desktop (1920×1080), Laptop (1366×768), Tablet (1024×768), Mobile (390×844), or a custom size.
+To change the link later, click it on the block. To remove it, hover over it and click the trash icon.
 
-Gated and authenticated products work too, you provide credentials later, in [Advanced Settings](/advanced-settings).
+## Viewports
+
+| Viewport | Size |
+|---|---|
+| **Desktop** (default) | 1920×1080 |
+| **Laptop** | 1366×768 |
+| **Tablet** | 1024×768 |
+| **Mobile** | 390×844 |
+
+## Product status
+
+Product status tells AI participants how finished your product is, so they judge it fairly. It's available for live website tasks only. Figma prototypes are always treated as work in progress.
+
+| Status | What participants do |
+|---|---|
+| **Work in progress** (default) | Some content or interactions may still be unfinished. Participants ignore obvious placeholders and incomplete elements. |
+| **Production-ready** | Everything is expected to be finished. Participants evaluate all the content, interactions, and details they find. |
+
+## Link verification
+
+Verification starts as soon as you paste a valid URL, and runs again if you change the URL or the viewport. For a live website, Uxia loads the page and captures a screenshot at the viewport you chose. This usually takes a few seconds. **Save** stays disabled until verification finishes.
+
+| Message | What it means | What to do |
+|---|---|---|
+| *"Successfully verified. This page is navigable by testers."* | Participants can reach the page. | Click **Save**. |
+| *"This live page may not be navigable by testers."* | Uxia detected bot protection on the page. You can't save the link. | Click **Contact us**. See [Bot protection](#bot-protection). |
+| *"The URL is not accessible."* | Uxia couldn't load the page. | Check that the URL is public and spelled correctly, or click **Contact us**. |
+| *"Successfully verified. This Figma prototype is publicly accessible."* | Participants can open the prototype. | Click **Save**. |
+| *"This Figma prototype is not publicly accessible."* | The prototype's sharing settings block participants. | In Figma, let anyone with the link view the prototype, then click **Verify again**. |
 
 <Note>
-  Some websites have anti-robot measures in place. If you encounter one of these cases, contact us, and we will provide instructions for your IT team on how to whitelist our testers so they can navigate your experience.
+  If your organization has an integration set up with Uxia for a website, a matching URL can be saved without a preview. Check or add its credentials with **+ Add credentials**. See [Tester credentials](/tester-credentials#choose-a-mode).
 </Note>
 
-## Media source
+## Bot protection
 
-When you're testing static screens or a recorded walkthrough rather than a live, interactive product, upload images or a video and set up the flow yourself. You do this on the [media canvas](/media-canvas), where you arrange screens, create the interaction areas and define how testers move between them.
+Some websites have anti-bot measures that block automated browsers. If you run into one, contact us, and we'll give your IT team instructions for whitelisting Uxia's AI participants so they can navigate your experience.
+
+A site can also block participants only during the run. See [Flows AI participants can't complete](/unsupported-flows#bot-protection-and-access-denied) for what happens then, including the credit refund.
 
 ## What you can test
 
-- Live websites and web applications - public, gated with credentials, staging, or pre-production
-- Prototypes and generated apps from Figma Make, Figma prototypes, Lovable, Base44, Google Stitch, and Claude
-- Static designs, image sets, and video walkthroughs
-- Complex multi-step and branched flows
+- Live websites and web apps: public, staging, or pre-production.
+- Products behind a login. Add the login with **+ Add credentials**. See [Tester credentials](/tester-credentials).
+- Coded prototypes and generated apps with a public URL, such as Figma Make, Lovable, Base44, Google Stitch, or Claude.
+- Figma prototypes shared by link, in a Figma prototype task.
+- Complex multi-step and branched flows.
 
-<Card title="Next: Mission" icon="arrow-right" href="/mission">
-  Tell your testers what they should try to accomplish.
+For static screens or flows that aren't built yet, use a [Media prototype task](/media-canvas).
+
+<Card title="Next: Task" icon="arrow-right" href="/mission">
+  Tell participants what they should try to accomplish.
 </Card>

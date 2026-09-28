@@ -1,84 +1,91 @@
 ---
-title: "Results"
+title: "Insights and UOS"
+sidebarTitle: "Insights"
+description: "Read the insights a Task block produced, understand its Usability Optimization Score, and open each insight's impact, evidence, and fix."
 ---
 
-The **Results** tab is the main summary screen for an AI User Test. It moves from a high-level synthesis down to the evidence: an executive summary, the ranked insights and recommendations, the structured issue report, and the satisfaction scores.
+When a [Task block](/task-block) finishes, open it in the **Analyze** phase to see what participants ran into. The **Insights** tab lists every problem and finding, ranked, and the block header sums up the result in one number: the **Usability Optimization Score (UOS)**.
 
-## Executive Summary
+## The tabs of a Task block
 
-The tab opens with an **Executive Summary** card - a short narrative covering the whole test: what testers were trying to do, what worked well, the main problems found, and the recommended next steps. In a ticket-purchase test, for example, it might call out easy ticket discovery and clear pricing as strengths, then flag long onboarding, confusing receipt wording, and an external payment handoff as the bigger issues.
+| Tab | What it shows |
+|---|---|
+| **Insights** | Ranked insights with evidence and fixes (this page) |
+| **Transcripts** | Each participant's session, step by step ([Transcripts](/test-transcripts)) |
+| **Analytics** | Success, drop-off, misclicks, and heatmaps ([Analytics and Journeys](/analytics)) |
+| **Journeys** | The paths participants took ([Analytics and Journeys](/analytics)) |
+| **Benchmarks** | SUS and UXIA-Q scores, when switched on ([Benchmark results](/benchmark-results)) |
 
-## Top Insights & Next Steps
+While the block is running, only **Transcripts** is available, and it fills in live. The other tabs unlock when the run is complete. If every AI participant was blocked from a live website, only **Transcripts** stays available.
 
-Below the summary, the findings split into two short ranked lists:
+## The block header
 
-- **Top Insights** - the most important problems found, e.g. a long onboarding flow, unclear 1-hour validity rules, or a payment redirect that feels unsafe.
-- **Next Steps** - those findings turned into direct recommendations, e.g. add a prominent fast path to buying a ticket, clarify the validity rules, surface payment methods earlier.
+Click the chevron next to the block title to expand the **Test setup**: the **Scenario**, the **Stop condition** (live website and Figma prototype tasks), the **Product status** (**Finished product** or **Prototype**), and the **Source**. Click the source to open the website in a new tab or to view the prototype frames you tested.
 
-Keeping them side by side separates diagnosis from action.
+## Usability Optimization Score
 
-## Insights Report
+The UOS badge, on the right of the block header, shows a score from 0 to 100 in a ring, with a short comment. Click it to read **What is the Usability Optimization Score?** and what your result means.
 
-The **Insights Report** is the main structured issue list. It opens with a few headline metrics - total insights, total categories, and the **Usability Optimization Score™ (UOS)** - then a table of every finding.
+The score weighs every insight by its relevance and by how many participants ran into it, so it reflects what a typical participant experienced:
 
-The UOS is a single summary score based on the test results, combining identified insights, qualitative feedback, and user satisfaction across the same four UX pillars used in [User Satisfaction](#user-satisfaction) - Usability, Trust, Appearance, and Loyalty. It's shown with a rating and a value, for example **Good - 72%**.
+- A larger audience surfaces more insights, but doesn't lower the score on its own.
+- A longer flow isn't penalized for giving participants more to do.
+- Participants who don't complete the task lower the score.
+- Insights rated **Prototype** are left out. They point at limits of the prototype, not at your design.
 
-Each finding is organized by Insight, Relevance, Frequency, and Category:
+| Comment | What it means |
+|---|---|
+| **High drop-off** | More than half of the participants didn't complete the task. Review their journeys and your test setup. |
+| **Improvement opportunities** | At least one High-relevance insight needs attention. Start there. |
+| **Frictions worth fixing** | There are meaningful opportunities to improve the experience. |
+| **Minor frictions** | The experience performs well overall, with a few areas to improve. |
+| **Strong foundation** | The experience is in good shape, with room to make it even better. |
+| **Highly optimized** | Little friction was found in this test. |
 
-| Insight | Relevance | Frequency | Category |
-| --- | --- | --- | --- |
-| Onboarding flow is too long before the first ticket | High | Occasional | Usability |
-| 1-hour ticket validity rules are unclear | High | Occasional | Copy |
-| Payment redirect appears in another language and feels unsafe | Medium | Rare | Trust |
+When you filter results by audience, the UOS is recalculated for the audiences you selected. Benchmarks (SUS and UXIA-Q) are reported separately and don't feed the UOS.
 
-<Note>
-  The rows above are an example. Your own report is generated from your test's findings.
-</Note>
+## The Insights tab
 
-### Relevance
+The tab opens with the number of insights reported (for example, **12 insights reported**) and a **Search** box that matches titles, descriptions, and categories. The table has four columns:
 
-Relevance indicates the impact level of an issue:
+| Column | What it shows |
+|---|---|
+| **Title** | The insight. Click the bookmark to highlight it and move it to the top of the table. |
+| **Relevance** | **High**, **Medium**, **Low**, or **Prototype** (may come from a prototype limitation rather than your design). You can change it. |
+| **Reporters** | Audience badges and how many participants reported the insight, for example **2 out of 5**. |
+| **Category** | The type of problem. Hover it for a definition. |
 
-| Label | Meaning |
-| --- | --- |
-| **High / Medium / Low** | The impact level of the issue on the experience |
-| **Prototype** | The issue may come from the prototype itself and may not reflect a final shipped product |
+The categories are **Navigation**, **CTAs**, **Copy**, **Trust**, **Usability**, **Visual Design**, and **Other**. Insights are sorted with highlighted ones first, then by relevance, then by how many participants reported them.
 
-### Frequency
+### Change an insight's relevance
 
-Frequency groups issues by how often testers mentioned them, so you can tell an isolated quirk from a broadly repeated problem:
+Click the relevance of any insight and pick a new value. The badge then shows **Edited**, and the dropdown marks the **(original rating)** so you can switch back. Your change updates the UOS. Rate an insight **Prototype** to take it out of the score.
 
-| Band | Share of testers |
-| --- | --- |
-| **Rare** | 0–20% |
-| **Occasional** | 21–50% |
+## Insight details
 
-### Category
+Click a row to open **Insight details**. The drawer shows the title, relevance, category, reporters, a description, and the affected frames where the problem showed up. Below them, three tabs:
 
-Each issue is also tagged by the kind of UX problem it represents - for example **Navigation**, **Copy**, **Trust**, **Usability**, or **CTAs**.
+- **Impact.** An **Impact Assessment** split into **User Impact** and **Business Impact**.
+- **Evidence.** **What Testers Said**: quotes grouped by participant. Click a quote to jump to where the participant said it. When the insight is about behavior rather than words, you see **What Testers Did** instead, with the participants it was **Observed in**.
+- **Fix.** A **Fix Suggestion** with its **Acceptance criteria**, followed by a **Prompt** you can **Copy** or **Expand** and paste into an AI coding tool. Older results show a **Technical Complexity** rating instead: **Quick fix**, **Requires planning**, or **Major redesign**.
 
-## Insight detail drawer
+<Tip>
+  To pull insights into Claude Code, Cursor, or another AI tool without copy-pasting, connect the [Uxia MCP server](/integrations/mcp).
+</Tip>
 
-Every row has a **Show Details** action that opens a right-side drawer for that single issue. The drawer carries the insight title, its relevance badge, category tags, and frequency marker, plus:
+## Free plan limits
 
-- **Overview**, **Testers Evidence**, and **Fix Suggestion** tabs
-- **Affected Frames** - the exact screens where the issue showed up
-- A **Mark as prototype** control
+On the Free plan, the Insights tab shows the top insights only (up to 5) and tells you how many are hidden: **You are missing +N insights**. The description, affected frames, and **Impact** tab stay visible; **Evidence** and **Fix** are locked. Paid plans see everything. See [Plans and credits](/account/plans-and-credits).
 
-The **Overview** tab holds a longer explanation and an **Impact Assessment** split into **User Impact** and **Business Impact**. Because each finding ties back to the affected frames, the report stays visual - you see where a problem happened, not just a description of it.
+## Human participants
 
-## User Satisfaction
+These tabs show AI participant results. To see what human participants did on the same task, switch the participant type to **Human participants**. See [Human participant results](/human-insights) and [Analyze your results](/analyze-results).
 
-Further down, the **User Satisfaction** area pairs standard UX scoring with a short AI-written interpretation. It surfaces the **UXIA-Q Score**, the **System Usability Scale (SUS)**, and pillar tabs for Usability, Trust, Appearance, and Loyalty.
-
-SUS is reported against the common benchmark of 68:
-
-| Score | Value | Benchmark |
-| --- | --- | --- |
-| SUS | 74.5 | 68 |
-
-Each pillar tab shows a benchmark delta, an average score out of 5, question-level results, and a plain-language summary - for example, a Usability view reading "Quite easy to use" alongside an AI paragraph explaining the reasons behind the score. It's a useful spot for teams that want both a numeric signal and a readable explanation.
-
-<Card title="Next: Test Transcripts" icon="arrow-right" href="/test-transcripts">
-  Follow each tester's journey, step by step.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Next: Transcripts" icon="arrow-right" href="/test-transcripts">
+    Follow each participant's session, step by step.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ask-ai">
+    Ask questions about your results in plain language.
+  </Card>
+</CardGroup>

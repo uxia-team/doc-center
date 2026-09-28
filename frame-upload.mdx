@@ -1,30 +1,77 @@
 ---
-title: "Frame Upload"
+title: "Frames"
+description: "Upload the screens the accessibility check audits, add optional page URLs, and launch the audit."
 ---
 
-The **Upload Frames** step is where you add the screens or recordings you want Uxia to audit.
+Frames are the screens Uxia audits. You add them in the **Files** field of the [Accessibility check block](/accessibility-block). Each file becomes one frame in the results.
 
-## What to upload
+## Add files
 
-Drag and drop your files into the upload zone, or click to browse. Supported formats:
+Click **Add files**, or drag and drop files onto the button. While files upload, the button shows **Uploading…**. Stay on the page until it finishes. Each file then appears with a thumbnail, its name, and an **Optional URL** field. To remove a file, click the trash icon next to it.
 
-- **Images** — PNG, JPEG, WEBP
-- **Videos** — MP4, MOV, AVI
+| | Limit |
+|---|---|
+| Formats | UI screenshots in PNG, JPEG, WebP, or GIF |
+| File size | Up to 100 MB per file |
+| Number of files | Up to 5 per test (paid plans) |
+| File names | Each file needs a unique name |
+| Minimum | At least 1 file |
 
-You can upload up to **10 files**, at up to **100 MB** each.
+If you select more files than you have room for, Uxia adds only as many as fit. Once you reach 5 files, the **Add files** button disappears.
 
 <Tip>
-  Upload representative screens from the real flow rather than isolated mockups without context. Use images for static screen checks, and reach for video only when interaction behavior is what you need evaluated.
+  Upload representative screens from the real flow rather than isolated mockups without context.
 </Tip>
 
-<Note>
-  You need at least one file to continue. If you click **Next** with nothing uploaded, Uxia shows "Please upload at least one file."
-</Note>
+<Warning>
+  The uploader also accepts video files, but they can't be audited: the check before launch asks you to replace them with a UI screenshot in PNG, JPEG, WebP, or GIF format.
+</Warning>
 
-## Review and launch
+Every file costs 10 credits, so upload only screens of a digital interface. Uxia skips photographs, artwork, and scanned documents, and shows a banner for them in the results.
 
-Once your files are attached, continue to the **Summary** step to review your setup — conformance level and uploaded frames — and start the audit.
+## Add a page URL (optional)
 
-<Card title="Next: Criteria Evaluation" icon="arrow-right" href="/criteria-evaluation">
+If a screen already exists as a live web page, paste its address into the **Optional URL** field under the file. Uxia then reads the page's HTML as well as the image. This lets it check criteria that a screenshot alone can't confirm, such as:
+
+- Whether the page has a title and a declared language
+- Whether images have text alternatives
+- Whether form fields identify their purpose
+
+Leave the field empty for designs that aren't live yet. The URL must start with `http://` or `https://`, and the page must be publicly reachable, because Uxia can't sign in to it.
+
+## Error messages
+
+| Message | What to do |
+|---|---|
+| *Upload an image or video file.* | The file isn't a supported format. Export the screen as a PNG, JPEG, WebP, or GIF. |
+| *Files must be 100MB or smaller.* | Compress the file or export it at a smaller size. |
+| *A file named "…" has already been added.* | Rename the file, or remove the existing one first. |
+| *Enter a valid URL starting with http:// or https://.* | Fix the address in **Optional URL**, or clear it. |
+| *You need to add at least one file* | The block has no files. Add at least one before you click **Start recruiting**. |
+
+## Run the audit
+
+How you launch depends on what else is in the test.
+
+**The test also has task, survey, or card sorting blocks.** Choose your participants in the Recruit phase as usual. The audit runs when you launch AI participants, and its frame credits are included in the launch total. Human participants skip the block, so if you only recruit human participants, the audit doesn't run. See [Recruit participants](/recruit-participants).
+
+**The test only contains the accessibility check.** There's nothing to recruit, so the recruitment methods are disabled.
+
+<Steps>
+  <Step title="Open the Recruit phase">
+    Click **Start recruiting**. The **Summary** shows *"This test only contains an accessibility block, so recruiting testers is not necessary."*
+  </Step>
+  <Step title="Check the cost">
+    **Total credits** shows the cost of your frames: 10 credits per frame.
+  </Step>
+  <Step title="Launch">
+    Click **Go to analyze** in the summary table. Uxia checks the test setup and launches the audit. The status changes to **Processing**.
+  </Step>
+  <Step title="Open the results">
+    Click **Go to analyze** again to open the Analyze phase. While Uxia works, the block shows *"Accessibility results are still processing."*
+  </Step>
+</Steps>
+
+<Card title="Next: Criteria evaluation" icon="arrow-right" href="/criteria-evaluation">
   Read your results, criterion by criterion.
 </Card>

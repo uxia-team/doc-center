@@ -19,7 +19,13 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": [
+      "copy",
+      "view",
+      "assistant",
+      "mcp",
+      "add-mcp"
+    ]
   },
   "navigation": {
     "global": {
@@ -44,7 +50,109 @@
         "expanded": true,
         "pages": [
           "introduction",
-          "how-it-works"
+          "quickstart",
+          "how-it-works",
+          "moving-to-blocks"
+        ]
+      },
+      {
+        "group": "Unmoderated Tests",
+        "icon": "mouse-pointer-click",
+        "pages": [
+          "unmoderated-tests",
+          "build-your-test",
+          {
+            "group": "Recruit Participants",
+            "pages": [
+              "recruit-participants",
+              "ai-participants",
+              "test-links",
+              "human-panel"
+            ]
+          },
+          {
+            "group": "Analyze Results",
+            "pages": [
+              "analyze-results",
+              "human-insights",
+              "ask-ai",
+              "chat-with-testers",
+              "share-and-export"
+            ]
+          },
+          "ab-variants"
+        ]
+      },
+      {
+        "group": "Blocks",
+        "icon": "blocks",
+        "pages": [
+          {
+            "group": "Task Block",
+            "icon": "mouse-pointer-click",
+            "pages": [
+              "task-block",
+              "source",
+              "media-canvas",
+              "mission",
+              "test-scenario",
+              "stop-condition",
+              "sus",
+              "uxia-q-score",
+              "tester-credentials",
+              "tester-files",
+              "unsupported-flows",
+              {
+                "group": "Task Results",
+                "pages": [
+                  "results",
+                  "test-transcripts",
+                  "analytics",
+                  "benchmark-results"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Survey Block",
+            "icon": "clipboard-list",
+            "pages": [
+              "survey-block",
+              "question-types",
+              "survey-results"
+            ]
+          },
+          {
+            "group": "Card Sorting Block",
+            "icon": "layers",
+            "pages": [
+              "card-sorting",
+              "card-sorting-results"
+            ]
+          },
+          {
+            "group": "Accessibility Check Block",
+            "icon": "person-standing",
+            "pages": [
+              "accessibility-block",
+              "wcag-conformance-level",
+              "frame-upload",
+              {
+                "group": "Accessibility Results",
+                "pages": [
+                  "criteria-evaluation",
+                  "vision-simulation"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "group": "AI-Moderated Tests",
+        "icon": "mic",
+        "pages": [
+          "ai-moderated-tests"
         ]
       },
       {
@@ -57,86 +165,6 @@
         ]
       },
       "account/projects",
-      {
-        "group": "AI User Test",
-        "icon": "mouse-pointer-click",
-        "pages": [
-          "about",
-          "use-cases",
-          {
-            "group": "Creating an AI User Test",
-            "pages": [
-              "source",
-              "mission",
-              "test-scenario",
-              "stop-condition",
-              "sus",
-              "uxia-q-score",
-              "post-test-questions",
-              "advanced-settings",
-              "tester-credentials",
-              "tester-files",
-              "media-canvas"
-            ]
-          },
-          {
-            "group": "Results",
-            "pages": [
-              "results",
-              "test-transcripts",
-              "analytics",
-              "post-test-questions-1",
-              "human-insights",
-              "test-set-up-confidence",
-              "ask-ai"
-            ]
-          }
-        ]
-      },
-      {
-        "group": "AI User Research Test",
-        "icon": "telescope",
-        "pages": [
-          "about-2",
-          "use-cases-2",
-          {
-            "group": "Creating an AI User Research Test",
-            "pages": [
-              "question-types"
-            ]
-          },
-          {
-            "group": "Results",
-            "pages": [
-              "responses",
-              "charts",
-              "chat-with-testers"
-            ]
-          }
-        ]
-      },
-      {
-        "group": "AI Accessibility Test",
-        "icon": "person-standing",
-        "pages": [
-          "about-1",
-          "use-cases-1",
-          {
-            "group": "Creating an AI Accessibility Test",
-            "pages": [
-              "wcag-conformance-level",
-              "frame-upload"
-            ]
-          },
-          {
-            "group": "Results",
-            "pages": [
-              "criteria-evaluation",
-              "vision-simulation"
-            ]
-          }
-        ]
-      },
       {
         "group": "Account & Plans",
         "icon": "settings",
@@ -287,7 +315,7 @@
     },
     {
       "source": "/testing/ai-user-test",
-      "destination": "/about",
+      "destination": "/task-block",
       "permanent": true
     },
     {
@@ -297,12 +325,12 @@
     },
     {
       "source": "/testing/ai-user-research",
-      "destination": "/about-2",
+      "destination": "/survey-block",
       "permanent": true
     },
     {
       "source": "/testing/accessibility-test",
-      "destination": "/about-1",
+      "destination": "/accessibility-block",
       "permanent": true
     },
     {
@@ -327,7 +355,7 @@
     },
     {
       "source": "/guides/ai-user-test",
-      "destination": "/about",
+      "destination": "/task-block",
       "permanent": true
     },
     {
@@ -337,17 +365,17 @@
     },
     {
       "source": "/guides/concept-testing",
-      "destination": "/about-2",
+      "destination": "/survey-block",
       "permanent": true
     },
     {
       "source": "/guides/hybrid-research",
-      "destination": "/human-insights",
+      "destination": "/unmoderated-tests",
       "permanent": true
     },
     {
       "source": "/guides/accessibility-workflow",
-      "destination": "/about-1",
+      "destination": "/accessibility-block",
       "permanent": true
     },
     {
@@ -378,6 +406,66 @@
     {
       "source": "/guides/untitled-page-3",
       "destination": "/guides/chatgpt-codex",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/task-block",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases",
+      "destination": "/unmoderated-tests",
+      "permanent": true
+    },
+    {
+      "source": "/advanced-settings",
+      "destination": "/task-block",
+      "permanent": true
+    },
+    {
+      "source": "/post-test-questions",
+      "destination": "/survey-block",
+      "permanent": true
+    },
+    {
+      "source": "/post-test-questions-1",
+      "destination": "/survey-results",
+      "permanent": true
+    },
+    {
+      "source": "/test-set-up-confidence",
+      "destination": "/recruit-participants",
+      "permanent": true
+    },
+    {
+      "source": "/about-2",
+      "destination": "/survey-block",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases-2",
+      "destination": "/survey-block",
+      "permanent": true
+    },
+    {
+      "source": "/charts",
+      "destination": "/survey-results",
+      "permanent": true
+    },
+    {
+      "source": "/responses",
+      "destination": "/survey-results",
+      "permanent": true
+    },
+    {
+      "source": "/about-1",
+      "destination": "/accessibility-block",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases-1",
+      "destination": "/accessibility-block",
       "permanent": true
     }
   ],

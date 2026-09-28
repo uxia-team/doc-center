@@ -1,23 +1,33 @@
 ---
 title: "Tester Files"
 sidebarTitle: "Tester Files"
-description: "How to give AI testers the files they need to complete a mission — and exactly how Uxia stores, isolates, and protects them."
+description: "Give AI participants the files a task asks them to upload, and see exactly how Uxia stores and protects them."
 ---
 
-Some missions can't be completed without something to upload. If your flow asks the tester to attach a CV to a job application, upload an ID for verification, import a CSV, or add a profile picture, they need a real file to hand over.
+Some tasks can't be completed without something to upload. If your flow asks participants to attach a CV to a job application, upload an ID for verification, import a CSV, or add a profile picture, AI participants need a real file to hand over.
 
-That's what **files** are for. You import them once when creating the test, and testers use them whenever the flow reaches an upload step.
+That's what **files** are for. You import them once into a Task block, and AI participants use them whenever the flow reaches an upload step.
 
-<Note>
-  Files are available on **Live source** tests, under **Advanced settings → Files**.
-</Note>
+## Add files
+
+<Steps>
+  <Step title="Open the Files modal">
+    On a live website or Figma prototype task, click **+ Add files** under the URL.
+  </Step>
+  <Step title="Import your files">
+    Drag and drop files into the modal, or click to browse. Remove a file with its **X** button.
+  </Step>
+  <Step title="Close the modal">
+    Click **Done**. The button on the block now shows how many files you added, such as **2 files added**.
+  </Step>
+</Steps>
 
 ## What you can upload
 
 Import any file the flow might ask for. Common cases:
 
 | Use case | Typical file |
-| --- | --- |
+|---|---|
 | Job application | A CV or cover letter in PDF |
 | Identity or verification step | A scanned document or photo |
 | Data import | A CSV or spreadsheet |
@@ -32,53 +42,51 @@ Import any file the flow might ask for. Common cases:
 
     - Executables
     - Scripts
-    - Active web files
+    - Active web files, such as HTML or SVG
     - Macro-enabled documents
   </Card>
 
   <Card title="Limits" icon="gauge">
     **Up to 100 MB** per file
 
-    **Up to 5 files** per test
+    **Up to 5 files** per Task block
   </Card>
 </CardGroup>
 
-Those exclusions exist because the file is handed to a real browser during the session. Anything that could execute code is blocked, for your protection and ours.
+Those exclusions exist because the file is handed to a real browser during the session. Anything that could run code is blocked, for your protection and ours.
 
 <Tip>
-  If the flow has more than one upload step, import a file for each. Give them names that describe what they are — `cv.pdf` or `id-document.png` — so it's clear which file belongs at which step.
+  If the flow has more than one upload step, import a file for each. Give them names that describe what they are, such as `cv.pdf` or `id-document.png`. AI participants see the file names, so clear names help them pick the right file at each step.
 </Tip>
 
 ## How Uxia handles your files
 
-A file you upload can carry far more personal data than a form field, so it's handled with the same care as [credentials](/tester-credentials).
+A file can carry far more personal data than a form field, so it's handled with the same care as [credentials](/tester-credentials).
 
 ### Encrypted in transit and at rest
 
-Files travel over TLS and are stored encrypted at rest. They stay attached to the test you imported them into, so you can re-run that test without re-uploading, and they are retrieved only when a tester session reaches an upload step.
+Files travel over TLS and are stored encrypted at rest. They stay attached to the Task block you imported them into, so you can re-run the test without uploading them again. They're retrieved only when a session reaches an upload step.
 
 ### Never read by the AI model
 
-Files are **not passed to testers as context**. The AI tester never opens the file, never reads its contents, and never reasons about what's inside it.
-
-When the flow reaches an upload input, the file is attached directly — the same way a person would pick it from their file picker. As a result, nothing inside your file can leak into session transcripts, insights, or reports.
+AI participants see only each file's name and type, never its contents. When the flow reaches an upload input, the file is attached directly, the same way a person picks it from a file picker. As a result, nothing inside your file can leak into transcripts or insights.
 
 <Note>
-  This also means the tester can't act on what a file contains. If your mission depends on the tester knowing something — a name, a date, a reference number — put that in the [mission](/mission) or in a [credential field](/tester-credentials), not inside the file.
+  This also means participants can't act on what a file contains. If your task depends on knowing something, such as a name, a date, or a reference number, put it in the [task](/mission) or in a [credential](/tester-credentials), not inside the file.
 </Note>
 
 ### Never used for training
 
-Nothing you submit to Uxia is used to train or fine-tune any model, for Uxia or for any third party. Files are excluded from this by design, since their contents never reach a model in the first place.
+Nothing you submit to Uxia is used to train or fine-tune any model, for Uxia or for any third party. Files are excluded by design, since their contents never reach a model in the first place.
 
 ### Scoped to your workspace
 
-Files belong to the test they were imported into, inside your workspace. They are visible only to you and the teammates you have explicitly invited — never to other organizations, and never to other Uxia customers.
+Files belong to the test they were imported into, inside your workspace. Only you and the teammates you've invited to that workspace can access them: never other organizations, and never other Uxia customers.
 
-If you remove someone from the workspace, they lose access to the test and its files along with it.
+If you remove someone from the workspace, they lose access to the test and its files with it.
 
 <Warning>
-  Treat workspace membership as the access boundary. Anyone who can open a test can download the files attached to it, so only invite teammates who should have that level of access.
+  Treat workspace membership as the access boundary. Anyone who can open a test can access the files attached to it, so only invite teammates who should have that level of access.
 </Warning>
 
 ## Best practices
@@ -87,38 +95,26 @@ The safest file is one that wouldn't matter if someone else saw it.
 
 <Steps>
   <Step title="Use fake documents, not real ones">
-    A CV for a made-up candidate works exactly as well as a real one for testing an upload flow. Never upload a real applicant's CV, a real customer's contract, or your own ID.
+    A CV for a made-up candidate works just as well as a real one for testing an upload flow. Never upload a real applicant's CV, a real customer's contract, or your own ID.
   </Step>
   <Step title="Strip personal data before uploading">
-    If you must start from a real document, replace names, emails, phone numbers, addresses and ID numbers with test values first.
+    If you must start from a real document, replace names, emails, phone numbers, addresses, and ID numbers with test values first.
   </Step>
   <Step title="Keep files small and simple">
-    The ceiling is 100 MB, but a one-page PDF uploads faster and fails less often than a large scan. The tester only needs the upload to succeed, not the document to be realistic.
+    The limit is 100 MB, but a one-page PDF uploads faster and fails less often than a large scan. Participants only need the upload to succeed, not the document to be realistic.
   </Step>
   <Step title="Match the format the flow expects">
-    If the form only accepts PDF, importing a DOCX will make the flow fail at the upload step — and that failure will show up in your results as a usability issue that isn't one.
+    If the form only accepts PDF, importing a DOCX makes the flow fail at the upload step, and that failure shows up in your results as a usability issue that isn't one.
   </Step>
   <Step title="Remove files you no longer need">
-    Files stay attached to the test until you delete them. Clear out anything you're done with.
+    Files stay attached to the Task block until you remove them. Clear out anything you're done with.
   </Step>
 </Steps>
 
 <Warning>
-  Avoid uploading anything covered by a confidentiality agreement, or any document containing real personal data of a third party. Use a synthetic equivalent instead.
+  Avoid uploading anything covered by a confidentiality agreement, or any document that contains real personal data of a third party. Use a synthetic equivalent instead.
 </Warning>
 
-## Related
-
-<CardGroup cols={2}>
-  <Card title="Advanced settings" icon="sliders" href="/advanced-settings">
-    Where credentials, custom fields, and file imports are configured.
-  </Card>
-
-  <Card title="Tester Credentials" icon="key" href="/tester-credentials">
-    Giving testers logins and custom field values for gated flows.
-  </Card>
-</CardGroup>
-
-<Card title="Next: Media Canvas" icon="arrow-right" href="/media-canvas">
-  Build a test flow from your own screens or a recorded walkthrough.
+<Card title="Next: Flows AI participants can't complete" icon="arrow-right" href="/unsupported-flows">
+  Social logins, verification codes, and bot protection, and how to work around them.
 </Card>

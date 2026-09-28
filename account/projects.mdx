@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 icon: "folder-open"
+description: "Group related tests into projects so research for the same initiative, client, or product area stays together."
 ---
 
 In Uxia, a Project is a way to organize your research work around a specific initiative, client, product area, campaign, or user journey.
@@ -18,15 +19,30 @@ A Project can represent anything your team is working on. For example, you might
 
 Inside each Project, you can add the tests that belong to that initiative. This gives your team a cleaner structure and makes it easier to understand which tests are connected to the same research goal.
 
+## Create and manage projects
+
+- **Create a project.** Open **Projects** in the sidebar and click **Create project**.
+- **Add a test to a project.** On a test card, open the menu and choose **Move to**. Pick a project, or choose **Create new project**.
+- **Rename, archive, or delete.** Use the menu on a project card. Archiving a project also archives all tests inside it, and you can unarchive it later. You can only delete a project that has no tests.
+- **Find projects.** Switch between the **Active** and **Archived** tabs, and sort by name, date created, or date modified.
+
 ## Example
 
 Imagine your team is redesigning the onboarding experience for a banking app. You could create a Project called **New Onboarding Flow**.
 
-Inside that Project, you might run:
+Inside that Project, you might keep:
 
-- An AI User Test on the first prototype
-- A second test after design changes
-- An Accessibility Test to check usability barriers
-- An AI User Research test focused on user expectations or comprehension
+- A first test on the prototype that combines a Task block, a Survey block about expectations and comprehension, and an Accessibility check block for the key screens
+- A second test after design changes, to compare the results
+- A test on the live website once the new flow ships
 
 All of these tests belong to the same initiative, so grouping them inside one Project makes the research easier to manage and review.
+
+<CardGroup cols={2}>
+  <Card title="Build your test" icon="blocks" href="/build-your-test">
+    Combine Task, Survey, Card sorting and Accessibility check blocks in one test.
+  </Card>
+  <Card title="Workspaces" icon="layout-grid" href="/account/workspaces">
+    See what else lives in your workspace.
+  </Card>
+</CardGroup>

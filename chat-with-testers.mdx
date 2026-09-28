@@ -1,35 +1,62 @@
 ---
-title: "Chat with testers"
+title: "Chat with Participants"
+description: "Keep talking to any AI participant after the test runs: follow up on a survey answer or ask about a specific moment in a task."
 ---
 
-A study gives you every respondent's answers, but sometimes an answer raises a new question. **Chat with testers** lets you keep talking to any respondent after the study runs — probing a vague response, asking something the study didn't cover, or pushing back on what they said. It's the flexibility of a one-on-one interview at the scale of a survey, and because the testers are synthetic, there's no scheduling or recruiting to arrange.
-
-## Starting a chat
-
-You can open a chat with a respondent from either results view:
-
-- **From [Responses](/responses)** — when chat is available and you're signed in, the right-hand panel of the per-respondent view becomes a **Chat with respondent** drawer for the tester you're reading.
-- **From [Charts](/charts)** — filter to a chart segment or theme, open a respondent from the **View answers** drawer, and jump straight into a conversation with them.
-
-Either way, the chat is scoped to a single respondent, and it carries their profile and their study answers as context — so you're continuing a conversation, not starting from scratch.
-
-## Requirements
+Results show you every participant's answers and actions, but sometimes an answer raises a new question. **Chat** lets you keep talking to an individual AI participant after the test runs: probe a vague answer, ask something your test didn't cover, or push back on what they said. You get the flexibility of a one-on-one interview at the scale of a survey, with no scheduling or recruiting.
 
 <Note>
-  Chat is available on plans that include it, and only when you're signed in as an authenticated viewer. If you don't see the chat panel, check that you're logged in and that your plan includes the feature.
+  Chat is available for AI participants only. To ask questions about your whole test rather than one participant, use [Ask AI](/ask-ai).
 </Note>
+
+## Start a chat
+
+You can start a chat from two places in the **Analyze** phase.
+
+<Tabs>
+  <Tab title="From a Survey block">
+    Open a Survey block's **Participants** tab, select a participant, and click **Chat**. The participant can talk about their survey answers and the parts of the test that came before the survey. See [Survey results](/survey-results).
+  </Tab>
+  <Tab title="From a task transcript">
+    Open a Task block's transcript and select a step. Click **Chat** on that step (the tooltip reads "Chat with *Name* at this moment"). See [Test transcripts](/test-transcripts).
+  </Tab>
+</Tabs>
+
+The chat opens in a side panel with the participant's name, the block, and the step or survey you're talking about.
+
+## What the participant knows
+
+A chat is anchored to a moment, and the participant only remembers what happened up to that moment:
+
+- **Task step chats.** The participant knows their own experience up to the step you chose, and nothing after it. The panel tells you this, for example "Maya only has context of their experience through step 4." This lets you ask what they were thinking *at that moment* without hindsight from later steps.
+- **Survey chats.** The participant knows their survey answers and the test experience that came before them.
+
+The participant answers in character, grounded in the same profile that shaped their original answers, so follow-ups stay consistent with who they are. To make those profiles reflect your actual users, use [Audience Enrichment](/audiences/enrichment).
+
+If you move to a different step, participant, or block while a chat is open, a banner reminds you which moment the chat is about, with a link to go back to it.
 
 ## What to ask
 
-Chat earns its keep when you use it to go past what the study captured:
+Type in the box at the bottom. It reads "Ask *Name* about this moment..." for a task step, or "Ask *Name* about the Survey..." for a survey.
 
-- **Probe a thin answer** — "You rated onboarding a 2 — what specifically got in your way?"
-- **Chase a theme** — follow up with the respondents behind a recurring open-ended theme to understand what's really driving it.
-- **Pressure-test a claim** — push back on a confident response and see whether it holds.
-- **Explore the unasked** — ask the question you only thought of once the results were in front of you.
+- **Probe a thin answer.** "You rated the checkout a 2. What specifically got in your way?"
+- **Understand a hesitation.** "What were you looking for when you scrolled back up here?"
+- **Chase a theme.** Follow up with the participants behind a recurring topic to understand what's really driving it.
+- **Pressure-test a claim.** Push back on a confident answer and see whether it holds.
+- **Explore the unasked.** Ask the question you only thought of once the results were in front of you.
 
-Because the respondent responds in character, grounded in the same profile that shaped their original answers, the follow-up stays consistent with who they are. To make those personas reflect your actual users, build your audience with [Audience Enrichment](/audiences/enrichment).
+## Recent chats and limits
 
-<Card title="Build your next study" icon="arrow-right" href="/question-types">
-  Head back to the question builder to set up your next round of research.
-</Card>
+- Your chats are saved and private to you. Click **Recent chats** in the chat panel to reopen an earlier conversation. Opening a chat for the same participant and moment again continues that conversation.
+- Each chat allows up to 20 of your messages. After that, you see "Conversation limit reached for this chat."
+- Chat is available to signed-in members of the workspace that owns the test. People who view your results through a shared link can't use it.
+- On the Free plan, chat is locked wherever the results it's based on are locked, including survey responses.
+
+<CardGroup cols={2}>
+  <Card title="Survey results" icon="chart-bar" href="/survey-results">
+    Read charts and each participant's answers.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ask-ai">
+    Ask questions about your whole test in plain language.
+  </Card>
+</CardGroup>

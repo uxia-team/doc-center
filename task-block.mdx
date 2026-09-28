@@ -1,0 +1,99 @@
+---
+title: "Task Block"
+sidebarTitle: "Overview"
+description: "Have participants complete one task in your live website, Figma prototype, or image-based prototype while thinking aloud."
+---
+
+A **Task block** asks participants to complete one concrete task in your product or prototype. AI participants think aloud as they navigate, so you see where they hesitate, get lost, or give up, and why. Human participants are recorded as they work through the same task.
+
+## Choose a task type
+
+In **Add a block**, the **Task** section has three blocks. They differ in what participants navigate:
+
+| Block | Use it to test | Source | Stop condition | Credentials and files |
+|---|---|---|---|---|
+| **Live website task** | A live website, web app, staging build, or coded prototype | A public URL | Required | Available |
+| **Figma prototype task** | A Figma prototype | A Figma prototype link (`figma.com/proto/…`) | Required | Available |
+| **Media prototype task** | Designs that aren't built yet | Images you upload and connect on a canvas | None: the task ends at the final frame | Not available |
+
+A live website task works with almost anything that has a public URL:
+
+- Public websites and web apps, staging or pre-production builds, and products behind a login.
+- Coded prototypes and generated apps, such as Lovable, Base44, Cursor, Google Stitch, or Claude.
+
+You can also connect Uxia to your coding agents with the [Uxia MCP](/integrations/mcp).
+
+To set the source, see [Live website and Figma links](/source) or [Media prototype](/media-canvas).
+
+## What goes into a Task block
+
+Under the source, each block has the fields that define the session:
+
+- **Task**: the one thing participants try to do. See [Task](/mission).
+- **Scenario**: the situation and motivation behind it. See [Scenario](/test-scenario).
+- **Stop condition**: the on-screen end state that ends the run. Live website and Figma prototype tasks only. See [Stop condition](/stop-condition).
+
+Each field is required and takes up to 500 characters. Each also has a **Tips** button that suggests rewrites.
+
+## Test several flows in one test
+
+Keep one goal per task, and add a Task block for each flow you want to test. A test holds up to 3 Task blocks on paid plans, and 1 on the Free plan. Participants take the blocks in order.
+
+- When you add another block of the same type, Uxia pre-fills its source (the URL, or the frames and flow) from the previous one.
+- When a live website or Figma prototype task uses the same URL as an earlier one, you can turn on **Continue from where participants left the previous task**. Participants then pick up where they stopped instead of starting over. It's off by default.
+
+## Benchmarks
+
+At the bottom of each Task block, two toggles add a benchmark: standardized statements that participants rate after the task, combined into a score.
+
+- **Measure usability with SUS**. See [SUS](/sus).
+- **Measure user experience with UXIA-Q**. See [UXIA-Q score](/uxia-q-score).
+
+Both are off by default. Benchmarks aren't available on the Free plan, where the toggles show an **Upgrade** badge.
+
+## Credits and limits
+
+A Task block costs **20 credits per AI participant**, plus 1 credit per AI participant for each benchmark you switch on. For example, 5 AI participants on one task with SUS and UXIA-Q cost 5 × 22 = 110 credits. Human participants invited with test links cost no credits.
+
+| | Free plan | Paid plans |
+|---|---|---|
+| Task blocks per test | 1 | 3 |
+| Benchmarks (SUS, UXIA-Q) | Not available | Available |
+
+If every AI participant is blocked from a live website, 80% of the credits are refunded. See [Flows AI participants can't complete](/unsupported-flows).
+
+## Credentials and files
+
+If your flow starts behind a login or asks participants to upload something, use **+ Add credentials** and **+ Add files** under the URL of a live website or Figma prototype task.
+
+<CardGroup cols={2}>
+  <Card title="Tester credentials" icon="key" href="/tester-credentials">
+    Give AI participants logins and field values for gated flows.
+  </Card>
+  <Card title="Tester files" icon="file-up" href="/tester-files">
+    Give AI participants the files a flow asks them to upload.
+  </Card>
+</CardGroup>
+
+## What you get
+
+In the **Analyze** phase, each Task block has its own tabs: **Insights**, **Transcripts**, **Analytics**, **Journeys**, and **Benchmarks** when a benchmark is on.
+
+<CardGroup cols={2}>
+  <Card title="Insights and UOS" icon="lightbulb" href="/results">
+    Ranked usability insights, the UOS score, and fix suggestions.
+  </Card>
+  <Card title="Transcripts" icon="scroll-text" href="/test-transcripts">
+    Step-by-step sessions with screens and think-aloud comments.
+  </Card>
+  <Card title="Analytics and journeys" icon="chart-line" href="/analytics">
+    How participants moved through the flow and where friction happened.
+  </Card>
+  <Card title="Benchmark results" icon="gauge" href="/benchmark-results">
+    SUS and UXIA-Q scores for the task.
+  </Card>
+</CardGroup>
+
+<Card title="Next: Live website and Figma links" icon="arrow-right" href="/source">
+  Add the URL participants navigate and let Uxia verify it.
+</Card>

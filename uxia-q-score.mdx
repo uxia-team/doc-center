@@ -1,21 +1,32 @@
 ---
 title: "UXIA-Q Score"
+description: "Measure the overall quality of an experience with UXIA-Q: 8 questions across usability, trust, appearance, and loyalty."
 ---
 
-The **UXIA-Q Score** is a standardized metric used to measure the overall quality of a website or digital product's user experience.
+The **UXIA-Q Score** is a standardized metric that measures the overall quality of a website or digital product's user experience.
 
-Each tester evaluates the experience through **8 questions across 4 key pillars: Usability, Trust, Appearance, and Loyalty**. The responses are combined into a single score, giving teams a consistent way to evaluate and compare digital experiences.
+Participants evaluate the experience through **8 questions across 4 pillars: Usability, Trust, Appearance, and Loyalty**. The answers are combined into a single score, giving teams a consistent way to evaluate and compare digital experiences.
+
+## Turn on UXIA-Q
+
+On a [Task block](/task-block), switch on **Measure user experience with UXIA-Q**. Each Task block has its own toggle, so you can measure some flows and not others.
+
+- **Cost:** +1 credit per AI participant, on top of the Task block's 20 credits.
+- **Plans:** paid plans only. On the Free plan, the toggle shows an **Upgrade** badge.
+- **Results:** the **Benchmarks** tab of the Task block, in the Analyze phase. See [Benchmark results](/benchmark-results).
+
+You can switch on [SUS](/sus) in the same block for another +1 credit per AI participant.
 
 ## What does the UXIA-Q Score measure?
 
-The UXIA-Q framework evaluates four key aspects of the experience:
+The UXIA-Q framework evaluates four aspects of the experience:
 
-- **Usability:** How easy the product is to use and navigate.
-- **Trust:** How credible the information feels and how confident users would feel conducting business through the product.
-- **Appearance:** How attractive the experience is and how clean the overall presentation feels.
-- **Loyalty:** How likely users would be to return to the product or recommend it to others.
+- **Usability:** how easy the product is to use and navigate.
+- **Trust:** how credible the information feels and how confident users would feel doing business through the product.
+- **Appearance:** how attractive the experience is and how clean the overall presentation feels.
+- **Loyalty:** how likely users would be to return to the product or recommend it to others.
 
-These pillars are measured through 8 standardized questions:
+These pillars are measured through 8 standardized questions, each rated on a 5-point scale from Strongly disagree to Strongly agree:
 
 **Usability**
 
@@ -37,14 +48,21 @@ These pillars are measured through 8 standardized questions:
 - Likely to return: I would likely return to this product
 - Likely to recommend: I would recommend this product to a friend or colleague
 
+The overall UXIA-Q Score is the average of the four pillar scores.
+
 ## How Uxia applies the UXIA-Q framework
 
-For synthetic testing, Uxia adapts these questions so testers evaluate them based on the persona they represent, the task they performed, and what they actually experienced while navigating the product.
+Uxia adapts these questions so AI participants answer them based on the persona they represent, the task they performed, and what they actually experienced while navigating the product.
 
-Uxia also applies additional techniques to reduce common LLM response biases and improve consistency across testers. Responses are generated in the context of the full testing session rather than evaluating each question in isolation.
+Uxia also applies additional techniques to reduce common LLM response biases and improve consistency across participants. Answers are generated in the context of the full session rather than evaluating each question in isolation.
 
-This provides a standardized quantitative measure of the experience that complements the behavioral observations, issues, and qualitative feedback identified during the test.
+This provides a standardized, quantitative measure of the experience that complements the behavioral observations, issues, and qualitative feedback from the test.
 
-<Card title="Next: Post-test Questions" icon="arrow-right" href="/post-test-questions">
-  Ask testers what they thought once they're done.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Benchmark results" icon="gauge" href="/benchmark-results">
+    Read SUS and UXIA-Q scores in the Analyze phase.
+  </Card>
+  <Card title="Next: Tester credentials" icon="arrow-right" href="/tester-credentials">
+    Give AI participants the logins a gated flow needs.
+  </Card>
+</CardGroup>

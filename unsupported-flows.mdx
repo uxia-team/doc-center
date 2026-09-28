@@ -1,0 +1,64 @@
+---
+title: "Flows AI Participants Can't Complete"
+sidebarTitle: "Unsupported Flows"
+description: "Social logins, verification codes, and bot protection stop AI participants. See the warnings Uxia shows and how to work around each one."
+---
+
+AI participants navigate like real users, but a few steps depend on things they can't reach: a third-party account, an inbox or phone, or a site that blocks automated browsers. Plan around these steps before you launch, or participants stall and your results show friction that isn't in your design.
+
+On live website and Figma prototype tasks, Uxia warns you under the **Task** field when your text mentions one of these flows. Click **Learn more** in a warning to open a short guide, *Flows Not Supported by AI Participants*. This page covers the same cases in more detail.
+
+## Social logins
+
+> Warning: social login detected in this task. AI participants will fail on social authentication unless it is a Figma prototype flow. Use email/password authentication.
+
+Third-party sign-in flows, such as "Sign in with Google" or single sign-on, open external popups and redirects that AI participants can't reliably complete end to end.
+
+**Work around it:**
+
+- Create a test account that signs in with an email and password, and add it with **+ Add credentials**. See [Tester credentials](/tester-credentials).
+- Write the task around that login, for example "Sign in with your email and password, then…".
+
+In a Figma prototype task, a social login button is just another prototype screen, so participants can click through it.
+
+## Verification codes
+
+> Warning: sign-up/register flow detected in this task. Make sure the flow does not require verification codes, validation emails, or 2FA because AI participants cannot complete those steps.
+
+Email or SMS codes, 2FA codes, and one-time passcodes depend on an inbox or device that participants can't access. The same goes for CAPTCHAs. The warning appears whenever the task mentions signing up, registering, or creating an account. If your flow has no verification step, you can ignore it.
+
+**Work around it:**
+
+- Test on a staging environment where email verification, 2FA, and CAPTCHA are turned off for test accounts.
+- Start the task after sign-up: give participants an existing test account with [credentials](/tester-credentials) and test what comes next.
+- End the run before the verification step with a [stop condition](/stop-condition), such as "Stop when you're asked for a verification code."
+
+## Think-aloud and feedback instructions
+
+> Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
+
+AI participants already share their thoughts and reactions throughout every session. Instructions like "think out loud", "share your first impression", or "tell us what you think", in the task or the stop condition, are removed before the test runs.
+
+**Work around it:**
+
+- Remove the instruction and keep the [task](/mission) focused on the action.
+- To collect opinions, add a [Survey block](/survey-block) after the task.
+
+## Bot protection and access denied
+
+Some websites block automated browsers with anti-bot measures or an access-denied page.
+
+- **When you add the link.** If Uxia detects bot protection, the link modal shows *"This live page may not be navigable by testers."* and you can't save the link. Click **Contact us**, and we'll give your IT team instructions for whitelisting Uxia's AI participants. See [Live website and Figma links](/source#bot-protection).
+- **During the run.** If a site blocks an AI participant mid-session, that participant is marked **Drop-off | Access denied** in the transcript.
+- **If every AI participant is blocked**, the test can't be completed, and 80% of its credits are refunded to your organization. A banner in the results confirms the refund.
+
+To keep AI participants scoped to your target and away from production data, see [AI participant restrictions](/account/security/ai-participant-restrictions).
+
+<CardGroup cols={2}>
+  <Card title="Tester credentials" icon="key" href="/tester-credentials">
+    Give AI participants email and password logins for gated flows.
+  </Card>
+  <Card title="AI participant restrictions" icon="shield-check" href="/account/security/ai-participant-restrictions">
+    Control what AI participants can reach and do.
+  </Card>
+</CardGroup>

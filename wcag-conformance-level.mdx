@@ -1,37 +1,44 @@
 ---
 title: "WCAG Conformance Level"
+description: "Choose whether the accessibility check audits your screens against WCAG 2.2 Level AA or Level AAA."
 ---
 
-Setting up an Accessibility Test starts the same way as any Uxia test, then asks you to pick a WCAG target level before you upload anything.
+The conformance level sets which WCAG 2.2 success criteria Uxia checks your screens against. You choose it in the **WCAG Conformance Level** field at the top of the [Accessibility check block](/accessibility-block).
 
-## Creating the test
+## The two options
 
-Start from **Home → Create test** or **Tests → Create test**. In the **Create new test** modal, choose **Accessibility Test** from the three test types, give it a clear title (optionally assign it to a project), and click **Create test**. Uxia opens the Accessibility Test wizard, which runs through three steps: **Test Details**, **Upload Frames**, and **Summary**.
+| Option | Level | In short | When it fits |
+|---|---|---|---|
+| **Recommended** (default) | AA | Addresses the most common barriers | Industry and legal baseline. Required by most accessibility regulations (EU, US, UK, etc). |
+| **Advanced** | AAA | Highest level of accessibility coverage | Best for inclusive experiences. Rarely required by law. |
 
-## Choosing the conformance level
+Click an option to select it. The line below the options explains the level you picked. **Learn more** opens the W3C's overview of WCAG in a new tab.
 
-On the **Test Details** step, you pick the WCAG target level:
+## Levels are cumulative
 
-- **Recommended (AA)** — preselected, and the right choice for most teams. It addresses the most common accessibility barriers and is positioned as the industry and legal baseline.
-- **Advanced (AAA)** — the highest level of coverage, best when you're aiming for the most inclusive experience or working to a stricter internal standard.
+WCAG defines three levels: A, AA, and AAA. Each criterion belongs to exactly one level, and each level includes the ones below it:
 
-<Note>
-  WCAG levels are cumulative. To pass **AA**, a product must also satisfy **A**; to pass **AAA**, it must satisfy **A**, **AA**, and **AAA**. Leave AA selected unless your team explicitly needs AAA.
-</Note>
+- An **AA** audit checks all Level A and Level AA criteria.
+- An **AAA** audit checks all Level A, AA, and AAA criteria.
 
-## How accessibility testing works
+The results show what was checked in the summary card, for example **Conformance Level Tested: A & AA**. You can also filter the results by **Level** to focus on one level at a time. See [Criteria evaluation](/criteria-evaluation).
 
-The expandable **How accessibility testing works** section explains what Uxia evaluates:
+## Which level to choose
 
-- WCAG 2.2 conformance (AA / AAA)
-- Low-vision support
-- Mobile and touch interactions
-- Cognitive accessibility
+**Choose AA for most products.** It's the level that most accessibility laws and policies point to, and the one most teams work toward. Leave **Recommended** selected unless your team explicitly needs AAA.
 
-It also includes FAQ-style entries on legal standards — the European Accessibility Act (EAA), the ADA, and other countries — whether WCAG 2.2 still applies when a law references 2.1, whether the test covers code-level issues, and how the A / AA / AAA levels relate.
+**Choose AAA when you aim higher.** Pick **Advanced** when you're building for the most inclusive experience, or when you work to a stricter internal standard. Expect more **Failed** and **Review** items: some AAA criteria are hard to meet for every kind of content, which is why laws rarely require AAA.
 
-Confirm your title, leave AA selected unless you need AAA, then click **Next** to move on to uploading frames.
+<Tip>
+  WCAG 2.2 builds on WCAG 2.1. Screens that meet WCAG 2.2 at a given level also meet WCAG 2.1 at that level, so a 2.2 audit still works when a regulation refers to 2.1.
+</Tip>
 
-<Card title="Next: Frame Upload" icon="arrow-right" href="/frame-upload">
-  Add the screens and recordings Uxia will audit.
+## Good to know
+
+- The level doesn't change the cost. The block costs 10 credits per frame at either level.
+- You can switch levels at any time while you build. The level is fixed once you launch.
+- The check doesn't tell you which law applies to your product. Confirm your legal requirements with your legal or compliance team.
+
+<Card title="Next: Frames" icon="arrow-right" href="/frame-upload">
+  Add the screens Uxia will audit.
 </Card>

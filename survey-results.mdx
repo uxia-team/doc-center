@@ -1,0 +1,66 @@
+---
+title: "Survey Results"
+sidebarTitle: "Results"
+description: "Read a Survey block's results: charts and recurring topics per question, and every participant's answers and reasoning."
+---
+
+When you open a Survey block in the **Analyze** phase, its results are split into two tabs:
+
+- **Responses** shows how *everyone* answered each question.
+- **Participants** shows how *one* participant answered every question.
+
+## Responses
+
+Each question gets its own card. The left side shows the question number with a type chip, the question text, and any context you added. The right side shows the results, visualized to fit the [question type](/question-types):
+
+| Question type | How it's shown |
+|---|---|
+| Multiple choice | A bar for each option, with option images when you added them |
+| Rating scale | A bar for each rating, with your low and high labels |
+| Ranking | The items in average rank order, most preferred first |
+| Budget allocation | A waffle chart of how the 100 points were split on average |
+| Open-ended | Recurring topics, each with its number of mentions and short examples |
+
+Open-ended answers are grouped into topics, so dozens of free-text answers become a handful of recurring ideas instead of a wall of text.
+
+### Go from a number to the people behind it
+
+Every chart is a way in, not a dead end. Click a bar, a rating, or a topic to open a side panel with only the participants behind that answer. It shows how many participants gave that answer, a summary of what they said, and each participant's explanation.
+
+To read every answer to a question, click **See all N responses** under the question. Click **View summary** to return to the chart. On wide screens, the **Questions** index on the right lets you jump between questions.
+
+### Notes you may see
+
+- **"Only testers who completed the mission answered this question."** The question had **Only ask testers who complete the flow** switched on in the [Survey block](/survey-block), so AI participants who didn't complete the task skipped it.
+- **"Clusters were calculated from the whole participant group."** You filtered by audience. Topics are still built from all participants, and topics without answers from the filtered audiences are dimmed.
+- **No response.** The participant didn't answer, for example because they dropped off before completing the task.
+
+## Participants
+
+The **Participants** tab lets you read one participant's survey from start to finish, the closest thing to sitting with them and going through your questions one by one.
+
+- Pick a participant from the participant list, or use **Search participant** to find someone by name. Each person shows how many questions they answered, such as **4 of 5 answered**.
+- Every answer appears in order: the choice, rating, ranking, or allocation, followed by the participant's explanation in their own words.
+- Click **View profile** to see who the participant is: their demographics, background, and traits. When an answer surprises you, the profile is the first place to look.
+- Click **Chat** to ask the participant follow-up questions. See [Chat with participants](/chat-with-testers).
+
+<Tip>
+  To make profiles reflect the people you're building for, use [Audience Enrichment](/audiences/enrichment) to ground your AI participants in your own user research.
+</Tip>
+
+## Free plan
+
+On the Free plan, survey responses are locked: charts and participant answers are hidden behind the message "Upgrade your plan to unlock charts and participant answers." Upgrade to a paid plan to see them. See [Plans and credits](/account/plans-and-credits).
+
+## Human participants
+
+Survey answers from human participants appear in the same **Responses** and **Participants** tabs, with a **Play recording** button that jumps to the moment the participant answered. Chat isn't available for human participants. See [Human participant results](/human-insights).
+
+<CardGroup cols={2}>
+  <Card title="Chat with participants" icon="message-circle" href="/chat-with-testers">
+    Follow up with any AI participant about their answers.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ask-ai">
+    Ask questions about your whole test in plain language.
+  </Card>
+</CardGroup>

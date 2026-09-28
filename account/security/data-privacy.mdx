@@ -8,15 +8,15 @@ Uxia is built to handle sensitive research assets with care. Whether you're uplo
 
 ## Your Design and URL Data
 
-When you upload a design file or provide a URL for an AI test, Uxia processes that asset securely to generate and run the tester session.
+When you upload a design file or provide a URL for a test, Uxia processes that asset securely to run each participant's session.
 
 - **Your data is never used to train models.** Designs, URLs, and test content you submit are not used to improve or fine-tune any AI model — for Uxia or any third party.
 - **Your data is not shared with other users or organizations.** Each workspace is isolated; your test assets are only accessible to you and the teammates you explicitly invite.
 - **Assets are stored only as long as needed.** Uploaded files and URLs are retained for the duration of the test and to support your ongoing access to results and reports. They are not kept indefinitely beyond what is required to deliver the service.
 
-## Participant Recordings (Human Test)
+## Human Participant Recordings
 
-When you run a Human Test, Uxia captures session recordings of real participants interacting with your product or prototype. These recordings are:
+When you invite human participants with a [test link](/test-links) or a [human panel](/human-panel), Uxia records each session: the participant's screen and microphone, plus their face camera if they choose to turn it on. These recordings are:
 
 - **Stored securely** within the Uxia platform and accessible only within your workspace
 - **Not shared with third parties** — recordings remain private to your organization
@@ -26,22 +26,32 @@ Recordings give you the qualitative depth to complement the AI-synthesized findi
 
 ## Credentials for Gated and Authenticated Tests
 
-If the product or area you're testing sits behind a login screen, you can provide credentials so that AI testers can access protected flows. When you do:
+If the product or area you're testing sits behind a login screen, you can provide credentials so that AI participants can access protected flows. When you do:
 
-- Credentials are encrypted in transit and at rest, and are decrypted only when a tester session needs to use them
-- They are never placed in an AI model's prompt or context — values are injected directly into the browser, so they cannot appear in transcripts, insights, or reports
+- Credentials are encrypted in transit and at rest, and are decrypted only when an AI participant's session needs to use them
+- They're included in the instructions sent to the AI model that operates the participant, only so it can type them into the matching fields, and participants are instructed never to repeat them in their comments
+- Password fields stay hidden in transcripts and screenshots, but other typed values, such as a username or email, can be visible
 - They stay scoped to the test they were added to and are visible only inside your workspace, never to other organizations
 - You remain in control of those credentials and can update or rotate them after each test run if your security policy requires it
 
-This makes it safe to test onboarding flows, dashboards, account settings, or any other authenticated experience. For the full breakdown, see [Tester Credentials](/tester-credentials).
+Use dedicated test accounts, never real customer or admin accounts. For the full breakdown, see [Tester Credentials](/tester-credentials).
 
 ## Files Used During a Test
 
-If your flow asks testers to upload something — a CV, an ID, a spreadsheet — you can import files for them to use. When you do:
+If your flow asks AI participants to upload something — a CV, an ID, a spreadsheet — you can import files for them to use. When you do:
 
-- Files are encrypted in transit and at rest, and are retrieved only when a tester session reaches an upload step
+- Files are encrypted in transit and at rest, and are retrieved only when an AI participant's session reaches an upload step
 - Their contents are never read by an AI model — the file is attached directly to the input, so nothing inside it can appear in transcripts, insights, or reports
 - They stay scoped to the test they were imported into and are visible only inside your workspace
 - You can remove them at any time
 
 We recommend uploading synthetic documents rather than real ones. See [Tester Files](/tester-files) for the full breakdown.
+
+<CardGroup cols={2}>
+  <Card title="AI participant restrictions" icon="shield" href="/account/security/ai-participant-restrictions">
+    Control what AI participants can reach and do during a test.
+  </Card>
+  <Card title="Tester credentials" icon="key-round" href="/tester-credentials">
+    How credentials for gated flows are stored and used.
+  </Card>
+</CardGroup>

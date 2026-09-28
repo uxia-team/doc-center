@@ -1,0 +1,71 @@
+---
+title: "Card Sorting Results"
+sidebarTitle: "Results"
+description: "Read a card sort's results: agreement per card and category, the agreement matrix, and the similarity matrix."
+---
+
+When you open a [Card sorting block](/card-sorting) in the **Analyze** phase, its results are split into three tabs: **Results**, **Agreement Matrix**, and **Similarity Matrix**. AI and human participants' results are shown separately; use the switch described in [Analyze results](/analyze-results) to move between them.
+
+## Agreement
+
+Every view is built on one measure:
+
+> Agreement is the share of participants who placed a card in a category, out of everyone who sorted that card. A category's average agreement is the mean agreement of the cards placed in it.
+
+For example, if 8 participants sorted the card "Refunds" and 6 of them put it in "Billing", its agreement for "Billing" is 75%. Participants don't have to sort every card, so agreement only counts the people who sorted that card. Deeper blue means higher agreement throughout the results.
+
+## Results
+
+Use the **Categories** / **Cards** toggle to choose how to group the table.
+
+<Tabs>
+  <Tab title="Categories">
+    One row per category, with the columns **Category**, **Number of cards**, **Agreement** (the category's average agreement), and **Participants**. Categories with the highest average agreement come first. Expand a row to see every card placed in that category, each with its own agreement bar and how many participants put it there.
+  </Tab>
+  <Tab title="Cards">
+    One row per card, with the columns **Card**, **Categories**, **Agreement**, and **Participants**. Next to each card name you see the category it was placed in most often, and the agreement bar shows the agreement for that category. Expand a row to see every category the card was placed in. Cards nobody sorted show **Not sorted**.
+  </Tab>
+</Tabs>
+
+## Agreement Matrix
+
+> How often each card was placed in each category. Cards are grouped under the category where participants placed them most often.
+
+Each row is a card and each column a category. Each cell shows the card's agreement for that category, and the highest value in each row is in bold. Scan down a column to see which cards clearly belong to a category and which only partly do.
+
+## Similarity Matrix
+
+> How often participants sorted each pair of cards into the same category. Closely related cards cluster together along the edge of the table.
+
+Each cell compares two cards: the share of participants who put both in the same category, out of those who sorted both. Uxia orders the cards with clustering, so related cards sit next to each other and form dark blocks. Because the matrix ignores category names, it's especially useful for open sorts, where participants label the same idea in different ways.
+
+## Categories created by participants
+
+In an open sort, categories that participants create with the same name are merged, ignoring capitalization and extra spaces. If a participant creates a category with the same name as one of your starting categories, it counts as your category. Categories with different names stay separate, even when they mean the same thing; use the similarity matrix to spot those.
+
+## How to read the results
+
+- **Strong agreement.** A card with high agreement for one category has a clear home. Keep it there.
+- **Split cards.** A card whose agreement is spread across two or more categories is ambiguous. Consider renaming it, adding a description, or making it reachable from both places.
+- **Weak categories.** A category with low average agreement may have a vague name or overlap with another category.
+- **Cards that belong together.** Dark blocks in the similarity matrix show groups participants form on their own. In an open sort, they're candidates for your categories, whatever labels participants used.
+- **Participants' vocabulary.** In an open sort, the names participants give their categories show the words they'd look for in your navigation.
+
+## Empty states
+
+- **"No AI participants completed this card sort."** or **"No participants have completed this card sort yet."** No results are available for the selected participant type.
+- **"The agreement matrix appears once participants have sorted cards."**
+- **"The similarity matrix appears once participants have sorted at least two cards."**
+
+<Note>
+  Card sorting results can't be exported to PDF yet, and [Ask AI](/ask-ai) doesn't read them.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Card sorting block" icon="layout-grid" href="/card-sorting">
+    Set up an open or closed card sort.
+  </Card>
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Switch between AI and human participants, filter, and share.
+  </Card>
+</CardGroup>

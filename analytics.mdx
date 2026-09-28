@@ -1,85 +1,89 @@
 ---
-title: "Analytics"
+title: "Analytics and Journeys"
+description: "Measure how AI participants moved through a Task block: success rate, drop-off, misclicks, steps, per-screen heatmaps, and the paths they took."
 ---
 
-The **Analytics** tab is the behavior-focused screen. Where the [Insights Report](/results) tells you what the problems are, Analytics shows how testers moved through the flow and where friction actually happened. Everything here is derived from the testers' step-by-step transcripts.
+Where [Insights](/results) tells you what the problems are, the **Analytics** and **Journeys** tabs of a [Task block](/task-block) show how participants actually moved through the flow and where friction happened. Everything here is derived from the participants' [transcripts](/test-transcripts), and it reflects the audiences selected in the results filter.
 
-## Navigation overview
+Use these tabs to answer questions like: How many participants finished? Which screen causes misclicks? How many steps does success usually take? Where do successful and failed paths part ways?
 
-The top section summarizes movement through the flow:
+## Analytics
+
+### Summary metrics
 
 | Metric | What it shows |
-| --- | --- |
-| **Total testers** | The planned tester count for the test — the denominator for the rates below |
-| **Success rate** | Share of testers who reached the goal |
-| **Drop-off rate** | Share who left before completing (the inverse of success rate) |
-| **Misclick rate** | Share of clicks that didn't do what a click should |
-| **Average steps** | Typical number of steps taken to complete |
-| **Min / Max steps** | The shortest and longest paths taken |
-
-### How the numbers are calculated
+|---|---|
+| **Testers** | Participants with activity in this block, out of those who started the test (for example, **4 / 5**). Participants who didn't complete an earlier required task don't reach this one. |
+| **Success Rate** | Share of participants who completed the task |
+| **Drop-off** | Share of participants who didn't complete the task |
+| **Misclick Rate** | Share of evaluated interactions that didn't activate a valid interactive area |
+| **Avg. Number of Steps** | Average steps per participant |
+| **Min Number of Steps**, **Max Number of Steps** | The shortest and longest sessions |
 
 <AccordionGroup>
-  <Accordion title="Success rate & drop-off">
-    A tester counts as **successful** when they reach the goal:
+  <Accordion title="How success and drop-off are calculated">
+    A participant counts as successful when they complete the task:
 
-    - On **live tests**, when any step reaches the stop condition or marks the mission complete.
-    - On **interactive prototypes** with a defined end frame, only when their last real step lands on that end frame.
-    - Otherwise, when they reach a final step.
+    - On **live website** and **Figma prototype** tasks, when they reach the [stop condition](/stop-condition) at any step.
+    - On **media prototypes** with an end frame, when their last step lands on that frame.
+    - Otherwise, when they reach the end of the session.
 
-    A tester who drops off at any step counts as unsuccessful. **Success rate** is successful testers ÷ total testers. **Drop-off rate** isn't measured separately — it's 100% minus the success rate.
+    A participant who drops off at any step counts as unsuccessful. **Success Rate** is successful participants divided by **Testers**. **Drop-off** is 100% minus the success rate.
   </Accordion>
 
-  <Accordion title="Misclick rate">
-    A misclick is a click that didn't behave like a successful click. How it's measured depends on the source:
-
-    - **Interactive prototypes** — of the clicks that could be matched to an interactive target, the share that missed one (landed outside a hotspot).
-    - **Live prototype and slideshow flows** — of the click-like actions (waits excluded), the share after which the screen didn't change.
-    - **Plain live-website tests** — not available, shown as a dash.
+  <Accordion title="How misclicks are measured">
+    - **Media prototypes (Interactive flow):** of the clicks that could be matched to the screen's interactive areas, the share that missed them.
+    - **Figma prototypes:** estimated as the share of clicks after which the screen didn't change. Waits are excluded.
+    - **Live websites:** not available, shown as a dash. A click on a real website can change the page in ways that can't be reliably detected.
   </Accordion>
 
-  <Accordion title="Step counts">
-    Steps are counted as **logical steps**, not raw actions: the final reflection step is excluded, and consecutive scrolls in the same direction collapse into a single step. Average, minimum, and maximum are then taken across all testers.
+  <Accordion title="How steps are counted">
+    Steps are logical steps, not raw actions. The participant's final reflection isn't counted, and consecutive scrolls in the same direction inside a dropdown or suggestion list count as one step. Average, minimum, and maximum are taken across all participants.
   </Accordion>
 </AccordionGroup>
 
-## Journeys diagram
+### Per-screen analysis
 
-Below the overview, a **Journeys Diagram** lays out the step paths with frame previews, so you can see how testers progressed from screen to screen — and where paths split, loop, or diverge between successful and unsuccessful runs. Consecutive repeats of the same frame are collapsed first, then the diagram shows:
+Below the metrics, pick any screen from the thumbnail strip, or use the ← and → keys, to see how participants behaved on it. Screens nobody reached are marked **Not visited**. Click the screen to open a larger preview.
 
-- **Nodes** — each node is a frame at a position in the journey. Its count is the number of unique testers who were on that frame at that point; its percentage is that count over all testers in the journey.
-- **Edges** — the number of unique testers who moved from one frame to the next.
+- **Visualization.** Switch between **Heatmap** (where clicks concentrate), **Clickmap** (each click), and **Image** (the plain screen).
+- **Path filter.** When some participants succeeded and others didn't, choose **All paths**, **Successful paths**, or **Failed paths** to compare them.
+- **Screen metrics.** **Total Testers** (participants who reached the screen), **Total Clicks** (interactions recorded on it), and **Misclick Rate** for that screen.
+- **Participant steps.** Each participant's actions and comments on that screen, so you can read why they clicked where they did.
 
-### Paths
+### Export frames
 
-Testers are also grouped by the exact sequence of frames they visited (for example, `0 > 2 > 4`):
+Click the export button next to the visualization menu to open **Export Frames**. Choose an overlay (**Heatmap Overlay**, **Clickmap Overlay**, or **None**), optionally check **Include hotspot areas** to show the prototype's interactive areas, then click **Export** to download the current screen as a PNG, or **Export All (N)** to download every screen as a ZIP file.
 
-| Column | What it shows |
-| --- | --- |
-| **Status** | **Success** only if every tester on the path completed the flow; otherwise **Drop-off** |
-| **Testers** | Unique testers who followed that exact path |
-| **Steps** | Number of frames visited in the path (not raw clicks) |
-| **Misclicks** | The misclick rate above, scoped to the testers on that path |
+## Journeys
 
-## Frame analytics
+The **Journeys** tab shows the routes participants took. Use the **Diagram** / **Paths** toggle to switch views.
 
-Select any frame to drill into how testers behaved on that specific screen:
+- **Diagram.** Columns run from **Start** through **Screen 2**, **Screen 3**, and on. Each node is a screen at that point in the journey, with the number and share of participants who were there (for example, **3 testers (60%)**). Markers show where participants completed the task or dropped off. Hover a node to see who was there, and click it to preview the screen.
+- **Paths.** Participants are grouped by the exact sequence of screens they visited, most common first (**Path 1**, **Path 2**, and so on). Each path shows **Success** only if every participant on it completed the task, otherwise **Drop-off** (or **Drop-off \| Access denied**). It also shows the participants who followed it and its **Misclicks**. Click any screen in a path to preview it.
 
-| View | What it shows |
-| --- | --- |
-| **Heatmap** | Where testers clicked on the frame |
-| **Total testers** | Testers who had at least one real step on the frame |
-| **Total clicks** | Evaluable clicks on the frame — not every raw action |
-| **Misclick rate** | The misclick rate above, scoped to this screen |
-| **Average attempts** | Typical number of tries per visit to the screen |
-| **Tester comments** | Remarks tied to that specific frame |
+Repeated visits to the same screen in a row are collapsed into one. On live website tasks, the Diagram view may not be available; **Paths** always is.
 
-<Note>
-  **Average attempts** is the mean number of action attempts per visit to a screen; on live prototype flows it's shown instead as total clicks divided by the testers who reached the screen. Per-screen **misclick rate** is hidden (shown as a dash) when a screen has no recorded clicks or no interactive targets, and for plain live-website tests.
-</Note>
+## What's available for each source
 
-This is the best tab for questions like: where do testers hesitate, which screen causes misclicks, how many steps success usually takes, and where successful and unsuccessful paths part ways.
+| | Live website | Figma prototype | Media prototype, Interactive flow | Media prototype, Sequential flow |
+|---|---|---|---|---|
+| Success Rate and Drop-off | Yes | Yes | Yes | No |
+| Misclick Rate | No | Estimated | Yes | No |
+| Total Clicks per screen | No | Yes | Yes | No |
+| Steps, heatmaps, and paths | Yes | Yes | Yes | Yes |
 
-<Card title="Next: Post-Test Questions" icon="arrow-right" href="/post-test-questions-1">
-  Read back what testers told you after the flow.
-</Card>
+For a **Sequential flow** prototype, the unavailable metrics show a dash. Set the prototype up as an **Interactive flow** in the [media canvas](/media-canvas) to get them.
+
+## Free plan limits
+
+On the Free plan, the summary metrics are visible, but per-screen analysis and the **Journeys** tab are locked. Upgrade to a paid plan to unlock them. See [Plans and credits](/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Next: Benchmark results" icon="arrow-right" href="/benchmark-results">
+    Read SUS and UXIA-Q scores for the task.
+  </Card>
+  <Card title="Insights and UOS" icon="lightbulb" href="/results">
+    See the problems behind the numbers.
+  </Card>
+</CardGroup>

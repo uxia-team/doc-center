@@ -1,0 +1,88 @@
+---
+title: "Analyze Results"
+sidebarTitle: "Overview"
+description: "Follow your test live and read its results block by block: progress, AI and human participants, filters, stopping a test, and refunds."
+---
+
+The **Analyze** phase is where your results live. You don't have to wait for the test to finish: results stream in block by block while participants work through your test. Click **Analyze** in the test header to open it. It becomes available once you launch the test, create a test link, or request a human panel.
+
+## Find your way around
+
+- **Header.** Click the test title for the participant counts and date, and to **Rename**, **Export**, or **Share** the test (see [Share and export](/share-and-export)). On the right are the credits-returned chip, **Stop test** while the test runs, and the participant switch.
+- **Sidebar.** A **Blocks | Chat** switch sits at the top. **Blocks** lists one row per block; **Chat** opens [Ask AI](/ask-ai).
+- **Results.** The selected block's results, with tabs that depend on the block type. Use the **Share feedback on these results** bubble to tell us how useful they were.
+
+Each block row shows its title and a subtitle. While the test runs, the subtitle shows the block's status:
+
+| Status | Meaning |
+|---|---|
+| **Waiting...** | The block hasn't started yet. |
+| Current step and percentage | The block is running. |
+| **Failed** | The block couldn't finish. |
+| **Stopped** | You stopped the test before this block completed. |
+| **Not executed** | The block didn't run. |
+| Red warning icon | Participants didn't reach this block, and its credits were returned. |
+
+## Follow a running test
+
+A progress strip above the results shows which block is running and the test's overall percentage. The running block's sidebar row shows its current step, for example "Gathering tester feedback..." or "Identifying key issues..." for a task, "Collecting participant responses..." for a survey, "Sorting cards..." for a card sort, or "Scanning interface..." for an accessibility check.
+
+While a Task block runs, it opens on its **Transcripts** tab so you can watch participants live. The other tabs unlock when the block finishes. See [Test transcripts](/test-transcripts).
+
+<Tip>
+  You don't need to keep the page open. "You can leave this page and come back later. We'll email you as soon as it finishes."
+</Tip>
+
+## Switch between AI and human participants
+
+The participant switch in the header toggles the whole Analyze view between **AI participants** and **Human participants** (see [Human participant results](/human-insights)).
+
+To narrow the results, click the counter next to the switch, select audiences (AI participants) or test links (human participants), and click **Filter**. The selection applies to the complete Analyze view. Filters work once the test finishes analyzing results. On the Free plan, the switch and filters are locked; filtering is available on Starter plans and above.
+
+## Read each block's results
+
+| Block | Tabs | Learn more |
+|---|---|---|
+| Task | **Insights**, **Transcripts**, **Analytics**, **Journeys**, plus **Benchmarks** when SUS or UXIA-Q is on | [Insights and UOS](/results), [Transcripts](/test-transcripts), [Analytics](/analytics), [Benchmarks](/benchmark-results) |
+| Survey | **Responses**, **Participants** | [Survey results](/survey-results) |
+| Card sorting | **Results**, **Agreement Matrix**, **Similarity Matrix** | [Card sorting results](/card-sorting-results) |
+| Accessibility check | **Results**, **Vision Simulation** | [Criteria evaluation](/criteria-evaluation), [Vision simulation](/vision-simulation) |
+
+Instead of results, a block can show **Waiting for previous blocks to finish...**, **Test stopped** (the test was stopped before the block finished), or **No participants reached this block** (everyone dropped off earlier). Before you launch AI participants, you see **No AI participants yet**; click **Recruit AI participants** to go to the Recruit phase.
+
+## Stop a running test
+
+<Steps>
+  <Step title="Click Stop test">
+    It appears in the header while AI participants are running.
+  </Step>
+  <Step title="Review the refund">
+    The dialog explains: "You'll receive a partial credit refund. Only results from blocks completed before the interrupted block will remain available." It lists the refund for each block and the total **Credits to return**.
+  </Step>
+  <Step title="Confirm">
+    Click **Stop test** again. Blocks that didn't complete show **Stopped**.
+  </Step>
+</Steps>
+
+| Block state when you stop | Refund |
+|---|---|
+| Not started | 100% of its credits |
+| Running | 50% of its credits |
+| Completed | None; its results stay available |
+
+## Credits returned
+
+When credits come back to you, a coin chip with the total appears in the header after the run ends. This happens when you stop a test, and when participants drop off before reaching later blocks: "We returned the credits for tasks and questions that some participants did not get to carry out." Click the chip to see the refund per block. See [Plans and credits](/account/plans-and-credits).
+
+## Older tests
+
+Most tests created before Blocks open in the Analyze view; some open their original results read-only, without Chat. If a test shows "This test was launched through an old version of Uxia", relaunch it to get the latest results features. See [What changed with Blocks](/moving-to-blocks).
+
+<CardGroup cols={2}>
+  <Card title="Ask AI" icon="sparkles" href="/ask-ai">
+    Ask questions about your whole test in plain language.
+  </Card>
+  <Card title="Share and export" icon="share-2" href="/share-and-export">
+    Share a read-only link or export a PDF report.
+  </Card>
+</CardGroup>

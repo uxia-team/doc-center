@@ -1,0 +1,83 @@
+---
+title: "Recruit Participants"
+sidebarTitle: "Overview"
+description: "Choose AI participants, test links, or a human panel for your test, then launch it. Learn what the test review checks before AI participants start."
+---
+
+The **Recruit** phase is where you decide who takes your test. To open it, click **Start recruiting** in Build. Uxia checks your blocks first; if a required field is missing, it takes you to the first issue instead. The **Recruit** step in the header stays disabled until your test has at least one block.
+
+When you come from Build, the AI participants view opens first. If you only want people, click **Recruit human participants only** to go to the recruitment methods.
+
+## Choose a recruitment method
+
+| Method | What it does | Cost | Plans |
+|---|---|---|---|
+| [**AI participants**](/ai-participants) | Run your tests with synthetic participants from your [audiences](/audiences/overview). | Credits, per block | All plans |
+| [**Test links**](/test-links) | Send a link to people you already have, through any channel you use. | 0 credits | Paid plans |
+| [**Human panel**](/human-panel) | Request screened participants for your test. Our team contacts you with pricing. | Pricing by our team | Paid plans |
+
+You can combine methods in the same test. For example, run AI participants for fast feedback and share a test link with your customers. Each method gets its own row in the summary, and AI and human results are kept separate in [Analyze](/analyze-results).
+
+<Note>
+  On the Free plan, test links and the human panel are locked. Selecting either one opens **Upgrade to recruit human participants**.
+</Note>
+
+## Summary
+
+Below the method cards, **Summary** lists each method you've started, with its **Participants**, **Audiences / links**, **Status**, and **Credits**. Until you start one, it reads *"Choose from the methods above to start collecting insights."*
+
+- **AI participants** move from **Not launched** through **Checking test setup** and **Processing** to **Completed**, or **Failed**. Credits show the cost of the run.
+- **Test links** show **Active** or **Stopped**, the number of completed sessions, and **0 credits**.
+- **Human panel** shows **Requested** and **Pricing by our team**.
+
+Each row has a **Go to analyze** link. The footer shows **Total credits** and **Credits after test**. On paid plans, click the credits in the AI participants row to see the cost of each block.
+
+### Accessibility-only tests
+
+An [Accessibility check](/accessibility-block) doesn't need participants. If it's the only block in your test, Recruit shows *"This test only contains an accessibility block, so recruiting testers is not necessary."* The method cards are disabled, and the summary shows the frame cost (10 credits per frame). Click **Go to analyze** to run the check.
+
+## Launching
+
+- **AI participants** start when you click **Launch test**, after a quick test review.
+- **Test links** collect responses as soon as you create them, with no launch or review.
+- **Human panel** requests go to our team when you click **Send Request**.
+
+After AI participants launch, the test's blocks and audiences are locked. You can still create test links for the same test.
+
+## Test review
+
+Results are only as good as the setup behind them. A vague task, a placeholder scenario, or an unusable screen weakens every finding that follows. So before any AI participant starts, Uxia reviews your test.
+
+<Steps>
+  <Step title="Checking test setup">
+    A dialog titled **Checking test setup…** lists each block. Each one moves from **Checking…** to **Complete**, or to **Needs changes** if Uxia finds a problem.
+  </Step>
+  <Step title="Approved">
+    If every block passes, you see **Test confidence approved** and *"Everything is ready. Starting your test…"*. The AI participants start, and the summary shows their progress.
+  </Step>
+  <Step title="Issues found">
+    If something needs work, the **Test review** dialog lists *"Some issues to fix before launching:"* by block. Click **Fix in Build** to return to Build with the affected blocks highlighted, or **Cancel** to stay in Recruit. Nothing runs, and the credits for the launch are returned.
+  </Step>
+</Steps>
+
+What the review checks:
+
+| Block | Checks |
+|---|---|
+| [Task](/task-block) | The [task](/mission), [scenario](/test-scenario), and [stop condition](/stop-condition) are present and meaningful, not placeholder text. A live website has a valid URL. Prototype screens are supported images, clear enough to test, and consistent with the instructions. |
+| [Survey](/survey-block) | Every question and answer option is understandable text. |
+| [Accessibility check](/accessibility-block) | Each frame is a PNG, JPEG, WebP, or GIF image that shows a user interface. |
+| [Card sorting](/card-sorting), benchmarks | Not reviewed. |
+
+<Tip>
+  Passing the review means your setup is usable, not that it's perfect. Write the task as one concrete action and the scenario as the participant's motivation. The clearer the brief, the more you can trust what participants do with it.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="AI participants" icon="bot" href="/ai-participants">
+    Pick audiences, set participant numbers, and launch.
+  </Card>
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Follow results as they come in.
+  </Card>
+</CardGroup>
