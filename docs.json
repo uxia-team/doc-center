@@ -102,7 +102,7 @@
           {
             "group": "Creating an AI User Research Test",
             "pages": [
-              "question-types-1"
+              "question-types"
             ]
           },
           {
@@ -163,9 +163,9 @@
             "pages": [
               "integrations/mcp",
               "guides/claude-code",
-              "guides/untitled-page-2",
+              "guides/chatgpt-codex",
               "guides/lovable",
-              "guides/untitled-page",
+              "guides/antigravity",
               "guides/cursor"
             ]
           }
@@ -222,7 +222,7 @@
   "redirects": [
     {
       "source": "/account/workspace",
-      "destination": "/account/organizations/workspaces",
+      "destination": "/account/workspaces",
       "permanent": true
     },
     {
@@ -247,27 +247,12 @@
     },
     {
       "source": "/account/organizations/sso-and-provisioning",
-      "destination": "/account/security-and-sso",
+      "destination": "/account/security/sso",
       "permanent": true
     },
     {
       "source": "/account/security",
-      "destination": "/account/security-and-sso",
-      "permanent": true
-    },
-    {
-      "source": "/concepts/audience-enrichment",
-      "destination": "/account/audiences/audience-enrichment",
-      "permanent": true
-    },
-    {
-      "source": "/concepts/ai-participants",
-      "destination": "/account/audiences",
-      "permanent": true
-    },
-    {
-      "source": "/testing/human-test",
-      "destination": "/human-insights",
+      "destination": "/account/security/data-privacy",
       "permanent": true
     },
     {
@@ -276,18 +261,123 @@
       "permanent": true
     },
     {
+      "source": "/account/audiences",
+      "destination": "/audiences/overview",
+      "permanent": true
+    },
+    {
+      "source": "/account/audiences/building-an-audience",
+      "destination": "/audiences/building-an-audience",
+      "permanent": true
+    },
+    {
+      "source": "/account/audiences/audience-enrichment",
+      "destination": "/audiences/enrichment",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/ai-participants",
+      "destination": "/audiences/overview",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/audience-enrichment",
+      "destination": "/audiences/enrichment",
+      "permanent": true
+    },
+    {
+      "source": "/testing/ai-user-test",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/testing/ai-live-website",
+      "destination": "/source",
+      "permanent": true
+    },
+    {
+      "source": "/testing/ai-user-research",
+      "destination": "/about-2",
+      "permanent": true
+    },
+    {
+      "source": "/testing/accessibility-test",
+      "destination": "/about-1",
+      "permanent": true
+    },
+    {
+      "source": "/testing/human-test",
+      "destination": "/human-insights",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/transcripts-and-insights",
+      "destination": "/test-transcripts",
+      "permanent": true
+    },
+    {
+      "source": "/concepts/ux-benchmarks",
+      "destination": "/sus",
+      "permanent": true
+    },
+    {
+      "source": "/question-types-1",
+      "destination": "/question-types",
+      "permanent": true
+    },
+    {
+      "source": "/guides/ai-user-test",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/guides/testing-live-websites",
+      "destination": "/source",
+      "permanent": true
+    },
+    {
+      "source": "/guides/concept-testing",
+      "destination": "/about-2",
+      "permanent": true
+    },
+    {
+      "source": "/guides/hybrid-research",
+      "destination": "/human-insights",
+      "permanent": true
+    },
+    {
+      "source": "/guides/accessibility-workflow",
+      "destination": "/about-1",
+      "permanent": true
+    },
+    {
+      "source": "/guides/mcp",
+      "destination": "/integrations/mcp",
+      "permanent": true
+    },
+    {
       "source": "/guides/claude-desktop-app",
       "destination": "/guides/claude-code",
       "permanent": true
     },
     {
-      "source": "/guides/untitled-page-3",
-      "destination": "/guides/untitled-page-2",
+      "source": "/guides/untitled-page",
+      "destination": "/guides/antigravity",
       "permanent": true
     },
     {
       "source": "/guides/untitled-page-1",
-      "destination": "/guides/untitled-page",
+      "destination": "/guides/antigravity",
+      "permanent": true
+    },
+    {
+      "source": "/guides/untitled-page-2",
+      "destination": "/guides/chatgpt-codex",
+      "permanent": true
+    },
+    {
+      "source": "/guides/untitled-page-3",
+      "destination": "/guides/chatgpt-codex",
       "permanent": true
     }
   ],

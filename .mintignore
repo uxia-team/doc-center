@@ -5,3 +5,7 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Not help-center content: scraped uxia.app source material and agent instructions
+sources/
+AGENTS.md
