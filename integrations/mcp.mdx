@@ -28,9 +28,10 @@ Connecting Uxia takes three steps: pick the AI tool you want to use, register th
     | **Cursor** | IDE | Native MCP support — pulls Uxia data into Cursor chat. |
     | **Codex** | CLI | For OpenAI Codex CLI workflows. |
     | **v0** | Web | Bring Uxia insights into v0 design generation. |
+    | **Microsoft Copilot** | Microsoft 365 Copilot, Teams | Add Uxia to a Copilot Studio agent. |
     | **Other** | Any MCP client | Use the generic HTTP transport for Claude Desktop, custom agents, and other clients. |
 
-    You can also connect non-coding tools like **Claude Desktop** and **ChatGPT**. See the guides for [Claude](/guides/claude-code), [ChatGPT and Codex](/guides/chatgpt-codex), [Cursor](/guides/cursor), [Lovable](/guides/lovable), and [Antigravity](/guides/antigravity).
+    You can also connect non-coding tools like **Claude Desktop**, **ChatGPT**, and **Microsoft Copilot**. See the guides for [Claude](/guides/claude-code), [ChatGPT and Codex](/guides/chatgpt-codex), [Cursor](/guides/cursor), [Lovable](/guides/lovable), [Antigravity](/guides/antigravity), and [Microsoft Copilot](/guides/microsoft-copilot).
   </Step>
   <Step title="Register the Uxia MCP server">
     Add the server using the configuration for your chosen tool.
@@ -66,6 +67,10 @@ Connecting Uxia takes three steps: pick the AI tool you want to use, register th
     ```bash
     codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
     ```
+
+    #### Microsoft Copilot
+
+    In Copilot Studio, open your agent's **Tools** page and select **Add a tool** › **New tool** › **Model Context Protocol**. Use `https://platform.uxia.app/api/mcp-v2/mcp` as the **Server URL** and **OAuth 2.0** with **Dynamic discovery** for authentication. See the [Microsoft Copilot guide](/guides/microsoft-copilot) for the full steps, including how to use the agent in Microsoft 365 Copilot and Teams.
 
     #### Other
 
