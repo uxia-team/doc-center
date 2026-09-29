@@ -1,30 +1,66 @@
 ---
 title: "Vision Simulation"
+description: "Compare your frames side by side under color blindness, blurred vision, and field loss to check that your design still works."
 ---
 
-The **Vision Simulation** tab is a visual comparison tool: it renders the same frame under different visual conditions so you can check whether your design still holds up when perception changes.
+The **Vision Simulation** tab shows the same frame under two vision conditions, side by side. Use it to check whether your design still communicates when perception changes. It's the fastest way to catch meaning carried by color alone, or contrast that collapses for some of your users.
 
-## Reading the comparison
+You find it next to **Results** in the accessibility check block, in the **Analyze** phase.
 
-The tab shows side-by-side preview panels — a baseline view such as **Normal Vision** next to a simulated view such as **Red-Blind** — with condition selectors and a severity slider (observed at 50%). Switching conditions shows you:
+## Compare two conditions
 
-- Whether your color choices still communicate what they need to
-- Whether visual hierarchy and emphasis survive when color perception shifts
+<Steps>
+  <Step title="Pick a frame">
+    Click a numbered thumbnail at the top to choose the frame to simulate.
+  </Step>
+  <Step title="Choose a condition for each panel">
+    Each panel has its own condition dropdown. The left panel starts on **Normal Vision** and the right panel on **Red-Blind**, so you begin with a baseline next to a simulation.
+  </Step>
+  <Step title="Adjust the severity">
+    Drag the **Severity** slider next to the dropdown to make the condition milder or stronger, from 1% to 100%. Each panel starts at 50%. The slider is disabled for **Normal Vision**.
+  </Step>
+  <Step title="Look closer">
+    Click a simulated image to open it at full size.
+  </Step>
+</Steps>
 
-It's the fastest way to catch cases where meaning is carried by color alone, or where contrast quietly collapses for a segment of users.
+To compare two conditions directly, set both panels to simulations, for example **Red-Blind** next to **Green-Blind**.
 
-## Test Details tab
+## Conditions
 
-The third tab, **Test Details**, is the record of the run. It surfaces the conformance level and its rationale, any tags (the section shows even when empty), the uploaded frames as thumbnails, and the **How accessibility testing works** explainer again for later reference.
+| Group | Condition | What it simulates |
+|---|---|---|
+| | **Normal Vision** | Standard color perception with full visual clarity |
+| **Color Blindness** | **Red-Blind** | Protanopia: difficulty telling red and green apart |
+| | **Green-Blind** | Deuteranopia, the most common form of color blindness |
+| | **Blue-Blind** | Tritanopia: difficulty with blue and yellow |
+| | **Total Color Blindness** | Achromatopsia: seeing only in grayscale |
+| **Clarity Issues** | **Cataracts** | A clouded lens: blurred, hazy vision with yellowing |
+| | **Astigmatism** | Blurred vision with ghosting |
+| | **Presbyopia** | Age-related loss of near focus |
+| **Field Loss** | **Glaucoma** | Loss of peripheral vision, like looking through a tunnel |
+| | **Macular Degeneration** | Loss of central vision, which affects detail |
 
-## Related
+## What to look for
+
+- **Color blindness.** Check that status, errors, links, and chart series don't rely on color alone. A red error message should still read as an error in **Total Color Blindness**.
+- **Clarity issues.** Check that small text, thin icons, and low-contrast labels stay legible when blurred.
+- **Field loss.** Check where key content and actions sit. With **Glaucoma**, content near the edges fades. With **Macular Degeneration**, the center of the screen does.
+- **Hierarchy.** Check that the most important element still stands out when color and sharpness change.
+
+When you spot a problem, go back to the **Results** tab and look for the related criterion, such as *Use of Color* (1.4.1) or *Contrast (Minimum)* (1.4.3). See [Criteria evaluation](/criteria-evaluation).
+
+## Good to know
+
+- The simulations are approximations meant to raise awareness. Real experiences of these conditions vary a lot from person to person.
+- Simulations run on image frames. Frames Uxia skipped as non-interface content show the same banner as in **Results**.
+- The tab needs a browser with WebGL. If WebGL isn't available, the tab shows **WebGL Required**. Try another browser or turn on WebGL in your browser settings.
 
 <CardGroup cols={2}>
-  <Card title="About the Accessibility Test" icon="person-standing" href="/about-1">
-    What the Accessibility Test covers and when to use it.
+  <Card title="Accessibility check block" icon="person-standing" href="/accessibility-block">
+    What the accessibility check covers and when to use it.
   </Card>
-
-  <Card title="Criteria Evaluation" icon="list-checks" href="/criteria-evaluation">
-    How to read the criterion-by-criterion WCAG results.
+  <Card title="Criteria evaluation" icon="list-checks" href="/criteria-evaluation">
+    Read the results criterion by criterion.
   </Card>
 </CardGroup>

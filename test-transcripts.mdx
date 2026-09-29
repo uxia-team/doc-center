@@ -1,30 +1,73 @@
 ---
-title: "Test Transcripts"
+title: "Transcripts"
+description: "Follow each AI participant through a Task block step by step: what they did, what they said, why, and what they saw."
 ---
 
-The **Test Transcripts** tab shows each participant's journey step by step, in transcript form — the raw reasoning behind the summarized findings rather than the synthesis itself.
+The **Transcripts** tab of a [Task block](/task-block) replays each AI participant's session step by step. Where [Insights](/results) tells you *what* went wrong across the panel, a transcript shows *why*: every action, the participant's thinking aloud, and the screen they were looking at.
 
-## What each step shows
+Reach for it when you want to check an insight against the raw session, understand a drop-off, or quote a participant in their own words. From an insight's **Evidence** tab, clicking a quote takes you straight to that moment here.
 
-A transcript reads like a narrated walkthrough. Every step captures:
+## Pick a participant
+
+Use the participant selector at the top left to switch between sessions. With several audiences, participants are grouped by audience. Participants who didn't complete an earlier required task are listed under **Didn't reach this task** and excluded from this task's statistics.
+
+Below the selector:
 
 | Element | What it shows |
-| --- | --- |
-| **Participant** | Who the tester is |
-| **Completion status** | Whether they finished the flow |
-| **Step number** | Where they are in the journey |
-| **Frame** | The screen at that step |
-| **Action** | What they did — a click, a text input, and so on |
-| **Reasoning** | Why they did it, in first-person language |
+|---|---|
+| Result badge | How the session ended |
+| **Steps** | The number of steps recorded for this participant |
+| **Misclicks** | The share of interactions that didn't hit a valid interactive area. Not available on live website tasks. |
 
-Each step also has a **Show more details** action for a closer look.
+The result badge is one of these:
 
-## How to read them
+| Badge | Meaning |
+|---|---|
+| **Success** | The participant completed the task. |
+| **Drop-off** | The participant didn't complete the task. |
+| **Drop-off \| Access denied** | The site denied access or blocked the participant with anti-bot protection. |
+| **Stalled** | The participant couldn't make progress, and the session was ended. |
+| **Max steps** | The participant reached the maximum number of steps allowed for a run. Contact us if you need a higher limit. |
 
-Because the reasoning is in the tester's own words, this is where you understand the _why_ behind a finding. You can watch a tester explain why they tap **Next**, the moment onboarding starts to feel too long, why they pick the 1-hour ticket, or when wording like "invoice" turns confusing.
+Media prototypes set up as a **Sequential flow** don't show the badge, steps, or misclicks.
 
-Reach for this tab when you want raw reasoning, not just summarized results — and read it alongside the [Insights Report](/results), which tells you which of these moments recurred across the panel.
+On the right, **Search** finds words across the transcript (press Enter to jump between matches), and **View profile** opens the participant's demographic and psychological profile.
 
-<Card title="Next: Analytics" icon="arrow-right" href="/analytics">
-  See how testers moved through the flow, and where friction happened.
-</Card>
+## Read a session
+
+The left column is the transcript; the right column shows the screenshots. They stay in sync: scroll the steps and the screenshot follows, or move through the screenshots and the transcript follows. Drag the divider to resize the columns.
+
+- **Task card.** The task participants were given, as you wrote it in the Build phase.
+- **Step cards.** Consecutive steps on the same screen share a card, labeled **Step 3** or **Steps 3-5**. Each action shows what the participant did (a click, typing, a scroll) and their comment in the first person. Click **Show more details** for the **Input value** they typed, their **Reasoning**, and their **Expectation** of what would happen next.
+- **Summary card.** The participant's closing reflection on the whole journey. **Show more details** opens their **Issues analysis**.
+
+Failure signals appear on the step cards: a highlighted action icon means **This action did not advance the tester**, and the banner **Too many actions failed - skipped to next frame** appears when none of the actions on a screen moved the participant forward. On live websites, an **Access denied** badge marks the step where the participant was blocked.
+
+Use the frame view menu above the screenshots to switch between **Clickmap** (where the participant clicked), **Heatmap**, and **Image** (the plain screenshot).
+
+## Chat with a participant at a step
+
+On the active step card, click **Chat** to ask the participant about that exact moment, for example why they skipped a button or what they expected to find. They answer with what they knew at that step. See [Chat with participants](/chat-with-testers).
+
+## While the test is running
+
+Transcripts stream in live while the block runs, and this is the only tab available until the run completes. If you scroll up while new steps arrive, click **New transcripts (N)** to jump to the latest one.
+
+If every AI participant was blocked from a live website, a banner explains that the test couldn't be completed and that 80% of the credits were refunded.
+
+## Free plan limits
+
+On the Free plan, you see every participant's actions and comments, but each step's **Reasoning** and **Expectation** are locked. Upgrade to a paid plan to unlock them. See [Plans and credits](/account/plans-and-credits).
+
+<Note>
+  This tab shows AI participants. To watch human participants' recordings for the same task, switch the participant type to **Human participants**. See [Human participant results](/human-insights).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Next: Analytics and Journeys" icon="arrow-right" href="/analytics">
+    See success rate, misclicks, heatmaps, and paths across all participants.
+  </Card>
+  <Card title="Chat with participants" icon="message-circle" href="/chat-with-testers">
+    Ask follow-up questions after the test.
+  </Card>
+</CardGroup>

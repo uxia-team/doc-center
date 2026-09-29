@@ -1,0 +1,67 @@
+---
+title: "A/B Variants"
+description: "Run the same test on two versions of your product and get a report on which one performs better."
+---
+
+<Note>A/B variants are expected to be released in October 2026. Until then, this feature may not be available in your workspace.</Note>
+
+An A/B variant runs your test on two versions of your product, such as two prototypes or two URLs, and tells you which one performs better. **Variant #2** uses the same blocks, tasks, questions, audience, participants, and settings as **Variant #1**. Only the source changes.
+
+## Create Variant #2
+
+<Steps>
+  <Step title="Open the variant dialog">
+    In the **Build** phase, click **+** (**Create variant comparison**) in the bar below the canvas. The dialog "Find out which variant performs better" explains what the variants share.
+  </Step>
+  <Step title="Create the variant">
+    Click **Create Variant #2**. Uxia opens the new **Variant #2** tab with the banner "Variant #2 uses the same blocks as Variant #1. Only the source can be edited."
+  </Step>
+  <Step title="Set the new source">
+    In each Task block, replace the [source](/source): a different live website URL, Figma prototype link, or [media prototype](/media-canvas).
+  </Step>
+</Steps>
+
+Switch between the **Variant #1** and **Variant #2** tabs at the bottom of the page.
+
+<Tip>
+  Variant #2 starts as a copy of Variant #1's blocks, so finish building your blocks before you create it.
+</Tip>
+
+You can also add Variant #2 after Variant #1 has run, from the same bar in the **Analyze** phase.
+
+To remove Variant #2 before it launches, click **Remove Variant #2** (the × on its tab), then **Delete Variant #2**. This permanently removes Variant #2 and its source. Variant #1 isn't affected.
+
+## Launch the variants
+
+- **Both at once.** When you launch a test that has Variant #2, both variants run with the same AI participants.
+- **Variant #2 later.** If Variant #1 has already run, open the **Variant #2** tab, go to **Recruit**, and click **Launch variant 2**. Variant #2 runs with the same participants as Variant #1.
+- **Test links.** Each [test link](/test-links) gets one URL per variant, labeled **Variant 1** and **Variant 2**.
+
+### Cost
+
+| Item | Credits |
+|---|---|
+| Block costs | Doubled, because every block runs once per variant |
+| Comparison (**A/B test setup** in the breakdown) | 100 |
+
+If Variant #1 has already run, you're charged only for Variant #2 and the comparison. See [Plans and credits](/account/plans-and-credits).
+
+## Analyze and compare
+
+In the **Analyze** phase, the **Variant #1** and **Variant #2** tabs at the bottom switch between each variant's results, block by block. While the test runs, the progress strip shows which variant it refers to.
+
+A test with Variant #2 also gets a **Report** phase after **Analyze** in the header. It's greyed out until both variants finish processing and the report is generated. The report has two tabs:
+
+- **Executive Summary.** A verdict ("Variant #1 performs better", "Variant #2 performs better", or "No conclusive winner"), a summary, key findings linked to the insights behind them, side-by-side KPIs such as drop-off rate, misclick rate, and UOS, and a **Recommendation**.
+- **Surveys.** Survey answers for both variants side by side, when your test includes a Survey block.
+
+To export, choose **Export** from the test title menu. The PDF covers both variants, and **Variant comparison** under **Details** adds the comparison. See [Share and export](/share-and-export).
+
+<CardGroup cols={2}>
+  <Card title="Build your test" icon="blocks" href="/build-your-test">
+    Add and configure the blocks both variants share.
+  </Card>
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Find your way around the Analyze phase.
+  </Card>
+</CardGroup>

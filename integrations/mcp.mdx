@@ -1,23 +1,24 @@
 ---
 title: "Connect Uxia to Claude, Cursor, and Other AI Tools via MCP"
 sidebarTitle: "Getting Started"
-description: "Use the Uxia MCP server to query your tests, transcripts, and insights directly from Claude Code, Cursor, Codex, v0, and other MCP-compatible AI tools."
+description: "Use the Uxia MCP server to create and launch tests, manage audiences, and read results from Claude Code, Cursor, Codex, v0, and other MCP-compatible tools."
 ---
 
-The Uxia MCP server lets your favorite AI tools talk directly to your Uxia workspace. Once connected, Claude Code, Cursor, Codex, v0, and other [Model Context Protocol](https://modelcontextprotocol.io) clients can pull your tests, transcripts, insights, and benchmark scores into the same chat where you're writing code or iterating on design — no copy-paste, no context switching.
+The Uxia MCP server lets your favorite AI tools talk directly to your Uxia workspace. Once connected, Claude Code, Cursor, Codex, v0, and other [Model Context Protocol](https://modelcontextprotocol.io) clients can work with Uxia in the same chat where you're writing code or iterating on design — no copy-paste, no context switching.
+
+## What you can do
+
+- **Create and launch tests.** Describe what you want to test, and your AI tool sets up the test for you: the task, the follow-up questions and the audience. Launching spends credits, so the assistant previews the cost and asks for your approval before it launches.
+- **Manage audiences.** List your audiences, create new ones, and choose the AI participants for a test.
+- **Read results and insights.** Pull insights, participant quotes, transcripts, navigation paths, survey answers, benchmark scores, and accessibility findings into your conversation. Check progress and your remaining credits.
+
+Everything happens with your Uxia account, so the same workspace access, credits and [plan limits](/account/plans-and-credits) apply.
 
 ## Setup
 
-Connecting Uxia takes three steps: make sure your workspace is on a paid plan, pick the AI tool you want to use, and run the registration command in your terminal.
+Connecting Uxia takes three steps: pick the AI tool you want to use, register the Uxia MCP server, and sign in to authorize the connection.
 
 <Steps>
-  <Step title="Upgrade to a paid plan">
-    MCP access is included on all paid plans. If your workspace is still on the Free Trial, upgrade from your [Plans & Credits](/account/plans-and-credits) page first.
-
-    <Note>
-      MCP is not available on the Free Trial. You'll see the **Upgrade** button in your workspace under **Settings → Integrations → MCP** if you haven't upgraded yet.
-    </Note>
-  </Step>
   <Step title="Pick your AI tool">
     Supported clients out of the box:
 
@@ -29,22 +30,24 @@ Connecting Uxia takes three steps: make sure your workspace is on a paid plan, p
     | **v0** | Web | Bring Uxia insights into v0 design generation. |
     | **Other** | Any MCP client | Use the generic HTTP transport for Claude Desktop, custom agents, and other clients. |
 
-    You can also connect non-coding tools like **Claude Desktop**. See the full list of supported clients in your workspace.
+    You can also connect non-coding tools like **Claude Desktop** and **ChatGPT**. See the guides for [Claude](/guides/claude-code), [ChatGPT and Codex](/guides/chatgpt-codex), [Cursor](/guides/cursor), [Lovable](/guides/lovable), and [Antigravity](/guides/antigravity).
   </Step>
   <Step title="Register the Uxia MCP server">
-    Open a terminal and run the command Uxia generated for your chosen tool.
+    Add the server using the configuration for your chosen tool.
 
-    #### Claude code:
+    #### Claude Code
+
+    Run this command in your terminal:
 
     ```bash
     claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp/mcp
     ```
 
-    #### Cursor:
+    #### Cursor
 
-    In Cursor, go to Settings → Tools & MCPs and click "New MCP server" to open your `mcp.json`file.
+    In Cursor, open **Customize** and add a custom MCP server, or edit `~/.cursor/mcp.json` directly. Add this entry to the `mcpServers` object:
 
-    ```bash
+    ```json
     {
       "mcpServers": {
         "Uxia": {
@@ -56,13 +59,15 @@ Connecting Uxia takes three steps: make sure your workspace is on a paid plan, p
     }
     ```
 
-    #### Codex:
+    #### Codex
+
+    Run this command in your terminal:
 
     ```bash
     codex mcp add uxia --url https://platform.uxia.app/api/mcp/mcp
     ```
 
-    #### Other:
+    #### Other
 
     Add a new HTTP MCP server and paste the URL below.
 
@@ -71,28 +76,29 @@ Connecting Uxia takes three steps: make sure your workspace is on a paid plan, p
     ```
   </Step>
   <Step title="Authenticate">
-    The first time your client calls the Uxia MCP server, you'll be redirected to sign in to your Uxia workspace and authorize the connection. After that, your AI tool has scoped access to the tests and reports and data.
+    The first time your client calls the Uxia MCP server, you'll be redirected to sign in to Uxia and click **Authorize**. After that, your AI tool has scoped access to the tests, audiences and results in your workspace.
   </Step>
   <Step title="Try it out">
     In your AI tool, ask something like:
 
     - _"List my last 5 Uxia tests."_
-    - _"Summarize the insights report for the checkout flow test."_
-    - _"What were the top insights points in the latest AI Live Website Test?"_
+    - _"Summarize the insights for the checkout flow test."_
+    - _"Create a Uxia test for the sign-up flow at www.example.com with 5 AI participants."_
+    - _"What were the top usability issues in my latest live website test?"_
 
     Your client will call the Uxia MCP server, fetch the relevant data, and answer with real context from your workspace.
   </Step>
 </Steps>
 
-## Related Pages
+## Related pages
 
 <CardGroup cols={2}>
   <Card title="Test Transcripts" icon="scroll-text" href="/test-transcripts">
-    Understand the data your AI tool will pull through MCP — transcripts, insights, and benchmark scores.
+    Understand the data your AI tool can pull through MCP — transcripts, insights, and benchmark scores.
   </Card>
 
   <Card title="Plans & Credits" icon="credit-card" href="/account/plans-and-credits">
-    See which plans include MCP access and how credits work across MCP-driven queries.
+    See what tests cost in credits when you launch them through MCP.
   </Card>
 
   <Card title="Workspaces" icon="users" href="/account/workspaces">

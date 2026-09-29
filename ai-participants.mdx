@@ -1,0 +1,80 @@
+---
+title: "AI Participants"
+description: "Pick audiences, set how many AI participants take your test, check the credit estimate, and launch."
+---
+
+AI participants are synthetic participants generated from your [audiences](/audiences/overview). They take your test the same way a person would, thinking aloud as they go, and their results start arriving in Analyze within minutes.
+
+To open the view, click **AI participants** in the [Recruit](/recruit-participants) phase. When you click **Start recruiting** in Build, it opens directly. The page reads *"Choose your synthetic participants. You can also combine them with human participants."*
+
+## Set up and launch
+
+<Steps>
+  <Step title="Select your audiences">
+    Under **Select your audiences**, click an audience card to include it. You can include up to 3 audiences. Use **Search audiences...** to find one by name or description.
+
+    To make a new one, click **Create audience**. The [audience builder](/audiences/building-an-audience) opens, and the new audience is included as soon as you save it. Wait for its participants to finish generating before you launch.
+  </Step>
+  <Step title="Set the number of participants">
+    The **Participants** panel on the right shows your total against the maximum, with a count for each audience. Change a count directly, or use:
+
+    - **Distribute evenly** to split the maximum equally across your audiences.
+    - **Handpick participants** to choose the exact AI participants you want, then **Save selection**.
+    - **Remove**, in an audience's **···** menu, to drop that audience.
+
+    Until you include an audience, the panel shows *"No audiences included yet."*
+  </Step>
+  <Step title="Check the credit estimate">
+    **Credit estimate** shows the cost of each block and the **Total credits** for the selected participants.
+  </Step>
+  <Step title="Launch">
+    Click **Launch test**. Uxia runs a quick [test review](/recruit-participants#test-review) first. If it passes, the AI participants start.
+  </Step>
+</Steps>
+
+## Participant limits
+
+| | Free plan | Paid plans |
+|---|---|---|
+| AI participants per test | 3 | 5–10 |
+| Audiences per test | Up to 3 | Up to 3 |
+
+On the Free plan, raising the count above 3 opens **Upgrade to add more AI participants**.
+
+If the total is outside your plan's range, it turns red and **Launch test** stays disabled. Hover over the total to see how many participants to add or remove. You may also see these messages:
+
+| Message | What to do |
+|---|---|
+| *You can include up to 3 audiences* | Remove an audience before adding another. |
+| *You can select at most 10 AI participants* | Lower the count for one or more audiences. |
+| *Not enough credits remaining for this launch* | Reduce participants or blocks, or [get more credits](/account/plans-and-credits). |
+
+## How credits add up
+
+Each block is charged per AI participant:
+
+| Block | Cost |
+|---|---|
+| Task (any type) | 20 credits, +1 for each benchmark ([SUS](/sus), [UXIA-Q](/uxia-q-score)) switched on |
+| Survey | 1 credit per question |
+| Card sorting | 10 credits |
+| Accessibility check | 10 credits per frame, regardless of participants |
+
+For example, a test with a live website task (SUS on) and a 6-question survey, run with 5 AI participants, costs (21 + 6) × 5 = **135 credits**. [A/B variants](/ab-variants) double the per-participant costs and add 100 credits for the comparison.
+
+If your test qualifies for a free launch, the estimate shows the credits crossed out and marked **Free**. See [Plans and credits](/account/plans-and-credits).
+
+## After launch
+
+You return to the Recruit summary, where the AI participants row shows **Processing** and then **Completed**. Click **Go to analyze** to follow results as each block finishes. You can leave the page; we'll email you when the test finishes.
+
+Once AI participants launch, the test's blocks and audience selection are locked. You can still add [test links](/test-links) or request a [human panel](/human-panel) for the same test.
+
+<CardGroup cols={2}>
+  <Card title="Test links" icon="link" href="/test-links">
+    Add your own human participants to the same test.
+  </Card>
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Read the results block by block.
+  </Card>
+</CardGroup>

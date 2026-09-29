@@ -1,108 +1,126 @@
 ---
-title: "Mission"
+title: "Task"
+description: "Write the Task field: the one concrete thing participants try to do in a Task block, with tips, warnings, and a worked example."
 ---
 
-The **Tester Mission** is a short, clear instruction describing what you want the AI tester to achieve. It's one of the most important field in the builder - it defines the goal of the session and keeps every tester's feedback focused and actionable.
+The **Task** field (formerly called *mission*) is the one concrete thing participants try to do. It's the most important field in a [Task block](/task-block): it defines the goal of the session and keeps every participant's feedback focused and actionable.
 
-The mission is always required, and the more specific and granular you make it, the more targeted the results will be toward the flow you plan to analyze.
+The task is required and takes up to 500 characters. The more specific and granular you make it, the more your results focus on the flow you want to analyze.
 
-## Write it like a single concrete task
+## Write it as a single concrete task
 
-Good missions describe one goal with a clear end state:
+A good task describes one goal with a clear end state:
 
-> _"Complete the registration flow using a social login."_
-
-> _"Upgrade your plan from free to premium using a Mastercard credit card."_
+> _"Upgrade your plan from free to premium using a credit card."_
 
 > _"Find and purchase two tickets for tonight's 9:00 PM showing."_
 
-## Tips for effective missions
+> _"Book a table for two at the first restaurant under Popular near you."_
+
+## Tips for effective tasks
 
 <Tip>
-  **Lead with the goal, not the steps.** Write "Find a plan that fits your budget and sign up" rather than "Click Pricing, select Pro, then fill in your details." Step-by-step instructions train testers to follow directions instead of revealing where your design actually fails.
+  **Start with an action verb.** Sign up, purchase, book, upload, send. Describe what to achieve, not what to evaluate: avoid verbs like "test", "explore", or "check".
 </Tip>
 
 <Tip>
-  **Don’t tell testers how to give feedback.** You don’t need to ask testers to “think out loud,” “share first impressions,” or explain what they like or find confusing. Uxia testers already provide thoughts, reactions, and feedback throughout every session.
-
-  Keep the mission focused on the task.
-
-  Instead of:
-
-  “Take a quick look at the page, share your first impression, then purchase a Macbook and tell us what you are thinking.”
-
-  Write:
-
-  “Explore the laptops catalogue and purchase a Macbook.”
+  **Name a single target.** If the screen could show several matching items, point to exactly one: "the first product under New arrivals", a named item, or a specific time slot. Avoid "any product".
 </Tip>
 
 <Tip>
-  **Avoid leading language.** Don't name UI elements ("click the blue button"), imply a correct path ("find the easy way to…"), or signal what testers should feel ("notice how simple it is…"). Neutral wording is everything.
+  **Lead with the goal, not the steps.** Write "Find a plan that fits your budget and sign up" rather than "Click Pricing, select Pro, then fill in your details." Step-by-step instructions train participants to follow directions instead of revealing where your design fails.
 </Tip>
 
 <Tip>
-  **One mission, one primary goal.** If you need to test several flows, run several tests. Compound missions produce muddled results.
+  **Don't tell participants how to give feedback.** AI participants already share thoughts, reactions, and feedback throughout every session, so phrases like "think out loud" or "share your first impression" are removed before the test runs.
+
+  Instead of: "Take a quick look at the page, share your first impression, then buy a laptop and tell us what you are thinking."
+
+  Write: "Purchase the first laptop in the laptops catalog."
+
+  To ask for opinions, add a [Survey block](/survey-block) after the task.
 </Tip>
 
-<Note>
-  Each field has a **Review** helper on the top right of the field. This button can help you get more ideas on how to frame your mission.
-</Note>
+<Tip>
+  **Avoid leading language.** Don't name UI elements ("click the blue button"), imply a correct path ("find the easy way to…"), or signal what participants should feel ("notice how simple it is…"). Neutral wording is everything.
+</Tip>
+
+## One goal per task
+
+Compound tasks produce muddled results. To test several flows, add a Task block for each one: up to 3 in one test on paid plans, and 1 on the Free plan. When a live website or Figma prototype task uses the same URL as an earlier one, you can turn on **Continue from where participants left the previous task**, so participants pick up where they stopped.
+
+## Refine it with Tips
+
+The **Task**, **Scenario**, and **Stop condition** fields each have a **Tips** button, the wand icon in the top-right corner of the field.
+
+<Steps>
+  <Step title="Write a first version">
+    Tips need at least 15 characters of text.
+  </Step>
+  <Step title="Click Tips">
+    Uxia suggests rewritten versions and explains what each one improves. Use the arrows to browse them.
+  </Step>
+  <Step title="Apply one">
+    Click **Use this version** to replace your text, or close the suggestions to keep yours. To get new tips, edit the text first.
+  </Step>
+</Steps>
+
+## Warnings under the task
+
+On live website and Figma prototype tasks, Uxia shows a warning under the **Task** field when your text mentions:
+
+- a social login, which AI participants can't complete;
+- a sign-up or registration flow, which must not require verification codes, validation emails, or 2FA;
+- think-aloud or feedback instructions (in the task or the stop condition), which are removed before the test runs.
+
+Click **Learn more** in the warning for a short explanation, or see [Flows AI participants can't complete](/unsupported-flows) for workarounds.
 
 ## Example
 
 Suppose your business objective is:
 
-> **"_Understand whether customers can successfully purchase a new mobile phone plan._"**
+> **_"Understand whether customers can successfully purchase a new mobile phone plan."_**
 
-It may be tempting to test the entire journey with one mission:
+It may be tempting to test the entire journey with one task:
 
 <Warning>
-  **Too Broad**
+  **Too broad**
 
-  "_Find a mobile plan that fits your needs, create an account, purchase the plan, and contact support if you have any questions._"
+  _"Find a mobile plan that fits your needs, purchase it, and contact support if you have any questions."_
 </Warning>
 
-Although this sounds like a realistic customer journey, it combines several different tasks into a single mission:
+Although this sounds like a realistic customer journey, it combines several tasks:
 
 - Finding the right plan
-- Creating an account
 - Completing the purchase
-- Asking for help or contacting support
+- Asking for help
 
-If testers struggle, it becomes much harder to understand which part of the experience caused the friction.
+If participants struggle, it's much harder to tell which part of the experience caused the friction.
 
-Instead, split the objective into separate tests and missions:
+Instead, split the objective into separate Task blocks in the same test:
 
-**Mission 1 (Test 1) - Find a suitable plan**
-
-<Check>
-  "_Find a mobile plan that includes around 10 GB of monthly data and add it to your cart._"
-</Check>
-
-**Mission 2 (Test 2) - Create an account**
+**Task block 1: Find a suitable plan**
 
 <Check>
-  "_Create a new account to become a customer._"
+  _"Find a mobile plan that includes around 10 GB of monthly data and add it to your cart."_
 </Check>
 
-**Mission 3 (Test 3) - Purchase the plan**
+**Task block 2: Purchase the plan**
 
 <Check>
-  "_Purchase the mobile plan you selected and add an additional product to your order._"
+  _"Purchase the mobile plan in your cart and add an additional product to your order."_
 </Check>
 
-**Mission 4 (Test 4) - Get help**
+Turn on **Continue from where participants left the previous task** here, so participants keep the plan they added to their cart.
+
+**Task block 3: Get help**
 
 <Check>
   _"Find how to contact customer support to ask a question about your subscription."_
 </Check>
 
-Each mission measures one clear user goal. This makes the results easier to interpret and helps you identify exactly where users encounter friction.
-
-<Tip>
-  You can duplicate the tests and change only the Mission to help you set them up faster.
-</Tip>
+Each task measures one clear user goal. This makes the results easier to interpret and shows exactly where participants run into friction.
 
 <Card title="Next: Scenario" icon="arrow-right" href="/test-scenario">
-  Give the mission a believable backstory so testers behave like real users.
+  Give the task a believable backstory so participants behave like real users.
 </Card>

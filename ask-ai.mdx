@@ -1,23 +1,79 @@
 ---
 title: "Ask AI"
+description: "Ask questions about your whole test in plain language and get answers linked to the insights, quotes, and screens behind them."
 ---
 
-Once your results are in, **Ask AI** lets you interrogate them in plain language instead of combing through every transcript by hand. Ask what the biggest friction points were, why testers dropped off at a particular step, or how a specific segment of your audience fared — and get an answer drawn from the session's transcripts and insights.
+Once your results are in, **Ask AI** lets you question them in plain language instead of combing through every transcript by hand. Ask what the biggest friction points were, why participants dropped off at a particular step, or how one audience fared compared to another, and get an answer drawn from your test's results.
 
-It's most useful for the follow-up questions a static report can't anticipate:
+It's most useful for the follow-up questions a results page can't anticipate, especially across blocks: "Do the survey answers back up what happened in the task?"
 
-- "Which testers mentioned pricing, and what did they say?"
+<Note>
+  Ask AI answers questions about the whole test. To talk to one AI participant about their own answers or a specific moment, use [Chat with participants](/chat-with-testers).
+</Note>
+
+## Open Ask AI
+
+<Steps>
+  <Step title="Open the Analyze phase">
+    Ask AI becomes available once the test finishes analyzing results. Until then, hovering **Chat** shows "Chat will be available once the test finishes analyzing results."
+  </Step>
+  <Step title="Switch the sidebar to Chat">
+    At the top of the sidebar, switch from **Blocks** to **Chat**. Switch back to **Blocks** at any time to return to your results.
+  </Step>
+  <Step title="Ask your question">
+    Type in the box that reads "Ask anything about this test..." and press Enter. Press Shift+Enter for a new line.
+  </Step>
+</Steps>
+
+The Chat sidebar has a **Start new chat** button and a list of your recent chats. Hover a chat and open its menu to **Rename** or **Delete** it. Deleting a chat is permanent.
+
+## Start from a suggestion
+
+A new chat offers up to four suggestions based on the blocks in your test. The first is always **Summarize this test**. The others ask for the key issues from a Task block, a summary of a Survey block's responses, or the top priorities from an Accessibility check, and **Compare the blocks** when your test has more than one. If tailored suggestions can't load, you see general ones: **Biggest issues**, **Quotes from confused testers**, and **What should we fix first?**
+
+## Follow the evidence
+
+Answers are grounded in your results, and they show their sources. An answer can include cards for:
+
+- **Insights** from a Task block
+- **Quotes** from participants
+- **Survey questions** and their answers
+- **Screens** (frames) from a prototype or website
+- **Accessibility criteria** from an Accessibility check
+
+Click a card to jump to that evidence in the results. Under an answer, **Continue** suggests follow-up questions you can send with one click.
+
+If an answer looks wrong or unhelpful, click **Report an issue** below the conversation and tell us what went wrong. If a response stops partway, you see "This conversation was interrupted." Click **Regenerate** to try again.
+
+<Tip>
+  Ask AI covers Task, Survey, and Accessibility check blocks. Card sorting results aren't included yet; read them in [Card sorting results](/card-sorting-results).
+</Tip>
+
+## Example questions
+
+- "Which participants mentioned pricing, and what did they say?"
 - "Summarize the confusion around the checkout step."
-- "What did low-tech-literacy testers struggle with most?"
+- "What did participants with low tech literacy struggle with most?"
+- "Do the survey answers back up what happened in the task?"
+- "Which accessibility failures should we fix first, and on which screens?"
+- "What should we fix before the next round of testing?"
 
-## Related
+## Availability and limits
+
+| | Free plan | Paid plans |
+|---|---|---|
+| Ask AI messages | First message on each test is free | Unlimited |
+| Chats per test | 1 | Unlimited |
+
+On the Free plan, the chat shows "Your first Ask AI message is free. Upgrade to send more." After that message, upgrade to keep chatting or start another chat. See [Plans and credits](/account/plans-and-credits).
+
+Ask AI isn't available to people viewing your results through a [shared link](/share-and-export), or on older tests that open their original results. See [What changed with Blocks](/moving-to-blocks).
 
 <CardGroup cols={2}>
-  <Card title="Results" icon="mouse-pointer-click" href="/results">
-    The insights report, scores, and recommendations for your test.
+  <Card title="Chat with participants" icon="message-circle" href="/chat-with-testers">
+    Follow up with one AI participant about their answers.
   </Card>
-
-  <Card title="Test Transcripts" icon="file-lines" href="/test-transcripts">
-    Follow each tester's think-aloud journey, step by step.
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Find your way around the Analyze phase.
   </Card>
 </CardGroup>

@@ -1,41 +1,36 @@
 ---
 title: "Stop Condition"
+description: "Define the on-screen end state that ends a live website or Figma prototype task, so every run finishes cleanly."
 ---
 
-The **Stop Condition** defines exactly when a run should end - the moment a tester knows the goal has been reached. It's required for [live sources](/source), because a tester navigating a real, open-ended website / prototype needs a clear signal for when to stop rather than wandering indefinitely.
+The **Stop condition** defines exactly when a run ends: the moment participants know the goal has been reached. It applies to live website and Figma prototype tasks, where it's required. A participant navigating a real, open-ended website or prototype needs a clear signal for when to stop, rather than wandering indefinitely.
+
+The stop condition takes up to 500 characters. A [media prototype task](/media-canvas) has no stop condition: the run ends when participants reach the final frame you set on the canvas.
 
 ## Writing a stop condition
 
 State the end state in plain language, tied to something observable on screen. For example:
 
-> "Stop once you reached the order confirmation page."
+> "Stop once you reach the order confirmation page."
 
 > "Stop when the new account has been created and you land on the dashboard."
 
 > "Stop when card information is requested."
 
-A good stop condition pairs naturally with a good [mission](/mission): the mission says what to accomplish, and the stop condition says how you'll know it's done. Anchoring it to a specific page, confirmation message, or state change keeps runs clean and comparable across testers.
+A good stop condition pairs naturally with a good [task](/mission): the task says what to accomplish, and the stop condition says how you'll know it's done. Anchoring it to a specific page, confirmation message, or state change keeps runs clean and comparable across participants.
+
+- **Describe one end state.** Avoid alternatives joined with "or", which make it unclear when the run is over.
+- **Keep it on screen.** Avoid conditions participants can't see, such as "and a confirmation email arrives".
+- **Stop before steps you don't want completed.** If participants shouldn't submit a form or place a real order, end the run at the review or payment screen. See [AI participant restrictions](/account/security/ai-participant-restrictions).
 
 <Tip>
-  If testers are stopping too early or running long, tighten the stop condition before anything else.
+  If participants stop too early or run long, tighten the stop condition before anything else.
 </Tip>
 
-<Warning>
-  **Differentiate between Mission, Scenario, Stop Condition and Audience**
+The stop condition also has a **Tips** button that suggests rewrites. See [Refine it with Tips](/mission#refine-it-with-tips). As in the task, think-aloud or feedback instructions here trigger a warning and are removed before the test runs.
 
-  While the Mission represents the task (the "What"), the Audience represents who is performing that task (the "Who"), the Stop Condition is when to stop the test (the "Until when"), and the Scenario represents the situational context (the "Why" or the circumstances in which the task is performed).
+For how the task, scenario, stop condition, and audience work together, see the example in [Scenario](/test-scenario#how-the-fields-fit-together).
 
-  For example:
-
-  **Mission**: Purchase a 1-hour travel ticket in this subway app.
-
-  **Scenario**: You have just landed in New York for the first time for a 10-day summer holiday, and you need a way to get around the city using the subway.
-
-  **Stop Condition**: Stop when you reach the credit card information screen.
-
-  **Audience**: Male or female, 25-40 years old, born in the UK, full-time employed, etc.
-</Warning>
-
-<Card title="Next: Post-test Questions" icon="arrow-right" href="/post-test-questions">
-  Ask testers what they thought once they're done.
+<Card title="Next: SUS" icon="arrow-right" href="/sus">
+  Add a standardized usability score to the task.
 </Card>

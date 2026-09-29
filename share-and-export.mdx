@@ -1,0 +1,85 @@
+---
+title: "Share and Export"
+description: "Share a read-only link to your test results, or export the blocks and sections you choose as a PDF report."
+---
+
+Get your results in front of stakeholders in two ways: share a link to the live results, or export a PDF report. Both start from the test title in the header. Click it to open the menu with **Rename**, **Export**, and **Share**.
+
+## Share a results link
+
+<Steps>
+  <Step title="Open Share">
+    Click the test title and choose **Share**. The **Share this test** dialog opens.
+  </Step>
+  <Step title="Make the test public">
+    Turn on **Make this test's URL public**. You see "Test is now public", and the dialog shows "Anyone with the link can view."
+  </Step>
+  <Step title="Copy the link">
+    Click the copy button next to the link and send it to anyone who needs to see the results.
+  </Step>
+</Steps>
+
+While the test is public, the **Share** menu item reads "This test is public". To stop sharing, turn the switch off. You see "Test is now private" and the link stops working. If you make the test public again, you get a new link.
+
+<Warning>
+  Anyone with the link can open the results, without signing in. There's no password or expiry, so turn sharing off when you no longer need the link.
+</Warning>
+
+### What people with the link see
+
+The link opens the **Analyze** phase in read-only mode. Viewers can browse every block and its result tabs, but they can't:
+
+- Use [Ask AI](/ask-ai) or [chat with participants](/chat-with-testers)
+- Filter or switch participants
+- Rename, export, or share the test, or edit anything in it
+- See the checklists in Accessibility check results, or mark criteria as passed
+
+## Export a PDF report
+
+<Note>
+  PDF export is available on the Pro and Custom plans. On other plans, **Export** asks you to upgrade.
+</Note>
+
+<Steps>
+  <Step title="Open Export">
+    Click the test title and choose **Export**. The **Export PDF Report** dialog opens: "Select which blocks and sections to include in your report."
+  </Step>
+  <Step title="Choose blocks and sections">
+    Each block has a checkbox that includes or removes all its sections. Click a block to expand it and pick individual sections. The row shows how many sections are selected.
+  </Step>
+  <Step title="Add details and branding">
+    Under **Details**, select **Audiences** to add the audiences and participant profiles. For a test with [A/B variants](/ab-variants), **Variant comparison** adds the comparison report once it's ready. Under **Branding**, check how the report will be branded.
+  </Step>
+  <Step title="Export">
+    Click **Export PDF**. The report downloads as *Test name - Results.pdf*, with a table of contents.
+  </Step>
+</Steps>
+
+### Sections by block
+
+| Block | Sections and options |
+|---|---|
+| Task | **Uxia Optimization Score™**; **Insights Report**, filtered to **All insights**, **High relevance only**, **Starred insights only**, or **Select specific insights**; **SUS & UXIA-Q** (the benchmarks you switched on); **Heatmaps** (prototype tasks); **Transcripts**, optionally with step images showing clicks and interactive areas |
+| Survey | One section per question, plus **Include graphs** and **Include individual responses** |
+| Accessibility check | **Summary**; **Screen-by-screen criteria**, filtered by status, conformance level, and review scope; **Manual Review & Cross-Screen** |
+
+All sections start selected except **Transcripts**. In **Screen-by-screen criteria**, failed and review items are included by default and passed items aren't.
+
+Blocks without exportable results are listed but can't be selected, with the message "Results are not available for export yet." This includes Card sorting blocks, which can't be exported yet, and blocks that were stopped.
+
+### Branding
+
+Reports carry Uxia branding by default. On the Custom plan, you can export with your own logo and colors instead: choose **Custom branding** or **Uxia branding** in the dialog. If your branding isn't set up yet, click **Contact us** in the dialog and we'll configure it for your organization.
+
+## Export frames
+
+To download screens with a heatmap or click map overlay, one at a time or all together as a ZIP file, click the download button in a Task block's **Analytics** tab to open **Export Frames**. See [Analytics and journeys](/analytics).
+
+<CardGroup cols={2}>
+  <Card title="Analyze results" icon="chart-bar" href="/analyze-results">
+    Find your way around the Analyze phase.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ask-ai">
+    Ask questions about your whole test in plain language.
+  </Card>
+</CardGroup>

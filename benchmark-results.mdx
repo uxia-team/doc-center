@@ -1,0 +1,63 @@
+---
+title: "Benchmark Results"
+sidebarTitle: "Benchmarks"
+description: "Read the SUS and UXIA-Q scores from a Task block, compare them with industry benchmarks, and see what drives each score."
+---
+
+Benchmarks turn a task into standardized numbers you can compare across tests and track over time. When you switch on **Measure usability with SUS** or **Measure user experience with UXIA-Q** in a [Task block](/task-block), each AI participant answers the standard questionnaire after the task. The results appear in the block's **Benchmarks** tab, one section per benchmark.
+
+The **Benchmarks** tab only appears when at least one benchmark was switched on, and it becomes available once the run is complete.
+
+## SUS
+
+The **System Usability Scale** is a widely used, 10-question questionnaire scored from 0 to 100. The section shows the score on a colored scale, with a grade badge, a marker for the industry **Average** of 68, and a short explanation of the result.
+
+| Grade | Label | Score |
+|---|---|---|
+| **F** | Poor | Below 51 |
+| **B** | Acceptable | 51 to 68 |
+| **A** | Good | 68 to 80.3 |
+| **A+** | Excellent | Above 80.3 |
+
+A score above 68 means participants found the experience easier to use than average. Use SUS to compare versions of the same flow or to track usability release after release. See [SUS](/sus) for the 10 questions.
+
+## UXIA-Q
+
+**UXIA-Q** measures the overall quality of the experience across four pillars, with two questions each:
+
+| Pillar | What it measures | Questions |
+|---|---|---|
+| **Usability** | How easy the product is to use and navigate | Easy to use, easy to navigate |
+| **Trust** | How credible the product feels, and how confident participants would be doing business with it | Credible information, confident conducting business |
+| **Appearance** | How attractive and clean the presentation is | Attractive, clean presentation |
+| **Loyalty** | How likely participants are to return and recommend the product | Likely to return, likely to recommend |
+
+The section opens with a radar chart of the four pillars on a scale of 1 to 5. Hover a point to see its explanation, or click it to select that pillar. The pillar tabs (**Usability**, **Trust**, **Appearance**, **Loyalty**) show, for the selected pillar:
+
+- A plain-language reading, such as "Quite easy to use".
+- The pillar's score out of 5.
+- **Questions asked**: each question with its average score.
+- An explanation of the reasons behind the score.
+
+Together, the pillars make up the **UXIA-Q Score**. See [UXIA-Q Score](/uxia-q-score) for the full questions.
+
+## Filter by audience
+
+When you filter results by audience, the scores are recalculated for the audiences you selected, and the section shows **Calculated for filtered audiences:** with their badges. If a score can't be recalculated for the filter, the section shows **All audiences** so you know it still covers everyone. See [Analyze your results](/analyze-results) for filters.
+
+## How benchmarks relate to the UOS
+
+Benchmarks capture what participants *say* about the experience. The [Usability Optimization Score](/results) is built from the insights, meaning what participants *ran into*. The two don't feed each other, so read them side by side. For example, a good SUS with a low UOS can mean participants liked the product overall but still hit specific problems worth fixing.
+
+## Plans and credits
+
+Benchmarks are available on paid plans. Each benchmark adds 1 credit per AI participant to the Task block's cost. On the Free plan, you can't switch benchmarks on, and benchmark scores are locked. See [Plans and credits](/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="SUS" icon="clipboard-list" href="/sus">
+    The 10 SUS questions and how Uxia applies them.
+  </Card>
+  <Card title="UXIA-Q Score" icon="gauge" href="/uxia-q-score">
+    The four pillars and eight questions behind UXIA-Q.
+  </Card>
+</CardGroup>

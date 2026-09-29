@@ -1,97 +1,95 @@
 ---
-title: "Media Canvas"
+title: "Media Prototype"
+description: "Build a clickable prototype from your own images in a media prototype task, then test it with participants."
 ---
 
-The **media canvas** is where you build a test flow from your own media instead of pointing testers at a live URL. Upload your screens or a recorded walkthrough, arrange them, draw the interactive areas and define how testers move between them - Uxia turns that into a navigable prototype the AI testers can explore.
+A **Media prototype task** lets you test designs that aren't built yet. You upload your screens as images, connect them into a flow on the canvas, and participants navigate it like a real interface.
 
 ## When to use it
 
-Reach for the media canvas when you're testing:
+Reach for a media prototype when you're testing:
 
-- Static design screens exported from Figma, Sketch, or any design tool (JPG, PNG, or PDF)
-- An image set representing a flow that isn't built yet
-- A recorded video walkthrough of a product or concept
-- Very early iterations of designs where you haven't built a prototype
+- Static screens exported from Figma, Sketch, or any design tool.
+- A set of images representing a flow that isn't built yet.
+- Early design iterations, before you have a working prototype.
 
-It's the counterpart to a [live source](/source): the same test, the same missions and testers, but you supply and wire up the screens yourself rather than having Uxia navigate a live site.
+A media prototype accepts images only. To test a Figma prototype by its link, use a [Figma prototype task](/source) instead.
 
-## Building the flow
+## Build the prototype
 
-On the canvas, you lay out your screens and connect them into the path you want testers to follow - defining which screen leads to the next so testers' actions move them through the flow the way a real interface would. Once the flow is set, the rest of the builder - [mission](/mission), [scenario](/test-scenario) and [audience](/audiences/overview) - work exactly as it does for a live test.
+<Steps>
+  <Step title="Open the canvas">
+    On the block, click **Add prototype**.
+  </Step>
+  <Step title="Select a mode">
+    In **Select mode**, choose **Interactive** or **Sequential**, then click **Continue**. See [Modes](#modes).
+  </Step>
+  <Step title="Import your designs">
+    Click **Import designs** and choose your images. Add more later with **Import Files** in the **Frames** sidebar. A prototype holds up to 35 frames.
+  </Step>
+  <Step title="Set up the flow">
+    In an interactive flow, choose the starting frame, then the final frame, and connect the frames with interaction areas. In a sequential flow, drag the frames in the **Frames** sidebar into the order participants see them.
+  </Step>
+  <Step title="Preview and save">
+    Open the **Preview** tab to click through an interactive flow as a participant would. Then click **Save**.
+  </Step>
+</Steps>
 
-## Canvas Controls
+The run ends when participants reach the final frame, so a media prototype task has no stop condition. You still write a [Task](/mission) and a [Scenario](/test-scenario), as in any Task block.
 
-### Click Mode
+## Modes
 
-- **Enabled:** Drag screens to reposition them.
-- **Disabled:** Drag to move around the canvas.
+| Mode | How it works | Choose it when |
+|---|---|---|
+| **Interactive** (Recommended) | An interactive prototype with clickable areas and different paths. | You want a realistic flow with branches. |
+| **Sequential** | A linear sequence of frames that participants view in order. | You want a simple, quick walkthrough. |
 
-### Create Interaction Areas
+## Interactive flows
 
-Draw interactive regions on a screen and connect them to the next step in your flow.
+An interactive flow needs at least 2 frames. After you import them, Uxia asks you to pick the starting frame and then the final frame, which are marked **Start** and **End**.
 
-### Import Files
+To connect frames, click the target icon in the toolbar (**Create interaction areas**), draw an area on a frame, and connect it to the frame it leads to. Then choose the action that triggers it.
 
-Upload additional screens without leaving the canvas.
-
-### Fit All Screens
-
-Automatically adjust the view to display every screen on the canvas.
-
-### Zoom In
-
-Zoom in for a closer view using the **\+** button, mouse wheel, or trackpad.
-
-### Zoom Out
-
-Zoom out to see more of your prototype at once.
-
-### Pan
-
-Move around the canvas by dragging, using your trackpad, mouse wheel, or holding the **Spacebar**.
-
-### Help
-
-Open this guide to learn about the available canvas tools.
+A to-do list on the canvas tracks what's left: a start and an end, at least one outgoing connection on every frame, and a path from every frame to the end. The **Preview** tab is available once a start frame is set.
 
 ## Actions
 
-### Click
+| Action | Use it for |
+|---|---|
+| **Click** | Buttons, links, or any element that moves to another frame when clicked. |
+| **Input** | Text fields or search bars. Simulates typing before moving to the next frame. |
+| **Scroll / Swipe** | Long pages, carousels, or swipeable content. Set the direction: up, down, left, right, or any. |
+| **Wait** | Frames that change automatically after a delay. Set the wait time in milliseconds. |
+| **Drag** | Sliders or objects the user must drag from one point to another. |
+| **Hover** | Elements that reveal extra information or change when the cursor moves over them. |
 
-Use for buttons, links, or any element that navigates to another screen after being clicked.
+## Canvas controls
 
-### Input
+- **Click mode.** When enabled, drag frames to reposition them. When disabled, drag to move around the canvas.
+- **Create interaction areas.** Draw interactive regions on a frame and connect them to the next step. Interactive mode only.
+- **Zoom.** Use the zoom menu in the toolbar (zoom in, zoom out, 50%, 100%, 200%), pinch on a trackpad, or scroll while holding Ctrl or Cmd.
+- **Fit all images in view.** Adjust the view to show every frame on the canvas.
+- **Pan.** Scroll with your trackpad or mouse wheel, drag the canvas when click mode is off, or hold the **Spacebar** and drag.
 
-Use for text fields or search bars to simulate typing before moving to the next screen.
+In the **Frames** sidebar, you can also rename, remove, and jump to frames.
 
-### Scroll & Swipe
+## Frequently asked questions
 
-Use for long pages, carousels, or swipeable content. Supports vertical and horizontal movement.
+<AccordionGroup>
+  <Accordion title="How do I create a full-screen scroll?">
+    Create an interaction area that covers the entire frame, give it the **Scroll / Swipe** action, and connect it to the next frame showing the scrolled view.
+  </Accordion>
+  <Accordion title="How do I simulate text input?">
+    Create an **Input** interaction over the empty field and connect it to a frame where the field appears filled in. For forms with several fields, you can fill them all in one step, or create separate frames for a more realistic experience.
+  </Accordion>
+  <Accordion title="Does the order of frames matter?">
+    In a sequential flow, yes: participants see the frames in the order of the **Frames** sidebar. In an interactive flow, no: the path is defined by the interaction areas and their connections, not by frame numbers.
+  </Accordion>
+  <Accordion title="Do participants see transition effects?">
+    No. The transition animations in **Preview** are only for building and reviewing the prototype. Participants experience only the interactions and the resulting frames.
+  </Accordion>
+</AccordionGroup>
 
-### Drag
-
-Use when the user must drag an element, such as a slider or draggable object.
-
-## Understanding Screens & Connections
-
-Each uploaded image is a screen. The navigation flow is defined by the interaction areas and their connections - not by the screen numbers.
-
-When opening a step from a transcript, the canvas automatically centers on the corresponding screen so you can understand what the tester was seeing.
-
-## How do I create a full-screen scroll?
-
-Create an interaction area covering the entire screen, assign it the **Scroll & Swipe** action, and connect it to the next screen showing the scrolled state.
-
-## How do I simulate text input?
-
-Create an **Input** interaction over the empty field and connect it to another screen where the field appears completed.
-
-For forms with multiple fields, you can either complete them all in one step or create separate screens for a more realistic experience.
-
-## Do testers experience transition effects?
-
-No. Transition animations shown in the Preview are only for building and reviewing the prototype. Testers only experience the interactions and resulting screens.
-
-<Card title="Next: Results" icon="arrow-right" href="/results">
-  See what every completed test gives you back.
+<Card title="Next: Task" icon="arrow-right" href="/mission">
+  Tell participants what they should try to accomplish.
 </Card>
