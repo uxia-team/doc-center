@@ -1,0 +1,93 @@
+---
+title: "Connect Uxia to Microsoft Copilot via MCP"
+sidebarTitle: "Microsoft Copilot"
+description: "Add Uxia to a Copilot Studio agent through MCP, then use it in Microsoft 365 Copilot and Teams to create tests and read results."
+---
+
+Microsoft Copilot connects to MCP servers through agents you build in [Microsoft Copilot Studio](https://copilotstudio.microsoft.com). Add Uxia as a tool on a Copilot Studio agent, and you can use that agent in Microsoft 365 Copilot and Microsoft Teams to create tests, check progress, and bring Uxia results into your conversations.
+
+## Before you begin
+
+You need:
+
+- A Uxia account. Your workspace's credits and [plan limits](/account/plans-and-credits) apply to anything Copilot creates or launches.
+- Access to Copilot Studio, with permission to create or edit an agent.
+- To use the agent in Microsoft 365 Copilot, a Microsoft 365 Copilot license.
+
+<Note>
+  Copilot Studio connects to MCP servers through Power Platform connectors. If your organization has data policies for connectors, your admin may need to allow the Uxia connection.
+</Note>
+
+## Add Uxia to your agent
+
+<Steps>
+  <Step title="Open the MCP onboarding wizard">
+    In Copilot Studio, open your agent and go to its **Tools** page. Select **Add a tool**, then **New tool**, then **Model Context Protocol**.
+  </Step>
+  <Step title="Enter the Uxia server details">
+    Fill in the required fields:
+
+    | Field | Value |
+    | --- | --- |
+    | **Server name** | `Uxia` |
+    | **Server description** | `Creates and launches Uxia usability tests, manages audiences, and reads test results, insights, and transcripts.` |
+    | **Server URL** | `https://platform.uxia.app/api/mcp-v2/mcp` |
+
+    Copilot uses the description to decide when to call Uxia, so keep it clear and specific.
+  </Step>
+  <Step title="Set up authentication">
+    Select **OAuth 2.0** as the authentication type, and **Dynamic discovery** as the OAuth 2.0 type. Uxia supports dynamic client registration, so there's nothing else to fill in. Select **Create**, then **Next**.
+  </Step>
+  <Step title="Connect and add Uxia to the agent">
+    In the **Add tool** dialog, select **Create a new connection**. A browser window opens: sign in to Uxia and click **Authorize**. Then select **Add to agent**.
+  </Step>
+  <Step title="Choose which Uxia tools the agent can use (optional)">
+    On the agent's **Tools** tab, select **Uxia** to see the tools it offers. All tools are on by default. To limit the agent — for example, to reading results only — turn off **Allow all** and turn off the tools you don't need.
+  </Step>
+</Steps>
+
+Test the agent in Copilot Studio's test chat before you share it. Ask something like *"List my five most recent Uxia tests."*
+
+## Use Uxia in Microsoft 365 Copilot and Teams
+
+<Steps>
+  <Step title="Publish your agent">
+    Publish the agent in Copilot Studio. You need to publish at least once before it's available in Teams and Microsoft 365 Copilot.
+  </Step>
+  <Step title="Add the Teams and Microsoft 365 Copilot channel">
+    Select **Channels** in the top menu, then the **Teams and Microsoft 365 Copilot** tile. Make sure **Make agent available in Microsoft 365 Copilot** is selected, then select **Add channel**.
+  </Step>
+  <Step title="Install the agent">
+    In the same panel, select **See agent in Teams**, then **Add**.
+  </Step>
+  <Step title="Start asking questions">
+    In Microsoft 365 Copilot, type **@**, choose your agent, and ask about your Uxia tests, for example:
+
+    - _"Summarize the insights from the checkout-flow test."_
+    - _"What are the biggest usability issues in my latest test?"_
+    - _"Create a Uxia test for the sign-up flow at www.example.com with 5 AI participants."_
+  </Step>
+</Steps>
+
+<Note>
+  By default, Copilot Studio uses **end user credentials**: each person who uses the agent signs in to Uxia with their own account the first time the agent calls Uxia, and only sees the workspaces they have access to in Uxia. Keep this default if you share the agent with your team.
+</Note>
+
+## What you can do with Uxia in Microsoft Copilot
+
+- Create a test for a flow and launch it after you approve the credit cost. Launching spends credits, so the agent previews the cost and asks for your approval first.
+- Check a test's progress and your remaining credits.
+- Summarize insights, benchmark scores, and survey answers.
+- Pull participant quotes and transcripts into a conversation or a Teams chat.
+- Compare feedback across tests to spot recurring patterns.
+
+## Troubleshooting
+
+- **Uxia doesn't appear as a tool.** Confirm the server URL is exactly `https://platform.uxia.app/api/mcp-v2/mcp`, and that your organization's data policies allow the connection.
+- **The Model Context Protocol option isn't available.** The MCP onboarding wizard may not be enabled in your Copilot Studio environment yet. Contact your Microsoft admin.
+- **You're asked to sign in again.** Your Uxia authorization expired or was revoked. Sign in to Uxia and click **Authorize** again.
+- **The agent in Teams doesn't reflect your latest changes.** Republish the agent in Copilot Studio, then type **Start over** in the chat to begin a new conversation.
+
+<Card title="MCP getting started" icon="plug" href="/integrations/mcp">
+  Learn about Uxia MCP access, supported clients, and general setup.
+</Card>
