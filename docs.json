@@ -51,8 +51,7 @@
         "pages": [
           "introduction",
           "quickstart",
-          "how-it-works",
-          "moving-to-blocks"
+          "how-it-works"
         ]
       },
       {
@@ -467,6 +466,11 @@
     {
       "source": "/use-cases-1",
       "destination": "/accessibility-block",
+      "permanent": true
+    },
+    {
+      "source": "/moving-to-blocks",
+      "destination": "/introduction",
       "permanent": true
     }
   ],

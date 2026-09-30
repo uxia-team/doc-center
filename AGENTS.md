@@ -35,8 +35,8 @@ The blocks:
 
 ## Terminology
 
-Use the term on the left. Never use the terms on the right, except once on the "What changed" page to explain
-the mapping.
+Use the term on the left. Never use the terms on the right. The help center documents the current product only;
+don't add pages or sections about legacy test types or older versions of Uxia.
 
 | Use | Don't use |
 |---|---|
