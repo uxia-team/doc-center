@@ -1,0 +1,55 @@
+---
+title: "Responsible AI"
+sidebarTitle: "Responsible AI"
+description: "How Uxia uses AI model providers, why your content is never used for training, and how AI participants stay in scope."
+icon: "sparkles"
+---
+
+Uxia uses large language models to power AI participants and to generate transcripts, insights, and scores. This page explains how we use them responsibly.
+
+## No training on your content
+
+Uxia doesn't use your content to train, fine-tune, or improve any AI model. Our Data Processing Addendum also requires that our subprocessors don't:
+
+- Use your data to train, fine-tune, or improve any public, shared, or foundation model.
+- Include your data in datasets used for cross-customer learning or benchmarking.
+- Use embeddings, metadata, logs, or other data derived from your content to train or evaluate models.
+
+This commitment applies by default. You don't need to opt out, and it survives the end of your agreement.
+
+## AI model providers
+
+Uxia sends test content to AI model providers through their commercial APIs. Our providers are listed on the [Subprocessors](/trust-center/subprocessors) page. Their commercial API terms exclude your data from model training.
+
+- **Limited provider retention.** Providers may keep API data for a short, limited period solely to monitor for abuse. It's then deleted and never used for training.
+- **Zero Data Retention.** For enterprise customers on an annual contract, we can enable Zero Data Retention with our AI model providers so that this abuse-monitoring retention doesn't apply.
+- **Notice of changes.** We give you at least 30 days' notice before engaging a new AI model provider, and you can object on reasonable grounds.
+
+## No cross-customer use
+
+Your content is never exposed to other customers and never influences results generated for them. No learning persists across workspaces.
+
+## AI participants stay in scope
+
+AI participants are synthetic personas, not real people. They operate within the boundaries you set:
+
+- **You control the target.** AI participants act only on the URLs or prototypes you configure and don't browse beyond them.
+- **You bound each session.** The task and stop condition you set define how far a session goes, so you can stop before any irreversible action.
+- **Inputs are synthetic.** The values AI participants enter are generated, so no real person's data is submitted.
+- **Every action is visible.** Each session produces a step-by-step transcript of what the AI participant saw and did.
+
+For practical guidance, see [AI participant restrictions](/account/security/ai-participant-restrictions).
+
+## Recommended setup
+
+- Run tests against staging or UAT environments populated with synthetic data.
+- Use dedicated test accounts with only synthetic data for flows that require a login.
+- Upload synthetic documents, not real ones, for upload steps.
+
+## When something goes wrong
+
+We maintain a dedicated incident response playbook for AI participants. If an AI participant behaves outside its configured scope, or real personal data appears in a test output, we stop the affected sessions, contain the issue, delete affected content where needed, and let you know. See [Incident response](/trust-center/incident-response).
+
+<Card title="Next: Subprocessors" icon="network" href="/trust-center/subprocessors">
+  The third parties that help us deliver the service.
+</Card>

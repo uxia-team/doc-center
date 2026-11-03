@@ -1,0 +1,49 @@
+---
+title: "Incident Response and Business Continuity"
+sidebarTitle: "Incident Response"
+description: "How Uxia detects, responds to, and communicates security incidents, keeps the service available, and how to report a vulnerability."
+icon: "siren"
+---
+
+## Incident response
+
+Uxia maintains a documented incident management process that every confirmed incident follows:
+
+<Steps>
+  <Step title="Detect and assess">
+    Security events come from automated monitoring and alerting, AI participant transcripts, and reports from staff, customers, and researchers. Each event is analyzed and classified by severity.
+  </Step>
+  <Step title="Contain">
+    We limit the impact first. For incidents involving AI participants, this means halting affected sessions and revoking session credentials.
+  </Step>
+  <Step title="Eradicate and recover">
+    We remove the root cause and restore affected systems to a known-good state.
+  </Step>
+  <Step title="Learn">
+    Every incident gets a post-incident review. Findings lead to corrective actions and, where needed, new controls.
+  </Step>
+</Steps>
+
+## Customer notification
+
+- **Personal data breaches.** We notify affected customers without undue delay and no later than 24 hours after becoming aware of a breach.
+- **Service incidents.** Material incidents affecting the service are communicated by email or in-product notice, with updates until they're resolved.
+- **Scheduled maintenance.** We give at least 48 hours' notice of planned maintenance expected to cause downtime.
+
+## Business continuity and availability
+
+- **Resilient managed services.** The platform runs on managed cloud services with built-in high availability. The database is deployed as a replica set with automated backups, and file storage is redundant within each region.
+- **Backups.** Backups are encrypted and retained on a rolling basis of no more than 90 days.
+- **Reversible releases.** Any release can be rolled back to the previous known-good version.
+- **Tested plans.** A business continuity plan and disaster recovery runbook are in place and exercised at least once a year.
+- **Service levels.** A Service Level Agreement with availability and support commitments is available to contracted customers. See [Security documentation](/trust-center/documents).
+
+## Report a vulnerability
+
+If you believe you've found a security vulnerability in Uxia, email [hello@uxia.app](mailto:hello@uxia.app) with "Security" in the subject line. Include the steps to reproduce it and any supporting details.
+
+While investigating, please don't access or change other users' data, degrade the service, or share the issue publicly before we've had a chance to fix it.
+
+<Card title="Back to the Trust Center" icon="shield-check" href="/trust-center/overview">
+  Overview of Uxia's security, compliance, and privacy program.
+</Card>
