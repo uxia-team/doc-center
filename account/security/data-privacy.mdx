@@ -29,7 +29,7 @@ Recordings give you the qualitative depth to complement the AI-synthesized findi
 If the product or area you're testing sits behind a login screen, you can provide credentials so that AI participants can access protected flows. When you do:
 
 - Credentials are encrypted in transit and at rest, and are decrypted only when an AI participant's session needs to use them
-- They're included in the instructions sent to the AI model that operates the participant, only so it can type them into the matching fields, and participants are instructed never to repeat them in their comments
+- They're never included in the instructions sent to the AI model. Instead, they're injected securely into the browser session and entered directly into the matching fields, so the AI model never sees them
 - Password fields stay hidden in transcripts and screenshots, but other typed values, such as a username or email, can be visible
 - They stay scoped to the test they were added to and are visible only inside your workspace, never to other organizations
 - You remain in control of those credentials and can update or rotate them after each test run if your security policy requires it
