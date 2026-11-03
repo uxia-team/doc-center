@@ -1,0 +1,124 @@
+---
+title: "Security Controls"
+sidebarTitle: "Security Controls"
+description: "The infrastructure, organizational, product, procedural, and data controls that protect the Uxia platform."
+icon: "shield"
+---
+
+The controls below are part of Uxia's Information Security Management System and are aligned with ISO/IEC 27001:2022. They're grouped by area to make them easy to match to your own vendor review.
+
+## Infrastructure security
+
+<AccordionGroup>
+  <Accordion title="Cloud-native infrastructure" icon="cloud">
+    The platform runs entirely on established cloud providers. Nothing is self-hosted on premises. We assess each provider's security before onboarding and review it regularly.
+  </Accordion>
+  <Accordion title="Network segmentation and firewalls" icon="network">
+    Cloud networks are segmented and firewalled on a default-deny basis. Web application firewalls with managed rule sets and rate limiting protect internet-facing traffic. Database connections are restricted to approved sources. Firewall rules are reviewed at least every six months.
+  </Accordion>
+  <Accordion title="Separate environments" icon="layers">
+    Production and staging environments are logically separated. Every change is validated in staging before it reaches production.
+  </Accordion>
+  <Accordion title="Encryption in transit and at rest" icon="lock">
+    All traffic between you, the application, backend services, and data stores uses TLS 1.2 or higher. Stored data is encrypted with AES-256 or equivalent. Encryption keys are held in managed key-management services, separate from the data they protect.
+  </Accordion>
+  <Accordion title="Secrets management" icon="key-round">
+    Secrets and API keys are kept in a dedicated secrets manager and never committed to source code.
+  </Accordion>
+  <Accordion title="Logging and threat detection" icon="activity">
+    Activity in our cloud environments is logged centrally, with automated alerts for suspicious or unauthorized access attempts and continuous threat detection. Secrets, passwords, and customer data payloads are never written to logs.
+  </Accordion>
+</AccordionGroup>
+
+## Organizational security
+
+<AccordionGroup>
+  <Accordion title="ISMS scope and governance" icon="landmark">
+    The ISMS scope is formally defined and covers every system that supports the Uxia platform. Security roles and responsibilities are assigned, and a Security Committee oversees the program.
+  </Accordion>
+  <Accordion title="Policies and risk management" icon="file-check">
+    Documented security and privacy policies are approved by management and reviewed at least once a year. Information security risks are assessed periodically, and treatment plans are tracked.
+  </Accordion>
+  <Accordion title="Confidentiality and training" icon="graduation-cap">
+    Everyone at Uxia signs a confidentiality agreement. Security awareness and data protection training is mandatory and completed within the first month of joining.
+  </Accordion>
+  <Accordion title="Onboarding and offboarding" icon="user-check">
+    Access is provisioned through a documented onboarding process. When someone leaves, their access is revoked on the same day.
+  </Accordion>
+  <Accordion title="Endpoint security" icon="laptop">
+    Company laptops require full-disk encryption, automatic screen lock, and up-to-date operating systems. Device security posture is monitored centrally.
+  </Accordion>
+  <Accordion title="Vendor management" icon="briefcase">
+    Vendors are assessed before engagement and bound by data protection and confidentiality terms. Vendors that process customer data are reviewed at least once a year. See [Subprocessors](/trust-center/subprocessors).
+  </Accordion>
+  <Accordion title="Code of ethics and whistleblowing" icon="scale">
+    A code of ethics sets expectations for everyone at Uxia, and a confidential whistleblowing channel is available for reporting concerns.
+  </Accordion>
+</AccordionGroup>
+
+## Product security
+
+<AccordionGroup>
+  <Accordion title="Secure development lifecycle" icon="git-pull-request">
+    Every change goes through a pull request and peer review before merging. Infrastructure is defined as code and versioned. Releases are reversible, so a faulty change can be rolled back quickly.
+  </Accordion>
+  <Accordion title="Vulnerability management" icon="scan-search">
+    Dependencies and container images are scanned for known vulnerabilities in the deployment pipeline, and our environments are scanned regularly. Findings are triaged and fixed according to severity.
+  </Accordion>
+  <Accordion title="Input validation and data integrity" icon="check-check">
+    Every request is validated against a defined schema on the server, so validation can't be bypassed by calling the API directly. Asynchronous jobs are reconciled to confirm that no work is lost.
+  </Accordion>
+  <Accordion title="Tenant isolation" icon="boxes">
+    Each workspace is logically isolated. Your tests, results, and files are only accessible to you and the teammates you invite.
+  </Accordion>
+  <Accordion title="Customer access controls" icon="users-round">
+    Workspace roles control who can manage people and settings. On the Custom plan, you can enforce SSO with your identity provider, provision users with SCIM, and stream audit logs to your SIEM. See [SSO](/account/security/sso).
+  </Accordion>
+  <Accordion title="Test credentials and files" icon="file-lock">
+    Credentials and files you provide for gated flows are encrypted in transit and at rest, scoped to the test they belong to, and visible only inside your workspace.
+  </Accordion>
+</AccordionGroup>
+
+## Internal security procedures
+
+<AccordionGroup>
+  <Accordion title="Access management" icon="key-square">
+    Access follows least privilege and need-to-know. Multi-factor authentication is mandatory on every system, privileged accounts are individually named, and all access rights are reviewed every quarter.
+  </Accordion>
+  <Accordion title="Change management" icon="git-branch">
+    Changes to production systems are planned, reviewed, tested in staging, and logged.
+  </Accordion>
+  <Accordion title="Incident management" icon="siren">
+    A documented incident management process covers detection, containment, eradication, recovery, and lessons learned, with a dedicated playbook for incidents involving AI participants. See [Incident response](/trust-center/incident-response).
+  </Accordion>
+  <Accordion title="Business continuity and disaster recovery" icon="life-buoy">
+    A business continuity plan and a database recovery runbook are in place. Recovery procedures are exercised at least once a year.
+  </Accordion>
+  <Accordion title="Internal audit and corrective action" icon="clipboard-check">
+    An annual internal audit program checks ISMS conformity. Nonconformities are recorded, root causes are analyzed, and corrective actions are tracked to closure.
+  </Accordion>
+  <Accordion title="Legal and regulatory requirements" icon="gavel">
+    Legal, regulatory, and contractual requirements relevant to information security are identified, documented, and kept up to date.
+  </Accordion>
+</AccordionGroup>
+
+## Data and privacy
+
+<AccordionGroup>
+  <Accordion title="Information classification and handling" icon="tags">
+    Information is classified by sensitivity and handled according to its classification.
+  </Accordion>
+  <Accordion title="Retention and secure deletion" icon="trash-2">
+    Retention periods are defined for each category of data. At the end of a retention period, data is securely deleted or irreversibly anonymized. See [Data protection](/trust-center/data-protection).
+  </Accordion>
+  <Accordion title="Privacy by design" icon="fingerprint">
+    We keep a record of processing activities, document the legal basis for each, and run data protection impact assessments where processing could pose a high risk.
+  </Accordion>
+  <Accordion title="Data subject rights" icon="user-round-cog">
+    A documented procedure handles requests to access, correct, delete, or export personal data.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Next: Data protection" icon="database" href="/trust-center/data-protection">
+  Data residency, retention, deletion, and your rights.
+</Card>
