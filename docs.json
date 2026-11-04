@@ -185,6 +185,7 @@
               "integrations/overview",
               "integrations/figma",
               "integrations/enterprise-auth",
+              "integrations/webhooks",
               "integrations/jira",
               "integrations/notion",
               "integrations/linear",

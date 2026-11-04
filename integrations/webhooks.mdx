@@ -1,0 +1,166 @@
+---
+title: "Webhooks: Send Test Events to Your Systems"
+sidebarTitle: "Webhooks"
+description: "Receive signed HTTPS notifications when a test completes or a participant response is recorded."
+---
+
+Webhooks notify your systems when something happens in Uxia, so you don't have to check for changes.
+
+Webhooks are available on the Custom plan. Organization owners set them up. [Contact us](mailto:hello@uxia.app) to turn them on for your organization.
+
+## Events
+
+| Event | Sent when |
+|---|---|
+| `test.completed` | A run with AI participants finishes successfully |
+| `test.response.recorded` | An AI participant or human participant finishes a test |
+
+Tests that use test links stay open for as long as you collect responses, so they send `test.response.recorded` but not `test.completed`.
+
+<Note>
+Responses from AI participants arrive together when the run finishes. Responses from human participants arrive within about a minute of the participant finishing.
+</Note>
+
+## Add an endpoint
+
+<Steps>
+  <Step title="Open your organization settings">
+    Go to your organization page and open the **Webhooks** tab.
+  </Step>
+  <Step title="Add your URL">
+    Select **Add endpoint**, enter an HTTPS URL, and choose the events and workspaces you want. Leave every workspace unchecked to receive events from all of them, including new ones.
+  </Step>
+  <Step title="Copy the signing secret">
+    Store it somewhere safe. You only see it once.
+  </Step>
+  <Step title="Send a test event">
+    Select **Send test event**. Your endpoint receives a `webhook.test` event within about a minute. Confirm that its signature verifies.
+  </Step>
+</Steps>
+
+Endpoint URLs must use HTTPS on port 443 or 8443. Uxia blocks private and internal addresses and doesn't follow redirects. An organization can have up to five endpoints.
+
+## Source IP address
+
+Requests come from one fixed IP address, so you can allow it through your firewall:
+
+```
+3.209.79.132
+```
+
+Allowing this address is optional and doesn't replace signature verification.
+
+## What Uxia sends
+
+Each request is a JSON `POST`. Payloads contain identifiers and status. They don't contain participant names, email addresses, answers, or recordings.
+
+```json
+{
+  "id": "evt_6729f1c2a4b8e90012ab34ce",
+  "type": "test.response.recorded",
+  "version": 1,
+  "timestamp": "2026-11-13T14:02:11.000Z",
+  "organizationId": "66f0a1b2c3d4e5f6a7b8c9d0",
+  "workspaceId": "66f1a1b2c3d4e5f6a7b8c9d0",
+  "data": {
+    "testId": "6729f1c2a4b8e90012ab3400",
+    "responseId": "a3f1c9e2",
+    "participantType": "human",
+    "participantNumber": 12,
+    "testLinkId": "6729f1c2a4b8e90012ab3401",
+    "runId": null,
+    "outcome": "completed",
+    "finishedAt": "2026-11-13T14:02:11.000Z"
+  }
+}
+```
+
+```json
+{
+  "id": "evt_6729f1c2a4b8e90012ab34cd",
+  "type": "test.completed",
+  "version": 1,
+  "timestamp": "2026-11-13T14:02:11.000Z",
+  "organizationId": "66f0a1b2c3d4e5f6a7b8c9d0",
+  "workspaceId": "66f1a1b2c3d4e5f6a7b8c9d0",
+  "data": {
+    "testId": "6729f1c2a4b8e90012ab3400",
+    "testType": "unmoderated",
+    "runId": "6729f1c2a4b8e90012ab3402",
+    "outcome": "completed",
+    "startedAt": "2026-11-13T13:20:04.000Z",
+    "finishedAt": "2026-11-13T14:02:11.000Z",
+    "aiParticipantCount": 20,
+    "variantTestIds": []
+  }
+}
+```
+
+`outcome` is `completed`, `partial`, or `abandoned`, and reflects the response when the event was sent. A `test.response.recorded` event means the response is saved. Its recording and analysis may still be processing.
+
+A human participant can be marked `abandoned` after going quiet, then come back and finish. You then get a second event with the same `responseId`, a different `webhook-id`, and the new `outcome`. Treat the most recent event for a `responseId` as current.
+
+New fields can appear in any payload, so ignore fields you don't recognize. Breaking changes get a new `version`.
+
+## Verify the signature
+
+Uxia signs every request using the [Standard Webhooks](https://www.standardwebhooks.com/) specification, so you can use one of its libraries or verify the signature yourself. Always verify before you trust a request.
+
+| Header | Meaning |
+|---|---|
+| `webhook-id` | Unique event ID. It stays the same across retries. |
+| `webhook-timestamp` | When this attempt was sent, in Unix seconds |
+| `webhook-signature` | One or more space-separated signatures, each as `v1,<base64>` |
+
+```js
+import crypto from 'node:crypto'
+
+function verify(rawBody, headers, secret) {
+  const id = headers['webhook-id']
+  const timestamp = headers['webhook-timestamp']
+  if (Math.abs(Date.now() / 1000 - Number(timestamp)) > 300) return false
+
+  const key = Buffer.from(secret.replace('whsec_', ''), 'base64')
+  const expected = crypto.createHmac('sha256', key)
+    .update(`${id}.${timestamp}.${rawBody}`)
+    .digest()
+
+  return headers['webhook-signature'].split(' ').some((entry) => {
+    const received = Buffer.from(entry.split(',')[1] ?? '', 'base64')
+    return received.length === expected.length && crypto.timingSafeEqual(received, expected)
+  })
+}
+```
+
+Verify against the raw request body, before any JSON parsing.
+
+<Warning>
+Anyone with a test link can start a session, so treat a `test.response.recorded` event as a signal. Check the response in Uxia before acting on it.
+</Warning>
+
+## Respond and retry
+
+Return any `2xx` status within 10 seconds. Do slower work after you respond.
+
+If Uxia gets anything else, it retries up to seven more times over about 45 hours: after 1 minute, 5 minutes, 30 minutes, 2 hours, 6 hours, 12 hours, and 24 hours. After that, the delivery is marked as failed, and you can resend it.
+
+The same event can arrive more than once, and events can arrive out of order. Use `webhook-id` to ignore duplicates.
+
+## Check deliveries
+
+Select **View deliveries** on an endpoint to see its deliveries from the last 30 days, including each attempt's status code and duration. Select **Resend** to send a delivery again. It keeps the same `webhook-id`, so your deduplication still works.
+
+## Rotate the signing secret
+
+Select **Rotate secret**, then **Rotate** to get a new secret. Uxia signs with both the old and new secrets for 24 hours, so you can switch without missing events. If a secret has leaked, select **Rotate and expire now** instead.
+
+Creating, changing, or deleting an endpoint and rotating its secret are recorded in your [audit logs](/account/security/sso).
+
+<CardGroup cols={2}>
+  <Card title="Uxia MCP" icon="plug" href="/integrations/mcp">
+    Read test results from your AI tools.
+  </Card>
+  <Card title="Enterprise Auth" icon="shield" href="/integrations/enterprise-auth">
+    Set up SSO, provisioning, and audit logs.
+  </Card>
+</CardGroup>
