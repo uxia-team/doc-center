@@ -231,6 +231,8 @@
             "group": "Security",
             "pages": [
               "trust-center/controls",
+              "trust-center/identity-access",
+              "trust-center/authenticated-testing",
               "trust-center/incident-response"
             ]
           },
@@ -239,7 +241,8 @@
             "pages": [
               "trust-center/data-protection",
               "trust-center/ai",
-              "trust-center/subprocessors"
+              "trust-center/subprocessors",
+              "trust-center/human-participants"
             ]
           }
         ]
