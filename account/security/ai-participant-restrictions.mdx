@@ -39,7 +39,7 @@ When you want participants to look but not commit changes:
 
 ## Scope credentials and files
 
-- **Credentials** for gated flows are scoped to the test they're added to and encrypted at rest. The AI participant receives them only to type them into the matching fields. Use dedicated test accounts, and rotate or remove them after a run. See [Tester Credentials](/tester-credentials).
+- **Credentials** for gated flows are scoped to the test they're added to and encrypted at rest. They're never sent to the AI model: they're injected securely into the browser session and entered directly into the matching fields. Use dedicated test accounts, and rotate or remove them after a run. See [Tester Credentials](/tester-credentials).
 - **Files** you provide for upload steps are scoped to the test. The AI participant sees only each file's name and type; the browser attaches the file itself. Use synthetic documents rather than real ones. See [Tester Files](/tester-files).
 
 ## Full visibility into every action
