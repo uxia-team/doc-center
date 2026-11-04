@@ -1,0 +1,40 @@
+---
+title: "Identity and Access"
+sidebarTitle: "Identity and Access"
+description: "SAML and OIDC single sign-on, SCIM provisioning, and how user access to Uxia is granted, monitored, and removed."
+icon: "key-round"
+---
+
+You can manage access to Uxia from your own identity provider. SSO, SCIM, JIT account creation, audit logs, and log streaming are available on the Custom plan.
+
+## Single sign-on
+
+Your team can sign in through your identity provider using SAML or OIDC. Supported providers include Okta, Microsoft Entra ID, and Google Workspace.
+
+You can also verify your organization's domains and control whether invitations from external domains are allowed.
+
+## Provisioning access
+
+| Method | How it works |
+|---|---|
+| **SCIM** | Users you add or update in your identity provider are created or updated in Uxia automatically. |
+| **JIT account creation** | New users from a verified domain get an account the first time they sign in through SSO. |
+| **Invitations** | Workspace admins invite people directly and assign their role. |
+
+Workspace roles control who can manage people and settings. With your identity provider, you can also map roles and control access to workspaces from one place.
+
+## Removing access
+
+- **With SCIM.** When you remove a user in your identity provider, their Uxia account is deactivated and their active sessions end.
+- **With SSO only.** When you remove a user in your identity provider, they can no longer sign in through it. A workspace admin should also remove them from Uxia to end their access right away.
+- **Without SSO.** A workspace admin removes the user from the workspace, and they lose access to its tests and results.
+
+## Monitoring access
+
+Audit logs capture key actions taken inside your organization. Log streaming forwards those events to your SIEM or observability platform, so your security team can monitor them with the rest of your infrastructure.
+
+For setup details, see [SSO and user provisioning](/account/security/sso).
+
+<Card title="Next: Testing behind a login" icon="log-in" href="/trust-center/authenticated-testing">
+  The two ways to test authenticated flows, and how to recognize AI participants.
+</Card>

@@ -1,0 +1,45 @@
+---
+title: "Testing Behind a Login"
+sidebarTitle: "Testing Behind a Login"
+description: "The two ways to test products behind credentials with Uxia, and how to allowlist and recognize AI participants."
+icon: "log-in"
+---
+
+There are two ways to test a product that sits behind a login. You choose one for each test.
+
+## Credentials
+
+You can enter credentials in the purpose-specific **Credentials** section of a Task block.
+
+- Credentials are securely stored and encrypted at rest.
+- They're decrypted only in the instances where they're necessary.
+- We advise you not to enter sensitive or potentially dangerous credentials, and to rotate them immediately after the test is completed.
+
+See [Tester credentials](/tester-credentials) for setup.
+
+## Interactive login session
+
+You can set up the test state yourself through the Uxia interface, and sign in as you normally would. We capture the logged-in session, so we don't store any credentials.
+
+All AI participants in the test use that logged-in session. It's encrypted while it's stored and deleted automatically one hour after you save it.
+
+See [Interactive login session](/tester-credentials#interactive-login-session) for setup.
+
+## Allowlist and recognize AI participants
+
+We can share our IP addresses with you, so your team can allowlist them and make it easier for AI participants to get past logins and bot protection.
+
+All navigational requests from AI participants carry the same headers, so they can be easily recognized and detected in your logs and security tools.
+
+To get the IP addresses and header details, email [hello@uxia.app](mailto:hello@uxia.app).
+
+## Recommended setup
+
+- Test in a staging or UAT environment with synthetic data.
+- Use dedicated test accounts with only the permissions the task needs.
+
+For more guidance, see [Responsible AI](/trust-center/ai#recommended-setup).
+
+<Card title="Next: Data protection" icon="database" href="/trust-center/data-protection">
+  Data residency, retention, deletion, and your rights.
+</Card>

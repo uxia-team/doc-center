@@ -72,10 +72,10 @@ The controls below are part of Uxia's Information Security Management System and
     Each workspace is logically isolated. Your tests, results, and files are only accessible to you and the teammates you invite.
   </Accordion>
   <Accordion title="Customer access controls" icon="users-round">
-    Workspace roles control who can manage people and settings. On the Custom plan, you can enforce SSO with your identity provider, provision users with SCIM, and stream audit logs to your SIEM. See [SSO](/account/security/sso).
+    Workspace roles control who can manage people and settings. On the Custom plan, you can enforce SSO with your identity provider, provision users with SCIM, and stream audit logs to your SIEM. See [Identity and access](/trust-center/identity-access).
   </Accordion>
   <Accordion title="Test credentials and files" icon="file-lock">
-    Credentials and files you provide for gated flows are encrypted in transit and at rest, scoped to the test they belong to, and visible only inside your workspace. Credentials are never sent to AI models: they're injected securely into the browser session.
+    Credentials and files you provide for gated flows are encrypted in transit and at rest, scoped to the test they belong to, and visible only inside your workspace. Credentials are never sent to AI models: they're injected securely into the browser session. You can also test with an interactive login session, so no credentials are stored. See [Testing behind a login](/trust-center/authenticated-testing).
   </Accordion>
 </AccordionGroup>
 
@@ -119,6 +119,6 @@ The controls below are part of Uxia's Information Security Management System and
   </Accordion>
 </AccordionGroup>
 
-<Card title="Next: Data protection" icon="database" href="/trust-center/data-protection">
-  Data residency, retention, deletion, and your rights.
+<Card title="Next: Identity and access" icon="key-round" href="/trust-center/identity-access">
+  SSO, SCIM provisioning, and how access is granted and removed.
 </Card>
