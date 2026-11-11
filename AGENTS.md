@@ -14,8 +14,7 @@ Uxia has **two test types**:
 - **Unmoderated test.** Participants complete the test on their own. You build it from **blocks**, then run it
   with **AI participants**, **human participants**, or both.
 - **AI-moderated test.** An AI moderator runs a live voice interview with real participants from a research
-  guide, asking follow-ups as it goes. The release is expected in October 2026. Only the stub page is written
-  so far.
+  guide, asking follow-ups as it goes. Only the overview page is written so far.
 
 An unmoderated test moves through three phases, shown in the test header as **Build › Recruit › Analyze**:
 
@@ -69,8 +68,6 @@ The UI currently misspells the block as "Accesibility check". Write **Accessibil
 - End each page with a `<Card title="Next: …">`, or a small `<CardGroup cols={2}>` of related pages.
 - Link between pages with root-relative paths without the extension, e.g. `[Task](/mission)`.
 - Say which plans a limit applies to. Use "Free plan" and "paid plans" (Starter, Pro, Custom).
-- Features with an October 2026 release (A/B variants, AI-moderated tests) open with
-  `<Note>… expected to be released in October 2026 …</Note>`.
 
 ## Content boundaries
 
