@@ -1,0 +1,66 @@
+---
+title: "Résultats de l'enquête"
+sidebarTitle: "Résultats"
+description: "Consultez les résultats d'un bloc d'enquête : graphiques et thèmes récurrents par question, et réponses et raisonnement de chaque participant."
+---
+
+Lorsque vous ouvrez un bloc d'enquête dans la phase **Analyze**, ses résultats sont répartis en deux onglets :
+
+- **Responses** montre comment *l'ensemble* des participants a répondu à chaque question.
+- **Participants** montre comment *un* participant a répondu à toutes les questions.
+
+## Réponses
+
+Chaque question dispose de sa propre carte. La partie gauche affiche le numéro de la question avec une étiquette de type, le texte de la question et le contexte éventuellement ajouté. La partie droite affiche les résultats, visualisés selon le [type de question](/fr/question-types) :
+
+| Type de question | Mode d'affichage |
+|---|---|
+| Choix multiple | Une barre par option, avec les images des options si vous en avez ajouté |
+| Échelle de notation | Une barre par note, avec vos libellés bas et haut |
+| Classement | Les éléments par rang moyen, du plus apprécié au moins apprécié |
+| Répartition de budget | Un graphique en gaufre montrant la répartition moyenne des 100 points |
+| Question ouverte | Des thèmes récurrents, chacun avec son nombre de mentions et de courts exemples |
+
+Les réponses ouvertes sont regroupées en thèmes : des dizaines de réponses en texte libre deviennent ainsi une poignée d'idées récurrentes au lieu d'un mur de texte.
+
+### Passer d'un chiffre aux personnes qui se cachent derrière
+
+Chaque graphique est un point d'entrée, pas une impasse. Cliquez sur une barre, une note ou un thème pour ouvrir un panneau latéral qui n'affiche que les participants ayant donné cette réponse. Il indique combien de participants l'ont donnée, un résumé de ce qu'ils ont dit et l'explication de chaque participant.
+
+Pour lire toutes les réponses à une question, cliquez sur **See all N responses** sous la question. Cliquez sur **View summary** pour revenir au graphique. Sur les grands écrans, l'index **Questions** situé à droite vous permet de passer d'une question à l'autre.
+
+### Remarques que vous pouvez voir
+
+- **"Only testers who completed the mission answered this question."** L'option **Only ask testers who complete the flow** était activée pour cette question dans le [bloc d'enquête](/fr/survey-block) : les participants IA qui n'ont pas terminé la tâche ne l'ont donc pas reçue.
+- **"Clusters were calculated from the whole participant group."** Vous avez filtré par audience. Les thèmes restent calculés à partir de l'ensemble des participants, et les thèmes sans réponse des audiences filtrées sont grisés.
+- **No response.** Le participant n'a pas répondu, par exemple parce qu'il a abandonné avant de terminer la tâche.
+
+## Participants
+
+L'onglet **Participants** vous permet de lire l'enquête d'un participant du début à la fin : c'est ce qui se rapproche le plus d'un entretien en tête-à-tête où vous parcourez vos questions une à une.
+
+- Choisissez un participant dans la liste des participants, ou utilisez **Search participant** pour retrouver quelqu'un par son nom. Pour chaque personne, le nombre de questions auxquelles elle a répondu est indiqué, par exemple **4 of 5 answered**.
+- Chaque réponse apparaît dans l'ordre : le choix, la note, le classement ou la répartition, suivi de l'explication du participant avec ses propres mots.
+- Cliquez sur **View profile** pour découvrir qui est le participant : ses données démographiques, son parcours et ses traits de caractère. Lorsqu'une réponse vous surprend, le profil est le premier endroit à consulter.
+- Cliquez sur **Chat** pour poser des questions de suivi au participant. Consultez [Discuter avec les participants](/fr/chat-with-testers).
+
+<Tip>
+  Pour que les profils reflètent les personnes pour lesquelles vous concevez votre produit, utilisez l'[enrichissement d'audience](/fr/audiences/enrichment) afin d'ancrer vos participants IA dans vos propres recherches utilisateurs.
+</Tip>
+
+## Forfait Free
+
+Avec le forfait Free, les réponses aux enquêtes sont verrouillées : les graphiques et les réponses des participants sont masqués derrière le message "Upgrade your plan to unlock charts and participant answers." Passez à un forfait payant pour les consulter. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+## Participants humains
+
+Les réponses des participants humains à l'enquête apparaissent dans les mêmes onglets **Responses** et **Participants**, avec un bouton **Play recording** qui renvoie au moment où le participant a répondu. Le chat n'est pas disponible pour les participants humains. Consultez [Résultats des participants humains](/fr/human-insights).
+
+<CardGroup cols={2}>
+  <Card title="Discuter avec les participants" icon="message-circle" href="/fr/chat-with-testers">
+    Approfondissez les réponses de n'importe quel participant IA.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/fr/ask-ai">
+    Posez des questions sur l'ensemble de votre test en langage courant.
+  </Card>
+</CardGroup>

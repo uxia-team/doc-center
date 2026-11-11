@@ -1,0 +1,92 @@
+---
+title: "Résultats des participants humains"
+description: "Consultez dans Analyze les sessions des participants humains : indicateurs de réussite, enregistrements, transcriptions, notes et réponses aux enquêtes."
+---
+
+Lorsque des personnes passent votre test via un [lien de test](/fr/test-links) ou un [panel humain](/fr/human-panel), leurs sessions apparaissent dans la phase [Analyze](/fr/analyze-results). Chaque session comprend un enregistrement d'écran, la voix du participant, une transcription automatique et ses réponses : vous pouvez ainsi voir le comportement réel à côté de ce qu'ont fait vos participants IA.
+
+## Passer aux résultats humains
+
+En haut d'Analyze, ouvrez le menu du type de participants et choisissez **Human participants**. Choisissez **AI participants** pour revenir en arrière. Les deux vues sont distinctes : il n'existe pas de vue fusionnée, basculez donc de l'une à l'autre pour comparer.
+
+En mode humain, le filtre à côté du menu liste vos liens de test avec le nombre de participants de chacun. Sélectionnez les liens voulus et cliquez sur **Filter**. La sélection s'applique à tous les blocs.
+
+Si vous n'avez encore créé aucun lien, un bloc affiche **No links created yet** avec un bouton **Create link**.
+
+Les blocs de vérification de l'accessibilité n'ont pas de résultats humains, car les participants ne les passent pas.
+
+## Blocs de tâche
+
+L'onglet **Sessions** s'ouvre sur une rangée d'indicateurs :
+
+| Indicateur | Ce qu'il montre |
+|---|---|
+| **Total Testers** | Les participants pris en compte dans les indicateurs. Les enregistrements ayant échoué sont exclus. |
+| **Success Rate** | La part des sessions qui ont terminé le parcours. |
+| **Drop-off** | La part des sessions qui ont abandonné le parcours. |
+| **Misclick Rate** | La part des clics en dehors des zones interactives valides. Non affiché pour les sites web en production. |
+| **Avg. Duration** | La durée moyenne des sessions réussies. |
+
+En dessous, un tableau liste chaque session avec les colonnes **Clips**, **Participant**, **Status**, **Task duration**, **Responded At** et **Actions**.
+
+| Statut | Signification |
+|---|---|
+| **Completed** | Le participant a terminé le parcours et répondu à toutes les questions. |
+| **Abandoned** | Le participant a quitté le parcours avant de le terminer. |
+| **Missing questions** | Le participant a terminé, mais n'a pas répondu à certaines questions. |
+| **Processing** | L'enregistrement ou la transcription est encore en préparation. |
+| **Recording failed** | La session n'a pas pu être capturée. |
+| **Transcript failed** | L'enregistrement existe, mais la transcription n'a pas pu être générée. |
+| **In progress** | Le participant est encore en train de passer le test. |
+
+Sous **Actions**, **Download clip** télécharge l'enregistrement **Screen view** ou **Camera view**, et **Delete recording** supprime définitivement la session et ses données.
+
+Cliquez sur une session pour ouvrir le lecteur. L'onglet **Transcripts** suit la vidéo ; cliquez sur une ligne pour accéder à ce moment. Sélectionnez du texte pour le surligner et cliquez sur **Add note** pour l'enregistrer. Vos notes apparaissent dans l'onglet **Notes**.
+
+Pour les tâches sur prototype multimédia, un onglet **Frames** affiche chaque écran avec les clics des participants sous forme de carte de chaleur, ainsi que le taux de clics erronés et le temps moyen passé sur cet écran.
+
+## Blocs d'enquête
+
+Les résultats d'enquête comportent deux onglets, comme pour les participants IA. **Responses** regroupe les réponses par question, et **Participants** affiche les réponses de chaque personne. À côté de chaque réponse, **Play recording** ouvre la session au moment où le participant a répondu. Consultez [Résultats d'enquête](/fr/survey-results).
+
+## Blocs de tri de cartes
+
+Les tris de cartes humains utilisent les mêmes vues de résultats que les participants IA. Consultez [Résultats du tri de cartes](/fr/card-sorting-results).
+
+## Limites selon le forfait
+
+| Forfait | Sessions humaines dans les résultats |
+|---|---|
+| Free | Non disponible |
+| Starter | Non incluses |
+| Pro | Les 10 premières sessions par test |
+| Custom | Illimitées |
+
+Avec Pro, les sessions au-delà des 10 premières sont floutées avec la mention **Upgrade to unlock**.
+
+## Pourquoi combiner participants IA et humains
+
+<Tip>
+  Les participants IA vous donnent des résultats en quelques minutes et vous permettent de mener autant de cycles que nécessaire. Les participants humains apportent la profondeur émotionnelle, le vécu et les comportements imprévisibles que seules de vraies personnes peuvent avoir. Utilisez les participants IA pour itérer vite et cerner les problèmes. Utilisez ensuite les sessions humaines pour confirmer les constats, faire émerger les cas limites et renforcer la confiance des parties prenantes.
+</Tip>
+
+## Questions fréquentes
+
+<AccordionGroup>
+  <Accordion title="Dois-je d'abord lancer des participants IA ?">
+    Non. Vous pouvez recruter des participants humains sur n'importe quel test depuis la phase [Recruit](/fr/recruit-participants), avec ou sans participants IA.
+  </Accordion>
+  <Accordion title="Les participants peuvent-ils utiliser n'importe quel appareil ?">
+    Les participants ont besoin d'un navigateur sur ordinateur qui prend en charge l'enregistrement d'écran. La capture de l'écran et du microphone se fait dans le navigateur, sans aucun téléchargement. La webcam n'est requise que lorsque le lien de test l'exige.
+  </Accordion>
+  <Accordion title="Comment les transcriptions sont-elles générées ?">
+    Automatiquement, à partir de l'audio de chaque session. Une session affiche **Processing** tant que son enregistrement et sa transcription ne sont pas prêts.
+  </Accordion>
+  <Accordion title="Combien de participants humains dois-je inclure ?">
+    Cela dépend de vos objectifs. Pour les tests d'utilisabilité, cinq à huit participants suffisent généralement à faire ressortir les problèmes les plus exploitables. Pour comparer des segments, recrutez davantage de participants et utilisez un lien de test par segment afin de pouvoir filtrer par segment.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Suivant : Ask AI" icon="arrow-right" href="/fr/ask-ai">
+  Posez des questions sur vos résultats en langage naturel.
+</Card>

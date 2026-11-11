@@ -1,0 +1,64 @@
+---
+title: "Flux que les participants IA ne peuvent pas réaliser"
+sidebarTitle: "Flux non pris en charge"
+description: "Connexions sociales, codes de vérification et protection anti-bot bloquent les participants IA. Voyez les alertes d'Uxia et comment les contourner."
+---
+
+Les participants IA naviguent comme de vrais utilisateurs, mais quelques étapes dépendent d'éléments auxquels ils n'ont pas accès : un compte tiers, une boîte de réception ou un téléphone, ou un site qui bloque les navigateurs automatisés. Anticipez ces étapes avant de lancer le test ; sinon, les participants restent bloqués et vos résultats montrent des frictions qui ne viennent pas de votre design.
+
+Sur les tâches de site web en production et de prototype Figma, Uxia vous avertit sous le champ **Task** lorsque votre texte mentionne l'un de ces flux. Cliquez sur **Learn more** dans une alerte pour ouvrir un court guide, *Flows Not Supported by AI Participants*. Cette page traite les mêmes cas plus en détail.
+
+## Connexions via les réseaux sociaux
+
+> Warning: social login detected in this task. AI participants will fail on social authentication unless it is a Figma prototype flow. Use email/password authentication.
+
+Les flux de connexion tiers, comme "Se connecter avec Google" ou l'authentification unique (SSO), ouvrent des fenêtres contextuelles et des redirections externes que les participants IA ne peuvent pas réaliser de bout en bout de manière fiable.
+
+**Comment le contourner :**
+
+- Créez un compte de test qui se connecte avec un e-mail et un mot de passe, et ajoutez-le avec **+ Add credentials**. Consultez [Identifiants des participants](/fr/tester-credentials).
+- Rédigez la tâche autour de cette connexion, par exemple : "Connectez-vous avec votre e-mail et votre mot de passe, puis…".
+
+Dans une tâche de prototype Figma, un bouton de connexion via un réseau social n'est qu'un écran de prototype parmi d'autres : les participants peuvent donc cliquer dessus et continuer.
+
+## Codes de vérification
+
+> Warning: sign-up/register flow detected in this task. Make sure the flow does not require verification codes, validation emails, or 2FA because AI participants cannot complete those steps.
+
+Les codes envoyés par e-mail ou par SMS, les codes 2FA et les mots de passe à usage unique dépendent d'une boîte de réception ou d'un appareil auxquels les participants n'ont pas accès. Il en va de même pour les CAPTCHA. L'alerte apparaît dès que la tâche mentionne une inscription, un enregistrement ou la création d'un compte. Si votre flux ne comporte aucune étape de vérification, vous pouvez l'ignorer.
+
+**Comment le contourner :**
+
+- Testez sur un environnement de recette où la vérification par e-mail, la 2FA et le CAPTCHA sont désactivés pour les comptes de test.
+- Faites commencer la tâche après l'inscription : donnez aux participants un compte de test existant avec des [identifiants](/fr/tester-credentials) et testez la suite.
+- Terminez la session avant l'étape de vérification avec une [condition d'arrêt](/fr/stop-condition), comme "Arrêtez-vous lorsqu'un code de vérification vous est demandé."
+
+## Instructions de réflexion à voix haute et de retours
+
+> Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
+
+Les participants IA partagent déjà leurs pensées et leurs réactions tout au long de chaque session. Les instructions comme "pensez à voix haute", "donnez votre première impression" ou "dites-nous ce que vous en pensez", dans la tâche ou la condition d'arrêt, sont supprimées avant l'exécution du test.
+
+**Comment le contourner :**
+
+- Supprimez l'instruction et gardez la [tâche](/fr/mission) centrée sur l'action.
+- Pour recueillir des opinions, ajoutez un [bloc d'enquête](/fr/survey-block) après la tâche.
+
+## Protection anti-bot et accès refusé
+
+Certains sites web bloquent les navigateurs automatisés avec des mesures anti-bot ou une page d'accès refusé.
+
+- **Lorsque vous ajoutez le lien.** Si Uxia détecte une protection anti-bot, la fenêtre de lien affiche *"This live page may not be navigable by testers."* et vous ne pouvez pas enregistrer le lien. Cliquez sur **Contact us** : nous fournirons à votre équipe informatique les instructions pour mettre les participants IA d'Uxia sur liste blanche. Consultez [Liens de site web en production et Figma](/fr/source#protection-anti-bot).
+- **Pendant la session.** Si un site bloque un participant IA en cours de session, ce participant est marqué **Drop-off | Access denied** dans la transcription.
+- **Si tous les participants IA sont bloqués**, le test ne peut pas être réalisé et 80 % de ses crédits sont remboursés à votre organisation. Une bannière dans les résultats confirme le remboursement.
+
+Pour que les participants IA restent limités à votre cible et à l'écart des données de production, consultez [Restrictions des participants IA](/fr/account/security/ai-participant-restrictions).
+
+<CardGroup cols={2}>
+  <Card title="Identifiants des participants" icon="key" href="/fr/tester-credentials">
+    Donnez aux participants IA des identifiants e-mail et mot de passe pour les flux protégés.
+  </Card>
+  <Card title="Restrictions des participants IA" icon="shield-check" href="/fr/account/security/ai-participant-restrictions">
+    Contrôlez ce que les participants IA peuvent atteindre et faire.
+  </Card>
+</CardGroup>

@@ -1,0 +1,40 @@
+---
+title: "Identité et accès"
+sidebarTitle: "Identité et accès"
+description: "Authentification unique SAML et OIDC, provisionnement SCIM, et attribution, surveillance et retrait des accès des utilisateurs à Uxia."
+icon: "key-round"
+---
+
+Vous pouvez gérer l'accès à Uxia depuis votre propre fournisseur d'identité. Le SSO, le SCIM, la création de compte JIT, les journaux d'audit et le streaming des journaux sont disponibles avec le forfait Custom.
+
+## Authentification unique
+
+Votre équipe peut se connecter via votre fournisseur d'identité avec SAML ou OIDC. Les fournisseurs pris en charge incluent Okta, Microsoft Entra ID et Google Workspace.
+
+Vous pouvez aussi vérifier les domaines de votre organisation et contrôler si les invitations provenant de domaines externes sont autorisées.
+
+## Provisionnement des accès
+
+| Méthode | Fonctionnement |
+|---|---|
+| **SCIM** | Les utilisateurs que vous ajoutez ou modifiez dans votre fournisseur d'identité sont créés ou mis à jour automatiquement dans Uxia. |
+| **Création de compte JIT** | Les nouveaux utilisateurs d'un domaine vérifié obtiennent un compte lors de leur première connexion via SSO. |
+| **Invitations** | Les administrateurs de l'espace de travail invitent directement des personnes et leur attribuent un rôle. |
+
+Les rôles de l'espace de travail déterminent qui peut gérer les personnes et les paramètres. Avec votre fournisseur d'identité, vous pouvez aussi mapper les rôles et contrôler l'accès aux espaces de travail depuis un point unique.
+
+## Retrait des accès
+
+- **Avec SCIM.** Lorsque vous supprimez un utilisateur dans votre fournisseur d'identité, son compte Uxia est désactivé et ses sessions actives prennent fin.
+- **Avec le SSO uniquement.** Lorsque vous supprimez un utilisateur dans votre fournisseur d'identité, il ne peut plus se connecter par ce biais. Un administrateur de l'espace de travail devrait également le retirer d'Uxia pour mettre fin immédiatement à son accès.
+- **Sans SSO.** Un administrateur de l'espace de travail retire l'utilisateur de l'espace de travail, et celui-ci perd l'accès aux tests et aux résultats de cet espace.
+
+## Surveillance des accès
+
+Les journaux d'audit enregistrent les actions clés effectuées au sein de votre organisation. Le streaming des journaux transmet ces événements à votre SIEM ou votre plateforme d'observabilité, afin que votre équipe de sécurité puisse les surveiller avec le reste de votre infrastructure.
+
+Pour les détails de configuration, consultez [SSO et provisionnement des utilisateurs](/fr/account/security/sso).
+
+<Card title="Suivant : Tester derrière une connexion" icon="log-in" href="/fr/trust-center/authenticated-testing">
+  Les deux façons de tester des parcours authentifiés, et comment reconnaître les participants IA.
+</Card>

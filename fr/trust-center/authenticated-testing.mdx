@@ -1,0 +1,45 @@
+---
+title: "Tester derrière une connexion"
+sidebarTitle: "Tester derrière une connexion"
+description: "Les deux façons de tester avec Uxia des produits protégés par des identifiants, et comment autoriser et reconnaître les participants IA."
+icon: "log-in"
+---
+
+Il existe deux façons de tester un produit protégé par une connexion. Vous en choisissez une pour chaque test.
+
+## Identifiants
+
+Vous pouvez saisir des identifiants dans la section **Credentials** dédiée d'un bloc de tâche.
+
+- Les identifiants sont stockés de manière sécurisée et chiffrés au repos.
+- Ils ne sont déchiffrés que lorsqu'ils sont nécessaires.
+- Nous vous conseillons de ne pas saisir d'identifiants sensibles ou potentiellement dangereux, et de les renouveler immédiatement après la fin du test.
+
+Consultez [Identifiants des participants](/fr/tester-credentials) pour la configuration.
+
+## Session de connexion interactive
+
+Vous pouvez préparer vous-même l'état du test depuis l'interface Uxia et vous connecter comme vous le feriez normalement. Nous capturons la session connectée : nous ne stockons donc aucun identifiant.
+
+Tous les participants IA du test utilisent cette session connectée. Elle est chiffrée pendant son stockage et supprimée automatiquement une heure après son enregistrement.
+
+Consultez [Session de connexion interactive](/fr/tester-credentials#session-de-connexion-interactive) pour la configuration.
+
+## Autoriser et reconnaître les participants IA
+
+Nous pouvons vous communiquer nos adresses IP afin que votre équipe les ajoute à une liste d'autorisation et que les participants IA franchissent plus facilement les écrans de connexion et les protections anti-bots.
+
+Toutes les requêtes de navigation des participants IA portent les mêmes en-têtes, ce qui permet de les reconnaître et de les détecter facilement dans vos journaux et vos outils de sécurité.
+
+Pour obtenir les adresses IP et le détail des en-têtes, écrivez à [hello@uxia.app](mailto:hello@uxia.app).
+
+## Configuration recommandée
+
+- Testez dans un environnement de préproduction (staging) ou de recette (UAT) avec des données synthétiques.
+- Utilisez des comptes de test dédiés disposant uniquement des autorisations nécessaires à la tâche.
+
+Pour plus de conseils, consultez [IA responsable](/fr/trust-center/ai#configuration-recommandée).
+
+<Card title="Suivant : Protection des données" icon="database" href="/fr/trust-center/data-protection">
+  Localisation, conservation et suppression des données, et vos droits.
+</Card>

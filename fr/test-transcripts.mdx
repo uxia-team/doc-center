@@ -1,0 +1,73 @@
+---
+title: "Transcriptions"
+description: "Suivez chaque participant IA dans un bloc de tâche, étape par étape : ce qu'il a fait, ce qu'il a dit, pourquoi, et ce qu'il a vu."
+---
+
+L'onglet **Transcripts** d'un [bloc de tâche](/fr/task-block) rejoue la session de chaque participant IA, étape par étape. Là où les [Insights](/fr/results) vous disent *ce qui* n'a pas fonctionné sur l'ensemble du panel, une transcription montre *pourquoi* : chaque action, la réflexion à voix haute du participant et l'écran qu'il avait sous les yeux.
+
+Utilisez-le lorsque vous voulez confronter un insight à la session brute, comprendre un abandon ou citer un participant avec ses propres mots. Depuis l'onglet **Evidence** d'un insight, cliquer sur une citation vous amène directement à ce moment-là.
+
+## Choisir un participant
+
+Utilisez le sélecteur de participant en haut à gauche pour passer d'une session à l'autre. Avec plusieurs audiences, les participants sont regroupés par audience. Les participants qui n'ont pas terminé une tâche obligatoire précédente sont listés sous **Didn't reach this task** et exclus des statistiques de cette tâche.
+
+Sous le sélecteur :
+
+| Élément | Ce qu'il affiche |
+|---|---|
+| Badge de résultat | La façon dont la session s'est terminée |
+| **Steps** | Le nombre d'étapes enregistrées pour ce participant |
+| **Misclicks** | La part des interactions qui n'ont pas atteint une zone interactive valide. Non disponible sur les tâches de site web en production. |
+
+Le badge de résultat est l'un des suivants :
+
+| Badge | Signification |
+|---|---|
+| **Success** | Le participant a terminé la tâche. |
+| **Drop-off** | Le participant n'a pas terminé la tâche. |
+| **Drop-off \| Access denied** | Le site a refusé l'accès ou a bloqué le participant avec une protection anti-bot. |
+| **Stalled** | Le participant n'a pas pu progresser, et la session a été arrêtée. |
+| **Max steps** | Le participant a atteint le nombre maximal d'étapes autorisé pour une session. Contactez-nous si vous avez besoin d'une limite plus élevée. |
+
+Les prototypes multimédias configurés en **Sequential flow** n'affichent ni le badge, ni les étapes, ni les clics erronés.
+
+À droite, **Search** trouve des mots dans toute la transcription (appuyez sur Entrée pour passer d'une occurrence à l'autre), et **View profile** ouvre le profil démographique et psychologique du participant.
+
+## Lire une session
+
+La colonne de gauche contient la transcription ; la colonne de droite affiche les captures d'écran. Elles restent synchronisées : faites défiler les étapes et la capture d'écran suit, ou parcourez les captures d'écran et la transcription suit. Faites glisser le séparateur pour redimensionner les colonnes.
+
+- **Carte de la tâche.** La tâche donnée aux participants, telle que vous l'avez rédigée dans la phase **Build**.
+- **Cartes d'étape.** Les étapes consécutives sur le même écran partagent une carte, intitulée **Step 3** ou **Steps 3-5**. Chaque action indique ce que le participant a fait (un clic, une saisie, un défilement) et son commentaire à la première personne. Cliquez sur **Show more details** pour voir l'**Input value** qu'il a saisie, son **Reasoning** et son **Expectation** quant à ce qui allait se passer ensuite.
+- **Carte de synthèse.** La réflexion finale du participant sur l'ensemble du parcours. **Show more details** ouvre son **Issues analysis**.
+
+Les signaux d'échec apparaissent sur les cartes d'étape : une icône d'action mise en évidence signifie **This action did not advance the tester**, et la bannière **Too many actions failed - skipped to next frame** apparaît lorsqu'aucune des actions sur un écran n'a fait progresser le participant. Sur les sites web en production, un badge **Access denied** marque l'étape où le participant a été bloqué.
+
+Utilisez le menu d'affichage des frames au-dessus des captures d'écran pour passer de **Clickmap** (où le participant a cliqué) à **Heatmap** et à **Image** (la capture d'écran brute).
+
+## Discuter avec un participant à une étape
+
+Sur la carte d'étape active, cliquez sur **Chat** pour interroger le participant sur ce moment précis, par exemple pourquoi il a ignoré un bouton ou ce qu'il s'attendait à trouver. Il répond avec ce qu'il savait à cette étape. Consultez [Discuter avec les participants](/fr/chat-with-testers).
+
+## Pendant l'exécution du test
+
+Les transcriptions arrivent en direct pendant l'exécution du bloc, et c'est le seul onglet disponible jusqu'à la fin de la session. Si vous remontez alors que de nouvelles étapes arrivent, cliquez sur **New transcripts (N)** pour accéder à la plus récente.
+
+Si tous les participants IA ont été bloqués par un site web en production, une bannière explique que le test n'a pas pu être réalisé et que 80 % des crédits ont été remboursés.
+
+## Limites du forfait Free
+
+Sur le forfait Free, vous voyez les actions et les commentaires de chaque participant, mais le **Reasoning** et l'**Expectation** de chaque étape sont verrouillés. Passez à un forfait payant pour les débloquer. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+<Note>
+  Cet onglet affiche les participants IA. Pour regarder les enregistrements des participants humains sur la même tâche, passez le type de participant sur **Human participants**. Consultez [Résultats des participants humains](/fr/human-insights).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Suivant : Analyses et parcours" icon="arrow-right" href="/fr/analytics">
+    Consultez le taux de réussite, les clics erronés, les cartes de chaleur et les chemins de tous les participants.
+  </Card>
+  <Card title="Discuter avec les participants" icon="message-circle" href="/fr/chat-with-testers">
+    Posez des questions de suivi après le test.
+  </Card>
+</CardGroup>

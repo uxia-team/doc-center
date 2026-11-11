@@ -1,0 +1,99 @@
+---
+title: "Bloc de tâche"
+sidebarTitle: "Vue d'ensemble"
+description: "Faites réaliser une tâche aux participants, qui pensent à voix haute, sur votre site web en production, votre prototype Figma ou un prototype en images."
+---
+
+Un **bloc de tâche** demande aux participants de réaliser une tâche concrète dans votre produit ou votre prototype. Les participants IA pensent à voix haute pendant qu'ils naviguent : vous voyez où ils hésitent, se perdent ou abandonnent, et pourquoi. Les participants humains sont enregistrés pendant qu'ils réalisent la même tâche.
+
+## Choisir un type de tâche
+
+Dans **Add a block**, la section **Task** propose trois blocs. Ils diffèrent par ce que les participants parcourent :
+
+| Bloc | À utiliser pour tester | Source | Condition d'arrêt | Identifiants et fichiers |
+|---|---|---|---|---|
+| **Live website task** | Un site web en production, une application web, une version de préproduction ou un prototype codé | Une URL publique | Obligatoire | Disponibles |
+| **Figma prototype task** | Un prototype Figma | Un lien de prototype Figma (`figma.com/proto/…`) | Obligatoire | Disponibles |
+| **Media prototype task** | Des maquettes qui ne sont pas encore développées | Des images que vous importez et reliez sur un canevas | Aucune : la tâche se termine au frame final | Non disponibles |
+
+Une tâche de site web en production fonctionne avec presque tout ce qui possède une URL publique :
+
+- Sites web et applications web publics, versions de préproduction, et produits accessibles après connexion.
+- Prototypes codés et applications générées, par exemple avec Lovable, Base44, Cursor, Google Stitch ou Claude.
+
+Vous pouvez aussi connecter Uxia à vos agents de code avec le [MCP Uxia](/fr/integrations/mcp).
+
+Pour définir la source, consultez [Liens de site web et Figma](/fr/source) ou [Prototype multimédia](/fr/media-canvas).
+
+## Ce que contient un bloc de tâche
+
+Sous la source, chaque bloc comporte les champs qui définissent la session :
+
+- **Task** : la seule chose que les participants essaient de faire. Consultez [Tâche](/fr/mission).
+- **Scenario** : la situation et la motivation qui l'expliquent. Consultez [Scénario](/fr/test-scenario).
+- **Stop condition** : l'état final visible à l'écran qui met fin à la session. Tâches de site web en production et de prototype Figma uniquement. Consultez [Condition d'arrêt](/fr/stop-condition).
+
+Chaque champ est obligatoire et accepte jusqu'à 500 caractères. Chacun dispose aussi d'un bouton **Tips** qui propose des reformulations.
+
+## Tester plusieurs flux dans un même test
+
+Gardez un seul objectif par tâche et ajoutez un bloc de tâche pour chaque flux à tester. Un test peut contenir jusqu'à 3 blocs de tâche sur les forfaits payants, et 1 sur le forfait Free. Les participants passent les blocs dans l'ordre.
+
+- Lorsque vous ajoutez un autre bloc du même type, Uxia préremplit sa source (l'URL, ou les frames et le flux) à partir du bloc précédent.
+- Lorsqu'une tâche de site web en production ou de prototype Figma utilise la même URL qu'une tâche précédente, vous pouvez activer **Continue from where participants left the previous task**. Les participants reprennent alors là où ils s'étaient arrêtés au lieu de recommencer. Cette option est désactivée par défaut.
+
+## Benchmarks
+
+En bas de chaque bloc de tâche, deux interrupteurs ajoutent un benchmark : des affirmations standardisées que les participants évaluent après la tâche, combinées en un score.
+
+- **Measure usability with SUS**. Consultez [SUS](/fr/sus).
+- **Measure user experience with UXIA-Q**. Consultez [Score UXIA-Q](/fr/uxia-q-score).
+
+Les deux sont désactivés par défaut. Les benchmarks ne sont pas disponibles sur le forfait Free, où les interrupteurs affichent un badge **Upgrade**.
+
+## Crédits et limites
+
+Un bloc de tâche coûte **20 crédits par participant IA**, plus 1 crédit par participant IA pour chaque benchmark activé. Par exemple, 5 participants IA sur une tâche avec SUS et UXIA-Q coûtent 5 × 22 = 110 crédits. Les participants humains invités avec des liens de test ne coûtent aucun crédit.
+
+| | Forfait Free | Forfaits payants |
+|---|---|---|
+| Blocs de tâche par test | 1 | 3 |
+| Benchmarks (SUS, UXIA-Q) | Non disponibles | Disponibles |
+
+Si tous les participants IA sont bloqués par un site web en production, 80 % des crédits sont remboursés. Consultez [Flux que les participants IA ne peuvent pas réaliser](/fr/unsupported-flows).
+
+## Identifiants et fichiers
+
+Si votre flux commence derrière une connexion ou demande aux participants d'importer quelque chose, utilisez **+ Add credentials** et **+ Add files** sous l'URL d'une tâche de site web en production ou de prototype Figma.
+
+<CardGroup cols={2}>
+  <Card title="Identifiants des participants" icon="key" href="/fr/tester-credentials">
+    Donnez aux participants IA des identifiants de connexion et des valeurs de champs pour les flux protégés.
+  </Card>
+  <Card title="Fichiers des participants" icon="file-up" href="/fr/tester-files">
+    Donnez aux participants IA les fichiers qu'un flux leur demande d'importer.
+  </Card>
+</CardGroup>
+
+## Ce que vous obtenez
+
+Dans la phase **Analyze**, chaque bloc de tâche a ses propres onglets : **Insights**, **Transcripts**, **Analytics**, **Journeys**, et **Benchmarks** lorsqu'un benchmark est activé.
+
+<CardGroup cols={2}>
+  <Card title="Insights et UOS" icon="lightbulb" href="/fr/results">
+    Des insights d'utilisabilité classés, le score UOS et des suggestions de correction.
+  </Card>
+  <Card title="Transcriptions" icon="scroll-text" href="/fr/test-transcripts">
+    Des sessions étape par étape, avec les écrans et les commentaires à voix haute.
+  </Card>
+  <Card title="Analyses et parcours" icon="chart-line" href="/fr/analytics">
+    Comment les participants ont progressé dans le flux et où sont apparues les frictions.
+  </Card>
+  <Card title="Résultats des benchmarks" icon="gauge" href="/fr/benchmark-results">
+    Les scores SUS et UXIA-Q de la tâche.
+  </Card>
+</CardGroup>
+
+<Card title="Suivant : Liens de site web et Figma" icon="arrow-right" href="/fr/source">
+  Ajoutez l'URL que les participants parcourent et laissez Uxia la vérifier.
+</Card>

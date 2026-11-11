@@ -1,0 +1,51 @@
+---
+title: "SSO et provisionnement des utilisateurs dans Uxia"
+sidebarTitle: "SSO"
+description: "Configurez le SSO, le SCIM, la création de comptes JIT, les domaines vérifiés, les journaux d'audit et le streaming des journaux de votre organisation."
+---
+
+Pour les organisations qui ont des exigences plus strictes en matière de gestion des identités et des accès, l'onglet **SSO and provisioning** de la page Organization permet de configurer les fonctionnalités d'identité d'entreprise.
+
+Selon votre forfait et les fonctionnalités activées, cet onglet peut vous permettre de :
+
+- Ajouter et gérer les domaines vérifiés de l'organisation.
+- Voir si un domaine est configuré, en attente, manquant, en échec ou vérifié.
+- Ouvrir le panneau d'administration du SSO.
+- Ouvrir le panneau de provisionnement pour configurer le SCIM.
+- Activer ou désactiver l'option **automatic account creation (JIT)**.
+- Autoriser ou non les invitations provenant de domaines externes.
+- Ouvrir la configuration des journaux d'audit.
+- Ouvrir la configuration du streaming des journaux.
+
+## Authentification unique (SSO)
+
+Le SSO permet à votre équipe de se connecter à Uxia avec le fournisseur d'identité existant de votre entreprise, comme Okta, Microsoft Entra ID (anciennement Azure AD) ou Google Workspace. Concrètement :
+
+- Les membres de l'équipe s'authentifient via un système que votre équipe informatique gère déjà et en lequel elle a confiance.
+- Vous gardez un contrôle centralisé sur les personnes qui ont accès à Uxia.
+- Lorsque vous retirez un membre de l'équipe de votre fournisseur d'identité, il ne peut plus se connecter par ce biais. Avec le SCIM, son compte Uxia est également désactivé et ses sessions actives sont fermées.
+
+## Provisionnement SCIM
+
+Le SCIM (System for Cross-domain Identity Management) automatise le provisionnement et le déprovisionnement des utilisateurs dans votre organisation. Lorsque vous ajoutez ou supprimez un utilisateur dans votre fournisseur d'identité, la modification est répercutée automatiquement dans Uxia, sans gestion manuelle des licences utilisateur.
+
+## Création de comptes juste-à-temps (JIT)
+
+Lorsque le JIT est activé, les nouveaux utilisateurs d'un domaine vérifié peuvent se connecter via le SSO et leur compte Uxia est créé automatiquement à la première connexion, sans invitation manuelle.
+
+## Journaux d'audit et streaming des journaux
+
+Les journaux d'audit enregistrent les actions clés effectuées dans votre organisation. Le streaming des journaux transmet ces événements à votre SIEM ou à votre plateforme d'observabilité, pour que votre équipe de sécurité puisse suivre l'activité avec le reste de votre infrastructure.
+
+<Note>
+  Le SSO, le SCIM, le JIT, les journaux d'audit et le streaming des journaux sont disponibles avec le forfait Custom. Si le SSO ou le provisionnement n'est pas activé pour votre organisation, la page vous invite à contacter Uxia. Écrivez à [hello@uxia.app](mailto:hello@uxia.app) pour configurer l'authentification d'entreprise.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Enterprise Auth" icon="key-round" href="/fr/integrations/enterprise-auth">
+    Fournisseurs d'identité, provisionnement et gestion des accès pour Uxia.
+  </Card>
+  <Card title="Personnes et invitations" icon="user-plus" href="/fr/account/people">
+    Gérez les utilisateurs, les rôles et l'accès aux espaces de travail.
+  </Card>
+</CardGroup>

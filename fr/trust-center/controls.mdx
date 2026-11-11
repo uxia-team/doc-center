@@ -1,0 +1,124 @@
+---
+title: "Mesures de sécurité"
+sidebarTitle: "Mesures de sécurité"
+description: "Les mesures d'infrastructure, organisationnelles, produit, procédurales et relatives aux données qui protègent la plateforme Uxia."
+icon: "shield"
+---
+
+Les mesures ci-dessous font partie du système de management de la sécurité de l'information d'Uxia et sont alignées sur la norme ISO/IEC 27001:2022. Elles sont regroupées par domaine pour vous aider à les faire correspondre à votre propre évaluation fournisseur.
+
+## Sécurité de l'infrastructure
+
+<AccordionGroup>
+  <Accordion title="Infrastructure cloud native" icon="cloud">
+    La plateforme fonctionne entièrement chez des fournisseurs cloud reconnus. Rien n'est hébergé sur site. Nous évaluons la sécurité de chaque fournisseur avant de le retenir et la réexaminons régulièrement.
+  </Accordion>
+  <Accordion title="Segmentation réseau et pare-feu" icon="network">
+    Les réseaux cloud sont segmentés et protégés par des pare-feu selon le principe du refus par défaut. Des pare-feu applicatifs web dotés de jeux de règles gérés et d'une limitation du débit protègent le trafic exposé à Internet. Les connexions aux bases de données sont limitées à des sources approuvées. Les règles de pare-feu sont revues au moins tous les six mois.
+  </Accordion>
+  <Accordion title="Environnements séparés" icon="layers">
+    Les environnements de production et de préproduction (staging) sont séparés logiquement. Chaque modification est validée en préproduction avant d'atteindre la production.
+  </Accordion>
+  <Accordion title="Chiffrement en transit et au repos" icon="lock">
+    Tout le trafic entre vous, l'application, les services backend et les stockages de données utilise TLS 1.2 ou supérieur. Les données stockées sont chiffrées en AES-256 ou équivalent. Les clés de chiffrement sont conservées dans des services gérés de gestion des clés, séparément des données qu'elles protègent.
+  </Accordion>
+  <Accordion title="Gestion des secrets" icon="key-round">
+    Les secrets et les clés d'API sont conservés dans un gestionnaire de secrets dédié et ne sont jamais intégrés au code source.
+  </Accordion>
+  <Accordion title="Journalisation et détection des menaces" icon="activity">
+    L'activité dans nos environnements cloud est journalisée de manière centralisée, avec des alertes automatiques en cas de tentative d'accès suspecte ou non autorisée et une détection continue des menaces. Les secrets, les mots de passe et le contenu des données clients ne sont jamais écrits dans les journaux.
+  </Accordion>
+</AccordionGroup>
+
+## Sécurité organisationnelle
+
+<AccordionGroup>
+  <Accordion title="Périmètre et gouvernance du SMSI" icon="landmark">
+    Le périmètre du SMSI est formellement défini et couvre tous les systèmes qui soutiennent la plateforme Uxia. Les rôles et responsabilités en matière de sécurité sont attribués, et un comité de sécurité supervise le programme.
+  </Accordion>
+  <Accordion title="Politiques et gestion des risques" icon="file-check">
+    Des politiques de sécurité et de confidentialité documentées sont approuvées par la direction et revues au moins une fois par an. Les risques liés à la sécurité de l'information sont évalués périodiquement, et les plans de traitement sont suivis.
+  </Accordion>
+  <Accordion title="Confidentialité et formation" icon="graduation-cap">
+    Toutes les personnes travaillant chez Uxia signent un accord de confidentialité. La sensibilisation à la sécurité et la formation à la protection des données sont obligatoires et suivies dans le premier mois après l'arrivée.
+  </Accordion>
+  <Accordion title="Arrivées et départs" icon="user-check">
+    Les accès sont attribués selon un processus d'intégration documenté. Lorsqu'une personne quitte l'entreprise, ses accès sont révoqués le jour même.
+  </Accordion>
+  <Accordion title="Sécurité des terminaux" icon="laptop">
+    Les ordinateurs portables de l'entreprise doivent disposer du chiffrement intégral du disque, du verrouillage automatique de l'écran et de systèmes d'exploitation à jour. Le niveau de sécurité des appareils est surveillé de manière centralisée.
+  </Accordion>
+  <Accordion title="Gestion des fournisseurs" icon="briefcase">
+    Les fournisseurs sont évalués avant toute collaboration et liés par des clauses de protection des données et de confidentialité. Les fournisseurs qui traitent des données clients sont réexaminés au moins une fois par an. Consultez [Sous-traitants ultérieurs](/fr/trust-center/subprocessors).
+  </Accordion>
+  <Accordion title="Code éthique et dispositif d'alerte" icon="scale">
+    Un code éthique définit les attentes envers toutes les personnes travaillant chez Uxia, et un canal d'alerte confidentiel permet de signaler toute préoccupation.
+  </Accordion>
+</AccordionGroup>
+
+## Sécurité du produit
+
+<AccordionGroup>
+  <Accordion title="Cycle de développement sécurisé" icon="git-pull-request">
+    Chaque modification passe par une pull request et une revue par les pairs avant d'être fusionnée. L'infrastructure est définie sous forme de code et versionnée. Les déploiements sont réversibles : une modification défectueuse peut donc être annulée rapidement.
+  </Accordion>
+  <Accordion title="Gestion des vulnérabilités" icon="scan-search">
+    Les dépendances et les images de conteneurs sont analysées pour détecter les vulnérabilités connues dans le pipeline de déploiement, et nos environnements sont analysés régulièrement. Les vulnérabilités détectées sont triées et corrigées selon leur gravité.
+  </Accordion>
+  <Accordion title="Validation des entrées et intégrité des données" icon="check-check">
+    Chaque requête est validée côté serveur par rapport à un schéma défini, si bien que la validation ne peut pas être contournée en appelant directement l'API. Les tâches asynchrones font l'objet d'un rapprochement pour vérifier qu'aucun traitement n'est perdu.
+  </Accordion>
+  <Accordion title="Isolation des clients" icon="boxes">
+    Chaque espace de travail est isolé logiquement. Vos tests, résultats et fichiers ne sont accessibles qu'à vous et aux collègues que vous invitez.
+  </Accordion>
+  <Accordion title="Contrôles d'accès côté client" icon="users-round">
+    Les rôles de l'espace de travail déterminent qui peut gérer les personnes et les paramètres. Avec le forfait Custom, vous pouvez imposer le SSO avec votre fournisseur d'identité, provisionner les utilisateurs via SCIM et transmettre les journaux d'audit à votre SIEM. Consultez [Identité et accès](/fr/trust-center/identity-access).
+  </Accordion>
+  <Accordion title="Identifiants et fichiers de test" icon="file-lock">
+    Les identifiants et fichiers que vous fournissez pour les parcours protégés sont chiffrés en transit et au repos, limités au test auquel ils appartiennent et visibles uniquement dans votre espace de travail. Les identifiants ne sont jamais envoyés aux modèles d'IA : ils sont injectés de manière sécurisée dans la session de navigateur. Vous pouvez aussi tester avec une session de connexion interactive, auquel cas aucun identifiant n'est stocké. Consultez [Tester derrière une connexion](/fr/trust-center/authenticated-testing).
+  </Accordion>
+</AccordionGroup>
+
+## Procédures de sécurité internes
+
+<AccordionGroup>
+  <Accordion title="Gestion des accès" icon="key-square">
+    Les accès suivent les principes du moindre privilège et du besoin d'en connaître. L'authentification multifacteur est obligatoire sur tous les systèmes, les comptes à privilèges sont nominatifs et tous les droits d'accès sont revus chaque trimestre.
+  </Accordion>
+  <Accordion title="Gestion des changements" icon="git-branch">
+    Les modifications des systèmes de production sont planifiées, revues, testées en préproduction et journalisées.
+  </Accordion>
+  <Accordion title="Gestion des incidents" icon="siren">
+    Un processus documenté de gestion des incidents couvre la détection, le confinement, l'éradication, la reprise et le retour d'expérience, avec un playbook dédié aux incidents impliquant des participants IA. Consultez [Réponse aux incidents](/fr/trust-center/incident-response).
+  </Accordion>
+  <Accordion title="Continuité d'activité et reprise après sinistre" icon="life-buoy">
+    Un plan de continuité d'activité et un runbook de restauration de la base de données sont en place. Les procédures de reprise sont testées au moins une fois par an.
+  </Accordion>
+  <Accordion title="Audit interne et actions correctives" icon="clipboard-check">
+    Un programme d'audit interne annuel vérifie la conformité du SMSI. Les non-conformités sont enregistrées, leurs causes profondes sont analysées et les actions correctives sont suivies jusqu'à leur clôture.
+  </Accordion>
+  <Accordion title="Exigences légales et réglementaires" icon="gavel">
+    Les exigences légales, réglementaires et contractuelles applicables à la sécurité de l'information sont identifiées, documentées et tenues à jour.
+  </Accordion>
+</AccordionGroup>
+
+## Données et confidentialité
+
+<AccordionGroup>
+  <Accordion title="Classification et traitement de l'information" icon="tags">
+    L'information est classifiée selon sa sensibilité et traitée conformément à sa classification.
+  </Accordion>
+  <Accordion title="Conservation et suppression sécurisée" icon="trash-2">
+    Des durées de conservation sont définies pour chaque catégorie de données. À la fin de la durée de conservation, les données sont supprimées de manière sécurisée ou anonymisées de manière irréversible. Consultez [Protection des données](/fr/trust-center/data-protection).
+  </Accordion>
+  <Accordion title="Protection des données dès la conception" icon="fingerprint">
+    Nous tenons un registre des activités de traitement, documentons la base juridique de chacune d'elles et réalisons des analyses d'impact relatives à la protection des données lorsqu'un traitement est susceptible d'engendrer un risque élevé.
+  </Accordion>
+  <Accordion title="Droits des personnes concernées" icon="user-round-cog">
+    Une procédure documentée encadre les demandes d'accès, de rectification, d'effacement ou d'exportation des données à caractère personnel.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Suivant : Identité et accès" icon="key-round" href="/fr/trust-center/identity-access">
+  SSO, provisionnement SCIM, et attribution et retrait des accès.
+</Card>

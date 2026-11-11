@@ -1,0 +1,84 @@
+---
+title: "Analyser les résultats"
+sidebarTitle: "Vue d'ensemble"
+description: "Suivez votre test en direct et lisez ses résultats bloc par bloc : progression, participants IA et humains, filtres, arrêt d'un test et remboursements."
+---
+
+La phase **Analyze** est celle où se trouvent vos résultats. Inutile d'attendre la fin du test : les résultats arrivent bloc par bloc pendant que les participants avancent dans votre test. Cliquez sur **Analyze** dans l'en-tête du test pour l'ouvrir. Elle devient disponible dès que vous lancez le test, créez un lien de test ou demandez un panel humain.
+
+## S'y retrouver
+
+- **En-tête.** Cliquez sur le titre du test pour voir le nombre de participants et la date, et pour utiliser **Rename**, **Export** ou **Share** (consultez [Partager et exporter](/fr/share-and-export)). À droite se trouvent l'indicateur des crédits restitués, **Stop test** pendant l'exécution du test, et le sélecteur de participants.
+- **Barre latérale.** Un sélecteur **Blocks | Chat** se trouve en haut. **Blocks** liste une ligne par bloc ; **Chat** ouvre [Ask AI](/fr/ask-ai).
+- **Résultats.** Les résultats du bloc sélectionné, avec des onglets qui dépendent du type de bloc. Utilisez la bulle **Share feedback on these results** pour nous dire à quel point ils vous ont été utiles.
+
+Chaque ligne de bloc affiche son titre et un sous-titre. Pendant l'exécution du test, le sous-titre indique le statut du bloc :
+
+| Statut | Signification |
+|---|---|
+| **Waiting...** | Le bloc n'a pas encore commencé. |
+| Étape en cours et pourcentage | Le bloc est en cours d'exécution. |
+| **Failed** | Le bloc n'a pas pu se terminer. |
+| **Stopped** | Vous avez arrêté le test avant la fin de ce bloc. |
+| **Not executed** | Le bloc n'a pas été exécuté. |
+| Icône d'avertissement rouge | Les participants n'ont pas atteint ce bloc, et ses crédits ont été restitués. |
+
+## Suivre un test en cours
+
+Une barre de progression au-dessus des résultats indique quel bloc est en cours et le pourcentage global du test. La ligne du bloc en cours, dans la barre latérale, affiche son étape actuelle, par exemple "Gathering tester feedback..." ou "Identifying key issues..." pour une tâche, "Collecting participant responses..." pour une enquête, "Sorting cards..." pour un tri de cartes ou "Scanning interface..." pour une vérification de l'accessibilité.
+
+Pendant l'exécution d'un bloc de tâche, celui-ci s'ouvre sur son onglet **Transcripts** pour que vous puissiez suivre les participants en direct. Les autres onglets se débloquent à la fin du bloc. Consultez [Transcriptions du test](/fr/test-transcripts).
+
+<Tip>
+  Inutile de garder la page ouverte. "You can leave this page and come back later. We'll email you as soon as it finishes."
+</Tip>
+
+## Basculer entre participants IA et humains
+
+Le sélecteur de participants de l'en-tête bascule toute la vue Analyze entre **AI participants** et **Human participants** (consultez [Résultats des participants humains](/fr/human-insights)).
+
+Pour affiner les résultats, cliquez sur le compteur à côté du sélecteur, sélectionnez des audiences (participants IA) ou des liens de test (participants humains), puis cliquez sur **Filter**. La sélection s'applique à toute la vue Analyze. Les filtres fonctionnent une fois que le test a fini d'analyser les résultats. Avec le forfait Free, le sélecteur et les filtres sont verrouillés ; le filtrage est disponible à partir du forfait Starter.
+
+## Lire les résultats de chaque bloc
+
+| Bloc | Onglets | En savoir plus |
+|---|---|---|
+| Tâche | **Insights**, **Transcripts**, **Analytics**, **Journeys**, plus **Benchmarks** lorsque SUS ou UXIA-Q est activé | [Insights et UOS](/fr/results), [Transcriptions](/fr/test-transcripts), [Analyses](/fr/analytics), [Benchmarks](/fr/benchmark-results) |
+| Enquête | **Responses**, **Participants** | [Résultats d'enquête](/fr/survey-results) |
+| Tri de cartes | **Results**, **Agreement Matrix**, **Similarity Matrix** | [Résultats du tri de cartes](/fr/card-sorting-results) |
+| Vérification de l'accessibilité | **Results**, **Vision Simulation** | [Évaluation des critères](/fr/criteria-evaluation), [Simulation de la vision](/fr/vision-simulation) |
+
+Au lieu des résultats, un bloc peut afficher **Waiting for previous blocks to finish...**, **Test stopped** (le test a été arrêté avant la fin du bloc) ou **No participants reached this block** (tous les participants ont abandonné avant). Avant de lancer des participants IA, vous voyez **No AI participants yet** ; cliquez sur **Recruit AI participants** pour accéder à la phase Recruit.
+
+## Arrêter un test en cours
+
+<Steps>
+  <Step title="Cliquer sur Stop test">
+    Le bouton apparaît dans l'en-tête pendant l'exécution des participants IA.
+  </Step>
+  <Step title="Vérifier le remboursement">
+    La boîte de dialogue explique : "You'll receive a partial credit refund. Only results from blocks completed before the interrupted block will remain available." Elle indique le remboursement pour chaque bloc et le total **Credits to return**.
+  </Step>
+  <Step title="Confirmer">
+    Cliquez à nouveau sur **Stop test**. Les blocs qui ne se sont pas terminés affichent **Stopped**.
+  </Step>
+</Steps>
+
+| État du bloc au moment de l'arrêt | Remboursement |
+|---|---|
+| Non commencé | 100 % de ses crédits |
+| En cours | 50 % de ses crédits |
+| Terminé | Aucun ; ses résultats restent disponibles |
+
+## Crédits restitués
+
+Lorsque des crédits vous sont restitués, un indicateur en forme de pièce affichant le total apparaît dans l'en-tête à la fin de l'exécution. Cela se produit lorsque vous arrêtez un test, et lorsque des participants abandonnent avant d'atteindre les blocs suivants : "We returned the credits for tasks and questions that some participants did not get to carry out." Cliquez sur l'indicateur pour voir le remboursement par bloc. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Ask AI" icon="sparkles" href="/fr/ask-ai">
+    Posez des questions sur l'ensemble de votre test en langage naturel.
+  </Card>
+  <Card title="Partager et exporter" icon="share-2" href="/fr/share-and-export">
+    Partagez un lien en lecture seule ou exportez un rapport PDF.
+  </Card>
+</CardGroup>

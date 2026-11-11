@@ -1,0 +1,65 @@
+---
+title: "Antigravity"
+sidebarTitle: "Antigravity"
+description: "Connectez Uxia à Antigravity 2.0 et à l'IDE Antigravity via MCP pour créer des tests et consulter les résultats."
+---
+
+## Antigravity 2.0
+
+### Configuration
+
+1. Ouvrez le fichier de configuration MCP `~/.gemini/config/mcp_config.json` (créez-le s'il n'existe pas).
+2. Ajoutez le serveur UXIA à l'objet `mcpServers` :
+   ```json
+   {
+     "mcpServers": {
+       "Uxia": {
+         "serverUrl": "https://platform.uxia.app/api/mcp-v2/mcp"
+       }
+     }
+   }
+   ```
+3. Dans Antigravity, accédez à **Settings** \> **Customizations**.
+4. Faites défiler jusqu'à **Installed MCP Servers** et cliquez sur **Refresh**.
+5. Cliquez sur **Authenticate** à côté de l'entrée Uxia.
+6. Une fenêtre de navigateur s'ouvre. Connectez-vous avec votre compte Uxia et cliquez sur **Authorize** pour autoriser l'accès.
+7. Copiez le code d'authentification affiché sur la page de rappel, collez-le dans le champ du code d'authentification dans Antigravity, puis cliquez sur **Submit**.
+8. Antigravity devrait actualiser automatiquement les serveurs MCP. Sinon, cliquez sur le bouton **Refresh**. Une fois l'actualisation effectuée, le serveur MCP d'Uxia devrait apparaître comme actif et activé.
+
+### Utilisation
+
+Une fois la connexion établie, vous pouvez demander à Antigravity 2.0 de travailler avec Uxia :
+
+```plaintext
+Crée un nouveau test pour tester ma nouvelle app sur www.example.com
+```
+
+## IDE Antigravity
+
+### Configuration
+
+1. Ouvrez le fichier de configuration MCP `~/.gemini/config/mcp_config.json` (créez-le s'il n'existe pas).
+2. Ajoutez le serveur Uxia à l'objet `mcpServers` :
+   ```json
+   {
+     "mcpServers": {
+       "Uxia": {
+         "serverUrl": "https://platform.uxia.app/api/mcp-v2/mcp"
+       }
+     }
+   }
+   ```
+3. Ouvrez **User Settings** en cliquant sur l'icône en forme d'engrenage en haut à droite.
+4. Cliquez sur **Customizations**.
+5. Faites défiler jusqu'à **Installed MCP Servers** et cliquez sur **Refresh**.
+6. Cliquez sur **Authenticate** à côté de l'entrée Uxia.
+7. Une fenêtre de navigateur s'ouvre. Connectez-vous avec votre compte Uxia et cliquez sur **Authorize** pour autoriser l'accès.
+8. Copiez le code d'authentification affiché sur la page de rappel, collez-le dans le champ du code d'authentification dans l'IDE Antigravity, puis cliquez sur **Submit**.
+
+### Utilisation
+
+Une fois la connexion établie, vous pouvez demander à l'IDE Antigravity de travailler directement avec Uxia :
+
+```plaintext
+Crée un nouveau test pour tester ma nouvelle app sur www.example.com
+```

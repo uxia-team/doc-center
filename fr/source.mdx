@@ -1,0 +1,85 @@
+---
+title: "Liens de site web en production et Figma"
+sidebarTitle: "Liens de site web et Figma"
+description: "Ajoutez l'URL d'une tâche de site web en production ou de prototype Figma, choisissez un viewport et laissez Uxia vérifier le lien."
+---
+
+Les tâches de site web en production et de prototype Figma partent d'un lien. Vous l'ajoutez dans la fenêtre de lien, et Uxia vérifie que les participants peuvent y accéder avant que vous n'enregistriez.
+
+Pour tester plutôt vos propres images, utilisez une [tâche de prototype multimédia](/fr/media-canvas).
+
+## Ajouter un lien
+
+<Steps>
+  <Step title="Ouvrez la fenêtre de lien">
+    Sur une **Live website task** ou une **Figma prototype task**, cliquez sur **Add link**.
+  </Step>
+  <Step title="Collez l'URL">
+    Dans **URL**, collez une adresse publique, comme `www.example.com` ou `https://example.com`. Pour une tâche de prototype Figma, collez le lien du prototype, qui commence par `https://www.figma.com/proto/`. Les participants ouvrent exactement l'URL que vous saisissez.
+  </Step>
+  <Step title="Choisissez un viewport">
+    Dans **Viewport**, choisissez la taille d'écran utilisée par les participants. Consultez [Viewports](#viewports).
+  </Step>
+  <Step title="Définissez le statut du produit">
+    Pour un site web en production, choisissez **Work in progress** ou **Production-ready**. Consultez [Statut du produit](#statut-du-produit).
+  </Step>
+  <Step title="Attendez la vérification, puis enregistrez">
+    Uxia vérifie le lien automatiquement. Une fois la vérification réussie, cliquez sur **Save**.
+  </Step>
+</Steps>
+
+Pour modifier le lien par la suite, cliquez dessus dans le bloc. Pour le supprimer, survolez-le et cliquez sur l'icône de corbeille.
+
+## Viewports
+
+| Viewport | Taille |
+|---|---|
+| **Desktop** (par défaut) | 1920×1080 |
+| **Laptop** | 1366×768 |
+| **Tablet** | 1024×768 |
+| **Mobile** | 390×844 |
+
+## Statut du produit
+
+Le statut du produit indique aux participants IA à quel point votre produit est abouti, pour qu'ils le jugent équitablement. Il est disponible uniquement pour les tâches de site web en production. Les prototypes Figma sont toujours traités comme des travaux en cours.
+
+| Statut | Ce que font les participants |
+|---|---|
+| **Work in progress** (par défaut) | Certains contenus ou certaines interactions peuvent ne pas être terminés. Les participants ignorent les contenus provisoires évidents et les éléments incomplets. |
+| **Production-ready** | Tout est censé être terminé. Les participants évaluent l'ensemble des contenus, interactions et détails qu'ils rencontrent. |
+
+## Vérification du lien
+
+La vérification démarre dès que vous collez une URL valide, et se relance si vous modifiez l'URL ou le viewport. Pour un site web en production, Uxia charge la page et réalise une capture d'écran dans le viewport choisi. Cela prend généralement quelques secondes. **Save** reste désactivé tant que la vérification n'est pas terminée.
+
+| Message | Signification | Que faire |
+|---|---|---|
+| *"Successfully verified. This page is navigable by testers."* | Les participants peuvent accéder à la page. | Cliquez sur **Save**. |
+| *"This live page may not be navigable by testers."* | Uxia a détecté une protection anti-bot sur la page. Vous ne pouvez pas enregistrer le lien. | Cliquez sur **Contact us**. Consultez [Protection anti-bot](#protection-anti-bot). |
+| *"The URL is not accessible."* | Uxia n'a pas pu charger la page. | Vérifiez que l'URL est publique et correctement orthographiée, ou cliquez sur **Contact us**. |
+| *"Successfully verified. This Figma prototype is publicly accessible."* | Les participants peuvent ouvrir le prototype. | Cliquez sur **Save**. |
+| *"This Figma prototype is not publicly accessible."* | Les paramètres de partage du prototype bloquent les participants. | Dans Figma, autorisez toute personne disposant du lien à voir le prototype, puis cliquez sur **Verify again**. |
+
+<Note>
+  Si votre organisation a mis en place une intégration avec Uxia pour un site web, une URL correspondante peut être enregistrée sans aperçu. Vérifiez ou ajoutez ses identifiants avec **+ Add credentials**. Consultez [Identifiants des participants](/fr/tester-credentials#choisir-un-mode).
+</Note>
+
+## Protection anti-bot
+
+Certains sites web disposent de mesures anti-bot qui bloquent les navigateurs automatisés. Si vous rencontrez ce cas, contactez-nous : nous fournirons à votre équipe informatique nos adresses IP et les instructions pour mettre les participants IA d'Uxia sur liste blanche, afin qu'ils puissent parcourir votre expérience.
+
+Un site peut aussi bloquer les participants uniquement pendant la session. Consultez [Flux que les participants IA ne peuvent pas réaliser](/fr/unsupported-flows#protection-anti-bot-et-accès-refusé) pour savoir ce qui se passe alors, y compris le remboursement des crédits.
+
+## Ce que vous pouvez tester
+
+- Sites web et applications web : publics, de recette ou de préproduction.
+- Produits accessibles après connexion. Ajoutez les identifiants avec **+ Add credentials**, ou connectez-vous vous-même avec une [session de connexion interactive](/fr/tester-credentials#session-de-connexion-interactive). Consultez [Identifiants des participants](/fr/tester-credentials).
+- Prototypes codés et applications générées dotés d'une URL publique, par exemple avec Figma Make, Lovable, Base44, Google Stitch ou Claude.
+- Prototypes Figma partagés par lien, dans une tâche de prototype Figma.
+- Flux complexes en plusieurs étapes et avec embranchements.
+
+Pour des écrans statiques ou des flux qui ne sont pas encore développés, utilisez une [tâche de prototype multimédia](/fr/media-canvas).
+
+<Card title="Suivant : Tâche" icon="arrow-right" href="/fr/mission">
+  Indiquez aux participants ce qu'ils doivent essayer d'accomplir.
+</Card>

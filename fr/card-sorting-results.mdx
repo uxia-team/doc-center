@@ -1,0 +1,71 @@
+---
+title: "Résultats du tri de cartes"
+sidebarTitle: "Résultats"
+description: "Consultez les résultats d'un tri de cartes : l'accord par carte et par catégorie, la matrice d'accord et la matrice de similarité."
+---
+
+Lorsque vous ouvrez un [bloc de tri de cartes](/fr/card-sorting) dans la phase **Analyze**, ses résultats sont répartis en trois onglets : **Results**, **Agreement Matrix** et **Similarity Matrix**. Les résultats des participants IA et des participants humains sont présentés séparément ; utilisez le sélecteur décrit dans [Analyser les résultats](/fr/analyze-results) pour passer des uns aux autres.
+
+## Accord
+
+Toutes les vues reposent sur une seule mesure :
+
+> L'accord est la proportion de participants qui ont placé une carte dans une catégorie, parmi tous ceux qui ont trié cette carte. L'accord moyen d'une catégorie est la moyenne de l'accord des cartes qui y ont été placées.
+
+Par exemple, si 8 participants ont trié la carte "Remboursements" et que 6 d'entre eux l'ont placée dans "Facturation", son accord pour "Facturation" est de 75 %. Les participants ne sont pas obligés de trier toutes les cartes : l'accord ne compte donc que les personnes qui ont trié cette carte. Dans l'ensemble des résultats, plus le bleu est foncé, plus l'accord est élevé.
+
+## Résultats
+
+Utilisez le sélecteur **Categories** / **Cards** pour choisir comment regrouper le tableau.
+
+<Tabs>
+  <Tab title="Catégories">
+    Une ligne par catégorie, avec les colonnes **Category**, **Number of cards**, **Agreement** (l'accord moyen de la catégorie) et **Participants**. Les catégories dont l'accord moyen est le plus élevé apparaissent en premier. Développez une ligne pour voir toutes les cartes placées dans cette catégorie, chacune avec sa propre barre d'accord et le nombre de participants qui l'y ont placée.
+  </Tab>
+  <Tab title="Cartes">
+    Une ligne par carte, avec les colonnes **Card**, **Categories**, **Agreement** et **Participants**. À côté du nom de chaque carte, vous voyez la catégorie dans laquelle elle a été placée le plus souvent, et la barre d'accord indique l'accord pour cette catégorie. Développez une ligne pour voir toutes les catégories dans lesquelles la carte a été placée. Les cartes que personne n'a triées affichent **Not sorted**.
+  </Tab>
+</Tabs>
+
+## Matrice d'accord
+
+> La fréquence à laquelle chaque carte a été placée dans chaque catégorie. Les cartes sont regroupées sous la catégorie dans laquelle les participants les ont placées le plus souvent.
+
+Chaque ligne correspond à une carte et chaque colonne à une catégorie. Chaque cellule indique l'accord de la carte pour cette catégorie, et la valeur la plus élevée de chaque ligne est en gras. Parcourez une colonne pour voir quelles cartes appartiennent clairement à une catégorie et lesquelles n'y appartiennent qu'en partie.
+
+## Matrice de similarité
+
+> La fréquence à laquelle les participants ont trié chaque paire de cartes dans la même catégorie. Les cartes étroitement liées se regroupent le long du bord du tableau.
+
+Chaque cellule compare deux cartes : la proportion de participants qui les ont placées toutes les deux dans la même catégorie, parmi ceux qui ont trié les deux. Uxia ordonne les cartes par clustering, de sorte que les cartes liées se retrouvent côte à côte et forment des blocs foncés. Comme la matrice ne tient pas compte des noms de catégories, elle est particulièrement utile pour les tris ouverts, où les participants nomment la même idée de différentes façons.
+
+## Catégories créées par les participants
+
+Dans un tri ouvert, les catégories que les participants créent sous le même nom sont fusionnées, sans tenir compte des majuscules ni des espaces superflus. Si un participant crée une catégorie portant le même nom que l'une de vos catégories de départ, elle est comptée comme votre catégorie. Les catégories aux noms différents restent séparées, même lorsqu'elles signifient la même chose ; utilisez la matrice de similarité pour les repérer.
+
+## Comment interpréter les résultats
+
+- **Accord fort.** Une carte avec un accord élevé pour une catégorie a une place évidente. Laissez-la à cet endroit.
+- **Cartes partagées.** Une carte dont l'accord se répartit entre deux catégories ou plus est ambiguë. Envisagez de la renommer, d'ajouter une description ou de la rendre accessible depuis les deux emplacements.
+- **Catégories faibles.** Une catégorie dont l'accord moyen est faible peut avoir un nom vague ou recouper une autre catégorie.
+- **Cartes qui vont ensemble.** Les blocs foncés de la matrice de similarité montrent les groupes que les participants forment d'eux-mêmes. Dans un tri ouvert, ce sont des candidats pour vos catégories, quels que soient les libellés utilisés par les participants.
+- **Vocabulaire des participants.** Dans un tri ouvert, les noms que les participants donnent à leurs catégories révèlent les mots qu'ils chercheraient dans votre navigation.
+
+## États vides
+
+- **"No AI participants completed this card sort."** ou **"No participants have completed this card sort yet."** Aucun résultat n'est disponible pour le type de participants sélectionné.
+- **"The agreement matrix appears once participants have sorted cards."**
+- **"The similarity matrix appears once participants have sorted at least two cards."**
+
+<Note>
+  Les résultats du tri de cartes ne peuvent pas encore être exportés en PDF, et [Ask AI](/fr/ask-ai) ne les prend pas en compte.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Bloc de tri de cartes" icon="layout-grid" href="/fr/card-sorting">
+    Configurez un tri de cartes ouvert ou fermé.
+  </Card>
+  <Card title="Analyser les résultats" icon="chart-bar" href="/fr/analyze-results">
+    Passez des participants IA aux participants humains, filtrez et partagez.
+  </Card>
+</CardGroup>
