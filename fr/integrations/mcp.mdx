@@ -1,0 +1,116 @@
+---
+title: "Connecter Uxia à Claude, Cursor et d'autres outils d'IA via MCP"
+sidebarTitle: "Premiers pas"
+description: "Utilisez le serveur MCP d'Uxia pour créer et lancer des tests, gérer les audiences et lire les résultats depuis Claude Code, Cursor, Codex, v0 et autres."
+---
+
+Le serveur MCP d'Uxia permet à vos outils d'IA préférés de communiquer directement avec votre espace de travail Uxia. Une fois connectés, Claude Code, Cursor, Codex, v0 et les autres clients [Model Context Protocol](https://modelcontextprotocol.io) peuvent travailler avec Uxia dans la même conversation où vous écrivez du code ou itérez sur un design, sans copier-coller ni changer de contexte.
+
+## Ce que vous pouvez faire
+
+- **Créer et lancer des tests.** Décrivez ce que vous voulez tester, et votre outil d'IA configure le test pour vous : la tâche, les questions de suivi et l'audience. Le lancement consomme des crédits : l'assistant affiche donc d'abord le coût et vous demande votre accord avant de lancer le test.
+- **Gérer les audiences.** Affichez vos audiences, créez-en de nouvelles et choisissez les participants IA d'un test.
+- **Lire les résultats et les insights.** Importez dans votre conversation les insights, les citations des participants, les transcriptions, les parcours de navigation, les réponses aux enquêtes, les scores des benchmarks et les constats d'accessibilité. Suivez l'avancement et vos crédits restants.
+
+Tout se passe avec votre compte Uxia : les mêmes accès aux espaces de travail, les mêmes crédits et les mêmes [limites de forfait](/fr/account/plans-and-credits) s'appliquent.
+
+## Configuration
+
+La connexion d'Uxia se fait en trois étapes : choisissez l'outil d'IA à utiliser, enregistrez le serveur MCP d'Uxia, puis connectez-vous pour autoriser la connexion.
+
+<Steps>
+  <Step title="Choisissez votre outil d'IA">
+    Clients pris en charge directement :
+
+    | Client | Type | Remarques |
+    | --- | --- | --- |
+    | **Claude Code** | CLI / IDE | Recommandé pour les ingénieurs qui travaillent dans le terminal ou dans VS Code. |
+    | **Cursor** | IDE | Prise en charge native de MCP : importe les données Uxia dans le chat de Cursor. |
+    | **Codex** | CLI | Pour les flux de travail avec la CLI OpenAI Codex. |
+    | **v0** | Web | Intégrez les insights d'Uxia à la génération de designs dans v0. |
+    | **Microsoft Copilot** | Microsoft 365 Copilot, Teams | Ajoutez Uxia à un agent Copilot Studio. |
+    | **Other** | Tout client MCP | Utilisez le transport HTTP générique pour Claude Desktop, les agents personnalisés et les autres clients. |
+
+    Vous pouvez aussi connecter des outils non destinés au code comme **Claude Desktop**, **ChatGPT** et **Microsoft Copilot**. Consultez les guides pour [Claude](/fr/guides/claude-code), [ChatGPT et Codex](/fr/guides/chatgpt-codex), [Cursor](/fr/guides/cursor), [Lovable](/fr/guides/lovable), [Antigravity](/fr/guides/antigravity) et [Microsoft Copilot](/fr/guides/microsoft-copilot).
+  </Step>
+  <Step title="Enregistrez le serveur MCP d'Uxia">
+    Ajoutez le serveur avec la configuration correspondant à l'outil choisi.
+
+    #### Claude Code
+
+    Exécutez cette commande dans votre terminal :
+
+    ```bash
+    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Cursor
+
+    Dans Cursor, ouvrez **Customize** et ajoutez un serveur MCP personnalisé, ou modifiez directement `~/.cursor/mcp.json`. Ajoutez cette entrée à l'objet `mcpServers` :
+
+    ```json
+    {
+      "mcpServers": {
+        "Uxia": {
+          "type": "http",
+          "url": "https://platform.uxia.app/api/mcp-v2/mcp",
+          "headers": {}
+        }
+      }
+    }
+    ```
+
+    #### Codex
+
+    Exécutez cette commande dans votre terminal :
+
+    ```bash
+    codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Microsoft Copilot
+
+    Dans Copilot Studio, ouvrez la page **Tools** de votre agent et sélectionnez **Add a tool** › **New tool** › **Model Context Protocol**. Utilisez `https://platform.uxia.app/api/mcp-v2/mcp` comme **Server URL** et **OAuth 2.0** avec **Dynamic discovery** pour l'authentification. Consultez le [guide Microsoft Copilot](/fr/guides/microsoft-copilot) pour toutes les étapes, y compris l'utilisation de l'agent dans Microsoft 365 Copilot et Teams.
+
+    #### Autres
+
+    Ajoutez un nouveau serveur MCP HTTP et collez l'URL ci-dessous.
+
+    ```text
+    https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+  </Step>
+  <Step title="Authentifiez-vous">
+    La première fois que votre client appelle le serveur MCP d'Uxia, vous êtes redirigé pour vous connecter à Uxia et cliquer sur **Authorize**. Votre outil d'IA dispose ensuite d'un accès limité aux tests, aux audiences et aux résultats de votre espace de travail.
+  </Step>
+  <Step title="Essayez">
+    Dans votre outil d'IA, demandez par exemple :
+
+    - _"Affiche mes 5 derniers tests Uxia."_
+    - _"Résume les insights du test sur le parcours de paiement."_
+    - _"Crée un test Uxia pour le parcours d'inscription de www.example.com avec 5 participants IA."_
+    - _"Quels ont été les principaux problèmes d'utilisabilité de mon dernier test sur site web en production ?"_
+
+    Votre client appelle le serveur MCP d'Uxia, récupère les données pertinentes et répond avec le contexte réel de votre espace de travail.
+  </Step>
+</Steps>
+
+## Pages associées
+
+<CardGroup cols={2}>
+  <Card title="Transcriptions de test" icon="scroll-text" href="/fr/test-transcripts">
+    Découvrez les données que votre outil d'IA peut récupérer via MCP : transcriptions, insights et scores des benchmarks.
+  </Card>
+
+  <Card title="Forfaits et crédits" icon="credit-card" href="/fr/account/plans-and-credits">
+    Consultez le coût en crédits des tests que vous lancez via MCP.
+  </Card>
+
+  <Card title="Espaces de travail" icon="users" href="/fr/account/workspaces">
+    Gérez les accès et les autorisations de l'équipe : les connexions MCP respectent les mêmes périmètres.
+  </Card>
+
+  <Card title="Sécurité" icon="shield-check" href="/fr/account/security/data-privacy">
+    Découvrez comment Uxia gère l'authentification, l'accès aux données et la révocation pour les intégrations comme MCP.
+  </Card>
+</CardGroup>

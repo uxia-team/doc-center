@@ -123,23 +123,24 @@ participant is blocked from a live website (anti-bot, access denied), 80% of the
 - Human sessions are recorded (screen and microphone; face camera optional) and capped at 60 minutes.
   Participants need a desktop browser that supports screen sharing.
 
-## Translations (Spanish and Catalan)
+## Translations
 
-The help center and trust center are published in English (default), Spanish (`es/`) and Catalan (`ca/`).
-English is the source of truth: change the English page first, then update `es/` and `ca/` in the same PR.
+The help center and trust center are published in English (default), Spanish (`es/`), Catalan (`ca/`),
+French (`fr/`) and German (`de/`). English is the source of truth: change the English page first, then update
+every language folder in the same PR.
 
 **Files and navigation**
 
 - A translated page has the same path under the language folder: `quickstart.mdx` → `es/quickstart.mdx`,
-  `ca/quickstart.mdx`. Never rename or translate file names or slugs.
+  `de/quickstart.mdx`, and so on. Never rename or translate file names or slugs.
 - Each language has its own navigation in `docs.json` under `navigation.languages`. A new page must be added
-  to all three. Translate tab and group names there.
-- Prefix every internal link with the language: `/mission` → `/es/mission` (or `/ca/mission`). External links
-  and `/images/...` paths stay the same.
+  to every language. Translate tab and group names there.
+- Prefix every internal link with the language: `/mission` → `/es/mission` (or `/ca/mission`, `/fr/mission`,
+  `/de/mission`). External links and `/images/...` paths stay the same.
 - Anchors follow the translated heading: a link to `/es/mission#refine-it-with-tips` must use the slug of the
   Spanish heading (for example `#ajústala-con-consejos`). Slugs are the heading in lowercase, punctuation
-  removed, spaces as hyphens; accents are kept. An apostrophe becomes a typographic ’ and stays in the slug
-  (`Executa l'auditoria` → `#executa-l’auditoria`).
+  removed, spaces as hyphens; accents and umlauts are kept. An apostrophe becomes a typographic ’ and stays in
+  the slug (`Executa l'auditoria` → `#executa-l’auditoria`, `Lancer l'audit` → `#lancer-l’audit`).
 
 **What stays as-is**
 
@@ -153,73 +154,78 @@ English is the source of truth: change the English page first, then update `es/`
 
 **Style**
 
-- Spanish: neutral Spanish, addressed as *tú*. Catalan: standard Catalan, addressed as *tu*.
-- Titles and headings in sentence case (`Primeros pasos`, not `Primeros Pasos`).
+- Spanish: neutral Spanish, addressed as *tú*. Catalan: standard Catalan, addressed as *tu*. French: standard
+  French, addressed as *vous*. German: standard German, addressed as *Sie*, with gender-neutral plurals
+  (*Teilnehmende*).
+- Titles and headings in sentence case (`Primeros pasos`, `Premiers pas`, `Erste Schritte`). German keeps its
+  normal noun capitalization.
 - Write natural prose, not a word-for-word rendering. Keep the meaning, facts, numbers and limits exact.
-- Numbers: no separator up to four digits (`1500`), a space from five digits (`18 000`), decimal comma
-  (`80,3`), and a space before `%` (`80 %`).
+- Numbers: no separator up to four digits (`1500`); from five digits a space in es, ca and fr (`18 000`) and a
+  period in de (`18.000`). Decimal comma (`80,3`) and a space before `%` (`80 %`) in all four.
+- French punctuation: a space before `:`, `;`, `?` and `!`. Use straight quotes or none; don't add « ».
 - Quoted app messages, placeholders and status values stay in English like UI labels. Explanations,
   examples you write yourself and questionnaire items you describe are translated.
-- Dates: `octubre de 2026` (both languages). `Next: …` cards become `Siguiente: …` / `Següent: …`.
+- Dates: `octubre de 2026` (es, ca), `octobre 2026` (fr), `Oktober 2026` (de). `Next: …` cards become
+  `Siguiente: …`, `Següent: …`, `Suivant : …`, `Weiter: …`.
 
 **Glossary**
 
-| English | Spanish | Catalan |
-|---|---|---|
-| unmoderated test | test no moderado | test no moderat |
-| AI-moderated test | test moderado por IA | test moderat per IA |
-| test (noun) | test | test |
-| block | bloque | bloc |
-| Task block | bloque de tarea | bloc de tasca |
-| task (the field) | tarea | tasca |
-| Survey block | bloque de encuesta | bloc d'enquesta |
-| Card sorting block | bloque de card sorting | bloc de card sorting |
-| Accessibility check block | bloque de revisión de accesibilidad | bloc de revisió d'accessibilitat |
-| AI participants | participantes de IA | participants d'IA |
-| human participants | participantes humanos | participants humans |
-| participant | participante | participant |
-| human panel | panel humano | panell humà |
-| test link | enlace de test | enllaç de test |
-| audience | audiencia | audiència |
-| enrichment | enriquecimiento | enriquiment |
-| credits | créditos | crèdits |
-| paid plans | planes de pago | plans de pagament |
-| workspace | espacio de trabajo | espai de treball |
-| organization | organización | organització |
-| project | proyecto | projecte |
-| results | resultados | resultats |
-| insights | insights | insights |
-| transcript | transcripción | transcripció |
-| benchmarks | benchmarks | benchmarks |
-| test scenario | escenario de test | escenari de test |
-| stop condition | condición de parada | condició d'aturada |
-| live website | sitio web en producción | lloc web en producció |
-| prototype | prototipo | prototip |
-| frame (screen) | frame | frame |
-| viewport | viewport | viewport |
-| think aloud | pensar en voz alta | pensar en veu alta |
-| launch (a test) | lanzar | llançar |
-| credentials | credenciales | credencials |
-| integration | integración | integració |
-| webhook | webhook | webhook |
-| accessibility | accesibilidad | accessibilitat |
-| conformance level | nivel de conformidad | nivell de conformitat |
-| subprocessor | subencargado del tratamiento | subencarregat del tractament |
-| data processing addendum | anexo de tratamiento de datos (DPA) | annex de tractament de dades (DPA) |
-| media prototype | prototipo multimedia | prototip multimèdia |
-| media canvas | lienzo multimedia | llenç multimèdia |
-| user personas | perfiles de usuario | perfils d'usuari |
-| interactive login session | inicio de sesión interactivo | inici de sessió interactiu |
-| misclicks | clics erróneos | clics erronis |
-| drop-off | abandono | abandonament |
-| heatmap | mapa de calor | mapa de calor |
-| journeys (analytics) | recorridos | recorreguts |
-| stakeholders | partes interesadas | parts interessades |
-| feedback | feedback | feedback |
-| seats | licencias de usuario | llicències d'usuari |
-| provisioning | aprovisionamiento | aprovisionament |
-| audit logs | registros de auditoría | registres d'auditoria |
-| success criteria (WCAG) | criterios de conformidad | criteris de conformitat |
-| agreement (card sorting) | acuerdo | acord |
-| similarity matrix | matriz de similitud | matriu de similitud |
-| Enterprise Auth (feature) | Enterprise Auth | Enterprise Auth |
+| English | Spanish | Catalan | French | German |
+|---|---|---|---|---|
+| unmoderated test | test no moderado | test no moderat | test non modéré | unmoderierter Test |
+| AI-moderated test | test moderado por IA | test moderat per IA | test modéré par IA | KI-moderierter Test |
+| test (noun) | test | test | test | Test |
+| block | bloque | bloc | bloc | Block |
+| Task block | bloque de tarea | bloc de tasca | bloc de tâche | Aufgabenblock |
+| task (the field) | tarea | tasca | tâche | Aufgabe |
+| Survey block | bloque de encuesta | bloc d'enquesta | bloc d'enquête | Umfrageblock |
+| Card sorting block | bloque de card sorting | bloc de card sorting | bloc de tri de cartes | Card-Sorting-Block |
+| Accessibility check block | bloque de revisión de accesibilidad | bloc de revisió d'accessibilitat | bloc de vérification de l'accessibilité | Block zur Barrierefreiheitsprüfung |
+| AI participants | participantes de IA | participants d'IA | participants IA | KI-Teilnehmende |
+| human participants | participantes humanos | participants humans | participants humains | menschliche Teilnehmende |
+| participant | participante | participant | participant | Teilnehmende (pl.), teilnehmende Person (sg.) |
+| human panel | panel humano | panell humà | panel humain | menschliches Panel |
+| test link | enlace de test | enllaç de test | lien de test | Testlink |
+| audience | audiencia | audiència | audience | Zielgruppe |
+| enrichment | enriquecimiento | enriquiment | enrichissement | Anreicherung |
+| credits | créditos | crèdits | crédits | Credits |
+| paid plans | planes de pago | plans de pagament | forfaits payants | kostenpflichtige Pläne |
+| workspace | espacio de trabajo | espai de treball | espace de travail | Workspace |
+| organization | organización | organització | organisation | Organisation |
+| project | proyecto | projecte | projet | Projekt |
+| results | resultados | resultats | résultats | Ergebnisse |
+| insights | insights | insights | insights | Insights |
+| transcript | transcripción | transcripció | transcription | Transkript |
+| benchmarks | benchmarks | benchmarks | benchmarks | Benchmarks |
+| test scenario | escenario de test | escenari de test | scénario de test | Testszenario |
+| stop condition | condición de parada | condició d'aturada | condition d'arrêt | Abbruchbedingung |
+| live website | sitio web en producción | lloc web en producció | site web en production | Live-Website |
+| prototype | prototipo | prototip | prototype | Prototyp |
+| frame (screen) | frame | frame | frame | Frame |
+| viewport | viewport | viewport | viewport | Viewport |
+| think aloud | pensar en voz alta | pensar en veu alta | penser à voix haute | lautes Denken |
+| launch (a test) | lanzar | llançar | lancer | starten |
+| credentials | credenciales | credencials | identifiants | Zugangsdaten |
+| integration | integración | integració | intégration | Integration |
+| webhook | webhook | webhook | webhook | Webhook |
+| accessibility | accesibilidad | accessibilitat | accessibilité | Barrierefreiheit |
+| conformance level | nivel de conformidad | nivell de conformitat | niveau de conformité | Konformitätsstufe |
+| subprocessor | subencargado del tratamiento | subencarregat del tractament | sous-traitant ultérieur | Unterauftragsverarbeiter |
+| data processing addendum | anexo de tratamiento de datos (DPA) | annex de tractament de dades (DPA) | accord de traitement des données (DPA) | Auftragsverarbeitungsvertrag (AVV) |
+| media prototype | prototipo multimedia | prototip multimèdia | prototype multimédia | Medienprototyp |
+| media canvas | lienzo multimedia | llenç multimèdia | canevas multimédia | Medien-Canvas |
+| user personas | perfiles de usuario | perfils d'usuari | personas utilisateurs | Nutzer-Personas |
+| interactive login session | inicio de sesión interactivo | inici de sessió interactiu | session de connexion interactive | interaktive Anmeldesitzung |
+| misclicks | clics erróneos | clics erronis | clics erronés | Fehlklicks |
+| drop-off | abandono | abandonament | abandon | Abbruch |
+| heatmap | mapa de calor | mapa de calor | carte de chaleur | Heatmap |
+| journeys (analytics) | recorridos | recorreguts | parcours | Nutzerpfade |
+| stakeholders | partes interesadas | parts interessades | parties prenantes | Stakeholder |
+| feedback | feedback | feedback | retours | Feedback |
+| seats | licencias de usuario | llicències d'usuari | licences utilisateur | Nutzerlizenzen |
+| provisioning | aprovisionamiento | aprovisionament | provisionnement | Provisionierung |
+| audit logs | registros de auditoría | registres d'auditoria | journaux d'audit | Audit-Logs |
+| success criteria (WCAG) | criterios de conformidad | criteris de conformitat | critères de succès | Erfolgskriterien |
+| agreement (card sorting) | acuerdo | acord | accord | Übereinstimmung |
+| similarity matrix | matriz de similitud | matriu de similitud | matrice de similarité | Ähnlichkeitsmatrix |
+| Enterprise Auth (feature) | Enterprise Auth | Enterprise Auth | Enterprise Auth | Enterprise Auth |

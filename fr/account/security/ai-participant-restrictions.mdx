@@ -1,0 +1,53 @@
+---
+title: "Restrictions des participants IA dans Uxia"
+sidebarTitle: "Restrictions des participants IA"
+description: "Contrôlez ce que les participants IA atteignent et font : une cible par bloc de tâche, des tests en staging et des sessions bornées."
+---
+
+Les participants IA sont les participants synthétiques qu'Uxia fait intervenir sur votre produit. Ils n'agissent que sur les cibles que vous leur donnez et dans les limites du test que vous configurez : vous décidez de ce qu'ils peuvent atteindre, de l'environnement avec lequel ils interagissent et de jusqu'où une session peut aller. Cette page présente les contrôles dont vous disposez pour encadrer strictement les participants IA.
+
+## Les participants n'agissent que sur la cible que vous configurez
+
+Chaque bloc de tâche s'exécute sur une cible que vous fournissez, et les participants y restent.
+
+- **Une cible par bloc de tâche.** Chaque bloc de tâche s'exécute sur sa propre URL, son propre prototype Figma ou son propre prototype multimédia. Les participants naviguent uniquement sur cette cible.
+- **Pas d'écart.** Les participants n'explorent rien au-delà de vos cibles, ne suivent pas de liens vers des domaines sans rapport et ne récupèrent pas d'URL externes que vous n'avez pas configurées.
+- **Rayon d'impact limité.** Comme une session est confinée au produit que vous voulez tester, aucun système ni site en dehors de ce périmètre n'est exposé.
+
+## Tester en staging ou en UAT
+
+Vous choisissez l'environnement sur lequel les participants s'exécutent : vous pouvez donc tenir chaque session à l'écart de la production.
+
+- **Vous choisissez l'endpoint.** Faites pointer les participants vers une URL de staging, d'UAT ou de préproduction, et c'est le seul endroit où ils agissent.
+- **La production reste intacte.** Comme les participants n'agissent que sur l'environnement que vous fournissez, tester une version hors production tient les sessions à l'écart des systèmes en production et des données réelles des utilisateurs.
+- **Données de test.** Nous recommandons un environnement de staging ou d'UAT alimenté avec des données hors production pour tout parcours qui lit ou écrit des informations sensibles.
+
+## Borner ce qu'une session peut faire
+
+La [tâche](/fr/mission) et la [condition d'arrêt](/fr/stop-condition) que vous définissez dans chaque bloc de tâche déterminent jusqu'où va un participant.
+
+- **Limitez la tâche** à l'action précise que vous voulez observer. Les participants agissent pour accomplir cette tâche, et rien de plus.
+- **Définissez une condition d'arrêt** qui met fin à la session au moment de votre choix. Si vous ne voulez pas que les participants effectuent une action qui écrit des données (envoyer un formulaire, passer une commande, modifier un paramètre), arrêtez la session avant cette étape, par exemple sur l'écran de récapitulatif ou de confirmation.
+- **Les interactions restent sur la cible.** Les participants ne remplissent et n'envoient des formulaires que sur le produit que vous testez, et uniquement lorsque la tâche l'exige. Ils n'envoient jamais de données à des sites externes.
+
+## Garder un test en mode observation
+
+Lorsque vous voulez que les participants regardent sans valider de modifications :
+
+- Concevez la tâche autour de la navigation et de l'évaluation plutôt que de l'exécution d'une étape transactionnelle, et utilisez une condition d'arrêt qui intervient avant toute action d'envoi ou de confirmation.
+- Lorsqu'un parcours doit écrire des données (paniers, réservations, inscriptions, paramètres), donnez à chaque participant son propre compte dédié pour que les sessions restent isolées et n'entrent jamais en conflit. Consultez [Identifiants des participants](/fr/tester-credentials).
+
+## Limiter les identifiants et les fichiers
+
+- **Les identifiants** des parcours protégés sont limités au test auquel ils sont ajoutés et chiffrés au repos. Ils ne sont jamais envoyés au modèle d'IA : ils sont injectés de façon sécurisée dans la session du navigateur et saisis directement dans les champs correspondants. Utilisez des comptes de test dédiés, et renouvelez-les ou supprimez-les après une exécution. Consultez [Identifiants des participants](/fr/tester-credentials).
+- **Les fichiers** que vous fournissez pour les étapes d'import sont limités au test. Le participant IA ne voit que le nom et le type de chaque fichier ; c'est le navigateur qui joint le fichier lui-même. Utilisez des documents fictifs plutôt que de vrais documents. Consultez [Fichiers des participants](/fr/tester-files).
+
+## Une visibilité complète sur chaque action
+
+Chaque participant IA produit une transcription détaillée, étape par étape, de ce qu'il a vu, des décisions qu'il a prises et des actions qu'il a effectuées pendant la session. Vous pouvez consulter précisément ce qui s'est passé et où : consultez [Transcriptions de test](/fr/test-transcripts).
+
+Pour savoir comment Uxia stocke et protège les données utilisées dans un test, consultez [Confidentialité des données](/fr/account/security/data-privacy).
+
+<Card title="Suivant : Confidentialité des données" icon="lock" href="/fr/account/security/data-privacy">
+  Comment Uxia stocke et protège les données utilisées dans un test.
+</Card>

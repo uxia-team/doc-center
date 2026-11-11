@@ -1,0 +1,56 @@
+---
+title: "Claude"
+sidebarTitle: "Claude"
+description: "Connectez Uxia à Claude Code et Claude Desktop via MCP pour créer des tests et consulter les résultats depuis Claude."
+---
+
+## Claude Code
+
+### Configuration
+
+1. Exécutez la commande suivante dans votre terminal pour enregistrer le serveur MCP d'Uxia :
+   ```bash
+   claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
+   ```
+
+Démarrez une nouvelle session Claude Code dans votre terminal. Dans la liste des serveurs MCP, sélectionnez **Uxia**.
+
+```bash
+claude /mcp
+```
+
+1. Sélectionnez **Authenticate**.
+2. Une fenêtre de navigateur s'ouvre automatiquement. Connectez-vous avec votre compte Uxia pour autoriser l'accès.
+
+### Utilisation
+
+Une fois la connexion établie, vous pouvez demander à Claude d'effectuer directement des actions dans Uxia :
+
+```plaintext
+Crée un nouveau test pour tester ma nouvelle app sur www.example.com
+```
+
+## Claude Desktop
+
+### Configuration
+
+1. Dans Claude Desktop, accédez à **Customize \> Connectors**.
+2. Cliquez sur l'icône **\+**.
+3. Cliquez sur **Add custom connector**.
+4. Saisissez **Uxia** comme nom.
+5. Collez l'URL du serveur :
+   ```plaintext
+   https://platform.uxia.app/api/mcp-v2/mcp
+   ```
+6. Cliquez sur **Add**.
+7. Lors de la première utilisation, une fenêtre de navigateur s'ouvre automatiquement. Connectez-vous avec votre compte Uxia pour autoriser l'accès.
+
+Si votre espace de travail Claude est sur un forfait Team ou Enterprise, vous devrez peut-être demander à l'administrateur ou au propriétaire de cet espace de travail d'activer le connecteur MCP d'Uxia pour votre équipe. Vous trouverez plus d'informations sur [cette page d'assistance de Claude](https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities).
+
+### Utilisation
+
+Une fois la connexion établie, vous pouvez demander à Claude de communiquer directement avec Uxia :
+
+```plaintext
+Crée un nouveau test pour tester ma nouvelle app sur www.example.com
+```

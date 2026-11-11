@@ -1,0 +1,120 @@
+---
+title: "Fichiers des participants"
+sidebarTitle: "Fichiers des participants"
+description: "Donnez aux participants IA les fichiers qu'une tâche leur demande d'importer, et voyez comment Uxia les stocke et les protège."
+---
+
+Certaines tâches ne peuvent pas être réalisées sans quelque chose à importer. Si votre flux demande aux participants de joindre un CV à une candidature, d'importer une pièce d'identité pour une vérification, d'importer un fichier CSV ou d'ajouter une photo de profil, les participants IA ont besoin d'un vrai fichier à fournir.
+
+C'est à cela que servent les **fichiers**. Vous les importez une fois dans un bloc de tâche, et les participants IA les utilisent chaque fois que le flux atteint une étape d'importation.
+
+## Ajouter des fichiers
+
+<Steps>
+  <Step title="Ouvrez la fenêtre Files">
+    Sur une tâche de site web en production ou de prototype Figma, cliquez sur **+ Add files** sous l'URL.
+  </Step>
+  <Step title="Importez vos fichiers">
+    Faites glisser des fichiers dans la fenêtre, ou cliquez pour les parcourir. Supprimez un fichier avec son bouton **X**.
+  </Step>
+  <Step title="Fermez la fenêtre">
+    Cliquez sur **Done**. Le bouton du bloc indique maintenant le nombre de fichiers ajoutés, par exemple **2 files added**.
+  </Step>
+</Steps>
+
+## Ce que vous pouvez importer
+
+Importez tout fichier que le flux est susceptible de demander. Cas courants :
+
+| Cas d'usage | Fichier type |
+|---|---|
+| Candidature à un emploi | Un CV ou une lettre de motivation en PDF |
+| Étape d'identité ou de vérification | Un document numérisé ou une photo |
+| Import de données | Un fichier CSV ou un tableur |
+| Configuration du profil | Un avatar ou une image de profil |
+| Import de médias | Une courte vidéo ou un court extrait audio |
+
+### Formats pris en charge et limites
+
+<CardGroup cols={2}>
+  <Card title="Formats" icon="file">
+    **Tous les types de fichiers**, sauf :
+
+    - Les exécutables
+    - Les scripts
+    - Les fichiers web actifs, comme HTML ou SVG
+    - Les documents contenant des macros
+  </Card>
+
+  <Card title="Limites" icon="gauge">
+    **Jusqu'à 100 Mo** par fichier
+
+    **Jusqu'à 5 fichiers** par bloc de tâche
+  </Card>
+</CardGroup>
+
+Ces exclusions existent parce que le fichier est transmis à un vrai navigateur pendant la session. Tout ce qui pourrait exécuter du code est bloqué, pour votre protection comme pour la nôtre.
+
+<Tip>
+  Si le flux comporte plusieurs étapes d'importation, importez un fichier pour chacune. Donnez-leur des noms qui décrivent ce qu'ils sont, comme `cv.pdf` ou `id-document.png`. Les participants IA voient les noms des fichiers : des noms clairs les aident à choisir le bon fichier à chaque étape.
+</Tip>
+
+## Comment Uxia traite vos fichiers
+
+Un fichier peut contenir bien plus de données personnelles qu'un champ de formulaire : il est donc traité avec le même soin que les [identifiants](/fr/tester-credentials).
+
+### Chiffrés en transit et au repos
+
+Les fichiers transitent via TLS et sont stockés chiffrés au repos. Ils restent rattachés au bloc de tâche dans lequel vous les avez importés, pour que vous puissiez relancer le test sans les importer à nouveau. Ils ne sont récupérés que lorsqu'une session atteint une étape d'importation.
+
+### Jamais lus par le modèle d'IA
+
+Les participants IA ne voient que le nom et le type de chaque fichier, jamais son contenu. Lorsque le flux atteint un champ d'importation, le fichier est joint directement, comme lorsqu'une personne le sélectionne dans un sélecteur de fichiers. Par conséquent, rien de ce que contient votre fichier ne peut se retrouver dans les transcriptions ou les insights.
+
+<Note>
+  Cela signifie aussi que les participants ne peuvent pas agir en fonction du contenu d'un fichier. Si votre tâche dépend d'une information, comme un nom, une date ou un numéro de référence, indiquez-la dans la [tâche](/fr/mission) ou dans un [identifiant](/fr/tester-credentials), pas dans le fichier.
+</Note>
+
+### Jamais utilisés pour l'entraînement
+
+Rien de ce que vous soumettez à Uxia n'est utilisé pour entraîner ou affiner un modèle, que ce soit pour Uxia ou pour un tiers. Les fichiers en sont exclus par conception, puisque leur contenu n'atteint jamais un modèle.
+
+### Limités à votre espace de travail
+
+Les fichiers appartiennent au test dans lequel ils ont été importés, dans votre espace de travail. Seuls vous et les coéquipiers que vous avez invités dans cet espace de travail peuvent y accéder : jamais d'autres organisations, ni d'autres clients d'Uxia.
+
+Si vous retirez quelqu'un de l'espace de travail, cette personne perd l'accès au test, et donc à ses fichiers.
+
+<Warning>
+  Considérez l'appartenance à l'espace de travail comme la limite d'accès. Toute personne qui peut ouvrir un test peut accéder aux fichiers qui y sont joints : n'invitez donc que des coéquipiers qui doivent disposer de ce niveau d'accès.
+</Warning>
+
+## Bonnes pratiques
+
+Le fichier le plus sûr est celui qui ne poserait aucun problème si quelqu'un d'autre le voyait.
+
+<Steps>
+  <Step title="Utilisez des documents fictifs, pas de vrais documents">
+    Un CV de candidat imaginaire fonctionne tout aussi bien qu'un vrai pour tester un flux d'importation. N'importez jamais le CV d'un vrai candidat, le contrat d'un vrai client ou votre propre pièce d'identité.
+  </Step>
+  <Step title="Supprimez les données personnelles avant l'importation">
+    Si vous devez partir d'un document réel, remplacez d'abord les noms, e-mails, numéros de téléphone, adresses et numéros d'identité par des valeurs de test.
+  </Step>
+  <Step title="Gardez des fichiers légers et simples">
+    La limite est de 100 Mo, mais un PDF d'une page s'importe plus vite et échoue moins souvent qu'une numérisation volumineuse. Les participants ont seulement besoin que l'importation réussisse, pas que le document soit réaliste.
+  </Step>
+  <Step title="Respectez le format attendu par le flux">
+    Si le formulaire n'accepte que le PDF, importer un DOCX fait échouer le flux à l'étape d'importation, et cet échec apparaît dans vos résultats comme un problème d'utilisabilité qui n'en est pas un.
+  </Step>
+  <Step title="Supprimez les fichiers dont vous n'avez plus besoin">
+    Les fichiers restent rattachés au bloc de tâche jusqu'à ce que vous les supprimiez. Faites le ménage dans ceux dont vous n'avez plus l'usage.
+  </Step>
+</Steps>
+
+<Warning>
+  Évitez d'importer tout document couvert par un accord de confidentialité ou contenant des données personnelles réelles d'un tiers. Utilisez plutôt un équivalent synthétique.
+</Warning>
+
+<Card title="Suivant : Flux que les participants IA ne peuvent pas réaliser" icon="arrow-right" href="/fr/unsupported-flows">
+  Connexions via les réseaux sociaux, codes de vérification et protection anti-bot, et comment les contourner.
+</Card>

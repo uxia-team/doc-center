@@ -1,0 +1,91 @@
+---
+title: "Insights et UOS"
+sidebarTitle: "Insights"
+description: "Lisez les insights d'un bloc de tâche, comprenez son Usability Optimization Score et ouvrez l'impact, les preuves et la correction de chaque insight."
+---
+
+Lorsqu'un [bloc de tâche](/fr/task-block) est terminé, ouvrez-le dans la phase **Analyze** pour voir ce que les participants ont rencontré. L'onglet **Insights** liste chaque problème et chaque constat, par ordre d'importance, et l'en-tête du bloc résume le résultat en un seul chiffre : le **Usability Optimization Score (UOS)**.
+
+## Les onglets d'un bloc de tâche
+
+| Onglet | Ce qu'il affiche |
+|---|---|
+| **Insights** | Des insights classés, avec leurs preuves et leurs corrections (cette page) |
+| **Transcripts** | La session de chaque participant, étape par étape ([Transcriptions](/fr/test-transcripts)) |
+| **Analytics** | Réussite, abandon, clics erronés et cartes de chaleur ([Analyses et parcours](/fr/analytics)) |
+| **Journeys** | Les chemins suivis par les participants ([Analyses et parcours](/fr/analytics)) |
+| **Benchmarks** | Les scores SUS et UXIA-Q, lorsqu'ils sont activés ([Résultats des benchmarks](/fr/benchmark-results)) |
+
+Pendant l'exécution du bloc, seul l'onglet **Transcripts** est disponible, et il se remplit en direct. Les autres onglets se débloquent une fois la session terminée. Si tous les participants IA ont été bloqués par un site web en production, seul **Transcripts** reste disponible.
+
+## L'en-tête du bloc
+
+Cliquez sur le chevron à côté du titre du bloc pour déplier le **Test setup** : le **Scenario**, la **Stop condition** (tâches de site web en production et de prototype Figma), le **Product status** (**Finished product** ou **Prototype**) et la **Source**. Cliquez sur la source pour ouvrir le site web dans un nouvel onglet ou pour voir les frames du prototype testé.
+
+## Usability Optimization Score
+
+Le badge UOS, à droite de l'en-tête du bloc, affiche un score de 0 à 100 dans un anneau, accompagné d'un court commentaire. Cliquez dessus pour lire **What is the Usability Optimization Score?** et ce que signifie votre résultat.
+
+Le score pondère chaque insight selon sa pertinence et le nombre de participants qui l'ont rencontré : il reflète donc ce qu'a vécu un participant type :
+
+- Une audience plus large fait ressortir davantage d'insights, mais ne fait pas baisser le score à elle seule.
+- Un flux plus long n'est pas pénalisé parce qu'il donne davantage à faire aux participants.
+- Les participants qui ne terminent pas la tâche font baisser le score.
+- Les insights notés **Prototype** sont exclus. Ils signalent des limites du prototype, pas de votre design.
+
+| Commentaire | Signification |
+|---|---|
+| **High drop-off** | Plus de la moitié des participants n'ont pas terminé la tâche. Examinez leurs parcours et la configuration de votre test. |
+| **Improvement opportunities** | Au moins un insight de pertinence élevée (High) demande votre attention. Commencez par là. |
+| **Frictions worth fixing** | Il existe des pistes significatives pour améliorer l'expérience. |
+| **Minor frictions** | L'expérience fonctionne bien dans l'ensemble, avec quelques points à améliorer. |
+| **Strong foundation** | L'expérience est en bon état, avec une marge pour la rendre encore meilleure. |
+| **Highly optimized** | Peu de frictions ont été relevées dans ce test. |
+
+Lorsque vous filtrez les résultats par audience, l'UOS est recalculé pour les audiences sélectionnées. Les benchmarks (SUS et UXIA-Q) sont présentés séparément et n'entrent pas dans le calcul de l'UOS.
+
+## L'onglet Insights
+
+L'onglet s'ouvre sur le nombre d'insights signalés (par exemple, **12 insights reported**) et un champ **Search** qui recherche dans les titres, les descriptions et les catégories. Le tableau comporte quatre colonnes :
+
+| Colonne | Ce qu'elle affiche |
+|---|---|
+| **Title** | L'insight. Cliquez sur le marque-page pour le mettre en avant et le placer en haut du tableau. |
+| **Relevance** | **High**, **Medium**, **Low** ou **Prototype** (peut venir d'une limite du prototype plutôt que de votre design). Vous pouvez la modifier. |
+| **Reporters** | Les badges d'audience et le nombre de participants qui ont signalé l'insight, par exemple **2 out of 5**. |
+| **Category** | Le type de problème. Survolez-le pour en voir la définition. |
+
+Les catégories sont **Navigation**, **CTAs**, **Copy**, **Trust**, **Usability**, **Visual Design** et **Other**. Les insights sont triés en plaçant d'abord ceux mis en avant, puis par pertinence, puis par nombre de participants qui les ont signalés.
+
+### Modifier la pertinence d'un insight
+
+Cliquez sur la pertinence d'un insight et choisissez une nouvelle valeur. Le badge affiche alors **Edited**, et le menu déroulant signale la valeur d'origine par **(original rating)** pour que vous puissiez y revenir. Votre modification met à jour l'UOS. Notez un insight **Prototype** pour l'exclure du score.
+
+## Détails d'un insight
+
+Cliquez sur une ligne pour ouvrir **Insight details**. Le panneau affiche le titre, la pertinence, la catégorie, les participants qui l'ont signalé, une description et les frames concernés, où le problème est apparu. En dessous, trois onglets :
+
+- **Impact.** Une **Impact Assessment** divisée en **User Impact** et **Business Impact**.
+- **Evidence.** **What Testers Said** : des citations regroupées par participant. Cliquez sur une citation pour accéder au moment où le participant l'a prononcée. Lorsque l'insight porte sur un comportement plutôt que sur des propos, vous voyez à la place **What Testers Did**, avec les participants chez qui il a été observé (**Observed in**).
+- **Fix.** Une **Fix Suggestion** avec ses **Acceptance criteria**, suivie d'un **Prompt** que vous pouvez **Copy** ou **Expand** et coller dans un outil de code IA. Les résultats plus anciens affichent à la place une évaluation **Technical Complexity** : **Quick fix**, **Requires planning** ou **Major redesign**.
+
+<Tip>
+  Pour importer des insights dans Claude Code, Cursor ou un autre outil d'IA sans copier-coller, connectez le [serveur MCP Uxia](/fr/integrations/mcp).
+</Tip>
+
+## Limites du forfait Free
+
+Sur le forfait Free, l'onglet Insights n'affiche que les principaux insights (5 au maximum) et indique combien sont masqués : **You are missing +N insights**. La description, les frames concernés et l'onglet **Impact** restent visibles ; **Evidence** et **Fix** sont verrouillés. Les forfaits payants donnent accès à tout. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+## Participants humains
+
+Ces onglets affichent les résultats des participants IA. Pour voir ce que les participants humains ont fait sur la même tâche, passez le type de participant sur **Human participants**. Consultez [Résultats des participants humains](/fr/human-insights) et [Analyser vos résultats](/fr/analyze-results).
+
+<CardGroup cols={2}>
+  <Card title="Suivant : Transcriptions" icon="arrow-right" href="/fr/test-transcripts">
+    Suivez la session de chaque participant, étape par étape.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/fr/ask-ai">
+    Posez des questions sur vos résultats en langage naturel.
+  </Card>
+</CardGroup>

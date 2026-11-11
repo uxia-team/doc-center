@@ -1,0 +1,166 @@
+---
+title: "Webhooks: Testereignisse an Ihre Systeme senden"
+sidebarTitle: "Webhooks"
+description: "Erhalten Sie signierte HTTPS-Benachrichtigungen, wenn ein Test abgeschlossen oder eine Antwort von Teilnehmenden erfasst wird."
+---
+
+Webhooks benachrichtigen Ihre Systeme, wenn in Uxia etwas passiert. So müssen Sie nicht selbst nach Änderungen suchen.
+
+Webhooks sind im Custom-Plan verfügbar. Inhaberinnen und Inhaber der Organisation richten sie ein. [Kontaktieren Sie uns](mailto:hello@uxia.app), um sie für Ihre Organisation zu aktivieren.
+
+## Ereignisse
+
+| Ereignis | Wird gesendet, wenn |
+|---|---|
+| `test.completed` | Ein Durchlauf mit KI-Teilnehmenden erfolgreich abgeschlossen ist |
+| `test.response.recorded` | Eine teilnehmende Person (KI oder Mensch) einen Test abschließt |
+
+Tests mit Testlinks bleiben offen, solange Sie Antworten sammeln. Sie senden daher `test.response.recorded`, aber nicht `test.completed`.
+
+<Note>
+Antworten von KI-Teilnehmenden kommen gesammelt an, wenn der Durchlauf abgeschlossen ist. Antworten von menschlichen Teilnehmenden kommen innerhalb von etwa einer Minute an, nachdem die Person fertig ist.
+</Note>
+
+## Einen Endpunkt hinzufügen
+
+<Steps>
+  <Step title="Die Einstellungen der Organisation öffnen">
+    Rufen Sie die Seite Ihrer Organisation auf und öffnen Sie den Tab **Webhooks**.
+  </Step>
+  <Step title="Ihre URL hinzufügen">
+    Wählen Sie **Add endpoint**, geben Sie eine HTTPS-URL ein und wählen Sie die gewünschten Ereignisse und Workspaces. Lassen Sie alle Workspaces abgewählt, um Ereignisse aus allen Workspaces zu erhalten, auch aus neuen.
+  </Step>
+  <Step title="Das Signing Secret kopieren">
+    Bewahren Sie es sicher auf. Es wird nur einmal angezeigt.
+  </Step>
+  <Step title="Ein Testereignis senden">
+    Wählen Sie **Send test event**. Ihr Endpunkt erhält innerhalb von etwa einer Minute ein Ereignis `webhook.test`. Prüfen Sie, ob sich seine Signatur verifizieren lässt.
+  </Step>
+</Steps>
+
+Endpunkt-URLs müssen HTTPS auf Port 443 oder 8443 verwenden. Uxia blockiert private und interne Adressen und folgt keinen Weiterleitungen. Eine Organisation kann bis zu fünf Endpunkte haben.
+
+## Quell-IP-Adresse
+
+Anfragen kommen von einer festen IP-Adresse, die Sie in Ihrer Firewall freigeben können:
+
+```
+3.209.79.132
+```
+
+Die Freigabe dieser Adresse ist optional und ersetzt nicht die Prüfung der Signatur.
+
+## Was Uxia sendet
+
+Jede Anfrage ist ein JSON-`POST`. Die Payloads enthalten Kennungen und Status. Sie enthalten keine Namen, E-Mail-Adressen, Antworten oder Aufzeichnungen von Teilnehmenden.
+
+```json
+{
+  "id": "evt_6729f1c2a4b8e90012ab34ce",
+  "type": "test.response.recorded",
+  "version": 1,
+  "timestamp": "2026-11-13T14:02:11.000Z",
+  "organizationId": "66f0a1b2c3d4e5f6a7b8c9d0",
+  "workspaceId": "66f1a1b2c3d4e5f6a7b8c9d0",
+  "data": {
+    "testId": "6729f1c2a4b8e90012ab3400",
+    "responseId": "a3f1c9e2",
+    "participantType": "human",
+    "participantNumber": 12,
+    "testLinkId": "6729f1c2a4b8e90012ab3401",
+    "runId": null,
+    "outcome": "completed",
+    "finishedAt": "2026-11-13T14:02:11.000Z"
+  }
+}
+```
+
+```json
+{
+  "id": "evt_6729f1c2a4b8e90012ab34cd",
+  "type": "test.completed",
+  "version": 1,
+  "timestamp": "2026-11-13T14:02:11.000Z",
+  "organizationId": "66f0a1b2c3d4e5f6a7b8c9d0",
+  "workspaceId": "66f1a1b2c3d4e5f6a7b8c9d0",
+  "data": {
+    "testId": "6729f1c2a4b8e90012ab3400",
+    "testType": "unmoderated",
+    "runId": "6729f1c2a4b8e90012ab3402",
+    "outcome": "completed",
+    "startedAt": "2026-11-13T13:20:04.000Z",
+    "finishedAt": "2026-11-13T14:02:11.000Z",
+    "aiParticipantCount": 20,
+    "variantTestIds": []
+  }
+}
+```
+
+`outcome` ist `completed`, `partial` oder `abandoned` und gibt den Stand der Antwort zum Zeitpunkt des Ereignisses wieder. Ein Ereignis `test.response.recorded` bedeutet, dass die Antwort gespeichert ist. Ihre Aufzeichnung und Analyse werden unter Umständen noch verarbeitet.
+
+Eine menschliche teilnehmende Person kann als `abandoned` markiert werden, wenn sie inaktiv wird, und anschließend zurückkehren und den Test abschließen. Sie erhalten dann ein zweites Ereignis mit derselben `responseId`, einer anderen `webhook-id` und dem neuen `outcome`. Behandeln Sie das jüngste Ereignis zu einer `responseId` als aktuellen Stand.
+
+In jeder Payload können neue Felder hinzukommen. Ignorieren Sie daher Felder, die Sie nicht kennen. Breaking Changes erhalten eine neue `version`.
+
+## Die Signatur prüfen
+
+Uxia signiert jede Anfrage nach der Spezifikation [Standard Webhooks](https://www.standardwebhooks.com/). Sie können also eine der zugehörigen Bibliotheken verwenden oder die Signatur selbst prüfen. Prüfen Sie die Signatur immer, bevor Sie einer Anfrage vertrauen.
+
+| Header | Bedeutung |
+|---|---|
+| `webhook-id` | Eindeutige Ereignis-ID. Sie bleibt bei Wiederholungsversuchen gleich. |
+| `webhook-timestamp` | Zeitpunkt, zu dem dieser Versuch gesendet wurde, in Unix-Sekunden |
+| `webhook-signature` | Eine oder mehrere durch Leerzeichen getrennte Signaturen, jeweils als `v1,<base64>` |
+
+```js
+import crypto from 'node:crypto'
+
+function verify(rawBody, headers, secret) {
+  const id = headers['webhook-id']
+  const timestamp = headers['webhook-timestamp']
+  if (Math.abs(Date.now() / 1000 - Number(timestamp)) > 300) return false
+
+  const key = Buffer.from(secret.replace('whsec_', ''), 'base64')
+  const expected = crypto.createHmac('sha256', key)
+    .update(`${id}.${timestamp}.${rawBody}`)
+    .digest()
+
+  return headers['webhook-signature'].split(' ').some((entry) => {
+    const received = Buffer.from(entry.split(',')[1] ?? '', 'base64')
+    return received.length === expected.length && crypto.timingSafeEqual(received, expected)
+  })
+}
+```
+
+Prüfen Sie gegen den unveränderten Request-Body, bevor Sie das JSON parsen.
+
+<Warning>
+Jede Person mit einem Testlink kann eine Sitzung starten. Behandeln Sie ein Ereignis `test.response.recorded` deshalb als Hinweis. Prüfen Sie die Antwort in Uxia, bevor Sie darauf reagieren.
+</Warning>
+
+## Antworten und Wiederholungsversuche
+
+Geben Sie innerhalb von 10 Sekunden einen beliebigen `2xx`-Status zurück. Erledigen Sie langsamere Arbeit erst nach der Antwort.
+
+Erhält Uxia etwas anderes, wiederholt es die Zustellung bis zu sieben weitere Male über etwa 45 Stunden: nach 1 Minute, 5 Minuten, 30 Minuten, 2 Stunden, 6 Stunden, 12 Stunden und 24 Stunden. Danach wird die Zustellung als fehlgeschlagen markiert, und Sie können sie erneut senden.
+
+Dasselbe Ereignis kann mehrmals ankommen, und Ereignisse können in anderer Reihenfolge eintreffen. Nutzen Sie `webhook-id`, um Duplikate zu ignorieren.
+
+## Zustellungen prüfen
+
+Wählen Sie bei einem Endpunkt **View deliveries**, um seine Zustellungen der letzten 30 Tage zu sehen, einschließlich Statuscode und Dauer jedes Versuchs. Wählen Sie **Resend**, um eine Zustellung erneut zu senden. Sie behält dieselbe `webhook-id`, sodass Ihre Deduplizierung weiterhin funktioniert.
+
+## Das Signing Secret rotieren
+
+Wählen Sie **Rotate secret** und dann **Rotate**, um ein neues Secret zu erhalten. Uxia signiert 24 Stunden lang mit dem alten und dem neuen Secret, sodass Sie umstellen können, ohne Ereignisse zu verpassen. Wenn ein Secret offengelegt wurde, wählen Sie stattdessen **Rotate and expire now**.
+
+Das Erstellen, Ändern und Löschen eines Endpunkts sowie das Rotieren seines Secrets werden in Ihren [Audit-Logs](/de/account/security/sso) erfasst.
+
+<CardGroup cols={2}>
+  <Card title="Uxia MCP" icon="plug" href="/de/integrations/mcp">
+    Lesen Sie Testergebnisse aus Ihren KI-Tools.
+  </Card>
+  <Card title="Enterprise Auth" icon="shield" href="/de/integrations/enterprise-auth">
+    Richten Sie SSO, Provisionierung und Audit-Logs ein.
+  </Card>
+</CardGroup>

@@ -1,0 +1,53 @@
+---
+title: "Einschränkungen für KI-Teilnehmende in Uxia"
+sidebarTitle: "Einschränkungen für KI-Teilnehmende"
+description: "Steuern Sie, was KI-Teilnehmende erreichen und tun: ein Ziel pro Aufgabenblock, Tests in Staging und klar begrenzte Sitzungen."
+---
+
+KI-Teilnehmende sind die synthetischen Teilnehmenden, die Uxia auf Ihr Produkt ansetzt. Sie handeln ausschließlich auf den Zielen, die Sie ihnen vorgeben, und innerhalb der Grenzen des Tests, den Sie konfigurieren. Sie entscheiden, was sie erreichen können, welche Umgebung sie berühren und wie weit eine Sitzung gehen darf. Diese Seite beschreibt, mit welchen Einstellungen Sie KI-Teilnehmende eng begrenzen.
+
+## Teilnehmende handeln nur auf dem Ziel, das Sie konfigurieren
+
+Jeder Aufgabenblock läuft auf einem Ziel, das Sie vorgeben, und die Teilnehmenden bleiben innerhalb dieses Ziels.
+
+- **Ein Ziel pro Aufgabenblock.** Jeder Aufgabenblock läuft auf seiner eigenen URL, seinem eigenen Figma-Prototyp oder Medienprototyp. Teilnehmende navigieren nur auf diesem Ziel.
+- **Kein Abschweifen.** Teilnehmende crawlen nicht über Ihre Ziele hinaus, folgen keinen Links zu fremden Domains und rufen keine externen URLs auf, die Sie nicht konfiguriert haben.
+- **Begrenzte Auswirkungen.** Da eine Sitzung auf das Produkt beschränkt ist, das Sie testen möchten, sind Systeme oder Websites außerhalb dieses Rahmens nicht betroffen.
+
+## In Staging oder UAT testen
+
+Sie wählen die Umgebung, in der die Teilnehmenden laufen. So halten Sie jede Sitzung von der Produktionsumgebung fern.
+
+- **Sie wählen den Endpunkt.** Leiten Sie die Teilnehmenden auf eine Staging-, UAT- oder Pre-Production-URL, und das ist der einzige Ort, an dem sie agieren.
+- **Die Produktionsumgebung bleibt unberührt.** Da die Teilnehmenden nur in der von Ihnen angegebenen Umgebung handeln, bleiben Sitzungen beim Testen eines Nicht-Produktions-Builds von Live-Systemen und echten Nutzerdaten fern.
+- **Testdaten.** Für jeden Ablauf, der sensible Informationen liest oder schreibt, empfehlen wir Staging oder UAT mit vorbereiteten Testdaten, die nicht aus der Produktion stammen.
+
+## Begrenzen, was eine Sitzung tun kann
+
+Die [Aufgabe](/de/mission) und die [Abbruchbedingung](/de/stop-condition), die Sie in jedem Aufgabenblock festlegen, bestimmen, wie weit eine teilnehmende Person geht.
+
+- **Grenzen Sie die Aufgabe** auf die konkrete Aktion ein, die Sie beobachten möchten. Teilnehmende handeln, um diese Aufgabe zu erledigen, und tun nichts darüber hinaus.
+- **Legen Sie eine Abbruchbedingung fest**, die die Sitzung an einem Punkt Ihrer Wahl beendet. Wenn Teilnehmende keine Aktion ausführen sollen, die Daten schreibt (ein Formular absenden, eine Bestellung aufgeben, eine Einstellung ändern), beenden Sie die Sitzung vor diesem Schritt, zum Beispiel auf dem Überprüfungs- oder Bestätigungsbildschirm.
+- **Die Interaktion bleibt auf dem Ziel.** Teilnehmende füllen Formulare nur im getesteten Produkt aus und senden sie nur dort ab, und nur, wenn die Aufgabe es erfordert. Sie senden niemals Daten an externe Websites.
+
+## Einen Test rein beobachtend halten
+
+Wenn Teilnehmende sich umsehen, aber keine Änderungen festschreiben sollen:
+
+- Gestalten Sie die Aufgabe rund um Navigation und Bewertung statt um den Abschluss eines Transaktionsschritts, und verwenden Sie eine Abbruchbedingung, die vor jeder Absende- oder Bestätigungsaktion endet.
+- Wenn ein Ablauf tatsächlich Daten schreiben muss (Warenkörbe, Buchungen, Registrierungen, Einstellungen), geben Sie jeder teilnehmenden Person ein eigenes Konto, damit die Sitzungen getrennt bleiben und sich nie in die Quere kommen. Siehe [Zugangsdaten für Teilnehmende](/de/tester-credentials).
+
+## Zugangsdaten und Dateien begrenzen
+
+- **Zugangsdaten** für geschützte Abläufe sind auf den Test beschränkt, dem sie hinzugefügt wurden, und werden im Ruhezustand verschlüsselt. Sie werden nie an das KI-Modell gesendet: Sie werden sicher in die Browsersitzung eingespeist und direkt in die passenden Felder eingegeben. Verwenden Sie eigens dafür angelegte Testkonten und ändern oder entfernen Sie sie nach einem Durchlauf. Siehe [Zugangsdaten für Teilnehmende](/de/tester-credentials).
+- **Dateien**, die Sie für Upload-Schritte bereitstellen, sind auf den Test beschränkt. Die KI-teilnehmende Person sieht nur den Namen und den Typ jeder Datei; der Browser hängt die Datei selbst an. Verwenden Sie synthetische statt echter Dokumente. Siehe [Dateien für Teilnehmende](/de/tester-files).
+
+## Volle Transparenz über jede Aktion
+
+Für jede KI-teilnehmende Person entsteht ein schrittweises Transkript darüber, was sie gesehen, welche Entscheidungen sie getroffen und welche Aktionen sie in der Sitzung ausgeführt hat. Sie können genau nachvollziehen, was wo passiert ist. Siehe [Testtranskripte](/de/test-transcripts).
+
+Wie Uxia die Daten eines Tests speichert und schützt, erfahren Sie unter [Datenschutz](/de/account/security/data-privacy).
+
+<Card title="Weiter: Datenschutz" icon="lock" href="/de/account/security/data-privacy">
+  Wie Uxia die Daten eines Tests speichert und schützt.
+</Card>

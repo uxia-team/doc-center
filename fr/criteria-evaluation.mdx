@@ -1,0 +1,90 @@
+---
+title: "Évaluation des critères"
+description: "Consultez les résultats de la vérification de l'accessibilité frame par frame, filtrez les critères WCAG et traitez corrections et vérifications manuelles."
+---
+
+Une fois l'audit terminé, ouvrez la phase **Analyze** et sélectionnez le bloc de vérification de l'accessibilité dans la barre latérale. Le bloc comporte deux onglets : **Results**, présenté ici, et [**Vision Simulation**](/fr/vision-simulation).
+
+## Choisir un frame
+
+Les miniatures de vos frames s'affichent en haut. Cliquez sur l'une d'elles pour la sélectionner ; la synthèse et le tableau n'affichent alors que les résultats de ce frame. Cliquez de nouveau sur la miniature sélectionnée pour ouvrir un aperçu plus grand.
+
+Si un frame n'est pas une interface numérique, Uxia l'ignore et affiche une bannière à la place des résultats : **Photograph Detected**, **Artwork Detected**, **Document Detected** ou **Non-UI Content Detected**.
+
+## La carte de synthèse
+
+La carte de synthèse, dans l'en-tête du bloc, affiche **Conformance Level Tested**, par exemple *A & AA*, suivi de trois compteurs :
+
+| Statut | Signification |
+|---|---|
+| **Passed** | Le critère est respecté, ou ne s'applique pas à ce frame |
+| **Failed** | Le critère n'est pas respecté |
+| **Review** | Une personne doit vérifier le critère pour confirmer la conformité |
+
+Cliquez sur un compteur pour filtrer le tableau selon ce statut. Cliquez de nouveau dessus pour supprimer le filtre. L'icône d'information à côté des compteurs indique combien d'éléments Failed et Review relèvent de chaque **Review Scope**. Lorsque tous les critères du frame sont respectés, la carte affiche **Fully Compliant** à la place.
+
+## Filtrer les critères
+
+Au-dessus du tableau :
+
+- **Search success criteria...** trouve des critères par code, nom, niveau ou catégorie.
+- **Status** filtre par Passed, Failed ou Review.
+- **Review Scope** filtre par **Design** ou **Code**.
+- **Level** filtre par A, AA ou AAA.
+
+Le compteur à droite affiche **Showing X of Y criteria**. Lorsque des filtres sont actifs, la carte de synthèse ne compte que les critères correspondants.
+
+## Lire le tableau
+
+| Colonne | Ce qu'elle affiche |
+|---|---|
+| **WCAG Code** | Le numéro du critère, par exemple 1.4.3 |
+| **Success Criterion** | Son nom, par exemple Contrast (Minimum) |
+| **WCAG Level** | A, AA ou AAA |
+| **Category** | Le principe WCAG : Perceivable, Operable, Understandable ou Robust |
+| **Status** | Passed, Failed ou Review |
+| **Review Scope** | Où se situe le problème ou la correction, pour les éléments Failed et Review |
+
+**Review Scope** vous indique qui doit agir. **Design** signifie que le problème ou la correction se situe au niveau du design : mise en page, contraste, textes, dimensions. **Code** signifie qu'il se situe dans l'implémentation : sémantique, libellés, comportement au clavier. Certains critères nécessitent une vérification dans les deux.
+
+## Ouvrir un critère
+
+Cliquez sur une ligne, ou sur **See More**, pour ouvrir le panneau **Success criterion details**. Il affiche :
+
+- Une description du critère en langage clair, avec son statut, son niveau, son périmètre et sa catégorie.
+- Le frame. Si Uxia a localisé les éléments concernés, activez **Show Affected Elements** pour les entourer. Cliquez sur le frame pour l'agrandir.
+- **How To Fix** pour un critère Failed, **How To Verify** pour un critère en Review, ou **Guidance** pour un critère respecté. Lorsqu'elles sont disponibles, les **Findings:** d'Uxia pour ce frame apparaissent en premier.
+- Une **Checklist** des étapes pour corriger ou vérifier le critère.
+- Un **Contrast Checker** pour les critères de contraste (1.4.3, 1.4.6 et 1.4.11). Prélevez dans le frame la couleur du texte ou de l'élément et la couleur d'arrière-plan, ou saisissez leurs codes hexadécimaux. Le vérificateur affiche le rapport de contraste, **Pass** ou **Fail**, et le rapport requis.
+- **WCAG Criteria**, qui ouvre l'explication du critère par le W3C.
+
+<Tip>
+  Le Contrast Checker applique l'exigence relative au texte de taille normale. Le texte de grande taille ne requiert qu'un rapport de 3:1 au niveau AA et de 4,5:1 au niveau AAA.
+</Tip>
+
+## Marquer des critères comme respectés
+
+Une fois que vous avez vérifié vous-même un élément Failed ou Review, marquez-le comme respecté de l'une des façons suivantes :
+
+- Cliquez sur **Mark as Passed** dans la ligne du tableau ou dans le panneau.
+- Cochez tous les éléments de la **Checklist** du panneau. Uxia le confirme avec *"All verification items completed. Success criteria passed!"*
+
+Le critère s'affiche alors comme **Manually Verified** dans le panneau. Pour annuler, cliquez sur **Reset Status**. Les modifications manuelles s'appliquent uniquement au frame sélectionné et sont enregistrées avec les résultats.
+
+<Tip>
+  Traitez les résultats comme une checklist. Réglez d'abord les éléments **Failed**, puis répartissez les éléments **Review** entre designers et développeurs grâce aux étiquettes de périmètre.
+</Tip>
+
+## Partager et discuter des résultats
+
+- Les personnes qui ouvrent un [lien de partage des résultats](/fr/share-and-export) voient les mêmes résultats, en lecture seule. Elles ne peuvent ni marquer des critères ni cocher la checklist.
+- Le rapport PDF (forfaits Pro et Custom) peut inclure l'audit. Par défaut, il répertorie les éléments Failed et Review.
+- [Ask AI](/fr/ask-ai) peut répondre à des questions sur l'audit et renvoyer vers des critères précis. Cliquez sur la carte d'un critère pour en ouvrir le détail.
+
+<Note>
+  **Fully Compliant** signifie que tous les critères évalués par Uxia sont respectés pour ce frame. Il ne s'agit ni d'un audit juridique ni d'une certification.
+</Note>
+
+<Card title="Suivant : Simulation de la vision" icon="arrow-right" href="/fr/vision-simulation">
+  Découvrez comment vos frames résistent à différents troubles de la vision.
+</Card>

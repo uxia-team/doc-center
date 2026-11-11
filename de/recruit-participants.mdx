@@ -1,0 +1,83 @@
+---
+title: "Teilnehmende rekrutieren"
+sidebarTitle: "Übersicht"
+description: "Wählen Sie KI-Teilnehmende, Testlinks oder ein menschliches Panel und starten Sie den Test. Erfahren Sie, was die Testprüfung vor dem Start prüft."
+---
+
+In der Phase **Recruit** legen Sie fest, wer Ihren Test absolviert. Um sie zu öffnen, klicken Sie in Build auf **Start recruiting**. Uxia prüft zuerst Ihre Blöcke; fehlt ein Pflichtfeld, gelangen Sie stattdessen zum ersten Problem. Der Schritt **Recruit** in der Kopfzeile bleibt deaktiviert, bis Ihr Test mindestens einen Block enthält.
+
+Wenn Sie aus Build kommen, öffnet sich zuerst die Ansicht für KI-Teilnehmende. Wenn Sie nur mit Menschen testen möchten, klicken Sie auf **Recruit human participants only**, um zu den Rekrutierungsmethoden zu gelangen.
+
+## Rekrutierungsmethode wählen
+
+| Methode | Was sie leistet | Kosten | Pläne |
+|---|---|---|---|
+| [**AI participants**](/de/ai-participants) | Führen Sie Ihre Tests mit synthetischen Teilnehmenden aus Ihren [Zielgruppen](/de/audiences/overview) durch. | Credits, pro Block | Alle Pläne |
+| [**Test links**](/de/test-links) | Senden Sie einen Link an Ihre eigenen Kontakte, über jeden Kanal, den Sie nutzen. | 0 Credits | Kostenpflichtige Pläne |
+| [**Human panel**](/de/human-panel) | Fordern Sie vorab ausgewählte Teilnehmende für Ihren Test an. Unser Team meldet sich mit einem Preisangebot bei Ihnen. | Preis nach Absprache mit unserem Team | Kostenpflichtige Pläne |
+
+Sie können mehrere Methoden im selben Test kombinieren. Führen Sie zum Beispiel KI-Teilnehmende für schnelles Feedback durch und teilen Sie einen Testlink mit Ihren Kunden. Jede Methode erhält eine eigene Zeile in der Zusammenfassung, und KI- und menschliche Ergebnisse werden in [Analyze](/de/analyze-results) getrennt gehalten.
+
+<Note>
+  Im Free-Plan sind Testlinks und das menschliche Panel gesperrt. Wenn Sie eine dieser Optionen auswählen, öffnet sich **Upgrade to recruit human participants**.
+</Note>
+
+## Zusammenfassung
+
+Unterhalb der Methodenkarten listet **Summary** jede Methode auf, die Sie begonnen haben, mit **Participants**, **Audiences / links**, **Status** und **Credits**. Solange Sie keine begonnen haben, steht dort *"Choose from the methods above to start collecting insights."*
+
+- **AI participants** wechseln von **Not launched** über **Checking test setup** und **Processing** zu **Completed** oder **Failed**. Unter Credits sehen Sie die Kosten des Durchlaufs.
+- **Test links** zeigen **Active** oder **Stopped**, die Anzahl der abgeschlossenen Sitzungen und **0 credits**.
+- **Human panel** zeigt **Requested** und **Pricing by our team**.
+
+Jede Zeile hat einen Link **Go to analyze**. In der Fußzeile sehen Sie **Total credits** und **Credits after test**. In kostenpflichtigen Plänen klicken Sie in der Zeile der KI-Teilnehmenden auf die Credits, um die Kosten jedes Blocks zu sehen.
+
+### Tests nur mit Barrierefreiheitsprüfung
+
+Eine [Barrierefreiheitsprüfung](/de/accessibility-block) braucht keine Teilnehmenden. Ist sie der einzige Block in Ihrem Test, zeigt Recruit *"This test only contains an accessibility block, so recruiting testers is not necessary."* Die Methodenkarten sind deaktiviert, und die Zusammenfassung zeigt die Kosten pro Frame (10 Credits pro Frame). Klicken Sie auf **Go to analyze**, um die Prüfung auszuführen.
+
+## Starten
+
+- **KI-Teilnehmende** beginnen, wenn Sie nach einer kurzen Testprüfung auf **Launch test** klicken.
+- **Testlinks** sammeln Antworten, sobald Sie sie erstellen, ohne Start oder Prüfung.
+- Anfragen für ein **menschliches Panel** gehen an unser Team, wenn Sie auf **Send Request** klicken.
+
+Nach dem Start der KI-Teilnehmenden sind die Blöcke und Zielgruppen des Tests gesperrt. Sie können für denselben Test aber weiterhin Testlinks erstellen.
+
+## Testprüfung
+
+Ergebnisse sind nur so gut wie das Setup dahinter. Eine vage Aufgabe, ein Platzhalter-Szenario oder ein unbrauchbarer Screen schwächen jede nachfolgende Erkenntnis. Deshalb prüft Uxia Ihren Test, bevor KI-Teilnehmende beginnen.
+
+<Steps>
+  <Step title="Testsetup wird geprüft">
+    Ein Dialog mit dem Titel **Checking test setup…** listet jeden Block auf. Jeder wechselt von **Checking…** zu **Complete** oder zu **Needs changes**, wenn Uxia ein Problem findet.
+  </Step>
+  <Step title="Freigegeben">
+    Besteht jeder Block die Prüfung, sehen Sie **Test confidence approved** und *"Everything is ready. Starting your test…"*. Die KI-Teilnehmenden beginnen, und die Zusammenfassung zeigt ihren Fortschritt.
+  </Step>
+  <Step title="Probleme gefunden">
+    Muss etwas überarbeitet werden, listet der Dialog **Test review** *"Some issues to fix before launching:"* nach Block auf. Klicken Sie auf **Fix in Build**, um mit hervorgehobenen betroffenen Blöcken zu Build zurückzukehren, oder auf **Cancel**, um in Recruit zu bleiben. Es wird nichts ausgeführt, und die Credits für den Start werden zurückerstattet.
+  </Step>
+</Steps>
+
+Was die Prüfung kontrolliert:
+
+| Block | Prüfungen |
+|---|---|
+| [Aufgabe](/de/task-block) | [Aufgabe](/de/mission), [Szenario](/de/test-scenario) und [Abbruchbedingung](/de/stop-condition) sind vorhanden und aussagekräftig, kein Platzhaltertext. Eine Live-Website hat eine gültige URL. Prototyp-Screens sind unterstützte Bilder, klar genug zum Testen und stimmig mit den Anweisungen. |
+| [Umfrage](/de/survey-block) | Jede Frage und jede Antwortoption ist verständlicher Text. |
+| [Barrierefreiheitsprüfung](/de/accessibility-block) | Jeder Frame ist ein PNG-, JPEG-, WebP- oder GIF-Bild, das eine Benutzeroberfläche zeigt. |
+| [Card Sorting](/de/card-sorting), Benchmarks | Werden nicht geprüft. |
+
+<Tip>
+  Eine bestandene Prüfung bedeutet, dass Ihr Setup brauchbar ist, nicht dass es perfekt ist. Formulieren Sie die Aufgabe als eine konkrete Handlung und das Szenario als Motivation der teilnehmenden Person. Je klarer das Briefing, desto mehr können Sie dem vertrauen, was Teilnehmende daraus machen.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="KI-Teilnehmende" icon="bot" href="/de/ai-participants">
+    Zielgruppen auswählen, Anzahl der Teilnehmenden festlegen und starten.
+  </Card>
+  <Card title="Ergebnisse analysieren" icon="chart-bar" href="/de/analyze-results">
+    Verfolgen Sie die Ergebnisse, während sie eintreffen.
+  </Card>
+</CardGroup>

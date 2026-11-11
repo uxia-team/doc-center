@@ -1,0 +1,85 @@
+---
+title: "Bloc de vérification de l'accessibilité"
+sidebarTitle: "Vue d'ensemble"
+description: "Auditez vos écrans selon les WCAG 2.2 de niveau AA ou AAA dès la phase de design. Aucun participant nécessaire."
+---
+
+Le bloc **Accessibility check** audite vos écrans selon les WCAG 2.2 avant même que vous n'écriviez de code. Vous importez vos écrans et choisissez un niveau de conformité cible. Uxia vérifie ensuite chaque écran, critère par critère. Il signale ce qui est conforme, ce qui ne l'est pas et ce qui nécessite une vérification humaine, et il indique pour chaque problème s'il relève probablement d'une correction de design ou de code.
+
+Comme l'audit porte sur des écrans statiques et non sur une version en ligne, vous détectez les problèmes d'accessibilité dès la phase de design. C'est là qu'ils coûtent le moins cher à corriger, plutôt que tardivement en QA ou après le lancement.
+
+## Ce qui est vérifié
+
+- **Les critères de succès des WCAG 2.2** au niveau AA ou AAA. Les niveaux sont cumulatifs : un audit AA couvre donc aussi le niveau A. Consultez [Niveau de conformité WCAG](/fr/wcag-conformance-level).
+- **Les quatre principes des WCAG** : perceptible, utilisable, compréhensible et robuste. Cela inclut le contraste, les alternatives textuelles, la taille des cibles tactiles, la visibilité du focus et les libellés.
+- **La prise en charge de la basse vision**, avec une [simulation de la vision](/fr/vision-simulation) qui montre chaque écran tel qu'il est perçu en cas de daltonisme, de vision floue ou de perte du champ visuel.
+- **Le périmètre design et code**. Certains critères ne peuvent pas être confirmés à partir d'une capture d'écran, comme le comportement au clavier. Uxia les marque comme à vérifier et leur attribue l'étiquette **Code** pour que vos développeurs puissent les contrôler.
+
+## Quand l'utiliser
+
+**Revue de design avant le développement.** Auditez les écrans avant la passation, afin que les problèmes d'accessibilité apparaissent pendant le design plutôt qu'en QA ou après la mise en production du code.
+
+**Répartition du travail entre designers et développeurs.** Chaque problème à traiter porte l'étiquette **Design** ou **Code**. Les deux équipes disposent d'une checklist commune et d'une manière claire de se répartir le travail.
+
+**Revues de conformité.** Vérifiez vos écrans selon une norme reconnue : AA comme socle légal courant, ou AAA lorsque vous visez la couverture la plus complète.
+
+**Suivi des progrès dans le temps.** Auditez les écrans mis à jour après les corrections et observez l'évolution favorable des compteurs Passed, Failed et Review.
+
+## Ajouter le bloc
+
+<Steps>
+  <Step title="Ouvrez le sélecteur de blocs">
+    Dans la phase **Build**, ouvrez **Add a block**. Sous **Audits**, choisissez **Accessibility check**.
+  </Step>
+  <Step title="Choisissez un niveau de conformité">
+    Conservez **Recommended** (AA) ou passez à **Advanced** (AAA). Consultez [Niveau de conformité WCAG](/fr/wcag-conformance-level).
+  </Step>
+  <Step title="Ajoutez vos frames">
+    Importez jusqu'à 5 écrans sous forme de captures d'écran (PNG, JPEG, WebP ou GIF). Vous pouvez ajouter l'URL en ligne de chaque écran pour des vérifications supplémentaires au niveau du code. Consultez [Frames](/fr/frame-upload).
+  </Step>
+  <Step title="Lancez l'audit">
+    Cliquez sur **Start recruiting**. Si le test ne contient aucun autre bloc, vous lancez l'audit directement depuis le récapitulatif de la phase Recruit. Consultez [Lancer l'audit](/fr/frame-upload#lancer-l’audit).
+  </Step>
+</Steps>
+
+## Limites et crédits
+
+| | Forfait Free | Forfaits payants (Starter, Pro, Custom) |
+|---|---|---|
+| Bloc de vérification de l'accessibilité | Non disponible | 1 par test |
+| Frames | Non disponible | Jusqu'à 5 par test, 100 Mo chacun |
+| Coût | Non disponible | 10 crédits par frame |
+
+- Avec le forfait Free, le bloc affiche un badge **Upgrade** dans le sélecteur. Cliquer dessus ouvre la boîte de dialogue des forfaits **Upgrade to use accessibility**.
+- Un test ne peut contenir qu'un seul bloc de vérification de l'accessibilité. Une fois que vous en avez ajouté un, il est désactivé dans le sélecteur. Vous ne pouvez pas non plus dupliquer le bloc.
+- Le coût dépend uniquement du nombre de frames. Par exemple, un audit de 4 écrans coûte 40 crédits, quels que soient les participants du test.
+- Dans un test avec des [variantes A/B](/fr/ab-variants), le coût par frame s'applique à chaque variante.
+
+## L'associer à d'autres blocs
+
+Une vérification de l'accessibilité peut figurer dans le même test que des blocs de tâche, d'enquête et de tri de cartes. Elle ne nécessite aucun participant :
+
+- **Participants IA.** L'audit s'exécute lorsque vous lancez les participants IA. Ses crédits par frame s'ajoutent au total du lancement.
+- **Participants humains.** Les participants qui rejoignent le test via un [lien de test](/fr/test-links) ou le [panel humain](/fr/human-panel) ignorent ce bloc. Si vous ne recrutez que des participants humains, l'audit ne s'exécute pas.
+- **Accessibilité uniquement.** Si le test ne contient aucun autre bloc, il n'y a personne à recruter. La phase Recruit vous l'indique, et vous lancez l'audit depuis son récapitulatif.
+
+Les résultats apparaissent dans la phase **Analyze** sous la forme d'un bloc distinct, à côté de vos autres résultats.
+
+<Note>
+  Uxia vous aide à détecter les problèmes tôt, mais ne remplace pas un audit d'accessibilité juridique formel, l'examen d'un spécialiste ni une certification.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Niveau de conformité WCAG" icon="gauge" href="/fr/wcag-conformance-level">
+    Choisissez entre AA et AAA.
+  </Card>
+  <Card title="Frames" icon="image" href="/fr/frame-upload">
+    Importez les écrans qu'Uxia va auditer.
+  </Card>
+  <Card title="Évaluation des critères" icon="list-checks" href="/fr/criteria-evaluation">
+    Consultez les résultats critère par critère.
+  </Card>
+  <Card title="Simulation de la vision" icon="eye" href="/fr/vision-simulation">
+    Visualisez vos écrans selon différents troubles de la vision.
+  </Card>
+</CardGroup>

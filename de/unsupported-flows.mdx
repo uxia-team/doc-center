@@ -1,0 +1,64 @@
+---
+title: "Flows, die KI-Teilnehmende nicht abschließen können"
+sidebarTitle: "Nicht unterstützte Flows"
+description: "Social Logins, Verifizierungscodes und Bot-Schutz stoppen KI-Teilnehmende. Sehen Sie, welche Warnungen Uxia zeigt und wie Sie jeden Fall umgehen."
+---
+
+KI-Teilnehmende navigieren wie echte Nutzende, aber einige Schritte hängen von Dingen ab, auf die sie keinen Zugriff haben: einem Drittanbieterkonto, einem Posteingang oder Telefon oder einer Website, die automatisierte Browser blockiert. Planen Sie diese Schritte vor dem Start ein. Sonst bleiben die Teilnehmenden hängen, und Ihre Ergebnisse zeigen Reibung, die gar nicht in Ihrem Design liegt.
+
+Bei Live-Website- und Figma-Prototyp-Aufgaben warnt Uxia Sie unter dem Feld **Task**, wenn Ihr Text einen dieser Flows erwähnt. Klicken Sie in einer Warnung auf **Learn more**, um eine kurze Anleitung zu öffnen: *Flows Not Supported by AI Participants*. Diese Seite behandelt dieselben Fälle ausführlicher.
+
+## Social Logins
+
+> Warning: social login detected in this task. AI participants will fail on social authentication unless it is a Figma prototype flow. Use email/password authentication.
+
+Anmeldeverfahren über Drittanbieter wie "Mit Google anmelden" oder Single Sign-on öffnen externe Pop-ups und Weiterleitungen, die KI-Teilnehmende nicht zuverlässig vollständig durchlaufen können.
+
+**So umgehen Sie das:**
+
+- Legen Sie ein Testkonto an, das sich mit E-Mail-Adresse und Passwort anmeldet, und fügen Sie es über **+ Add credentials** hinzu. Siehe [Zugangsdaten für Teilnehmende](/de/tester-credentials).
+- Formulieren Sie die Aufgabe rund um diesen Login, zum Beispiel "Melden Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passwort an und …".
+
+In einer Figma-Prototyp-Aufgabe ist eine Social-Login-Schaltfläche nur ein weiterer Screen des Prototyps, sodass die Teilnehmenden einfach durchklicken können.
+
+## Verifizierungscodes
+
+> Warning: sign-up/register flow detected in this task. Make sure the flow does not require verification codes, validation emails, or 2FA because AI participants cannot complete those steps.
+
+E-Mail- oder SMS-Codes, 2FA-Codes und Einmalpasswörter setzen einen Posteingang oder ein Gerät voraus, auf das die Teilnehmenden keinen Zugriff haben. Dasselbe gilt für CAPTCHAs. Die Warnung erscheint immer, wenn die Aufgabe eine Registrierung, eine Neuanmeldung oder das Erstellen eines Kontos erwähnt. Wenn Ihr Flow keinen Verifizierungsschritt hat, können Sie sie ignorieren.
+
+**So umgehen Sie das:**
+
+- Testen Sie in einer Staging-Umgebung, in der E-Mail-Verifizierung, 2FA und CAPTCHA für Testkonten deaktiviert sind.
+- Beginnen Sie die Aufgabe nach der Registrierung: Geben Sie den Teilnehmenden über [Zugangsdaten](/de/tester-credentials) ein bestehendes Testkonto und testen Sie, was danach kommt.
+- Beenden Sie den Durchlauf vor dem Verifizierungsschritt mit einer [Abbruchbedingung](/de/stop-condition), etwa "Stoppen Sie, wenn Sie nach einem Verifizierungscode gefragt werden."
+
+## Anweisungen zum lauten Denken und zum Feedback
+
+> Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
+
+KI-Teilnehmende teilen in jeder Sitzung ohnehin ihre Gedanken und Reaktionen. Anweisungen wie "denken Sie laut", "teilen Sie Ihren ersten Eindruck" oder "sagen Sie uns, was Sie denken" werden in der Aufgabe oder der Abbruchbedingung vor dem Testlauf entfernt.
+
+**So umgehen Sie das:**
+
+- Entfernen Sie die Anweisung und konzentrieren Sie die [Aufgabe](/de/mission) auf die Handlung.
+- Um Meinungen einzuholen, fügen Sie nach der Aufgabe einen [Umfrageblock](/de/survey-block) hinzu.
+
+## Bot-Schutz und verweigerter Zugriff
+
+Manche Websites blockieren automatisierte Browser mit Anti-Bot-Maßnahmen oder einer Seite mit verweigertem Zugriff.
+
+- **Beim Hinzufügen des Links.** Erkennt Uxia einen Bot-Schutz, zeigt der Link-Dialog *"This live page may not be navigable by testers."* an, und Sie können den Link nicht speichern. Klicken Sie auf **Contact us**. Wir geben Ihrem IT-Team dann eine Anleitung, wie es die KI-Teilnehmenden von Uxia auf eine Whitelist setzt. Siehe [Live-Website- und Figma-Links](/de/source#bot-schutz).
+- **Während des Durchlaufs.** Blockiert eine Website eine KI-teilnehmende Person mitten in der Sitzung, wird diese Person im Transkript mit **Drop-off | Access denied** markiert.
+- **Wenn alle KI-Teilnehmenden blockiert werden**, kann der Test nicht abgeschlossen werden, und 80 % seiner Credits werden Ihrer Organisation erstattet. Ein Banner in den Ergebnissen bestätigt die Erstattung.
+
+Wie Sie KI-Teilnehmende auf Ihr Ziel beschränken und von Produktionsdaten fernhalten, lesen Sie unter [Einschränkungen für KI-Teilnehmende](/de/account/security/ai-participant-restrictions).
+
+<CardGroup cols={2}>
+  <Card title="Zugangsdaten für Teilnehmende" icon="key" href="/de/tester-credentials">
+    Geben Sie KI-Teilnehmenden Logins mit E-Mail-Adresse und Passwort für geschützte Flows.
+  </Card>
+  <Card title="Einschränkungen für KI-Teilnehmende" icon="shield-check" href="/de/account/security/ai-participant-restrictions">
+    Steuern Sie, was KI-Teilnehmende erreichen und tun können.
+  </Card>
+</CardGroup>

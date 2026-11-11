@@ -1,0 +1,44 @@
+---
+title: "Niveau de conformité WCAG"
+description: "Choisissez si la vérification de l'accessibilité audite vos écrans selon les WCAG 2.2 de niveau AA ou de niveau AAA."
+---
+
+Le niveau de conformité détermine les critères de succès des WCAG 2.2 selon lesquels Uxia vérifie vos écrans. Vous le choisissez dans le champ **WCAG Conformance Level**, en haut du [bloc de vérification de l'accessibilité](/fr/accessibility-block).
+
+## Les deux options
+
+| Option | Niveau | En bref | Quand l'utiliser |
+|---|---|---|---|
+| **Recommended** (par défaut) | AA | Traite les obstacles les plus courants | Référence du secteur et socle légal. Exigé par la plupart des réglementations sur l'accessibilité (UE, États-Unis, Royaume-Uni, etc.). |
+| **Advanced** | AAA | Niveau de couverture de l'accessibilité le plus élevé | Idéal pour des expériences inclusives. Rarement exigé par la loi. |
+
+Cliquez sur une option pour la sélectionner. La ligne sous les options explique le niveau choisi. **Learn more** ouvre la présentation des WCAG du W3C dans un nouvel onglet.
+
+## Les niveaux sont cumulatifs
+
+Les WCAG définissent trois niveaux : A, AA et AAA. Chaque critère appartient à un seul niveau, et chaque niveau inclut ceux qui lui sont inférieurs :
+
+- Un audit **AA** vérifie tous les critères des niveaux A et AA.
+- Un audit **AAA** vérifie tous les critères des niveaux A, AA et AAA.
+
+Les résultats indiquent ce qui a été vérifié dans la carte de synthèse, par exemple **Conformance Level Tested: A & AA**. Vous pouvez aussi filtrer les résultats par **Level** pour vous concentrer sur un niveau à la fois. Consultez [Évaluation des critères](/fr/criteria-evaluation).
+
+## Quel niveau choisir
+
+**Choisissez AA pour la plupart des produits.** C'est le niveau auquel renvoient la plupart des lois et politiques en matière d'accessibilité, et celui que visent la plupart des équipes. Laissez **Recommended** sélectionné, sauf si votre équipe a explicitement besoin du niveau AAA.
+
+**Choisissez AAA lorsque vous visez plus haut.** Sélectionnez **Advanced** lorsque vous concevez l'expérience la plus inclusive possible, ou lorsque vous suivez une norme interne plus stricte. Attendez-vous à davantage d'éléments **Failed** et **Review** : certains critères AAA sont difficiles à respecter pour tous les types de contenus, ce qui explique pourquoi la loi exige rarement le niveau AAA.
+
+<Tip>
+  Les WCAG 2.2 s'appuient sur les WCAG 2.1. Les écrans conformes aux WCAG 2.2 à un niveau donné le sont aussi aux WCAG 2.1 à ce même niveau : un audit 2.2 reste donc valable lorsqu'une réglementation fait référence à la version 2.1.
+</Tip>
+
+## Bon à savoir
+
+- Le niveau ne modifie pas le coût. Le bloc coûte 10 crédits par frame, quel que soit le niveau.
+- Vous pouvez changer de niveau à tout moment pendant la construction du test. Le niveau est figé une fois le test lancé.
+- La vérification ne vous indique pas quelle loi s'applique à votre produit. Confirmez vos obligations légales auprès de votre équipe juridique ou conformité.
+
+<Card title="Suivant : Frames" icon="arrow-right" href="/fr/frame-upload">
+  Ajoutez les écrans qu'Uxia va auditer.
+</Card>

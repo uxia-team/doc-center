@@ -1,0 +1,93 @@
+---
+title: "Connecter Uxia à Microsoft Copilot via MCP"
+sidebarTitle: "Microsoft Copilot"
+description: "Ajoutez Uxia à un agent Copilot Studio via MCP, puis utilisez-le dans Microsoft 365 Copilot et Teams pour créer des tests et lire les résultats."
+---
+
+Microsoft Copilot se connecte aux serveurs MCP via les agents que vous créez dans [Microsoft Copilot Studio](https://copilotstudio.microsoft.com). Ajoutez Uxia comme outil d'un agent Copilot Studio : vous pourrez ensuite utiliser cet agent dans Microsoft 365 Copilot et Microsoft Teams pour créer des tests, suivre leur avancement et intégrer les résultats d'Uxia à vos conversations.
+
+## Avant de commencer
+
+Vous avez besoin des éléments suivants :
+
+- Un compte Uxia. Les crédits et les [limites de forfait](/fr/account/plans-and-credits) de votre espace de travail s'appliquent à tout ce que Copilot crée ou lance.
+- Un accès à Copilot Studio, avec l'autorisation de créer ou de modifier un agent.
+- Pour utiliser l'agent dans Microsoft 365 Copilot, une licence Microsoft 365 Copilot.
+
+<Note>
+  Copilot Studio se connecte aux serveurs MCP via des connecteurs Power Platform. Si votre organisation applique des politiques de données aux connecteurs, votre administrateur devra peut-être autoriser la connexion à Uxia.
+</Note>
+
+## Ajouter Uxia à votre agent
+
+<Steps>
+  <Step title="Ouvrez l'assistant d'intégration MCP">
+    Dans Copilot Studio, ouvrez votre agent et accédez à sa page **Tools**. Sélectionnez **Add a tool**, puis **New tool**, puis **Model Context Protocol**.
+  </Step>
+  <Step title="Saisissez les informations du serveur Uxia">
+    Remplissez les champs obligatoires :
+
+    | Champ | Valeur |
+    | --- | --- |
+    | **Server name** | `Uxia` |
+    | **Server description** | `Creates and launches Uxia usability tests, manages audiences, and reads test results, insights, and transcripts.` |
+    | **Server URL** | `https://platform.uxia.app/api/mcp-v2/mcp` |
+
+    Copilot s'appuie sur la description pour décider quand appeler Uxia : veillez donc à ce qu'elle soit claire et précise.
+  </Step>
+  <Step title="Configurez l'authentification">
+    Sélectionnez **OAuth 2.0** comme type d'authentification et **Dynamic discovery** comme type OAuth 2.0. Uxia prend en charge l'enregistrement dynamique des clients : vous n'avez donc rien d'autre à remplir. Sélectionnez **Create**, puis **Next**.
+  </Step>
+  <Step title="Connectez Uxia et ajoutez-le à l'agent">
+    Dans la boîte de dialogue **Add tool**, sélectionnez **Create a new connection**. Une fenêtre de navigateur s'ouvre : connectez-vous à Uxia et cliquez sur **Authorize**. Sélectionnez ensuite **Add to agent**.
+  </Step>
+  <Step title="Choisissez les outils Uxia que l'agent peut utiliser (facultatif)">
+    Dans l'onglet **Tools** de l'agent, sélectionnez **Uxia** pour voir les outils proposés. Tous les outils sont activés par défaut. Pour restreindre l'agent, par exemple à la seule lecture des résultats, désactivez **Allow all** et désactivez les outils dont vous n'avez pas besoin.
+  </Step>
+</Steps>
+
+Testez l'agent dans le chat de test de Copilot Studio avant de le partager. Demandez par exemple *"Affiche mes cinq tests Uxia les plus récents."*
+
+## Utiliser Uxia dans Microsoft 365 Copilot et Teams
+
+<Steps>
+  <Step title="Publiez votre agent">
+    Publiez l'agent dans Copilot Studio. Vous devez le publier au moins une fois pour qu'il soit disponible dans Teams et Microsoft 365 Copilot.
+  </Step>
+  <Step title="Ajoutez le canal Teams et Microsoft 365 Copilot">
+    Sélectionnez **Channels** dans le menu supérieur, puis la vignette **Teams and Microsoft 365 Copilot**. Vérifiez que **Make agent available in Microsoft 365 Copilot** est sélectionné, puis sélectionnez **Add channel**.
+  </Step>
+  <Step title="Installez l'agent">
+    Dans le même panneau, sélectionnez **See agent in Teams**, puis **Add**.
+  </Step>
+  <Step title="Commencez à poser des questions">
+    Dans Microsoft 365 Copilot, tapez **@**, choisissez votre agent et posez des questions sur vos tests Uxia, par exemple :
+
+    - _"Résume les insights du test sur le parcours de paiement."_
+    - _"Quels sont les principaux problèmes d'utilisabilité de mon dernier test ?"_
+    - _"Crée un test Uxia pour le parcours d'inscription de www.example.com avec 5 participants IA."_
+  </Step>
+</Steps>
+
+<Note>
+  Par défaut, Copilot Studio utilise les **end user credentials** : chaque personne qui utilise l'agent se connecte à Uxia avec son propre compte la première fois que l'agent appelle Uxia, et ne voit que les espaces de travail auxquels elle a accès dans Uxia. Conservez ce réglage par défaut si vous partagez l'agent avec votre équipe.
+</Note>
+
+## Ce que vous pouvez faire avec Uxia dans Microsoft Copilot
+
+- Créer un test pour un parcours et le lancer après que vous avez approuvé le coût en crédits. Le lancement consomme des crédits : l'agent affiche donc d'abord le coût et vous demande votre accord.
+- Suivre l'avancement d'un test et vos crédits restants.
+- Résumer les insights, les scores des benchmarks et les réponses aux enquêtes.
+- Importer des citations de participants et des transcriptions dans une conversation ou un chat Teams.
+- Comparer les retours de plusieurs tests pour repérer des tendances récurrentes.
+
+## Dépannage
+
+- **Uxia n'apparaît pas comme outil.** Vérifiez que l'URL du serveur est exactement `https://platform.uxia.app/api/mcp-v2/mcp` et que les politiques de données de votre organisation autorisent la connexion.
+- **L'option Model Context Protocol n'est pas disponible.** L'assistant d'intégration MCP n'est peut-être pas encore activé dans votre environnement Copilot Studio. Contactez votre administrateur Microsoft.
+- **On vous demande de vous reconnecter.** Votre autorisation Uxia a expiré ou a été révoquée. Connectez-vous à Uxia et cliquez de nouveau sur **Authorize**.
+- **L'agent dans Teams ne reflète pas vos dernières modifications.** Republiez l'agent dans Copilot Studio, puis tapez **Start over** dans le chat pour démarrer une nouvelle conversation.
+
+<Card title="Premiers pas avec MCP" icon="plug" href="/fr/integrations/mcp">
+  Découvrez l'accès MCP d'Uxia, les clients pris en charge et la configuration générale.
+</Card>

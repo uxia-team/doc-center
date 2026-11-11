@@ -1,0 +1,62 @@
+---
+title: "Figma-Integration und Prototypen in Uxia"
+sidebarTitle: "Figma"
+description: "Nutzen Sie Figma mit Uxia: Melden Sie sich mit Ihrem Figma-Konto an oder testen Sie einen öffentlichen Figma-Prototyp mit einer Figma-Prototyp-Aufgabe."
+---
+
+Sie können Figma auf zwei Arten mit Uxia nutzen. Sie können sich mit Ihrem Figma-Konto bei Uxia anmelden, und Sie können einen Figma-Prototyp testen, indem Sie seinen Link in eine **Figma prototype task** einfügen. Zum Testen eines Prototyps brauchen Sie weder eine Figma-Anmeldung noch eine Verbindung zu Figma.
+
+## Mit Figma bei Uxia anmelden
+
+Figma steht als Social-Login-Option zur Verfügung. Wenn Sie ein Konto erstellen oder sich bei Uxia anmelden, klicken Sie auf **Continue with Figma**, um Ihre Figma-Anmeldung zu verwenden, statt ein eigenes Uxia-Passwort anzulegen.
+
+Das ist unabhängig vom Testen eines Prototyps. Sie können Figma als Anmeldeanbieter nutzen, ohne etwas aus Figma zu testen, und Sie können Figma-Prototypen testen, ohne sich mit Figma anzumelden.
+
+## Einen Figma-Prototyp testen
+
+In einer Figma-Prototyp-Aufgabe erledigen Teilnehmende eine Aufgabe in Ihrem Prototyp und denken dabei laut. Uxia öffnet den Prototyp über seinen Link, deshalb muss er öffentlich zugänglich sein.
+
+<Steps>
+  <Step title="Den Prototyp öffentlich freigeben">
+    Öffnen Sie den Prototyp in Figma und stellen Sie die Freigabe so ein, dass **anyone with the link** ihn ansehen kann. Kopieren Sie den Link zum Prototyp. Er beginnt mit `https://www.figma.com/proto/`.
+  </Step>
+  <Step title="Eine Figma-Prototyp-Aufgabe hinzufügen">
+    Fügen Sie in der Phase Build Ihres Tests einen Block **Figma prototype task** hinzu.
+  </Step>
+  <Step title="Den Link zum Prototyp einfügen">
+    Fügen Sie den Link ein, wählen Sie einen Viewport und lassen Sie Uxia den Link prüfen. Wenn der Prototyp nicht öffentlich zugänglich ist, weist Uxia Sie darauf hin. Passen Sie dann die Freigabeeinstellungen in Figma an und prüfen Sie erneut.
+  </Step>
+  <Step title="Den Block fertigstellen und rekrutieren">
+    Schreiben Sie die [Aufgabe](/de/mission), das [Szenario](/de/test-scenario) und die [Abbruchbedingung](/de/stop-condition) und wechseln Sie dann in die Phase Recruit.
+  </Step>
+</Steps>
+
+Da der Prototyp öffentlich ist, können sowohl KI-Teilnehmende als auch menschliche Teilnehmende ihn öffnen und nutzen. Details zur Einrichtung des Links, zu Viewports und zur Prüfung finden Sie unter [Live-Website- und Figma-Links](/de/source).
+
+## Statische Figma-Screens testen
+
+Wenn Ihr Design noch kein klickbarer Figma-Prototyp ist, exportieren Sie die Frames aus Figma als Bilder und laden Sie sie in eine **Media prototype task** hoch. Im Prototyp-Canvas verknüpfen Sie die Screens zu einem klickbaren Ablauf. Siehe [Medienprototyp](/de/media-canvas).
+
+## Welche Option sollten Sie wählen?
+
+- **Continue with Figma**, wenn Sie Ihr Uxia-Konto mit Ihren Figma-Zugangsdaten erstellen oder darauf zugreifen möchten.
+- **Figma prototype task**, wenn Sie bereits einen funktionierenden Figma-Prototyp haben und ihn unverändert von Teilnehmenden testen lassen möchten.
+- **Media prototype task**, wenn Sie statische Screens haben und den Ablauf in Uxia aufbauen möchten.
+
+## Tipps und Best Practices
+
+- Prüfen Sie vor dem Start der Rekrutierung, ob sich der Prototyp für jemanden öffnet, der nicht bei Figma angemeldet ist.
+- Lassen Sie den Link auf den Start-Frame des Ablaufs zeigen, den Sie testen möchten, damit Teilnehmende an der richtigen Stelle beginnen.
+- Beschränken Sie den Prototyp auf den Ablauf in Ihrer Aufgabe. Zusätzliche Seiten und Abläufe verleiten Teilnehmende eher zum Abschweifen.
+
+## Verwandte Seiten
+
+<CardGroup cols={2}>
+  <Card title="Live-Website- und Figma-Links" href="/de/source">
+    Richten Sie Link, Viewport und Prüfung für eine Live-Website- oder Figma-Prototyp-Aufgabe ein.
+  </Card>
+
+  <Card title="Medienprototyp" href="/de/media-canvas">
+    Laden Sie Screens hoch und machen Sie daraus einen klickbaren Ablauf.
+  </Card>
+</CardGroup>

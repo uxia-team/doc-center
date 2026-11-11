@@ -1,0 +1,78 @@
+---
+title: "Bloc d'enquête"
+sidebarTitle: "Vue d'ensemble"
+description: "Posez des questions directes aux participants sur votre produit, vos concepts ou votre message, seules ou comme questions de suivi après une tâche."
+---
+
+Un **bloc d'enquête** pose directement des questions aux participants : sur votre produit, votre message, vos concepts ou tout autre sujet que vous avez besoin de comprendre. Au lieu de naviguer dans une interface, les participants répondent avec leurs propres mots, ce qui vous permet de comprendre le *pourquoi* de leur comportement.
+
+## Enquêtes et tâches sont complémentaires
+
+Un [bloc de tâche](/fr/task-block) et un bloc d'enquête mesurent des choses différentes :
+
+- **Les blocs de tâche sont comportementaux.** Ils montrent comment les participants *naviguent et interagissent* avec votre produit, et où ils bloquent.
+- **Les blocs d'enquête sont attitudinaux.** Ils recueillent ce que les participants *pensent, ressentent et préfèrent*.
+
+Utilisez les enquêtes pour valider des idées et comprendre des opinions, et les tâches pour repérer les frictions UX. Inutile de choisir : un même test peut inclure les deux, pour observer les participants finaliser un achat puis leur demander ce qu'ils en ont pensé.
+
+## Quand utiliser un bloc d'enquête
+
+- **Valider des concepts et des idées.** Mettez à l'épreuve des idées de fonctionnalités et des propositions de valeur avant d'y consacrer du temps de design ou de développement. Décrivez l'idée en langage clair, ou joignez une ébauche du concept sous forme d'image.
+- **Tester un message et des textes.** Comparez des titres, des noms de fonctionnalités, des libellés ou des présentations tarifaires, et vérifiez que votre terminologie signifie bien ce que vous pensez.
+- **Comprendre votre audience.** Comparez les réponses de différentes audiences à une même question, et découvrez des besoins non satisfaits ainsi que le vocabulaire de vos utilisateurs.
+- **Expliquer le pourquoi derrière vos données.** Lorsque vos analytics ou une tâche montrent *ce qui* se passe sans dire *pourquoi*, interrogez les participants sur les motivations de ce comportement.
+
+## Ajouter un bloc d'enquête
+
+<Steps>
+  <Step title="Ajoutez le bloc">
+    Dans la phase **Build**, cliquez sur **Add new block** (ou sur **Add block** dans la barre latérale) et choisissez **Survey** sous **Research**.
+  </Step>
+  <Step title="Ajoutez des questions">
+    Cliquez sur **Add question** et choisissez un type : **Open-ended**, **Multiple choice**, **Rating scale**, **Ranking** ou **Budget allocation**. Consultez [Types de questions](/fr/question-types) pour savoir comment configurer chacun d'eux.
+  </Step>
+  <Step title="Affinez chaque question">
+    Rédigez le texte de la question, puis ajoutez des options de réponse ou des libellés d'échelle si le type l'exige. Cliquez sur **+ Add more context** pour fournir aux participants des informations supplémentaires ou des images de référence.
+  </Step>
+</Steps>
+
+Toutes les questions sont obligatoires, et chaque réponse est accompagnée d'une explication détaillée du raisonnement qui la sous-tend.
+
+## Poser des questions de suivi après une tâche
+
+Pour poser des questions une fois que les participants ont terminé une tâche (ce qu'on appelait auparavant les questions post-test), ajoutez un bloc d'enquête **après** un bloc de tâche. Les participants IA répondent en tenant compte de leur expérience de la tâche, ce qui vous permet de demander par exemple :
+
+- "Y a-t-il eu un moment où vous ne saviez pas quoi faire ensuite ?"
+- "Vous a-t-il manqué des informations sur la page de détail du produit ?"
+- "Le prix vous a-t-il semblé attractif ?"
+
+Les questions d'une enquête placée après un bloc de tâche affichent un interrupteur **Only ask testers who complete the flow**. Il est désactivé par défaut. Activez-le pour les questions qui n'ont de sens que si le participant est allé au bout de la tâche, par exemple la facilité à finaliser la commande. Les participants IA qui n'ont pas terminé la tâche ne reçoivent pas cette question. Les participants humains répondent à toutes les questions.
+
+<Tip>
+  Gardez des questions de suivi ouvertes lorsque vous cherchez de la nuance, et précises lorsque vous creusez un problème déjà identifié.
+</Tip>
+
+## Limites et crédits
+
+| | Forfait Free | Forfaits payants |
+|---|---|---|
+| Blocs d'enquête par test | 1 | 3 |
+| Questions par test (tous blocs d'enquête confondus) | 5 | 30 |
+| Crédits | 1 par question et par participant IA | 1 par question et par participant IA |
+
+Par exemple, une enquête de 8 questions menée avec 10 participants IA coûte 80 crédits. Les participants humains qui rejoignent le test via des [liens de test](/fr/test-links) ne coûtent aucun crédit. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+## Ce que vous obtenez
+
+Les participants IA répondent immédiatement, sans recrutement, planification ni incitations. Vous voyez chaque réponse formulée avec leurs propres mots, des graphiques pour chaque question et les thèmes récurrents des réponses ouvertes. Consultez [Résultats de l'enquête](/fr/survey-results).
+
+Comme les participants IA restent disponibles après le test, vous pouvez [discuter avec n'importe lequel d'entre eux](/fr/chat-with-testers) pour approfondir une réponse. Pour ancrer leurs réponses dans vos utilisateurs réels plutôt que dans une population générique, utilisez l'[enrichissement d'audience](/fr/audiences/enrichment) : partagez vos personas, entretiens ou recherches, et Uxia crée des participants IA qui pensent et répondent comme les personnes que vous souhaitez toucher.
+
+<CardGroup cols={2}>
+  <Card title="Suivant : Types de questions" icon="list-checks" href="/fr/question-types">
+    Choisissez le bon format pour chaque question.
+  </Card>
+  <Card title="Résultats de l'enquête" icon="chart-bar" href="/fr/survey-results">
+    Consultez les graphiques, les thèmes et les réponses de chaque participant.
+  </Card>
+</CardGroup>

@@ -1,0 +1,95 @@
+---
+title: "Liens de test"
+description: "Invitez vos propres participants avec un lien de test, choisissez les paramètres d'enregistrement et de langue, et découvrez ce que vivent les participants."
+---
+
+Les liens de test vous permettent d'inviter vos propres participants à un test : clients, utilisateurs, un panel que vous gérez ou des collègues. Envoyez le lien par le canal de votre choix, par exemple par e-mail, Slack ou dans une newsletter. Les participants n'ont pas besoin de compte, et les participants humains coûtent 0 crédit.
+
+Les liens de test sont disponibles avec les forfaits payants. Les participants passent les mêmes blocs que vos [participants IA](/fr/ai-participants), ce qui vous permet de comparer les deux groupes dans [Analyze](/fr/analyze-results).
+
+<Note>
+  Avec le forfait Starter, vous pouvez créer des liens de test, mais les résultats humains ne sont pas inclus. Pro affiche les 10 premières sessions par test, et Custom les affiche toutes. Consultez [Résultats des participants humains](/fr/human-insights#limites-selon-le-forfait).
+</Note>
+
+## Créer un lien de test
+
+<Steps>
+  <Step title="Ouvrir Test links">
+    Dans la phase [Recruit](/fr/recruit-participants), cliquez sur **Test links**, puis sur **Create link**.
+  </Step>
+  <Step title="Configurer le lien">
+    Dans **Create Test Link**, donnez au lien un **Link name**, par exemple *Audience newsletter*, et choisissez les paramètres ci-dessous. Cliquez ensuite sur **Create**.
+  </Step>
+  <Step title="Le partager">
+    Cliquez sur **Copy link** et envoyez-le à vos participants. Utilisez **Preview** pour essayer vous-même l'expérience participant ; les sessions d'aperçu ne sont pas enregistrées.
+  </Step>
+</Steps>
+
+Créez un lien par groupe ou par canal, jusqu'à 10 liens par test. Chaque lien a ses propres paramètres, et dans Analyze vous pouvez filtrer les résultats par lien.
+
+## Paramètres du lien
+
+| Paramètre | Ce qu'il fait |
+|---|---|
+| **Link name** | Identifie le lien dans Recruit et dans le filtre d'Analyze. Obligatoire. |
+| **Show interactive areas after an invalid click** | Met en évidence les zones cliquables lorsqu'un participant clique en dehors. Affiché pour les prototypes multimédias comportant des zones interactives. Activé par défaut. |
+| **Face camera** | *"Screen recording is always required. Enable this to also require face camera permission before participants can start."* |
+| **Default language** | La langue que voient les participants. Uxia traduit automatiquement vos tâches, scénarios et questions. Choisissez parmi l'anglais, l'espagnol, le coréen, l'allemand, le français, le chinois, Português (Brasil), Português (Portugal) et l'italien. |
+| **Participants can choose language in the session** | Ajoute un sélecteur de langue à l'écran d'accueil. |
+
+Si cette option est disponible dans votre espace de travail, **Allow 3rd Party human participants** permet aux participants issus d'un panel de recrutement externe d'enregistrer leur participation. Collez le **Completion link** de votre recruteur : les participants voient un bouton **Confirm your participation** lorsqu'ils terminent.
+
+## Gérer vos liens
+
+Le tableau **Test links** affiche pour chaque lien les colonnes **Link**, **Default language**, **Status** et **Face camera**. Depuis le menu **…** d'un lien :
+
+- **Stop** ferme le lien. Les participants qui l'ouvrent voient *"This test is unavailable"* et *"No longer accepting responses."*
+- **Activate** rouvre un lien arrêté.
+- **Edit settings** modifie les paramètres du lien. Les modifications s'appliquent aux futurs participants.
+
+Si votre test comporte des [variantes A/B](/fr/ab-variants), chaque lien a une URL par variante.
+
+## L'expérience des participants
+
+Les participants ont besoin d'un navigateur sur ordinateur qui prend en charge l'enregistrement d'écran.
+
+<Steps>
+  <Step title="Accueil et consentement">
+    Les participants choisissent une langue, si le lien le permet. Ils acceptent les conditions générales et confirment que leur écran, leur microphone et leur caméra peuvent être enregistrés.
+  </Step>
+  <Step title="Avant de commencer">
+    Ils lisent deux courtes instructions : **Think out loud** et **Device & permissions**.
+  </Step>
+  <Step title="Vérification de l'appareil">
+    Ils activent leur microphone et prononcent quelques mots pour le tester, ainsi que leur caméra si **Face camera** est activé. Ils cliquent ensuite sur **Start test** et partagent leur écran. Les tests comportant une tâche sur site web en production exigent le partage de l'écran entier.
+  </Step>
+  <Step title="Les blocs">
+    Les participants parcourent vos blocs dans l'ordre. Pour une tâche, ils lisent la consigne et cliquent sur **Start task** ; un site web en production s'ouvre dans un autre onglet. Ils cliquent sur **Finish task** une fois terminé, ou sur **Abandon task** pour abandonner. Les enquêtes et les benchmarks se remplissent à l'écran, et les tris de cartes se font par glisser-déposer.
+  </Step>
+  <Step title="Test terminé">
+    L'enregistrement est téléversé, et les participants voient **Test completed**. Avec un lien de fin de participation, ils voient aussi **Confirm your participation**.
+  </Step>
+</Steps>
+
+Bon à savoir :
+
+- Les sessions sont limitées à 60 minutes. Les participants sont avertis lorsqu'il reste 5 minutes et 1 minute, puis la session est envoyée automatiquement.
+- Les blocs de vérification de l'accessibilité sont ignorés. Ils ne nécessitent pas de participants.
+- Un même navigateur ne peut pas soumettre un lien de test deux fois. Une deuxième tentative affiche *"This test was already submitted."*
+- Avec le forfait Custom, le logo Uxia est masqué pendant la session.
+
+## Ce qui est enregistré
+
+- L'**enregistrement d'écran** du test tel que le participant le voit.
+- L'**audio du microphone**, avec les réflexions exprimées à voix haute.
+- La **webcam**, lorsque le lien l'exige.
+- Les **clics et la navigation** dans votre prototype.
+- Les **transcriptions**, générées automatiquement à partir de l'audio.
+
+<Tip>
+  Dans votre invitation, demandez aux participants d'utiliser un ordinateur, indiquez-leur la durée approximative du test et suggérez-leur un endroit calme pour penser à voix haute. Vous éviterez ainsi des enregistrements ratés ou silencieux.
+</Tip>
+
+<Card title="Suivant : Résultats des participants humains" icon="arrow-right" href="/fr/human-insights">
+  Regardez les enregistrements, lisez les transcriptions et consultez les résultats humains.
+</Card>

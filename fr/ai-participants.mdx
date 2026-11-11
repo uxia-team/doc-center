@@ -1,0 +1,80 @@
+---
+title: "Participants IA"
+description: "Choisissez des audiences, définissez combien de participants IA passent votre test, vérifiez l'estimation de crédits et lancez le test."
+---
+
+Les participants IA sont des participants synthétiques générés à partir de vos [audiences](/fr/audiences/overview). Ils passent votre test comme le ferait une personne, en pensant à voix haute au fil de leur parcours, et leurs résultats commencent à arriver dans Analyze en quelques minutes.
+
+Pour ouvrir cette vue, cliquez sur **AI participants** dans la phase [Recruit](/fr/recruit-participants). Lorsque vous cliquez sur **Start recruiting** dans Build, elle s'ouvre directement. La page affiche *"Choose your synthetic participants. You can also combine them with human participants."*
+
+## Configurer et lancer
+
+<Steps>
+  <Step title="Sélectionner vos audiences">
+    Sous **Select your audiences**, cliquez sur la carte d'une audience pour l'inclure. Vous pouvez inclure jusqu'à 3 audiences. Utilisez **Search audiences...** pour en trouver une par son nom ou sa description.
+
+    Pour en créer une nouvelle, cliquez sur **Create audience**. L'[outil de création d'audience](/fr/audiences/building-an-audience) s'ouvre, et la nouvelle audience est incluse dès que vous l'enregistrez. Attendez que ses participants aient fini d'être générés avant de lancer le test.
+  </Step>
+  <Step title="Définir le nombre de participants">
+    Le panneau **Participants**, à droite, affiche votre total par rapport au maximum, avec un nombre pour chaque audience. Modifiez un nombre directement, ou utilisez :
+
+    - **Distribute evenly** pour répartir le maximum de façon égale entre vos audiences.
+    - **Handpick participants** pour choisir précisément les participants IA que vous voulez, puis **Save selection**.
+    - **Remove**, dans le menu **···** d'une audience, pour retirer cette audience.
+
+    Tant que vous n'avez inclus aucune audience, le panneau affiche *"No audiences included yet."*
+  </Step>
+  <Step title="Vérifier l'estimation de crédits">
+    **Credit estimate** indique le coût de chaque bloc ainsi que **Total credits** pour les participants sélectionnés.
+  </Step>
+  <Step title="Lancer">
+    Cliquez sur **Launch test**. Uxia effectue d'abord une rapide [revue du test](/fr/recruit-participants#revue-du-test). Si elle est validée, les participants IA démarrent.
+  </Step>
+</Steps>
+
+## Limites de participants
+
+| | Forfait Free | Forfaits payants |
+|---|---|---|
+| Participants IA par test | 3 | 5 à 10 |
+| Audiences par test | Jusqu'à 3 | Jusqu'à 3 |
+
+Avec le forfait Free, augmenter le nombre au-delà de 3 ouvre **Upgrade to add more AI participants**.
+
+Si le total sort de la plage autorisée par votre forfait, il s'affiche en rouge et **Launch test** reste désactivé. Survolez le total pour voir combien de participants ajouter ou retirer. Vous pouvez aussi voir les messages suivants :
+
+| Message | Que faire |
+|---|---|
+| *You can include up to 3 audiences* | Retirez une audience avant d'en ajouter une autre. |
+| *You can select at most 10 AI participants* | Réduisez le nombre de participants d'une ou plusieurs audiences. |
+| *Not enough credits remaining for this launch* | Réduisez le nombre de participants ou de blocs, ou [obtenez plus de crédits](/fr/account/plans-and-credits). |
+
+## Calcul des crédits
+
+Chaque bloc est facturé par participant IA :
+
+| Bloc | Coût |
+|---|---|
+| Tâche (tout type) | 20 crédits, +1 pour chaque benchmark ([SUS](/fr/sus), [UXIA-Q](/fr/uxia-q-score)) activé |
+| Enquête | 1 crédit par question |
+| Tri de cartes | 10 crédits |
+| Vérification de l'accessibilité | 10 crédits par frame, quel que soit le nombre de participants |
+
+Par exemple, un test comprenant une tâche sur site web en production (SUS activé) et une enquête de 6 questions, lancé avec 5 participants IA, coûte (21 + 6) × 5 = **135 crédits**. Les [variantes A/B](/fr/ab-variants) doublent les coûts par participant et ajoutent 100 crédits pour la comparaison.
+
+Si votre test est éligible à un lancement gratuit, l'estimation affiche les crédits barrés avec la mention **Free**. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+## Après le lancement
+
+Vous revenez au récapitulatif de Recruit, où la ligne des participants IA affiche **Processing**, puis **Completed**. Cliquez sur **Go to analyze** pour suivre les résultats au fur et à mesure que chaque bloc se termine. Vous pouvez quitter la page : nous vous enverrons un e-mail à la fin du test.
+
+Une fois les participants IA lancés, les blocs du test et la sélection d'audiences sont verrouillés. Vous pouvez toujours ajouter des [liens de test](/fr/test-links) ou demander un [panel humain](/fr/human-panel) pour ce même test.
+
+<CardGroup cols={2}>
+  <Card title="Liens de test" icon="link" href="/fr/test-links">
+    Ajoutez vos propres participants humains au même test.
+  </Card>
+  <Card title="Analyser les résultats" icon="chart-bar" href="/fr/analyze-results">
+    Consultez les résultats bloc par bloc.
+  </Card>
+</CardGroup>

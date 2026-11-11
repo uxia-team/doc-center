@@ -1,0 +1,85 @@
+---
+title: "Block zur Barrierefreiheitsprüfung"
+sidebarTitle: "Übersicht"
+description: "Prüfen Sie Ihre Screens schon in der Designphase gegen WCAG 2.2 AA oder AAA. Keine Teilnehmenden erforderlich."
+---
+
+Der Block **Accessibility check** prüft Ihre Screens gegen WCAG 2.2, bevor Sie Code schreiben. Sie laden Ihre Screens hoch und wählen eine angestrebte Konformitätsstufe. Uxia prüft dann jeden Screen Kriterium für Kriterium. Es markiert, was bestanden ist, was nicht bestanden ist und was eine menschliche Überprüfung braucht, und kennzeichnet jedes Problem als voraussichtliche Design- oder Code-Korrektur.
+
+Da das Audit auf statischen Screens statt auf einem Live-Build läuft, entdecken Sie Barrierefreiheitsprobleme bereits in der Designphase. Dort lassen sie sich am günstigsten beheben, statt spät in der QA oder nach dem Launch.
+
+## Was geprüft wird
+
+- **WCAG-2.2-Erfolgskriterien** auf Stufe AA oder AAA. Die Stufen bauen aufeinander auf, ein AA-Audit deckt also auch Stufe A ab. Siehe [WCAG-Konformitätsstufe](/de/wcag-conformance-level).
+- **Alle vier WCAG-Prinzipien**: Wahrnehmbar, Bedienbar, Verständlich und Robust. Dazu gehören Kontrast, Textalternativen, Größe von Touch-Zielen, Sichtbarkeit des Fokus und Beschriftungen.
+- **Unterstützung bei Sehschwäche**, mit einer [Sehsimulation](/de/vision-simulation), die jeden Screen bei Farbenblindheit, verschwommenem Sehen und Gesichtsfeldausfall zeigt.
+- **Design- und Code-Umfang**. Manche Kriterien lassen sich anhand eines Screenshots nicht bestätigen, etwa das Tastaturverhalten. Uxia markiert diese zur Überprüfung und kennzeichnet sie mit **Code**, damit Ihre Entwicklerinnen und Entwickler sie verifizieren können.
+
+## Wann Sie ihn verwenden
+
+**Design-Review vor der Entwicklung.** Prüfen Sie Screens vor der Übergabe, damit Barrierefreiheitsprobleme im Design auffallen und nicht erst in der QA oder nach dem Ausliefern des Codes.
+
+**Arbeit zwischen Design und Entwicklung aufteilen.** Jedes Problem, das Arbeit erfordert, ist mit **Design** oder **Code** gekennzeichnet. Beide Teams erhalten eine gemeinsame Checkliste und eine saubere Möglichkeit, die Arbeit aufzuteilen.
+
+**Compliance-getriebene Prüfungen.** Prüfen Sie gegen einen anerkannten Standard: AA als übliche rechtliche Grundlage oder AAA, wenn Sie die höchste Abdeckung anstreben.
+
+**Fortschritt im Zeitverlauf verfolgen.** Prüfen Sie die aktualisierten Screens nach den Korrekturen erneut und beobachten Sie, wie sich die Zahlen für Passed, Failed und Review in die richtige Richtung bewegen.
+
+## Den Block hinzufügen
+
+<Steps>
+  <Step title="Block-Auswahl öffnen">
+    Öffnen Sie in der Phase **Build** die Auswahl **Add a block**. Wählen Sie unter **Audits** die Option **Accessibility check**.
+  </Step>
+  <Step title="Konformitätsstufe wählen">
+    Behalten Sie **Recommended** (AA) bei oder wechseln Sie zu **Advanced** (AAA). Siehe [WCAG-Konformitätsstufe](/de/wcag-conformance-level).
+  </Step>
+  <Step title="Frames hinzufügen">
+    Laden Sie bis zu 5 Screens als Bild-Screenshots hoch (PNG, JPEG, WebP oder GIF). Sie können die Live-URL jedes Screens für zusätzliche Prüfungen auf Code-Ebene angeben. Siehe [Frames](/de/frame-upload).
+  </Step>
+  <Step title="Audit starten">
+    Klicken Sie auf **Start recruiting**. Enthält der Test keine weiteren Blöcke, starten Sie das Audit direkt aus der Recruit-Zusammenfassung. Siehe [Audit ausführen](/de/frame-upload#audit-ausführen).
+  </Step>
+</Steps>
+
+## Limits und Credits
+
+| | Free-Plan | Kostenpflichtige Pläne (Starter, Pro, Custom) |
+|---|---|---|
+| Block zur Barrierefreiheitsprüfung | Nicht verfügbar | 1 pro Test |
+| Frames | Nicht verfügbar | Bis zu 5 pro Test, jeweils 100 MB |
+| Kosten | Nicht verfügbar | 10 Credits pro Frame |
+
+- Im Free-Plan zeigt der Block in der Auswahl ein **Upgrade**-Abzeichen. Ein Klick darauf öffnet den Plan-Dialog **Upgrade to use accessibility**.
+- Ein Test kann nur einen Block zur Barrierefreiheitsprüfung enthalten. Sobald Sie einen hinzugefügt haben, ist er in der Auswahl deaktiviert. Sie können den Block auch nicht duplizieren.
+- Die Kosten hängen nur von der Anzahl der Frames ab. Ein Audit von 4 Screens kostet zum Beispiel 40 Credits, unabhängig davon, welche Teilnehmenden der Test hat.
+- In einem Test mit [A/B-Varianten](/de/ab-variants) fallen die Frame-Kosten für jede Variante an.
+
+## Mit anderen Blöcken kombinieren
+
+Eine Barrierefreiheitsprüfung kann im selben Test wie Aufgaben-, Umfrage- und Card-Sorting-Blöcke stehen. Sie benötigt keine Teilnehmenden:
+
+- **KI-Teilnehmende.** Das Audit läuft, wenn Sie die KI-Teilnehmenden starten. Seine Frame-Credits werden zur Gesamtsumme des Starts addiert.
+- **Menschliche Teilnehmende.** Teilnehmende, die über einen [Testlink](/de/test-links) oder das [menschliche Panel](/de/human-panel) teilnehmen, überspringen den Block. Wenn Sie nur menschliche Teilnehmende rekrutieren, läuft das Audit nicht.
+- **Nur Barrierefreiheit.** Enthält der Test keine weiteren Blöcke, gibt es nichts zu rekrutieren. Die Phase Recruit weist Sie darauf hin, und Sie starten das Audit aus ihrer Zusammenfassung.
+
+Die Ergebnisse erscheinen in der Phase **Analyze** als eigener Block neben Ihren anderen Ergebnissen.
+
+<Note>
+  Uxia hilft Ihnen, Probleme früh zu erkennen, ersetzt aber kein formelles rechtliches Barrierefreiheits-Audit, keine Prüfung durch Fachleute und keine Zertifizierung.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="WCAG-Konformitätsstufe" icon="gauge" href="/de/wcag-conformance-level">
+    Wählen Sie zwischen AA und AAA.
+  </Card>
+  <Card title="Frames" icon="image" href="/de/frame-upload">
+    Laden Sie die Screens hoch, die Uxia prüfen soll.
+  </Card>
+  <Card title="Kriterienbewertung" icon="list-checks" href="/de/criteria-evaluation">
+    Lesen Sie die Ergebnisse Kriterium für Kriterium.
+  </Card>
+  <Card title="Sehsimulation" icon="eye" href="/de/vision-simulation">
+    Sehen Sie Ihre Screens unter verschiedenen Sehbedingungen.
+  </Card>
+</CardGroup>

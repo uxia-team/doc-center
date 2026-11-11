@@ -1,0 +1,71 @@
+---
+title: "Card-Sorting-Ergebnisse"
+sidebarTitle: "Ergebnisse"
+description: "Lesen Sie die Ergebnisse eines Card Sortings: Übereinstimmung pro Karte und Kategorie, die Übereinstimmungsmatrix und die Ähnlichkeitsmatrix."
+---
+
+Wenn Sie einen [Card-Sorting-Block](/de/card-sorting) in der Phase **Analyze** öffnen, sind seine Ergebnisse auf drei Tabs verteilt: **Results**, **Agreement Matrix** und **Similarity Matrix**. Die Ergebnisse von KI-Teilnehmenden und menschlichen Teilnehmenden werden getrennt angezeigt; mit dem unter [Ergebnisse analysieren](/de/analyze-results) beschriebenen Schalter wechseln Sie zwischen ihnen.
+
+## Übereinstimmung
+
+Jede Ansicht beruht auf einer einzigen Kennzahl:
+
+> Die Übereinstimmung ist der Anteil der Teilnehmenden, die eine Karte in eine Kategorie gelegt haben, an allen, die diese Karte sortiert haben. Die durchschnittliche Übereinstimmung einer Kategorie ist der Mittelwert der Übereinstimmung der Karten, die in ihr abgelegt wurden.
+
+Wenn zum Beispiel 8 Teilnehmende die Karte "Erstattungen" sortiert haben und 6 davon sie unter "Abrechnung" eingeordnet haben, beträgt ihre Übereinstimmung für "Abrechnung" 75 %. Die Teilnehmenden müssen nicht jede Karte sortieren, daher zählt die Übereinstimmung nur die Personen, die diese Karte sortiert haben. In allen Ergebnissen gilt: Je dunkler das Blau, desto höher die Übereinstimmung.
+
+## Ergebnisse
+
+Wählen Sie mit dem Umschalter **Categories** / **Cards**, wie die Tabelle gruppiert wird.
+
+<Tabs>
+  <Tab title="Kategorien">
+    Eine Zeile pro Kategorie, mit den Spalten **Category**, **Number of cards**, **Agreement** (die durchschnittliche Übereinstimmung der Kategorie) und **Participants**. Kategorien mit der höchsten durchschnittlichen Übereinstimmung stehen oben. Klappen Sie eine Zeile auf, um alle Karten zu sehen, die in dieser Kategorie abgelegt wurden, jeweils mit eigenem Übereinstimmungsbalken und der Anzahl der Teilnehmenden, die sie dort eingeordnet haben.
+  </Tab>
+  <Tab title="Karten">
+    Eine Zeile pro Karte, mit den Spalten **Card**, **Categories**, **Agreement** und **Participants**. Neben jedem Kartennamen sehen Sie die Kategorie, in die sie am häufigsten eingeordnet wurde, und der Übereinstimmungsbalken zeigt die Übereinstimmung für diese Kategorie. Klappen Sie eine Zeile auf, um alle Kategorien zu sehen, in die die Karte eingeordnet wurde. Karten, die niemand sortiert hat, zeigen **Not sorted**.
+  </Tab>
+</Tabs>
+
+## Übereinstimmungsmatrix
+
+> Wie oft jede Karte in jede Kategorie eingeordnet wurde. Die Karten sind unter der Kategorie gruppiert, in die die Teilnehmenden sie am häufigsten eingeordnet haben.
+
+Jede Zeile ist eine Karte und jede Spalte eine Kategorie. Jede Zelle zeigt die Übereinstimmung der Karte für diese Kategorie, und der höchste Wert jeder Zeile ist fett hervorgehoben. Gehen Sie eine Spalte von oben nach unten durch, um zu sehen, welche Karten eindeutig zu einer Kategorie gehören und welche nur teilweise.
+
+## Ähnlichkeitsmatrix
+
+> Wie oft die Teilnehmenden jedes Kartenpaar in dieselbe Kategorie sortiert haben. Eng verwandte Karten bilden Cluster entlang des Tabellenrands.
+
+Jede Zelle vergleicht zwei Karten: den Anteil der Teilnehmenden, die beide in dieselbe Kategorie gelegt haben, an allen, die beide sortiert haben. Uxia ordnet die Karten per Clustering, sodass verwandte Karten nebeneinander liegen und dunkle Blöcke bilden. Da die Matrix Kategorienamen ignoriert, ist sie besonders bei offenem Card Sorting nützlich, wo Teilnehmende dieselbe Idee unterschiedlich benennen.
+
+## Von Teilnehmenden erstellte Kategorien
+
+Bei einem offenen Card Sorting werden Kategorien, die Teilnehmende mit demselben Namen erstellen, zusammengeführt, wobei Groß- und Kleinschreibung sowie zusätzliche Leerzeichen ignoriert werden. Erstellt eine teilnehmende Person eine Kategorie mit demselben Namen wie eine Ihrer Startkategorien, zählt sie als Ihre Kategorie. Kategorien mit unterschiedlichen Namen bleiben getrennt, auch wenn sie dasselbe bedeuten; nutzen Sie die Ähnlichkeitsmatrix, um diese zu erkennen.
+
+## So lesen Sie die Ergebnisse
+
+- **Hohe Übereinstimmung.** Eine Karte mit hoher Übereinstimmung für eine Kategorie hat einen klaren Platz. Lassen Sie sie dort.
+- **Geteilte Karten.** Eine Karte, deren Übereinstimmung sich auf zwei oder mehr Kategorien verteilt, ist mehrdeutig. Erwägen Sie, sie umzubenennen, eine Beschreibung hinzuzufügen oder sie von beiden Stellen aus erreichbar zu machen.
+- **Schwache Kategorien.** Eine Kategorie mit niedriger durchschnittlicher Übereinstimmung hat möglicherweise einen unklaren Namen oder überschneidet sich mit einer anderen Kategorie.
+- **Karten, die zusammengehören.** Dunkle Blöcke in der Ähnlichkeitsmatrix zeigen Gruppen, die die Teilnehmenden von sich aus bilden. Bei einem offenen Card Sorting sind sie Kandidaten für Ihre Kategorien, unabhängig davon, welche Bezeichnungen die Teilnehmenden verwendet haben.
+- **Wortschatz der Teilnehmenden.** Bei einem offenen Card Sorting zeigen die Namen, die die Teilnehmenden ihren Kategorien geben, nach welchen Begriffen sie in Ihrer Navigation suchen würden.
+
+## Leere Zustände
+
+- **"No AI participants completed this card sort."** oder **"No participants have completed this card sort yet."** Für den ausgewählten Teilnehmertyp sind keine Ergebnisse verfügbar.
+- **"The agreement matrix appears once participants have sorted cards."**
+- **"The similarity matrix appears once participants have sorted at least two cards."**
+
+<Note>
+  Card-Sorting-Ergebnisse lassen sich noch nicht als PDF exportieren, und [Ask AI](/de/ask-ai) liest sie nicht.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Card-Sorting-Block" icon="layout-grid" href="/de/card-sorting">
+    Richten Sie ein offenes oder geschlossenes Card Sorting ein.
+  </Card>
+  <Card title="Ergebnisse analysieren" icon="chart-bar" href="/de/analyze-results">
+    Wechseln Sie zwischen KI-Teilnehmenden und menschlichen Teilnehmenden, filtern und teilen Sie.
+  </Card>
+</CardGroup>

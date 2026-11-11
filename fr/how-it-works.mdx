@@ -1,0 +1,76 @@
+---
+title: "Comment fonctionne Uxia"
+description: "Les concepts clés d'Uxia : projets, tests, blocs, audiences, participants IA et humains, crédits, et comment les participants IA vivent votre produit."
+---
+
+Cette page présente les principaux concepts d'Uxia et la façon dont ils s'articulent. Pour vous lancer directement, suivez le [Démarrage rapide](/fr/quickstart).
+
+## Les éléments de base
+
+<CardGroup cols={2}>
+  <Card title="Projets" icon="folder" href="/fr/account/projects">
+    Des dossiers qui regroupent des tests liés, par exemple tous les tests d'un lancement de produit.
+  </Card>
+  <Card title="Tests" icon="flask-conical" href="/fr/unmoderated-tests">
+    Une étude que vous menez avec des participants. Un test est soit **non modéré**, soit **modéré par IA**.
+  </Card>
+  <Card title="Blocs" icon="blocks" href="/fr/build-your-test">
+    Les étapes d'un test non modéré : tâches, enquêtes, tris de cartes et vérifications de l'accessibilité.
+  </Card>
+  <Card title="Audiences" icon="users-round" href="/fr/audiences/overview">
+    Des profils réutilisables des personnes avec lesquelles vous voulez tester. Uxia les transforme en participants IA.
+  </Card>
+</CardGroup>
+
+## Deux types de tests
+
+- **Tests non modérés** : les participants réalisent le test en autonomie. Vous combinez des blocs dans un seul test et le soumettez à des participants IA, à des participants humains, ou aux deux. Consultez [Tests non modérés](/fr/unmoderated-tests).
+- **Tests modérés par IA** : un modérateur IA interroge en direct de vrais participants, en suivant votre guide d'entretien et en posant des questions de relance. Consultez [Tests modérés par IA](/fr/ai-moderated-tests).
+
+## Blocs
+
+| Bloc | Ce que font les participants | Ce que vous apprenez |
+|---|---|---|
+| [Tâche](/fr/task-block) | Réaliser une tâche sur votre site web en production, votre prototype Figma ou votre prototype multimédia en pensant à voix haute | Où les gens réussissent, peinent ou abandonnent, et pourquoi |
+| [Enquête](/fr/survey-block) | Répondre à des questions ouvertes, à choix multiples, d'évaluation, de classement et de répartition de budget | Opinions, préférences et motivations |
+| [Tri de cartes](/fr/card-sorting) | Regrouper des cartes en catégories | Comment les gens s'attendent à ce que vos contenus soient organisés |
+| [Vérification de l'accessibilité](/fr/accessibility-block) | Aucun participant : Uxia audite vos écrans | Quels critères WCAG 2.2 sont respectés, non respectés ou à examiner |
+
+## Participants
+
+- Les **participants IA** sont des personnes générées par IA à partir d'une [audience](/fr/audiences/overview) : données démographiques, profil psychologique et, si vous le souhaitez, vos propres données de recherche. Ils sont disponibles à la demande, et un test avec des participants IA se termine généralement en quelques minutes.
+- Les **participants humains** sont de vraies personnes. Invitez vos propres utilisateurs avec des [liens de test](/fr/test-links), ou demandez à notre équipe de recruter un [panel humain](/fr/human-panel). Leurs sessions sont enregistrées pour que vous puissiez les revoir.
+
+Les deux passent exactement le même test : vous pouvez donc les combiner dans une même étude et comparer leurs résultats côte à côte.
+
+## Comment les participants IA vivent votre produit
+
+Chaque participant IA réalise votre test de façon indépendante, comme le ferait une personne ayant son profil :
+
+1. Il lit le [scénario](/fr/test-scenario) : la situation dans laquelle il se trouve et la raison de sa présence.
+2. Il observe chaque écran, décide de la suite et agit : il clique, saisit du texte, fait défiler et navigue vers la [tâche](/fr/mission).
+3. À chaque étape, il note ce qu'il remarque, ce qu'il s'attend à voir se produire et pourquoi il a agi ainsi : c'est la [transcription](/fr/test-transcripts) de sa réflexion à voix haute.
+4. Il s'arrête lorsqu'il atteint la [condition d'arrêt](/fr/stop-condition) ou le dernier frame de votre prototype, ou lorsqu'il abandonne.
+5. Il répond aux questions d'enquête et aux tris de cartes qui suivent.
+
+Uxia analyse ensuite toutes les sessions ensemble pour produire des insights, des indicateurs et des suggestions de correction.
+
+<Note>
+  Les participants IA ne peuvent pas réaliser certains parcours, par exemple les connexions via un réseau social, les codes de vérification ou l'authentification à deux facteurs. Consultez [Flux que les participants IA ne peuvent pas réaliser](/fr/unsupported-flows).
+</Note>
+
+## Le cycle de vie d'un test
+
+Chaque test non modéré passe par les phases **Build › Recruit › Analyze** :
+
+1. **[Build](/fr/build-your-test)** : ajoutez et configurez les blocs.
+2. **[Recruit](/fr/recruit-participants)** : choisissez les participants et lancez le test.
+3. **[Analyze](/fr/analyze-results)** : consultez les résultats bloc par bloc, discutez avec vos résultats et partagez-les.
+
+## Crédits
+
+Les participants IA et les vérifications de l'accessibilité consomment des crédits. Le coût dépend des blocs de votre test et du nombre de participants IA : par exemple, chaque tâche coûte 20 crédits par participant IA. Les participants humains que vous invitez avec des liens de test ne consomment pas de crédits. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+<Card title="Suivant : Démarrage rapide" icon="arrow-right" href="/fr/quickstart">
+  Réalisez votre premier test de bout en bout.
+</Card>

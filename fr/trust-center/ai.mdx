@@ -1,0 +1,55 @@
+---
+title: "IA responsable"
+sidebarTitle: "IA responsable"
+description: "Usage des fournisseurs de modèles d'IA par Uxia, absence d'entraînement sur votre contenu et maintien des participants IA dans leur périmètre."
+icon: "sparkles"
+---
+
+Uxia utilise de grands modèles de langage pour faire fonctionner les participants IA et pour générer les transcriptions, les insights et les scores. Cette page explique comment nous les utilisons de manière responsable.
+
+## Aucun entraînement sur votre contenu
+
+Uxia n'utilise pas votre contenu pour entraîner, affiner ou améliorer un quelconque modèle d'IA. Notre accord de traitement des données (DPA) impose également à nos sous-traitants ultérieurs de ne pas :
+
+- Utiliser vos données pour entraîner, affiner ou améliorer un modèle public, partagé ou de fondation.
+- Inclure vos données dans des jeux de données utilisés pour l'apprentissage ou le benchmarking entre clients.
+- Utiliser des embeddings, des métadonnées, des journaux ou d'autres données dérivées de votre contenu pour entraîner ou évaluer des modèles.
+
+Cet engagement s'applique par défaut. Vous n'avez aucune démarche de refus à effectuer, et il reste en vigueur après la fin de votre contrat.
+
+## Fournisseurs de modèles d'IA
+
+Uxia envoie le contenu des tests aux fournisseurs de modèles d'IA via leurs API commerciales. Nos fournisseurs figurent sur la page [Sous-traitants ultérieurs](/fr/trust-center/subprocessors). Les conditions de leurs API commerciales excluent vos données de l'entraînement des modèles. L'inférence IA est disponible dans l'UE ou aux États-Unis. Nous ne proposons pas d'inférence spécifique au Royaume-Uni.
+
+- **Conservation limitée par les fournisseurs.** Les fournisseurs peuvent conserver les données transmises via l'API pendant une période courte et limitée, uniquement pour détecter les abus. Elles sont ensuite supprimées et ne sont jamais utilisées pour l'entraînement.
+- **Zero Data Retention.** Pour les clients entreprise disposant d'un contrat annuel, nous pouvons activer Zero Data Retention auprès de nos fournisseurs de modèles d'IA afin que cette conservation à des fins de détection des abus ne s'applique pas. Cette option couvre la conservation par les fournisseurs de modèles d'IA. Vos tests et résultats restent dans Uxia pendant les durées indiquées dans [Protection des données](/fr/trust-center/data-protection).
+- **Notification des changements.** Nous vous prévenons au moins 30 jours à l'avance avant de faire appel à un nouveau fournisseur de modèles d'IA, et vous pouvez vous y opposer pour des motifs raisonnables.
+
+## Aucune utilisation entre clients
+
+Votre contenu n'est jamais exposé à d'autres clients et n'influence jamais les résultats générés pour eux. Aucun apprentissage n'est conservé d'un espace de travail à l'autre.
+
+## Les participants IA restent dans leur périmètre
+
+Les participants IA sont des personas synthétiques, pas des personnes réelles. Ils agissent dans les limites que vous fixez :
+
+- **Vous contrôlez la cible.** Les participants IA agissent uniquement sur les URL ou les prototypes que vous configurez et ne naviguent pas au-delà.
+- **Vous délimitez chaque session.** La tâche et la condition d'arrêt que vous définissez déterminent jusqu'où va une session, ce qui vous permet de l'arrêter avant toute action irréversible.
+- **Les saisies sont synthétiques.** Les valeurs saisies par les participants IA sont générées, de sorte qu'aucune donnée d'une personne réelle n'est soumise.
+- **Chaque action est visible.** Chaque session produit une transcription pas à pas de ce que le participant IA a vu et fait.
+
+Pour des conseils pratiques, consultez [Restrictions des participants IA](/fr/account/security/ai-participant-restrictions).
+
+## Configuration recommandée
+
+- Exécutez les tests sur des environnements de préproduction (staging) ou de recette (UAT) alimentés en données synthétiques.
+- Pour les parcours qui nécessitent une connexion, utilisez des comptes de test dédiés ne contenant que des données synthétiques, ou une [session de connexion interactive](/fr/trust-center/authenticated-testing#session-de-connexion-interactive).
+- Pour les étapes d'import, utilisez des documents fictifs, et non des documents réels.
+
+## En cas de problème
+
+Nous disposons d'un playbook de réponse aux incidents dédié aux participants IA. Si un participant IA agit en dehors du périmètre configuré, ou si des données à caractère personnel réelles apparaissent dans un résultat de test, nous arrêtons les sessions concernées, contenons le problème, supprimons le contenu concerné si nécessaire et vous en informons. Consultez [Réponse aux incidents](/fr/trust-center/incident-response).
+
+<Card title="Suivant : Sous-traitants ultérieurs" icon="network" href="/fr/trust-center/subprocessors">
+  Les tiers qui nous aident à fournir le service.
+</Card>

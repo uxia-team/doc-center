@@ -1,0 +1,63 @@
+---
+title: "Résultats des benchmarks"
+sidebarTitle: "Benchmarks"
+description: "Consultez les scores SUS et UXIA-Q d'un bloc de tâche, comparez-les aux benchmarks du secteur et découvrez ce qui détermine chaque score."
+---
+
+Les benchmarks transforment une tâche en indicateurs standardisés que vous pouvez comparer d'un test à l'autre et suivre dans le temps. Lorsque vous activez **Measure usability with SUS** ou **Measure user experience with UXIA-Q** dans un [bloc de tâche](/fr/task-block), chaque participant IA répond au questionnaire standard après la tâche. Les résultats s'affichent dans l'onglet **Benchmarks** du bloc, avec une section par benchmark.
+
+L'onglet **Benchmarks** n'apparaît que si au moins un benchmark a été activé, et il devient disponible une fois l'exécution terminée.
+
+## SUS
+
+La **System Usability Scale** est un questionnaire de 10 questions largement utilisé, noté de 0 à 100. La section affiche le score sur une échelle colorée, avec un badge de note, un repère **Average** correspondant à la moyenne du secteur (68) et une courte explication du résultat.
+
+| Note | Libellé | Score |
+|---|---|---|
+| **F** | Poor | Moins de 51 |
+| **B** | Acceptable | De 51 à 68 |
+| **A** | Good | De 68 à 80,3 |
+| **A+** | Excellent | Plus de 80,3 |
+
+Un score supérieur à 68 signifie que les participants ont trouvé l'expérience plus facile à utiliser que la moyenne. Utilisez le SUS pour comparer plusieurs versions d'un même parcours ou pour suivre l'utilisabilité de version en version. Consultez [SUS](/fr/sus) pour les 10 questions.
+
+## UXIA-Q
+
+**UXIA-Q** mesure la qualité globale de l'expérience selon quatre piliers, avec deux questions chacun :
+
+| Pilier | Ce qu'il mesure | Questions |
+|---|---|---|
+| **Usability** | La facilité d'utilisation et de navigation du produit | Facile à utiliser, facile à parcourir |
+| **Trust** | La crédibilité du produit et la confiance qu'auraient les participants à faire affaire avec lui | Informations crédibles, confiance pour effectuer une transaction |
+| **Appearance** | L'attrait et la clarté de la présentation | Attrayant, présentation soignée |
+| **Loyalty** | La probabilité que les participants reviennent et recommandent le produit | Probabilité de revenir, probabilité de recommander |
+
+La section commence par un graphique radar des quatre piliers, sur une échelle de 1 à 5. Survolez un point pour afficher son explication, ou cliquez dessus pour sélectionner ce pilier. Les onglets des piliers (**Usability**, **Trust**, **Appearance**, **Loyalty**) affichent, pour le pilier sélectionné :
+
+- Une interprétation en langage clair, par exemple "Quite easy to use".
+- Le score du pilier sur 5.
+- **Questions asked** : chaque question avec son score moyen.
+- Une explication des raisons de ce score.
+
+Ensemble, les piliers forment le **UXIA-Q Score**. Consultez [UXIA-Q Score](/fr/uxia-q-score) pour l'ensemble des questions.
+
+## Filtrer par audience
+
+Lorsque vous filtrez les résultats par audience, les scores sont recalculés pour les audiences sélectionnées, et la section affiche **Calculated for filtered audiences:** avec leurs badges. Si un score ne peut pas être recalculé pour le filtre, la section affiche **All audiences** pour vous indiquer qu'il couvre toujours l'ensemble des participants. Consultez [Analyser vos résultats](/fr/analyze-results) pour en savoir plus sur les filtres.
+
+## Lien entre les benchmarks et l'UOS
+
+Les benchmarks reflètent ce que les participants *disent* de l'expérience. L'[Usability Optimization Score](/fr/results) est calculé à partir des insights, c'est-à-dire des problèmes que les participants ont *rencontrés*. Les deux ne s'alimentent pas l'un l'autre : lisez-les donc côte à côte. Par exemple, un bon SUS associé à un UOS faible peut signifier que les participants ont apprécié le produit dans l'ensemble, tout en rencontrant des problèmes précis qui méritent d'être corrigés.
+
+## Forfaits et crédits
+
+Les benchmarks sont disponibles avec les forfaits payants. Chaque benchmark ajoute 1 crédit par participant IA au coût du bloc de tâche. Avec le forfait Free, vous ne pouvez pas activer les benchmarks, et les scores des benchmarks sont verrouillés. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="SUS" icon="clipboard-list" href="/fr/sus">
+    Les 10 questions du SUS et la façon dont Uxia les applique.
+  </Card>
+  <Card title="UXIA-Q Score" icon="gauge" href="/fr/uxia-q-score">
+    Les quatre piliers et les huit questions qui composent UXIA-Q.
+  </Card>
+</CardGroup>

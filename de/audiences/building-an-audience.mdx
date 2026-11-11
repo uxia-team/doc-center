@@ -1,0 +1,75 @@
+---
+title: "Eine Zielgruppe erstellen"
+sidebarTitle: "Eine Zielgruppe erstellen"
+description: "Erstellen Sie Schritt für Schritt eine Uxia-Zielgruppe: Filter setzen oder Quick Fill nutzen, KI-Teilnehmende generieren und in Recruit auswählen."
+---
+
+Diese Seite beschreibt, wie Sie eine Zielgruppe erstellen und ihre KI-Teilnehmenden prüfen. Die Konzepte dahinter, also die drei Ebenen und wie KI-Teilnehmende funktionieren, finden Sie in der [Übersicht](/de/audiences/overview).
+
+## Wo Sie eine Zielgruppe erstellen
+
+Sie können eine Zielgruppe an zwei Stellen erstellen:
+
+- **AI Audience** in der Seitenleiste. Klicken Sie auf **Create audience**, um eine Zielgruppe zu erstellen, die Sie in jedem Test wiederverwenden können.
+- **Die Phase Recruit eines Tests.** Öffnen Sie **AI participants** und klicken Sie auf **Create audience**. Wenn Sie fertig sind, wird die neue Zielgruppe dem Test hinzugefügt.
+
+Jede Zielgruppe wird als Karte mit Name, Anzahl der Teilnehmenden, Altersspanne und Geschlechterverteilung angezeigt. Über ihr Menü können Sie **View participants**, **Review filters**, **Rename**, **Clone** oder **Delete** wählen. Beim Klonen werden die Kriterien und Filter kopiert, nicht aber die generierten Teilnehmenden, sodass Sie in der Kopie einen neuen Satz generieren. Das ist praktisch, wenn Sie eine Variante eines bestehenden Segments möchten.
+
+## Filter einrichten
+
+Geben Sie der Zielgruppe im Builder einen Namen und aktivieren Sie dann Filter über die Auswahl rechts; aktive Filter werden links gesammelt. Neue Zielgruppen starten mit den drei bereits aktiven Kernfiltern:
+
+- **Age**: eine beliebige Spanne von 18 bis 100
+- **Gender**: männlich, weiblich oder beides
+- **Languages**: standardmäßig Englisch, mit der Option, eine beliebige oder alle ausgewählten Sprachen abzugleichen
+
+Darüber hinaus können Sie das Segment mit weiteren Filtern eingrenzen: Wohnsitzland und Staatsangehörigkeit, Technikkompetenz, Bildung, Familien- und Beschäftigungsstatus, Branche, Rolle sowie Haushalts- oder persönliches Einkommen. Außerdem gibt es das Freitextfeld **Custom Details** für Lebensstil, Beweggründe, Routinen oder andere Eigenschaften. Sie müssen nicht alles ausfüllen: Was Sie leer lassen, wird automatisch ergänzt, damit jede KI-teilnehmende Person in sich stimmig bleibt.
+
+<Note>
+  Erweiterte Filter und Quick Fill hängen vom Plan ab. In niedrigeren Plänen sehen Sie an ihrer Stelle den Hinweis **Unlock more audience filters**.
+</Note>
+
+### Quick Fill
+
+Wenn Sie Filter nicht von Hand setzen möchten, erledigt **Quick Fill** (oben rechts) das auf eine von zwei Arten für Sie:
+
+- **Smart URL**: Fügen Sie die URL eines Produkts oder einer Website ein. Uxia liest die Seite aus, leitet ab, für wen das Produkt gedacht ist, und schlägt passende Filter vor, die Sie prüfen und anpassen können.
+- **Manual**: Beschreiben Sie Ihre Zielnutzerinnen und -nutzer in Freitext (eine Zielgruppenbeschreibung), und Uxia übersetzt das in Filter.
+
+Wenn Sie ohne gesetzte Filter fortfahren, weist Uxia darauf hin, dass zufällige Teilnehmende generiert werden.
+
+## KI-Teilnehmende generieren
+
+Wenn Ihre Filter bereit sind, klicken Sie auf **Populate audience** und bestätigen. Uxia speichert die Zielgruppe und beginnt im Hintergrund, KI-Teilnehmende zu generieren, die Ihren Kriterien entsprechen.
+
+<Warning>
+  Sobald Teilnehmende generiert sind, sind die Filter und Details der Zielgruppe **gesperrt**. Um sie zu ändern, erstellen Sie eine neue Zielgruppe. Am schnellsten verwenden Sie dieselben Kriterien wieder, indem Sie eine bestehende Zielgruppe klonen.
+</Warning>
+
+Um das Ergebnis zu prüfen, wählen Sie auf der Zielgruppenkarte **View participants**. Jede KI-teilnehmende Person erscheint als Karte mit zwei Ansichten:
+
+- einer Ansicht **Demografie / Lebensstil**: Staatsangehörigkeit, Land, Sprachen, Technikkompetenz, Bildung, Branche, Rolle, Beschäftigung, Einkommen und eine kurze Beschreibung. Die von Ihnen festgelegten Felder sind anders gestaltet als die von Uxia ergänzten.
+- einer Ansicht **psychologisches Profil**: das OCEAN-Netzdiagramm sowie eine Beschreibung der Beweggründe und des Entscheidungsstils der teilnehmenden Person
+
+KI-Teilnehmende, die mit Anreicherung erstellt wurden, tragen das Abzeichen **Enriched**. Wenn eine Person nicht ganz passt, ersetzt **Replace tester** sie durch ein neues Profil, das weiterhin alle Ihre Kriterien erfüllt. **Review Audience Filters** öffnet ein Seitenpanel mit den Filtern, aus denen die Zielgruppe erstellt wurde.
+
+## Teilnehmende für einen Test auswählen
+
+Wer einen Test durchläuft, legen Sie in der Phase Recruit fest, nicht in der Zielgruppe selbst. Nehmen Sie bis zu drei Zielgruppen auf. Anschließend können Sie entweder:
+
+- die Anzahl der Teilnehmenden mit **Distribute evenly** gleichmäßig auf die Zielgruppen verteilen oder
+- mit **Handpick participants** bestimmte KI-Teilnehmende aus jeder Zielgruppe auswählen.
+
+Wie viele KI-Teilnehmende Sie einsetzen können, hängt von Ihrem Plan ab. Den vollständigen Ablauf finden Sie unter [KI-Teilnehmende](/de/ai-participants).
+
+## Nächste Schritte
+
+<CardGroup cols={2}>
+  <Card title="KI-Teilnehmende" href="/de/ai-participants">
+    Fügen Sie einem Test Zielgruppen hinzu, legen Sie die Anzahl der Teilnehmenden fest und starten Sie.
+  </Card>
+
+  <Card title="Zielgruppen-Anreicherung" href="/de/audiences/enrichment">
+    Gehen Sie weiter mit KI-Teilnehmenden, die aus Ihren eigenen Nutzer-Personas, Interviews und Forschungsergebnissen erstellt werden.
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Recruter des participants"
+sidebarTitle: "Vue d'ensemble"
+description: "Choisissez des participants IA, des liens de test ou un panel humain, puis lancez le test. Voyez ce que vérifie la revue avant le départ des participants IA."
+---
+
+La phase **Recruit** est celle où vous décidez qui passe votre test. Pour l'ouvrir, cliquez sur **Start recruiting** dans Build. Uxia vérifie d'abord vos blocs ; s'il manque un champ obligatoire, il vous amène au premier problème à la place. L'étape **Recruit** de l'en-tête reste désactivée tant que votre test ne contient pas au moins un bloc.
+
+Lorsque vous arrivez depuis Build, la vue des participants IA s'ouvre en premier. Si vous ne voulez que des personnes réelles, cliquez sur **Recruit human participants only** pour accéder aux méthodes de recrutement.
+
+## Choisir une méthode de recrutement
+
+| Méthode | Ce qu'elle fait | Coût | Forfaits |
+|---|---|---|---|
+| [**AI participants**](/fr/ai-participants) | Réalisez vos tests avec des participants synthétiques issus de vos [audiences](/fr/audiences/overview). | Crédits, par bloc | Tous les forfaits |
+| [**Test links**](/fr/test-links) | Envoyez un lien aux personnes que vous connaissez déjà, par le canal de votre choix. | 0 crédit | Forfaits payants |
+| [**Human panel**](/fr/human-panel) | Demandez des participants présélectionnés pour votre test. Notre équipe vous contacte pour le tarif. | Tarif fixé par notre équipe | Forfaits payants |
+
+Vous pouvez combiner plusieurs méthodes dans un même test. Par exemple, lancez des participants IA pour obtenir des retours rapides et partagez un lien de test avec vos clients. Chaque méthode a sa propre ligne dans le récapitulatif, et les résultats IA et humains restent séparés dans [Analyze](/fr/analyze-results).
+
+<Note>
+  Avec le forfait Free, les liens de test et le panel humain sont verrouillés. Sélectionner l'un ou l'autre ouvre **Upgrade to recruit human participants**.
+</Note>
+
+## Récapitulatif
+
+Sous les cartes des méthodes, **Summary** liste chaque méthode que vous avez commencée, avec ses colonnes **Participants**, **Audiences / links**, **Status** et **Credits**. Tant que vous n'en avez commencé aucune, il affiche *"Choose from the methods above to start collecting insights."*
+
+- **AI participants** passe de **Not launched** à **Completed** en passant par **Checking test setup** et **Processing**, ou à **Failed**. Les crédits indiquent le coût de l'exécution.
+- **Test links** affiche **Active** ou **Stopped**, le nombre de sessions terminées et **0 credits**.
+- **Human panel** affiche **Requested** et **Pricing by our team**.
+
+Chaque ligne comporte un lien **Go to analyze**. Le pied de page affiche **Total credits** et **Credits after test**. Avec les forfaits payants, cliquez sur les crédits de la ligne des participants IA pour voir le coût de chaque bloc.
+
+### Tests d'accessibilité uniquement
+
+Une [vérification de l'accessibilité](/fr/accessibility-block) ne nécessite pas de participants. S'il s'agit du seul bloc de votre test, Recruit affiche *"This test only contains an accessibility block, so recruiting testers is not necessary."* Les cartes des méthodes sont désactivées, et le récapitulatif indique le coût des frames (10 crédits par frame). Cliquez sur **Go to analyze** pour lancer la vérification.
+
+## Lancement
+
+- Les **participants IA** démarrent lorsque vous cliquez sur **Launch test**, après une rapide revue du test.
+- Les **liens de test** recueillent des réponses dès leur création, sans lancement ni revue.
+- Les demandes de **panel humain** sont transmises à notre équipe lorsque vous cliquez sur **Send Request**.
+
+Une fois les participants IA lancés, les blocs et les audiences du test sont verrouillés. Vous pouvez toujours créer des liens de test pour ce même test.
+
+## Revue du test
+
+Les résultats ne valent que ce que vaut la configuration qui les produit. Une tâche vague, un scénario provisoire ou un écran inutilisable affaiblissent tous les constats qui en découlent. C'est pourquoi, avant le départ de tout participant IA, Uxia passe votre test en revue.
+
+<Steps>
+  <Step title="Vérification de la configuration">
+    Une boîte de dialogue intitulée **Checking test setup…** liste chaque bloc. Chacun passe de **Checking…** à **Complete**, ou à **Needs changes** si Uxia détecte un problème.
+  </Step>
+  <Step title="Approuvé">
+    Si tous les blocs sont validés, vous voyez **Test confidence approved** et *"Everything is ready. Starting your test…"*. Les participants IA démarrent, et le récapitulatif affiche leur progression.
+  </Step>
+  <Step title="Problèmes détectés">
+    Si quelque chose doit être revu, la boîte de dialogue **Test review** liste *"Some issues to fix before launching:"* bloc par bloc. Cliquez sur **Fix in Build** pour revenir à Build avec les blocs concernés mis en évidence, ou sur **Cancel** pour rester dans Recruit. Rien n'est lancé, et les crédits du lancement vous sont restitués.
+  </Step>
+</Steps>
+
+Ce que vérifie la revue :
+
+| Bloc | Vérifications |
+|---|---|
+| [Tâche](/fr/task-block) | La [tâche](/fr/mission), le [scénario](/fr/test-scenario) et la [condition d'arrêt](/fr/stop-condition) sont présents et pertinents, et pas un simple texte provisoire. Un site web en production a une URL valide. Les écrans des prototypes sont des images prises en charge, suffisamment claires pour être testées et cohérentes avec les instructions. |
+| [Enquête](/fr/survey-block) | Chaque question et chaque option de réponse est un texte compréhensible. |
+| [Vérification de l'accessibilité](/fr/accessibility-block) | Chaque frame est une image PNG, JPEG, WebP ou GIF qui montre une interface utilisateur. |
+| [Tri de cartes](/fr/card-sorting), benchmarks | Non vérifiés. |
+
+<Tip>
+  Réussir la revue signifie que votre configuration est utilisable, pas qu'elle est parfaite. Rédigez la tâche comme une action concrète unique, et le scénario comme la motivation du participant. Plus la consigne est claire, plus vous pouvez vous fier à ce que les participants en font.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Participants IA" icon="bot" href="/fr/ai-participants">
+    Choisissez des audiences, définissez le nombre de participants et lancez le test.
+  </Card>
+  <Card title="Analyser les résultats" icon="chart-bar" href="/fr/analyze-results">
+    Suivez les résultats au fur et à mesure qu'ils arrivent.
+  </Card>
+</CardGroup>

@@ -1,0 +1,126 @@
+---
+title: "Tâche"
+description: "Rédigez le champ Task : la seule action concrète que les participants tentent dans un bloc de tâche, avec conseils, alertes et un exemple."
+---
+
+Le champ **Task** (anciennement appelé *mission*) décrit la seule action concrète que les participants essaient de réaliser. C'est le champ le plus important d'un [bloc de tâche](/fr/task-block) : il définit l'objectif de la session et garde les retours de chaque participant ciblés et exploitables.
+
+La tâche est obligatoire et accepte jusqu'à 500 caractères. Plus vous la rendez précise et détaillée, plus vos résultats se concentrent sur le flux que vous voulez analyser.
+
+## La rédiger comme une seule tâche concrète
+
+Une bonne tâche décrit un seul objectif avec un état final clair :
+
+> _"Passez de l'offre gratuite à l'offre premium en payant par carte bancaire."_
+
+> _"Trouvez et achetez deux places pour la séance de 21 h ce soir."_
+
+> _"Réservez une table pour deux dans le premier restaurant de la rubrique Populaires près de chez vous."_
+
+## Conseils pour des tâches efficaces
+
+<Tip>
+  **Commencez par un verbe d'action.** S'inscrire, acheter, réserver, importer, envoyer. Décrivez ce qu'il faut accomplir, pas ce qu'il faut évaluer : évitez des verbes comme "tester", "explorer" ou "vérifier".
+</Tip>
+
+<Tip>
+  **Désignez une seule cible.** Si l'écran peut afficher plusieurs éléments correspondants, indiquez-en exactement un : "le premier produit de la rubrique Nouveautés", un article nommé ou un créneau horaire précis. Évitez "n'importe quel produit".
+</Tip>
+
+<Tip>
+  **Donnez l'objectif, pas les étapes.** Écrivez "Trouvez une offre adaptée à votre budget et inscrivez-vous" plutôt que "Cliquez sur Tarifs, sélectionnez Pro, puis renseignez vos informations." Les instructions pas à pas habituent les participants à suivre des consignes au lieu de révéler les points faibles de votre design.
+</Tip>
+
+<Tip>
+  **N'indiquez pas aux participants comment donner leur avis.** Les participants IA partagent déjà leurs pensées, leurs réactions et leurs retours tout au long de chaque session : les formules comme "pensez à voix haute" ou "donnez votre première impression" sont donc supprimées avant l'exécution du test.
+
+  Au lieu de : "Jetez un œil rapide à la page, donnez votre première impression, puis achetez un ordinateur portable et dites-nous ce que vous pensez."
+
+  Écrivez : "Achetez le premier ordinateur portable du catalogue des ordinateurs portables."
+
+  Pour recueillir des opinions, ajoutez un [bloc d'enquête](/fr/survey-block) après la tâche.
+</Tip>
+
+<Tip>
+  **Évitez les formulations orientées.** Ne nommez pas d'éléments d'interface ("cliquez sur le bouton bleu"), ne suggérez pas de bon chemin ("trouvez le moyen simple de…") et n'indiquez pas ce que les participants doivent ressentir ("remarquez à quel point c'est simple…"). La neutralité de la formulation est essentielle.
+</Tip>
+
+## Un seul objectif par tâche
+
+Les tâches composées produisent des résultats confus. Pour tester plusieurs flux, ajoutez un bloc de tâche pour chacun : jusqu'à 3 dans un même test sur les forfaits payants, et 1 sur le forfait Free. Lorsqu'une tâche de site web en production ou de prototype Figma utilise la même URL qu'une tâche précédente, vous pouvez activer **Continue from where participants left the previous task**, pour que les participants reprennent là où ils s'étaient arrêtés.
+
+## Affiner la tâche avec Tips
+
+Les champs **Task**, **Scenario** et **Stop condition** disposent chacun d'un bouton **Tips** : l'icône de baguette magique en haut à droite du champ.
+
+<Steps>
+  <Step title="Rédigez une première version">
+    Les suggestions nécessitent au moins 15 caractères de texte.
+  </Step>
+  <Step title="Cliquez sur Tips">
+    Uxia propose des versions reformulées et explique ce que chacune améliore. Utilisez les flèches pour les parcourir.
+  </Step>
+  <Step title="Appliquez-en une">
+    Cliquez sur **Use this version** pour remplacer votre texte, ou fermez les suggestions pour garder le vôtre. Pour obtenir de nouvelles suggestions, modifiez d'abord le texte.
+  </Step>
+</Steps>
+
+## Alertes sous la tâche
+
+Sur les tâches de site web en production et de prototype Figma, Uxia affiche une alerte sous le champ **Task** lorsque votre texte mentionne :
+
+- une connexion via un réseau social, que les participants IA ne peuvent pas réaliser ;
+- un flux d'inscription ou d'enregistrement, qui ne doit pas exiger de codes de vérification, d'e-mails de validation ni de 2FA ;
+- des instructions de réflexion à voix haute ou de retours (dans la tâche ou la condition d'arrêt), qui sont supprimées avant l'exécution du test.
+
+Cliquez sur **Learn more** dans l'alerte pour lire une courte explication, ou consultez [Flux que les participants IA ne peuvent pas réaliser](/fr/unsupported-flows) pour connaître les solutions de contournement.
+
+## Exemple
+
+Supposons que votre objectif métier soit le suivant :
+
+> **_"Comprendre si les clients parviennent à souscrire un nouveau forfait mobile."_**
+
+Il peut être tentant de tester tout le parcours avec une seule tâche :
+
+<Warning>
+  **Trop large**
+
+  _"Trouvez un forfait mobile adapté à vos besoins, souscrivez-le et contactez le support si vous avez des questions."_
+</Warning>
+
+Même si cela ressemble à un parcours client réaliste, cette tâche en combine plusieurs :
+
+- Trouver le bon forfait
+- Finaliser l'achat
+- Demander de l'aide
+
+Si les participants rencontrent des difficultés, il est beaucoup plus difficile de savoir quelle partie de l'expérience a causé la friction.
+
+Divisez plutôt l'objectif en plusieurs blocs de tâche dans le même test :
+
+**Bloc de tâche 1 : trouver un forfait adapté**
+
+<Check>
+  _"Trouvez un forfait mobile qui inclut environ 10 Go de données par mois et ajoutez-le à votre panier."_
+</Check>
+
+**Bloc de tâche 2 : acheter le forfait**
+
+<Check>
+  _"Achetez le forfait mobile qui se trouve dans votre panier et ajoutez un produit supplémentaire à votre commande."_
+</Check>
+
+Activez ici **Continue from where participants left the previous task**, pour que les participants conservent le forfait ajouté à leur panier.
+
+**Bloc de tâche 3 : obtenir de l'aide**
+
+<Check>
+  _"Trouvez comment contacter le service client pour poser une question sur votre abonnement."_
+</Check>
+
+Chaque tâche mesure un seul objectif utilisateur clair. Les résultats sont ainsi plus faciles à interpréter et montrent exactement où les participants rencontrent des frictions.
+
+<Card title="Suivant : Scénario" icon="arrow-right" href="/fr/test-scenario">
+  Donnez à la tâche un contexte crédible pour que les participants se comportent comme de vrais utilisateurs.
+</Card>

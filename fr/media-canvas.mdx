@@ -1,0 +1,95 @@
+---
+title: "Prototype multimédia"
+description: "Créez un prototype cliquable à partir de vos propres images dans une tâche de prototype multimédia, puis testez-le avec des participants."
+---
+
+Une **Media prototype task** vous permet de tester des maquettes qui ne sont pas encore développées. Vous importez vos écrans sous forme d'images, vous les reliez en un flux sur le canevas, et les participants le parcourent comme une vraie interface.
+
+## Quand l'utiliser
+
+Optez pour un prototype multimédia lorsque vous testez :
+
+- Des écrans statiques exportés depuis Figma, Sketch ou tout autre outil de design.
+- Une série d'images représentant un flux qui n'est pas encore développé.
+- Les premières itérations d'un design, avant de disposer d'un prototype fonctionnel.
+
+Un prototype multimédia n'accepte que des images. Pour tester un prototype Figma à partir de son lien, utilisez plutôt une [tâche de prototype Figma](/fr/source).
+
+## Créer le prototype
+
+<Steps>
+  <Step title="Ouvrez le canevas">
+    Dans le bloc, cliquez sur **Add prototype**.
+  </Step>
+  <Step title="Sélectionnez un mode">
+    Dans **Select mode**, choisissez **Interactive** ou **Sequential**, puis cliquez sur **Continue**. Consultez [Modes](#modes).
+  </Step>
+  <Step title="Importez vos maquettes">
+    Cliquez sur **Import designs** et choisissez vos images. Ajoutez-en d'autres par la suite avec **Import Files** dans la barre latérale **Frames**. Un prototype peut contenir jusqu'à 35 frames.
+  </Step>
+  <Step title="Configurez le flux">
+    Dans un flux interactif, choisissez le frame de départ, puis le frame final, et reliez les frames avec des zones d'interaction. Dans un flux séquentiel, faites glisser les frames dans la barre latérale **Frames** pour les placer dans l'ordre où les participants les verront.
+  </Step>
+  <Step title="Prévisualisez et enregistrez">
+    Ouvrez l'onglet **Preview** pour parcourir un flux interactif comme le ferait un participant. Cliquez ensuite sur **Save**.
+  </Step>
+</Steps>
+
+La session se termine lorsque les participants atteignent le frame final : une tâche de prototype multimédia n'a donc pas de condition d'arrêt. Vous rédigez quand même une [tâche](/fr/mission) et un [scénario](/fr/test-scenario), comme dans tout bloc de tâche.
+
+## Modes
+
+| Mode | Fonctionnement | Choisissez-le si |
+|---|---|---|
+| **Interactive** (Recommended) | Un prototype interactif avec des zones cliquables et différents chemins. | Vous voulez un flux réaliste avec des embranchements. |
+| **Sequential** | Une suite linéaire de frames que les participants voient dans l'ordre. | Vous voulez un parcours simple et rapide. |
+
+## Flux interactifs
+
+Un flux interactif nécessite au moins 2 frames. Après leur importation, Uxia vous demande de choisir le frame de départ, puis le frame final, qui sont marqués **Start** et **End**.
+
+Pour relier des frames, cliquez sur l'icône de cible dans la barre d'outils (**Create interaction areas**), dessinez une zone sur un frame et reliez-la au frame vers lequel elle mène. Choisissez ensuite l'action qui la déclenche.
+
+Une liste de contrôle sur le canevas indique ce qu'il reste à faire : un début et une fin, au moins une connexion sortante sur chaque frame, et un chemin de chaque frame vers la fin. L'onglet **Preview** est disponible dès qu'un frame de départ est défini.
+
+## Actions
+
+| Action | À utiliser pour |
+|---|---|
+| **Click** | Les boutons, les liens ou tout élément qui mène à un autre frame lorsqu'on clique dessus. |
+| **Input** | Les champs de texte ou les barres de recherche. Simule une saisie avant de passer au frame suivant. |
+| **Scroll / Swipe** | Les pages longues, les carrousels ou les contenus à faire glisser. Définissez la direction : haut, bas, gauche, droite ou toutes. |
+| **Wait** | Les frames qui changent automatiquement après un délai. Définissez le temps d'attente en millisecondes. |
+| **Drag** | Les curseurs ou les objets que l'utilisateur doit faire glisser d'un point à un autre. |
+| **Hover** | Les éléments qui affichent des informations supplémentaires ou qui changent lorsque le curseur les survole. |
+
+## Commandes du canevas
+
+- **Click mode.** Lorsqu'il est activé, faites glisser les frames pour les repositionner. Lorsqu'il est désactivé, faites glisser pour vous déplacer sur le canevas.
+- **Create interaction areas.** Dessinez des zones interactives sur un frame et reliez-les à l'étape suivante. Mode interactif uniquement.
+- **Zoom.** Utilisez le menu de zoom de la barre d'outils (zoom avant, zoom arrière, 50 %, 100 %, 200 %), pincez sur un trackpad, ou faites défiler en maintenant Ctrl ou Cmd.
+- **Fit all images in view.** Ajustez la vue pour afficher tous les frames du canevas.
+- **Pan.** Faites défiler avec votre trackpad ou la molette de la souris, faites glisser le canevas lorsque le mode clic est désactivé, ou maintenez la **Spacebar** enfoncée et faites glisser.
+
+Dans la barre latérale **Frames**, vous pouvez aussi renommer et supprimer des frames, ou accéder directement à l'un d'eux.
+
+## Questions fréquentes
+
+<AccordionGroup>
+  <Accordion title="Comment créer un défilement plein écran ?">
+    Créez une zone d'interaction qui couvre tout le frame, attribuez-lui l'action **Scroll / Swipe** et reliez-la au frame suivant, qui montre la vue après défilement.
+  </Accordion>
+  <Accordion title="Comment simuler une saisie de texte ?">
+    Créez une interaction **Input** sur le champ vide et reliez-la à un frame où le champ apparaît rempli. Pour les formulaires à plusieurs champs, vous pouvez tous les remplir en une seule étape, ou créer des frames distincts pour une expérience plus réaliste.
+  </Accordion>
+  <Accordion title="L'ordre des frames a-t-il de l'importance ?">
+    Dans un flux séquentiel, oui : les participants voient les frames dans l'ordre de la barre latérale **Frames**. Dans un flux interactif, non : le chemin est défini par les zones d'interaction et leurs connexions, pas par les numéros des frames.
+  </Accordion>
+  <Accordion title="Les participants voient-ils les effets de transition ?">
+    Non. Les animations de transition de **Preview** servent uniquement à créer et à relire le prototype. Les participants ne voient que les interactions et les frames qui en résultent.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Suivant : Tâche" icon="arrow-right" href="/fr/mission">
+  Indiquez aux participants ce qu'ils doivent essayer d'accomplir.
+</Card>

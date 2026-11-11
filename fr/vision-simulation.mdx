@@ -1,0 +1,66 @@
+---
+title: "Simulation de la vision"
+description: "Comparez vos frames côte à côte en cas de daltonisme, de vision floue ou de perte du champ visuel pour vérifier que votre design fonctionne toujours."
+---
+
+L'onglet **Vision Simulation** affiche le même frame sous deux conditions de vision, côte à côte. Utilisez-le pour vérifier que votre design reste compréhensible lorsque la perception change. C'est le moyen le plus rapide de repérer une information transmise uniquement par la couleur, ou un contraste qui s'effondre pour une partie de vos utilisateurs.
+
+Vous le trouvez à côté de **Results** dans le bloc de vérification de l'accessibilité, dans la phase **Analyze**.
+
+## Comparer deux conditions
+
+<Steps>
+  <Step title="Choisissez un frame">
+    Cliquez sur une miniature numérotée en haut pour choisir le frame à simuler.
+  </Step>
+  <Step title="Choisissez une condition pour chaque panneau">
+    Chaque panneau dispose de son propre menu déroulant de condition. Le panneau de gauche commence sur **Normal Vision** et celui de droite sur **Red-Blind** : vous partez ainsi d'une référence placée à côté d'une simulation.
+  </Step>
+  <Step title="Ajustez la sévérité">
+    Faites glisser le curseur **Severity** à côté du menu déroulant pour atténuer ou accentuer la condition, de 1 % à 100 %. Chaque panneau commence à 50 %. Le curseur est désactivé pour **Normal Vision**.
+  </Step>
+  <Step title="Regardez de plus près">
+    Cliquez sur une image simulée pour l'ouvrir en taille réelle.
+  </Step>
+</Steps>
+
+Pour comparer directement deux conditions, réglez les deux panneaux sur des simulations, par exemple **Red-Blind** à côté de **Green-Blind**.
+
+## Conditions
+
+| Groupe | Condition | Ce qui est simulé |
+|---|---|---|
+| | **Normal Vision** | Perception des couleurs standard avec une netteté visuelle totale |
+| **Color Blindness** | **Red-Blind** | Protanopie : difficulté à distinguer le rouge du vert |
+| | **Green-Blind** | Deutéranopie, la forme de daltonisme la plus courante |
+| | **Blue-Blind** | Tritanopie : difficulté avec le bleu et le jaune |
+| | **Total Color Blindness** | Achromatopsie : vision uniquement en niveaux de gris |
+| **Clarity Issues** | **Cataracts** | Un cristallin opacifié : vision floue et voilée, avec un jaunissement |
+| | **Astigmatism** | Vision floue avec des images dédoublées |
+| | **Presbyopia** | Perte de la vision de près liée à l'âge |
+| **Field Loss** | **Glaucoma** | Perte de la vision périphérique, comme si l'on regardait à travers un tunnel |
+| | **Macular Degeneration** | Perte de la vision centrale, qui affecte la perception des détails |
+
+## Points à vérifier
+
+- **Daltonisme.** Vérifiez que les statuts, les erreurs, les liens et les séries de graphiques ne reposent pas uniquement sur la couleur. Un message d'erreur rouge doit toujours se lire comme une erreur en **Total Color Blindness**.
+- **Problèmes de netteté.** Vérifiez que les petits textes, les icônes fines et les libellés peu contrastés restent lisibles lorsqu'ils sont flous.
+- **Perte du champ visuel.** Vérifiez l'emplacement des contenus et des actions clés. Avec **Glaucoma**, le contenu proche des bords s'estompe. Avec **Macular Degeneration**, c'est le centre de l'écran qui s'estompe.
+- **Hiérarchie.** Vérifiez que l'élément le plus important ressort toujours lorsque la couleur et la netteté changent.
+
+Lorsque vous repérez un problème, revenez à l'onglet **Results** et cherchez le critère correspondant, par exemple *Use of Color* (1.4.1) ou *Contrast (Minimum)* (1.4.3). Consultez [Évaluation des critères](/fr/criteria-evaluation).
+
+## Bon à savoir
+
+- Les simulations sont des approximations destinées à sensibiliser. Le vécu réel de ces conditions varie beaucoup d'une personne à l'autre.
+- Les simulations s'appliquent aux frames image. Les frames qu'Uxia a ignorés car ils ne représentent pas une interface affichent la même bannière que dans **Results**.
+- L'onglet nécessite un navigateur compatible WebGL. Si WebGL n'est pas disponible, l'onglet affiche **WebGL Required**. Essayez un autre navigateur ou activez WebGL dans les paramètres de votre navigateur.
+
+<CardGroup cols={2}>
+  <Card title="Bloc de vérification de l'accessibilité" icon="person-standing" href="/fr/accessibility-block">
+    Ce que couvre la vérification de l'accessibilité et quand l'utiliser.
+  </Card>
+  <Card title="Évaluation des critères" icon="list-checks" href="/fr/criteria-evaluation">
+    Consultez les résultats critère par critère.
+  </Card>
+</CardGroup>

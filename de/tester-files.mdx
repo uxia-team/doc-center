@@ -1,0 +1,120 @@
+---
+title: "Dateien für Teilnehmende"
+sidebarTitle: "Dateien"
+description: "Geben Sie KI-Teilnehmenden die Dateien, die eine Aufgabe zum Hochladen verlangt, und erfahren Sie, wie Uxia sie speichert und schützt."
+---
+
+Manche Aufgaben lassen sich nicht ohne etwas zum Hochladen erledigen. Wenn Ihr Flow verlangt, dass die Teilnehmenden einer Bewerbung einen Lebenslauf beifügen, einen Ausweis zur Verifizierung hochladen, eine CSV-Datei importieren oder ein Profilbild hinzufügen, brauchen KI-Teilnehmende eine echte Datei, die sie übergeben können.
+
+Dafür gibt es **Dateien**. Sie importieren sie einmal in einen Aufgabenblock, und KI-Teilnehmende verwenden sie, sobald der Flow einen Upload-Schritt erreicht.
+
+## Dateien hinzufügen
+
+<Steps>
+  <Step title="Dateien-Dialog öffnen">
+    Klicken Sie in einer Live-Website- oder Figma-Prototyp-Aufgabe unter der URL auf **+ Add files**.
+  </Step>
+  <Step title="Dateien importieren">
+    Ziehen Sie Dateien per Drag-and-drop in den Dialog oder klicken Sie, um sie auszuwählen. Entfernen Sie eine Datei über ihre Schaltfläche **X**.
+  </Step>
+  <Step title="Dialog schließen">
+    Klicken Sie auf **Done**. Die Schaltfläche im Block zeigt jetzt an, wie viele Dateien Sie hinzugefügt haben, etwa **2 files added**.
+  </Step>
+</Steps>
+
+## Was Sie hochladen können
+
+Importieren Sie jede Datei, nach der der Flow fragen könnte. Häufige Fälle:
+
+| Anwendungsfall | Typische Datei |
+|---|---|
+| Bewerbung | Ein Lebenslauf oder Anschreiben als PDF |
+| Identitäts- oder Verifizierungsschritt | Ein gescanntes Dokument oder ein Foto |
+| Datenimport | Eine CSV-Datei oder Tabelle |
+| Profileinrichtung | Ein Avatar oder Profilbild |
+| Medien-Upload | Ein kurzes Video oder ein kurzer Audioclip |
+
+### Unterstützte Formate und Limits
+
+<CardGroup cols={2}>
+  <Card title="Formate" icon="file">
+    **Jeder Dateityp**, außer:
+
+    - Ausführbare Dateien
+    - Skripte
+    - Aktive Webdateien wie HTML oder SVG
+    - Dokumente mit Makros
+  </Card>
+
+  <Card title="Limits" icon="gauge">
+    **Bis zu 100 MB** pro Datei
+
+    **Bis zu 5 Dateien** pro Aufgabenblock
+  </Card>
+</CardGroup>
+
+Diese Ausnahmen gibt es, weil die Datei während der Sitzung an einen echten Browser übergeben wird. Alles, was Code ausführen könnte, wird blockiert, zu Ihrem und unserem Schutz.
+
+<Tip>
+  Wenn der Flow mehr als einen Upload-Schritt hat, importieren Sie für jeden eine Datei. Geben Sie ihnen Namen, die beschreiben, was sie sind, etwa `cv.pdf` oder `id-document.png`. KI-Teilnehmende sehen die Dateinamen, und eindeutige Namen helfen ihnen, bei jedem Schritt die richtige Datei auszuwählen.
+</Tip>
+
+## Wie Uxia mit Ihren Dateien umgeht
+
+Eine Datei kann weit mehr personenbezogene Daten enthalten als ein Formularfeld. Deshalb wird sie mit derselben Sorgfalt behandelt wie [Zugangsdaten](/de/tester-credentials).
+
+### Verschlüsselt bei der Übertragung und im Ruhezustand
+
+Dateien werden über TLS übertragen und verschlüsselt gespeichert. Sie bleiben an den Aufgabenblock gebunden, in den Sie sie importiert haben, sodass Sie den Test erneut ausführen können, ohne sie noch einmal hochzuladen. Abgerufen werden sie nur, wenn eine Sitzung einen Upload-Schritt erreicht.
+
+### Nie vom KI-Modell gelesen
+
+KI-Teilnehmende sehen nur den Namen und den Typ jeder Datei, nie ihren Inhalt. Wenn der Flow ein Upload-Feld erreicht, wird die Datei direkt angehängt, so wie ein Mensch sie in einer Dateiauswahl auswählt. Dadurch kann nichts aus Ihrer Datei in Transkripte oder Insights gelangen.
+
+<Note>
+  Das bedeutet auch, dass die Teilnehmenden nicht auf den Inhalt einer Datei reagieren können. Wenn Ihre Aufgabe davon abhängt, etwas zu wissen, etwa einen Namen, ein Datum oder eine Referenznummer, schreiben Sie es in die [Aufgabe](/de/mission) oder in die [Zugangsdaten](/de/tester-credentials), nicht in die Datei.
+</Note>
+
+### Nie für Training verwendet
+
+Nichts, was Sie an Uxia übermitteln, wird zum Training oder Fine-Tuning eines Modells verwendet, weder für Uxia noch für Dritte. Dateien sind schon konstruktionsbedingt ausgeschlossen, da ihr Inhalt gar nicht erst zu einem Modell gelangt.
+
+### Auf Ihren Workspace beschränkt
+
+Dateien gehören zu dem Test, in den sie importiert wurden, innerhalb Ihres Workspace. Nur Sie und die Teammitglieder, die Sie in diesen Workspace eingeladen haben, können darauf zugreifen: niemals andere Organisationen und niemals andere Uxia-Kunden.
+
+Wenn Sie jemanden aus dem Workspace entfernen, verliert diese Person den Zugriff auf den Test und damit auch auf dessen Dateien.
+
+<Warning>
+  Betrachten Sie die Workspace-Mitgliedschaft als Zugriffsgrenze. Wer einen Test öffnen kann, kann auch auf die angehängten Dateien zugreifen. Laden Sie daher nur Teammitglieder ein, die diese Zugriffsebene haben sollen.
+</Warning>
+
+## Best Practices
+
+Die sicherste Datei ist eine, bei der es keine Rolle spielt, wenn jemand anderes sie sieht.
+
+<Steps>
+  <Step title="Fiktive statt echter Dokumente verwenden">
+    Ein Lebenslauf für eine erfundene Person eignet sich zum Testen eines Upload-Flows genauso gut wie ein echter. Laden Sie niemals den Lebenslauf einer echten bewerbenden Person, den Vertrag einer echten Kundin oder eines echten Kunden oder Ihren eigenen Ausweis hoch.
+  </Step>
+  <Step title="Personenbezogene Daten vor dem Hochladen entfernen">
+    Wenn Sie von einem echten Dokument ausgehen müssen, ersetzen Sie zuerst Namen, E-Mail-Adressen, Telefonnummern, Anschriften und Ausweisnummern durch Testwerte.
+  </Step>
+  <Step title="Dateien klein und einfach halten">
+    Das Limit liegt bei 100 MB, aber ein einseitiges PDF wird schneller hochgeladen und schlägt seltener fehl als ein großer Scan. Die Teilnehmenden brauchen nur einen erfolgreichen Upload, kein realistisches Dokument.
+  </Step>
+  <Step title="Das Format verwenden, das der Flow erwartet">
+    Wenn das Formular nur PDF akzeptiert, scheitert der Flow beim Upload-Schritt, wenn Sie eine DOCX-Datei importieren. Dieser Fehler erscheint dann in Ihren Ergebnissen als Usability-Problem, das keines ist.
+  </Step>
+  <Step title="Nicht mehr benötigte Dateien entfernen">
+    Dateien bleiben an den Aufgabenblock gebunden, bis Sie sie entfernen. Räumen Sie alles auf, was Sie nicht mehr brauchen.
+  </Step>
+</Steps>
+
+<Warning>
+  Laden Sie nichts hoch, was einer Vertraulichkeitsvereinbarung unterliegt, und keine Dokumente mit echten personenbezogenen Daten Dritter. Verwenden Sie stattdessen ein synthetisches Gegenstück.
+</Warning>
+
+<Card title="Weiter: Flows, die KI-Teilnehmende nicht abschließen können" icon="arrow-right" href="/de/unsupported-flows">
+  Social Logins, Verifizierungscodes und Bot-Schutz, und wie Sie sie umgehen.
+</Card>

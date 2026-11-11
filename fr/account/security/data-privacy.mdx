@@ -1,0 +1,59 @@
+---
+title: "Confidentialité des données dans Uxia"
+sidebarTitle: "Confidentialité des données"
+description: "Comment Uxia traite vos designs, données de test, enregistrements de participants et identifiants, avec la sécurité et la confidentialité pour base."
+---
+
+Uxia est conçu pour traiter avec soin vos ressources de recherche sensibles. Que vous importiez des fichiers de design, partagiez des URL en production, enregistriez des sessions de participants humains ou testiez des parcours authentifiés, chaque donnée que vous apportez sur la plateforme est traitée avec la sécurité et la confidentialité comme base, et non comme une considération secondaire. Cette page explique comment vos données sont traitées sur la plateforme.
+
+## Vos données de design et vos URL
+
+Lorsque vous importez un fichier de design ou fournissez une URL pour un test, Uxia traite cette ressource de façon sécurisée pour exécuter la session de chaque participant.
+
+- **Vos données ne servent jamais à entraîner des modèles.** Les designs, les URL et le contenu de test que vous soumettez ne sont pas utilisés pour améliorer ou affiner un modèle d'IA, que ce soit pour Uxia ou pour un tiers.
+- **Vos données ne sont pas partagées avec d'autres utilisateurs ou organisations.** Chaque espace de travail est isolé : vos ressources de test ne sont accessibles qu'à vous et aux collègues que vous invitez explicitement.
+- **Les ressources ne sont conservées que le temps nécessaire.** Les fichiers importés et les URL sont conservés pendant la durée du test et pour vous permettre de continuer à accéder aux résultats et aux rapports. Ils ne sont pas conservés indéfiniment au-delà de ce qui est nécessaire pour fournir le service.
+
+## Enregistrements des participants humains
+
+Lorsque vous invitez des participants humains avec un [lien de test](/fr/test-links) ou un [panel humain](/fr/human-panel), Uxia enregistre chaque session : l'écran et le micro du participant, ainsi que sa caméra s'il choisit de l'activer. Ces enregistrements sont :
+
+- **Stockés de façon sécurisée** sur la plateforme Uxia et accessibles uniquement dans votre espace de travail
+- **Réservés à votre organisation** : les enregistrements ne sont jamais vendus ni partagés avec les partenaires de panel, et ne sont transmis qu'aux sous-traitants ultérieurs qui contribuent à fournir le service, comme la transcription
+- **Disponibles pour consultation et analyse** dans le tableau de bord de votre espace de travail, à côté des insights générés par l'IA pour ce test
+
+Les enregistrements vous apportent une profondeur qualitative qui complète les constats synthétisés par l'IA, et sont conservés dans votre espace de travail tant que votre compte est actif.
+
+## Identifiants pour les tests protégés et authentifiés
+
+Si le produit ou la section que vous testez se trouve derrière un écran de connexion, vous pouvez fournir des identifiants pour que les participants IA accèdent aux parcours protégés. Dans ce cas :
+
+- Les identifiants sont chiffrés en transit et au repos, et ne sont déchiffrés que lorsque la session d'un participant IA doit les utiliser
+- Ils ne sont jamais inclus dans les instructions envoyées au modèle d'IA. Ils sont injectés de façon sécurisée dans la session du navigateur et saisis directement dans les champs correspondants, si bien que le modèle d'IA ne les voit jamais
+- Les champs de mot de passe restent masqués dans les transcriptions et les captures d'écran, mais d'autres valeurs saisies, comme un nom d'utilisateur ou une adresse e-mail, peuvent être visibles
+- Ils restent limités au test auquel ils ont été ajoutés et ne sont visibles que dans votre espace de travail, jamais par d'autres organisations
+- Vous gardez le contrôle de ces identifiants. N'utilisez pas d'identifiants sensibles ou potentiellement dangereux, et renouvelez-les immédiatement après la fin du test
+
+Utilisez des comptes de test dédiés, jamais de vrais comptes clients ou administrateurs. Pour tous les détails, consultez [Identifiants des participants](/fr/tester-credentials).
+
+Vous pouvez aussi utiliser une [session de connexion interactive](/fr/tester-credentials#session-de-connexion-interactive). Vous vous connectez vous-même via l'interface d'Uxia, et nous capturons la session connectée : nous ne stockons donc aucun identifiant. Tous les participants IA du test utilisent cette session, qui est supprimée automatiquement une heure après son enregistrement.
+
+## Fichiers utilisés pendant un test
+
+Si votre parcours demande aux participants IA d'importer quelque chose (un CV, une pièce d'identité, un tableur), vous pouvez importer des fichiers qu'ils utiliseront. Dans ce cas :
+
+- Les fichiers sont chiffrés en transit et au repos, et ne sont récupérés que lorsque la session d'un participant IA atteint une étape d'import
+- Leur contenu n'est jamais lu par un modèle d'IA : le fichier est joint directement au champ, si bien que rien de son contenu ne peut apparaître dans les transcriptions, les insights ou les rapports
+- Ils restent limités au test dans lequel ils ont été importés et ne sont visibles que dans votre espace de travail
+- Vous pouvez les supprimer à tout moment
+
+Nous vous recommandons d'importer des documents fictifs plutôt que de vrais documents. Consultez [Fichiers des participants](/fr/tester-files) pour tous les détails.
+
+<CardGroup cols={2}>
+  <Card title="Restrictions des participants IA" icon="shield" href="/fr/account/security/ai-participant-restrictions">
+    Contrôlez ce que les participants IA peuvent atteindre et faire pendant un test.
+  </Card>
+  <Card title="Identifiants des participants" icon="key-round" href="/fr/tester-credentials">
+    Comment les identifiants des parcours protégés sont stockés et utilisés.
+  </Card>
+</CardGroup>

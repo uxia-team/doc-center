@@ -1,0 +1,92 @@
+---
+title: "Ergebnisse menschlicher Teilnehmender"
+description: "Werten Sie Sitzungen menschlicher Teilnehmender in Analyze aus: Erfolgskennzahlen, Aufzeichnungen, Transkripte, Notizen und Umfrageantworten."
+---
+
+Wenn Menschen Ihren Test über einen [Testlink](/de/test-links) oder ein [menschliches Panel](/de/human-panel) absolvieren, erscheinen ihre Sitzungen in der Phase [Analyze](/de/analyze-results). Jede Sitzung enthält eine Bildschirmaufzeichnung, die Stimme der teilnehmenden Person, ein automatisches Transkript und ihre Antworten. So sehen Sie reales Verhalten direkt neben dem, was Ihre KI-Teilnehmenden getan haben.
+
+## Zu menschlichen Ergebnissen wechseln
+
+Öffnen Sie oben in Analyze das Menü für den Teilnehmendentyp und wählen Sie **Human participants**. Mit **AI participants** wechseln Sie zurück. Die beiden Ansichten sind getrennt: Es gibt keine zusammengeführte Ansicht, wechseln Sie also zwischen ihnen, um zu vergleichen.
+
+Im menschlichen Modus listet der Filter neben dem Menü Ihre Testlinks mit der Anzahl der Teilnehmenden pro Link auf. Wählen Sie die gewünschten Links aus und klicken Sie auf **Filter**. Die Auswahl gilt für jeden Block.
+
+Wenn Sie noch keinen Link erstellt haben, zeigt ein Block **No links created yet** mit einer Schaltfläche **Create link**.
+
+Blöcke zur Barrierefreiheitsprüfung haben keine menschlichen Ergebnisse, da Teilnehmende sie nicht absolvieren.
+
+## Aufgabenblöcke
+
+Der Tab **Sessions** öffnet sich mit einer Reihe von Kennzahlen:
+
+| Kennzahl | Was sie zeigt |
+|---|---|
+| **Total Testers** | In die Kennzahlen einbezogene Teilnehmende. Fehlgeschlagene Aufzeichnungen sind ausgeschlossen. |
+| **Success Rate** | Anteil der Sitzungen, in denen der Ablauf abgeschlossen wurde. |
+| **Drop-off** | Anteil der Sitzungen, in denen der Ablauf abgebrochen wurde. |
+| **Misclick Rate** | Anteil der Klicks außerhalb gültiger interaktiver Bereiche. Wird bei Live-Websites nicht angezeigt. |
+| **Avg. Duration** | Durchschnittliche Dauer der erfolgreichen Sitzungen. |
+
+Darunter listet eine Tabelle jede Sitzung mit **Clips**, **Participant**, **Status**, **Task duration**, **Responded At** und **Actions** auf.
+
+| Status | Bedeutung |
+|---|---|
+| **Completed** | Die teilnehmende Person hat den Ablauf abgeschlossen und jede Frage beantwortet. |
+| **Abandoned** | Die teilnehmende Person hat den Ablauf verlassen, bevor sie ihn abgeschlossen hat. |
+| **Missing questions** | Die teilnehmende Person hat den Ablauf abgeschlossen, aber einige Fragen unbeantwortet gelassen. |
+| **Processing** | Die Aufzeichnung oder das Transkript wird noch vorbereitet. |
+| **Recording failed** | Die Sitzung konnte nicht aufgezeichnet werden. |
+| **Transcript failed** | Die Aufzeichnung ist vorhanden, aber das Transkript konnte nicht erstellt werden. |
+| **In progress** | Die teilnehmende Person absolviert den Test noch. |
+
+Unter **Actions** speichert **Download clip** die Aufzeichnung **Screen view** oder **Camera view**, und **Delete recording** entfernt die Sitzung und ihre Daten dauerhaft.
+
+Klicken Sie auf eine Sitzung, um den Player zu öffnen. Der Tab **Transcripts** folgt dem Video; klicken Sie auf eine Zeile, um zu diesem Moment zu springen. Markieren Sie Text, um ihn hervorzuheben, und klicken Sie auf **Add note**, um ihn zu speichern. Ihre Notizen erscheinen im Tab **Notes**.
+
+Bei Medienprototyp-Aufgaben zeigt ein Tab **Frames** jeden Screen mit den Klicks der Teilnehmenden als Heatmap sowie die Fehlklickrate und die durchschnittliche Verweildauer auf diesem Screen.
+
+## Umfrageblöcke
+
+Umfrageergebnisse haben zwei Tabs, genau wie bei KI-Teilnehmenden. **Responses** gruppiert die Antworten nach Frage, und **Participants** zeigt die Antworten jeder einzelnen Person. Neben jeder Antwort öffnet **Play recording** die Sitzung an dem Moment, in dem die teilnehmende Person geantwortet hat. Siehe [Umfrageergebnisse](/de/survey-results).
+
+## Card-Sorting-Blöcke
+
+Card Sorts von Menschen verwenden dieselben Ergebnisansichten wie bei KI-Teilnehmenden. Siehe [Card-Sorting-Ergebnisse](/de/card-sorting-results).
+
+## Planlimits
+
+| Plan | Menschliche Sitzungen in den Ergebnissen |
+|---|---|
+| Free | Nicht verfügbar |
+| Starter | Nicht enthalten |
+| Pro | Die ersten 10 Sitzungen pro Test |
+| Custom | Unbegrenzt |
+
+Im Pro-Plan werden Sitzungen nach den ersten 10 mit **Upgrade to unlock** unscharf dargestellt.
+
+## Warum KI- und menschliche Teilnehmende kombinieren?
+
+<Tip>
+  KI-Teilnehmende liefern Ergebnisse in Minuten und ermöglichen so viele Runden, wie Sie brauchen. Menschliche Teilnehmende bringen emotionale Tiefe, gelebten Kontext und das unvorhersehbare Verhalten, das nur echte Menschen zeigen. Nutzen Sie KI-Teilnehmende, um schnell zu iterieren und Probleme einzugrenzen. Nutzen Sie dann Sitzungen mit Menschen, um Erkenntnisse zu bestätigen, Grenzfälle aufzudecken und das Vertrauen der Stakeholder zu stärken.
+</Tip>
+
+## Häufig gestellte Fragen
+
+<AccordionGroup>
+  <Accordion title="Muss ich zuerst KI-Teilnehmende einsetzen?">
+    Nein. Sie können für jeden Test in der Phase [Recruit](/de/recruit-participants) menschliche Teilnehmende rekrutieren, mit oder ohne KI-Teilnehmende.
+  </Accordion>
+  <Accordion title="Können Teilnehmende jedes Gerät verwenden?">
+    Teilnehmende brauchen einen Desktop-Browser, der Bildschirmaufzeichnung unterstützt. Bildschirm und Mikrofon werden im Browser aufgezeichnet, ohne Downloads. Die Gesichtskamera ist nur erforderlich, wenn der Testlink sie verlangt.
+  </Accordion>
+  <Accordion title="Wie werden Transkripte erstellt?">
+    Automatisch, aus dem Audio jeder Sitzung. Eine Sitzung zeigt **Processing**, bis Aufzeichnung und Transkript bereit sind.
+  </Accordion>
+  <Accordion title="Wie viele menschliche Teilnehmende sollte ich einbeziehen?">
+    Das hängt von Ihren Zielen ab. Bei Usability-Tests decken fünf bis acht Teilnehmende in der Regel die meisten umsetzbaren Probleme auf. Um Segmente zu vergleichen, rekrutieren Sie mehr Teilnehmende und verwenden Sie einen Testlink pro Segment, damit Sie danach filtern können.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Weiter: Ask AI" icon="arrow-right" href="/de/ask-ai">
+  Stellen Sie Fragen zu Ihren Ergebnissen in natürlicher Sprache.
+</Card>

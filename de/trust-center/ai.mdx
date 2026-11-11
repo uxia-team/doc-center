@@ -1,0 +1,55 @@
+---
+title: "Verantwortungsvolle KI"
+sidebarTitle: "Verantwortungsvolle KI"
+description: "Wie Uxia KI-Modellanbieter einsetzt, warum Ihre Inhalte nie zum Training verwendet werden und wie KI-Teilnehmende im vorgegebenen Rahmen bleiben."
+icon: "sparkles"
+---
+
+Uxia nutzt große Sprachmodelle, um KI-Teilnehmende zu betreiben und Transkripte, Insights und Scores zu erzeugen. Auf dieser Seite erfahren Sie, wie wir sie verantwortungsvoll einsetzen.
+
+## Kein Training mit Ihren Inhalten
+
+Uxia verwendet Ihre Inhalte nicht, um KI-Modelle zu trainieren, feinabzustimmen oder zu verbessern. Unser Auftragsverarbeitungsvertrag verpflichtet außerdem unsere Unterauftragsverarbeiter, Folgendes zu unterlassen:
+
+- Ihre Daten zum Trainieren, Feinabstimmen oder Verbessern öffentlicher, gemeinsam genutzter oder Foundation-Modelle zu verwenden.
+- Ihre Daten in Datensätze aufzunehmen, die für kundenübergreifendes Lernen oder Benchmarking genutzt werden.
+- Embeddings, Metadaten, Logs oder andere aus Ihren Inhalten abgeleitete Daten zum Trainieren oder Evaluieren von Modellen zu verwenden.
+
+Diese Zusage gilt standardmäßig. Sie müssen dafür kein Opt-out erklären, und sie gilt auch nach dem Ende Ihres Vertrags fort.
+
+## KI-Modellanbieter
+
+Uxia sendet Testinhalte über die kommerziellen APIs der KI-Modellanbieter an diese. Unsere Anbieter sind auf der Seite [Unterauftragsverarbeiter](/de/trust-center/subprocessors) aufgeführt. Ihre Bedingungen für kommerzielle APIs schließen Ihre Daten vom Modelltraining aus. KI-Inferenz ist in der EU oder in den USA verfügbar. Wir bieten keine Inferenz speziell im Vereinigten Königreich an.
+
+- **Begrenzte Aufbewahrung durch Anbieter.** Anbieter können API-Daten für einen kurzen, begrenzten Zeitraum ausschließlich zur Missbrauchsüberwachung aufbewahren. Danach werden sie gelöscht und nie zum Training verwendet.
+- **Zero Data Retention.** Für Enterprise-Kunden mit Jahresvertrag können wir bei unseren KI-Modellanbietern Zero Data Retention aktivieren, sodass diese Aufbewahrung zur Missbrauchsüberwachung entfällt. Zero Data Retention bezieht sich auf die Aufbewahrung durch KI-Modellanbieter. Ihre Tests und Ergebnisse verbleiben für die unter [Datenschutz](/de/trust-center/data-protection) genannten Fristen in Uxia.
+- **Mitteilung von Änderungen.** Wir informieren Sie mindestens 30 Tage im Voraus, bevor wir einen neuen KI-Modellanbieter beauftragen, und Sie können aus berechtigten Gründen widersprechen.
+
+## Keine kundenübergreifende Nutzung
+
+Ihre Inhalte werden nie anderen Kunden zugänglich gemacht und beeinflussen nie die für sie erzeugten Ergebnisse. Es gibt kein Lernen, das über Workspaces hinweg bestehen bleibt.
+
+## KI-Teilnehmende bleiben im vorgegebenen Rahmen
+
+KI-Teilnehmende sind synthetische Personas, keine echten Menschen. Sie handeln innerhalb der Grenzen, die Sie festlegen:
+
+- **Sie bestimmen das Ziel.** KI-Teilnehmende handeln nur auf den URLs oder Prototypen, die Sie konfigurieren, und navigieren nicht darüber hinaus.
+- **Sie begrenzen jede Sitzung.** Die Aufgabe und die Abbruchbedingung, die Sie festlegen, bestimmen, wie weit eine Sitzung geht, sodass Sie vor jeder unumkehrbaren Aktion stoppen können.
+- **Eingaben sind synthetisch.** Die Werte, die KI-Teilnehmende eingeben, werden generiert, sodass keine Daten realer Personen übermittelt werden.
+- **Jede Aktion ist nachvollziehbar.** Jede Sitzung erzeugt ein schrittweises Transkript dessen, was die KI-teilnehmende Person gesehen und getan hat.
+
+Praktische Hinweise finden Sie unter [Einschränkungen für KI-Teilnehmende](/de/account/security/ai-participant-restrictions).
+
+## Empfohlene Einrichtung
+
+- Führen Sie Tests in Staging- oder UAT-Umgebungen mit synthetischen Daten durch.
+- Verwenden Sie für Abläufe, die eine Anmeldung erfordern, dedizierte Testkonten mit ausschließlich synthetischen Daten oder eine [interaktive Anmeldesitzung](/de/trust-center/authenticated-testing#interaktive-anmeldesitzung).
+- Laden Sie bei Upload-Schritten synthetische Dokumente hoch, keine echten.
+
+## Wenn etwas schiefgeht
+
+Wir unterhalten ein eigenes Playbook zur Reaktion auf Vorfälle mit KI-Teilnehmenden. Wenn KI-Teilnehmende außerhalb des konfigurierten Rahmens agieren oder echte personenbezogene Daten in einem Testergebnis auftauchen, stoppen wir die betroffenen Sitzungen, dämmen das Problem ein, löschen bei Bedarf betroffene Inhalte und informieren Sie. Siehe [Reaktion auf Sicherheitsvorfälle](/de/trust-center/incident-response).
+
+<Card title="Weiter: Unterauftragsverarbeiter" icon="network" href="/de/trust-center/subprocessors">
+  Die Drittanbieter, die uns bei der Erbringung des Dienstes unterstützen.
+</Card>

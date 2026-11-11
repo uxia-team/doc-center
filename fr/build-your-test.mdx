@@ -1,0 +1,90 @@
+---
+title: "Construire votre test"
+description: "Créez un test non modéré, ajoutez des blocs de tâche, d'enquête, de tri de cartes et d'accessibilité, et préparez-le pour recruter des participants."
+---
+
+Un test est une séquence de **blocs**. Les participants parcourent les blocs dans l'ordre : par exemple, une tâche sur votre parcours d'inscription, puis une enquête sur l'expérience. Vous construisez le test dans la phase **Build**, puis passez à **Recruit**.
+
+## Créer un test
+
+<Steps>
+  <Step title="Ouvrir la boîte de dialogue de création">
+    Cliquez sur **Create test** depuis la barre latérale, la page d'accueil, la page **Tests** ou à l'intérieur d'un projet.
+  </Step>
+  <Step title="Choisir Unmoderated test">
+    Sélectionnez **Unmoderated test** : les participants réalisent le test en autonomie, et vous obtenez des insights, des chemins et des clics. (Pour des entretiens en direct menés par un modérateur IA, consultez [Tests modérés par IA](/fr/ai-moderated-tests).)
+  </Step>
+  <Step title="Le nommer et choisir un projet">
+    Saisissez un **Title** (72 caractères maximum) et choisissez un **Project**, ou **No project**. Vous pouvez aussi créer un nouveau projet depuis cette fenêtre. Cliquez sur **Create test** pour ouvrir l'éditeur.
+  </Step>
+</Steps>
+
+## Ajouter des blocs
+
+Dans un test vide, le sélecteur **Add a block** s'ouvre automatiquement. Ensuite, utilisez **Add new block** à la fin du canevas, ou **Add new block here** entre deux blocs pour en insérer un à un emplacement précis.
+
+| Section | Bloc | Utilisez-le pour |
+|---|---|---|
+| **Task** | **Live website task** | Tester un site web, une plateforme ou un prototype codé via son URL |
+| | **Figma prototype task** | Tester un prototype Figma via son lien de partage |
+| | **Media prototype task** | Construire et tester un prototype à partir de vos propres images |
+| **Research** | **Survey** | Poser des questions de différents types |
+| | **Card sorting** | Voir comment les participants regroupent et nomment vos contenus |
+| **Audits** | **Accessibility check** | Vérifier vos écrans selon les WCAG 2.2 AA ou AAA |
+
+Chaque bloc a sa propre page : [Bloc de tâche](/fr/task-block), [Bloc d'enquête](/fr/survey-block), [Bloc de tri de cartes](/fr/card-sorting) et [Bloc de vérification de l'accessibilité](/fr/accessibility-block).
+
+<Tip>
+  Lorsque vous ajoutez un deuxième bloc du même type, Uxia préremplit sa source (URL ou prototype) à partir du précédent : tester plusieurs parcours d'un même produit ne prend que quelques secondes.
+</Tip>
+
+### Limites par test
+
+| | Forfait Free | Forfaits payants |
+|---|---|---|
+| Blocs de tâche (les trois types confondus) | 1 | 3 |
+| Blocs d'enquête | 1 | 3 |
+| Questions d'enquête (sur l'ensemble du test) | 5 | 30 |
+| Blocs de vérification de l'accessibilité | Non disponible | 1 (jusqu'à 5 frames) |
+| Blocs de tri de cartes | Illimité | Illimité |
+
+Lorsque vous atteignez une limite, le bloc est désactivé dans le sélecteur. Avec le forfait Free, les blocs verrouillés affichent un badge **Upgrade**.
+
+## Organiser vos blocs
+
+La barre latérale de gauche liste tous les blocs dans l'ordre, avec leur titre et un court résumé : le texte de la tâche, ou le nombre de questions, de cartes ou de frames.
+
+- **Réorganisez** les blocs en les faisant glisser dans la barre latérale, ou utilisez **Move up** / **Move down** depuis le menu **…** du bloc.
+- **Dupliquez** un bloc depuis le menu **…** pour le copier avec tous ses paramètres.
+- **Supprimez** un bloc depuis le menu **…**.
+
+<Warning>
+  La suppression d'un bloc est immédiate et irréversible.
+</Warning>
+
+Vos modifications sont enregistrées automatiquement au fil de votre travail.
+
+### L'ordre compte
+
+Les participants passent les blocs dans l'ordre que vous définissez. Deux paramètres en dépendent :
+
+- Dans un bloc d'enquête placé après une tâche, chaque question peut être réservée aux participants IA qui ont terminé la tâche, avec **Only ask testers who complete the flow**. C'est ainsi que vous posez des questions après une tâche. Consultez [Bloc d'enquête](/fr/survey-block).
+- Une tâche sur site web en production ou Figma qui utilise la même URL qu'une tâche précédente peut utiliser **Continue from where participants left the previous task**, pour que les participants reprennent dans la même session de navigateur.
+
+## Corriger les problèmes avant le recrutement
+
+Les champs obligatoires sont vérifiés au fil de votre travail. Lorsqu'il manque quelque chose à un bloc (une URL, une tâche, un scénario, une question), il est signalé par une icône d'alerte rouge dans la barre latérale, et le champ indique ce qui est requis, par exemple *"You need to describe the task"*.
+
+Le compteur rouge de problèmes dans l'en-tête liste tous les problèmes en suspens, bloc par bloc. Cliquez sur un élément pour y accéder directement.
+
+## Lancer le recrutement
+
+Lorsque vos blocs sont prêts, cliquez sur **Start recruiting**. Uxia vérifie chaque bloc ; s'il manque quelque chose, il vous amène au premier problème. Sinon, la phase **Recruit** s'ouvre, et vous pouvez y choisir vos participants.
+
+<Note>
+  Vous pouvez continuer à modifier les blocs jusqu'au lancement des participants IA. Avant que les participants IA ne commencent, Uxia effectue une rapide [revue du test](/fr/recruit-participants#revue-du-test) pour repérer les tâches ou questions peu claires.
+</Note>
+
+<Card title="Suivant : Recruter des participants" icon="arrow-right" href="/fr/recruit-participants">
+  Choisissez des participants IA, invitez vos propres participants ou demandez un panel humain.
+</Card>

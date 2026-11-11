@@ -1,0 +1,49 @@
+---
+title: "Reaktion auf Sicherheitsvorfälle und Business Continuity"
+sidebarTitle: "Reaktion auf Vorfälle"
+description: "Wie Uxia Sicherheitsvorfälle erkennt, darauf reagiert und sie kommuniziert, die Verfügbarkeit des Dienstes sichert und wie Sie Schwachstellen melden."
+icon: "siren"
+---
+
+## Reaktion auf Sicherheitsvorfälle
+
+Uxia unterhält einen dokumentierten Prozess für das Vorfallmanagement, den jeder bestätigte Vorfall durchläuft:
+
+<Steps>
+  <Step title="Erkennen und bewerten">
+    Sicherheitsereignisse stammen aus automatischer Überwachung und Alarmierung, aus Transkripten von KI-Teilnehmenden sowie aus Meldungen von Mitarbeitenden, Kunden und Sicherheitsforschenden. Jedes Ereignis wird analysiert und nach Schweregrad eingestuft.
+  </Step>
+  <Step title="Eindämmen">
+    Zuerst begrenzen wir die Auswirkungen. Bei Vorfällen mit KI-Teilnehmenden bedeutet das, betroffene Sitzungen anzuhalten und Sitzungszugangsdaten zu widerrufen.
+  </Step>
+  <Step title="Beseitigen und wiederherstellen">
+    Wir beheben die Ursache und versetzen betroffene Systeme in einen bekanntermaßen fehlerfreien Zustand zurück.
+  </Step>
+  <Step title="Lernen">
+    Jeder Vorfall wird nachträglich ausgewertet. Die Erkenntnisse führen zu Korrekturmaßnahmen und bei Bedarf zu neuen Sicherheitsmaßnahmen.
+  </Step>
+</Steps>
+
+## Benachrichtigung der Kunden
+
+- **Verletzungen des Schutzes personenbezogener Daten.** Wir benachrichtigen betroffene Kunden unverzüglich und spätestens 24 Stunden, nachdem wir von einer Verletzung Kenntnis erlangt haben.
+- **Störungen des Dienstes.** Wesentliche Vorfälle, die den Dienst beeinträchtigen, teilen wir per E-Mail oder Hinweis im Produkt mit und informieren laufend, bis sie behoben sind.
+- **Geplante Wartung.** Geplante Wartungsarbeiten, bei denen mit Ausfallzeiten zu rechnen ist, kündigen wir mindestens 48 Stunden im Voraus an.
+
+## Business Continuity und Verfügbarkeit
+
+- **Resiliente verwaltete Dienste.** Die Plattform läuft auf verwalteten Cloud-Diensten mit integrierter Hochverfügbarkeit. Die Datenbank ist als Replica Set mit automatischen Backups bereitgestellt, und der Dateispeicher ist innerhalb jeder Region redundant.
+- **Backups.** Backups sind verschlüsselt und werden rollierend höchstens 90 Tage lang aufbewahrt.
+- **Umkehrbare Releases.** Jedes Release kann auf die vorherige, bekanntermaßen fehlerfreie Version zurückgerollt werden.
+- **Getestete Pläne.** Ein Business-Continuity-Plan und ein Disaster-Recovery-Runbook sind vorhanden und werden mindestens einmal jährlich geübt.
+- **Service-Levels.** Vertragskunden steht ein Service Level Agreement mit Zusagen zu Verfügbarkeit und Support zur Verfügung. Siehe [Sicherheitsdokumentation](/de/trust-center/documents).
+
+## Eine Schwachstelle melden
+
+Wenn Sie glauben, eine Sicherheitslücke in Uxia gefunden zu haben, schreiben Sie an [hello@uxia.app](mailto:hello@uxia.app) mit „Security“ in der Betreffzeile. Beschreiben Sie die Schritte zur Reproduktion und fügen Sie alle weiteren relevanten Details hinzu.
+
+Bitte greifen Sie während Ihrer Untersuchung nicht auf Daten anderer Nutzender zu und verändern Sie sie nicht, beeinträchtigen Sie den Dienst nicht und veröffentlichen Sie das Problem nicht, bevor wir die Möglichkeit hatten, es zu beheben.
+
+<Card title="Zurück zum Trust Center" icon="shield-check" href="/de/trust-center/overview">
+  Überblick über das Sicherheits-, Compliance- und Datenschutzprogramm von Uxia.
+</Card>

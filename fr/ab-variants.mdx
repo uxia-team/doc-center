@@ -1,0 +1,65 @@
+---
+title: "Variantes A/B"
+description: "Soumettez le même test à deux versions de votre produit et obtenez un rapport indiquant laquelle est la plus performante."
+---
+
+Une variante A/B soumet votre test à deux versions de votre produit, par exemple deux prototypes ou deux URL, et vous indique laquelle est la plus performante. **Variant #2** utilise les mêmes blocs, tâches, questions, audience, participants et paramètres que **Variant #1**. Seule la source change.
+
+## Créer Variant #2
+
+<Steps>
+  <Step title="Ouvrir la boîte de dialogue des variantes">
+    Dans la phase **Build**, cliquez sur **+** (**Create variant comparison**) dans la barre sous le canevas. La boîte de dialogue "Find out which variant performs better" explique ce que les variantes ont en commun.
+  </Step>
+  <Step title="Créer la variante">
+    Cliquez sur **Create Variant #2**. Uxia ouvre le nouvel onglet **Variant #2** avec la bannière "Variant #2 uses the same blocks as Variant #1. Only the source can be edited."
+  </Step>
+  <Step title="Définir la nouvelle source">
+    Dans chaque bloc de tâche, remplacez la [source](/fr/source) : une autre URL de site web en production, un autre lien de prototype Figma ou un autre [prototype multimédia](/fr/media-canvas).
+  </Step>
+</Steps>
+
+Passez d'une variante à l'autre avec les onglets **Variant #1** et **Variant #2** en bas de la page.
+
+<Tip>
+  Variant #2 part d'une copie des blocs de Variant #1 : terminez donc la construction de vos blocs avant de la créer.
+</Tip>
+
+Vous pouvez aussi ajouter Variant #2 après l'exécution de Variant #1, depuis la même barre dans la phase **Analyze**.
+
+Pour supprimer Variant #2 avant son lancement, cliquez sur **Remove Variant #2** (le × de son onglet), puis sur **Delete Variant #2**. Cela supprime définitivement Variant #2 et sa source. Variant #1 n'est pas affectée.
+
+## Lancer les variantes
+
+- **Les deux en même temps.** Lorsque vous lancez un test qui comporte Variant #2, les deux variantes sont exécutées avec les mêmes participants IA.
+- **Variant #2 plus tard.** Si Variant #1 a déjà été exécutée, ouvrez l'onglet **Variant #2**, allez dans **Recruit** et cliquez sur **Launch variant 2**. Variant #2 est exécutée avec les mêmes participants que Variant #1.
+- **Liens de test.** Chaque [lien de test](/fr/test-links) reçoit une URL par variante, libellées **Variant 1** et **Variant 2**.
+
+### Coût
+
+| Élément | Crédits |
+|---|---|
+| Coût des blocs | Doublé, car chaque bloc est exécuté une fois par variante |
+| Comparaison (**A/B test setup** dans le détail) | 100 |
+
+Si Variant #1 a déjà été exécutée, seuls Variant #2 et la comparaison vous sont facturés. Consultez [Forfaits et crédits](/fr/account/plans-and-credits).
+
+## Analyser et comparer
+
+Dans la phase **Analyze**, les onglets **Variant #1** et **Variant #2** en bas de la page permettent de passer des résultats d'une variante à l'autre, bloc par bloc. Pendant l'exécution du test, la barre de progression indique à quelle variante elle se rapporte.
+
+Un test comportant Variant #2 obtient aussi une phase **Report** après **Analyze** dans l'en-tête. Elle reste grisée jusqu'à ce que les deux variantes aient fini d'être traitées et que le rapport soit généré. Le rapport comporte deux onglets :
+
+- **Executive Summary.** Un verdict ("Variant #1 performs better", "Variant #2 performs better" ou "No conclusive winner"), un résumé, les principaux constats reliés aux insights qui les fondent, des KPI côte à côte comme le taux d'abandon, le taux de clics erronés et l'UOS, et une **Recommendation**.
+- **Surveys.** Les réponses aux enquêtes des deux variantes côte à côte, lorsque votre test comprend un bloc d'enquête.
+
+Pour exporter, choisissez **Export** dans le menu du titre du test. Le PDF couvre les deux variantes, et **Variant comparison** sous **Details** ajoute la comparaison. Consultez [Partager et exporter](/fr/share-and-export).
+
+<CardGroup cols={2}>
+  <Card title="Construire votre test" icon="blocks" href="/fr/build-your-test">
+    Ajoutez et configurez les blocs que partagent les deux variantes.
+  </Card>
+  <Card title="Analyser les résultats" icon="chart-bar" href="/fr/analyze-results">
+    Repérez-vous dans la phase Analyze.
+  </Card>
+</CardGroup>

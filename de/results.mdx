@@ -1,0 +1,91 @@
+---
+title: "Insights und UOS"
+sidebarTitle: "Insights"
+description: "Lesen Sie die Insights eines Aufgabenblocks, verstehen Sie seinen Usability Optimization Score und öffnen Sie Auswirkung, Belege und Lösung."
+---
+
+Wenn ein [Aufgabenblock](/de/task-block) abgeschlossen ist, öffnen Sie ihn in der Phase **Analyze**, um zu sehen, worauf die Teilnehmenden gestoßen sind. Der Tab **Insights** listet jedes Problem und jede Erkenntnis priorisiert auf, und die Kopfzeile des Blocks fasst das Ergebnis in einer einzigen Zahl zusammen: dem **Usability Optimization Score (UOS)**.
+
+## Die Tabs eines Aufgabenblocks
+
+| Tab | Was er zeigt |
+|---|---|
+| **Insights** | Priorisierte Insights mit Belegen und Lösungen (diese Seite) |
+| **Transcripts** | Die Sitzung jeder teilnehmenden Person, Schritt für Schritt ([Transkripte](/de/test-transcripts)) |
+| **Analytics** | Erfolg, Abbruch, Fehlklicks und Heatmaps ([Analytics und Nutzerpfade](/de/analytics)) |
+| **Journeys** | Die Wege, die die Teilnehmenden genommen haben ([Analytics und Nutzerpfade](/de/analytics)) |
+| **Benchmarks** | SUS- und UXIA-Q-Scores, sofern aktiviert ([Benchmark-Ergebnisse](/de/benchmark-results)) |
+
+Solange der Block läuft, ist nur **Transcripts** verfügbar und füllt sich live. Die anderen Tabs werden freigeschaltet, wenn der Durchlauf abgeschlossen ist. Wenn alle KI-Teilnehmenden von einer Live-Website blockiert wurden, bleibt nur **Transcripts** verfügbar.
+
+## Die Kopfzeile des Blocks
+
+Klicken Sie auf den Pfeil neben dem Blocktitel, um **Test setup** aufzuklappen: das **Scenario**, die **Stop condition** (Live-Website- und Figma-Prototyp-Aufgaben), den **Product status** (**Finished product** oder **Prototype**) und die **Source**. Klicken Sie auf die Quelle, um die Website in einem neuen Tab zu öffnen oder die getesteten Prototyp-Frames anzusehen.
+
+## Usability Optimization Score
+
+Das UOS-Badge rechts in der Kopfzeile des Blocks zeigt in einem Ring einen Score von 0 bis 100 und einen kurzen Kommentar. Klicken Sie darauf, um **What is the Usability Optimization Score?** zu lesen und zu erfahren, was Ihr Ergebnis bedeutet.
+
+Der Score gewichtet jeden Insight nach seiner Relevanz und danach, wie viele Teilnehmende darauf gestoßen sind. So spiegelt er wider, was eine typische teilnehmende Person erlebt hat:
+
+- Eine größere Zielgruppe bringt mehr Insights hervor, senkt den Score aber nicht von sich aus.
+- Ein längerer Flow wird nicht dafür bestraft, dass er den Teilnehmenden mehr zu tun gibt.
+- Teilnehmende, die die Aufgabe nicht abschließen, senken den Score.
+- Insights mit der Bewertung **Prototype** werden nicht berücksichtigt. Sie weisen auf Grenzen des Prototyps hin, nicht auf Ihr Design.
+
+| Kommentar | Bedeutung |
+|---|---|
+| **High drop-off** | Mehr als die Hälfte der Teilnehmenden hat die Aufgabe nicht abgeschlossen. Prüfen Sie ihre Nutzerpfade und Ihr Test-Setup. |
+| **Improvement opportunities** | Mindestens ein Insight mit hoher Relevanz erfordert Aufmerksamkeit. Beginnen Sie dort. |
+| **Frictions worth fixing** | Es gibt nennenswerte Möglichkeiten, das Erlebnis zu verbessern. |
+| **Minor frictions** | Das Erlebnis funktioniert insgesamt gut, mit einigen Verbesserungsmöglichkeiten. |
+| **Strong foundation** | Das Erlebnis ist in gutem Zustand und lässt sich noch weiter verbessern. |
+| **Highly optimized** | In diesem Test wurde kaum Reibung festgestellt. |
+
+Wenn Sie die Ergebnisse nach Zielgruppe filtern, wird der UOS für die ausgewählten Zielgruppen neu berechnet. Benchmarks (SUS und UXIA-Q) werden separat ausgewiesen und fließen nicht in den UOS ein.
+
+## Der Tab Insights
+
+Der Tab beginnt mit der Anzahl der gemeldeten Insights (zum Beispiel **12 insights reported**) und einem Feld **Search**, das Titel, Beschreibungen und Kategorien durchsucht. Die Tabelle hat vier Spalten:
+
+| Spalte | Was sie zeigt |
+|---|---|
+| **Title** | Der Insight. Klicken Sie auf das Lesezeichen, um ihn hervorzuheben und an den Anfang der Tabelle zu verschieben. |
+| **Relevance** | **High**, **Medium**, **Low** oder **Prototype** (kann auf eine Einschränkung des Prototyps statt auf Ihr Design zurückgehen). Sie können sie ändern. |
+| **Reporters** | Zielgruppen-Badges und wie viele Teilnehmende den Insight gemeldet haben, zum Beispiel **2 out of 5**. |
+| **Category** | Die Art des Problems. Bewegen Sie den Mauszeiger darüber, um eine Definition zu sehen. |
+
+Die Kategorien sind **Navigation**, **CTAs**, **Copy**, **Trust**, **Usability**, **Visual Design** und **Other**. Insights werden so sortiert: zuerst die hervorgehobenen, dann nach Relevanz, dann danach, wie viele Teilnehmende sie gemeldet haben.
+
+### Relevanz eines Insights ändern
+
+Klicken Sie auf die Relevanz eines Insights und wählen Sie einen neuen Wert. Das Badge zeigt dann **Edited**, und das Dropdown kennzeichnet die **(original rating)**, damit Sie zurückwechseln können. Ihre Änderung aktualisiert den UOS. Bewerten Sie einen Insight mit **Prototype**, um ihn aus dem Score herauszunehmen.
+
+## Insight-Details
+
+Klicken Sie auf eine Zeile, um **Insight details** zu öffnen. Das Seitenpanel zeigt Titel, Relevanz, Kategorie, meldende Teilnehmende, eine Beschreibung und die betroffenen Frames, in denen das Problem auftrat. Darunter folgen drei Tabs:
+
+- **Impact.** Ein **Impact Assessment**, aufgeteilt in **User Impact** und **Business Impact**.
+- **Evidence.** **What Testers Said**: Zitate, gruppiert nach teilnehmender Person. Klicken Sie auf ein Zitat, um zu der Stelle zu springen, an der die Person es gesagt hat. Wenn sich der Insight auf Verhalten statt auf Aussagen bezieht, sehen Sie stattdessen **What Testers Did** und unter **Observed in** die Teilnehmenden, bei denen er beobachtet wurde.
+- **Fix.** Eine **Fix Suggestion** mit ihren **Acceptance criteria**, gefolgt von einem **Prompt**, den Sie mit **Copy** kopieren oder mit **Expand** aufklappen und in ein KI-Coding-Tool einfügen können. Ältere Ergebnisse zeigen stattdessen eine Bewertung **Technical Complexity**: **Quick fix**, **Requires planning** oder **Major redesign**.
+
+<Tip>
+  Um Insights ohne Kopieren und Einfügen in Claude Code, Cursor oder ein anderes KI-Tool zu übernehmen, verbinden Sie den [Uxia MCP-Server](/de/integrations/mcp).
+</Tip>
+
+## Einschränkungen im Free-Plan
+
+Beim Free-Plan zeigt der Tab Insights nur die wichtigsten Insights (bis zu 5) und gibt an, wie viele ausgeblendet sind: **You are missing +N insights**. Die Beschreibung, die betroffenen Frames und der Tab **Impact** bleiben sichtbar; **Evidence** und **Fix** sind gesperrt. Bei kostenpflichtigen Plänen sehen Sie alles. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+## Menschliche Teilnehmende
+
+Diese Tabs zeigen die Ergebnisse der KI-Teilnehmenden. Um zu sehen, was menschliche Teilnehmende bei derselben Aufgabe getan haben, stellen Sie den Teilnehmendentyp auf **Human participants** um. Siehe [Ergebnisse menschlicher Teilnehmender](/de/human-insights) und [Ergebnisse analysieren](/de/analyze-results).
+
+<CardGroup cols={2}>
+  <Card title="Weiter: Transkripte" icon="arrow-right" href="/de/test-transcripts">
+    Verfolgen Sie die Sitzung jeder teilnehmenden Person Schritt für Schritt.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/de/ask-ai">
+    Stellen Sie Fragen zu Ihren Ergebnissen in natürlicher Sprache.
+  </Card>
+</CardGroup>

@@ -1,0 +1,95 @@
+---
+title: "Medienprototyp"
+description: "Erstellen Sie in einer Medienprototyp-Aufgabe einen klickbaren Prototyp aus eigenen Bildern und testen Sie ihn mit Teilnehmenden."
+---
+
+Mit einer **Media prototype task** testen Sie Designs, die noch nicht umgesetzt sind. Sie laden Ihre Screens als Bilder hoch, verbinden sie auf dem Canvas zu einem Flow, und die Teilnehmenden navigieren darin wie in einer echten Oberfläche.
+
+## Wann Sie ihn verwenden
+
+Ein Medienprototyp eignet sich, wenn Sie Folgendes testen:
+
+- Statische Screens, die aus Figma, Sketch oder einem anderen Designtool exportiert wurden.
+- Eine Reihe von Bildern, die einen noch nicht umgesetzten Flow darstellen.
+- Frühe Design-Iterationen, bevor Sie einen funktionierenden Prototyp haben.
+
+Ein Medienprototyp akzeptiert nur Bilder. Um einen Figma-Prototyp über seinen Link zu testen, verwenden Sie stattdessen eine [Figma-Prototyp-Aufgabe](/de/source).
+
+## Prototyp erstellen
+
+<Steps>
+  <Step title="Canvas öffnen">
+    Klicken Sie im Block auf **Add prototype**.
+  </Step>
+  <Step title="Modus wählen">
+    Wählen Sie unter **Select mode** die Option **Interactive** oder **Sequential** und klicken Sie dann auf **Continue**. Siehe [Modi](#modi).
+  </Step>
+  <Step title="Designs importieren">
+    Klicken Sie auf **Import designs** und wählen Sie Ihre Bilder aus. Weitere fügen Sie später über **Import Files** in der Seitenleiste **Frames** hinzu. Ein Prototyp fasst bis zu 35 Frames.
+  </Step>
+  <Step title="Flow einrichten">
+    Wählen Sie in einem interaktiven Flow zuerst den Start-Frame, dann den End-Frame, und verbinden Sie die Frames über Interaktionsbereiche. Ziehen Sie in einem sequenziellen Flow die Frames in der Seitenleiste **Frames** in die Reihenfolge, in der die Teilnehmenden sie sehen.
+  </Step>
+  <Step title="Vorschau ansehen und speichern">
+    Öffnen Sie den Tab **Preview**, um einen interaktiven Flow so durchzuklicken, wie es die Teilnehmenden tun würden. Klicken Sie dann auf **Save**.
+  </Step>
+</Steps>
+
+Der Durchlauf endet, wenn die Teilnehmenden den End-Frame erreichen. Eine Medienprototyp-Aufgabe hat deshalb keine Abbruchbedingung. Eine [Aufgabe](/de/mission) und ein [Szenario](/de/test-scenario) schreiben Sie trotzdem, wie in jedem Aufgabenblock.
+
+## Modi
+
+| Modus | So funktioniert er | Wählen Sie ihn, wenn |
+|---|---|---|
+| **Interactive** (empfohlen) | Ein interaktiver Prototyp mit klickbaren Bereichen und unterschiedlichen Pfaden. | Sie einen realistischen Flow mit Verzweigungen möchten. |
+| **Sequential** | Eine lineare Abfolge von Frames, die die Teilnehmenden der Reihe nach ansehen. | Sie einen einfachen, schnellen Durchgang möchten. |
+
+## Interaktive Flows
+
+Ein interaktiver Flow braucht mindestens 2 Frames. Nach dem Import fordert Uxia Sie auf, zuerst den Start-Frame und dann den End-Frame auszuwählen. Sie werden mit **Start** und **End** markiert.
+
+Um Frames zu verbinden, klicken Sie in der Werkzeugleiste auf das Zielscheibensymbol (**Create interaction areas**), zeichnen einen Bereich auf einem Frame und verbinden ihn mit dem Frame, zu dem er führt. Wählen Sie dann die Aktion, die ihn auslöst.
+
+Eine To-do-Liste auf dem Canvas zeigt, was noch fehlt: ein Start und ein Ende, mindestens eine ausgehende Verbindung an jedem Frame und ein Pfad von jedem Frame zum Ende. Der Tab **Preview** ist verfügbar, sobald ein Start-Frame festgelegt ist.
+
+## Aktionen
+
+| Aktion | Verwenden Sie sie für |
+|---|---|
+| **Click** | Schaltflächen, Links oder jedes Element, das beim Anklicken zu einem anderen Frame führt. |
+| **Input** | Textfelder oder Suchleisten. Simuliert eine Eingabe, bevor es zum nächsten Frame weitergeht. |
+| **Scroll / Swipe** | Lange Seiten, Karussells oder wischbare Inhalte. Legen Sie die Richtung fest: nach oben, unten, links, rechts oder beliebig. |
+| **Wait** | Frames, die sich nach einer Verzögerung automatisch ändern. Legen Sie die Wartezeit in Millisekunden fest. |
+| **Drag** | Schieberegler oder Objekte, die Nutzende von einem Punkt zu einem anderen ziehen müssen. |
+| **Hover** | Elemente, die zusätzliche Informationen anzeigen oder sich verändern, wenn der Mauszeiger darüber fährt. |
+
+## Canvas-Steuerung
+
+- **Click mode.** Wenn aktiviert, ziehen Sie Frames, um sie neu anzuordnen. Wenn deaktiviert, ziehen Sie, um sich auf dem Canvas zu bewegen.
+- **Create interaction areas.** Zeichnen Sie interaktive Bereiche auf einen Frame und verbinden Sie sie mit dem nächsten Schritt. Nur im interaktiven Modus.
+- **Zoom.** Verwenden Sie das Zoom-Menü in der Werkzeugleiste (Vergrößern, Verkleinern, 50 %, 100 %, 200 %), ziehen Sie auf dem Trackpad zwei Finger auseinander oder zusammen, oder scrollen Sie bei gedrückter Strg- bzw. Cmd-Taste.
+- **Fit all images in view.** Passt die Ansicht so an, dass alle Frames auf dem Canvas sichtbar sind.
+- **Pan.** Scrollen Sie mit dem Trackpad oder dem Mausrad, ziehen Sie den Canvas bei deaktiviertem Klickmodus, oder halten Sie die **Spacebar** gedrückt und ziehen Sie.
+
+In der Seitenleiste **Frames** können Sie Frames außerdem umbenennen, entfernen und direkt zu ihnen springen.
+
+## Häufig gestellte Fragen
+
+<AccordionGroup>
+  <Accordion title="Wie erstelle ich einen Scroll über den ganzen Bildschirm?">
+    Erstellen Sie einen Interaktionsbereich, der den gesamten Frame abdeckt, weisen Sie ihm die Aktion **Scroll / Swipe** zu und verbinden Sie ihn mit dem nächsten Frame, der die gescrollte Ansicht zeigt.
+  </Accordion>
+  <Accordion title="Wie simuliere ich eine Texteingabe?">
+    Erstellen Sie eine **Input**-Interaktion über dem leeren Feld und verbinden Sie sie mit einem Frame, in dem das Feld ausgefüllt ist. Bei Formularen mit mehreren Feldern können Sie alle in einem Schritt ausfüllen oder für ein realistischeres Erlebnis separate Frames anlegen.
+  </Accordion>
+  <Accordion title="Spielt die Reihenfolge der Frames eine Rolle?">
+    In einem sequenziellen Flow ja: Die Teilnehmenden sehen die Frames in der Reihenfolge der Seitenleiste **Frames**. In einem interaktiven Flow nein: Der Pfad ergibt sich aus den Interaktionsbereichen und ihren Verbindungen, nicht aus den Frame-Nummern.
+  </Accordion>
+  <Accordion title="Sehen die Teilnehmenden Übergangseffekte?">
+    Nein. Die Übergangsanimationen in **Preview** dienen nur dem Erstellen und Überprüfen des Prototyps. Die Teilnehmenden erleben nur die Interaktionen und die daraus folgenden Frames.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Weiter: Aufgabe" icon="arrow-right" href="/de/mission">
+  Sagen Sie den Teilnehmenden, was sie erreichen sollen.
+</Card>
