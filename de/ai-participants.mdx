@@ -1,0 +1,80 @@
+---
+title: "KI-Teilnehmende"
+description: "Wählen Sie Zielgruppen, legen Sie fest, wie viele KI-Teilnehmende Ihren Test absolvieren, prüfen Sie die Credit-Schätzung und starten Sie."
+---
+
+KI-Teilnehmende sind synthetische Teilnehmende, die aus Ihren [Zielgruppen](/de/audiences/overview) generiert werden. Sie absolvieren Ihren Test so, wie es ein Mensch tun würde, und denken dabei laut. Ihre ersten Ergebnisse treffen innerhalb weniger Minuten in Analyze ein.
+
+Um die Ansicht zu öffnen, klicken Sie in der Phase [Recruit](/de/recruit-participants) auf **AI participants**. Wenn Sie in Build auf **Start recruiting** klicken, öffnet sie sich direkt. Auf der Seite steht *"Choose your synthetic participants. You can also combine them with human participants."*
+
+## Einrichten und starten
+
+<Steps>
+  <Step title="Zielgruppen auswählen">
+    Klicken Sie unter **Select your audiences** auf eine Zielgruppenkarte, um sie einzubeziehen. Sie können bis zu 3 Zielgruppen einbeziehen. Mit **Search audiences...** finden Sie eine Zielgruppe nach Name oder Beschreibung.
+
+    Um eine neue Zielgruppe anzulegen, klicken Sie auf **Create audience**. Der [Zielgruppen-Editor](/de/audiences/building-an-audience) öffnet sich, und die neue Zielgruppe wird einbezogen, sobald Sie sie speichern. Warten Sie, bis ihre Teilnehmenden fertig generiert sind, bevor Sie starten.
+  </Step>
+  <Step title="Anzahl der Teilnehmenden festlegen">
+    Das Panel **Participants** rechts zeigt Ihre Gesamtzahl im Verhältnis zum Maximum sowie eine Anzahl für jede Zielgruppe. Ändern Sie eine Anzahl direkt oder verwenden Sie:
+
+    - **Distribute evenly**, um das Maximum gleichmäßig auf Ihre Zielgruppen zu verteilen.
+    - **Handpick participants**, um genau die KI-Teilnehmenden auszuwählen, die Sie möchten, und dann **Save selection**.
+    - **Remove** im Menü **···** einer Zielgruppe, um diese Zielgruppe zu entfernen.
+
+    Solange Sie keine Zielgruppe einbezogen haben, zeigt das Panel *"No audiences included yet."*
+  </Step>
+  <Step title="Credit-Schätzung prüfen">
+    **Credit estimate** zeigt die Kosten jedes Blocks und die **Total credits** für die ausgewählten Teilnehmenden.
+  </Step>
+  <Step title="Starten">
+    Klicken Sie auf **Launch test**. Uxia führt zuerst eine kurze [Testprüfung](/de/recruit-participants#testprüfung) durch. Wird sie bestanden, beginnen die KI-Teilnehmenden.
+  </Step>
+</Steps>
+
+## Limits für Teilnehmende
+
+| | Free-Plan | Kostenpflichtige Pläne |
+|---|---|---|
+| KI-Teilnehmende pro Test | 3 | 5–10 |
+| Zielgruppen pro Test | Bis zu 3 | Bis zu 3 |
+
+Wenn Sie im Free-Plan die Anzahl über 3 erhöhen, öffnet sich **Upgrade to add more AI participants**.
+
+Liegt die Gesamtzahl außerhalb des Bereichs Ihres Plans, wird sie rot, und **Launch test** bleibt deaktiviert. Bewegen Sie den Mauszeiger über die Gesamtzahl, um zu sehen, wie viele Teilnehmende Sie hinzufügen oder entfernen müssen. Möglicherweise sehen Sie auch diese Meldungen:
+
+| Meldung | Was zu tun ist |
+|---|---|
+| *You can include up to 3 audiences* | Entfernen Sie eine Zielgruppe, bevor Sie eine weitere hinzufügen. |
+| *You can select at most 10 AI participants* | Verringern Sie die Anzahl für eine oder mehrere Zielgruppen. |
+| *Not enough credits remaining for this launch* | Reduzieren Sie Teilnehmende oder Blöcke oder [besorgen Sie sich weitere Credits](/de/account/plans-and-credits). |
+
+## So setzen sich die Credits zusammen
+
+Jeder Block wird pro KI-teilnehmender Person berechnet:
+
+| Block | Kosten |
+|---|---|
+| Aufgabe (jeder Typ) | 20 Credits, +1 für jeden aktivierten Benchmark ([SUS](/de/sus), [UXIA-Q](/de/uxia-q-score)) |
+| Umfrage | 1 Credit pro Frage |
+| Card Sorting | 10 Credits |
+| Barrierefreiheitsprüfung | 10 Credits pro Frame, unabhängig von den Teilnehmenden |
+
+Ein Test mit einer Live-Website-Aufgabe (SUS aktiviert) und einer Umfrage mit 6 Fragen, durchgeführt mit 5 KI-Teilnehmenden, kostet zum Beispiel (21 + 6) × 5 = **135 Credits**. [A/B-Varianten](/de/ab-variants) verdoppeln die Kosten pro teilnehmender Person und fügen 100 Credits für den Vergleich hinzu.
+
+Wenn Ihr Test für einen kostenlosen Start infrage kommt, zeigt die Schätzung die Credits durchgestrichen und mit **Free** gekennzeichnet. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+## Nach dem Start
+
+Sie kehren zur Zusammenfassung in Recruit zurück, wo die Zeile der KI-Teilnehmenden zuerst **Processing** und dann **Completed** zeigt. Klicken Sie auf **Go to analyze**, um die Ergebnisse zu verfolgen, sobald jeder Block fertig ist. Sie können die Seite verlassen; wir benachrichtigen Sie per E-Mail, wenn der Test abgeschlossen ist.
+
+Sobald KI-Teilnehmende gestartet sind, sind die Blöcke und die Zielgruppenauswahl des Tests gesperrt. Sie können für denselben Test aber weiterhin [Testlinks](/de/test-links) hinzufügen oder ein [menschliches Panel](/de/human-panel) anfordern.
+
+<CardGroup cols={2}>
+  <Card title="Testlinks" icon="link" href="/de/test-links">
+    Fügen Sie demselben Test Ihre eigenen menschlichen Teilnehmenden hinzu.
+  </Card>
+  <Card title="Ergebnisse analysieren" icon="chart-bar" href="/de/analyze-results">
+    Lesen Sie die Ergebnisse Block für Block.
+  </Card>
+</CardGroup>

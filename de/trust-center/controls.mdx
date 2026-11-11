@@ -1,0 +1,124 @@
+---
+title: "Sicherheitsmaßnahmen"
+sidebarTitle: "Sicherheitsmaßnahmen"
+description: "Die Infrastruktur-, organisatorischen, produktbezogenen, verfahrensbezogenen und datenbezogenen Maßnahmen, die die Uxia-Plattform schützen."
+icon: "shield"
+---
+
+Die folgenden Maßnahmen sind Teil des Informationssicherheits-Managementsystems von Uxia und an ISO/IEC 27001:2022 ausgerichtet. Sie sind nach Bereichen gruppiert, damit Sie sie leicht Ihrer eigenen Lieferantenprüfung zuordnen können.
+
+## Infrastruktursicherheit
+
+<AccordionGroup>
+  <Accordion title="Cloud-native Infrastruktur" icon="cloud">
+    Die Plattform läuft vollständig bei etablierten Cloud-Anbietern. Nichts wird selbst vor Ort (on premises) gehostet. Wir bewerten die Sicherheit jedes Anbieters vor der Aufnahme und überprüfen sie regelmäßig.
+  </Accordion>
+  <Accordion title="Netzwerksegmentierung und Firewalls" icon="network">
+    Cloud-Netzwerke sind segmentiert und durch Firewalls nach dem Default-Deny-Prinzip abgesichert. Web Application Firewalls mit verwalteten Regelsätzen und Ratenbegrenzung schützen den aus dem Internet erreichbaren Datenverkehr. Datenbankverbindungen sind auf genehmigte Quellen beschränkt. Firewall-Regeln werden mindestens alle sechs Monate überprüft.
+  </Accordion>
+  <Accordion title="Getrennte Umgebungen" icon="layers">
+    Produktions- und Staging-Umgebung sind logisch voneinander getrennt. Jede Änderung wird in Staging validiert, bevor sie in die Produktion gelangt.
+  </Accordion>
+  <Accordion title="Verschlüsselung bei der Übertragung und im Ruhezustand" icon="lock">
+    Der gesamte Datenverkehr zwischen Ihnen, der Anwendung, den Backend-Diensten und den Datenspeichern nutzt TLS 1.2 oder höher. Gespeicherte Daten werden mit AES-256 oder einem gleichwertigen Verfahren verschlüsselt. Die Schlüssel werden in verwalteten Schlüsselverwaltungsdiensten aufbewahrt, getrennt von den Daten, die sie schützen.
+  </Accordion>
+  <Accordion title="Verwaltung von Secrets" icon="key-round">
+    Secrets und API-Schlüssel werden in einem dedizierten Secrets-Manager aufbewahrt und nie in den Quellcode übernommen.
+  </Accordion>
+  <Accordion title="Protokollierung und Bedrohungserkennung" icon="activity">
+    Aktivitäten in unseren Cloud-Umgebungen werden zentral protokolliert, mit automatischen Warnmeldungen bei verdächtigen oder unbefugten Zugriffsversuchen und kontinuierlicher Bedrohungserkennung. Secrets, Passwörter und Nutzdaten von Kunden werden nie in Logs geschrieben.
+  </Accordion>
+</AccordionGroup>
+
+## Organisatorische Sicherheit
+
+<AccordionGroup>
+  <Accordion title="Anwendungsbereich und Governance des ISMS" icon="landmark">
+    Der Anwendungsbereich des ISMS ist formal festgelegt und umfasst jedes System, das die Uxia-Plattform unterstützt. Sicherheitsrollen und -verantwortlichkeiten sind zugewiesen, und ein Sicherheitsausschuss beaufsichtigt das Programm.
+  </Accordion>
+  <Accordion title="Richtlinien und Risikomanagement" icon="file-check">
+    Dokumentierte Sicherheits- und Datenschutzrichtlinien werden von der Geschäftsleitung genehmigt und mindestens einmal jährlich überprüft. Informationssicherheitsrisiken werden regelmäßig bewertet, und Behandlungspläne werden nachverfolgt.
+  </Accordion>
+  <Accordion title="Vertraulichkeit und Schulungen" icon="graduation-cap">
+    Alle Mitarbeitenden von Uxia unterzeichnen eine Vertraulichkeitsvereinbarung. Schulungen zu Sicherheitsbewusstsein und Datenschutz sind verpflichtend und werden im ersten Monat nach dem Eintritt absolviert.
+  </Accordion>
+  <Accordion title="Onboarding und Offboarding" icon="user-check">
+    Zugriffe werden über einen dokumentierten Onboarding-Prozess vergeben. Wenn jemand das Unternehmen verlässt, werden die Zugriffe noch am selben Tag entzogen.
+  </Accordion>
+  <Accordion title="Endgerätesicherheit" icon="laptop">
+    Firmenlaptops erfordern eine vollständige Festplattenverschlüsselung, eine automatische Bildschirmsperre und aktuelle Betriebssysteme. Der Sicherheitsstatus der Geräte wird zentral überwacht.
+  </Accordion>
+  <Accordion title="Lieferantenmanagement" icon="briefcase">
+    Lieferanten werden vor der Beauftragung bewertet und an Datenschutz- und Vertraulichkeitsbestimmungen gebunden. Lieferanten, die Kundendaten verarbeiten, werden mindestens einmal jährlich überprüft. Siehe [Unterauftragsverarbeiter](/de/trust-center/subprocessors).
+  </Accordion>
+  <Accordion title="Verhaltenskodex und Hinweisgebersystem" icon="scale">
+    Ein Verhaltenskodex legt die Erwartungen an alle Mitarbeitenden von Uxia fest, und ein vertraulicher Hinweisgeberkanal steht zur Meldung von Bedenken zur Verfügung.
+  </Accordion>
+</AccordionGroup>
+
+## Produktsicherheit
+
+<AccordionGroup>
+  <Accordion title="Sicherer Entwicklungslebenszyklus" icon="git-pull-request">
+    Jede Änderung durchläuft vor dem Merge einen Pull Request und ein Peer-Review. Die Infrastruktur ist als Code definiert und versioniert. Releases sind umkehrbar, sodass eine fehlerhafte Änderung schnell zurückgerollt werden kann.
+  </Accordion>
+  <Accordion title="Schwachstellenmanagement" icon="scan-search">
+    Abhängigkeiten und Container-Images werden in der Deployment-Pipeline auf bekannte Schwachstellen gescannt, und unsere Umgebungen werden regelmäßig gescannt. Feststellungen werden nach Schweregrad priorisiert und behoben.
+  </Accordion>
+  <Accordion title="Eingabevalidierung und Datenintegrität" icon="check-check">
+    Jede Anfrage wird auf dem Server anhand eines definierten Schemas validiert, sodass die Validierung nicht durch einen direkten API-Aufruf umgangen werden kann. Asynchrone Jobs werden abgeglichen, um sicherzustellen, dass keine Arbeit verloren geht.
+  </Accordion>
+  <Accordion title="Mandantentrennung" icon="boxes">
+    Jeder Workspace ist logisch isoliert. Ihre Tests, Ergebnisse und Dateien sind nur für Sie und die Teammitglieder zugänglich, die Sie einladen.
+  </Accordion>
+  <Accordion title="Zugriffskontrollen für Kunden" icon="users-round">
+    Workspace-Rollen legen fest, wer Personen und Einstellungen verwalten darf. Im Custom-Plan können Sie SSO mit Ihrem Identitätsanbieter erzwingen, Nutzende per SCIM provisionieren und Audit-Logs an Ihr SIEM streamen. Siehe [Identität und Zugriff](/de/trust-center/identity-access).
+  </Accordion>
+  <Accordion title="Test-Zugangsdaten und -Dateien" icon="file-lock">
+    Zugangsdaten und Dateien, die Sie für zugangsgeschützte Abläufe bereitstellen, werden bei der Übertragung und im Ruhezustand verschlüsselt, sind auf den zugehörigen Test beschränkt und nur innerhalb Ihres Workspace sichtbar. Zugangsdaten werden nie an KI-Modelle gesendet: Sie werden sicher in die Browsersitzung eingefügt. Sie können auch mit einer interaktiven Anmeldesitzung testen, sodass keine Zugangsdaten gespeichert werden. Siehe [Tests hinter einem Login](/de/trust-center/authenticated-testing).
+  </Accordion>
+</AccordionGroup>
+
+## Interne Sicherheitsverfahren
+
+<AccordionGroup>
+  <Accordion title="Zugriffsmanagement" icon="key-square">
+    Zugriffe folgen den Prinzipien der minimalen Rechtevergabe und Kenntnis nur bei Bedarf (Need-to-know). Multi-Faktor-Authentifizierung ist auf jedem System verpflichtend, privilegierte Konten sind personengebunden, und alle Zugriffsrechte werden vierteljährlich überprüft.
+  </Accordion>
+  <Accordion title="Änderungsmanagement" icon="git-branch">
+    Änderungen an Produktionssystemen werden geplant, überprüft, in Staging getestet und protokolliert.
+  </Accordion>
+  <Accordion title="Vorfallmanagement" icon="siren">
+    Ein dokumentierter Prozess für das Vorfallmanagement umfasst Erkennung, Eindämmung, Beseitigung, Wiederherstellung und Lessons Learned, mit einem eigenen Playbook für Vorfälle mit KI-Teilnehmenden. Siehe [Reaktion auf Sicherheitsvorfälle](/de/trust-center/incident-response).
+  </Accordion>
+  <Accordion title="Business Continuity und Disaster Recovery" icon="life-buoy">
+    Ein Business-Continuity-Plan und ein Runbook zur Datenbankwiederherstellung sind vorhanden. Die Wiederherstellungsverfahren werden mindestens einmal jährlich geübt.
+  </Accordion>
+  <Accordion title="Internes Audit und Korrekturmaßnahmen" icon="clipboard-check">
+    Ein jährliches internes Auditprogramm prüft die Konformität des ISMS. Nichtkonformitäten werden erfasst, ihre Ursachen analysiert und Korrekturmaßnahmen bis zum Abschluss nachverfolgt.
+  </Accordion>
+  <Accordion title="Gesetzliche und regulatorische Anforderungen" icon="gavel">
+    Für die Informationssicherheit relevante gesetzliche, regulatorische und vertragliche Anforderungen werden ermittelt, dokumentiert und aktuell gehalten.
+  </Accordion>
+</AccordionGroup>
+
+## Daten und Datenschutz
+
+<AccordionGroup>
+  <Accordion title="Klassifizierung und Handhabung von Informationen" icon="tags">
+    Informationen werden nach ihrer Schutzbedürftigkeit klassifiziert und entsprechend ihrer Klassifizierung behandelt.
+  </Accordion>
+  <Accordion title="Aufbewahrung und sichere Löschung" icon="trash-2">
+    Für jede Datenkategorie sind Aufbewahrungsfristen festgelegt. Nach Ablauf einer Aufbewahrungsfrist werden die Daten sicher gelöscht oder unumkehrbar anonymisiert. Siehe [Datenschutz](/de/trust-center/data-protection).
+  </Accordion>
+  <Accordion title="Datenschutz durch Technikgestaltung" icon="fingerprint">
+    Wir führen ein Verzeichnis von Verarbeitungstätigkeiten, dokumentieren die Rechtsgrundlage jeder Verarbeitung und führen Datenschutz-Folgenabschätzungen durch, wenn eine Verarbeitung ein hohes Risiko mit sich bringen könnte.
+  </Accordion>
+  <Accordion title="Betroffenenrechte" icon="user-round-cog">
+    Ein dokumentiertes Verfahren regelt Anträge auf Auskunft, Berichtigung, Löschung oder Export personenbezogener Daten.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Weiter: Identität und Zugriff" icon="key-round" href="/de/trust-center/identity-access">
+  SSO, SCIM-Provisionierung und wie Zugriff gewährt und entzogen wird.
+</Card>

@@ -1,0 +1,45 @@
+---
+title: "Tests hinter einem Login"
+sidebarTitle: "Tests hinter einem Login"
+description: "Die zwei Möglichkeiten, Produkte hinter Zugangsdaten mit Uxia zu testen, und wie Sie KI-Teilnehmende per Allowlist zulassen und erkennen."
+icon: "log-in"
+---
+
+Es gibt zwei Möglichkeiten, ein Produkt zu testen, das hinter einem Login liegt. Sie wählen für jeden Test eine davon aus.
+
+## Zugangsdaten
+
+Sie können Zugangsdaten im eigens dafür vorgesehenen Abschnitt **Credentials** eines Aufgabenblocks eingeben.
+
+- Zugangsdaten werden sicher gespeichert und im Ruhezustand verschlüsselt.
+- Sie werden nur dann entschlüsselt, wenn sie benötigt werden.
+- Wir empfehlen Ihnen, keine sensiblen oder potenziell gefährlichen Zugangsdaten einzugeben und sie unmittelbar nach Abschluss des Tests zu ändern.
+
+Die Einrichtung ist unter [Zugangsdaten für Teilnehmende](/de/tester-credentials) beschrieben.
+
+## Interaktive Anmeldesitzung
+
+Sie können den Testzustand selbst über die Uxia-Oberfläche einrichten und sich wie gewohnt anmelden. Wir erfassen die angemeldete Sitzung, sodass wir keine Zugangsdaten speichern.
+
+Alle KI-Teilnehmenden des Tests nutzen diese angemeldete Sitzung. Sie wird verschlüsselt gespeichert und eine Stunde nach dem Speichern automatisch gelöscht.
+
+Die Einrichtung ist unter [Interaktive Anmeldesitzung](/de/tester-credentials#interaktive-anmeldesitzung) beschrieben.
+
+## KI-Teilnehmende per Allowlist zulassen und erkennen
+
+Wir können Ihnen unsere IP-Adressen mitteilen, damit Ihr Team sie auf eine Allowlist setzen kann und KI-Teilnehmende Logins und Bot-Schutz leichter passieren.
+
+Alle Navigationsanfragen von KI-Teilnehmenden enthalten dieselben Header, sodass sie in Ihren Logs und Sicherheitstools leicht erkannt und identifiziert werden können.
+
+Die IP-Adressen und Details zu den Headern erhalten Sie per E-Mail an [hello@uxia.app](mailto:hello@uxia.app).
+
+## Empfohlene Einrichtung
+
+- Testen Sie in einer Staging- oder UAT-Umgebung mit synthetischen Daten.
+- Verwenden Sie dedizierte Testkonten, die nur die für die Aufgabe nötigen Berechtigungen haben.
+
+Weitere Hinweise finden Sie unter [Verantwortungsvolle KI](/de/trust-center/ai#empfohlene-einrichtung).
+
+<Card title="Weiter: Datenschutz" icon="database" href="/de/trust-center/data-protection">
+  Datenresidenz, Aufbewahrung, Löschung und Ihre Rechte.
+</Card>

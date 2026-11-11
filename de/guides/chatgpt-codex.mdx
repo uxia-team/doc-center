@@ -1,0 +1,57 @@
+---
+title: "ChatGPT/Codex"
+sidebarTitle: "ChatGPT/Codex"
+description: "Verbinden Sie Uxia mit ChatGPT und der Codex-App, um aus Ihren Chats heraus Tests zu erstellen und Ergebnisse zu lesen."
+---
+
+## ChatGPT
+
+Uxia ist direkt im [Plugin-Verzeichnis](https://chatgpt.com/plugins) von ChatGPT verfügbar und von OpenAI für die Verbreitung sowohl als Plugin als auch als MCP-Connector freigegeben. Sie können es also mit wenigen Klicks verbinden, ohne Entwicklermodus und ohne manuelle Server-URL.
+
+### Einrichtung
+
+<Steps>
+  <Step title="Das Verzeichnis öffnen">
+    Gehen Sie in ChatGPT zu **Settings → Apps → Directory** oder öffnen Sie direkt [chatgpt.com/plugins](https://chatgpt.com/plugins), und suchen Sie nach **Uxia**.
+  </Step>
+  <Step title="Uxia verbinden">
+    Öffnen Sie den Eintrag von Uxia und klicken Sie auf **Connect**. ChatGPT zeigt einen Autorisierungsdialog an.
+  </Step>
+  <Step title="Authentifizieren">
+    Melden Sie sich mit Ihrem Uxia-Konto an, um die Verbindung zu autorisieren. Nach der Freigabe ist Uxia mit Ihrem ChatGPT-Konto verknüpft und hat begrenzten Zugriff auf Ihre Tests, Transkripte und Insights.
+  </Step>
+</Steps>
+
+<Note>
+  ChatGPT arbeitet mit Ihrem bestehenden Uxia-Konto. Für alles, was es erstellt oder startet, gelten daher die Credits und [Planlimits](/de/account/plans-and-credits) Ihres Workspace.
+</Note>
+
+<Note>
+  Wenn Ihr ChatGPT-Workspace einen Business-, Enterprise- oder Edu-Plan nutzt, muss unter Umständen zuerst jemand mit Admin- oder Owner-Rolle die Uxia-App für Ihren Workspace aktivieren. Bis dahin sehen Mitglieder das Label **Disabled by admin**. Admins können Uxia unter **Workspace settings → Apps** aktivieren.
+</Note>
+
+### Verwendung
+
+Nach der Verbindung können Sie ChatGPT bitten, direkt mit Uxia zu kommunizieren:
+
+```plaintext
+Erstelle einen neuen Test für meine neue App auf www.example.com
+```
+
+```plaintext
+Liste meine letzten 5 Uxia-Tests auf und fasse jeweils die wichtigsten Insights zusammen.
+```
+
+## Codex-App
+
+### Einrichtung
+
+Die Codex-Desktop-App nutzt dieselben Zugangsdaten wie ChatGPT. Schließen Sie zuerst die ChatGPT-Einrichtung oben ab, dann hat die Codex-App automatisch Zugriff.
+
+### Verwendung
+
+Nach der Verbindung können Sie die Codex-App bitten, direkt mit Uxia zu kommunizieren:
+
+```plaintext
+Erstelle einen neuen Uxia-Test für meine neue App auf www.example.com
+```

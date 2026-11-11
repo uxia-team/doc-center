@@ -1,0 +1,90 @@
+---
+title: "Test aufbauen"
+description: "Erstellen Sie einen unmoderierten Test, fügen Sie Aufgaben-, Umfrage-, Card-Sorting- und Barrierefreiheitsblöcke hinzu und bereiten Sie die Rekrutierung vor."
+---
+
+Ein Test ist eine Abfolge von **Blöcken**. Teilnehmende durchlaufen die Blöcke der Reihe nach – zum Beispiel eine Aufgabe zu Ihrem Registrierungsablauf und danach eine Umfrage zum Erlebnis. Sie bauen den Test in der Phase **Build** auf und gehen dann zu **Recruit** über.
+
+## Test erstellen
+
+<Steps>
+  <Step title="Erstellungsdialog öffnen">
+    Klicken Sie in der Seitenleiste, auf der Startseite, auf der Seite **Tests** oder in einem Projekt auf **Create test**.
+  </Step>
+  <Step title="Unmoderated test auswählen">
+    Wählen Sie **Unmoderated test** – Teilnehmende absolvieren den Test selbstständig, und Sie erhalten Insights, Pfade und Klicks. (Für Live-Interviews mit einem KI-Moderator siehe [KI-moderierte Tests](/de/ai-moderated-tests).)
+  </Step>
+  <Step title="Namen vergeben und Projekt auswählen">
+    Geben Sie einen **Title** ein (bis zu 72 Zeichen) und wählen Sie ein **Project** oder **No project**. Sie können hier auch ein neues Projekt anlegen. Klicken Sie auf **Create test**, um den Editor zu öffnen.
+  </Step>
+</Steps>
+
+## Blöcke hinzufügen
+
+In einem leeren Test öffnet sich die Auswahl **Add a block** automatisch. Später verwenden Sie **Add new block** am Ende des Canvas oder **Add new block here** zwischen zwei Blöcken, um einen Block an einer bestimmten Position einzufügen.
+
+| Bereich | Block | Wofür Sie ihn verwenden |
+|---|---|---|
+| **Task** | **Live website task** | Eine Live-Website, eine Plattform oder einen programmierten Prototyp per URL testen |
+| | **Figma prototype task** | Einen Figma-Prototyp über seinen Freigabelink testen |
+| | **Media prototype task** | Einen Prototyp aus eigenen Bildern erstellen und testen |
+| **Research** | **Survey** | Fragen mit unterschiedlichen Fragetypen stellen |
+| | **Card sorting** | Sehen, wie Teilnehmende Ihre Inhalte gruppieren und benennen |
+| **Audits** | **Accessibility check** | Ihre Screens gegen WCAG 2.2 AA oder AAA prüfen |
+
+Jeder Block hat eine eigene Seite: [Aufgabenblock](/de/task-block), [Umfrageblock](/de/survey-block), [Card-Sorting-Block](/de/card-sorting) und [Block zur Barrierefreiheitsprüfung](/de/accessibility-block).
+
+<Tip>
+  Wenn Sie einen zweiten Block desselben Typs hinzufügen, übernimmt Uxia die Quelle (URL oder Prototyp) aus dem vorherigen Block. So testen Sie mehrere Abläufe desselben Produkts in Sekunden.
+</Tip>
+
+### Limits pro Test
+
+| | Free-Plan | Kostenpflichtige Pläne |
+|---|---|---|
+| Aufgabenblöcke (alle drei Typen zusammen) | 1 | 3 |
+| Umfrageblöcke | 1 | 3 |
+| Umfragefragen (im gesamten Test) | 5 | 30 |
+| Blöcke zur Barrierefreiheitsprüfung | Nicht verfügbar | 1 (bis zu 5 Frames) |
+| Card-Sorting-Blöcke | Unbegrenzt | Unbegrenzt |
+
+Wenn Sie ein Limit erreichen, wird der Block in der Auswahl deaktiviert. Im Free-Plan tragen gesperrte Blöcke ein **Upgrade**-Badge.
+
+## Blöcke organisieren
+
+Die linke Seitenleiste listet alle Blöcke der Reihe nach auf, jeweils mit Titel und einer kurzen Zusammenfassung – dem Aufgabentext oder der Anzahl der Fragen, Karten oder Frames.
+
+- **Neu anordnen:** Ziehen Sie einen Block in der Seitenleiste an eine andere Stelle oder verwenden Sie **Move up** / **Move down** im Menü **…** des Blocks.
+- **Duplizieren:** Kopieren Sie einen Block mit allen Einstellungen über das Menü **…**.
+- **Löschen:** Entfernen Sie einen Block über das Menü **…**.
+
+<Warning>
+  Das Löschen eines Blocks erfolgt sofort und kann nicht rückgängig gemacht werden.
+</Warning>
+
+Ihre Änderungen werden während der Arbeit automatisch gespeichert.
+
+### Die Reihenfolge zählt
+
+Teilnehmende absolvieren die Blöcke in der Reihenfolge, die Sie festlegen. Zwei Einstellungen hängen davon ab:
+
+- In einem Umfrageblock nach einer Aufgabe kann jede Frage mit **Only ask testers who complete the flow** auf KI-Teilnehmende beschränkt werden, die die Aufgabe abgeschlossen haben. So stellen Sie Fragen im Anschluss an eine Aufgabe. Siehe [Umfrageblock](/de/survey-block).
+- Eine Live-Website- oder Figma-Aufgabe, die dieselbe URL wie eine frühere Aufgabe verwendet, kann mit **Continue from where participants left the previous task** fortgesetzt werden, sodass Teilnehmende in derselben Browsersitzung weitermachen.
+
+## Probleme vor der Rekrutierung beheben
+
+Pflichtfelder werden während der Arbeit geprüft. Wenn in einem Block etwas fehlt – eine URL, eine Aufgabe, ein Szenario, eine Frage –, wird er in der Seitenleiste mit einem roten Warnsymbol markiert, und das Feld zeigt an, was fehlt, zum Beispiel *"You need to describe the task"*.
+
+Der rote Problemzähler in der Kopfzeile listet alle offenen Probleme nach Block auf. Klicken Sie auf einen Eintrag, um direkt dorthin zu springen.
+
+## Rekrutierung beginnen
+
+Wenn Ihre Blöcke bereit sind, klicken Sie auf **Start recruiting**. Uxia prüft jeden Block; fehlt etwas, gelangen Sie zum ersten Problem. Andernfalls öffnet sich die Phase **Recruit**, in der Sie Ihre Teilnehmenden auswählen.
+
+<Note>
+  Sie können Blöcke so lange bearbeiten, bis Sie KI-Teilnehmende starten. Bevor KI-Teilnehmende beginnen, führt Uxia eine kurze [Testprüfung](/de/recruit-participants#testprüfung) durch, um unklare Aufgaben oder Fragen zu erkennen.
+</Note>
+
+<Card title="Weiter: Teilnehmende rekrutieren" icon="arrow-right" href="/de/recruit-participants">
+  Wählen Sie KI-Teilnehmende, laden Sie eigene Teilnehmende ein oder fordern Sie ein menschliches Panel an.
+</Card>

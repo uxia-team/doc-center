@@ -1,0 +1,99 @@
+---
+title: "Aufgabenblock"
+sidebarTitle: "Übersicht"
+description: "Lassen Sie Teilnehmende eine Aufgabe auf Ihrer Live-Website, im Figma-Prototyp oder im bildbasierten Prototyp lösen und dabei laut denken."
+---
+
+Ein **Aufgabenblock** fordert Teilnehmende auf, eine konkrete Aufgabe in Ihrem Produkt oder Prototyp zu erledigen. KI-Teilnehmende denken beim Navigieren laut, sodass Sie sehen, wo sie zögern, sich verirren oder aufgeben, und warum. Menschliche Teilnehmende werden aufgezeichnet, während sie dieselbe Aufgabe bearbeiten.
+
+## Aufgabentyp wählen
+
+Unter **Add a block** enthält der Bereich **Task** drei Blöcke. Sie unterscheiden sich darin, worin die Teilnehmenden navigieren:
+
+| Block | Damit testen Sie | Quelle | Abbruchbedingung | Zugangsdaten und Dateien |
+|---|---|---|---|---|
+| **Live website task** | Eine Live-Website, eine Web-App, einen Staging-Build oder einen programmierten Prototyp | Eine öffentliche URL | Erforderlich | Verfügbar |
+| **Figma prototype task** | Einen Figma-Prototyp | Ein Figma-Prototyp-Link (`figma.com/proto/…`) | Erforderlich | Verfügbar |
+| **Media prototype task** | Designs, die noch nicht umgesetzt sind | Bilder, die Sie hochladen und auf einem Canvas verbinden | Keine: Die Aufgabe endet am letzten Frame | Nicht verfügbar |
+
+Eine Live-Website-Aufgabe funktioniert mit fast allem, was eine öffentliche URL hat:
+
+- Öffentliche Websites und Web-Apps, Staging- oder Pre-Production-Builds und Produkte hinter einem Login.
+- Programmierte Prototypen und generierte Apps, etwa aus Lovable, Base44, Cursor, Google Stitch oder Claude.
+
+Sie können Uxia auch über den [Uxia MCP](/de/integrations/mcp) mit Ihren Coding-Agents verbinden.
+
+Wie Sie die Quelle festlegen, lesen Sie unter [Live-Website- und Figma-Links](/de/source) oder [Medienprototyp](/de/media-canvas).
+
+## Was zu einem Aufgabenblock gehört
+
+Unter der Quelle hat jeder Block die Felder, die die Sitzung definieren:
+
+- **Task**: das eine Ziel, das die Teilnehmenden zu erreichen versuchen. Siehe [Aufgabe](/de/mission).
+- **Scenario**: die Situation und die Motivation dahinter. Siehe [Szenario](/de/test-scenario).
+- **Stop condition**: der Endzustand auf dem Bildschirm, mit dem der Durchlauf endet. Nur bei Live-Website- und Figma-Prototyp-Aufgaben. Siehe [Abbruchbedingung](/de/stop-condition).
+
+Jedes Feld ist ein Pflichtfeld und fasst bis zu 500 Zeichen. Jedes hat außerdem eine Schaltfläche **Tips**, die Umformulierungen vorschlägt.
+
+## Mehrere Flows in einem Test testen
+
+Beschränken Sie sich auf ein Ziel pro Aufgabe und fügen Sie für jeden Flow, den Sie testen möchten, einen eigenen Aufgabenblock hinzu. Ein Test enthält bei kostenpflichtigen Plänen bis zu 3 Aufgabenblöcke, beim Free-Plan 1. Die Teilnehmenden bearbeiten die Blöcke der Reihe nach.
+
+- Wenn Sie einen weiteren Block desselben Typs hinzufügen, übernimmt Uxia seine Quelle (die URL bzw. die Frames und den Flow) aus dem vorherigen Block.
+- Wenn eine Live-Website- oder Figma-Prototyp-Aufgabe dieselbe URL wie eine frühere Aufgabe verwendet, können Sie **Continue from where participants left the previous task** aktivieren. Die Teilnehmenden machen dann dort weiter, wo sie aufgehört haben, statt von vorn zu beginnen. Standardmäßig ist die Option deaktiviert.
+
+## Benchmarks
+
+Unten in jedem Aufgabenblock fügen zwei Schalter einen Benchmark hinzu: standardisierte Aussagen, die die Teilnehmenden nach der Aufgabe bewerten und die zu einem Score zusammengefasst werden.
+
+- **Measure usability with SUS**. Siehe [SUS](/de/sus).
+- **Measure user experience with UXIA-Q**. Siehe [UXIA-Q-Score](/de/uxia-q-score).
+
+Beide sind standardmäßig deaktiviert. Beim Free-Plan sind Benchmarks nicht verfügbar; dort zeigen die Schalter ein **Upgrade**-Badge.
+
+## Credits und Limits
+
+Ein Aufgabenblock kostet **20 Credits pro KI-teilnehmender Person**, plus 1 Credit pro KI-teilnehmender Person für jeden aktivierten Benchmark. Beispiel: 5 KI-Teilnehmende bei einer Aufgabe mit SUS und UXIA-Q kosten 5 × 22 = 110 Credits. Menschliche Teilnehmende, die Sie über Testlinks einladen, kosten keine Credits.
+
+| | Free-Plan | Kostenpflichtige Pläne |
+|---|---|---|
+| Aufgabenblöcke pro Test | 1 | 3 |
+| Benchmarks (SUS, UXIA-Q) | Nicht verfügbar | Verfügbar |
+
+Wenn alle KI-Teilnehmenden von einer Live-Website blockiert werden, werden 80 % der Credits erstattet. Siehe [Flows, die KI-Teilnehmende nicht abschließen können](/de/unsupported-flows).
+
+## Zugangsdaten und Dateien
+
+Wenn Ihr Flow hinter einem Login beginnt oder die Teilnehmenden etwas hochladen müssen, nutzen Sie **+ Add credentials** und **+ Add files** unter der URL einer Live-Website- oder Figma-Prototyp-Aufgabe.
+
+<CardGroup cols={2}>
+  <Card title="Zugangsdaten für Teilnehmende" icon="key" href="/de/tester-credentials">
+    Geben Sie KI-Teilnehmenden Logins und Feldwerte für geschützte Flows.
+  </Card>
+  <Card title="Dateien für Teilnehmende" icon="file-up" href="/de/tester-files">
+    Geben Sie KI-Teilnehmenden die Dateien, die ein Flow zum Hochladen verlangt.
+  </Card>
+</CardGroup>
+
+## Was Sie erhalten
+
+In der Phase **Analyze** hat jeder Aufgabenblock eigene Tabs: **Insights**, **Transcripts**, **Analytics**, **Journeys** und **Benchmarks**, wenn ein Benchmark aktiviert ist.
+
+<CardGroup cols={2}>
+  <Card title="Insights und UOS" icon="lightbulb" href="/de/results">
+    Priorisierte Usability-Insights, der UOS und Lösungsvorschläge.
+  </Card>
+  <Card title="Transkripte" icon="scroll-text" href="/de/test-transcripts">
+    Sitzungen Schritt für Schritt, mit Screens und Kommentaren aus dem lauten Denken.
+  </Card>
+  <Card title="Analytics und Nutzerpfade" icon="chart-line" href="/de/analytics">
+    Wie sich die Teilnehmenden durch den Flow bewegt haben und wo Reibung entstand.
+  </Card>
+  <Card title="Benchmark-Ergebnisse" icon="gauge" href="/de/benchmark-results">
+    SUS- und UXIA-Q-Scores für die Aufgabe.
+  </Card>
+</CardGroup>
+
+<Card title="Weiter: Live-Website- und Figma-Links" icon="arrow-right" href="/de/source">
+  Fügen Sie die URL hinzu, in der die Teilnehmenden navigieren, und lassen Sie Uxia sie prüfen.
+</Card>

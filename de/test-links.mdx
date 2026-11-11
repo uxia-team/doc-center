@@ -1,0 +1,95 @@
+---
+title: "Testlinks"
+description: "Laden Sie eigene Teilnehmende per Testlink ein, wählen Sie Aufzeichnungs- und Spracheinstellungen und sehen Sie, was Teilnehmende erleben."
+---
+
+Mit Testlinks holen Sie Ihre eigenen Teilnehmenden in einen Test: Kunden, Nutzer, ein von Ihnen verwaltetes Panel oder Kolleginnen und Kollegen. Versenden Sie den Link über einen beliebigen Kanal, zum Beispiel per E-Mail, Slack oder Newsletter. Teilnehmende brauchen kein Konto, und menschliche Teilnehmende kosten 0 Credits.
+
+Testlinks sind in kostenpflichtigen Plänen verfügbar. Teilnehmende absolvieren dieselben Blöcke wie Ihre [KI-Teilnehmenden](/de/ai-participants), sodass Sie beide Gruppen in [Analyze](/de/analyze-results) vergleichen können.
+
+<Note>
+  Im Starter-Plan können Sie Testlinks erstellen, menschliche Ergebnisse sind aber nicht enthalten. Pro zeigt die ersten 10 Sitzungen pro Test, Custom zeigt alle. Siehe [Ergebnisse menschlicher Teilnehmender](/de/human-insights#planlimits).
+</Note>
+
+## Testlink erstellen
+
+<Steps>
+  <Step title="Testlinks öffnen">
+    Klicken Sie in der Phase [Recruit](/de/recruit-participants) auf **Test links** und dann auf **Create link**.
+  </Step>
+  <Step title="Link konfigurieren">
+    Geben Sie dem Link in **Create Test Link** einen **Link name**, zum Beispiel *Newsletter-Zielgruppe*, und wählen Sie die unten beschriebenen Einstellungen. Klicken Sie dann auf **Create**.
+  </Step>
+  <Step title="Link teilen">
+    Klicken Sie auf **Copy link** und senden Sie den Link an Ihre Teilnehmenden. Mit **Preview** probieren Sie das Erlebnis der Teilnehmenden selbst aus; Vorschausitzungen werden nicht gespeichert.
+  </Step>
+</Steps>
+
+Erstellen Sie einen Link pro Gruppe oder Kanal, bis zu 10 Links pro Test. Jeder Link hat eigene Einstellungen, und in Analyze können Sie die Ergebnisse nach Link filtern.
+
+## Link-Einstellungen
+
+| Einstellung | Was sie bewirkt |
+|---|---|
+| **Link name** | Kennzeichnet den Link in Recruit und im Filter von Analyze. Pflichtfeld. |
+| **Show interactive areas after an invalid click** | Hebt die klickbaren Bereiche hervor, wenn eine teilnehmende Person außerhalb davon klickt. Wird bei Medienprototypen mit interaktiven Bereichen angezeigt. Standardmäßig aktiviert. |
+| **Face camera** | *"Screen recording is always required. Enable this to also require face camera permission before participants can start."* |
+| **Default language** | Die Sprache, die Teilnehmende sehen. Uxia übersetzt Ihre Aufgaben, Szenarien und Fragen automatisch. Zur Auswahl stehen Englisch, Spanisch, Koreanisch, Deutsch, Französisch, Chinesisch, Português (Brasil), Português (Portugal) und Italienisch. |
+| **Participants can choose language in the session** | Fügt dem Begrüßungsbildschirm eine Sprachauswahl hinzu. |
+
+Wenn in Ihrem Workspace verfügbar, ermöglicht **Allow 3rd Party human participants** Teilnehmenden aus einem externen Rekrutierungspanel, ihren Abschluss zu melden. Fügen Sie den **Completion link** Ihres Rekrutierungsdienstleisters ein, und Teilnehmende sehen am Ende eine Schaltfläche **Confirm your participation**.
+
+## Links verwalten
+
+Die Tabelle **Test links** zeigt für jeden Link **Link**, **Default language**, **Status** und die Einstellung **Face camera**. Im Menü **…** eines Links:
+
+- **Stop** schließt den Link. Teilnehmende, die ihn öffnen, sehen *"This test is unavailable"* und *"No longer accepting responses."*
+- **Activate** öffnet einen gestoppten Link wieder.
+- **Edit settings** ändert die Einstellungen des Links. Änderungen gelten für künftige Teilnehmende.
+
+Wenn Ihr Test [A/B-Varianten](/de/ab-variants) hat, hat jeder Link eine URL pro Variante.
+
+## Das Erlebnis der Teilnehmenden
+
+Teilnehmende brauchen einen Desktop-Browser, der Bildschirmaufzeichnung unterstützt.
+
+<Steps>
+  <Step title="Begrüßung und Einwilligung">
+    Teilnehmende wählen eine Sprache, sofern der Link dies erlaubt. Sie stimmen den Nutzungsbedingungen zu und bestätigen, dass ihr Bildschirm, ihr Mikrofon und ihre Kamera aufgezeichnet werden dürfen.
+  </Step>
+  <Step title="Bevor es losgeht">
+    Sie lesen zwei kurze Hinweise: **Think out loud** und **Device & permissions**.
+  </Step>
+  <Step title="Gerätecheck">
+    Sie schalten ihr Mikrofon ein und sprechen ein paar Worte, um es zu testen, sowie ihre Kamera, wenn **Face camera** aktiviert ist. Dann klicken sie auf **Start test** und geben ihren Bildschirm frei. Bei Tests mit einer Live-Website-Aufgabe muss der gesamte Bildschirm freigegeben werden.
+  </Step>
+  <Step title="Die Blöcke">
+    Teilnehmende durchlaufen Ihre Blöcke der Reihe nach. Bei einer Aufgabe lesen sie das Briefing und klicken auf **Start task**; eine Live-Website öffnet sich in einem anderen Tab. Sie klicken auf **Finish task**, wenn sie fertig sind, oder auf **Abandon task**, um aufzugeben. Umfragen und Benchmarks werden auf dem Bildschirm beantwortet, Card Sorts funktionieren per Drag-and-drop.
+  </Step>
+  <Step title="Test abgeschlossen">
+    Die Aufzeichnung wird hochgeladen, und Teilnehmende sehen **Test completed**. Mit einem Completion-Link sehen sie zusätzlich **Confirm your participation**.
+  </Step>
+</Steps>
+
+Gut zu wissen:
+
+- Sitzungen sind auf 60 Minuten begrenzt. Teilnehmende werden 5 Minuten und 1 Minute vor Ablauf gewarnt, danach wird die Sitzung automatisch abgeschickt.
+- Blöcke zur Barrierefreiheitsprüfung werden übersprungen. Sie brauchen keine Teilnehmenden.
+- Derselbe Browser kann einen Testlink nicht zweimal abschicken. Ein zweiter Versuch zeigt *"This test was already submitted."*
+- Im Custom-Plan ist das Uxia-Logo in der Sitzung ausgeblendet.
+
+## Was aufgezeichnet wird
+
+- **Bildschirmaufzeichnung** des Tests, so wie die teilnehmende Person ihn sieht.
+- **Mikrofonaudio** mit ihren gesprochenen Gedanken.
+- **Gesichtskamera**, wenn der Link sie verlangt.
+- **Klicks und Navigation** in Ihrem Prototyp.
+- **Transkripte**, die automatisch aus dem Audio erstellt werden.
+
+<Tip>
+  Bitten Sie Teilnehmende in Ihrer Einladung, einen Desktop-Computer zu verwenden, sagen Sie ihnen ungefähr, wie lange der Test dauert, und empfehlen Sie einen ruhigen Ort zum lauten Denken. So vermeiden Sie fehlgeschlagene und stumme Aufzeichnungen.
+</Tip>
+
+<Card title="Weiter: Ergebnisse menschlicher Teilnehmender" icon="arrow-right" href="/de/human-insights">
+  Sehen Sie sich Aufzeichnungen an, lesen Sie Transkripte und werten Sie menschliche Ergebnisse aus.
+</Card>

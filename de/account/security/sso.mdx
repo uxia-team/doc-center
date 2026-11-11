@@ -1,0 +1,51 @@
+---
+title: "SSO und Nutzerprovisionierung in Uxia"
+sidebarTitle: "SSO"
+description: "Konfigurieren Sie SSO, SCIM, JIT-Kontoerstellung, verifizierte Domains, Audit-Logs und Log-Streaming für Ihre Unternehmensorganisation."
+---
+
+Für Organisationen mit strengeren Anforderungen an Identitäts- und Zugriffsverwaltung konfigurieren Sie die Enterprise-Identitätsfunktionen im Tab **SSO and provisioning** auf der Organisationsseite.
+
+Je nach Plan und aktivierten Funktionen können Sie in diesem Tab:
+
+- Verifizierte Domains der Organisation hinzufügen und verwalten.
+- Prüfen, ob eine Domain konfiguriert, ausstehend, fehlend, fehlgeschlagen oder verifiziert ist.
+- Das SSO-Admin-Panel öffnen.
+- Das Provisionierungs-Panel für die SCIM-Einrichtung öffnen.
+- Die **automatische Kontoerstellung (JIT)** ein- oder ausschalten.
+- Ein- oder ausschalten, ob Einladungen von externen Domains erlaubt sind.
+- Die Einrichtung der Audit-Logs öffnen.
+- Die Einrichtung des Log-Streamings öffnen.
+
+## Single Sign-On (SSO)
+
+Mit SSO meldet sich Ihr Team über den bestehenden Identitätsanbieter Ihres Unternehmens bei Uxia an, etwa Okta, Microsoft Entra ID (früher Azure AD) oder Google Workspace. Das bedeutet:
+
+- Teammitglieder authentifizieren sich über ein System, das Ihr IT-Team bereits verwaltet und dem es vertraut.
+- Sie behalten die zentrale Kontrolle darüber, wer Zugriff auf Uxia hat.
+- Wenn Sie ein Teammitglied bei Ihrem Identitätsanbieter entfernen, kann es sich nicht mehr darüber anmelden. Mit SCIM wird außerdem sein Uxia-Konto deaktiviert, und seine aktiven Sitzungen werden beendet.
+
+## SCIM-Provisionierung
+
+SCIM (System for Cross-domain Identity Management) automatisiert die Provisionierung und Deprovisionierung von Nutzerkonten in Ihrer gesamten Organisation. Wenn Sie eine Person bei Ihrem Identitätsanbieter hinzufügen oder entfernen, wird diese Änderung automatisch in Uxia übernommen. Eine manuelle Verwaltung der Nutzerlizenzen ist nicht nötig.
+
+## Just-in-Time-Kontoerstellung (JIT)
+
+Wenn JIT aktiviert ist, können sich neue Personen aus einer verifizierten Domain per SSO anmelden. Ihr Uxia-Konto wird bei der ersten Anmeldung automatisch erstellt, ohne manuelle Einladung.
+
+## Audit-Logs und Log-Streaming
+
+Audit-Logs erfassen wichtige Aktionen innerhalb Ihrer Organisation. Log-Streaming leitet diese Ereignisse an Ihr SIEM oder Ihre Observability-Plattform weiter, damit Ihr Sicherheitsteam die Aktivität zusammen mit der übrigen Infrastruktur überwachen kann.
+
+<Note>
+  SSO, SCIM, JIT, Audit-Logs und Log-Streaming sind im Custom-Plan verfügbar. Wenn SSO oder Provisionierung für Ihre Organisation nicht aktiviert ist, werden Sie auf der Seite aufgefordert, Uxia zu kontaktieren. Schreiben Sie an [hello@uxia.app](mailto:hello@uxia.app), um die Enterprise-Authentifizierung einzurichten.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Enterprise Auth" icon="key-round" href="/de/integrations/enterprise-auth">
+    Identitätsanbieter, Provisionierung und Zugriffsverwaltung für Uxia.
+  </Card>
+  <Card title="Personen und Einladungen" icon="user-plus" href="/de/account/people">
+    Verwalten Sie Personen, Rollen und Workspace-Zugriff.
+  </Card>
+</CardGroup>

@@ -1,0 +1,40 @@
+---
+title: "Identität und Zugriff"
+sidebarTitle: "Identität und Zugriff"
+description: "Single Sign-on über SAML und OIDC, SCIM-Provisionierung und wie Zugriffe auf Uxia gewährt, überwacht und entzogen werden."
+icon: "key-round"
+---
+
+Sie können den Zugriff auf Uxia über Ihren eigenen Identitätsanbieter verwalten. SSO, SCIM, JIT-Kontoerstellung, Audit-Logs und Log-Streaming sind im Custom-Plan verfügbar.
+
+## Single Sign-on
+
+Ihr Team kann sich über Ihren Identitätsanbieter per SAML oder OIDC anmelden. Zu den unterstützten Anbietern gehören Okta, Microsoft Entra ID und Google Workspace.
+
+Sie können außerdem die Domains Ihrer Organisation verifizieren und festlegen, ob Einladungen von externen Domains zulässig sind.
+
+## Zugriff provisionieren
+
+| Methode | Funktionsweise |
+|---|---|
+| **SCIM** | Nutzende, die Sie in Ihrem Identitätsanbieter hinzufügen oder aktualisieren, werden in Uxia automatisch angelegt oder aktualisiert. |
+| **JIT-Kontoerstellung** | Neue Nutzende einer verifizierten Domain erhalten bei ihrer ersten Anmeldung über SSO ein Konto. |
+| **Einladungen** | Workspace-Admins laden Personen direkt ein und weisen ihnen eine Rolle zu. |
+
+Workspace-Rollen legen fest, wer Personen und Einstellungen verwalten darf. Mit Ihrem Identitätsanbieter können Sie außerdem Rollen zuordnen und den Zugriff auf Workspaces zentral steuern.
+
+## Zugriff entziehen
+
+- **Mit SCIM.** Wenn Sie eine Person in Ihrem Identitätsanbieter entfernen, wird ihr Uxia-Konto deaktiviert und ihre aktiven Sitzungen werden beendet.
+- **Nur mit SSO.** Wenn Sie eine Person in Ihrem Identitätsanbieter entfernen, kann sie sich darüber nicht mehr anmelden. Ein Workspace-Admin sollte sie zusätzlich aus Uxia entfernen, um ihren Zugriff sofort zu beenden.
+- **Ohne SSO.** Ein Workspace-Admin entfernt die Person aus dem Workspace, und sie verliert den Zugriff auf dessen Tests und Ergebnisse.
+
+## Zugriff überwachen
+
+Audit-Logs erfassen wichtige Aktionen innerhalb Ihrer Organisation. Log-Streaming leitet diese Ereignisse an Ihr SIEM oder Ihre Observability-Plattform weiter, sodass Ihr Sicherheitsteam sie zusammen mit dem Rest Ihrer Infrastruktur überwachen kann.
+
+Details zur Einrichtung finden Sie unter [SSO und Nutzerprovisionierung](/de/account/security/sso).
+
+<Card title="Weiter: Tests hinter einem Login" icon="log-in" href="/de/trust-center/authenticated-testing">
+  Die zwei Möglichkeiten, authentifizierte Abläufe zu testen, und wie Sie KI-Teilnehmende erkennen.
+</Card>

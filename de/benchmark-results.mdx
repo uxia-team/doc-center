@@ -1,0 +1,63 @@
+---
+title: "Benchmark-Ergebnisse"
+sidebarTitle: "Benchmarks"
+description: "Lesen Sie die SUS- und UXIA-Q-Werte eines Aufgabenblocks, vergleichen Sie sie mit Branchen-Benchmarks und sehen Sie, was jeden Wert bestimmt."
+---
+
+Benchmarks machen aus einer Aufgabe standardisierte Kennzahlen, die Sie über Tests hinweg vergleichen und im Zeitverlauf verfolgen können. Wenn Sie in einem [Aufgabenblock](/de/task-block) **Measure usability with SUS** oder **Measure user experience with UXIA-Q** aktivieren, beantworten alle KI-Teilnehmenden nach der Aufgabe den Standardfragebogen. Die Ergebnisse erscheinen im Tab **Benchmarks** des Blocks, mit einem Abschnitt pro Benchmark.
+
+Der Tab **Benchmarks** erscheint nur, wenn mindestens ein Benchmark aktiviert war, und ist verfügbar, sobald der Durchlauf abgeschlossen ist.
+
+## SUS
+
+Die **System Usability Scale** ist ein weit verbreiteter Fragebogen mit 10 Fragen, der von 0 bis 100 bewertet wird. Der Abschnitt zeigt den Wert auf einer farbigen Skala, mit einem Notenabzeichen, einer Markierung für den Branchendurchschnitt (**Average**) von 68 und einer kurzen Erläuterung des Ergebnisses.
+
+| Note | Bezeichnung | Wert |
+|---|---|---|
+| **F** | Poor | Unter 51 |
+| **B** | Acceptable | 51 bis 68 |
+| **A** | Good | 68 bis 80,3 |
+| **A+** | Excellent | Über 80,3 |
+
+Ein Wert über 68 bedeutet, dass die Teilnehmenden die Nutzung als einfacher als der Durchschnitt empfanden. Nutzen Sie SUS, um Versionen desselben Ablaufs zu vergleichen oder die Usability von Release zu Release zu verfolgen. Die 10 Fragen finden Sie unter [SUS](/de/sus).
+
+## UXIA-Q
+
+**UXIA-Q** misst die Gesamtqualität der Erfahrung anhand von vier Säulen mit jeweils zwei Fragen:
+
+| Säule | Was sie misst | Fragen |
+|---|---|---|
+| **Usability** | Wie einfach sich das Produkt nutzen und navigieren lässt | Einfach zu nutzen, einfach zu navigieren |
+| **Trust** | Wie glaubwürdig das Produkt wirkt und wie sicher sich die Teilnehmenden fühlen würden, Geschäfte darüber abzuwickeln | Glaubwürdige Informationen, sicher beim Abwickeln von Geschäften |
+| **Appearance** | Wie ansprechend und aufgeräumt die Darstellung ist | Ansprechend, aufgeräumte Darstellung |
+| **Loyalty** | Wie wahrscheinlich es ist, dass die Teilnehmenden zurückkehren und das Produkt weiterempfehlen | Wahrscheinlichkeit der Rückkehr, Wahrscheinlichkeit der Weiterempfehlung |
+
+Der Abschnitt beginnt mit einem Netzdiagramm der vier Säulen auf einer Skala von 1 bis 5. Bewegen Sie den Mauszeiger über einen Punkt, um seine Erläuterung zu sehen, oder klicken Sie darauf, um diese Säule auszuwählen. Die Säulen-Tabs (**Usability**, **Trust**, **Appearance**, **Loyalty**) zeigen für die ausgewählte Säule:
+
+- Eine Einordnung in einfachen Worten, etwa "Quite easy to use".
+- Den Wert der Säule (maximal 5).
+- **Questions asked**: jede Frage mit ihrem Durchschnittswert.
+- Eine Erläuterung der Gründe für den Wert.
+
+Zusammen ergeben die Säulen den **UXIA-Q Score**. Die vollständigen Fragen finden Sie unter [UXIA-Q Score](/de/uxia-q-score).
+
+## Nach Zielgruppe filtern
+
+Wenn Sie die Ergebnisse nach Zielgruppe filtern, werden die Werte für die ausgewählten Zielgruppen neu berechnet, und der Abschnitt zeigt **Calculated for filtered audiences:** mit deren Abzeichen. Lässt sich ein Wert für den Filter nicht neu berechnen, zeigt der Abschnitt **All audiences**, damit Sie wissen, dass er weiterhin alle umfasst. Mehr zu Filtern unter [Ergebnisse analysieren](/de/analyze-results).
+
+## Wie Benchmarks mit dem UOS zusammenhängen
+
+Benchmarks erfassen, was die Teilnehmenden über die Erfahrung *sagen*. Der [Usability Optimization Score](/de/results) basiert auf den Insights, also darauf, worauf die Teilnehmenden *gestoßen sind*. Die beiden beeinflussen sich nicht gegenseitig, lesen Sie sie also nebeneinander. Ein guter SUS bei einem niedrigen UOS kann zum Beispiel bedeuten, dass den Teilnehmenden das Produkt insgesamt gefallen hat, sie aber dennoch auf konkrete Probleme gestoßen sind, die sich zu beheben lohnen.
+
+## Pläne und Credits
+
+Benchmarks sind in den kostenpflichtigen Plänen verfügbar. Jeder Benchmark erhöht die Kosten des Aufgabenblocks um 1 Credit pro KI-teilnehmender Person. Im Free-Plan können Sie keine Benchmarks aktivieren, und Benchmark-Werte sind gesperrt. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="SUS" icon="clipboard-list" href="/de/sus">
+    Die 10 SUS-Fragen und wie Uxia sie anwendet.
+  </Card>
+  <Card title="UXIA-Q Score" icon="gauge" href="/de/uxia-q-score">
+    Die vier Säulen und acht Fragen hinter UXIA-Q.
+  </Card>
+</CardGroup>

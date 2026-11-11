@@ -1,0 +1,73 @@
+---
+title: "Transkripte"
+description: "Verfolgen Sie jede KI-teilnehmende Person Schritt für Schritt durch einen Aufgabenblock: was sie tat, sagte und sah, und warum."
+---
+
+Der Tab **Transcripts** eines [Aufgabenblocks](/de/task-block) spielt die Sitzung jeder KI-teilnehmenden Person Schritt für Schritt ab. Während [Insights](/de/results) Ihnen sagt, _was_ über alle Teilnehmenden hinweg schiefgelaufen ist, zeigt ein Transkript das _Warum_: jede Aktion, das laute Denken der teilnehmenden Person und den Bildschirm, den sie gerade sah.
+
+Nutzen Sie ihn, wenn Sie einen Insight mit der ursprünglichen Sitzung abgleichen, einen Abbruch verstehen oder eine teilnehmende Person mit ihren eigenen Worten zitieren möchten. Wenn Sie im Tab **Evidence** eines Insights auf ein Zitat klicken, gelangen Sie direkt zu diesem Moment hier.
+
+## Teilnehmende Person auswählen
+
+Mit der Teilnehmendenauswahl oben links wechseln Sie zwischen den Sitzungen. Bei mehreren Zielgruppen sind die Teilnehmenden nach Zielgruppe gruppiert. Teilnehmende, die eine frühere erforderliche Aufgabe nicht abgeschlossen haben, stehen unter **Didn't reach this task** und werden aus den Statistiken dieser Aufgabe ausgeschlossen.
+
+Unter der Auswahl:
+
+| Element | Was es zeigt |
+|---|---|
+| Ergebnis-Badge | Wie die Sitzung endete |
+| **Steps** | Die Anzahl der für diese teilnehmende Person aufgezeichneten Schritte |
+| **Misclicks** | Der Anteil der Interaktionen, die keinen gültigen interaktiven Bereich getroffen haben. Bei Live-Website-Aufgaben nicht verfügbar. |
+
+Das Ergebnis-Badge ist eines der folgenden:
+
+| Badge | Bedeutung |
+|---|---|
+| **Success** | Die teilnehmende Person hat die Aufgabe abgeschlossen. |
+| **Drop-off** | Die teilnehmende Person hat die Aufgabe nicht abgeschlossen. |
+| **Drop-off \| Access denied** | Die Website hat den Zugriff verweigert oder die teilnehmende Person durch einen Anti-Bot-Schutz blockiert. |
+| **Stalled** | Die teilnehmende Person kam nicht weiter, und die Sitzung wurde beendet. |
+| **Max steps** | Die teilnehmende Person hat die maximal zulässige Anzahl an Schritten für einen Durchlauf erreicht. Kontaktieren Sie uns, wenn Sie ein höheres Limit brauchen. |
+
+Medienprototypen, die als **Sequential flow** eingerichtet sind, zeigen weder Badge noch Schritte oder Fehlklicks.
+
+Rechts durchsucht **Search** das Transkript nach Wörtern (mit der Eingabetaste springen Sie zwischen den Treffern), und **View profile** öffnet das demografische und psychologische Profil der teilnehmenden Person.
+
+## Eine Sitzung lesen
+
+Die linke Spalte enthält das Transkript, die rechte die Screenshots. Beide sind synchronisiert: Scrollen Sie durch die Schritte, folgt der Screenshot, und blättern Sie durch die Screenshots, folgt das Transkript. Ziehen Sie den Trenner, um die Spaltenbreite zu ändern.
+
+- **Aufgabenkarte.** Die Aufgabe, die die Teilnehmenden erhalten haben, so wie Sie sie in der Phase Build geschrieben haben.
+- **Schrittkarten.** Aufeinanderfolgende Schritte auf demselben Bildschirm teilen sich eine Karte mit der Beschriftung **Step 3** oder **Steps 3-5**. Jede Aktion zeigt, was die teilnehmende Person getan hat (ein Klick, eine Eingabe, ein Scrollen), und ihren Kommentar in der Ich-Form. Klicken Sie auf **Show more details**, um **Input value**, **Reasoning** und **Expectation** zu sehen: was die teilnehmende Person eingegeben hat, ihre Begründung und ihre Erwartung, was als Nächstes passieren würde.
+- **Zusammenfassungskarte.** Die abschließende Reflexion der teilnehmenden Person über die gesamte Journey. **Show more details** öffnet ihre **Issues analysis**.
+
+Fehlersignale erscheinen auf den Schrittkarten: Ein hervorgehobenes Aktionssymbol bedeutet **This action did not advance the tester**, und das Banner **Too many actions failed - skipped to next frame** erscheint, wenn keine der Aktionen auf einem Bildschirm die teilnehmende Person weitergebracht hat. Auf Live-Websites markiert ein Badge **Access denied** den Schritt, an dem die teilnehmende Person blockiert wurde.
+
+Über das Menü für die Frame-Ansicht oberhalb der Screenshots wechseln Sie zwischen **Clickmap** (wo die teilnehmende Person geklickt hat), **Heatmap** und **Image** (der reine Screenshot).
+
+## Mit einer teilnehmenden Person zu einem Schritt chatten
+
+Klicken Sie auf der aktiven Schrittkarte auf **Chat**, um die teilnehmende Person zu genau diesem Moment zu befragen, zum Beispiel, warum sie eine Schaltfläche übersprungen hat oder was sie zu finden erwartete. Sie antwortet mit dem Wissen, das sie bei diesem Schritt hatte. Siehe [Mit Teilnehmenden chatten](/de/chat-with-testers).
+
+## Während der Test läuft
+
+Transkripte werden live übertragen, während der Block läuft, und dies ist der einzige verfügbare Tab, bis der Durchlauf abgeschlossen ist. Wenn Sie nach oben scrollen, während neue Schritte eintreffen, klicken Sie auf **New transcripts (N)**, um zum neuesten zu springen.
+
+Wenn alle KI-Teilnehmenden von einer Live-Website blockiert wurden, erklärt ein Banner, dass der Test nicht abgeschlossen werden konnte und 80 % der Credits erstattet wurden.
+
+## Einschränkungen im Free-Plan
+
+Beim Free-Plan sehen Sie die Aktionen und Kommentare aller Teilnehmenden, aber **Reasoning** und **Expectation** jedes Schritts sind gesperrt. Mit einem Upgrade auf einen kostenpflichtigen Plan schalten Sie sie frei. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+<Note>
+  Dieser Tab zeigt KI-Teilnehmende. Um sich die Aufzeichnungen menschlicher Teilnehmender zur selben Aufgabe anzusehen, stellen Sie den Teilnehmendentyp auf **Human participants** um. Siehe [Ergebnisse menschlicher Teilnehmender](/de/human-insights).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Weiter: Analytics und Nutzerpfade" icon="arrow-right" href="/de/analytics">
+    Sehen Sie Erfolgsquote, Fehlklicks, Heatmaps und Pfade über alle Teilnehmenden hinweg.
+  </Card>
+  <Card title="Mit Teilnehmenden chatten" icon="message-circle" href="/de/chat-with-testers">
+    Stellen Sie nach dem Test Folgefragen.
+  </Card>
+</CardGroup>

@@ -1,0 +1,65 @@
+---
+title: "A/B-Varianten"
+description: "Führen Sie denselben Test mit zwei Versionen Ihres Produkts durch und erhalten Sie einen Bericht darüber, welche besser abschneidet."
+---
+
+Eine A/B-Variante führt Ihren Test mit zwei Versionen Ihres Produkts durch, zum Beispiel mit zwei Prototypen oder zwei URLs, und zeigt Ihnen, welche besser abschneidet. **Variant #2** verwendet dieselben Blöcke, Aufgaben und Fragen, dieselbe Zielgruppe sowie dieselben Teilnehmenden und Einstellungen wie **Variant #1**. Nur die Quelle ändert sich.
+
+## Variant #2 erstellen
+
+<Steps>
+  <Step title="Variantendialog öffnen">
+    Klicken Sie in der Phase **Build** in der Leiste unterhalb des Canvas auf **+** (**Create variant comparison**). Der Dialog "Find out which variant performs better" erklärt, was die Varianten gemeinsam haben.
+  </Step>
+  <Step title="Variante erstellen">
+    Klicken Sie auf **Create Variant #2**. Uxia öffnet den neuen Tab **Variant #2** mit dem Banner "Variant #2 uses the same blocks as Variant #1. Only the source can be edited."
+  </Step>
+  <Step title="Neue Quelle festlegen">
+    Ersetzen Sie in jedem Aufgabenblock die [Quelle](/de/source) durch eine andere Live-Website-URL, einen anderen Figma-Prototyp-Link oder einen anderen [Medienprototyp](/de/media-canvas).
+  </Step>
+</Steps>
+
+Wechseln Sie unten auf der Seite zwischen den Tabs **Variant #1** und **Variant #2**.
+
+<Tip>
+  Variant #2 beginnt als Kopie der Blöcke von Variant #1. Stellen Sie Ihre Blöcke also fertig, bevor Sie sie erstellen.
+</Tip>
+
+Sie können Variant #2 auch hinzufügen, nachdem Variant #1 gelaufen ist, und zwar über dieselbe Leiste in der Phase **Analyze**.
+
+Um Variant #2 vor dem Start zu entfernen, klicken Sie auf **Remove Variant #2** (das × auf ihrem Tab) und dann auf **Delete Variant #2**. Dadurch werden Variant #2 und ihre Quelle dauerhaft entfernt. Variant #1 ist davon nicht betroffen.
+
+## Varianten starten
+
+- **Beide gleichzeitig.** Wenn Sie einen Test mit Variant #2 starten, laufen beide Varianten mit denselben KI-Teilnehmenden.
+- **Variant #2 später.** Wenn Variant #1 bereits gelaufen ist, öffnen Sie den Tab **Variant #2**, gehen Sie zu **Recruit** und klicken Sie auf **Launch variant 2**. Variant #2 läuft mit denselben Teilnehmenden wie Variant #1.
+- **Testlinks.** Jeder [Testlink](/de/test-links) erhält eine URL pro Variante, beschriftet mit **Variant 1** und **Variant 2**.
+
+### Kosten
+
+| Posten | Credits |
+|---|---|
+| Blockkosten | Verdoppelt, da jeder Block einmal pro Variante läuft |
+| Vergleich (**A/B test setup** in der Aufschlüsselung) | 100 |
+
+Wenn Variant #1 bereits gelaufen ist, zahlen Sie nur für Variant #2 und den Vergleich. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+## Analysieren und vergleichen
+
+In der Phase **Analyze** wechseln Sie mit den Tabs **Variant #1** und **Variant #2** unten zwischen den Ergebnissen der beiden Varianten, Block für Block. Während der Test läuft, zeigt die Fortschrittsleiste, auf welche Variante sie sich bezieht.
+
+Ein Test mit Variant #2 erhält in der Kopfzeile außerdem nach **Analyze** eine Phase **Report**. Sie ist ausgegraut, bis beide Varianten fertig verarbeitet sind und der Bericht erstellt wurde. Der Bericht hat zwei Tabs:
+
+- **Executive Summary.** Ein Urteil ("Variant #1 performs better", "Variant #2 performs better" oder "No conclusive winner"), eine Zusammenfassung, wichtige Erkenntnisse mit Verweisen auf die zugrunde liegenden Insights, KPIs im direkten Vergleich wie Abbruchrate, Fehlklickrate und UOS sowie eine **Recommendation**.
+- **Surveys.** Die Umfrageantworten beider Varianten nebeneinander, wenn Ihr Test einen Umfrageblock enthält.
+
+Zum Exportieren wählen Sie **Export** im Menü des Testtitels. Das PDF deckt beide Varianten ab, und **Variant comparison** unter **Details** fügt den Vergleich hinzu. Siehe [Teilen und exportieren](/de/share-and-export).
+
+<CardGroup cols={2}>
+  <Card title="Test aufbauen" icon="blocks" href="/de/build-your-test">
+    Fügen Sie die Blöcke hinzu, die beide Varianten gemeinsam nutzen, und konfigurieren Sie sie.
+  </Card>
+  <Card title="Ergebnisse analysieren" icon="chart-bar" href="/de/analyze-results">
+    Finden Sie sich in der Phase Analyze zurecht.
+  </Card>
+</CardGroup>

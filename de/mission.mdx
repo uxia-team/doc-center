@@ -1,0 +1,126 @@
+---
+title: "Aufgabe"
+description: "So schreiben Sie das Feld Task: das eine konkrete Ziel der Teilnehmenden in einem Aufgabenblock, mit Tipps, Warnungen und einem Beispiel."
+---
+
+Das Feld **Task** (früher *mission* genannt) ist das eine konkrete Ziel, das die Teilnehmenden zu erreichen versuchen. Es ist das wichtigste Feld in einem [Aufgabenblock](/de/task-block): Es legt das Ziel der Sitzung fest und sorgt dafür, dass das Feedback aller Teilnehmenden fokussiert und umsetzbar bleibt.
+
+Die Aufgabe ist ein Pflichtfeld und fasst bis zu 500 Zeichen. Je spezifischer und kleinteiliger Sie sie formulieren, desto stärker konzentrieren sich Ihre Ergebnisse auf den Flow, den Sie analysieren möchten.
+
+## Als eine einzige konkrete Aufgabe formulieren
+
+Eine gute Aufgabe beschreibt ein Ziel mit einem klaren Endzustand:
+
+> _"Stufen Sie Ihren Plan per Kreditkarte von Free auf Premium hoch."_
+
+> _"Suchen und kaufen Sie zwei Tickets für die Vorstellung heute Abend um 21:00 Uhr."_
+
+> _"Reservieren Sie einen Tisch für zwei Personen im ersten Restaurant unter Beliebt in Ihrer Nähe."_
+
+## Tipps für wirkungsvolle Aufgaben
+
+<Tip>
+  **Beginnen Sie mit einem Handlungsverb.** Registrieren, kaufen, buchen, hochladen, senden. Beschreiben Sie, was erreicht werden soll, nicht, was bewertet werden soll: Vermeiden Sie Verben wie "testen", "erkunden" oder "prüfen".
+</Tip>
+
+<Tip>
+  **Nennen Sie ein eindeutiges Element.** Wenn der Bildschirm mehrere passende Elemente zeigen könnte, verweisen Sie auf genau eines: "das erste Produkt unter Neuheiten", einen benannten Artikel oder ein bestimmtes Zeitfenster. Vermeiden Sie "ein beliebiges Produkt".
+</Tip>
+
+<Tip>
+  **Nennen Sie das Ziel, nicht die Schritte.** Schreiben Sie "Finden Sie einen Plan, der zu Ihrem Budget passt, und registrieren Sie sich" statt "Klicken Sie auf Preise, wählen Sie Pro und geben Sie dann Ihre Daten ein." Schritt-für-Schritt-Anweisungen bringen die Teilnehmenden dazu, Anweisungen zu befolgen, statt aufzudecken, wo Ihr Design versagt.
+</Tip>
+
+<Tip>
+  **Sagen Sie den Teilnehmenden nicht, wie sie Feedback geben sollen.** KI-Teilnehmende teilen in jeder Sitzung ohnehin ihre Gedanken, Reaktionen und ihr Feedback. Formulierungen wie "denken Sie laut" oder "teilen Sie Ihren ersten Eindruck" werden deshalb vor dem Testlauf entfernt.
+
+  Statt: "Sehen Sie sich die Seite kurz an, teilen Sie Ihren ersten Eindruck, kaufen Sie dann einen Laptop und sagen Sie uns, was Sie denken."
+
+  Schreiben Sie: "Kaufen Sie den ersten Laptop im Laptop-Katalog."
+
+  Um nach Meinungen zu fragen, fügen Sie nach der Aufgabe einen [Umfrageblock](/de/survey-block) hinzu.
+</Tip>
+
+<Tip>
+  **Vermeiden Sie suggestive Formulierungen.** Nennen Sie keine UI-Elemente ("klicken Sie auf die blaue Schaltfläche"), deuten Sie keinen richtigen Weg an ("finden Sie den einfachen Weg, um …") und geben Sie nicht vor, was die Teilnehmenden empfinden sollen ("achten Sie darauf, wie einfach es ist …"). Neutrale Formulierungen sind entscheidend.
+</Tip>
+
+## Ein Ziel pro Aufgabe
+
+Zusammengesetzte Aufgaben liefern unklare Ergebnisse. Um mehrere Flows zu testen, fügen Sie für jeden einen eigenen Aufgabenblock hinzu: bei kostenpflichtigen Plänen bis zu 3 pro Test, beim Free-Plan 1. Wenn eine Live-Website- oder Figma-Prototyp-Aufgabe dieselbe URL wie eine frühere Aufgabe verwendet, können Sie **Continue from where participants left the previous task** aktivieren, damit die Teilnehmenden dort weitermachen, wo sie aufgehört haben.
+
+## Mit Tips verfeinern
+
+Die Felder **Task**, **Scenario** und **Stop condition** haben jeweils eine Schaltfläche **Tips**: das Zauberstabsymbol in der oberen rechten Ecke des Felds.
+
+<Steps>
+  <Step title="Ersten Entwurf schreiben">
+    Für Tips brauchen Sie mindestens 15 Zeichen Text.
+  </Step>
+  <Step title="Auf Tips klicken">
+    Uxia schlägt umformulierte Versionen vor und erklärt, was jede davon verbessert. Mit den Pfeilen blättern Sie durch die Vorschläge.
+  </Step>
+  <Step title="Eine Version übernehmen">
+    Klicken Sie auf **Use this version**, um Ihren Text zu ersetzen, oder schließen Sie die Vorschläge, um Ihren eigenen zu behalten. Um neue Tips zu erhalten, bearbeiten Sie zuerst den Text.
+  </Step>
+</Steps>
+
+## Warnungen unter der Aufgabe
+
+Bei Live-Website- und Figma-Prototyp-Aufgaben zeigt Uxia unter dem Feld **Task** eine Warnung an, wenn Ihr Text Folgendes erwähnt:
+
+- einen Social Login, den KI-Teilnehmende nicht abschließen können;
+- einen Registrierungs-Flow, der keine Verifizierungscodes, Bestätigungs-E-Mails oder 2FA erfordern darf;
+- Anweisungen zum lauten Denken oder zum Feedback (in der Aufgabe oder der Abbruchbedingung), die vor dem Testlauf entfernt werden.
+
+Klicken Sie in der Warnung auf **Learn more**, um eine kurze Erklärung zu lesen, oder sehen Sie sich Lösungswege unter [Flows, die KI-Teilnehmende nicht abschließen können](/de/unsupported-flows) an.
+
+## Beispiel
+
+Angenommen, Ihr Geschäftsziel lautet:
+
+> **_"Verstehen, ob Kundinnen und Kunden erfolgreich einen neuen Mobilfunktarif abschließen können."_**
+
+Es mag verlockend sein, die gesamte Journey mit einer Aufgabe zu testen:
+
+<Warning>
+  **Zu weit gefasst**
+
+  _"Finden Sie einen Mobilfunktarif, der zu Ihren Bedürfnissen passt, schließen Sie ihn ab und wenden Sie sich bei Fragen an den Support."_
+</Warning>
+
+Das klingt zwar nach einer realistischen Customer Journey, kombiniert aber mehrere Aufgaben:
+
+- Den passenden Tarif finden
+- Den Kauf abschließen
+- Hilfe anfordern
+
+Wenn die Teilnehmenden Schwierigkeiten haben, lässt sich viel schwerer erkennen, welcher Teil des Erlebnisses die Reibung verursacht hat.
+
+Teilen Sie das Ziel stattdessen auf separate Aufgabenblöcke im selben Test auf:
+
+**Aufgabenblock 1: Einen passenden Tarif finden**
+
+<Check>
+  _"Finden Sie einen Mobilfunktarif mit etwa 10 GB Datenvolumen pro Monat und legen Sie ihn in den Warenkorb."_
+</Check>
+
+**Aufgabenblock 2: Den Tarif kaufen**
+
+<Check>
+  _"Kaufen Sie den Mobilfunktarif in Ihrem Warenkorb und fügen Sie Ihrer Bestellung ein weiteres Produkt hinzu."_
+</Check>
+
+Aktivieren Sie hier **Continue from where participants left the previous task**, damit die Teilnehmenden den Tarif in ihrem Warenkorb behalten.
+
+**Aufgabenblock 3: Hilfe erhalten**
+
+<Check>
+  _"Finden Sie heraus, wie Sie den Kundensupport kontaktieren können, um eine Frage zu Ihrem Abonnement zu stellen."_
+</Check>
+
+Jede Aufgabe misst ein klares Nutzerziel. So lassen sich die Ergebnisse leichter interpretieren, und Sie sehen genau, wo die Teilnehmenden auf Reibung stoßen.
+
+<Card title="Weiter: Szenario" icon="arrow-right" href="/de/test-scenario">
+  Geben Sie der Aufgabe eine glaubwürdige Vorgeschichte, damit sich die Teilnehmenden wie echte Nutzende verhalten.
+</Card>

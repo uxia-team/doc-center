@@ -1,0 +1,77 @@
+---
+title: "Frames"
+description: "Laden Sie die Screens für die Barrierefreiheitsprüfung hoch, ergänzen Sie optional Seiten-URLs und starten Sie das Audit."
+---
+
+Frames sind die Screens, die Uxia prüft. Sie fügen sie im Feld **Files** des [Blocks zur Barrierefreiheitsprüfung](/de/accessibility-block) hinzu. Jede Datei wird in den Ergebnissen zu einem Frame.
+
+## Dateien hinzufügen
+
+Klicken Sie auf **Add files** oder ziehen Sie Dateien per Drag-and-drop auf die Schaltfläche. Während des Hochladens zeigt die Schaltfläche **Uploading…**. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist. Danach erscheint jede Datei mit einem Vorschaubild, ihrem Namen und einem Feld **Optional URL**. Um eine Datei zu entfernen, klicken Sie auf das Papierkorbsymbol daneben.
+
+| | Limit |
+|---|---|
+| Formate | UI-Screenshots im Format PNG, JPEG, WebP oder GIF |
+| Dateigröße | Bis zu 100 MB pro Datei |
+| Anzahl der Dateien | Bis zu 5 pro Test (kostenpflichtige Pläne) |
+| Dateinamen | Jede Datei benötigt einen eindeutigen Namen |
+| Minimum | Mindestens 1 Datei |
+
+Wenn Sie mehr Dateien auswählen, als Platz ist, fügt Uxia nur so viele hinzu, wie passen. Sobald Sie 5 Dateien erreicht haben, verschwindet die Schaltfläche **Add files**.
+
+<Tip>
+  Laden Sie repräsentative Screens aus dem tatsächlichen Ablauf hoch statt isolierter Mockups ohne Kontext.
+</Tip>
+
+<Warning>
+  Der Uploader akzeptiert auch Videodateien, diese können jedoch nicht geprüft werden: Die Prüfung vor dem Start fordert Sie auf, sie durch einen UI-Screenshot im Format PNG, JPEG, WebP oder GIF zu ersetzen.
+</Warning>
+
+Jede Datei kostet 10 Credits, laden Sie also nur Screens einer digitalen Oberfläche hoch. Uxia überspringt Fotos, Kunstwerke und gescannte Dokumente und zeigt für sie in den Ergebnissen einen Hinweisbanner an.
+
+## Seiten-URL hinzufügen (optional)
+
+Wenn ein Screen bereits als Live-Webseite existiert, fügen Sie ihre Adresse in das Feld **Optional URL** unter der Datei ein. Uxia liest dann zusätzlich zum Bild das HTML der Seite. So kann es Kriterien prüfen, die sich anhand eines Screenshots allein nicht bestätigen lassen, zum Beispiel:
+
+- Ob die Seite einen Titel und eine deklarierte Sprache hat
+- Ob Bilder Textalternativen haben
+- Ob Formularfelder ihren Zweck angeben
+
+Lassen Sie das Feld bei Designs leer, die noch nicht live sind. Die URL muss mit `http://` oder `https://` beginnen, und die Seite muss öffentlich erreichbar sein, da Uxia sich nicht anmelden kann.
+
+## Fehlermeldungen
+
+| Meldung | Was zu tun ist |
+|---|---|
+| *Upload an image or video file.* | Die Datei hat kein unterstütztes Format. Exportieren Sie den Screen als PNG, JPEG, WebP oder GIF. |
+| *Files must be 100MB or smaller.* | Komprimieren Sie die Datei oder exportieren Sie sie in geringerer Größe. |
+| *A file named "…" has already been added.* | Benennen Sie die Datei um oder entfernen Sie zuerst die vorhandene. |
+| *Enter a valid URL starting with http:// or https://.* | Korrigieren Sie die Adresse in **Optional URL** oder leeren Sie das Feld. |
+| *You need to add at least one file* | Der Block enthält keine Dateien. Fügen Sie mindestens eine hinzu, bevor Sie auf **Start recruiting** klicken. |
+
+## Audit ausführen
+
+Wie Sie starten, hängt davon ab, was der Test sonst noch enthält.
+
+**Der Test enthält auch Aufgaben-, Umfrage- oder Card-Sorting-Blöcke.** Wählen Sie Ihre Teilnehmenden wie gewohnt in der Phase Recruit. Das Audit läuft, wenn Sie die KI-Teilnehmenden starten, und seine Frame-Credits sind in der Gesamtsumme des Starts enthalten. Menschliche Teilnehmende überspringen den Block. Wenn Sie also nur menschliche Teilnehmende rekrutieren, läuft das Audit nicht. Siehe [Teilnehmende rekrutieren](/de/recruit-participants).
+
+**Der Test enthält nur die Barrierefreiheitsprüfung.** Es gibt nichts zu rekrutieren, daher sind die Rekrutierungsmethoden deaktiviert.
+
+<Steps>
+  <Step title="Phase Recruit öffnen">
+    Klicken Sie auf **Start recruiting**. Die **Summary** zeigt *"This test only contains an accessibility block, so recruiting testers is not necessary."*
+  </Step>
+  <Step title="Kosten prüfen">
+    **Total credits** zeigt die Kosten Ihrer Frames: 10 Credits pro Frame.
+  </Step>
+  <Step title="Starten">
+    Klicken Sie in der Zusammenfassungstabelle auf **Go to analyze**. Uxia prüft die Testkonfiguration und startet das Audit. Der Status wechselt zu **Processing**.
+  </Step>
+  <Step title="Ergebnisse öffnen">
+    Klicken Sie erneut auf **Go to analyze**, um die Phase Analyze zu öffnen. Während Uxia arbeitet, zeigt der Block *"Accessibility results are still processing."*
+  </Step>
+</Steps>
+
+<Card title="Weiter: Kriterienbewertung" icon="arrow-right" href="/de/criteria-evaluation">
+  Lesen Sie Ihre Ergebnisse Kriterium für Kriterium.
+</Card>

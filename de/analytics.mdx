@@ -1,0 +1,89 @@
+---
+title: "Analytics und Nutzerpfade"
+description: "Messen Sie, wie sich KI-Teilnehmende durch einen Aufgabenblock bewegt haben: Erfolgsquote, Abbruch, Fehlklicks, Schritte, Heatmaps pro Screen und Pfade."
+---
+
+Während [Insights](/de/results) Ihnen sagt, was die Probleme sind, zeigen die Tabs **Analytics** und **Journeys** eines [Aufgabenblocks](/de/task-block), wie sich die Teilnehmenden tatsächlich durch den Flow bewegt haben und wo Reibung entstand. Alles hier wird aus den [Transkripten](/de/test-transcripts) der Teilnehmenden abgeleitet und spiegelt die im Ergebnisfilter ausgewählten Zielgruppen wider.
+
+Mit diesen Tabs beantworten Sie Fragen wie: Wie viele Teilnehmende sind ans Ziel gekommen? Welcher Screen verursacht Fehlklicks? Wie viele Schritte braucht ein erfolgreicher Durchlauf normalerweise? Wo trennen sich erfolgreiche und gescheiterte Pfade?
+
+## Analytics
+
+### Übersichtskennzahlen
+
+| Kennzahl | Was sie zeigt |
+|---|---|
+| **Testers** | Teilnehmende mit Aktivität in diesem Block, im Verhältnis zu denen, die den Test begonnen haben (zum Beispiel **4 / 5**). Teilnehmende, die eine frühere erforderliche Aufgabe nicht abgeschlossen haben, erreichen diese nicht. |
+| **Success Rate** | Anteil der Teilnehmenden, die die Aufgabe abgeschlossen haben |
+| **Drop-off** | Anteil der Teilnehmenden, die die Aufgabe nicht abgeschlossen haben |
+| **Misclick Rate** | Anteil der ausgewerteten Interaktionen, die keinen gültigen interaktiven Bereich ausgelöst haben |
+| **Avg. Number of Steps** | Durchschnittliche Anzahl der Schritte pro teilnehmender Person |
+| **Min Number of Steps**, **Max Number of Steps** | Die kürzeste und die längste Sitzung |
+
+<AccordionGroup>
+  <Accordion title="So werden Erfolg und Abbruch berechnet">
+    Eine teilnehmende Person gilt als erfolgreich, wenn sie die Aufgabe abschließt:
+
+    - Bei Aufgaben mit **Live-Website** und **Figma-Prototyp**, wenn sie bei irgendeinem Schritt die [Abbruchbedingung](/de/stop-condition) erreicht.
+    - Bei **Medienprototypen** mit End-Frame, wenn ihr letzter Schritt auf diesem Frame landet.
+    - Andernfalls, wenn sie das Ende der Sitzung erreicht.
+
+    Eine teilnehmende Person, die bei irgendeinem Schritt abbricht, gilt als nicht erfolgreich. Die **Success Rate** ergibt sich aus den erfolgreichen Teilnehmenden geteilt durch **Testers**. **Drop-off** ist 100 % minus der Erfolgsquote.
+  </Accordion>
+
+  <Accordion title="So werden Fehlklicks gemessen">
+    - **Medienprototypen (Interactive flow):** von den Klicks, die sich mit den interaktiven Bereichen des Screens abgleichen ließen, der Anteil, der sie verfehlt hat.
+    - **Figma-Prototypen:** geschätzt als Anteil der Klicks, nach denen sich der Screen nicht verändert hat. Wartezeiten sind ausgenommen.
+    - **Live-Websites:** nicht verfügbar, angezeigt als Strich. Ein Klick auf einer echten Website kann die Seite auf eine Weise verändern, die sich nicht zuverlässig erkennen lässt.
+  </Accordion>
+
+  <Accordion title="So werden Schritte gezählt">
+    Schritte sind logische Schritte, keine einzelnen Rohaktionen. Die abschließende Reflexion der teilnehmenden Person wird nicht mitgezählt, und aufeinanderfolgende Scrollbewegungen in dieselbe Richtung innerhalb eines Dropdowns oder einer Vorschlagsliste zählen als ein Schritt. Durchschnitt, Minimum und Maximum werden über alle Teilnehmenden berechnet.
+  </Accordion>
+</AccordionGroup>
+
+### Analyse pro Screen
+
+Wählen Sie unter den Kennzahlen einen Screen aus der Miniaturleiste oder verwenden Sie die Tasten ← und →, um zu sehen, wie sich die Teilnehmenden darauf verhalten haben. Screens, die niemand erreicht hat, sind mit **Not visited** markiert. Klicken Sie auf den Screen, um eine größere Vorschau zu öffnen.
+
+- **Visualisierung.** Wechseln Sie zwischen **Heatmap** (wo sich Klicks häufen), **Clickmap** (jeder einzelne Klick) und **Image** (der reine Screen).
+- **Pfadfilter.** Wenn einige Teilnehmende erfolgreich waren und andere nicht, wählen Sie **All paths**, **Successful paths** oder **Failed paths**, um sie zu vergleichen.
+- **Screen-Kennzahlen.** **Total Testers** (Teilnehmende, die den Screen erreicht haben), **Total Clicks** (darauf aufgezeichnete Interaktionen) und **Misclick Rate** für diesen Screen.
+- **Schritte der Teilnehmenden.** Die Aktionen und Kommentare jeder teilnehmenden Person auf diesem Screen, damit Sie nachlesen können, warum sie dort geklickt hat, wo sie geklickt hat.
+
+### Frames exportieren
+
+Klicken Sie auf die Export-Schaltfläche neben dem Visualisierungsmenü, um **Export Frames** zu öffnen. Wählen Sie ein Overlay (**Heatmap Overlay**, **Clickmap Overlay** oder **None**), aktivieren Sie bei Bedarf **Include hotspot areas**, um die interaktiven Bereiche des Prototyps einzublenden, und klicken Sie dann auf **Export**, um den aktuellen Screen als PNG herunterzuladen, oder auf **Export All (N)**, um alle Screens als ZIP-Datei herunterzuladen.
+
+## Nutzerpfade
+
+Der Tab **Journeys** zeigt die Wege, die die Teilnehmenden genommen haben. Mit dem Umschalter **Diagram** / **Paths** wechseln Sie zwischen den Ansichten.
+
+- **Diagram.** Die Spalten verlaufen von **Start** über **Screen 2**, **Screen 3** und so weiter. Jeder Knoten ist ein Screen an diesem Punkt der Journey, mit Anzahl und Anteil der Teilnehmenden, die dort waren (zum Beispiel **3 testers (60%)**). Markierungen zeigen, wo Teilnehmende die Aufgabe abgeschlossen oder abgebrochen haben. Bewegen Sie den Mauszeiger über einen Knoten, um zu sehen, wer dort war, und klicken Sie darauf, um eine Vorschau des Screens zu öffnen.
+- **Paths.** Die Teilnehmenden werden nach der genauen Abfolge der besuchten Screens gruppiert, die häufigste zuerst (**Path 1**, **Path 2** usw.). Jeder Pfad zeigt nur dann **Success**, wenn alle Teilnehmenden darauf die Aufgabe abgeschlossen haben, andernfalls **Drop-off** (oder **Drop-off \| Access denied**). Außerdem zeigt er die Teilnehmenden, die ihm gefolgt sind, und seine **Misclicks**. Klicken Sie auf einen beliebigen Screen in einem Pfad, um eine Vorschau zu öffnen.
+
+Mehrere direkt aufeinanderfolgende Besuche desselben Screens werden zu einem zusammengefasst. Bei Live-Website-Aufgaben ist die Ansicht Diagram unter Umständen nicht verfügbar; **Paths** ist es immer.
+
+## Was für jede Quelle verfügbar ist
+
+| | Live-Website | Figma-Prototyp | Medienprototyp, Interactive flow | Medienprototyp, Sequential flow |
+|---|---|---|---|---|
+| Success Rate und Drop-off | Ja | Ja | Ja | Nein |
+| Misclick Rate | Nein | Geschätzt | Ja | Nein |
+| Total Clicks pro Screen | Nein | Ja | Ja | Nein |
+| Schritte, Heatmaps und Pfade | Ja | Ja | Ja | Ja |
+
+Bei einem Prototyp mit **Sequential flow** zeigen die nicht verfügbaren Kennzahlen einen Strich. Richten Sie den Prototyp im [Medien-Canvas](/de/media-canvas) als **Interactive flow** ein, um sie zu erhalten.
+
+## Einschränkungen im Free-Plan
+
+Beim Free-Plan sind die Übersichtskennzahlen sichtbar, die Analyse pro Screen und der Tab **Journeys** jedoch gesperrt. Mit einem Upgrade auf einen kostenpflichtigen Plan schalten Sie sie frei. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Weiter: Benchmark-Ergebnisse" icon="arrow-right" href="/de/benchmark-results">
+    Lesen Sie die SUS- und UXIA-Q-Scores für die Aufgabe.
+  </Card>
+  <Card title="Insights und UOS" icon="lightbulb" href="/de/results">
+    Sehen Sie die Probleme hinter den Zahlen.
+  </Card>
+</CardGroup>

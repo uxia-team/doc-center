@@ -1,0 +1,84 @@
+---
+title: "Ergebnisse analysieren"
+sidebarTitle: "Übersicht"
+description: "Verfolgen Sie Ihren Test live und lesen Sie die Ergebnisse Block für Block: Fortschritt, KI- und menschliche Teilnehmende, Filter, Testabbruch, Erstattungen."
+---
+
+In der Phase **Analyze** finden Sie Ihre Ergebnisse. Sie müssen nicht warten, bis der Test abgeschlossen ist: Die Ergebnisse treffen Block für Block ein, während Teilnehmende Ihren Test durchlaufen. Klicken Sie in der Kopfzeile des Tests auf **Analyze**, um die Phase zu öffnen. Sie wird verfügbar, sobald Sie den Test starten, einen Testlink erstellen oder ein menschliches Panel anfordern.
+
+## Orientierung
+
+- **Kopfzeile.** Klicken Sie auf den Testtitel, um die Anzahl der Teilnehmenden und das Datum zu sehen und den Test umzubenennen (**Rename**), zu exportieren (**Export**) oder zu teilen (**Share**) (siehe [Teilen und exportieren](/de/share-and-export)). Rechts befinden sich der Chip für zurückerstattete Credits, **Stop test**, solange der Test läuft, und der Teilnehmenden-Umschalter.
+- **Seitenleiste.** Oben befindet sich ein Umschalter **Blocks | Chat**. **Blocks** listet eine Zeile pro Block auf; **Chat** öffnet [Ask AI](/de/ask-ai).
+- **Ergebnisse.** Die Ergebnisse des ausgewählten Blocks, mit Tabs, die vom Blocktyp abhängen. Über die Sprechblase **Share feedback on these results** teilen Sie uns mit, wie nützlich die Ergebnisse waren.
+
+Jede Blockzeile zeigt den Titel und einen Untertitel. Während der Test läuft, zeigt der Untertitel den Status des Blocks:
+
+| Status | Bedeutung |
+|---|---|
+| **Waiting...** | Der Block hat noch nicht begonnen. |
+| Aktueller Schritt und Prozentsatz | Der Block läuft. |
+| **Failed** | Der Block konnte nicht abgeschlossen werden. |
+| **Stopped** | Sie haben den Test gestoppt, bevor dieser Block abgeschlossen war. |
+| **Not executed** | Der Block wurde nicht ausgeführt. |
+| Rotes Warnsymbol | Teilnehmende haben diesen Block nicht erreicht, und seine Credits wurden zurückerstattet. |
+
+## Laufenden Test verfolgen
+
+Eine Fortschrittsleiste über den Ergebnissen zeigt, welcher Block gerade läuft, und den Gesamtfortschritt des Tests in Prozent. Die Zeile des laufenden Blocks in der Seitenleiste zeigt seinen aktuellen Schritt, zum Beispiel "Gathering tester feedback..." oder "Identifying key issues..." bei einer Aufgabe, "Collecting participant responses..." bei einer Umfrage, "Sorting cards..." bei einem Card Sort oder "Scanning interface..." bei einer Barrierefreiheitsprüfung.
+
+Während ein Aufgabenblock läuft, öffnet er sich auf dem Tab **Transcripts**, damit Sie den Teilnehmenden live zusehen können. Die anderen Tabs werden freigeschaltet, wenn der Block abgeschlossen ist. Siehe [Transkripte](/de/test-transcripts).
+
+<Tip>
+  Sie müssen die Seite nicht geöffnet lassen. "You can leave this page and come back later. We'll email you as soon as it finishes."
+</Tip>
+
+## Zwischen KI- und menschlichen Teilnehmenden wechseln
+
+Der Teilnehmenden-Umschalter in der Kopfzeile schaltet die gesamte Analyze-Ansicht zwischen **AI participants** und **Human participants** um (siehe [Ergebnisse menschlicher Teilnehmender](/de/human-insights)).
+
+Um die Ergebnisse einzugrenzen, klicken Sie auf den Zähler neben dem Umschalter, wählen Sie Zielgruppen (KI-Teilnehmende) oder Testlinks (menschliche Teilnehmende) aus und klicken Sie auf **Filter**. Die Auswahl gilt für die gesamte Analyze-Ansicht. Filter funktionieren, sobald der Test die Analyse der Ergebnisse abgeschlossen hat. Im Free-Plan sind Umschalter und Filter gesperrt; Filtern ist ab dem Starter-Plan verfügbar.
+
+## Ergebnisse jedes Blocks lesen
+
+| Block | Tabs | Mehr erfahren |
+|---|---|---|
+| Aufgabe | **Insights**, **Transcripts**, **Analytics**, **Journeys** sowie **Benchmarks**, wenn SUS oder UXIA-Q aktiviert ist | [Insights und UOS](/de/results), [Transkripte](/de/test-transcripts), [Analytics](/de/analytics), [Benchmarks](/de/benchmark-results) |
+| Umfrage | **Responses**, **Participants** | [Umfrageergebnisse](/de/survey-results) |
+| Card Sorting | **Results**, **Agreement Matrix**, **Similarity Matrix** | [Card-Sorting-Ergebnisse](/de/card-sorting-results) |
+| Barrierefreiheitsprüfung | **Results**, **Vision Simulation** | [Kriterienbewertung](/de/criteria-evaluation), [Sehsimulation](/de/vision-simulation) |
+
+Anstelle von Ergebnissen kann ein Block **Waiting for previous blocks to finish...**, **Test stopped** (der Test wurde gestoppt, bevor der Block abgeschlossen war) oder **No participants reached this block** (alle sind vorher abgesprungen) anzeigen. Bevor Sie KI-Teilnehmende starten, sehen Sie **No AI participants yet**; klicken Sie auf **Recruit AI participants**, um zur Phase Recruit zu wechseln.
+
+## Laufenden Test stoppen
+
+<Steps>
+  <Step title="Auf Stop test klicken">
+    Die Schaltfläche erscheint in der Kopfzeile, solange KI-Teilnehmende laufen.
+  </Step>
+  <Step title="Erstattung prüfen">
+    Der Dialog erklärt: "You'll receive a partial credit refund. Only results from blocks completed before the interrupted block will remain available." Er listet die Erstattung für jeden Block und die Gesamtsumme unter **Credits to return** auf.
+  </Step>
+  <Step title="Bestätigen">
+    Klicken Sie erneut auf **Stop test**. Blöcke, die nicht abgeschlossen wurden, zeigen **Stopped**.
+  </Step>
+</Steps>
+
+| Status des Blocks beim Stoppen | Erstattung |
+|---|---|
+| Nicht begonnen | 100 % seiner Credits |
+| Läuft | 50 % seiner Credits |
+| Abgeschlossen | Keine; seine Ergebnisse bleiben verfügbar |
+
+## Zurückerstattete Credits
+
+Wenn Sie Credits zurückerhalten, erscheint nach Ende des Durchlaufs ein Münz-Chip mit der Gesamtsumme in der Kopfzeile. Das passiert, wenn Sie einen Test stoppen, und wenn Teilnehmende abspringen, bevor sie spätere Blöcke erreichen: "We returned the credits for tasks and questions that some participants did not get to carry out." Klicken Sie auf den Chip, um die Erstattung pro Block zu sehen. Siehe [Pläne und Credits](/de/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Ask AI" icon="sparkles" href="/de/ask-ai">
+    Stellen Sie Fragen zu Ihrem gesamten Test in natürlicher Sprache.
+  </Card>
+  <Card title="Teilen und exportieren" icon="share-2" href="/de/share-and-export">
+    Teilen Sie einen schreibgeschützten Link oder exportieren Sie einen PDF-Bericht.
+  </Card>
+</CardGroup>

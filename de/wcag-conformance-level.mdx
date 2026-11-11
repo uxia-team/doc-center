@@ -1,0 +1,44 @@
+---
+title: "WCAG-Konformitätsstufe"
+description: "Legen Sie fest, ob die Barrierefreiheitsprüfung Ihre Screens gegen WCAG 2.2 Stufe AA oder Stufe AAA prüft."
+---
+
+Die Konformitätsstufe legt fest, gegen welche WCAG-2.2-Erfolgskriterien Uxia Ihre Screens prüft. Sie wählen sie im Feld **WCAG Conformance Level** oben im [Block zur Barrierefreiheitsprüfung](/de/accessibility-block).
+
+## Die beiden Optionen
+
+| Option | Stufe | Kurz gesagt | Wann sie passt |
+|---|---|---|---|
+| **Recommended** (Standard) | AA | Deckt die häufigsten Barrieren ab | Branchen- und rechtlicher Standard. Von den meisten Barrierefreiheitsvorschriften verlangt (EU, USA, Vereinigtes Königreich usw.). |
+| **Advanced** | AAA | Höchste Abdeckung der Barrierefreiheit | Ideal für inklusive Erlebnisse. Gesetzlich selten vorgeschrieben. |
+
+Klicken Sie auf eine Option, um sie auszuwählen. Die Zeile unter den Optionen erläutert die gewählte Stufe. **Learn more** öffnet die WCAG-Übersicht des W3C in einem neuen Tab.
+
+## Die Stufen bauen aufeinander auf
+
+WCAG definiert drei Stufen: A, AA und AAA. Jedes Kriterium gehört genau zu einer Stufe, und jede Stufe schließt die darunterliegenden ein:
+
+- Ein **AA**-Audit prüft alle Kriterien der Stufen A und AA.
+- Ein **AAA**-Audit prüft alle Kriterien der Stufen A, AA und AAA.
+
+Die Ergebnisse zeigen in der Zusammenfassungskarte, was geprüft wurde, zum Beispiel **Conformance Level Tested: A & AA**. Sie können die Ergebnisse außerdem nach **Level** filtern, um sich jeweils auf eine Stufe zu konzentrieren. Siehe [Kriterienbewertung](/de/criteria-evaluation).
+
+## Welche Stufe Sie wählen sollten
+
+**Wählen Sie AA für die meisten Produkte.** Auf diese Stufe verweisen die meisten Barrierefreiheitsgesetze und -richtlinien, und die meisten Teams arbeiten auf sie hin. Lassen Sie **Recommended** ausgewählt, sofern Ihr Team nicht ausdrücklich AAA benötigt.
+
+**Wählen Sie AAA, wenn Sie höher hinauswollen.** Wählen Sie **Advanced**, wenn Sie das inklusivste Erlebnis schaffen möchten oder nach einem strengeren internen Standard arbeiten. Rechnen Sie mit mehr Einträgen unter **Failed** und **Review**: Manche AAA-Kriterien lassen sich nur schwer für jede Art von Inhalt erfüllen, weshalb Gesetze AAA nur selten verlangen.
+
+<Tip>
+  WCAG 2.2 baut auf WCAG 2.1 auf. Screens, die WCAG 2.2 auf einer bestimmten Stufe erfüllen, erfüllen auch WCAG 2.1 auf dieser Stufe. Ein 2.2-Audit funktioniert also auch dann, wenn sich eine Vorschrift auf 2.1 bezieht.
+</Tip>
+
+## Gut zu wissen
+
+- Die Stufe ändert die Kosten nicht. Der Block kostet auf beiden Stufen 10 Credits pro Frame.
+- Sie können die Stufe während des Aufbaus jederzeit wechseln. Nach dem Start ist die Stufe festgelegt.
+- Die Prüfung sagt Ihnen nicht, welches Gesetz für Ihr Produkt gilt. Klären Sie Ihre rechtlichen Anforderungen mit Ihrem Rechts- oder Compliance-Team.
+
+<Card title="Weiter: Frames" icon="arrow-right" href="/de/frame-upload">
+  Fügen Sie die Screens hinzu, die Uxia prüfen soll.
+</Card>

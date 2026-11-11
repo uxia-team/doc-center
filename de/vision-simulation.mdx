@@ -1,0 +1,66 @@
+---
+title: "Sehsimulation"
+description: "Vergleichen Sie Ihre Frames nebeneinander bei Farbenblindheit, verschwommenem Sehen und Gesichtsfeldausfall, um zu prüfen, ob Ihr Design noch funktioniert."
+---
+
+Der Tab **Vision Simulation** zeigt denselben Frame nebeneinander unter zwei Sehbedingungen. Prüfen Sie damit, ob Ihr Design seine Botschaft auch dann vermittelt, wenn sich die Wahrnehmung verändert. So erkennen Sie am schnellsten Bedeutungen, die allein über Farbe transportiert werden, oder Kontraste, die für manche Ihrer Nutzerinnen und Nutzer wegbrechen.
+
+Sie finden ihn neben **Results** im Block zur Barrierefreiheitsprüfung, in der Phase **Analyze**.
+
+## Zwei Bedingungen vergleichen
+
+<Steps>
+  <Step title="Einen Frame auswählen">
+    Klicken Sie oben auf ein nummeriertes Vorschaubild, um den zu simulierenden Frame auszuwählen.
+  </Step>
+  <Step title="Für jedes Panel eine Bedingung wählen">
+    Jedes Panel hat ein eigenes Dropdown für die Bedingung. Das linke Panel beginnt mit **Normal Vision** und das rechte mit **Red-Blind**, sodass Sie mit einer Ausgangsbasis neben einer Simulation starten.
+  </Step>
+  <Step title="Den Schweregrad anpassen">
+    Ziehen Sie den Schieberegler **Severity** neben dem Dropdown, um die Bedingung schwächer oder stärker zu machen, von 1 % bis 100 %. Jedes Panel beginnt bei 50 %. Bei **Normal Vision** ist der Schieberegler deaktiviert.
+  </Step>
+  <Step title="Genauer hinsehen">
+    Klicken Sie auf ein simuliertes Bild, um es in voller Größe zu öffnen.
+  </Step>
+</Steps>
+
+Um zwei Bedingungen direkt zu vergleichen, stellen Sie beide Panels auf Simulationen, zum Beispiel **Red-Blind** neben **Green-Blind**.
+
+## Bedingungen
+
+| Gruppe | Bedingung | Was sie simuliert |
+|---|---|---|
+| | **Normal Vision** | Normale Farbwahrnehmung bei voller Sehschärfe |
+| **Color Blindness** | **Red-Blind** | Protanopie: Schwierigkeiten, Rot und Grün zu unterscheiden |
+| | **Green-Blind** | Deuteranopie, die häufigste Form der Farbenblindheit |
+| | **Blue-Blind** | Tritanopie: Schwierigkeiten mit Blau und Gelb |
+| | **Total Color Blindness** | Achromatopsie: Sehen nur in Graustufen |
+| **Clarity Issues** | **Cataracts** | Eine getrübte Linse: verschwommenes, trübes Sehen mit Gelbstich |
+| | **Astigmatism** | Verschwommenes Sehen mit Doppelkonturen |
+| | **Presbyopia** | Altersbedingter Verlust der Nahsicht |
+| **Field Loss** | **Glaucoma** | Verlust des peripheren Sehens, wie der Blick durch einen Tunnel |
+| | **Macular Degeneration** | Verlust des zentralen Sehens, was das Erkennen von Details beeinträchtigt |
+
+## Worauf Sie achten sollten
+
+- **Farbenblindheit.** Prüfen Sie, dass Status, Fehler, Links und Diagrammreihen nicht allein auf Farbe beruhen. Eine rote Fehlermeldung sollte auch bei **Total Color Blindness** als Fehler erkennbar sein.
+- **Probleme mit der Sehschärfe.** Prüfen Sie, dass kleiner Text, dünne Symbole und kontrastarme Beschriftungen auch verschwommen lesbar bleiben.
+- **Gesichtsfeldausfall.** Prüfen Sie, wo zentrale Inhalte und Aktionen liegen. Bei **Glaucoma** verblassen Inhalte an den Rändern. Bei **Macular Degeneration** verblasst die Bildschirmmitte.
+- **Hierarchie.** Prüfen Sie, dass das wichtigste Element weiterhin hervorsticht, wenn sich Farbe und Schärfe verändern.
+
+Wenn Sie ein Problem entdecken, wechseln Sie zurück zum Tab **Results** und suchen Sie das zugehörige Kriterium, etwa *Use of Color* (1.4.1) oder *Contrast (Minimum)* (1.4.3). Siehe [Kriterienbewertung](/de/criteria-evaluation).
+
+## Gut zu wissen
+
+- Die Simulationen sind Annäherungen, die das Bewusstsein schärfen sollen. Wie Menschen diese Bedingungen tatsächlich erleben, ist von Person zu Person sehr unterschiedlich.
+- Die Simulationen laufen auf Bild-Frames. Frames, die Uxia als Inhalte ohne Oberfläche übersprungen hat, zeigen denselben Hinweisbanner wie unter **Results**.
+- Der Tab benötigt einen Browser mit WebGL. Ist WebGL nicht verfügbar, zeigt der Tab **WebGL Required**. Versuchen Sie es mit einem anderen Browser oder aktivieren Sie WebGL in Ihren Browsereinstellungen.
+
+<CardGroup cols={2}>
+  <Card title="Block zur Barrierefreiheitsprüfung" icon="person-standing" href="/de/accessibility-block">
+    Was die Barrierefreiheitsprüfung abdeckt und wann Sie sie verwenden.
+  </Card>
+  <Card title="Kriterienbewertung" icon="list-checks" href="/de/criteria-evaluation">
+    Lesen Sie die Ergebnisse Kriterium für Kriterium.
+  </Card>
+</CardGroup>
