@@ -19,7 +19,7 @@ Cada bloc de tasca s'executa sobre un objectiu que tu proporciones, i els partic
 Tu tries l'entorn on actuen els participants, així que pots mantenir totes les sessions lluny de producció.
 
 - **Tu tries l'endpoint.** Indica als participants una URL de staging, UAT o preproducció, i aquest serà l'únic lloc on actuaran.
-- **Producció queda intacta.** Com que els participants només actuen sobre l'entorn que proporciones, si proves una versió que no és de producció les sessions es mantenen lluny dels sistemes en funcionament i de les dades reals dels usuaris.
+- **L'entorn de producció queda intacte.** Com que els participants només actuen sobre l'entorn que proporciones, si proves una versió que no és de producció les sessions es mantenen lluny dels sistemes en funcionament i de les dades reals dels usuaris.
 - **Dades de prova.** Et recomanem fer servir staging o UAT amb dades de prova, que no siguin de producció, per a qualsevol flux que llegeixi o escrigui informació sensible.
 
 ## Acota què pot fer una sessió
@@ -35,16 +35,16 @@ La [tasca](/ca/mission) i la [condició d'aturada](/ca/stop-condition) que defin
 Quan vulguis que els participants mirin però no facin canvis:
 
 - Planteja la tasca al voltant de la navegació i l'avaluació en lloc de completar un pas transaccional, i fes servir una condició d'aturada que acabi abans de qualsevol acció d'enviar o confirmar.
-- Quan un flux sí que necessiti escriure dades (cistelles, reserves, registres, configuració), dona a cada participant el seu propi compte dedicat perquè les sessions estiguin aïllades i no interfereixin mai entre elles. Consulta [Credencials dels participants](/ca/tester-credentials).
+- Quan un flux sí que necessiti escriure dades (cistelles, reserves, registres, configuració), dona a cada participant el seu propi compte dedicat perquè les sessions estiguin aïllades i no interfereixin mai entre elles. Consulta [Credencials de participants](/ca/tester-credentials).
 
 ## Limita les credencials i els fitxers
 
-- **Les credencials** dels fluxos amb accés restringit queden limitades al test on s'afegeixen i es xifren en repòs. No s'envien mai al model d'IA: s'injecten de manera segura a la sessió del navegador i s'introdueixen directament als camps corresponents. Fes servir comptes de prova dedicats i canvia-les o elimina-les després de cada execució. Consulta [Credencials dels participants](/ca/tester-credentials).
-- **Els fitxers** que proporciones per als passos de pujada queden limitats al test. El participant d'IA només veu el nom i el tipus de cada fitxer; és el navegador qui adjunta el fitxer. Fes servir documents sintètics en lloc de documents reals. Consulta [Fitxers dels participants](/ca/tester-files).
+- **Les credencials** dels fluxos amb accés restringit queden limitades al test on s'afegeixen i es xifren en repòs. No s'envien mai al model d'IA: s'injecten de manera segura a la sessió del navegador i s'introdueixen directament als camps corresponents. Fes servir comptes de prova dedicats i canvia-les o elimina-les després de cada execució. Consulta [Credencials de participants](/ca/tester-credentials).
+- **Els fitxers** que proporciones per als passos de pujada queden limitats al test. El participant d'IA només veu el nom i el tipus de cada fitxer; és el navegador qui adjunta el fitxer. Fes servir documents sintètics en lloc de documents reals. Consulta [Fitxers de participants](/ca/tester-files).
 
 ## Visibilitat completa de cada acció
 
-Cada participant d'IA genera una transcripció pas a pas del que ha vist, les decisions que ha pres i les accions que ha fet durant la sessió. Pots revisar exactament què ha passat i on: consulta [Transcripcions dels tests](/ca/test-transcripts).
+Cada participant d'IA genera una transcripció pas a pas del que ha vist, les decisions que ha pres i les accions que ha fet durant la sessió. Pots revisar exactament què ha passat i on: consulta [Transcripcions](/ca/test-transcripts).
 
 Per saber com Uxia emmagatzema i protegeix les dades d'un test, consulta [Privadesa de les dades](/ca/account/security/data-privacy).
 

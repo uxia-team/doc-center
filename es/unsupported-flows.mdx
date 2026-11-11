@@ -1,7 +1,7 @@
 ---
 title: "Flujos que los participantes de IA no pueden completar"
 sidebarTitle: "Flujos no compatibles"
-description: "Los inicios de sesión sociales, los códigos de verificación y la protección contra bots frenan a los participantes de IA. Mira los avisos y cómo sortearlos."
+description: "Los inicios de sesión sociales, los códigos de verificación y las protecciones antibot frenan a los participantes de IA. Consulta los avisos y cómo sortearlos."
 ---
 
 Los participantes de IA navegan como usuarios reales, pero algunos pasos dependen de cosas a las que no pueden acceder: una cuenta de terceros, una bandeja de entrada o un teléfono, o un sitio que bloquea los navegadores automatizados. Planifica estos pasos antes de lanzar el test; si no, los participantes se quedan bloqueados y tus resultados muestran fricciones que no están en tu diseño.
@@ -33,7 +33,7 @@ Los códigos por correo electrónico o SMS, los códigos de 2FA y las contraseñ
 - Empieza la tarea después del registro: da a los participantes una cuenta de prueba existente con [credenciales](/es/tester-credentials) y prueba lo que viene después.
 - Termina la ejecución antes del paso de verificación con una [condición de parada](/es/stop-condition), como "Detente cuando se te pida un código de verificación".
 
-## Instrucciones de pensar en voz alta y de dar opiniones
+## Instrucciones de pensar en voz alta y de feedback
 
 > Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
 
@@ -46,7 +46,7 @@ Los participantes de IA ya comparten sus pensamientos y reacciones a lo largo de
 
 ## Protección contra bots y acceso denegado
 
-Algunos sitios web bloquean los navegadores automatizados con medidas antibots o con una página de acceso denegado.
+Algunos sitios web bloquean los navegadores automatizados con medidas antibot o con una página de acceso denegado.
 
 - **Al añadir el enlace.** Si Uxia detecta protección contra bots, el modal del enlace muestra *"This live page may not be navigable by testers."* y no puedes guardar el enlace. Haz clic en **Contact us** y daremos a tu equipo de TI instrucciones para incluir a los participantes de IA de Uxia en la lista de permitidos. Consulta [Enlaces de sitio web en producción y Figma](/es/source#protección-contra-bots).
 - **Durante la ejecución.** Si un sitio bloquea a un participante de IA a mitad de la sesión, ese participante aparece marcado como **Drop-off | Access denied** en la transcripción.

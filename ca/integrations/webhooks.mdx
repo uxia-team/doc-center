@@ -142,13 +142,13 @@ Qualsevol persona amb un enllaç de test pot iniciar una sessió, així que trac
 
 Retorna qualsevol estat `2xx` en un màxim de 10 segons. Fes la feina més lenta després de respondre.
 
-Si Uxia rep qualsevol altra cosa, ho torna a intentar fins a set vegades més durant unes 45 hores: al cap d'1 minut, 5 minuts, 30 minuts, 2 hores, 6 hores, 12 hores i 24 hores. Després, l'entrega es marca com a fallida i la pots tornar a enviar.
+Si Uxia rep qualsevol altra cosa, ho torna a intentar fins a set vegades més durant unes 45 hores: al cap d'1 minut, 5 minuts, 30 minuts, 2 hores, 6 hores, 12 hores i 24 hores. Després, el lliurament es marca com a fallit i el pots tornar a enviar.
 
 Un mateix esdeveniment pot arribar més d'una vegada, i els esdeveniments poden arribar desordenats. Fes servir `webhook-id` per descartar els duplicats.
 
-## Revisa les entregues
+## Revisa els lliuraments
 
-Selecciona **View deliveries** en un endpoint per veure'n les entregues dels últims 30 dies, amb el codi d'estat i la durada de cada intent. Selecciona **Resend** per tornar a enviar una entrega. Conserva el mateix `webhook-id`, de manera que la teva deduplicació continua funcionant.
+Selecciona **View deliveries** en un endpoint per veure'n els lliuraments dels últims 30 dies, amb el codi d'estat i la durada de cada intent. Selecciona **Resend** per tornar a enviar un lliurament. Conserva el mateix `webhook-id`, de manera que la teva deduplicació continua funcionant.
 
 ## Canvia el secret de signatura
 
@@ -157,7 +157,7 @@ Selecciona **Rotate secret** i després **Rotate** per obtenir un secret nou. Du
 La creació, la modificació o l'eliminació d'un endpoint i el canvi del seu secret queden registrats als teus [registres d'auditoria](/ca/account/security/sso).
 
 <CardGroup cols={2}>
-  <Card title="MCP d'Uxia" icon="plug" href="/ca/integrations/mcp">
+  <Card title="Uxia MCP" icon="plug" href="/ca/integrations/mcp">
     Consulta els resultats dels tests des de les teves eines d'IA.
   </Card>
   <Card title="Enterprise Auth" icon="shield" href="/ca/integrations/enterprise-auth">

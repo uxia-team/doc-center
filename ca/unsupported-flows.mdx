@@ -1,7 +1,7 @@
 ---
 title: "Fluxos que els participants d'IA no poden completar"
 sidebarTitle: "Fluxos no compatibles"
-description: "Els inicis de sessió socials, els codis de verificació i la protecció contra bots aturen els participants d'IA. Mira els avisos i com evitar-los."
+description: "Els inicis de sessió socials, els codis de verificació i la protecció contra bots aturen els participants d'IA. Mira els avisos d'Uxia i com evitar-los."
 ---
 
 Els participants d'IA naveguen com usuaris reals, però alguns passos depenen de coses a les quals no poden accedir: un compte d'un tercer, una safata d'entrada o un telèfon, o un lloc web que bloqueja els navegadors automatitzats. Tingues en compte aquests passos abans de llançar el test; si no, els participants s'encallen i els resultats mostren una fricció que no és al teu disseny.
@@ -33,7 +33,7 @@ Els codis per correu electrònic o SMS, els codis de 2FA i les contrasenyes d'un
 - Comença la tasca després del registre: dona als participants un compte de prova existent amb [credencials](/ca/tester-credentials) i prova el que ve després.
 - Acaba l'execució abans del pas de verificació amb una [condició d'aturada](/ca/stop-condition), com ara "Atura't quan et demanin un codi de verificació."
 
-## Instruccions de pensar en veu alta i de donar l'opinió
+## Instruccions de pensar en veu alta i de donar feedback
 
 > Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
 
@@ -46,11 +46,11 @@ Els participants d'IA ja comparteixen els seus pensaments i reaccions al llarg d
 
 ## Protecció contra bots i accés denegat
 
-Alguns llocs web bloquegen els navegadors automatitzats amb mesures antibots o amb una pàgina d'accés denegat.
+Alguns llocs web bloquegen els navegadors automatitzats amb mesures antibot o amb una pàgina d'accés denegat.
 
 - **Quan afegeixes l'enllaç.** Si Uxia detecta protecció contra bots, el modal de l'enllaç mostra *"This live page may not be navigable by testers."* i no pots desar l'enllaç. Fes clic a **Contact us** i donarem al teu equip d'informàtica les instruccions per afegir els participants d'IA d'Uxia a la llista d'accés permès. Consulta [Enllaços de llocs web en producció i de Figma](/ca/source#protecció-contra-bots).
 - **Durant l'execució.** Si un lloc web bloqueja un participant d'IA a mitja sessió, aquest participant queda marcat com a **Drop-off | Access denied** a la transcripció.
-- **Si es bloquegen tots els participants d'IA**, el test no es pot completar i es reemborsa el 80% dels crèdits a la teva organització. Un bàner als resultats confirma el reemborsament.
+- **Si es bloquegen tots els participants d'IA**, el test no es pot completar i es reemborsa el 80 % dels crèdits a la teva organització. Un bàner als resultats confirma el reemborsament.
 
 Per mantenir els participants d'IA dins de l'objectiu i lluny de les dades de producció, consulta [Restriccions dels participants d'IA](/ca/account/security/ai-participant-restrictions).
 
