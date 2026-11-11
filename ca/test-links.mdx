@@ -1,0 +1,95 @@
+---
+title: "Enllaços de test"
+description: "Convida els teus propis participants amb un enllaç de test, tria la configuració de gravació i d'idioma, i descobreix què veuen els participants."
+---
+
+Els enllaços de test porten els teus propis participants a un test: clients, usuaris, un panell que gestiones tu o companys de feina. Envia l'enllaç per qualsevol canal, com ara el correu electrònic, Slack o un butlletí. Els participants no necessiten cap compte, i els participants humans costen 0 crèdits.
+
+Els enllaços de test estan disponibles als plans de pagament. Els participants fan els mateixos blocs que els teus [participants d'IA](/ca/ai-participants), de manera que pots comparar tots dos grups a [Analyze](/ca/analyze-results).
+
+<Note>
+  Al pla Starter, pots crear enllaços de test, però els resultats humans no hi són inclosos. Pro mostra les 10 primeres sessions per test, i Custom les mostra totes. Consulta [Resultats dels participants humans](/ca/human-insights#límits-per-pla).
+</Note>
+
+## Crea un enllaç de test
+
+<Steps>
+  <Step title="Obre Test links">
+    A la fase [Recruit](/ca/recruit-participants), fes clic a **Test links** i després a **Create link**.
+  </Step>
+  <Step title="Configura l'enllaç">
+    A **Create Test Link**, posa un nom a l'enllaç a **Link name**, com ara *Audiència del butlletí*, i tria la configuració que es descriu més avall. Després fes clic a **Create**.
+  </Step>
+  <Step title="Comparteix-lo">
+    Fes clic a **Copy link** i envia'l als teus participants. Fes servir **Preview** per provar tu mateix l'experiència del participant; les sessions de previsualització no es desen.
+  </Step>
+</Steps>
+
+Crea un enllaç per a cada grup o canal, fins a 10 enllaços per test. Cada enllaç té la seva pròpia configuració, i a Analyze pots filtrar els resultats per enllaç.
+
+## Configuració de l'enllaç
+
+| Opció | Què fa |
+|---|---|
+| **Link name** | Identifica l'enllaç a Recruit i al filtre d'Analyze. Obligatori. |
+| **Show interactive areas after an invalid click** | Destaca les àrees clicables quan un participant fa clic fora d'aquestes àrees. Es mostra per als prototips multimèdia amb àrees interactives. Activat per defecte. |
+| **Face camera** | *"Screen recording is always required. Enable this to also require face camera permission before participants can start."* |
+| **Default language** | L'idioma que veuen els participants. Uxia tradueix automàticament les tasques, els escenaris i les preguntes. Tria entre anglès, espanyol, coreà, alemany, francès, xinès, Português (Brasil), Português (Portugal) i italià. |
+| **Participants can choose language in the session** | Afegeix un selector d'idioma a la pantalla de benvinguda. |
+
+Si està disponible al teu espai de treball, **Allow 3rd Party human participants** permet que els participants d'un panell de reclutament extern registrin que han completat el test. Enganxa el **Completion link** del teu proveïdor de reclutament, i els participants veuran un botó **Confirm your participation** quan acabin.
+
+## Gestiona els enllaços
+
+La taula **Test links** mostra, per a cada enllaç, les columnes **Link**, **Default language**, **Status** i **Face camera**. Des del menú **…** d'un enllaç:
+
+- **Stop** tanca l'enllaç. Els participants que l'obren veuen *"This test is unavailable"* i *"No longer accepting responses."*
+- **Activate** torna a obrir un enllaç aturat.
+- **Edit settings** canvia la configuració de l'enllaç. Els canvis s'apliquen als participants futurs.
+
+Si el test té [variants A/B](/ca/ab-variants), cada enllaç té un URL per variant.
+
+## L'experiència del participant
+
+Els participants necessiten un navegador d'escriptori que permeti gravar la pantalla.
+
+<Steps>
+  <Step title="Benvinguda i consentiment">
+    Els participants trien un idioma, si l'enllaç ho permet. Accepten els termes i condicions i confirmen que es pot gravar la seva pantalla, el micròfon i la càmera.
+  </Step>
+  <Step title="Abans de començar">
+    Llegeixen dues instruccions breus: **Think out loud** i **Device & permissions**.
+  </Step>
+  <Step title="Comprovació del dispositiu">
+    Activen el micròfon i diuen unes quantes paraules per provar-lo, i també la càmera si **Face camera** està activat. Després fan clic a **Start test** i comparteixen la pantalla. Els tests amb una tasca de lloc web en producció requereixen compartir la pantalla sencera.
+  </Step>
+  <Step title="Els blocs">
+    Els participants passen pels blocs en ordre. En una tasca, llegeixen l'encàrrec i fan clic a **Start task**; un lloc web en producció s'obre en una altra pestanya. Fan clic a **Finish task** quan acaben, o a **Abandon task** si es rendeixen. Les enquestes i els benchmarks es responen a la pantalla, i els card sortings es fan arrossegant i deixant anar.
+  </Step>
+  <Step title="Test completat">
+    La gravació es puja i els participants veuen **Test completed**. Si hi ha un enllaç de finalització, també veuen **Confirm your participation**.
+  </Step>
+</Steps>
+
+A tenir en compte:
+
+- Les sessions tenen un límit de 60 minuts. Els participants reben un avís quan queden 5 minuts i 1 minut, i després la sessió s'envia automàticament.
+- Els blocs de revisió d'accessibilitat se salten, perquè no necessiten participants.
+- Un mateix navegador no pot enviar dues vegades un enllaç de test. Un segon intent mostra *"This test was already submitted."*
+- Al pla Custom, el logotip d'Uxia no apareix a la sessió.
+
+## Què es grava
+
+- **Gravació de la pantalla** del test tal com la veu el participant.
+- **Àudio del micròfon** amb el que pensa en veu alta.
+- **Imatge de la càmera**, si l'enllaç ho requereix.
+- **Clics i navegació** dins del prototip.
+- **Transcripcions**, generades automàticament a partir de l'àudio.
+
+<Tip>
+  A la invitació, demana als participants que facin servir un ordinador, digues-los aproximadament quant dura el test i suggereix-los un lloc tranquil per pensar en veu alta. T'estalviaràs gravacions fallides i silencioses.
+</Tip>
+
+<Card title="Següent: Resultats dels participants humans" icon="arrow-right" href="/ca/human-insights">
+  Mira les gravacions, llegeix les transcripcions i revisa els resultats humans.
+</Card>

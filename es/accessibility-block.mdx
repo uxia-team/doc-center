@@ -1,0 +1,85 @@
+---
+title: "Bloque de revisión de accesibilidad"
+sidebarTitle: "Descripción general"
+description: "Audita tus pantallas según WCAG 2.2 AA o AAA en la fase de diseño. Sin necesidad de participantes."
+---
+
+El bloque **Accessibility check** audita tus pantallas según WCAG 2.2 antes de escribir código. Subes tus pantallas y eliges un nivel de conformidad objetivo. Después, Uxia revisa cada pantalla criterio por criterio. Señala qué se cumple, qué no y qué necesita una revisión humana, y etiqueta cada problema según si probablemente se corrige en el diseño o en el código.
+
+Como la auditoría se hace sobre pantallas estáticas y no sobre una versión en funcionamiento, detectas los problemas de accesibilidad en la fase de diseño. Ahí es donde cuesta menos corregirlos, en lugar de descubrirlos tarde, durante el control de calidad o después del lanzamiento.
+
+## Qué revisa
+
+- **Criterios de conformidad de WCAG 2.2** de nivel AA o AAA. Los niveles son acumulativos, así que una auditoría AA también cubre el nivel A. Consulta [Nivel de conformidad WCAG](/es/wcag-conformance-level).
+- **Los cuatro principios de WCAG**: perceptible, operable, comprensible y robusto. Esto incluye el contraste, las alternativas textuales, el tamaño de los objetivos táctiles, la visibilidad del foco y las etiquetas.
+- **Compatibilidad con la baja visión**, con una [simulación de visión](/es/vision-simulation) que muestra cada pantalla con daltonismo, visión borrosa y pérdida del campo visual.
+- **Alcance de diseño y de código**. Algunos criterios no se pueden confirmar a partir de una captura de pantalla, como el comportamiento con el teclado. Uxia los marca para revisión y los etiqueta como **Code** para que tu equipo de desarrollo los verifique.
+
+## Cuándo usarlo
+
+**Revisión del diseño antes del desarrollo.** Audita las pantallas antes de pasarlas a desarrollo, para que los problemas de accesibilidad aparezcan en el diseño y no durante el control de calidad o después de publicar el código.
+
+**Reparto del trabajo entre diseño y desarrollo.** Cada problema que requiere trabajo se etiqueta como **Design** o **Code**. Ambos equipos tienen una lista de comprobación compartida y una forma clara de repartirse el trabajo.
+
+**Revisiones orientadas al cumplimiento normativo.** Comprueba tus pantallas frente a un estándar reconocido: AA como referencia legal habitual, o AAA si buscas la máxima cobertura.
+
+**Seguimiento del progreso.** Audita las pantallas actualizadas después de las correcciones y comprueba cómo evolucionan en la dirección correcta los recuentos de Passed, Failed y Review.
+
+## Añadir el bloque
+
+<Steps>
+  <Step title="Abre el selector de bloques">
+    En la fase **Build**, abre **Add a block**. En **Audits**, elige **Accessibility check**.
+  </Step>
+  <Step title="Elige un nivel de conformidad">
+    Mantén **Recommended** (AA) o cambia a **Advanced** (AAA). Consulta [Nivel de conformidad WCAG](/es/wcag-conformance-level).
+  </Step>
+  <Step title="Añade tus frames">
+    Sube hasta 5 pantallas como capturas de imagen (PNG, JPEG, WebP o GIF). Puedes añadir la URL en producción de cada pantalla para hacer comprobaciones adicionales a nivel de código. Consulta [Frames](/es/frame-upload).
+  </Step>
+  <Step title="Lanza la auditoría">
+    Haz clic en **Start recruiting**. Si el test no tiene otros bloques, lanzas la auditoría directamente desde el resumen de la fase Recruit. Consulta [Ejecutar la auditoría](/es/frame-upload#ejecutar-la-auditoría).
+  </Step>
+</Steps>
+
+## Límites y créditos
+
+| | Plan Free | Planes de pago (Starter, Pro, Custom) |
+|---|---|---|
+| Bloque de revisión de accesibilidad | No disponible | 1 por test |
+| Frames | No disponible | Hasta 5 por test, de 100 MB cada uno |
+| Coste | No disponible | 10 créditos por frame |
+
+- En el plan Free, el bloque muestra una insignia **Upgrade** en el selector. Al hacer clic en ella se abre el cuadro de diálogo de planes **Upgrade to use accessibility**.
+- Un test solo puede tener un bloque de revisión de accesibilidad. Cuando añades uno, queda desactivado en el selector. Tampoco puedes duplicar el bloque.
+- El coste depende solo del número de frames. Por ejemplo, una auditoría de 4 pantallas cuesta 40 créditos, tenga el test los participantes que tenga.
+- En un test con [variantes A/B](/es/ab-variants), el coste por frame se aplica a cada variante.
+
+## Combinarlo con otros bloques
+
+Una revisión de accesibilidad puede estar en el mismo test que bloques de tarea, de encuesta y de card sorting. No necesita participantes:
+
+- **Participantes de IA.** La auditoría se ejecuta cuando lanzas los participantes de IA. Los créditos de sus frames se suman al total del lanzamiento.
+- **Participantes humanos.** Los participantes que se unen mediante un [enlace de test](/es/test-links) o el [panel humano](/es/human-panel) se saltan el bloque. Si solo reclutas participantes humanos, la auditoría no se ejecuta.
+- **Solo accesibilidad.** Si el test no tiene otros bloques, no hay nada que reclutar. La fase Recruit te lo indica y lanzas la auditoría desde su resumen.
+
+Los resultados aparecen en la fase **Analyze** como un bloque propio, junto al resto de tus resultados.
+
+<Note>
+  Uxia te ayuda a detectar problemas pronto, pero no sustituye a una auditoría legal formal de accesibilidad, a la revisión de un especialista ni a una certificación.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Nivel de conformidad WCAG" icon="gauge" href="/es/wcag-conformance-level">
+    Elige entre AA y AAA.
+  </Card>
+  <Card title="Frames" icon="image" href="/es/frame-upload">
+    Sube las pantallas que Uxia va a auditar.
+  </Card>
+  <Card title="Evaluación de criterios" icon="list-checks" href="/es/criteria-evaluation">
+    Consulta los resultados criterio por criterio.
+  </Card>
+  <Card title="Simulación de visión" icon="eye" href="/es/vision-simulation">
+    Mira tus pantallas en distintas condiciones de visión.
+  </Card>
+</CardGroup>

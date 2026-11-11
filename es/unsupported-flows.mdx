@@ -1,0 +1,64 @@
+---
+title: "Flujos que los participantes de IA no pueden completar"
+sidebarTitle: "Flujos no compatibles"
+description: "Los inicios de sesión sociales, los códigos de verificación y la protección contra bots frenan a los participantes de IA. Mira los avisos y cómo sortearlos."
+---
+
+Los participantes de IA navegan como usuarios reales, pero algunos pasos dependen de cosas a las que no pueden acceder: una cuenta de terceros, una bandeja de entrada o un teléfono, o un sitio que bloquea los navegadores automatizados. Planifica estos pasos antes de lanzar el test; si no, los participantes se quedan bloqueados y tus resultados muestran fricciones que no están en tu diseño.
+
+En las tareas de sitio web en producción y de prototipo de Figma, Uxia te avisa debajo del campo **Task** cuando tu texto menciona uno de estos flujos. Haz clic en **Learn more** en un aviso para abrir una guía breve, *Flows Not Supported by AI Participants*. Esta página trata los mismos casos con más detalle.
+
+## Inicios de sesión sociales
+
+> Warning: social login detected in this task. AI participants will fail on social authentication unless it is a Figma prototype flow. Use email/password authentication.
+
+Los flujos de inicio de sesión de terceros, como "Iniciar sesión con Google" o el inicio de sesión único, abren ventanas emergentes y redirecciones externas que los participantes de IA no pueden completar de principio a fin de forma fiable.
+
+**Cómo sortearlo:**
+
+- Crea una cuenta de prueba que inicie sesión con correo electrónico y contraseña, y añádela con **+ Add credentials**. Consulta [Credenciales de participantes](/es/tester-credentials).
+- Escribe la tarea en torno a ese inicio de sesión, por ejemplo: "Inicia sesión con tu correo electrónico y tu contraseña y, después…".
+
+En una tarea de prototipo de Figma, un botón de inicio de sesión social es solo otra pantalla del prototipo, así que los participantes pueden pasar por él.
+
+## Códigos de verificación
+
+> Warning: sign-up/register flow detected in this task. Make sure the flow does not require verification codes, validation emails, or 2FA because AI participants cannot complete those steps.
+
+Los códigos por correo electrónico o SMS, los códigos de 2FA y las contraseñas de un solo uso dependen de una bandeja de entrada o de un dispositivo al que los participantes no pueden acceder. Lo mismo ocurre con los CAPTCHA. El aviso aparece siempre que la tarea menciona darse de alta, registrarse o crear una cuenta. Si tu flujo no tiene ningún paso de verificación, puedes ignorarlo.
+
+**Cómo sortearlo:**
+
+- Haz los tests en un entorno de staging en el que la verificación por correo electrónico, la 2FA y los CAPTCHA estén desactivados para las cuentas de prueba.
+- Empieza la tarea después del registro: da a los participantes una cuenta de prueba existente con [credenciales](/es/tester-credentials) y prueba lo que viene después.
+- Termina la ejecución antes del paso de verificación con una [condición de parada](/es/stop-condition), como "Detente cuando se te pida un código de verificación".
+
+## Instrucciones de pensar en voz alta y de dar opiniones
+
+> Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
+
+Los participantes de IA ya comparten sus pensamientos y reacciones a lo largo de cada sesión. Las instrucciones como "piensa en voz alta", "comparte tu primera impresión" o "dinos qué te parece", en la tarea o en la condición de parada, se eliminan antes de que se ejecute el test.
+
+**Cómo sortearlo:**
+
+- Elimina la instrucción y mantén la [tarea](/es/mission) centrada en la acción.
+- Para recoger opiniones, añade un [bloque de encuesta](/es/survey-block) después de la tarea.
+
+## Protección contra bots y acceso denegado
+
+Algunos sitios web bloquean los navegadores automatizados con medidas antibots o con una página de acceso denegado.
+
+- **Al añadir el enlace.** Si Uxia detecta protección contra bots, el modal del enlace muestra *"This live page may not be navigable by testers."* y no puedes guardar el enlace. Haz clic en **Contact us** y daremos a tu equipo de TI instrucciones para incluir a los participantes de IA de Uxia en la lista de permitidos. Consulta [Enlaces de sitio web en producción y Figma](/es/source#protección-contra-bots).
+- **Durante la ejecución.** Si un sitio bloquea a un participante de IA a mitad de la sesión, ese participante aparece marcado como **Drop-off | Access denied** en la transcripción.
+- **Si se bloquea a todos los participantes de IA**, el test no se puede completar y se reembolsa a tu organización el 80 % de sus créditos. Un banner en los resultados confirma el reembolso.
+
+Para que los participantes de IA se limiten a tu objetivo y no accedan a datos de producción, consulta [Restricciones de los participantes de IA](/es/account/security/ai-participant-restrictions).
+
+<CardGroup cols={2}>
+  <Card title="Credenciales de participantes" icon="key" href="/es/tester-credentials">
+    Da a los participantes de IA accesos con correo electrónico y contraseña para los flujos protegidos.
+  </Card>
+  <Card title="Restricciones de los participantes de IA" icon="shield-check" href="/es/account/security/ai-participant-restrictions">
+    Controla a qué pueden acceder y qué pueden hacer los participantes de IA.
+  </Card>
+</CardGroup>

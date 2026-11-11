@@ -1,0 +1,92 @@
+---
+title: "Resultados de participantes humanos"
+description: "Revisa las sesiones de participantes humanos en Analyze: métricas de éxito, grabaciones, transcripciones, notas y respuestas de encuesta."
+---
+
+Cuando alguien hace tu test a través de un [enlace de test](/es/test-links) o un [panel humano](/es/human-panel), sus sesiones aparecen en la fase [Analyze](/es/analyze-results). Cada sesión incluye una grabación de pantalla, la voz del participante, una transcripción automática y sus respuestas, así que puedes ver el comportamiento real junto a lo que hicieron tus participantes de IA.
+
+## Cambiar a los resultados humanos
+
+En la parte superior de Analyze, abre el menú de tipo de participante y elige **Human participants**. Elige **AI participants** para volver. Las dos vistas están separadas: no hay una vista combinada, así que cambia entre ellas para comparar.
+
+En el modo humano, el filtro junto al menú muestra tus enlaces de test con el número de participantes de cada uno. Selecciona los enlaces que quieras y haz clic en **Filter**. La selección se aplica a todos los bloques.
+
+Si todavía no has creado ningún enlace, el bloque muestra **No links created yet** con un botón **Create link**.
+
+Los bloques de revisión de accesibilidad no tienen resultados humanos, porque los participantes no los hacen.
+
+## Bloques de tarea
+
+La pestaña **Sessions** se abre con una fila de métricas:
+
+| Métrica | Qué muestra |
+|---|---|
+| **Total Testers** | Participantes incluidos en las métricas. Se excluyen las grabaciones fallidas. |
+| **Success Rate** | Porcentaje de sesiones que completaron el flujo. |
+| **Drop-off** | Porcentaje de sesiones que abandonaron el flujo. |
+| **Misclick Rate** | Porcentaje de clics fuera de las áreas interactivas válidas. No se muestra en sitios web en producción. |
+| **Avg. Duration** | Duración media de las sesiones con éxito. |
+
+Debajo, una tabla muestra cada sesión con **Clips**, **Participant**, **Status**, **Task duration**, **Responded At** y **Actions**.
+
+| Estado | Significado |
+|---|---|
+| **Completed** | El participante terminó el flujo y respondió todas las preguntas. |
+| **Abandoned** | El participante salió del flujo antes de terminarlo. |
+| **Missing questions** | El participante terminó, pero dejó algunas preguntas sin responder. |
+| **Processing** | La grabación o la transcripción todavía se está preparando. |
+| **Recording failed** | No se pudo capturar la sesión. |
+| **Transcript failed** | La grabación existe, pero no se pudo generar la transcripción. |
+| **In progress** | El participante todavía está haciendo el test. |
+
+En **Actions**, **Download clip** guarda la grabación **Screen view** o **Camera view**, y **Delete recording** elimina de forma permanente la sesión y sus datos.
+
+Haz clic en una sesión para abrir el reproductor. La pestaña **Transcripts** sigue el vídeo; haz clic en una línea para saltar a ese momento. Selecciona texto para resaltarlo y haz clic en **Add note** para guardarlo. Tus notas aparecen en la pestaña **Notes**.
+
+En las tareas con prototipo multimedia, la pestaña **Frames** muestra cada pantalla con los clics de los participantes como mapa de calor, además de la tasa de clics erróneos y el tiempo medio en esa pantalla.
+
+## Bloques de encuesta
+
+Los resultados de encuesta tienen dos pestañas, igual que con los participantes de IA. **Responses** agrupa las respuestas por pregunta y **Participants** muestra las respuestas de cada persona. Junto a cada respuesta, **Play recording** abre la sesión en el momento en que el participante respondió. Consulta [Resultados de encuestas](/es/survey-results).
+
+## Bloques de card sorting
+
+Los card sortings humanos usan las mismas vistas de resultados que los participantes de IA. Consulta [Resultados de card sorting](/es/card-sorting-results).
+
+## Límites por plan
+
+| Plan | Sesiones humanas en los resultados |
+|---|---|
+| Free | No disponible |
+| Starter | No incluidas |
+| Pro | Las 10 primeras sesiones de cada test |
+| Custom | Ilimitadas |
+
+En Pro, las sesiones a partir de la undécima aparecen difuminadas con **Upgrade to unlock**.
+
+## Por qué combinar participantes de IA y humanos
+
+<Tip>
+  Los participantes de IA te dan resultados en minutos y te permiten hacer tantas rondas como necesites. Los participantes humanos aportan profundidad emocional, contexto vivido y ese comportamiento impredecible que solo las personas reales tienen. Usa participantes de IA para iterar rápido y acotar los problemas. Después, usa sesiones humanas para confirmar los hallazgos, descubrir casos límite y dar confianza a las partes interesadas.
+</Tip>
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Tengo que ejecutar primero los participantes de IA?">
+    No. Puedes reclutar participantes humanos en cualquier test desde la fase [Recruit](/es/recruit-participants), con o sin participantes de IA.
+  </Accordion>
+  <Accordion title="¿Los participantes pueden usar cualquier dispositivo?">
+    Los participantes necesitan un navegador de escritorio que permita grabar la pantalla. La captura de pantalla y micrófono se hace en el navegador, sin descargas. La cámara frontal solo es obligatoria cuando el enlace de test la pide.
+  </Accordion>
+  <Accordion title="¿Cómo se generan las transcripciones?">
+    Automáticamente, a partir del audio de cada sesión. Una sesión muestra **Processing** hasta que su grabación y su transcripción están listas.
+  </Accordion>
+  <Accordion title="¿Cuántos participantes humanos debería incluir?">
+    Depende de tus objetivos. En los tests de usabilidad, entre cinco y ocho participantes suelen sacar a la luz los problemas más accionables. Para comparar segmentos, recluta a más y usa un enlace de test por segmento para poder filtrar por él.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Siguiente: Ask AI" icon="arrow-right" href="/es/ask-ai">
+  Haz preguntas sobre tus resultados en lenguaje natural.
+</Card>

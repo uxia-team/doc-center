@@ -1,0 +1,75 @@
+---
+title: "Crear una audiència"
+sidebarTitle: "Crear una audiència"
+description: "Crea una audiència d'Uxia pas a pas: defineix filtres o fes servir Quick Fill, genera participants d'IA i tria qui fa el test a la fase Recruit."
+---
+
+Aquesta pàgina explica com es crea una audiència i com se'n revisen els participants d'IA. Per als conceptes que hi ha al darrere (les tres capes i com funcionen els participants d'IA), consulta la [Visió general](/ca/audiences/overview).
+
+## On pots crear una audiència
+
+Pots crear una audiència des de dos llocs:
+
+- **AI Audience** a la barra lateral. Fes clic a **Create audience** per crear-ne una que podràs reutilitzar en qualsevol test.
+- **La fase Recruit d'un test.** Obre **AI participants** i fes clic a **Create audience**. Quan acabis, la nova audiència s'afegeix al test.
+
+Cada audiència es mostra com una targeta amb el nom, el nombre de participants, la franja d'edat i la distribució per gènere. El seu menú et permet triar **View participants**, **Review filters**, **Rename**, **Clone** o **Delete**. En clonar-la, es copien els criteris i els filtres, però no els participants generats, així que a la còpia en generaràs un conjunt nou. És útil quan vols una variant d'un segment que ja tens.
+
+## Configurar els filtres
+
+Al creador, posa un nom a l'audiència i activa filtres des del selector de la dreta; els filtres actius s'agrupen a l'esquerra. Les audiències noves comencen amb els tres filtres bàsics ja actius:
+
+- **Age**: una franja qualsevol entre 18 i 100 anys
+- **Gender**: home, dona o tots dos
+- **Languages**: anglès per defecte, amb l'opció que coincideixi amb qualsevol dels idiomes seleccionats o amb tots
+
+A més d'aquests, hi ha un conjunt més ampli de filtres per afinar el segment: país de residència i nacionalitat, competència tecnològica, estudis, estat civil i situació laboral, sector, càrrec, i ingressos de la llar o personals. També hi ha un camp de text lliure, **Custom Details**, per a l'estil de vida, les motivacions, les rutines o altres trets. No cal que ho omplis tot: tot el que deixis en blanc s'emplena automàticament perquè cada participant d'IA sigui coherent.
+
+<Note>
+  Els filtres avançats i Quick Fill depenen del pla. En els plans inferiors, veuràs l'avís **Unlock more audience filters** on hi haurien d'aparèixer.
+</Note>
+
+### Quick Fill
+
+Si no vols definir els filtres a mà, **Quick Fill** (a dalt a la dreta) ho fa per tu de dues maneres:
+
+- **Smart URL**: enganxa l'URL d'un producte o d'un lloc web i Uxia n'extreu el contingut, dedueix per a qui és el producte i et proposa un conjunt de filtres adequat perquè el revisis i l'ajustis.
+- **Manual**: descriu els teus usuaris objectiu en text lliure (un esbós de l'audiència) i deixa que Uxia ho tradueixi en filtres.
+
+Si continues sense cap filtre definit, Uxia t'avisa que generarà participants aleatoris.
+
+## Generar participants d'IA
+
+Quan tinguis els filtres a punt, fes clic a **Populate audience** i confirma-ho. Uxia desa l'audiència i comença a generar en segon pla participants d'IA que coincideixen amb els teus criteris.
+
+<Warning>
+  Un cop generats els participants, els filtres i els detalls de l'audiència queden **bloquejats**. Per canviar-los, crea una audiència nova; clonar-ne una d'existent és la manera més ràpida de reaprofitar els mateixos criteris.
+</Warning>
+
+Per revisar el resultat, tria **View participants** a la targeta de l'audiència. Cada participant d'IA apareix com una targeta amb dues vistes:
+
+- una vista **demogràfica i d'estil de vida**: nacionalitat, país, idiomes, competència tecnològica, estudis, sector, càrrec, situació laboral, ingressos i una descripció breu. Els camps que has definit tu tenen un estil diferent dels que ha omplert Uxia.
+- una vista de **perfil psicològic**: el gràfic de radar OCEAN i una descripció de les motivacions del participant i de la seva manera de prendre decisions
+
+Els participants d'IA creats amb enriquiment porten la insígnia **Enriched**. Si un no t'acaba de convèncer, **Replace tester** el substitueix per un perfil nou que continua complint tots els teus criteris. **Review Audience Filters** obre un panell lateral amb els filtres a partir dels quals s'ha creat l'audiència.
+
+## Triar els participants d'un test
+
+Qui fa un test es tria a la fase Recruit, no a l'audiència. Inclou fins a tres audiències i després:
+
+- fes servir **Distribute evenly** per repartir el nombre de participants a parts iguals entre les audiències, o bé
+- fes servir **Handpick participants** per triar participants d'IA concrets de cada audiència.
+
+El nombre de participants d'IA que pots fer servir depèn del teu pla. Consulta [Participants d'IA](/ca/ai-participants) per veure el procés complet.
+
+## Passos següents
+
+<CardGroup cols={2}>
+  <Card title="Participants d'IA" href="/ca/ai-participants">
+    Afegeix audiències a un test, defineix el nombre de participants i llança'l.
+  </Card>
+
+  <Card title="Enriquiment d'audiències" href="/ca/audiences/enrichment">
+    Ves més enllà amb participants d'IA creats a partir dels teus propis arquetips d'usuari, entrevistes i recerca.
+  </Card>
+</CardGroup>

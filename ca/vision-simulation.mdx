@@ -1,0 +1,66 @@
+---
+title: "Simulació de visió"
+description: "Compara els teus frames l'un al costat de l'altre amb daltonisme, visió borrosa i pèrdua de camp per comprovar que el disseny continua funcionant."
+---
+
+La pestanya **Vision Simulation** mostra el mateix frame amb dues condicions visuals, l'una al costat de l'altra. Fes-la servir per comprovar si el teu disseny continua comunicant quan la percepció canvia. És la manera més ràpida de detectar significats que depenen només del color, o contrastos que s'enfonsen per a alguns dels teus usuaris.
+
+La trobaràs al costat de **Results** al bloc de revisió d'accessibilitat, a la fase **Analyze**.
+
+## Compara dues condicions
+
+<Steps>
+  <Step title="Tria un frame">
+    Fes clic en una miniatura numerada de la part superior per triar el frame que vols simular.
+  </Step>
+  <Step title="Tria una condició per a cada panell">
+    Cada panell té el seu propi desplegable de condició. El panell de l'esquerra comença amb **Normal Vision** i el de la dreta amb **Red-Blind**, de manera que comences amb una referència al costat d'una simulació.
+  </Step>
+  <Step title="Ajusta la gravetat">
+    Arrossega el control lliscant **Severity** que hi ha al costat del desplegable per fer la condició més lleu o més intensa, de l'1% al 100%. Cada panell comença al 50%. El control lliscant està desactivat per a **Normal Vision**.
+  </Step>
+  <Step title="Mira-ho de més a prop">
+    Fes clic en una imatge simulada per obrir-la a mida completa.
+  </Step>
+</Steps>
+
+Per comparar dues condicions directament, posa simulacions a tots dos panells, per exemple **Red-Blind** al costat de **Green-Blind**.
+
+## Condicions
+
+| Grup | Condició | Què simula |
+|---|---|---|
+| | **Normal Vision** | Percepció del color estàndard amb plena claredat visual |
+| **Color Blindness** | **Red-Blind** | Protanopia: dificultat per distingir el vermell del verd |
+| | **Green-Blind** | Deuteranopia, la forma més comuna de daltonisme |
+| | **Blue-Blind** | Tritanopia: dificultat amb el blau i el groc |
+| | **Total Color Blindness** | Acromatòpsia: visió només en escala de grisos |
+| **Clarity Issues** | **Cataracts** | Un cristal·lí entelat: visió borrosa i boirosa amb tons groguencs |
+| | **Astigmatism** | Visió borrosa amb imatges fantasma |
+| | **Presbyopia** | Pèrdua de l'enfocament de prop associada a l'edat |
+| **Field Loss** | **Glaucoma** | Pèrdua de la visió perifèrica, com si miressis a través d'un túnel |
+| | **Macular Degeneration** | Pèrdua de la visió central, que afecta els detalls |
+
+## Què has de buscar
+
+- **Daltonisme.** Comprova que els estats, els errors, els enllaços i les sèries dels gràfics no depenguin només del color. Un missatge d'error en vermell s'ha de continuar llegint com un error amb **Total Color Blindness**.
+- **Problemes de claredat.** Comprova que el text petit, les icones fines i les etiquetes de poc contrast continuïn sent llegibles quan la imatge es desenfoca.
+- **Pèrdua de camp.** Comprova on són el contingut i les accions clau. Amb **Glaucoma**, el contingut a prop de les vores s'esvaeix. Amb **Macular Degeneration**, és el centre de la pantalla el que s'esvaeix.
+- **Jerarquia.** Comprova que l'element més important continuï destacant quan canvien el color i la nitidesa.
+
+Quan detectis un problema, torna a la pestanya **Results** i busca el criteri relacionat, com ara *Use of Color* (1.4.1) o *Contrast (Minimum)* (1.4.3). Consulta [Avaluació de criteris](/ca/criteria-evaluation).
+
+## Coses que cal saber
+
+- Les simulacions són aproximacions pensades per conscienciar. L'experiència real d'aquestes condicions varia molt d'una persona a una altra.
+- Les simulacions s'apliquen als frames d'imatge. Els frames que Uxia ha omès perquè no són contingut d'interfície mostren el mateix bàner que a **Results**.
+- La pestanya necessita un navegador amb WebGL. Si WebGL no està disponible, la pestanya mostra **WebGL Required**. Prova un altre navegador o activa WebGL a la configuració del navegador.
+
+<CardGroup cols={2}>
+  <Card title="Bloc de revisió d'accessibilitat" icon="person-standing" href="/ca/accessibility-block">
+    Què cobreix la revisió d'accessibilitat i quan l'has de fer servir.
+  </Card>
+  <Card title="Avaluació de criteris" icon="list-checks" href="/ca/criteria-evaluation">
+    Llegeix els resultats criteri per criteri.
+  </Card>
+</CardGroup>

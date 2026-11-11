@@ -1,0 +1,51 @@
+---
+title: "SSO i aprovisionament d'usuaris a Uxia"
+sidebarTitle: "SSO"
+description: "Configura l'SSO, SCIM, la creació de comptes JIT, els dominis verificats, els registres d'auditoria i la transmissió de registres de la teva organització."
+---
+
+Per a les organitzacions amb requisits més estrictes de gestió d'identitats i accessos, la pestanya **SSO and provisioning** de la pàgina de l'organització és on configures les funcions d'identitat empresarial.
+
+Segons el teu pla i les funcions activades, aquesta pestanya et pot permetre:
+
+- Afegir i gestionar dominis verificats de l'organització.
+- Comprovar si un domini està configurat, pendent, absent, amb errors o verificat.
+- Obrir el panell d'administració de l'SSO.
+- Obrir el panell d'aprovisionament per configurar SCIM.
+- Activar o desactivar l'opció **automatic account creation (JIT)**.
+- Activar o desactivar les invitacions des de dominis externs.
+- Obrir la configuració dels registres d'auditoria.
+- Obrir la configuració de la transmissió de registres.
+
+## Inici de sessió únic (SSO)
+
+L'SSO permet que el teu equip iniciï sessió a Uxia amb el proveïdor d'identitat que ja fa servir la teva empresa, com ara Okta, Microsoft Entra ID (abans Azure AD) o Google Workspace. Això vol dir que:
+
+- Els membres de l'equip s'autentiquen amb un sistema que el teu equip d'IT ja gestiona i en què confia.
+- Mantens el control centralitzat de qui té accés a Uxia.
+- Quan dones de baixa un membre de l'equip al teu proveïdor d'identitat, ja no pot iniciar sessió a través d'aquest proveïdor. Amb SCIM, a més, se'n desactiva el compte d'Uxia i se'n tanquen les sessions actives.
+
+## Aprovisionament amb SCIM
+
+SCIM (System for Cross-domain Identity Management) automatitza l'alta i la baixa d'usuaris a tota la teva organització. Quan afegeixes o elimines un usuari al teu proveïdor d'identitat, el canvi es reflecteix automàticament a Uxia, sense haver de gestionar les llicències manualment.
+
+## Creació de comptes Just-in-Time (JIT)
+
+Amb JIT activat, els usuaris nous d'un domini verificat poden iniciar sessió amb SSO i el seu compte d'Uxia es crea automàticament el primer cop que hi accedeixen, sense necessitat d'una invitació manual.
+
+## Registres d'auditoria i transmissió de registres
+
+Els registres d'auditoria recullen les accions clau que es fan dins de la teva organització. La transmissió de registres envia aquests esdeveniments al teu SIEM o a la teva plataforma d'observabilitat perquè l'equip de seguretat pugui supervisar l'activitat juntament amb la resta de la infraestructura.
+
+<Note>
+  L'SSO, SCIM, JIT, els registres d'auditoria i la transmissió de registres estan disponibles al pla Custom. Si l'SSO o l'aprovisionament no estan activats per a la teva organització, la pàgina et proposarà que contactis amb Uxia. Escriu-nos a [hello@uxia.app](mailto:hello@uxia.app) per configurar l'autenticació empresarial.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Enterprise Auth" icon="key-round" href="/ca/integrations/enterprise-auth">
+    Proveïdors d'identitat, aprovisionament i gestió d'accessos a Uxia.
+  </Card>
+  <Card title="Persones i invitacions" icon="user-plus" href="/ca/account/people">
+    Gestiona els usuaris, els rols i l'accés als espais de treball.
+  </Card>
+</CardGroup>

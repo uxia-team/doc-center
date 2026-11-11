@@ -1,0 +1,95 @@
+---
+title: "Prototipo multimedia"
+description: "Crea un prototipo clicable con tus propias imágenes en una tarea con prototipo multimedia y pruébalo con participantes."
+---
+
+Una **Media prototype task** te permite probar diseños que todavía no están construidos. Subes tus pantallas como imágenes, las conectas en un flujo sobre el lienzo y los participantes navegan por él como si fuera una interfaz real.
+
+## Cuándo usarlo
+
+Recurre a un prototipo multimedia cuando quieras probar:
+
+- Pantallas estáticas exportadas desde Figma, Sketch o cualquier herramienta de diseño.
+- Un conjunto de imágenes que representa un flujo que todavía no está construido.
+- Iteraciones tempranas de diseño, antes de tener un prototipo funcional.
+
+Un prototipo multimedia solo admite imágenes. Para probar un prototipo de Figma a partir de su enlace, usa una [tarea con prototipo de Figma](/es/source).
+
+## Crear el prototipo
+
+<Steps>
+  <Step title="Abre el lienzo">
+    En el bloque, haz clic en **Add prototype**.
+  </Step>
+  <Step title="Elige un modo">
+    En **Select mode**, elige **Interactive** o **Sequential** y haz clic en **Continue**. Consulta [Modos](#modos).
+  </Step>
+  <Step title="Importa tus diseños">
+    Haz clic en **Import designs** y elige tus imágenes. Puedes añadir más después con **Import Files** en la barra lateral **Frames**. Un prototipo admite hasta 35 frames.
+  </Step>
+  <Step title="Configura el flujo">
+    En un flujo interactivo, elige el frame inicial, después el frame final, y conecta los frames con áreas de interacción. En un flujo secuencial, arrastra los frames en la barra lateral **Frames** para ponerlos en el orden en que los verán los participantes.
+  </Step>
+  <Step title="Previsualiza y guarda">
+    Abre la pestaña **Preview** para recorrer un flujo interactivo como lo haría un participante. Después, haz clic en **Save**.
+  </Step>
+</Steps>
+
+La ejecución termina cuando los participantes llegan al frame final, así que una tarea con prototipo multimedia no tiene condición de parada. Aun así, escribes una [tarea](/es/mission) y un [escenario](/es/test-scenario), como en cualquier bloque de tarea.
+
+## Modos
+
+| Modo | Cómo funciona | Elígelo cuando |
+|---|---|---|
+| **Interactive** (Recommended) | Un prototipo interactivo con áreas clicables y distintos caminos. | Quieras un flujo realista con ramificaciones. |
+| **Sequential** | Una secuencia lineal de frames que los participantes ven en orden. | Quieras un recorrido sencillo y rápido. |
+
+## Flujos interactivos
+
+Un flujo interactivo necesita al menos 2 frames. Después de importarlos, Uxia te pide que elijas el frame inicial y luego el final, que quedan marcados como **Start** y **End**.
+
+Para conectar frames, haz clic en el icono de diana de la barra de herramientas (**Create interaction areas**), dibuja un área sobre un frame y conéctala con el frame al que lleva. Después, elige la acción que la activa.
+
+Una lista de pendientes en el lienzo registra lo que falta: un inicio y un final, al menos una conexión de salida en cada frame y un camino desde cada frame hasta el final. La pestaña **Preview** está disponible en cuanto defines un frame inicial.
+
+## Acciones
+
+| Acción | Úsala para |
+|---|---|
+| **Click** | Botones, enlaces o cualquier elemento que lleve a otro frame al hacer clic. |
+| **Input** | Campos de texto o barras de búsqueda. Simula que se escribe antes de pasar al frame siguiente. |
+| **Scroll / Swipe** | Páginas largas, carruseles o contenido deslizable. Define la dirección: arriba, abajo, izquierda, derecha o cualquiera. |
+| **Wait** | Frames que cambian automáticamente tras un tiempo. Define el tiempo de espera en milisegundos. |
+| **Drag** | Controles deslizantes u objetos que el usuario debe arrastrar de un punto a otro. |
+| **Hover** | Elementos que muestran información adicional o cambian cuando el cursor pasa por encima. |
+
+## Controles del lienzo
+
+- **Click mode.** Si está activado, arrastra los frames para cambiarlos de sitio. Si está desactivado, arrastra para moverte por el lienzo.
+- **Create interaction areas.** Dibuja regiones interactivas sobre un frame y conéctalas con el paso siguiente. Solo en el modo interactivo.
+- **Zoom.** Usa el menú de zoom de la barra de herramientas (acercar, alejar, 50 %, 100 %, 200 %), pellizca en el trackpad o desplázate mientras mantienes pulsado Ctrl o Cmd.
+- **Fit all images in view.** Ajusta la vista para mostrar todos los frames del lienzo.
+- **Desplazamiento.** Desplázate con el trackpad o la rueda del ratón, arrastra el lienzo cuando el modo clic está desactivado, o mantén pulsada la **barra espaciadora** y arrastra.
+
+En la barra lateral **Frames** también puedes cambiar el nombre de los frames, quitarlos y saltar a ellos.
+
+## Preguntas frecuentes
+
+<AccordionGroup>
+  <Accordion title="¿Cómo creo un desplazamiento a pantalla completa?">
+    Crea un área de interacción que cubra todo el frame, asígnale la acción **Scroll / Swipe** y conéctala con el frame siguiente, que muestra la vista ya desplazada.
+  </Accordion>
+  <Accordion title="¿Cómo simulo que se escribe texto?">
+    Crea una interacción **Input** sobre el campo vacío y conéctala con un frame en el que el campo aparezca rellenado. En formularios con varios campos, puedes rellenarlos todos en un solo paso o crear frames separados para una experiencia más realista.
+  </Accordion>
+  <Accordion title="¿Importa el orden de los frames?">
+    En un flujo secuencial, sí: los participantes ven los frames en el orden de la barra lateral **Frames**. En un flujo interactivo, no: el camino lo definen las áreas de interacción y sus conexiones, no el número de los frames.
+  </Accordion>
+  <Accordion title="¿Ven los participantes los efectos de transición?">
+    No. Las animaciones de transición de **Preview** solo sirven para crear y revisar el prototipo. Los participantes solo experimentan las interacciones y los frames resultantes.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Siguiente: Tarea" icon="arrow-right" href="/es/mission">
+  Indica a los participantes qué deben intentar conseguir.
+</Card>

@@ -1,0 +1,99 @@
+---
+title: "Bloque de tarea"
+sidebarTitle: "Descripción general"
+description: "Haz que los participantes completen una tarea en tu sitio web en producción, prototipo de Figma o prototipo de imágenes mientras piensan en voz alta."
+---
+
+Un **bloque de tarea** pide a los participantes que completen una tarea concreta en tu producto o prototipo. Los participantes de IA piensan en voz alta mientras navegan, así que ves dónde dudan, se pierden o se rinden, y por qué. Los participantes humanos se graban mientras realizan la misma tarea.
+
+## Elegir un tipo de tarea
+
+En **Add a block**, la sección **Task** tiene tres bloques. Se diferencian en lo que navegan los participantes:
+
+| Bloque | Úsalo para probar | Fuente | Condición de parada | Credenciales y archivos |
+|---|---|---|---|---|
+| **Live website task** | Un sitio web en producción, una aplicación web, una versión de staging o un prototipo programado | Una URL pública | Obligatoria | Disponibles |
+| **Figma prototype task** | Un prototipo de Figma | Un enlace de prototipo de Figma (`figma.com/proto/…`) | Obligatoria | Disponibles |
+| **Media prototype task** | Diseños que todavía no están construidos | Imágenes que subes y conectas en un lienzo | Ninguna: la tarea termina en el frame final | No disponibles |
+
+Una tarea en un sitio web en producción funciona con casi cualquier cosa que tenga una URL pública:
+
+- Sitios y aplicaciones web públicos, versiones de staging o preproducción, y productos con inicio de sesión.
+- Prototipos programados y aplicaciones generadas, como Lovable, Base44, Cursor, Google Stitch o Claude.
+
+También puedes conectar Uxia con tus agentes de programación mediante el [MCP de Uxia](/es/integrations/mcp).
+
+Para definir la fuente, consulta [Enlaces de sitio web en producción y Figma](/es/source) o [Prototipo multimedia](/es/media-canvas).
+
+## Qué incluye un bloque de tarea
+
+Debajo de la fuente, cada bloque tiene los campos que definen la sesión:
+
+- **Task**: lo único que intentan hacer los participantes. Consulta [Tarea](/es/mission).
+- **Scenario**: la situación y la motivación que hay detrás. Consulta [Escenario](/es/test-scenario).
+- **Stop condition**: el estado final en pantalla que termina la ejecución. Solo en tareas con sitio web en producción y prototipo de Figma. Consulta [Condición de parada](/es/stop-condition).
+
+Todos los campos son obligatorios y admiten hasta 500 caracteres. Cada uno tiene además un botón **Tips** que sugiere reescrituras.
+
+## Probar varios flujos en un test
+
+Mantén un solo objetivo por tarea y añade un bloque de tarea por cada flujo que quieras probar. Un test admite hasta 3 bloques de tarea en los planes de pago y 1 en el plan Free. Los participantes hacen los bloques en orden.
+
+- Cuando añades otro bloque del mismo tipo, Uxia rellena su fuente (la URL, o los frames y el flujo) a partir del anterior.
+- Cuando una tarea con sitio web en producción o prototipo de Figma usa la misma URL que una anterior, puedes activar **Continue from where participants left the previous task**. Así, los participantes siguen donde lo dejaron en lugar de empezar de nuevo. Está desactivado por defecto.
+
+## Benchmarks
+
+En la parte inferior de cada bloque de tarea, dos interruptores añaden un benchmark: afirmaciones estandarizadas que los participantes valoran después de la tarea y que se combinan en una puntuación.
+
+- **Measure usability with SUS**. Consulta [SUS](/es/sus).
+- **Measure user experience with UXIA-Q**. Consulta [Puntuación UXIA-Q](/es/uxia-q-score).
+
+Ambos están desactivados por defecto. Los benchmarks no están disponibles en el plan Free, donde los interruptores muestran la etiqueta **Upgrade**.
+
+## Créditos y límites
+
+Un bloque de tarea cuesta **20 créditos por participante de IA**, más 1 crédito por participante de IA por cada benchmark que actives. Por ejemplo, 5 participantes de IA en una tarea con SUS y UXIA-Q cuestan 5 × 22 = 110 créditos. Los participantes humanos invitados con enlaces de test no cuestan créditos.
+
+| | Plan Free | Planes de pago |
+|---|---|---|
+| Bloques de tarea por test | 1 | 3 |
+| Benchmarks (SUS, UXIA-Q) | No disponibles | Disponibles |
+
+Si se bloquea el acceso de todos los participantes de IA a un sitio web en producción, se reembolsa el 80 % de los créditos. Consulta [Flujos que los participantes de IA no pueden completar](/es/unsupported-flows).
+
+## Credenciales y archivos
+
+Si tu flujo empieza tras un inicio de sesión o pide a los participantes que suban algo, usa **+ Add credentials** y **+ Add files** debajo de la URL de una tarea con sitio web en producción o prototipo de Figma.
+
+<CardGroup cols={2}>
+  <Card title="Credenciales de participantes" icon="key" href="/es/tester-credentials">
+    Da a los participantes de IA accesos y valores de campos para flujos protegidos.
+  </Card>
+  <Card title="Archivos para participantes" icon="file-up" href="/es/tester-files">
+    Da a los participantes de IA los archivos que un flujo les pide subir.
+  </Card>
+</CardGroup>
+
+## Qué obtienes
+
+En la fase **Analyze**, cada bloque de tarea tiene sus propias pestañas: **Insights**, **Transcripts**, **Analytics**, **Journeys** y **Benchmarks** cuando hay un benchmark activado.
+
+<CardGroup cols={2}>
+  <Card title="Insights y UOS" icon="lightbulb" href="/es/results">
+    Insights de usabilidad priorizados, la puntuación UOS y sugerencias de mejora.
+  </Card>
+  <Card title="Transcripciones" icon="scroll-text" href="/es/test-transcripts">
+    Sesiones paso a paso con pantallas y comentarios en voz alta.
+  </Card>
+  <Card title="Analíticas y recorridos" icon="chart-line" href="/es/analytics">
+    Cómo avanzaron los participantes por el flujo y dónde hubo fricción.
+  </Card>
+  <Card title="Resultados de benchmarks" icon="gauge" href="/es/benchmark-results">
+    Puntuaciones SUS y UXIA-Q de la tarea.
+  </Card>
+</CardGroup>
+
+<Card title="Siguiente: Enlaces de sitio web en producción y Figma" icon="arrow-right" href="/es/source">
+  Añade la URL por la que navegan los participantes y deja que Uxia la verifique.
+</Card>

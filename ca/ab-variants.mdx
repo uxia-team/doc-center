@@ -1,0 +1,67 @@
+---
+title: "Variants A/B"
+description: "Fes el mateix test amb dues versions del teu producte i obtén un informe que et diu quina funciona millor."
+---
+
+<Note>Està previst que les variants A/B es publiquin l'octubre de 2026. Fins aleshores, és possible que aquesta funció no estigui disponible al teu espai de treball.</Note>
+
+Una variant A/B executa el teu test sobre dues versions del teu producte, com ara dos prototips o dos URL, i et diu quina funciona millor. **Variant #2** fa servir els mateixos blocs, tasques, preguntes, audiència, participants i configuració que **Variant #1**. Només canvia la font.
+
+## Crea la Variant #2
+
+<Steps>
+  <Step title="Obre el diàleg de variants">
+    A la fase **Build**, fes clic a **+** (**Create variant comparison**) a la barra que hi ha a sota del llenç. El diàleg "Find out which variant performs better" explica què comparteixen les variants.
+  </Step>
+  <Step title="Crea la variant">
+    Fes clic a **Create Variant #2**. Uxia obre la nova pestanya **Variant #2** amb el bàner "Variant #2 uses the same blocks as Variant #1. Only the source can be edited."
+  </Step>
+  <Step title="Defineix la nova font">
+    A cada bloc de tasca, substitueix la [font](/ca/source): un altre URL de lloc web en producció, un altre enllaç de prototip de Figma o un altre [prototip multimèdia](/ca/media-canvas).
+  </Step>
+</Steps>
+
+Canvia entre les pestanyes **Variant #1** i **Variant #2** a la part inferior de la pàgina.
+
+<Tip>
+  La Variant #2 comença com una còpia dels blocs de la Variant #1, així que acaba de construir els blocs abans de crear-la.
+</Tip>
+
+També pots afegir la Variant #2 després que s'hagi executat la Variant #1, des de la mateixa barra de la fase **Analyze**.
+
+Per eliminar la Variant #2 abans de llançar-la, fes clic a **Remove Variant #2** (la × de la seva pestanya) i després a **Delete Variant #2**. Això elimina permanentment la Variant #2 i la seva font. La Variant #1 no es veu afectada.
+
+## Llança les variants
+
+- **Totes dues alhora.** Quan llances un test que té la Variant #2, totes dues variants s'executen amb els mateixos participants d'IA.
+- **La Variant #2 més tard.** Si la Variant #1 ja s'ha executat, obre la pestanya **Variant #2**, ves a **Recruit** i fes clic a **Launch variant 2**. La Variant #2 s'executa amb els mateixos participants que la Variant #1.
+- **Enllaços de test.** Cada [enllaç de test](/ca/test-links) té un URL per variant, amb les etiquetes **Variant 1** i **Variant 2**.
+
+### Cost
+
+| Element | Crèdits |
+|---|---|
+| Cost dels blocs | Es duplica, perquè cada bloc s'executa una vegada per variant |
+| Comparació (**A/B test setup** al desglossament) | 100 |
+
+Si la Variant #1 ja s'ha executat, només se't cobra la Variant #2 i la comparació. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+## Analitza i compara
+
+A la fase **Analyze**, les pestanyes **Variant #1** i **Variant #2** de la part inferior et permeten passar dels resultats d'una variant als de l'altra, bloc per bloc. Mentre el test s'executa, la barra de progrés indica a quina variant correspon.
+
+Un test amb Variant #2 també té una fase **Report** després d'**Analyze** a la capçalera. Apareix desactivada fins que totes dues variants s'han acabat de processar i s'ha generat l'informe. L'informe té dues pestanyes:
+
+- **Executive Summary.** Un veredicte ("Variant #1 performs better", "Variant #2 performs better" o "No conclusive winner"), un resum, les troballes clau enllaçades als insights en què es basen, KPI comparats un al costat de l'altre, com ara la taxa d'abandonament, la taxa de clics erronis i l'UOS, i una **Recommendation**.
+- **Surveys.** Les respostes d'enquesta de totes dues variants, una al costat de l'altra, quan el test inclou un bloc d'enquesta.
+
+Per exportar, tria **Export** al menú del títol del test. El PDF inclou totes dues variants, i **Variant comparison** a **Details** hi afegeix la comparació. Consulta [Comparteix i exporta](/ca/share-and-export).
+
+<CardGroup cols={2}>
+  <Card title="Construeix el teu test" icon="blocks" href="/ca/build-your-test">
+    Afegeix i configura els blocs que comparteixen totes dues variants.
+  </Card>
+  <Card title="Analitza els resultats" icon="chart-bar" href="/ca/analyze-results">
+    Orienta't per la fase Analyze.
+  </Card>
+</CardGroup>

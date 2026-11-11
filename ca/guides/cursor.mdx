@@ -1,0 +1,70 @@
+---
+title: "Connecta Uxia a Cursor amb MCP"
+sidebarTitle: "Cursor"
+description: "Connecta Uxia a Cursor amb MCP per crear tests i portar resultats, transcripcions i insights d'UX al xat de Cursor."
+---
+
+El servidor MCP d'Uxia connecta el teu espai de treball amb Cursor perquè puguis portar resultats de tests, transcripcions i insights d'UX a les teves converses de programació i disseny.
+
+## Abans de començar
+
+Necessites:
+
+- Un compte d'Uxia. Els crèdits i els [límits del pla](/ca/account/plans-and-credits) del teu espai de treball s'apliquen a tot el que Cursor creï o llanci.
+- La versió més recent de Cursor.
+- Accés a l'espai de treball d'Uxia amb les dades que vols fer servir.
+
+<Steps>
+  <Step title="Obre la configuració MCP de Cursor">
+    A Cursor, obre **Customize** i afegeix un servidor MCP personalitzat, o obre directament `~/.cursor/mcp.json`.
+  </Step>
+  <Step title="Afegeix la configuració del servidor d'Uxia">
+    Enganxa aquesta configuració JSON:
+
+    ```json
+    {
+      "mcpServers": {
+        "Uxia": {
+          "type": "http",
+          "url": "https://platform.uxia.app/api/mcp-v2/mcp",
+          "headers": {}
+        }
+      }
+    }
+    ```
+
+    Si ja tens servidors MCP configurats, afegeix l'entrada `Uxia` dins de l'objecte `mcpServers` que ja existeix.
+  </Step>
+  <Step title="Autentica Uxia">
+    Obre **Customize** a Cursor, cerca **Uxia** i activa'l amb l'interruptor. La primera vegada que Cursor cridi el servidor, s'obrirà una finestra del navegador. Inicia sessió a Uxia i fes clic a **Authorize**.
+  </Step>
+  <Step title="Comença a fer preguntes">
+    Obre el xat de Cursor i fes preguntes que tinguin en compte Uxia, com ara:
+
+    - _"Mostra'm els meus cinc tests d'Uxia més recents."_
+    - _"Resumeix els insights del test del flux de pagament."_
+    - _"Quins són els problemes d'usabilitat més importants de l'últim test del lloc web?"_
+  </Step>
+</Steps>
+
+<Note>
+  Les connexions amb Uxia fan servir els mateixos permisos que el teu compte d'Uxia. Per desconnectar-te, desactiva o elimina el servidor d'Uxia a Cursor.
+</Note>
+
+## Què pots fer amb Uxia a Cursor
+
+Un cop connectat, Cursor pot fer servir les teves dades d'Uxia com a context mentre treballes:
+
+- Crear un test per al flux que acabes de construir i llançar-lo quan n'aprovis el cost en crèdits.
+- Revisar transcripcions de tests i troballes de recerca.
+- Resumir insights i puntuacions de benchmarks.
+- Convertir problemes d'usabilitat en tasques d'implementació.
+- Comparar el feedback de diferents tests per detectar patrons recurrents.
+
+## Resolució de problemes
+
+Si Uxia no apareix com a connectat a Cursor, comprova que la URL sigui exactament `https://platform.uxia.app/api/mcp-v2/mcp`, desa la configuració del servidor MCP i reinicia Cursor. Si l'autenticació no s'obre automàticament, desactiva i torna a activar el servidor d'Uxia des de **Customize**.
+
+<Card title="Primers passos amb MCP" icon="plug" href="/ca/integrations/mcp">
+  Informa't sobre l'accés MCP d'Uxia, els clients compatibles i la configuració general.
+</Card>

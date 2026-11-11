@@ -1,0 +1,59 @@
+---
+title: "Privadesa de les dades a Uxia"
+sidebarTitle: "Privadesa de les dades"
+description: "Com tracta Uxia els teus dissenys, les dades dels tests, els enregistraments dels participants i les credencials, amb la seguretat i la privadesa com a base."
+---
+
+Uxia està pensat per tractar amb cura actius de recerca sensibles. Tant si puges fitxers de disseny com si comparteixes URL en producció, enregistres participants humans o fas tests en fluxos amb autenticació, totes les dades que portes a la plataforma es tracten amb la seguretat i la privadesa com a punt de partida, no com un afegit posterior. Aquesta pàgina explica com es tracten les teves dades a tota la plataforma.
+
+## Les teves dades de disseny i URL
+
+Quan puges un fitxer de disseny o proporciones una URL per a un test, Uxia tracta aquest actiu de manera segura per executar la sessió de cada participant.
+
+- **Les teves dades no s'utilitzen mai per entrenar models.** Els dissenys, les URL i el contingut dels tests que envies no s'utilitzen per millorar ni ajustar cap model d'IA, ni d'Uxia ni de tercers.
+- **Les teves dades no es comparteixen amb altres usuaris ni organitzacions.** Cada espai de treball està aïllat: només hi tens accés tu i les persones de l'equip que convidis expressament.
+- **Els actius només es guarden el temps necessari.** Els fitxers pujats i les URL es conserven mentre dura el test i perquè puguis continuar accedint als resultats i als informes. No es guarden indefinidament més enllà del que cal per prestar el servei.
+
+## Enregistraments dels participants humans
+
+Quan convides participants humans amb un [enllaç de test](/ca/test-links) o un [panell humà](/ca/human-panel), Uxia enregistra cada sessió: la pantalla i el micròfon del participant, i també la càmera frontal si decideix activar-la. Aquests enregistraments són:
+
+- **Emmagatzemats de manera segura** a la plataforma d'Uxia i accessibles només dins del teu espai de treball
+- **Privats per a la teva organització**: els enregistraments no es venen mai ni es comparteixen amb els socis del panell, i només arriben als subencarregats del tractament que ajuden a prestar el servei, com ara el de transcripció
+- **Disponibles per revisar-los i analitzar-los** al tauler del teu espai de treball, al costat dels insights generats per IA d'aquell test
+
+Els enregistraments t'aporten la profunditat qualitativa que complementa les troballes sintetitzades per la IA, i es conserven al teu espai de treball mentre el teu compte estigui actiu.
+
+## Credencials per a tests amb accés restringit i autenticació
+
+Si el producte o la secció que proves és darrere d'una pantalla d'inici de sessió, pots proporcionar credencials perquè els participants d'IA puguin accedir als fluxos protegits. En aquest cas:
+
+- Les credencials es xifren en trànsit i en repòs, i només es desxifren quan la sessió d'un participant d'IA les ha de fer servir
+- No s'inclouen mai a les instruccions que s'envien al model d'IA. En lloc d'això, s'injecten de manera segura a la sessió del navegador i s'introdueixen directament als camps corresponents, de manera que el model d'IA no les veu mai
+- Els camps de contrasenya es mantenen ocults a les transcripcions i a les captures de pantalla, però altres valors escrits, com un nom d'usuari o una adreça de correu electrònic, poden ser visibles
+- Queden limitades al test on s'han afegit i només són visibles dins del teu espai de treball, mai per a altres organitzacions
+- Tu continues tenint el control d'aquestes credencials. No introdueixis credencials sensibles o potencialment perilloses, i canvia-les immediatament quan acabi el test
+
+Fes servir comptes de prova dedicats, mai comptes reals de clients o d'administrador. Per a més detalls, consulta [Credencials dels participants](/ca/tester-credentials).
+
+També pots fer servir un [inici de sessió interactiu](/ca/tester-credentials#inici-de-sessió-interactiu). Inicies sessió tu mateix des de la interfície d'Uxia i nosaltres capturem la sessió iniciada, de manera que no guardem cap credencial. Tots els participants d'IA del test fan servir aquesta sessió, que s'elimina automàticament una hora després que la desis.
+
+## Fitxers que es fan servir durant un test
+
+Si el teu flux demana als participants d'IA que pugin alguna cosa (un CV, un document d'identitat, un full de càlcul), pots importar fitxers perquè els facin servir. En aquest cas:
+
+- Els fitxers es xifren en trànsit i en repòs, i només es recuperen quan la sessió d'un participant d'IA arriba a un pas de pujada
+- Cap model d'IA no en llegeix mai el contingut: el fitxer s'adjunta directament al camp, de manera que res del que contingui pot aparèixer a les transcripcions, als insights ni als informes
+- Queden limitats al test on s'han importat i només són visibles dins del teu espai de treball
+- Els pots eliminar en qualsevol moment
+
+Et recomanem que pugis documents sintètics en lloc de documents reals. Per a més detalls, consulta [Fitxers dels participants](/ca/tester-files).
+
+<CardGroup cols={2}>
+  <Card title="Restriccions dels participants d'IA" icon="shield" href="/ca/account/security/ai-participant-restrictions">
+    Controla què poden fer i fins on poden arribar els participants d'IA durant un test.
+  </Card>
+  <Card title="Credencials dels participants" icon="key-round" href="/ca/tester-credentials">
+    Com es guarden i es fan servir les credencials dels fluxos amb accés restringit.
+  </Card>
+</CardGroup>

@@ -1,0 +1,51 @@
+---
+title: "SSO y aprovisionamiento de usuarios en Uxia"
+sidebarTitle: "SSO"
+description: "Configura SSO, SCIM, la creación de cuentas JIT, los dominios verificados, los registros de auditoría y el envío de logs de tu organización enterprise."
+---
+
+Para las organizaciones con requisitos más estrictos de gestión de identidades y accesos, la pestaña **SSO and provisioning** de la página de la organización es donde se configuran las funciones de identidad enterprise.
+
+Según tu plan y las funciones habilitadas, esta pestaña te puede permitir:
+
+- Añadir y gestionar dominios verificados de la organización.
+- Comprobar si un dominio está configurado, pendiente, ausente, con errores o verificado.
+- Abrir el panel de administración de SSO.
+- Abrir el panel de aprovisionamiento para configurar SCIM.
+- Activar o desactivar la opción **automatic account creation (JIT)**.
+- Activar o desactivar si se permiten invitaciones de dominios externos.
+- Abrir la configuración de los registros de auditoría.
+- Abrir la configuración del envío de logs.
+
+## Single Sign-On (SSO)
+
+SSO permite que tu equipo inicie sesión en Uxia con el proveedor de identidad que ya usa tu empresa, como Okta, Microsoft Entra ID (antes Azure AD) o Google Workspace. Esto significa que:
+
+- Los miembros del equipo se autentican mediante un sistema que tu equipo de TI ya gestiona y en el que confía.
+- Mantienes un control centralizado sobre quién tiene acceso a Uxia.
+- Dar de baja a un miembro del equipo en tu proveedor de identidad le impide iniciar sesión a través de él. Con SCIM, además, se desactiva su cuenta de Uxia y se cierran sus sesiones activas.
+
+## Aprovisionamiento con SCIM
+
+SCIM (System for Cross-domain Identity Management) automatiza el alta y la baja de usuarios en toda tu organización. Cuando añades o eliminas un usuario en tu proveedor de identidad, el cambio se refleja automáticamente en Uxia, sin gestionar las licencias a mano.
+
+## Creación de cuentas Just-in-Time (JIT)
+
+Con JIT activado, los nuevos usuarios de un dominio verificado pueden iniciar sesión con SSO y su cuenta de Uxia se crea automáticamente en el primer inicio de sesión, sin necesidad de invitarlos manualmente.
+
+## Registros de auditoría y envío de logs
+
+Los registros de auditoría recogen las acciones clave que se realizan dentro de tu organización. El envío de logs reenvía esos eventos a tu SIEM o a tu plataforma de observabilidad para que tu equipo de seguridad pueda supervisar la actividad junto con el resto de tu infraestructura.
+
+<Note>
+  SSO, SCIM, JIT, los registros de auditoría y el envío de logs están disponibles en el plan Custom. Si SSO o el aprovisionamiento no están habilitados en tu organización, la página te pedirá que contactes con Uxia. Escríbenos a [hello@uxia.app](mailto:hello@uxia.app) para configurar la autenticación enterprise.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Enterprise Auth" icon="key-round" href="/es/integrations/enterprise-auth">
+    Proveedores de identidad, aprovisionamiento y gestión de accesos para Uxia.
+  </Card>
+  <Card title="Personas e invitaciones" icon="user-plus" href="/es/account/people">
+    Gestiona usuarios, roles y el acceso a los espacios de trabajo.
+  </Card>
+</CardGroup>

@@ -1,0 +1,73 @@
+---
+title: "Transcripcions"
+description: "Segueix pas a pas cada participant d'IA en un bloc de tasca: què ha fet, què ha dit, per què i què veia."
+---
+
+La pestanya **Transcripts** d'un [bloc de tasca](/ca/task-block) reprodueix pas a pas la sessió de cada participant d'IA. Mentre que els [insights](/ca/results) et diuen *què* ha fallat en el conjunt del panell, una transcripció et mostra *per què*: cada acció, el que el participant pensava en veu alta i la pantalla que tenia davant.
+
+Fes-la servir quan vulguis contrastar un insight amb la sessió original, entendre un abandonament o citar un participant amb les seves pròpies paraules. Des de la pestanya **Evidence** d'un insight, si fas clic en una cita, arribes directament a aquest moment de la transcripció.
+
+## Tria un participant
+
+Fes servir el selector de participants de la part superior esquerra per canviar de sessió. Si hi ha diverses audiències, els participants s'agrupen per audiència. Els participants que no han completat una tasca obligatòria anterior apareixen a **Didn't reach this task** i queden exclosos de les estadístiques d'aquesta tasca.
+
+Sota el selector:
+
+| Element | Què mostra |
+|---|---|
+| Etiqueta de resultat | Com ha acabat la sessió |
+| **Steps** | El nombre de passos registrats per a aquest participant |
+| **Misclicks** | La proporció d'interaccions que no han encertat cap àrea interactiva vàlida. No està disponible a les tasques de lloc web en producció. |
+
+L'etiqueta de resultat pot ser una d'aquestes:
+
+| Etiqueta | Significat |
+|---|---|
+| **Success** | El participant ha completat la tasca. |
+| **Drop-off** | El participant no ha completat la tasca. |
+| **Drop-off \| Access denied** | El lloc web ha denegat l'accés al participant o l'ha bloquejat amb protecció contra bots. |
+| **Stalled** | El participant no ha pogut avançar i s'ha finalitzat la sessió. |
+| **Max steps** | El participant ha arribat al nombre màxim de passos permesos per execució. Contacta amb nosaltres si necessites un límit més alt. |
+
+Els prototips multimèdia configurats com a **Sequential flow** no mostren l'etiqueta, els passos ni els clics erronis.
+
+A la dreta, **Search** troba paraules a tota la transcripció (prem Retorn per saltar d'una coincidència a la següent), i **View profile** obre el perfil demogràfic i psicològic del participant.
+
+## Llegeix una sessió
+
+La columna de l'esquerra és la transcripció; la de la dreta mostra les captures de pantalla. Les dues estan sincronitzades: si et desplaces pels passos, la captura els segueix, i si avances per les captures, la transcripció també. Arrossega el separador per canviar l'amplada de les columnes.
+
+- **Targeta de la tasca.** La tasca que s'ha donat als participants, tal com l'has escrita a la fase **Build**.
+- **Targetes de pas.** Els passos consecutius a la mateixa pantalla comparteixen targeta, amb l'etiqueta **Step 3** o **Steps 3-5**. Cada acció mostra què ha fet el participant (un clic, escriure, desplaçar-se) i el seu comentari en primera persona. Fes clic a **Show more details** per veure el text que ha escrit a **Input value**, el seu raonament a **Reasoning** i, a **Expectation**, què esperava que passés a continuació.
+- **Targeta de resum.** La reflexió final del participant sobre tot el recorregut. **Show more details** obre l'apartat **Issues analysis**.
+
+Els senyals d'error apareixen a les targetes de pas: una icona d'acció destacada vol dir **This action did not advance the tester**, i el bàner **Too many actions failed - skipped to next frame** apareix quan cap de les accions d'una pantalla no ha fet avançar el participant. Als llocs web en producció, una etiqueta **Access denied** marca el pas en què el participant ha quedat bloquejat.
+
+Fes servir el menú de vista del frame, a sobre de les captures, per canviar entre **Clickmap** (on ha fet clic el participant), **Heatmap** i **Image** (la captura tal qual).
+
+## Xateja amb un participant en un pas
+
+A la targeta del pas actiu, fes clic a **Chat** per preguntar al participant sobre aquell moment concret, per exemple per què s'ha saltat un botó o què esperava trobar. Respon amb el que sabia en aquell pas. Consulta [Xateja amb els participants](/ca/chat-with-testers).
+
+## Mentre el test s'executa
+
+Les transcripcions arriben en directe mentre el bloc s'executa, i aquesta és l'única pestanya disponible fins que acaba l'execució. Si et desplaces cap amunt mentre arriben passos nous, fes clic a **New transcripts (N)** per saltar a la més recent.
+
+Si tots els participants d'IA han quedat bloquejats en un lloc web en producció, un bàner explica que el test no s'ha pogut completar i que s'ha reemborsat el 80% dels crèdits.
+
+## Límits del pla Free
+
+Al pla Free, veus les accions i els comentaris de tots els participants, però els camps **Reasoning** i **Expectation** de cada pas estan bloquejats. Passa a un pla de pagament per desbloquejar-los. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+<Note>
+  Aquesta pestanya mostra els participants d'IA. Per veure les gravacions dels participants humans de la mateixa tasca, canvia el tipus de participant a **Human participants**. Consulta [Resultats dels participants humans](/ca/human-insights).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Següent: Analítica i recorreguts" icon="arrow-right" href="/ca/analytics">
+    Consulta la taxa d'èxit, els clics erronis, els mapes de calor i els camins de tots els participants.
+  </Card>
+  <Card title="Xateja amb els participants" icon="message-circle" href="/ca/chat-with-testers">
+    Fes preguntes de seguiment després del test.
+  </Card>
+</CardGroup>

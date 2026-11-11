@@ -1,0 +1,84 @@
+---
+title: "Analitza els resultats"
+sidebarTitle: "Visió general"
+description: "Segueix el test en directe i consulta'n els resultats bloc per bloc: progrés, participants d'IA i humans, filtres, aturada del test i reemborsaments."
+---
+
+La fase **Analyze** és on trobes els resultats. No cal que esperis que acabi el test: els resultats van arribant bloc per bloc mentre els participants avancen pel test. Fes clic a **Analyze** a la capçalera del test per obrir-la. Està disponible un cop llances el test, crees un enllaç de test o sol·licites un panell humà.
+
+## Orienta't
+
+- **Capçalera.** Fes clic al títol del test per veure el nombre de participants i la data, i per fer **Rename**, **Export** o **Share** del test (consulta [Comparteix i exporta](/ca/share-and-export)). A la dreta hi ha l'indicador de crèdits retornats, **Stop test** mentre el test està en marxa, i el selector de participants.
+- **Barra lateral.** A la part superior hi ha un selector **Blocks | Chat**. **Blocks** mostra una fila per bloc; **Chat** obre [Ask AI](/ca/ask-ai).
+- **Resultats.** Els resultats del bloc seleccionat, amb pestanyes que depenen del tipus de bloc. Fes servir la bombolla **Share feedback on these results** per dir-nos com t'han estat d'útils.
+
+Cada fila de bloc mostra el títol i un subtítol. Mentre el test està en marxa, el subtítol mostra l'estat del bloc:
+
+| Estat | Significat |
+|---|---|
+| **Waiting...** | El bloc encara no ha començat. |
+| Pas actual i percentatge | El bloc s'està executant. |
+| **Failed** | El bloc no s'ha pogut acabar. |
+| **Stopped** | Has aturat el test abans que aquest bloc es completés. |
+| **Not executed** | El bloc no s'ha executat. |
+| Icona d'avís vermella | Els participants no han arribat a aquest bloc, i se n'han retornat els crèdits. |
+
+## Segueix un test en marxa
+
+Una barra de progrés a sobre dels resultats mostra quin bloc s'està executant i el percentatge global del test. La fila del bloc en marxa a la barra lateral mostra el pas actual, per exemple "Gathering tester feedback..." o "Identifying key issues..." en una tasca, "Collecting participant responses..." en una enquesta, "Sorting cards..." en un card sorting o "Scanning interface..." en una revisió d'accessibilitat.
+
+Mentre s'executa un bloc de tasca, s'obre a la pestanya **Transcripts** perquè puguis seguir els participants en directe. Les altres pestanyes es desbloquegen quan el bloc acaba. Consulta [Transcripcions del test](/ca/test-transcripts).
+
+<Tip>
+  No cal que tinguis la pàgina oberta. "You can leave this page and come back later. We'll email you as soon as it finishes."
+</Tip>
+
+## Canvia entre participants d'IA i humans
+
+El selector de participants de la capçalera alterna tota la vista d'Analyze entre **AI participants** i **Human participants** (consulta [Resultats dels participants humans](/ca/human-insights)).
+
+Per acotar els resultats, fes clic al comptador que hi ha al costat del selector, selecciona audiències (participants d'IA) o enllaços de test (participants humans) i fes clic a **Filter**. La selecció s'aplica a tota la vista d'Analyze. Els filtres funcionen quan el test acaba d'analitzar els resultats. Al pla Free, el selector i els filtres estan bloquejats; el filtratge està disponible a partir del pla Starter.
+
+## Consulta els resultats de cada bloc
+
+| Bloc | Pestanyes | Més informació |
+|---|---|---|
+| Tasca | **Insights**, **Transcripts**, **Analytics**, **Journeys**, i també **Benchmarks** quan SUS o UXIA-Q estan activats | [Insights i UOS](/ca/results), [Transcripcions](/ca/test-transcripts), [Analítiques](/ca/analytics), [Benchmarks](/ca/benchmark-results) |
+| Enquesta | **Responses**, **Participants** | [Resultats de l'enquesta](/ca/survey-results) |
+| Card sorting | **Results**, **Agreement Matrix**, **Similarity Matrix** | [Resultats del card sorting](/ca/card-sorting-results) |
+| Revisió d'accessibilitat | **Results**, **Vision Simulation** | [Avaluació de criteris](/ca/criteria-evaluation), [Simulació de visió](/ca/vision-simulation) |
+
+En lloc de resultats, un bloc pot mostrar **Waiting for previous blocks to finish...**, **Test stopped** (el test s'ha aturat abans que el bloc acabés) o **No participants reached this block** (tots els participants han abandonat abans). Abans de llançar els participants d'IA, veuràs **No AI participants yet**; fes clic a **Recruit AI participants** per anar a la fase Recruit.
+
+## Atura un test en marxa
+
+<Steps>
+  <Step title="Fes clic a Stop test">
+    Apareix a la capçalera mentre els participants d'IA estan en marxa.
+  </Step>
+  <Step title="Revisa el reemborsament">
+    El diàleg explica: "You'll receive a partial credit refund. Only results from blocks completed before the interrupted block will remain available." Mostra el reemborsament de cada bloc i el total a **Credits to return**.
+  </Step>
+  <Step title="Confirma">
+    Torna a fer clic a **Stop test**. Els blocs que no s'han completat mostren **Stopped**.
+  </Step>
+</Steps>
+
+| Estat del bloc quan l'atures | Reemborsament |
+|---|---|
+| No començat | El 100% dels crèdits |
+| En marxa | El 50% dels crèdits |
+| Completat | Cap; els resultats continuen disponibles |
+
+## Crèdits retornats
+
+Quan et retornen crèdits, apareix a la capçalera un indicador amb una moneda i el total, un cop acaba l'execució. Això passa quan atures un test i quan hi ha participants que abandonen abans d'arribar als blocs posteriors: "We returned the credits for tasks and questions that some participants did not get to carry out." Fes clic a l'indicador per veure el reemborsament per bloc. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Ask AI" icon="sparkles" href="/ca/ask-ai">
+    Fes preguntes sobre tot el test en llenguatge natural.
+  </Card>
+  <Card title="Comparteix i exporta" icon="share-2" href="/ca/share-and-export">
+    Comparteix un enllaç de només lectura o exporta un informe en PDF.
+  </Card>
+</CardGroup>

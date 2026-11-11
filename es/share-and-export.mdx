@@ -1,0 +1,85 @@
+---
+title: "Compartir y exportar"
+description: "Comparte un enlace de solo lectura a los resultados de tu test o exporta en un informe PDF los bloques y secciones que elijas."
+---
+
+Puedes hacer llegar tus resultados a las partes interesadas de dos formas: compartir un enlace a los resultados en directo o exportar un informe PDF. Ambas empiezan desde el título del test en la cabecera. Haz clic en él para abrir el menú con **Rename**, **Export** y **Share**.
+
+## Compartir un enlace a los resultados
+
+<Steps>
+  <Step title="Abre Share">
+    Haz clic en el título del test y elige **Share**. Se abre el cuadro de diálogo **Share this test**.
+  </Step>
+  <Step title="Haz público el test">
+    Activa **Make this test's URL public**. Verás "Test is now public", y el cuadro de diálogo mostrará "Anyone with the link can view."
+  </Step>
+  <Step title="Copia el enlace">
+    Haz clic en el botón de copiar junto al enlace y envíalo a quien necesite ver los resultados.
+  </Step>
+</Steps>
+
+Mientras el test es público, la opción **Share** del menú dice "This test is public". Para dejar de compartirlo, desactiva el interruptor. Verás "Test is now private" y el enlace dejará de funcionar. Si vuelves a hacer público el test, obtendrás un enlace nuevo.
+
+<Warning>
+  Cualquiera que tenga el enlace puede abrir los resultados sin iniciar sesión. No hay contraseña ni caducidad, así que desactiva el uso compartido cuando ya no necesites el enlace.
+</Warning>
+
+### Qué ven las personas con el enlace
+
+El enlace abre la fase **Analyze** en modo de solo lectura. Quienes lo abren pueden recorrer todos los bloques y sus pestañas de resultados, pero no pueden:
+
+- Usar [Ask AI](/es/ask-ai) ni [chatear con participantes](/es/chat-with-testers)
+- Filtrar ni cambiar de participante
+- Renombrar, exportar o compartir el test, ni editar nada en él
+- Ver las listas de comprobación de los resultados de la revisión de accesibilidad ni marcar criterios como superados
+
+## Exportar un informe PDF
+
+<Note>
+  La exportación a PDF está disponible en los planes Pro y Custom. En los demás planes, **Export** te pide que mejores tu plan.
+</Note>
+
+<Steps>
+  <Step title="Abre Export">
+    Haz clic en el título del test y elige **Export**. Se abre el cuadro de diálogo **Export PDF Report**: "Select which blocks and sections to include in your report."
+  </Step>
+  <Step title="Elige bloques y secciones">
+    Cada bloque tiene una casilla que incluye o quita todas sus secciones. Haz clic en un bloque para desplegarlo y elegir secciones concretas. La fila muestra cuántas secciones hay seleccionadas.
+  </Step>
+  <Step title="Añade detalles y la marca">
+    En **Details**, selecciona **Audiences** para añadir las audiencias y los perfiles de los participantes. En un test con [variantes A/B](/es/ab-variants), **Variant comparison** añade el informe comparativo cuando esté listo. En **Branding**, comprueba con qué marca saldrá el informe.
+  </Step>
+  <Step title="Exporta">
+    Haz clic en **Export PDF**. El informe se descarga como *Test name - Results.pdf*, con un índice.
+  </Step>
+</Steps>
+
+### Secciones por bloque
+
+| Bloque | Secciones y opciones |
+|---|---|
+| Tarea | **Uxia Optimization Score™**; **Insights Report**, filtrado por **All insights**, **High relevance only**, **Starred insights only** o **Select specific insights**; **SUS & UXIA-Q** (los benchmarks que activaste); **Heatmaps** (tareas con prototipo); **Transcripts**, opcionalmente con imágenes de cada paso que muestran los clics y las áreas interactivas |
+| Encuesta | Una sección por pregunta, además de **Include graphs** e **Include individual responses** |
+| Revisión de accesibilidad | **Summary**; **Screen-by-screen criteria**, filtrado por estado, nivel de conformidad y alcance de la revisión; **Manual Review & Cross-Screen** |
+
+Todas las secciones empiezan seleccionadas excepto **Transcripts**. En **Screen-by-screen criteria**, los elementos fallidos y los que requieren revisión se incluyen por defecto, y los superados no.
+
+Los bloques sin resultados exportables aparecen en la lista, pero no se pueden seleccionar y muestran el mensaje "Results are not available for export yet." Esto incluye los bloques de card sorting, que todavía no se pueden exportar, y los bloques que se detuvieron.
+
+### Marca
+
+Los informes llevan la marca de Uxia por defecto. En el plan Custom, puedes exportar con tu propio logotipo y tus colores: elige **Custom branding** o **Uxia branding** en el cuadro de diálogo. Si todavía no tienes tu marca configurada, haz clic en **Contact us** en el cuadro de diálogo y la configuraremos para tu organización.
+
+## Exportar frames
+
+Para descargar pantallas con un mapa de calor o un mapa de clics superpuesto, de una en una o todas juntas en un archivo ZIP, haz clic en el botón de descarga de la pestaña **Analytics** de un bloque de tarea para abrir **Export Frames**. Consulta [Analíticas y recorridos](/es/analytics).
+
+<CardGroup cols={2}>
+  <Card title="Analizar resultados" icon="chart-bar" href="/es/analyze-results">
+    Oriéntate en la fase Analyze.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/es/ask-ai">
+    Haz preguntas sobre todo tu test en lenguaje natural.
+  </Card>
+</CardGroup>

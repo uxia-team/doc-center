@@ -1,0 +1,73 @@
+---
+title: "Transcripciones"
+description: "Sigue paso a paso a cada participante de IA en un bloque de tarea: qué hizo, qué dijo, por qué y qué vio."
+---
+
+La pestaña **Transcripts** de un [bloque de tarea](/es/task-block) reproduce paso a paso la sesión de cada participante de IA. Mientras que [Insights](/es/results) te dice *qué* falló en el conjunto de participantes, una transcripción te muestra *por qué*: cada acción, lo que el participante piensa en voz alta y la pantalla que estaba mirando.
+
+Recurre a ella cuando quieras contrastar un insight con la sesión sin procesar, entender un abandono o citar a un participante con sus propias palabras. Desde la pestaña **Evidence** de un insight, al hacer clic en una cita vas directamente a ese momento aquí.
+
+## Elige un participante
+
+Usa el selector de participantes de la parte superior izquierda para cambiar de sesión. Si hay varias audiencias, los participantes se agrupan por audiencia. Los participantes que no completaron una tarea obligatoria anterior aparecen en **Didn't reach this task** y quedan excluidos de las estadísticas de esta tarea.
+
+Debajo del selector:
+
+| Elemento | Qué muestra |
+|---|---|
+| Etiqueta de resultado | Cómo terminó la sesión |
+| **Steps** | El número de pasos registrados para este participante |
+| **Misclicks** | El porcentaje de interacciones que no dieron en un área interactiva válida. No está disponible en las tareas de sitio web en producción. |
+
+La etiqueta de resultado es una de estas:
+
+| Etiqueta | Significado |
+|---|---|
+| **Success** | El participante completó la tarea. |
+| **Drop-off** | El participante no completó la tarea. |
+| **Drop-off \| Access denied** | El sitio denegó el acceso al participante o lo bloqueó con una protección antibots. |
+| **Stalled** | El participante no podía avanzar y se terminó la sesión. |
+| **Max steps** | El participante alcanzó el número máximo de pasos permitidos en una ejecución. Contacta con nosotros si necesitas un límite más alto. |
+
+Los prototipos multimedia configurados como **Sequential flow** no muestran la etiqueta, los pasos ni los clics erróneos.
+
+A la derecha, **Search** busca palabras en toda la transcripción (pulsa Intro para saltar de una coincidencia a otra), y **View profile** abre el perfil demográfico y psicológico del participante.
+
+## Lee una sesión
+
+La columna de la izquierda es la transcripción; la de la derecha muestra las capturas de pantalla. Están sincronizadas: si te desplazas por los pasos, la captura los sigue, y si avanzas por las capturas, la transcripción las sigue. Arrastra el separador para cambiar el tamaño de las columnas.
+
+- **Tarjeta de la tarea.** La tarea que recibieron los participantes, tal como la escribiste en la fase Build.
+- **Tarjetas de pasos.** Los pasos consecutivos en la misma pantalla comparten tarjeta, con la etiqueta **Step 3** o **Steps 3-5**. Cada acción muestra lo que hizo el participante (un clic, escribir, desplazarse) y su comentario en primera persona. Haz clic en **Show more details** para ver el **Input value** que escribió, su **Reasoning** y su **Expectation** sobre lo que pasaría a continuación.
+- **Tarjeta de resumen.** La reflexión final del participante sobre todo el recorrido. **Show more details** abre su **Issues analysis**.
+
+Las señales de fallo aparecen en las tarjetas de pasos: un icono de acción resaltado significa **This action did not advance the tester**, y el banner **Too many actions failed - skipped to next frame** aparece cuando ninguna de las acciones en una pantalla hizo avanzar al participante. En los sitios web en producción, una etiqueta **Access denied** marca el paso en el que se bloqueó al participante.
+
+Usa el menú de vista de frames que hay encima de las capturas para cambiar entre **Clickmap** (dónde hizo clic el participante), **Heatmap** e **Image** (la captura sin más).
+
+## Chatea con un participante en un paso
+
+En la tarjeta del paso activo, haz clic en **Chat** para preguntar al participante por ese momento concreto, por ejemplo por qué se saltó un botón o qué esperaba encontrar. Responde con lo que sabía en ese paso. Consulta [Chatea con los participantes](/es/chat-with-testers).
+
+## Mientras el test se está ejecutando
+
+Las transcripciones llegan en directo mientras se ejecuta el bloque, y esta es la única pestaña disponible hasta que termina la ejecución. Si te desplazas hacia arriba mientras llegan pasos nuevos, haz clic en **New transcripts (N)** para ir a la más reciente.
+
+Si se bloqueó a todos los participantes de IA en un sitio web en producción, un banner explica que el test no se pudo completar y que se reembolsó el 80 % de los créditos.
+
+## Límites del plan Free
+
+En el plan Free, ves las acciones y los comentarios de todos los participantes, pero el **Reasoning** y la **Expectation** de cada paso están bloqueados. Pásate a un plan de pago para desbloquearlos. Consulta [Planes y créditos](/es/account/plans-and-credits).
+
+<Note>
+  Esta pestaña muestra a los participantes de IA. Para ver las grabaciones de los participantes humanos en la misma tarea, cambia el tipo de participante a **Human participants**. Consulta [Resultados de los participantes humanos](/es/human-insights).
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Siguiente: Analítica y recorridos" icon="arrow-right" href="/es/analytics">
+    Consulta la tasa de éxito, los clics erróneos, los mapas de calor y los caminos de todos los participantes.
+  </Card>
+  <Card title="Chatea con los participantes" icon="message-circle" href="/es/chat-with-testers">
+    Haz preguntas de seguimiento después del test.
+  </Card>
+</CardGroup>

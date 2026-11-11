@@ -1,0 +1,75 @@
+---
+title: "Crear una audiencia"
+sidebarTitle: "Crear una audiencia"
+description: "Crea una audiencia de Uxia paso a paso: define filtros o usa Quick Fill, genera participantes de IA y elige quién hace tu test en la fase Recruit."
+---
+
+Esta página explica cómo se crea una audiencia y cómo se revisan sus participantes de IA. Para los conceptos que hay detrás (las tres capas y cómo funcionan los participantes de IA), consulta la [Descripción general](/es/audiences/overview).
+
+## Dónde crear una audiencia
+
+Puedes crear una audiencia desde dos lugares:
+
+- **AI Audience** en la barra lateral. Haz clic en **Create audience** para crear una que puedas reutilizar en cualquier test.
+- **La fase Recruit de un test.** Abre **AI participants** y haz clic en **Create audience**. Cuando termines, la nueva audiencia se añade al test.
+
+Cada audiencia se muestra como una tarjeta con su nombre, el número de participantes, el rango de edad y la distribución por género. Desde su menú puedes elegir **View participants**, **Review filters**, **Rename**, **Clone** o **Delete**. Al clonar se copian los criterios y los filtros, pero no los participantes generados, así que generarás un conjunto nuevo en la copia. Es útil cuando quieres una variante de un segmento que ya tienes.
+
+## Configurar los filtros
+
+En el creador, ponle un nombre a la audiencia y activa filtros desde el selector de la derecha; los filtros activos se van reuniendo a la izquierda. Las audiencias nuevas empiezan con los tres filtros básicos ya activos:
+
+- **Age**: un rango cualquiera entre 18 y 100 años
+- **Gender**: hombre, mujer o ambos
+- **Languages**: inglés por defecto, con la opción de que coincida con cualquiera de los idiomas seleccionados o con todos
+
+Además de estos, hay un conjunto más amplio de filtros para acotar el segmento: país de residencia y nacionalidad, soltura tecnológica, estudios, estado civil y situación laboral, sector, puesto, e ingresos del hogar o personales. También hay un campo de texto libre, **Custom Details**, para el estilo de vida, las motivaciones, las rutinas u otros rasgos. No hace falta que lo rellenes todo: lo que dejes en blanco se completa automáticamente para que cada participante de IA sea coherente.
+
+<Note>
+  Los filtros avanzados y Quick Fill dependen del plan. En los planes inferiores verás el aviso **Unlock more audience filters** donde aparecerían.
+</Note>
+
+### Quick Fill
+
+Si prefieres no configurar los filtros a mano, **Quick Fill** (arriba a la derecha) lo hace por ti de una de estas dos formas:
+
+- **Smart URL**: pega la URL de un producto o sitio web y Uxia analiza la página, deduce a quién va dirigido el producto y te propone un conjunto de filtros que encaje para que lo revises y lo ajustes.
+- **Manual**: describe a tus usuarios objetivo en texto libre (un perfil de la audiencia) y deja que Uxia lo convierta en filtros.
+
+Si continúas sin ningún filtro, Uxia te avisa de que generará participantes aleatorios.
+
+## Generar participantes de IA
+
+Cuando tengas los filtros listos, haz clic en **Populate audience** y confirma. Uxia guarda la audiencia y empieza a generar en segundo plano participantes de IA que cumplen tus criterios.
+
+<Warning>
+  Una vez generados los participantes, los filtros y los detalles de la audiencia quedan **bloqueados**. Para cambiarlos, crea una audiencia nueva; clonar una existente es la forma más rápida de reutilizar los mismos criterios.
+</Warning>
+
+Para revisar el resultado, elige **View participants** en la tarjeta de la audiencia. Cada participante de IA aparece como una tarjeta con dos vistas:
+
+- una vista **demográfica y de estilo de vida**: nacionalidad, país, idiomas, soltura tecnológica, estudios, sector, puesto, situación laboral, ingresos y una breve descripción. Los campos que has definido tú tienen un estilo distinto de los que ha completado Uxia.
+- una vista de **perfil psicológico**: el gráfico de radar OCEAN y un relato de las motivaciones del participante y de su forma de tomar decisiones
+
+Los participantes de IA creados con enriquecimiento llevan la etiqueta **Enriched**. Si alguno no te convence, **Replace tester** lo sustituye por un perfil nuevo que sigue cumpliendo todos tus criterios. **Review Audience Filters** abre un panel lateral con los filtros a partir de los que se creó la audiencia.
+
+## Elegir participantes para un test
+
+Quién hace un test se elige en la fase Recruit, no en la propia audiencia. Incluye hasta tres audiencias y luego:
+
+- usa **Distribute evenly** para repartir el número de participantes a partes iguales entre las audiencias, o
+- usa **Handpick participants** para elegir participantes de IA concretos de cada audiencia.
+
+El número de participantes de IA que puedes usar depende de tu plan. Consulta [Participantes de IA](/es/ai-participants) para ver el flujo completo.
+
+## Siguientes pasos
+
+<CardGroup cols={2}>
+  <Card title="Participantes de IA" href="/es/ai-participants">
+    Añade audiencias a un test, define el número de participantes y lánzalo.
+  </Card>
+
+  <Card title="Enriquecimiento de audiencias" href="/es/audiences/enrichment">
+    Ve más allá con participantes de IA creados a partir de tus propias personas, entrevistas e investigación.
+  </Card>
+</CardGroup>

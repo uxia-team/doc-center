@@ -1,0 +1,91 @@
+---
+title: "Insights i UOS"
+sidebarTitle: "Insights"
+description: "Consulta els insights d'un bloc de tasca, entén-ne l'Usability Optimization Score i obre l'impacte, les evidències i la solució de cada insight."
+---
+
+Quan un [bloc de tasca](/ca/task-block) acaba, obre'l a la fase **Analyze** per veure amb què s'han trobat els participants. La pestanya **Insights** mostra tots els problemes i les troballes, ordenats, i la capçalera del bloc resumeix el resultat en un sol número: l'**Usability Optimization Score (UOS)**.
+
+## Les pestanyes d'un bloc de tasca
+
+| Pestanya | Què mostra |
+|---|---|
+| **Insights** | Insights ordenats, amb evidències i solucions (aquesta pàgina) |
+| **Transcripts** | La sessió de cada participant, pas a pas ([Transcripcions](/ca/test-transcripts)) |
+| **Analytics** | Èxit, abandonament, clics erronis i mapes de calor ([Analítica i recorreguts](/ca/analytics)) |
+| **Journeys** | Els camins que han seguit els participants ([Analítica i recorreguts](/ca/analytics)) |
+| **Benchmarks** | Puntuacions SUS i UXIA-Q, si estan activades ([Resultats dels benchmarks](/ca/benchmark-results)) |
+
+Mentre el bloc s'executa, només està disponible **Transcripts**, que s'omple en directe. Les altres pestanyes es desbloquegen quan acaba l'execució. Si tots els participants d'IA han quedat bloquejats en un lloc web en producció, només continua disponible **Transcripts**.
+
+## La capçalera del bloc
+
+Fes clic a la fletxa que hi ha al costat del títol del bloc per desplegar **Test setup**, que mostra **Scenario**, **Stop condition** (a les tasques de lloc web en producció i de prototip de Figma), **Product status** (**Finished product** o **Prototype**) i **Source**. Fes clic a l'origen per obrir el lloc web en una pestanya nova o per veure els frames del prototip que has provat.
+
+## Usability Optimization Score
+
+L'etiqueta de l'UOS, a la dreta de la capçalera del bloc, mostra una puntuació de 0 a 100 dins d'un anell, amb un comentari breu. Fes-hi clic per llegir **What is the Usability Optimization Score?** i saber què vol dir el teu resultat.
+
+La puntuació pondera cada insight segons la seva rellevància i segons quants participants s'hi han trobat, de manera que reflecteix el que ha viscut un participant típic:
+
+- Una audiència més gran fa aflorar més insights, però això sol no fa baixar la puntuació.
+- Un flux més llarg no es penalitza per donar més feina als participants.
+- Els participants que no completen la tasca fan baixar la puntuació.
+- Els insights classificats com a **Prototype** en queden fora. Assenyalen limitacions del prototip, no del teu disseny.
+
+| Comentari | Què vol dir |
+|---|---|
+| **High drop-off** | Més de la meitat dels participants no han completat la tasca. Revisa els seus recorreguts i la configuració del test. |
+| **Improvement opportunities** | Almenys un insight de rellevància **High** requereix atenció. Comença per aquí. |
+| **Frictions worth fixing** | Hi ha oportunitats importants per millorar l'experiència. |
+| **Minor frictions** | En general, l'experiència funciona bé, però hi ha alguns aspectes per millorar. |
+| **Strong foundation** | L'experiència està en bona forma, amb marge per millorar-la encara més. |
+| **Highly optimized** | En aquest test s'ha detectat poca fricció. |
+
+Quan filtres els resultats per audiència, l'UOS es recalcula per a les audiències que has seleccionat. Els benchmarks (SUS i UXIA-Q) es presenten per separat i no influeixen en l'UOS.
+
+## La pestanya Insights
+
+La pestanya s'obre amb el nombre d'insights detectats (per exemple, **12 insights reported**) i un quadre **Search** que cerca en els títols, les descripcions i les categories. La taula té quatre columnes:
+
+| Columna | Què mostra |
+|---|---|
+| **Title** | L'insight. Fes clic al marcador per destacar-lo i moure'l a dalt de tot de la taula. |
+| **Relevance** | **High**, **Medium**, **Low** o **Prototype** (pot venir d'una limitació del prototip més que no pas del teu disseny). La pots canviar. |
+| **Reporters** | Etiquetes d'audiència i quants participants han detectat l'insight, per exemple **2 out of 5**. |
+| **Category** | El tipus de problema. Passa-hi el cursor per veure'n la definició. |
+
+Les categories són **Navigation**, **CTAs**, **Copy**, **Trust**, **Usability**, **Visual Design** i **Other**. Els insights s'ordenen amb els destacats primer, després per rellevància i després pel nombre de participants que els han detectat.
+
+### Canvia la rellevància d'un insight
+
+Fes clic a la rellevància de qualsevol insight i tria un valor nou. Aleshores l'etiqueta mostra **Edited**, i el desplegable marca el valor original amb **(original rating)** perquè hi puguis tornar. El canvi actualitza l'UOS. Classifica un insight com a **Prototype** per treure'l de la puntuació.
+
+## Detalls d'un insight
+
+Fes clic en una fila per obrir **Insight details**. El panell mostra el títol, la rellevància, la categoria, qui l'ha detectat, una descripció i els frames afectats en què ha aparegut el problema. A sota, hi ha tres pestanyes:
+
+- **Impact.** Una **Impact Assessment** dividida en **User Impact** i **Business Impact**.
+- **Evidence.** **What Testers Said**: cites agrupades per participant. Fes clic en una cita per anar al moment en què el participant la va dir. Quan l'insight tracta del comportament més que no pas del que s'ha dit, hi veus **What Testers Did**, amb la llista **Observed in** dels participants en què s'ha observat.
+- **Fix.** Una **Fix Suggestion** amb els **Acceptance criteria**, seguida d'un **Prompt** que pots copiar amb **Copy** o ampliar amb **Expand** i enganxar en una eina de programació amb IA. Els resultats més antics mostren, en canvi, una valoració de **Technical Complexity**: **Quick fix**, **Requires planning** o **Major redesign**.
+
+<Tip>
+  Per portar els insights a Claude Code, Cursor o una altra eina d'IA sense haver de copiar i enganxar, connecta el [servidor MCP d'Uxia](/ca/integrations/mcp).
+</Tip>
+
+## Límits del pla Free
+
+Al pla Free, la pestanya Insights només mostra els insights principals (fins a 5) i t'indica quants n'hi ha d'ocults: **You are missing +N insights**. La descripció, els frames afectats i la pestanya **Impact** continuen visibles; **Evidence** i **Fix** queden bloquejades. Els plans de pagament ho mostren tot. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+## Participants humans
+
+Aquestes pestanyes mostren els resultats dels participants d'IA. Per veure què han fet els participants humans en la mateixa tasca, canvia el tipus de participant a **Human participants**. Consulta [Resultats dels participants humans](/ca/human-insights) i [Analitza els resultats](/ca/analyze-results).
+
+<CardGroup cols={2}>
+  <Card title="Següent: Transcripcions" icon="arrow-right" href="/ca/test-transcripts">
+    Segueix la sessió de cada participant, pas a pas.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ca/ask-ai">
+    Fes preguntes sobre els resultats en llenguatge natural.
+  </Card>
+</CardGroup>

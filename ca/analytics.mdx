@@ -1,0 +1,89 @@
+---
+title: "Analítica i recorreguts"
+description: "Mesura com s'han mogut els participants d'IA per un bloc de tasca: èxit, abandonament, clics erronis, passos, mapes de calor i camins seguits."
+---
+
+Mentre que els [insights](/ca/results) et diuen quins són els problemes, les pestanyes **Analytics** i **Journeys** d'un [bloc de tasca](/ca/task-block) mostren com s'han mogut realment els participants pel flux i on hi ha hagut fricció. Tot el que hi ha aquí es deriva de les [transcripcions](/ca/test-transcripts) dels participants i reflecteix les audiències seleccionades al filtre de resultats.
+
+Fes servir aquestes pestanyes per respondre preguntes com ara: quants participants han acabat? Quina pantalla provoca clics erronis? Quants passos sol requerir l'èxit? En quin punt se separen els camins amb èxit dels que fracassen?
+
+## Analítica
+
+### Mètriques de resum
+
+| Mètrica | Què mostra |
+|---|---|
+| **Testers** | Participants amb activitat en aquest bloc, sobre el total dels que han començat el test (per exemple, **4 / 5**). Els participants que no han completat una tasca obligatòria anterior no arriben a aquesta. |
+| **Success Rate** | Proporció de participants que han completat la tasca |
+| **Drop-off** | Proporció de participants que no han completat la tasca |
+| **Misclick Rate** | Proporció d'interaccions avaluades que no han activat cap àrea interactiva vàlida |
+| **Avg. Number of Steps** | Mitjana de passos per participant |
+| **Min Number of Steps**, **Max Number of Steps** | La sessió més curta i la més llarga |
+
+<AccordionGroup>
+  <Accordion title="Com es calculen l'èxit i l'abandonament">
+    Un participant compta com a reeixit quan completa la tasca:
+
+    - A les tasques de **lloc web en producció** i de **prototip de Figma**, quan arriba a la [condició d'aturada](/ca/stop-condition) en qualsevol pas.
+    - Als **prototips multimèdia** amb un frame final, quan el seu darrer pas és en aquest frame.
+    - En la resta de casos, quan arriba al final de la sessió.
+
+    Un participant que abandona en qualsevol pas compta com a no reeixit. **Success Rate** és el nombre de participants reeixits dividit per **Testers**. **Drop-off** és el 100% menys la taxa d'èxit.
+  </Accordion>
+
+  <Accordion title="Com es mesuren els clics erronis">
+    - **Prototips multimèdia (Interactive flow):** dels clics que es poden associar a les àrees interactives de la pantalla, la proporció que no les ha encertat.
+    - **Prototips de Figma:** s'estima com la proporció de clics després dels quals la pantalla no ha canviat. Les esperes no es tenen en compte.
+    - **Llocs web en producció:** no està disponible i es mostra un guió. Un clic en un lloc web real pot canviar la pàgina de maneres que no es poden detectar de manera fiable.
+  </Accordion>
+
+  <Accordion title="Com es compten els passos">
+    Els passos són passos lògics, no accions en brut. La reflexió final del participant no es compta, i els desplaçaments consecutius en la mateixa direcció dins d'un desplegable o d'una llista de suggeriments compten com un sol pas. La mitjana, el mínim i el màxim es calculen sobre tots els participants.
+  </Accordion>
+</AccordionGroup>
+
+### Anàlisi per pantalla
+
+Sota les mètriques, tria qualsevol pantalla de la tira de miniatures, o fes servir les tecles ← i →, per veure com s'hi han comportat els participants. Les pantalles a les quals no ha arribat ningú es marquen com a **Not visited**. Fes clic a la pantalla per obrir-ne una previsualització més gran.
+
+- **Visualització.** Canvia entre **Heatmap** (on es concentren els clics), **Clickmap** (cada clic) i **Image** (la pantalla tal qual).
+- **Filtre de camins.** Quan alguns participants han tingut èxit i d'altres no, tria **All paths**, **Successful paths** o **Failed paths** per comparar-los.
+- **Mètriques de la pantalla.** **Total Testers** (participants que han arribat a la pantalla), **Total Clicks** (interaccions registrades a la pantalla) i **Misclick Rate** d'aquesta pantalla.
+- **Passos dels participants.** Les accions i els comentaris de cada participant en aquesta pantalla, perquè puguis llegir per què han fet clic on l'han fet.
+
+### Exporta frames
+
+Fes clic al botó d'exportació que hi ha al costat del menú de visualització per obrir **Export Frames**. Tria una superposició (**Heatmap Overlay**, **Clickmap Overlay** o **None**), marca opcionalment **Include hotspot areas** per mostrar les àrees interactives del prototip i, després, fes clic a **Export** per baixar la pantalla actual en PNG, o a **Export All (N)** per baixar totes les pantalles en un fitxer ZIP.
+
+## Recorreguts
+
+La pestanya **Journeys** mostra les rutes que han seguit els participants. Fes servir el commutador **Diagram** / **Paths** per canviar de vista.
+
+- **Diagram.** Les columnes van de **Start** a **Screen 2**, **Screen 3** i així successivament. Cada node és una pantalla en aquell punt del recorregut, amb el nombre i la proporció de participants que hi eren (per exemple, **3 testers (60%)**). Uns marcadors indiquen on els participants han completat la tasca o l'han abandonada. Passa el cursor per sobre d'un node per veure qui hi era, i fes-hi clic per previsualitzar la pantalla.
+- **Paths.** Els participants s'agrupen segons la seqüència exacta de pantalles que han visitat, de la més habitual a la menys habitual (**Path 1**, **Path 2**, etc.). Cada camí mostra **Success** només si tots els participants que l'han seguit han completat la tasca; si no, mostra **Drop-off** (o **Drop-off \| Access denied**). També mostra els participants que l'han seguit i els seus **Misclicks**. Fes clic en qualsevol pantalla d'un camí per previsualitzar-la.
+
+Les visites repetides i consecutives a la mateixa pantalla s'agrupen en una de sola. A les tasques de lloc web en producció, és possible que la vista Diagram no estigui disponible; **Paths** sempre ho està.
+
+## Què hi ha disponible per a cada origen
+
+| | Lloc web en producció | Prototip de Figma | Prototip multimèdia, Interactive flow | Prototip multimèdia, Sequential flow |
+|---|---|---|---|---|
+| Success Rate i Drop-off | Sí | Sí | Sí | No |
+| Misclick Rate | No | Estimat | Sí | No |
+| Total Clicks per pantalla | No | Sí | Sí | No |
+| Passos, mapes de calor i camins | Sí | Sí | Sí | Sí |
+
+En un prototip **Sequential flow**, les mètriques no disponibles mostren un guió. Configura el prototip com a **Interactive flow** al [llenç multimèdia](/ca/media-canvas) per obtenir-les.
+
+## Límits del pla Free
+
+Al pla Free, les mètriques de resum són visibles, però l'anàlisi per pantalla i la pestanya **Journeys** estan bloquejades. Passa a un pla de pagament per desbloquejar-les. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Següent: Resultats dels benchmarks" icon="arrow-right" href="/ca/benchmark-results">
+    Consulta les puntuacions SUS i UXIA-Q de la tasca.
+  </Card>
+  <Card title="Insights i UOS" icon="lightbulb" href="/ca/results">
+    Descobreix els problemes que hi ha darrere dels números.
+  </Card>
+</CardGroup>

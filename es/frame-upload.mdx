@@ -1,0 +1,77 @@
+---
+title: "Frames"
+description: "Sube las pantallas que audita la revisión de accesibilidad, añade URL de página opcionales y lanza la auditoría."
+---
+
+Los frames son las pantallas que audita Uxia. Los añades en el campo **Files** del [bloque de revisión de accesibilidad](/es/accessibility-block). Cada archivo se convierte en un frame en los resultados.
+
+## Añadir archivos
+
+Haz clic en **Add files** o arrastra y suelta los archivos sobre el botón. Mientras se suben, el botón muestra **Uploading…**. No salgas de la página hasta que termine. Después, cada archivo aparece con una miniatura, su nombre y un campo **Optional URL**. Para quitar un archivo, haz clic en el icono de la papelera que hay a su lado.
+
+| | Límite |
+|---|---|
+| Formatos | Capturas de pantalla de la interfaz en PNG, JPEG, WebP o GIF |
+| Tamaño de archivo | Hasta 100 MB por archivo |
+| Número de archivos | Hasta 5 por test (planes de pago) |
+| Nombres de archivo | Cada archivo necesita un nombre único |
+| Mínimo | Al menos 1 archivo |
+
+Si seleccionas más archivos de los que caben, Uxia solo añade los que tienen espacio. Cuando llegas a 5 archivos, el botón **Add files** desaparece.
+
+<Tip>
+  Sube pantallas representativas del flujo real en lugar de maquetas aisladas y sin contexto.
+</Tip>
+
+<Warning>
+  El cargador también acepta archivos de vídeo, pero no se pueden auditar: la revisión previa al lanzamiento te pide que los sustituyas por una captura de pantalla de la interfaz en formato PNG, JPEG, WebP o GIF.
+</Warning>
+
+Cada archivo cuesta 10 créditos, así que sube solo pantallas de una interfaz digital. Uxia omite las fotografías, las ilustraciones y los documentos escaneados, y muestra un aviso para ellos en los resultados.
+
+## Añadir una URL de página (opcional)
+
+Si una pantalla ya existe como página web en producción, pega su dirección en el campo **Optional URL** que hay debajo del archivo. Así, Uxia lee el HTML de la página además de la imagen. Esto le permite comprobar criterios que una captura de pantalla no puede confirmar por sí sola, como:
+
+- Si la página tiene un título y un idioma declarado
+- Si las imágenes tienen alternativas textuales
+- Si los campos de formulario identifican su finalidad
+
+Deja el campo vacío para los diseños que todavía no están publicados. La URL debe empezar por `http://` o `https://`, y la página debe ser de acceso público, porque Uxia no puede iniciar sesión en ella.
+
+## Mensajes de error
+
+| Mensaje | Qué hacer |
+|---|---|
+| *Upload an image or video file.* | El archivo no tiene un formato compatible. Exporta la pantalla como PNG, JPEG, WebP o GIF. |
+| *Files must be 100MB or smaller.* | Comprime el archivo o expórtalo con un tamaño menor. |
+| *A file named "…" has already been added.* | Cambia el nombre del archivo o quita primero el que ya existe. |
+| *Enter a valid URL starting with http:// or https://.* | Corrige la dirección en **Optional URL** o bórrala. |
+| *You need to add at least one file* | El bloque no tiene archivos. Añade al menos uno antes de hacer clic en **Start recruiting**. |
+
+## Ejecutar la auditoría
+
+La forma de lanzarla depende de qué más contenga el test.
+
+**El test también tiene bloques de tarea, de encuesta o de card sorting.** Elige a tus participantes en la fase Recruit como de costumbre. La auditoría se ejecuta cuando lanzas los participantes de IA, y los créditos de sus frames se incluyen en el total del lanzamiento. Los participantes humanos se saltan el bloque, así que, si solo reclutas participantes humanos, la auditoría no se ejecuta. Consulta [Reclutar participantes](/es/recruit-participants).
+
+**El test solo contiene la revisión de accesibilidad.** No hay nada que reclutar, así que los métodos de reclutamiento están desactivados.
+
+<Steps>
+  <Step title="Abre la fase Recruit">
+    Haz clic en **Start recruiting**. El **Summary** muestra *"This test only contains an accessibility block, so recruiting testers is not necessary."*
+  </Step>
+  <Step title="Comprueba el coste">
+    **Total credits** muestra el coste de tus frames: 10 créditos por frame.
+  </Step>
+  <Step title="Lanza la auditoría">
+    Haz clic en **Go to analyze** en la tabla de resumen. Uxia comprueba la configuración del test y lanza la auditoría. El estado cambia a **Processing**.
+  </Step>
+  <Step title="Abre los resultados">
+    Vuelve a hacer clic en **Go to analyze** para abrir la fase Analyze. Mientras Uxia trabaja, el bloque muestra *"Accessibility results are still processing."*
+  </Step>
+</Steps>
+
+<Card title="Siguiente: Evaluación de criterios" icon="arrow-right" href="/es/criteria-evaluation">
+  Consulta tus resultados criterio por criterio.
+</Card>

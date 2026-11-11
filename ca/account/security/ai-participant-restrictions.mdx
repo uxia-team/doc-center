@@ -1,0 +1,53 @@
+---
+title: "Restriccions dels participants d'IA a Uxia"
+sidebarTitle: "Restriccions dels participants d'IA"
+description: "Controla què poden fer els participants d'IA en un test: limita cada bloc de tasca a un objectiu, prova en staging i acota cada sessió."
+---
+
+Els participants d'IA són els participants sintètics que Uxia fa servir per provar el teu producte. Només actuen sobre els objectius que els dones i dins dels límits del test que configures: tu decideixes on poden arribar, quin entorn fan servir i fins on pot avançar una sessió. Aquesta pàgina explica els controls que tens per mantenir els participants d'IA ben acotats.
+
+## Els participants només actuen sobre l'objectiu que configures
+
+Cada bloc de tasca s'executa sobre un objectiu que tu proporciones, i els participants no en surten.
+
+- **Un objectiu per bloc de tasca.** Cada bloc de tasca s'executa sobre la seva pròpia URL, prototip de Figma o prototip multimèdia. Els participants només naveguen per aquest objectiu.
+- **Sense desviacions.** Els participants no rastregen més enllà dels teus objectius, no segueixen enllaços cap a dominis aliens i no accedeixen a URL externes que no hagis configurat.
+- **Abast de l'impacte limitat.** Com que cada sessió es limita al producte que vols provar, no hi ha exposició a sistemes ni llocs web fora d'aquest àmbit.
+
+## Fes tests en staging o UAT
+
+Tu tries l'entorn on actuen els participants, així que pots mantenir totes les sessions lluny de producció.
+
+- **Tu tries l'endpoint.** Indica als participants una URL de staging, UAT o preproducció, i aquest serà l'únic lloc on actuaran.
+- **Producció queda intacta.** Com que els participants només actuen sobre l'entorn que proporciones, si proves una versió que no és de producció les sessions es mantenen lluny dels sistemes en funcionament i de les dades reals dels usuaris.
+- **Dades de prova.** Et recomanem fer servir staging o UAT amb dades de prova, que no siguin de producció, per a qualsevol flux que llegeixi o escrigui informació sensible.
+
+## Acota què pot fer una sessió
+
+La [tasca](/ca/mission) i la [condició d'aturada](/ca/stop-condition) que defineixes a cada bloc de tasca determinen fins on arriba un participant.
+
+- **Acota la tasca** a l'acció concreta que vols observar. Els participants actuen per completar aquesta tasca i res més.
+- **Defineix una condició d'aturada** que acabi la sessió en el punt que triïs. Si no vols que els participants completin una acció que escriu dades (enviar un formulari, fer una comanda, canviar una opció de configuració), atura la sessió abans d'aquest pas, per exemple a la pantalla de revisió o de confirmació.
+- **La interacció no surt de l'objectiu.** Els participants només omplen i envien formularis al producte que proves, i només quan la tasca ho requereix. No envien mai dades a llocs externs.
+
+## Mantén un test només d'observació
+
+Quan vulguis que els participants mirin però no facin canvis:
+
+- Planteja la tasca al voltant de la navegació i l'avaluació en lloc de completar un pas transaccional, i fes servir una condició d'aturada que acabi abans de qualsevol acció d'enviar o confirmar.
+- Quan un flux sí que necessiti escriure dades (cistelles, reserves, registres, configuració), dona a cada participant el seu propi compte dedicat perquè les sessions estiguin aïllades i no interfereixin mai entre elles. Consulta [Credencials dels participants](/ca/tester-credentials).
+
+## Limita les credencials i els fitxers
+
+- **Les credencials** dels fluxos amb accés restringit queden limitades al test on s'afegeixen i es xifren en repòs. No s'envien mai al model d'IA: s'injecten de manera segura a la sessió del navegador i s'introdueixen directament als camps corresponents. Fes servir comptes de prova dedicats i canvia-les o elimina-les després de cada execució. Consulta [Credencials dels participants](/ca/tester-credentials).
+- **Els fitxers** que proporciones per als passos de pujada queden limitats al test. El participant d'IA només veu el nom i el tipus de cada fitxer; és el navegador qui adjunta el fitxer. Fes servir documents sintètics en lloc de documents reals. Consulta [Fitxers dels participants](/ca/tester-files).
+
+## Visibilitat completa de cada acció
+
+Cada participant d'IA genera una transcripció pas a pas del que ha vist, les decisions que ha pres i les accions que ha fet durant la sessió. Pots revisar exactament què ha passat i on: consulta [Transcripcions dels tests](/ca/test-transcripts).
+
+Per saber com Uxia emmagatzema i protegeix les dades d'un test, consulta [Privadesa de les dades](/ca/account/security/data-privacy).
+
+<Card title="Següent: privadesa de les dades" icon="lock" href="/ca/account/security/data-privacy">
+  Com emmagatzema i protegeix Uxia les dades d'un test.
+</Card>

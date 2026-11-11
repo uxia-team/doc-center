@@ -1,0 +1,66 @@
+---
+title: "Resultados de la encuesta"
+sidebarTitle: "Resultados"
+description: "Consulta los resultados de un bloque de encuesta: gráficos y temas recurrentes por pregunta, y las respuestas y el razonamiento de cada participante."
+---
+
+Cuando abres un bloque de encuesta en la fase **Analyze**, sus resultados se dividen en dos pestañas:
+
+- **Responses** muestra cómo respondieron *todos* a cada pregunta.
+- **Participants** muestra cómo respondió *un* participante a todas las preguntas.
+
+## Respuestas
+
+Cada pregunta tiene su propia tarjeta. A la izquierda aparecen el número de la pregunta con una etiqueta de tipo, el texto de la pregunta y el contexto que hayas añadido. A la derecha aparecen los resultados, representados según el [tipo de pregunta](/es/question-types):
+
+| Tipo de pregunta | Cómo se muestra |
+|---|---|
+| Multiple choice | Una barra por opción, con las imágenes de las opciones si las añadiste |
+| Rating scale | Una barra por valoración, con tus etiquetas inferior y superior |
+| Ranking | Los elementos ordenados por posición media, del más preferido al menos |
+| Budget allocation | Un gráfico waffle con el reparto medio de los 100 puntos |
+| Open-ended | Temas recurrentes, cada uno con su número de menciones y ejemplos breves |
+
+Las respuestas abiertas se agrupan en temas, así que decenas de respuestas de texto libre se convierten en unas pocas ideas recurrentes en lugar de un muro de texto.
+
+### De la cifra a las personas que hay detrás
+
+Cada gráfico es una puerta de entrada, no un callejón sin salida. Haz clic en una barra, una valoración o un tema para abrir un panel lateral solo con los participantes que dieron esa respuesta. El panel muestra cuántos participantes la dieron, un resumen de lo que dijeron y la explicación de cada participante.
+
+Para leer todas las respuestas a una pregunta, haz clic en **See all N responses** debajo de la pregunta. Haz clic en **View summary** para volver al gráfico. En pantallas anchas, el índice **Questions** de la derecha te permite saltar de una pregunta a otra.
+
+### Avisos que puedes ver
+
+- **"Only testers who completed the mission answered this question."** La pregunta tenía activado **Only ask testers who complete the flow** en el [bloque de encuesta](/es/survey-block), así que los participantes de IA que no completaron la tarea se la saltaron.
+- **"Clusters were calculated from the whole participant group."** Has filtrado por audiencia. Los temas se siguen calculando a partir de todos los participantes, y los temas sin respuestas de las audiencias filtradas aparecen atenuados.
+- **No response.** El participante no respondió, por ejemplo porque abandonó antes de completar la tarea.
+
+## Participantes
+
+La pestaña **Participants** te permite leer la encuesta de un participante de principio a fin, lo más parecido a sentarte con esa persona y repasar tus preguntas una a una.
+
+- Elige un participante de la lista o usa **Search participant** para buscar a alguien por su nombre. Para cada persona se indica cuántas preguntas respondió, por ejemplo **4 of 5 answered**.
+- Todas las respuestas aparecen en orden: la elección, la valoración, el ranking o el reparto, seguidos de la explicación del participante con sus propias palabras.
+- Haz clic en **View profile** para ver quién es el participante: sus datos demográficos, su trayectoria y sus rasgos. Cuando una respuesta te sorprenda, el perfil es el primer sitio donde mirar.
+- Haz clic en **Chat** para hacer preguntas de seguimiento al participante. Consulta [Chatear con los participantes](/es/chat-with-testers).
+
+<Tip>
+  Para que los perfiles reflejen a las personas para las que diseñas, usa el [enriquecimiento de audiencias](/es/audiences/enrichment) y basa tus participantes de IA en tu propia investigación de usuarios.
+</Tip>
+
+## Plan Free
+
+En el plan Free, las respuestas de la encuesta están bloqueadas: los gráficos y las respuestas de los participantes quedan ocultos tras el mensaje "Upgrade your plan to unlock charts and participant answers." Pasa a un plan de pago para verlos. Consulta [Planes y créditos](/es/account/plans-and-credits).
+
+## Participantes humanos
+
+Las respuestas de los participantes humanos aparecen en las mismas pestañas **Responses** y **Participants**, con un botón **Play recording** que salta al momento en que el participante respondió. El chat no está disponible para los participantes humanos. Consulta [Resultados de los participantes humanos](/es/human-insights).
+
+<CardGroup cols={2}>
+  <Card title="Chatear con los participantes" icon="message-circle" href="/es/chat-with-testers">
+    Profundiza con cualquier participante de IA en sus respuestas.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/es/ask-ai">
+    Haz preguntas sobre todo tu test en lenguaje natural.
+  </Card>
+</CardGroup>

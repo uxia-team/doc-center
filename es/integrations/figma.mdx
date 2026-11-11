@@ -1,0 +1,62 @@
+---
+title: "Integración con Figma y prototipos en Uxia"
+sidebarTitle: "Figma"
+description: "Usa Figma con Uxia: inicia sesión con tu cuenta de Figma o haz un test con un prototipo público de Figma mediante una tarea con prototipo de Figma."
+---
+
+Hay dos formas de usar Figma con Uxia. Puedes iniciar sesión en Uxia con tu cuenta de Figma, y puedes hacer un test con un prototipo de Figma pegando su enlace en un bloque **Figma prototype task**. Para probar un prototipo no necesitas iniciar sesión en Figma ni tener ninguna conexión con Figma.
+
+## Inicia sesión en Uxia con Figma
+
+Figma está disponible como opción de inicio de sesión social. Cuando creas una cuenta o inicias sesión en Uxia, haz clic en **Continue with Figma** para usar tu acceso de Figma en lugar de crear una contraseña de Uxia aparte.
+
+Esto no tiene nada que ver con probar un prototipo. Puedes usar Figma como proveedor de inicio de sesión sin probar nada de Figma, y puedes probar prototipos de Figma sin iniciar sesión con Figma.
+
+## Haz un test con un prototipo de Figma
+
+Una tarea con prototipo de Figma permite que los participantes completen una tarea en tu prototipo mientras piensan en voz alta. Uxia abre el prototipo desde su enlace, así que debe ser de acceso público.
+
+<Steps>
+  <Step title="Comparte el prototipo públicamente">
+    En Figma, abre el prototipo y configura el uso compartido para que **anyone with the link** pueda verlo. Copia el enlace del prototipo. Empieza por `https://www.figma.com/proto/`.
+  </Step>
+  <Step title="Añade una tarea con prototipo de Figma">
+    En la fase Build de tu test, añade un bloque **Figma prototype task**.
+  </Step>
+  <Step title="Pega el enlace del prototipo">
+    Pega el enlace, elige un viewport y deja que Uxia lo verifique. Si el prototipo no es de acceso público, Uxia te lo indica. Cambia la configuración de uso compartido en Figma y vuelve a verificarlo.
+  </Step>
+  <Step title="Termina el bloque y recluta">
+    Escribe la [tarea](/es/mission), el [escenario](/es/test-scenario) y la [condición de parada](/es/stop-condition), y pasa a la fase Recruit.
+  </Step>
+</Steps>
+
+Como el prototipo es público, tanto los participantes de IA como los humanos pueden abrirlo y usarlo. Consulta [Enlaces de sitios web en producción y de Figma](/es/source) para ver en detalle cómo configurar el enlace, los viewports y la verificación.
+
+## Haz un test con pantallas estáticas de Figma
+
+Si tu diseño todavía no es un prototipo de Figma interactivo, exporta los frames de Figma como imágenes y súbelos a un bloque **Media prototype task**. En el lienzo del prototipo, enlazas las pantallas entre sí para crear un flujo interactivo. Consulta [Prototipo multimedia](/es/media-canvas).
+
+## ¿Qué opción deberías usar?
+
+- **Continue with Figma** cuando quieras crear tu cuenta de Uxia o acceder a ella con tus credenciales de Figma.
+- **Figma prototype task** cuando ya tengas un prototipo de Figma que funcione y quieras que los participantes lo prueben tal cual.
+- **Media prototype task** cuando tengas pantallas estáticas y quieras crear el flujo en Uxia.
+
+## Consejos y buenas prácticas
+
+- Antes de empezar a reclutar, comprueba que el prototipo se abre para alguien que no ha iniciado sesión en Figma.
+- Haz que el enlace apunte al frame inicial del flujo que quieres probar, para que los participantes empiecen en el lugar correcto.
+- Limita el prototipo al flujo de tu tarea. Las páginas y los flujos adicionales facilitan que los participantes se desvíen.
+
+## Relacionado
+
+<CardGroup cols={2}>
+  <Card title="Enlaces de sitios web en producción y de Figma" href="/es/source">
+    Configura el enlace, el viewport y la verificación de una tarea con un sitio web en producción o un prototipo de Figma.
+  </Card>
+
+  <Card title="Prototipo multimedia" href="/es/media-canvas">
+    Sube pantallas y conviértelas en un flujo interactivo.
+  </Card>
+</CardGroup>

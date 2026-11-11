@@ -1,0 +1,83 @@
+---
+title: "Recluta participants"
+sidebarTitle: "Visió general"
+description: "Tria participants d'IA, enllaços de test o un panell humà per al teu test, i llança'l. Descobreix què comprova la revisió del test abans de començar."
+---
+
+La fase **Recruit** és on decideixes qui fa el test. Per obrir-la, fes clic a **Start recruiting** a Build. Primer Uxia comprova els blocs; si falta algun camp obligatori, et porta al primer problema. El pas **Recruit** de la capçalera queda desactivat fins que el test té almenys un bloc.
+
+Quan hi arribes des de Build, s'obre primer la vista de participants d'IA. Si només vols persones, fes clic a **Recruit human participants only** per anar als mètodes de reclutament.
+
+## Tria un mètode de reclutament
+
+| Mètode | Què fa | Cost | Plans |
+|---|---|---|---|
+| [**AI participants**](/ca/ai-participants) | Fa els tests amb participants sintètics de les teves [audiències](/ca/audiences/overview). | Crèdits, per bloc | Tots els plans |
+| [**Test links**](/ca/test-links) | Envia un enllaç a persones que ja tens, pel canal que facis servir. | 0 crèdits | Plans de pagament |
+| [**Human panel**](/ca/human-panel) | Sol·licita participants seleccionats per al teu test. El nostre equip es posa en contacte amb tu per concretar el preu. | Preu fixat pel nostre equip | Plans de pagament |
+
+Pots combinar mètodes en un mateix test. Per exemple, fes servir participants d'IA per obtenir feedback ràpid i comparteix un enllaç de test amb els teus clients. Cada mètode té la seva pròpia fila al resum, i els resultats d'IA i els dels humans es mantenen separats a [Analyze](/ca/analyze-results).
+
+<Note>
+  Al pla Free, els enllaços de test i el panell humà estan bloquejats. Si en selecciones un, s'obre **Upgrade to recruit human participants**.
+</Note>
+
+## Resum
+
+A sota de les targetes de mètodes, **Summary** mostra cada mètode que has iniciat, amb **Participants**, **Audiences / links**, **Status** i **Credits**. Mentre no n'inicies cap, hi diu *"Choose from the methods above to start collecting insights."*
+
+- **AI participants**: l'estat passa de **Not launched** a **Checking test setup** i **Processing**, i acaba a **Completed** o a **Failed**. Els crèdits mostren el cost de l'execució.
+- **Test links**: mostra **Active** o **Stopped**, el nombre de sessions completades i **0 credits**.
+- **Human panel**: mostra **Requested** i **Pricing by our team**.
+
+Cada fila té un enllaç **Go to analyze**. El peu mostra **Total credits** i **Credits after test**. Als plans de pagament, fes clic als crèdits de la fila de participants d'IA per veure el cost de cada bloc.
+
+### Tests només d'accessibilitat
+
+Una [revisió d'accessibilitat](/ca/accessibility-block) no necessita participants. Si és l'únic bloc del test, Recruit mostra *"This test only contains an accessibility block, so recruiting testers is not necessary."* Les targetes de mètodes queden desactivades, i el resum mostra el cost per frame (10 crèdits per frame). Fes clic a **Go to analyze** per executar la revisió.
+
+## Llançament
+
+- **AI participants**: els participants comencen quan fas clic a **Launch test**, després d'una breu revisió del test.
+- **Test links**: els enllaços recullen respostes tan bon punt els crees, sense llançament ni revisió.
+- **Human panel**: la sol·licitud arriba al nostre equip quan fas clic a **Send Request**.
+
+Un cop llançats els participants d'IA, els blocs i les audiències del test queden bloquejats. Encara pots crear enllaços de test per al mateix test.
+
+## Revisió del test
+
+Els resultats només són tan bons com la configuració que hi ha al darrere. Una tasca imprecisa, un escenari de mostra o una pantalla inutilitzable debiliten totes les conclusions que se'n deriven. Per això, abans que comenci cap participant d'IA, Uxia revisa el test.
+
+<Steps>
+  <Step title="Comprovació de la configuració del test">
+    Un diàleg titulat **Checking test setup…** mostra cada bloc. Cadascun passa de **Checking…** a **Complete**, o a **Needs changes** si Uxia hi troba un problema.
+  </Step>
+  <Step title="Aprovat">
+    Si tots els blocs superen la revisió, veuràs **Test confidence approved** i *"Everything is ready. Starting your test…"*. Els participants d'IA comencen, i el resum en mostra el progrés.
+  </Step>
+  <Step title="S'han trobat problemes">
+    Si cal corregir alguna cosa, el diàleg **Test review** mostra *"Some issues to fix before launching:"* per bloc. Fes clic a **Fix in Build** per tornar a Build amb els blocs afectats destacats, o a **Cancel** per quedar-te a Recruit. No s'executa res, i se't retornen els crèdits del llançament.
+  </Step>
+</Steps>
+
+Què comprova la revisió:
+
+| Bloc | Comprovacions |
+|---|---|
+| [Tasca](/ca/task-block) | La [tasca](/ca/mission), l'[escenari](/ca/test-scenario) i la [condició d'aturada](/ca/stop-condition) hi són i tenen sentit, no són text de mostra. Un lloc web en producció té un URL vàlid. Les pantalles del prototip són imatges compatibles, prou clares per fer el test i coherents amb les instruccions. |
+| [Enquesta](/ca/survey-block) | Totes les preguntes i opcions de resposta són text comprensible. |
+| [Revisió d'accessibilitat](/ca/accessibility-block) | Cada frame és una imatge PNG, JPEG, WebP o GIF que mostra una interfície d'usuari. |
+| [Card sorting](/ca/card-sorting), benchmarks | No es revisen. |
+
+<Tip>
+  Superar la revisió vol dir que la configuració és utilitzable, no que sigui perfecta. Escriu la tasca com una sola acció concreta i l'escenari com la motivació del participant. Com més clar sigui l'encàrrec, més et podràs refiar del que en facin els participants.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Participants d'IA" icon="bot" href="/ca/ai-participants">
+    Tria audiències, defineix el nombre de participants i llança el test.
+  </Card>
+  <Card title="Analitza els resultats" icon="chart-bar" href="/ca/analyze-results">
+    Segueix els resultats a mesura que arriben.
+  </Card>
+</CardGroup>

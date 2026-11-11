@@ -158,6 +158,10 @@ English is the source of truth: change the English page first, then update `es/`
 - Spanish: neutral Spanish, addressed as *tú*. Catalan: standard Catalan, addressed as *tu*.
 - Titles and headings in sentence case (`Primeros pasos`, not `Primeros Pasos`).
 - Write natural prose, not a word-for-word rendering. Keep the meaning, facts, numbers and limits exact.
+- Numbers: no separator up to four digits (`1500`), a space from five digits (`18 000`), decimal comma
+  (`80,3`), and a space before `%` (`80 %`).
+- Quoted app messages, placeholders and status values stay in English like UI labels. Explanations,
+  examples you write yourself and questionnaire items you describe are translated.
 - Dates: `octubre de 2026` (both languages). `Next: …` cards become `Siguiente: …` / `Següent: …`.
 
 **Glossary**
@@ -204,3 +208,20 @@ English is the source of truth: change the English page first, then update `es/`
 | conformance level | nivel de conformidad | nivell de conformitat |
 | subprocessor | subencargado del tratamiento | subencarregat del tractament |
 | data processing addendum | anexo de tratamiento de datos (DPA) | annex de tractament de dades (DPA) |
+| media prototype | prototipo multimedia | prototip multimèdia |
+| media canvas | lienzo multimedia | llenç multimèdia |
+| user personas | perfiles de usuario | perfils d'usuari |
+| interactive login session | inicio de sesión interactivo | inici de sessió interactiu |
+| misclicks | clics erróneos | clics erronis |
+| drop-off | abandono | abandonament |
+| heatmap | mapa de calor | mapa de calor |
+| journeys (analytics) | recorridos | recorreguts |
+| stakeholders | partes interesadas | parts interessades |
+| feedback | feedback | feedback |
+| seats | licencias de usuario | llicències d'usuari |
+| provisioning | aprovisionamiento | aprovisionament |
+| audit logs | registros de auditoría | registres d'auditoria |
+| success criteria (WCAG) | criterios de conformidad | criteris de conformitat |
+| agreement (card sorting) | acuerdo | acord |
+| similarity matrix | matriz de similitud | matriu de similitud |
+| Enterprise Auth (feature) | Enterprise Auth | Enterprise Auth |
