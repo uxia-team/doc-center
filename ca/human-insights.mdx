@@ -1,0 +1,92 @@
+---
+title: "Resultats dels participants humans"
+description: "Revisa les sessions dels participants humans a Analyze: mètriques d'èxit, enregistraments, transcripcions, notes i respostes d'enquesta."
+---
+
+Quan algú fa el teu test a través d'un [enllaç de test](/ca/test-links) o d'un [panell humà](/ca/human-panel), la seva sessió apareix a la fase [Analyze](/ca/analyze-results). Cada sessió inclou un enregistrament de la pantalla, la veu del participant, una transcripció automàtica i les seves respostes, de manera que pots veure el comportament real al costat del que han fet els teus participants d'IA.
+
+## Canvia als resultats humans
+
+A la part superior d'Analyze, obre el menú de tipus de participant i tria **Human participants**. Tria **AI participants** per tornar-hi. Les dues vistes són independents: no n'hi ha cap de combinada, així que has d'alternar entre totes dues per comparar-les.
+
+En mode humà, el filtre que hi ha al costat del menú mostra els teus enllaços de test i el nombre de participants de cadascun. Selecciona els enllaços que vulguis i fes clic a **Filter**. La selecció s'aplica a tots els blocs.
+
+Si encara no has creat cap enllaç, el bloc mostra **No links created yet** amb un botó **Create link**.
+
+Els blocs de revisió d'accessibilitat no tenen resultats humans, perquè els participants no hi intervenen.
+
+## Blocs de tasca
+
+La pestanya **Sessions** s'obre amb una fila de mètriques:
+
+| Mètrica | Què mostra |
+|---|---|
+| **Total Testers** | Participants inclosos a les mètriques. Els enregistraments fallits no s'hi compten. |
+| **Success Rate** | Percentatge de sessions que han completat el flux. |
+| **Drop-off** | Percentatge de sessions que han abandonat el flux. |
+| **Misclick Rate** | Percentatge de clics fora de les àrees interactives vàlides. No es mostra per als llocs web en producció. |
+| **Avg. Duration** | Durada mitjana de les sessions amb èxit. |
+
+A sota, una taula mostra cada sessió amb les columnes **Clips**, **Participant**, **Status**, **Task duration**, **Responded At** i **Actions**.
+
+| Estat | Significat |
+|---|---|
+| **Completed** | El participant ha acabat el flux i ha respost totes les preguntes. |
+| **Abandoned** | El participant ha sortit del flux abans d'acabar-lo. |
+| **Missing questions** | El participant ha acabat, però ha deixat algunes preguntes sense respondre. |
+| **Processing** | L'enregistrament o la transcripció encara s'estan preparant. |
+| **Recording failed** | No s'ha pogut capturar la sessió. |
+| **Transcript failed** | L'enregistrament existeix, però no s'ha pogut generar la transcripció. |
+| **In progress** | El participant encara està fent el test. |
+
+A **Actions**, **Download clip** desa l'enregistrament de **Screen view** o de **Camera view**, i **Delete recording** elimina permanentment la sessió i les seves dades.
+
+Fes clic en una sessió per obrir el reproductor. La pestanya **Transcripts** segueix el vídeo: fes clic en una línia per saltar a aquell moment. Selecciona un fragment de text per ressaltar-lo i fes clic a **Add note** per desar-lo. Les teves notes apareixen a la pestanya **Notes**.
+
+En les tasques de prototip multimèdia, una pestanya **Frames** mostra cada pantalla amb els clics dels participants en forma de mapa de calor, a més de la taxa de clics erronis i el temps mitjà en aquella pantalla.
+
+## Blocs d'enquesta
+
+Els resultats d'enquesta tenen dues pestanyes, igual que per als participants d'IA. **Responses** agrupa les respostes per pregunta, i **Participants** mostra les respostes de cada persona. Al costat de cada resposta, **Play recording** obre la sessió en el moment en què el participant ha respost. Consulta [Resultats de l'enquesta](/ca/survey-results).
+
+## Blocs de card sorting
+
+Els card sortings fets per persones fan servir les mateixes vistes de resultats que els dels participants d'IA. Consulta [Resultats del card sorting](/ca/card-sorting-results).
+
+## Límits per pla
+
+| Pla | Sessions humanes als resultats |
+|---|---|
+| Free | No disponible |
+| Starter | No inclòs |
+| Pro | Les 10 primeres sessions de cada test |
+| Custom | Il·limitades |
+
+Al pla Pro, les sessions a partir de l'onzena apareixen difuminades amb **Upgrade to unlock**.
+
+## Per què combinar participants d'IA i humans
+
+<Tip>
+  Els participants d'IA et donen resultats en minuts i et permeten fer totes les rondes que necessitis. Els participants humans hi aporten profunditat emocional, context viscut i el comportament imprevisible que només té la gent real. Fes servir els participants d'IA per iterar ràpidament i acotar els problemes. Després, fes servir les sessions humanes per confirmar les conclusions, descobrir casos límit i guanyar-te la confiança de les parts interessades.
+</Tip>
+
+## Preguntes freqüents
+
+<AccordionGroup>
+  <Accordion title="He de fer servir primer participants d'IA?">
+    No. Pots reclutar participants humans en qualsevol test des de la fase [Recruit](/ca/recruit-participants), amb participants d'IA o sense.
+  </Accordion>
+  <Accordion title="Els participants poden fer servir qualsevol dispositiu?">
+    Els participants necessiten un navegador d'escriptori que permeti enregistrar la pantalla. La captura de la pantalla i del micròfon es fa al navegador, sense descarregar res. La càmera per enregistrar la cara només és obligatòria quan l'enllaç de test ho demana.
+  </Accordion>
+  <Accordion title="Com es generen les transcripcions?">
+    Automàticament, a partir de l'àudio de cada sessió. Una sessió mostra **Processing** fins que l'enregistrament i la transcripció estan a punt.
+  </Accordion>
+  <Accordion title="Quants participants humans hauria d'incloure?">
+    Depèn dels teus objectius. En les proves d'usabilitat, entre cinc i vuit participants solen fer aflorar els problemes sobre els quals és més fàcil actuar. Per comparar segments, recluta'n més i fes servir un enllaç de test per a cada segment, perquè puguis filtrar els resultats per enllaç.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Següent: Ask AI" icon="arrow-right" href="/ca/ask-ai">
+  Fes preguntes sobre els teus resultats en llenguatge natural.
+</Card>

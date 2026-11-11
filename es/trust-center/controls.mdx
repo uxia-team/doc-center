@@ -1,0 +1,124 @@
+---
+title: "Controles de seguridad"
+sidebarTitle: "Controles de seguridad"
+description: "Los controles de infraestructura, organizativos, de producto, de procedimiento y de datos que protegen la plataforma Uxia."
+icon: "shield"
+---
+
+Los controles siguientes forman parte del Sistema de Gestión de Seguridad de la Información (SGSI) de Uxia y están alineados con ISO/IEC 27001:2022. Están agrupados por área para que te resulte fácil relacionarlos con tu propia evaluación de proveedores.
+
+## Seguridad de la infraestructura
+
+<AccordionGroup>
+  <Accordion title="Infraestructura nativa en la nube" icon="cloud">
+    La plataforma se ejecuta íntegramente en proveedores de nube consolidados. No hay nada alojado en instalaciones propias. Evaluamos la seguridad de cada proveedor antes de incorporarlo y la revisamos periódicamente.
+  </Accordion>
+  <Accordion title="Segmentación de red y cortafuegos" icon="network">
+    Las redes en la nube están segmentadas y protegidas con cortafuegos que deniegan todo el tráfico por defecto. Los cortafuegos de aplicaciones web, con conjuntos de reglas gestionadas y limitación de frecuencia, protegen el tráfico expuesto a internet. Las conexiones a las bases de datos están restringidas a orígenes aprobados. Las reglas de los cortafuegos se revisan al menos cada seis meses.
+  </Accordion>
+  <Accordion title="Entornos separados" icon="layers">
+    Los entornos de producción y de staging están separados lógicamente. Cada cambio se valida en staging antes de llegar a producción.
+  </Accordion>
+  <Accordion title="Cifrado en tránsito y en reposo" icon="lock">
+    Todo el tráfico entre tú, la aplicación, los servicios de backend y los almacenes de datos usa TLS 1.2 o superior. Los datos almacenados se cifran con AES-256 o un estándar equivalente. Las claves de cifrado se guardan en servicios gestionados de gestión de claves, separadas de los datos que protegen.
+  </Accordion>
+  <Accordion title="Gestión de secretos" icon="key-round">
+    Los secretos y las claves de API se guardan en un gestor de secretos dedicado y nunca se incluyen en el código fuente.
+  </Accordion>
+  <Accordion title="Registro de actividad y detección de amenazas" icon="activity">
+    La actividad de nuestros entornos en la nube se registra de forma centralizada, con alertas automáticas ante intentos de acceso sospechosos o no autorizados y detección continua de amenazas. Los secretos, las contraseñas y el contenido de los datos de clientes nunca se escriben en los logs.
+  </Accordion>
+</AccordionGroup>
+
+## Seguridad organizativa
+
+<AccordionGroup>
+  <Accordion title="Alcance y gobernanza del SGSI" icon="landmark">
+    El alcance del SGSI está definido formalmente y abarca todos los sistemas que dan soporte a la plataforma Uxia. Los roles y las responsabilidades de seguridad están asignados, y un Comité de Seguridad supervisa el programa.
+  </Accordion>
+  <Accordion title="Políticas y gestión de riesgos" icon="file-check">
+    La dirección aprueba las políticas documentadas de seguridad y privacidad, que se revisan al menos una vez al año. Los riesgos de seguridad de la información se evalúan periódicamente y se hace seguimiento de los planes de tratamiento.
+  </Accordion>
+  <Accordion title="Confidencialidad y formación" icon="graduation-cap">
+    Todas las personas de Uxia firman un acuerdo de confidencialidad. La formación en concienciación sobre seguridad y en protección de datos es obligatoria y se completa durante el primer mes tras la incorporación.
+  </Accordion>
+  <Accordion title="Incorporaciones y salidas" icon="user-check">
+    El acceso se concede mediante un proceso de incorporación documentado. Cuando alguien deja la empresa, su acceso se revoca el mismo día.
+  </Accordion>
+  <Accordion title="Seguridad de los dispositivos" icon="laptop">
+    Los portátiles de la empresa requieren cifrado completo del disco, bloqueo automático de pantalla y sistemas operativos actualizados. El estado de seguridad de los dispositivos se supervisa de forma centralizada.
+  </Accordion>
+  <Accordion title="Gestión de proveedores" icon="briefcase">
+    Los proveedores se evalúan antes de contratarlos y están sujetos a cláusulas de protección de datos y confidencialidad. Los proveedores que tratan datos de clientes se revisan al menos una vez al año. Consulta [Subencargados del tratamiento](/es/trust-center/subprocessors).
+  </Accordion>
+  <Accordion title="Código ético y canal de denuncias" icon="scale">
+    Un código ético establece lo que se espera de todas las personas de Uxia, y hay un canal de denuncias confidencial para comunicar cualquier inquietud.
+  </Accordion>
+</AccordionGroup>
+
+## Seguridad del producto
+
+<AccordionGroup>
+  <Accordion title="Ciclo de vida de desarrollo seguro" icon="git-pull-request">
+    Cada cambio pasa por una pull request y una revisión por pares antes de fusionarse. La infraestructura se define como código y se versiona. Los despliegues son reversibles, así que un cambio defectuoso se puede revertir rápidamente.
+  </Accordion>
+  <Accordion title="Gestión de vulnerabilidades" icon="scan-search">
+    Las dependencias y las imágenes de contenedores se analizan en el pipeline de despliegue en busca de vulnerabilidades conocidas, y nuestros entornos se analizan periódicamente. Los hallazgos se clasifican y se corrigen según su gravedad.
+  </Accordion>
+  <Accordion title="Validación de entradas e integridad de los datos" icon="check-check">
+    Cada solicitud se valida en el servidor contra un esquema definido, así que la validación no se puede eludir llamando directamente a la API. Las tareas asíncronas se concilian para confirmar que no se pierde ningún trabajo.
+  </Accordion>
+  <Accordion title="Aislamiento entre clientes" icon="boxes">
+    Cada espacio de trabajo está aislado lógicamente. Tus tests, resultados y archivos solo son accesibles para ti y los compañeros a los que invites.
+  </Accordion>
+  <Accordion title="Controles de acceso para clientes" icon="users-round">
+    Los roles del espacio de trabajo determinan quién puede gestionar las personas y la configuración. En el plan Custom, puedes exigir SSO con tu proveedor de identidad, aprovisionar usuarios con SCIM y enviar los registros de auditoría a tu SIEM. Consulta [Identidad y acceso](/es/trust-center/identity-access).
+  </Accordion>
+  <Accordion title="Credenciales y archivos de los tests" icon="file-lock">
+    Las credenciales y los archivos que facilitas para los flujos con acceso restringido se cifran en tránsito y en reposo, se limitan al test al que pertenecen y solo son visibles dentro de tu espacio de trabajo. Las credenciales nunca se envían a los modelos de IA: se inyectan de forma segura en la sesión del navegador. También puedes probar con un inicio de sesión interactivo, de modo que no se guarda ninguna credencial. Consulta [Tests con inicio de sesión](/es/trust-center/authenticated-testing).
+  </Accordion>
+</AccordionGroup>
+
+## Procedimientos internos de seguridad
+
+<AccordionGroup>
+  <Accordion title="Gestión del acceso" icon="key-square">
+    El acceso sigue los principios de mínimo privilegio y necesidad de conocer. La autenticación multifactor es obligatoria en todos los sistemas, las cuentas con privilegios son nominativas y todos los derechos de acceso se revisan cada trimestre.
+  </Accordion>
+  <Accordion title="Gestión de cambios" icon="git-branch">
+    Los cambios en los sistemas de producción se planifican, se revisan, se prueban en staging y se registran.
+  </Accordion>
+  <Accordion title="Gestión de incidentes" icon="siren">
+    Un proceso documentado de gestión de incidentes cubre la detección, la contención, la erradicación, la recuperación y las lecciones aprendidas, con un playbook específico para los incidentes en los que intervienen participantes de IA. Consulta [Respuesta a incidentes](/es/trust-center/incident-response).
+  </Accordion>
+  <Accordion title="Continuidad del negocio y recuperación ante desastres" icon="life-buoy">
+    Contamos con un plan de continuidad del negocio y un runbook de recuperación de la base de datos. Los procedimientos de recuperación se ponen a prueba al menos una vez al año.
+  </Accordion>
+  <Accordion title="Auditoría interna y acciones correctivas" icon="clipboard-check">
+    Un programa anual de auditoría interna comprueba la conformidad del SGSI. Las no conformidades se registran, se analizan sus causas raíz y se hace seguimiento de las acciones correctivas hasta su cierre.
+  </Accordion>
+  <Accordion title="Requisitos legales y normativos" icon="gavel">
+    Los requisitos legales, normativos y contractuales relevantes para la seguridad de la información se identifican, se documentan y se mantienen actualizados.
+  </Accordion>
+</AccordionGroup>
+
+## Datos y privacidad
+
+<AccordionGroup>
+  <Accordion title="Clasificación y tratamiento de la información" icon="tags">
+    La información se clasifica según su sensibilidad y se trata de acuerdo con esa clasificación.
+  </Accordion>
+  <Accordion title="Conservación y eliminación segura" icon="trash-2">
+    Hay plazos de conservación definidos para cada categoría de datos. Al final de cada plazo, los datos se eliminan de forma segura o se anonimizan de forma irreversible. Consulta [Protección de datos](/es/trust-center/data-protection).
+  </Accordion>
+  <Accordion title="Privacidad desde el diseño" icon="fingerprint">
+    Mantenemos un registro de actividades de tratamiento, documentamos la base jurídica de cada una y realizamos evaluaciones de impacto relativas a la protección de datos cuando un tratamiento puede entrañar un alto riesgo.
+  </Accordion>
+  <Accordion title="Derechos de los interesados" icon="user-round-cog">
+    Un procedimiento documentado gestiona las solicitudes de acceso, rectificación, supresión o exportación de datos personales.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Siguiente: Identidad y acceso" icon="key-round" href="/es/trust-center/identity-access">
+  SSO, aprovisionamiento con SCIM y cómo se concede y se retira el acceso.
+</Card>

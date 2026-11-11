@@ -1,0 +1,55 @@
+---
+title: "IA responsable"
+sidebarTitle: "IA responsable"
+description: "Cómo usa Uxia los proveedores de modelos de IA, por qué tu contenido nunca se usa para entrenar y cómo se mantienen dentro del alcance los participantes de IA."
+icon: "sparkles"
+---
+
+Uxia usa grandes modelos de lenguaje como base de los participantes de IA y para generar transcripciones, insights y puntuaciones. Esta página explica cómo los usamos de forma responsable.
+
+## Sin entrenamiento con tu contenido
+
+Uxia no usa tu contenido para entrenar, ajustar ni mejorar ningún modelo de IA. Nuestro anexo de tratamiento de datos (DPA) también exige que nuestros subencargados del tratamiento no:
+
+- Usen tus datos para entrenar, ajustar ni mejorar ningún modelo público, compartido o fundacional.
+- Incluyan tus datos en conjuntos de datos usados para aprendizaje o benchmarking entre clientes.
+- Usen embeddings, metadatos, logs ni otros datos derivados de tu contenido para entrenar o evaluar modelos.
+
+Este compromiso se aplica por defecto. No tienes que excluirte expresamente, y sigue vigente después de que termine tu contrato.
+
+## Proveedores de modelos de IA
+
+Uxia envía el contenido de los tests a proveedores de modelos de IA a través de sus API comerciales. Nuestros proveedores figuran en la página [Subencargados del tratamiento](/es/trust-center/subprocessors). Sus condiciones de API comercial excluyen tus datos del entrenamiento de modelos. La inferencia de IA está disponible en la UE o en EE. UU. No ofrecemos inferencia específica para el Reino Unido.
+
+- **Conservación limitada por parte de los proveedores.** Los proveedores pueden conservar los datos de la API durante un periodo breve y limitado, únicamente para detectar abusos. Después se eliminan y nunca se usan para entrenar.
+- **Zero Data Retention.** Para los clientes enterprise con contrato anual, podemos activar Zero Data Retention con nuestros proveedores de modelos de IA para que no se aplique esa conservación para la detección de abusos. Cubre la conservación por parte de los proveedores de modelos de IA. Tus tests y resultados se conservan en Uxia durante los plazos indicados en [Protección de datos](/es/trust-center/data-protection).
+- **Aviso de cambios.** Te avisamos con al menos 30 días de antelación antes de contratar a un nuevo proveedor de modelos de IA, y puedes oponerte por motivos razonables.
+
+## Sin uso entre clientes
+
+Tu contenido nunca se expone a otros clientes ni influye en los resultados que se generan para ellos. Ningún aprendizaje se mantiene de un espacio de trabajo a otro.
+
+## Los participantes de IA se mantienen dentro del alcance
+
+Los participantes de IA son perfiles sintéticos, no personas reales. Actúan dentro de los límites que estableces:
+
+- **Tú controlas el destino.** Los participantes de IA solo actúan sobre las URL o los prototipos que configuras y no navegan más allá.
+- **Tú acotas cada sesión.** La tarea y la condición de parada que defines determinan hasta dónde llega una sesión, así que puedes detenerla antes de cualquier acción irreversible.
+- **Las entradas son sintéticas.** Los valores que introducen los participantes de IA se generan, así que no se envían datos de ninguna persona real.
+- **Cada acción es visible.** Cada sesión genera una transcripción paso a paso de lo que vio e hizo el participante de IA.
+
+Para orientación práctica, consulta [Restricciones de los participantes de IA](/es/account/security/ai-participant-restrictions).
+
+## Configuración recomendada
+
+- Ejecuta los tests en entornos de staging o UAT con datos sintéticos.
+- Usa cuentas de prueba específicas, solo con datos sintéticos, para los flujos que requieren iniciar sesión, o un [inicio de sesión interactivo](/es/trust-center/authenticated-testing#inicio-de-sesión-interactivo).
+- Sube documentos sintéticos, no reales, en los pasos de subida de archivos.
+
+## Cuando algo sale mal
+
+Mantenemos un playbook de respuesta a incidentes específico para los participantes de IA. Si un participante de IA actúa fuera del alcance configurado, o aparecen datos personales reales en los resultados de un test, detenemos las sesiones afectadas, contenemos el problema, eliminamos el contenido afectado cuando es necesario y te informamos. Consulta [Respuesta a incidentes](/es/trust-center/incident-response).
+
+<Card title="Siguiente: Subencargados del tratamiento" icon="network" href="/es/trust-center/subprocessors">
+  Los terceros que nos ayudan a prestar el servicio.
+</Card>

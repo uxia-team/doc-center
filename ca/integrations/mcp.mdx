@@ -1,0 +1,116 @@
+---
+title: "Connecta Uxia a Claude, Cursor i altres eines d'IA amb MCP"
+sidebarTitle: "Primers passos"
+description: "Fes servir el servidor MCP d'Uxia per crear i llançar tests, gestionar audiències i consultar resultats des de Claude Code, Cursor, Codex, v0 i més."
+---
+
+El servidor MCP d'Uxia permet que les teves eines d'IA preferides es comuniquin directament amb el teu espai de treball d'Uxia. Un cop connectats, Claude Code, Cursor, Codex, v0 i altres clients del [Model Context Protocol](https://modelcontextprotocol.io) poden treballar amb Uxia al mateix xat on escrius codi o iteres sobre el disseny, sense copiar i enganxar ni canviar de context.
+
+## Què pots fer
+
+- **Crear i llançar tests.** Descriu què vols provar i la teva eina d'IA et configura el test: la tasca, les preguntes de seguiment i l'audiència. Llançar un test gasta crèdits, així que l'assistent et mostra el cost abans i et demana l'aprovació per llançar-lo.
+- **Gestionar audiències.** Consulta la llista de les teves audiències, crea'n de noves i tria els participants d'IA d'un test.
+- **Consultar resultats i insights.** Porta a la conversa insights, cites de participants, transcripcions, recorreguts de navegació, respostes d'enquestes, puntuacions de benchmarks i troballes d'accessibilitat. Comprova el progrés i els crèdits que et queden.
+
+Tot passa amb el teu compte d'Uxia, així que s'hi apliquen el mateix accés als espais de treball, els mateixos crèdits i els mateixos [límits del pla](/ca/account/plans-and-credits).
+
+## Configuració
+
+Connectar Uxia té tres passos: tria l'eina d'IA que vols fer servir, registra el servidor MCP d'Uxia i inicia sessió per autoritzar la connexió.
+
+<Steps>
+  <Step title="Tria la teva eina d'IA">
+    Clients compatibles des del primer moment:
+
+    | Client | Tipus | Notes |
+    | --- | --- | --- |
+    | **Claude Code** | CLI / IDE | Recomanat per a enginyers que treballen al terminal o a VS Code. |
+    | **Cursor** | IDE | Compatibilitat nativa amb MCP: porta les dades d'Uxia al xat de Cursor. |
+    | **Codex** | CLI | Per a fluxos de treball amb la CLI d'OpenAI Codex. |
+    | **v0** | Web | Porta els insights d'Uxia a la generació de dissenys de v0. |
+    | **Microsoft Copilot** | Microsoft 365 Copilot, Teams | Afegeix Uxia a un agent de Copilot Studio. |
+    | **Altres** | Qualsevol client MCP | Fes servir el transport HTTP genèric per a Claude Desktop, agents personalitzats i altres clients. |
+
+    També pots connectar eines que no són de programació, com **Claude Desktop**, **ChatGPT** i **Microsoft Copilot**. Consulta les guies de [Claude](/ca/guides/claude-code), [ChatGPT i Codex](/ca/guides/chatgpt-codex), [Cursor](/ca/guides/cursor), [Lovable](/ca/guides/lovable), [Antigravity](/ca/guides/antigravity) i [Microsoft Copilot](/ca/guides/microsoft-copilot).
+  </Step>
+  <Step title="Registra el servidor MCP d'Uxia">
+    Afegeix el servidor amb la configuració de l'eina que hagis triat.
+
+    #### Claude Code
+
+    Executa aquesta ordre al terminal:
+
+    ```bash
+    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Cursor
+
+    A Cursor, obre **Customize** i afegeix un servidor MCP personalitzat, o edita directament `~/.cursor/mcp.json`. Afegeix aquesta entrada a l'objecte `mcpServers`:
+
+    ```json
+    {
+      "mcpServers": {
+        "Uxia": {
+          "type": "http",
+          "url": "https://platform.uxia.app/api/mcp-v2/mcp",
+          "headers": {}
+        }
+      }
+    }
+    ```
+
+    #### Codex
+
+    Executa aquesta ordre al terminal:
+
+    ```bash
+    codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Microsoft Copilot
+
+    A Copilot Studio, obre la pàgina **Tools** del teu agent i selecciona **Add a tool** › **New tool** › **Model Context Protocol**. Fes servir `https://platform.uxia.app/api/mcp-v2/mcp` com a **Server URL**, i **OAuth 2.0** amb **Dynamic discovery** per a l'autenticació. Consulta la [guia de Microsoft Copilot](/ca/guides/microsoft-copilot) per veure tots els passos, inclòs com fer servir l'agent a Microsoft 365 Copilot i a Teams.
+
+    #### Altres
+
+    Afegeix un servidor MCP HTTP nou i enganxa-hi aquesta URL.
+
+    ```text
+    https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+  </Step>
+  <Step title="Autentica't">
+    La primera vegada que el teu client cridi el servidor MCP d'Uxia, se't redirigirà perquè iniciïs sessió a Uxia i facis clic a **Authorize**. A partir d'aquí, la teva eina d'IA té accés limitat als tests, les audiències i els resultats del teu espai de treball.
+  </Step>
+  <Step title="Prova-ho">
+    A la teva eina d'IA, demana alguna cosa com ara:
+
+    - _"Mostra'm els meus 5 últims tests d'Uxia."_
+    - _"Resumeix els insights del test del flux de pagament."_
+    - _"Crea un test d'Uxia per al flux de registre de www.example.com amb 5 participants d'IA."_
+    - _"Quins van ser els principals problemes d'usabilitat del meu últim test de lloc web en producció?"_
+
+    El teu client cridarà el servidor MCP d'Uxia, obtindrà les dades rellevants i respondrà amb context real del teu espai de treball.
+  </Step>
+</Steps>
+
+## Pàgines relacionades
+
+<CardGroup cols={2}>
+  <Card title="Transcripcions" icon="scroll-text" href="/ca/test-transcripts">
+    Entén les dades que la teva eina d'IA pot obtenir per MCP: transcripcions, insights i puntuacions de benchmarks.
+  </Card>
+
+  <Card title="Plans i crèdits" icon="credit-card" href="/ca/account/plans-and-credits">
+    Consulta quants crèdits costen els tests quan els llances per MCP.
+  </Card>
+
+  <Card title="Espais de treball" icon="users" href="/ca/account/workspaces">
+    Gestiona l'accés i els permisos de l'equip: les connexions MCP respecten els mateixos àmbits.
+  </Card>
+
+  <Card title="Seguretat" icon="shield-check" href="/ca/account/security/data-privacy">
+    Descobreix com gestiona Uxia l'autenticació, l'accés a les dades i la revocació en integracions com MCP.
+  </Card>
+</CardGroup>

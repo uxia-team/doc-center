@@ -1,0 +1,83 @@
+---
+title: "Recluta participantes"
+sidebarTitle: "Descripción general"
+description: "Elige participantes de IA, enlaces de test o un panel humano y lanza tu test. Descubre qué comprueba la revisión antes de que empiecen los participantes de IA."
+---
+
+En la fase **Recruit** decides quién hace tu test. Para abrirla, haz clic en **Start recruiting** en Build. Uxia comprueba primero tus bloques; si falta un campo obligatorio, te lleva al primer problema. El paso **Recruit** de la cabecera permanece desactivado hasta que tu test tenga al menos un bloque.
+
+Cuando vienes de Build, se abre primero la vista de participantes de IA. Si solo quieres personas, haz clic en **Recruit human participants only** para ir a los métodos de reclutamiento.
+
+## Elige un método de reclutamiento
+
+| Método | Qué hace | Coste | Planes |
+|---|---|---|---|
+| [**AI participants**](/es/ai-participants) | Ejecuta tus tests con participantes sintéticos de tus [audiencias](/es/audiences/overview). | Créditos, por bloque | Todos los planes |
+| [**Test links**](/es/test-links) | Envía un enlace a personas que ya tienes, por cualquier canal que uses. | 0 créditos | Planes de pago |
+| [**Human panel**](/es/human-panel) | Solicita participantes preseleccionados para tu test. Nuestro equipo se pone en contacto contigo con el precio. | Precio fijado por nuestro equipo | Planes de pago |
+
+Puedes combinar métodos en un mismo test. Por ejemplo, ejecuta participantes de IA para obtener feedback rápido y comparte un enlace de test con tus clientes. Cada método tiene su propia fila en el resumen, y los resultados de IA y de personas se mantienen separados en [Analyze](/es/analyze-results).
+
+<Note>
+  En el plan Free, los enlaces de test y el panel humano están bloqueados. Al seleccionar cualquiera de ellos se abre **Upgrade to recruit human participants**.
+</Note>
+
+## Resumen
+
+Debajo de las tarjetas de métodos, **Summary** muestra cada método que has iniciado, con sus **Participants**, **Audiences / links**, **Status** y **Credits**. Hasta que inicies uno, muestra *"Choose from the methods above to start collecting insights."*
+
+- **AI participants** pasa de **Not launched** a **Checking test setup** y **Processing** hasta llegar a **Completed**, o a **Failed**. Los créditos muestran el coste de la ejecución.
+- **Test links** muestra **Active** o **Stopped**, el número de sesiones completadas y **0 credits**.
+- **Human panel** muestra **Requested** y **Pricing by our team**.
+
+Cada fila tiene un enlace **Go to analyze**. El pie muestra **Total credits** y **Credits after test**. En los planes de pago, haz clic en los créditos de la fila de participantes de IA para ver el coste de cada bloque.
+
+### Tests solo de accesibilidad
+
+Una [revisión de accesibilidad](/es/accessibility-block) no necesita participantes. Si es el único bloque de tu test, Recruit muestra *"This test only contains an accessibility block, so recruiting testers is not necessary."* Las tarjetas de métodos están desactivadas y el resumen muestra el coste por frame (10 créditos por frame). Haz clic en **Go to analyze** para ejecutar la revisión.
+
+## Lanzamiento
+
+- Los **participantes de IA** empiezan cuando haces clic en **Launch test**, después de una rápida revisión del test.
+- Los **enlaces de test** recogen respuestas en cuanto los creas, sin lanzamiento ni revisión.
+- Las solicitudes de **panel humano** llegan a nuestro equipo cuando haces clic en **Send Request**.
+
+Una vez lanzados los participantes de IA, los bloques y las audiencias del test quedan bloqueados. Aun así, puedes crear enlaces de test para el mismo test.
+
+## Revisión del test
+
+Los resultados son tan buenos como la configuración que hay detrás. Una tarea vaga, un escenario de relleno o una pantalla inservible debilitan todos los hallazgos posteriores. Por eso, antes de que empiece cualquier participante de IA, Uxia revisa tu test.
+
+<Steps>
+  <Step title="Comprobación de la configuración del test">
+    Un diálogo titulado **Checking test setup…** muestra cada bloque. Cada uno pasa de **Checking…** a **Complete**, o a **Needs changes** si Uxia encuentra un problema.
+  </Step>
+  <Step title="Aprobado">
+    Si todos los bloques pasan la revisión, verás **Test confidence approved** y *"Everything is ready. Starting your test…"*. Los participantes de IA empiezan y el resumen muestra su progreso.
+  </Step>
+  <Step title="Problemas encontrados">
+    Si algo necesita ajustes, el diálogo **Test review** muestra *"Some issues to fix before launching:"* por bloque. Haz clic en **Fix in Build** para volver a Build con los bloques afectados resaltados, o en **Cancel** para quedarte en Recruit. No se ejecuta nada y se te devuelven los créditos del lanzamiento.
+  </Step>
+</Steps>
+
+Qué comprueba la revisión:
+
+| Bloque | Comprobaciones |
+|---|---|
+| [Tarea](/es/task-block) | La [tarea](/es/mission), el [escenario](/es/test-scenario) y la [condición de parada](/es/stop-condition) están presentes y tienen sentido, no son texto de relleno. Un sitio web en producción tiene una URL válida. Las pantallas del prototipo son imágenes compatibles, lo bastante claras para testear y coherentes con las instrucciones. |
+| [Encuesta](/es/survey-block) | Todas las preguntas y opciones de respuesta son texto comprensible. |
+| [Revisión de accesibilidad](/es/accessibility-block) | Cada frame es una imagen PNG, JPEG, WebP o GIF que muestra una interfaz de usuario. |
+| [Card sorting](/es/card-sorting), benchmarks | No se revisan. |
+
+<Tip>
+  Pasar la revisión significa que tu configuración se puede usar, no que sea perfecta. Escribe la tarea como una acción concreta y el escenario como la motivación del participante. Cuanto más claro sea el planteamiento, más podrás confiar en lo que hagan con él los participantes.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Participantes de IA" icon="bot" href="/es/ai-participants">
+    Elige audiencias, define el número de participantes y lanza el test.
+  </Card>
+  <Card title="Analiza los resultados" icon="chart-bar" href="/es/analyze-results">
+    Sigue los resultados a medida que llegan.
+  </Card>
+</CardGroup>

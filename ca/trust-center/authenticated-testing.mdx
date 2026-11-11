@@ -1,0 +1,45 @@
+---
+title: "Tests amb inici de sessió"
+sidebarTitle: "Tests amb inici de sessió"
+description: "Les dues maneres de fer tests amb Uxia en productes protegits amb credencials, i com permetre l'accés als participants d'IA i reconèixer-los."
+icon: "log-in"
+---
+
+Hi ha dues maneres de fer tests en un producte protegit amb un inici de sessió. En tries una per a cada test.
+
+## Credencials
+
+Pots introduir les credencials a la secció **Credentials**, pensada específicament per a això, d'un bloc de tasca.
+
+- Les credencials es guarden de manera segura i es xifren en repòs.
+- Només es desxifren a les instàncies on són necessàries.
+- Et recomanem que no introdueixis credencials sensibles o potencialment perilloses, i que les canviïs immediatament quan acabi el test.
+
+Consulta [Credencials de participants](/ca/tester-credentials) per configurar-les.
+
+## Inici de sessió interactiu
+
+Pots preparar tu mateix l'estat del test des de la interfície d'Uxia i iniciar sessió com ho fas normalment. Nosaltres capturem la sessió iniciada, de manera que no guardem cap credencial.
+
+Tots els participants d'IA del test fan servir aquesta sessió iniciada. Es guarda xifrada i s'elimina automàticament una hora després que la desis.
+
+Consulta [Inici de sessió interactiu](/ca/tester-credentials#inici-de-sessió-interactiu) per configurar-lo.
+
+## Permet l'accés als participants d'IA i reconeix-los
+
+Podem compartir amb tu les nostres adreces IP perquè el teu equip les afegeixi a una llista de permesos i els participants d'IA puguin superar més fàcilment els inicis de sessió i les proteccions contra bots.
+
+Totes les peticions de navegació dels participants d'IA porten les mateixes capçaleres, de manera que es poden reconèixer i detectar fàcilment als teus registres i a les teves eines de seguretat.
+
+Per obtenir les adreces IP i els detalls de les capçaleres, escriu a [hello@uxia.app](mailto:hello@uxia.app).
+
+## Configuració recomanada
+
+- Fes els tests en un entorn de staging o UAT amb dades sintètiques.
+- Fes servir comptes de prova dedicats amb només els permisos que necessita la tasca.
+
+Per a més orientació, consulta [IA responsable](/ca/trust-center/ai#configuració-recomanada).
+
+<Card title="Següent: Protecció de dades" icon="database" href="/ca/trust-center/data-protection">
+  Residència de les dades, conservació, supressió i els teus drets.
+</Card>

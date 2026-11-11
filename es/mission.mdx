@@ -1,0 +1,126 @@
+---
+title: "Tarea"
+description: "Escribe el campo Task: la acción concreta que intentan realizar los participantes en un bloque de tarea, con consejos, avisos y un ejemplo completo."
+---
+
+El campo **Task** (antes llamado *mission*) es la única acción concreta que intentan realizar los participantes. Es el campo más importante de un [bloque de tarea](/es/task-block): define el objetivo de la sesión y hace que el feedback de cada participante sea específico y accionable.
+
+La tarea es obligatoria y admite hasta 500 caracteres. Cuanto más específica y detallada sea, más se centrarán tus resultados en el flujo que quieres analizar.
+
+## Escríbela como una única tarea concreta
+
+Una buena tarea describe un objetivo con un estado final claro:
+
+> _"Cambia tu plan de gratuito a premium pagando con tarjeta de crédito."_
+
+> _"Busca y compra dos entradas para la sesión de esta noche a las 21:00."_
+
+> _"Reserva una mesa para dos en el primer restaurante de Populares cerca de ti."_
+
+## Consejos para escribir tareas eficaces
+
+<Tip>
+  **Empieza con un verbo de acción.** Regístrate, compra, reserva, sube, envía. Describe qué hay que conseguir, no qué hay que evaluar: evita verbos como "prueba", "explora" o "revisa".
+</Tip>
+
+<Tip>
+  **Señala un único elemento.** Si la pantalla puede mostrar varios elementos que encajan, señala exactamente uno: "el primer producto de Novedades", un artículo con nombre o una franja horaria concreta. Evita "cualquier producto".
+</Tip>
+
+<Tip>
+  **Plantea el objetivo, no los pasos.** Escribe "Encuentra un plan que se ajuste a tu presupuesto y suscríbete" en lugar de "Haz clic en Precios, selecciona Pro y rellena tus datos". Las instrucciones paso a paso enseñan a los participantes a seguir indicaciones en lugar de revelar dónde falla tu diseño.
+</Tip>
+
+<Tip>
+  **No digas a los participantes cómo dar feedback.** Los participantes de IA ya comparten sus pensamientos, reacciones y opiniones durante toda la sesión, así que frases como "piensa en voz alta" o "comparte tu primera impresión" se eliminan antes de que se ejecute el test.
+
+  En lugar de: "Echa un vistazo rápido a la página, comparte tu primera impresión y luego compra un portátil y cuéntanos qué estás pensando."
+
+  Escribe: "Compra el primer portátil del catálogo de portátiles."
+
+  Para pedir opiniones, añade un [bloque de encuesta](/es/survey-block) después de la tarea.
+</Tip>
+
+<Tip>
+  **Evita el lenguaje que condiciona.** No nombres elementos de la interfaz ("haz clic en el botón azul"), no insinúes un camino correcto ("encuentra la forma fácil de…") ni indiques lo que los participantes deberían sentir ("fíjate en lo sencillo que es…"). La redacción neutral lo es todo.
+</Tip>
+
+## Un objetivo por tarea
+
+Las tareas compuestas producen resultados confusos. Para probar varios flujos, añade un bloque de tarea por cada uno: hasta 3 en un test en los planes de pago y 1 en el plan Free. Cuando una tarea con sitio web en producción o prototipo de Figma usa la misma URL que una anterior, puedes activar **Continue from where participants left the previous task** para que los participantes sigan donde lo dejaron.
+
+## Ajústala con consejos
+
+Los campos **Task**, **Scenario** y **Stop condition** tienen cada uno un botón **Tips**: el icono de la varita en la esquina superior derecha del campo.
+
+<Steps>
+  <Step title="Escribe una primera versión">
+    Los consejos necesitan al menos 15 caracteres de texto.
+  </Step>
+  <Step title="Haz clic en Tips">
+    Uxia sugiere versiones reescritas y explica qué mejora cada una. Usa las flechas para recorrerlas.
+  </Step>
+  <Step title="Aplica una">
+    Haz clic en **Use this version** para sustituir tu texto, o cierra las sugerencias para quedarte con el tuyo. Para obtener consejos nuevos, edita primero el texto.
+  </Step>
+</Steps>
+
+## Avisos bajo la tarea
+
+En las tareas con sitio web en producción y con prototipo de Figma, Uxia muestra un aviso bajo el campo **Task** cuando tu texto menciona:
+
+- un inicio de sesión con redes sociales, que los participantes de IA no pueden completar;
+- un flujo de alta o registro, que no debe requerir códigos de verificación, correos de validación ni 2FA;
+- instrucciones de pensar en voz alta o de dar feedback (en la tarea o en la condición de parada), que se eliminan antes de que se ejecute el test.
+
+Haz clic en **Learn more** en el aviso para ver una breve explicación, o consulta [Flujos que los participantes de IA no pueden completar](/es/unsupported-flows) para conocer alternativas.
+
+## Ejemplo
+
+Supón que tu objetivo de negocio es:
+
+> **_"Entender si los clientes pueden contratar con éxito una nueva tarifa de telefonía móvil."_**
+
+Puede ser tentador probar todo el recorrido con una sola tarea:
+
+<Warning>
+  **Demasiado amplia**
+
+  _"Encuentra una tarifa móvil que se ajuste a tus necesidades, contrátala y contacta con el servicio de atención al cliente si tienes alguna pregunta."_
+</Warning>
+
+Aunque parece un recorrido de cliente realista, combina varias tareas:
+
+- Encontrar la tarifa adecuada
+- Completar la compra
+- Pedir ayuda
+
+Si los participantes tienen dificultades, es mucho más difícil saber qué parte de la experiencia causó la fricción.
+
+En su lugar, divide el objetivo en bloques de tarea separados dentro del mismo test:
+
+**Bloque de tarea 1: Encontrar una tarifa adecuada**
+
+<Check>
+  _"Encuentra una tarifa móvil que incluya unos 10 GB de datos al mes y añádela a tu carrito."_
+</Check>
+
+**Bloque de tarea 2: Contratar la tarifa**
+
+<Check>
+  _"Compra la tarifa móvil de tu carrito y añade un producto adicional a tu pedido."_
+</Check>
+
+Activa aquí **Continue from where participants left the previous task**, para que los participantes conserven la tarifa que añadieron al carrito.
+
+**Bloque de tarea 3: Obtener ayuda**
+
+<Check>
+  _"Busca cómo contactar con el servicio de atención al cliente para hacer una pregunta sobre tu suscripción."_
+</Check>
+
+Cada tarea mide un único objetivo claro del usuario. Así los resultados son más fáciles de interpretar y muestran exactamente dónde encuentran fricción los participantes.
+
+<Card title="Siguiente: Escenario" icon="arrow-right" href="/es/test-scenario">
+  Dale a la tarea una historia creíble para que los participantes se comporten como usuarios reales.
+</Card>

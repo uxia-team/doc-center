@@ -1,0 +1,71 @@
+---
+title: "Resultados del card sorting"
+sidebarTitle: "Resultados"
+description: "Consulta los resultados de un card sorting: el acuerdo por tarjeta y por categoría, la matriz de acuerdo y la matriz de similitud."
+---
+
+Cuando abres un [bloque de card sorting](/es/card-sorting) en la fase **Analyze**, sus resultados se dividen en tres pestañas: **Results**, **Agreement Matrix** y **Similarity Matrix**. Los resultados de los participantes de IA y de los humanos se muestran por separado; usa el selector que se describe en [Analiza los resultados](/es/analyze-results) para pasar de unos a otros.
+
+## Acuerdo
+
+Todas las vistas se basan en una única medida:
+
+> El acuerdo es el porcentaje de participantes que colocaron una tarjeta en una categoría, sobre el total de quienes ordenaron esa tarjeta. El acuerdo medio de una categoría es la media del acuerdo de las tarjetas colocadas en ella.
+
+Por ejemplo, si 8 participantes ordenaron la tarjeta "Reembolsos" y 6 de ellos la pusieron en "Facturación", su acuerdo para "Facturación" es del 75 %. Los participantes no tienen que ordenar todas las tarjetas, así que el acuerdo solo cuenta a las personas que ordenaron esa tarjeta. En todos los resultados, un azul más intenso indica un acuerdo más alto.
+
+## Resultados
+
+Usa el selector **Categories** / **Cards** para elegir cómo agrupar la tabla.
+
+<Tabs>
+  <Tab title="Categorías">
+    Una fila por categoría, con las columnas **Category**, **Number of cards**, **Agreement** (el acuerdo medio de la categoría) y **Participants**. Las categorías con mayor acuerdo medio aparecen primero. Despliega una fila para ver todas las tarjetas colocadas en esa categoría, cada una con su propia barra de acuerdo y el número de participantes que la pusieron ahí.
+  </Tab>
+  <Tab title="Tarjetas">
+    Una fila por tarjeta, con las columnas **Card**, **Categories**, **Agreement** y **Participants**. Junto al nombre de cada tarjeta ves la categoría en la que se colocó con más frecuencia, y la barra de acuerdo muestra el acuerdo para esa categoría. Despliega una fila para ver todas las categorías en las que se colocó la tarjeta. Las tarjetas que nadie ordenó muestran **Not sorted**.
+  </Tab>
+</Tabs>
+
+## Matriz de acuerdo
+
+> Con qué frecuencia se colocó cada tarjeta en cada categoría. Las tarjetas se agrupan bajo la categoría en la que los participantes las colocaron con más frecuencia.
+
+Cada fila es una tarjeta y cada columna, una categoría. Cada celda muestra el acuerdo de la tarjeta para esa categoría, y el valor más alto de cada fila aparece en negrita. Recorre una columna de arriba abajo para ver qué tarjetas pertenecen claramente a una categoría y cuáles solo en parte.
+
+## Matriz de similitud
+
+> Con qué frecuencia los participantes ordenaron cada par de tarjetas en la misma categoría. Las tarjetas muy relacionadas se agrupan a lo largo del borde de la tabla.
+
+Cada celda compara dos tarjetas: el porcentaje de participantes que pusieron ambas en la misma categoría, sobre el total de quienes ordenaron las dos. Uxia ordena las tarjetas mediante clustering, de modo que las tarjetas relacionadas quedan juntas y forman bloques oscuros. Como la matriz no tiene en cuenta los nombres de las categorías, resulta especialmente útil en los card sorting abiertos, donde los participantes etiquetan la misma idea de formas distintas.
+
+## Categorías creadas por los participantes
+
+En un card sorting abierto, las categorías que los participantes crean con el mismo nombre se fusionan, sin tener en cuenta las mayúsculas ni los espacios sobrantes. Si un participante crea una categoría con el mismo nombre que una de tus categorías iniciales, cuenta como tu categoría. Las categorías con nombres distintos se mantienen separadas, aunque signifiquen lo mismo; usa la matriz de similitud para detectarlas.
+
+## Cómo interpretar los resultados
+
+- **Acuerdo alto.** Una tarjeta con un acuerdo alto para una categoría tiene un sitio claro. Déjala ahí.
+- **Tarjetas divididas.** Una tarjeta cuyo acuerdo se reparte entre dos o más categorías es ambigua. Plantéate cambiarle el nombre, añadirle una descripción o hacer que se pueda llegar a ella desde ambos sitios.
+- **Categorías débiles.** Una categoría con un acuerdo medio bajo puede tener un nombre poco claro o solaparse con otra.
+- **Tarjetas que van juntas.** Los bloques oscuros de la matriz de similitud muestran los grupos que los participantes forman por su cuenta. En un card sorting abierto, son candidatos a convertirse en tus categorías, sean cuales sean las etiquetas que usaron los participantes.
+- **El vocabulario de los participantes.** En un card sorting abierto, los nombres que los participantes dan a sus categorías muestran las palabras que buscarían en tu navegación.
+
+## Estados vacíos
+
+- **"No AI participants completed this card sort."** o **"No participants have completed this card sort yet."** No hay resultados disponibles para el tipo de participante seleccionado.
+- **"The agreement matrix appears once participants have sorted cards."**
+- **"The similarity matrix appears once participants have sorted at least two cards."**
+
+<Note>
+  Los resultados del card sorting todavía no se pueden exportar a PDF, y [Ask AI](/es/ask-ai) no los lee.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Bloque de card sorting" icon="layout-grid" href="/es/card-sorting">
+    Configura un card sorting abierto o cerrado.
+  </Card>
+  <Card title="Analiza los resultados" icon="chart-bar" href="/es/analyze-results">
+    Cambia entre participantes de IA y humanos, filtra y comparte.
+  </Card>
+</CardGroup>

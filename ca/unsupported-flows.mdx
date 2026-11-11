@@ -1,0 +1,64 @@
+---
+title: "Fluxos que els participants d'IA no poden completar"
+sidebarTitle: "Fluxos no compatibles"
+description: "Els inicis de sessió socials, els codis de verificació i la protecció contra bots aturen els participants d'IA. Mira els avisos d'Uxia i com evitar-los."
+---
+
+Els participants d'IA naveguen com usuaris reals, però alguns passos depenen de coses a les quals no poden accedir: un compte d'un tercer, una safata d'entrada o un telèfon, o un lloc web que bloqueja els navegadors automatitzats. Tingues en compte aquests passos abans de llançar el test; si no, els participants s'encallen i els resultats mostren una fricció que no és al teu disseny.
+
+A les tasques de lloc web en producció i de prototip de Figma, Uxia t'avisa sota el camp **Task** quan el text esmenta algun d'aquests fluxos. Fes clic a **Learn more** en un avís per obrir una guia breu, *Flows Not Supported by AI Participants*. Aquesta pàgina tracta els mateixos casos amb més detall.
+
+## Inicis de sessió socials
+
+> Warning: social login detected in this task. AI participants will fail on social authentication unless it is a Figma prototype flow. Use email/password authentication.
+
+Els fluxos d'inici de sessió amb tercers, com ara "Inicia la sessió amb Google" o l'inici de sessió únic, obren finestres emergents i redireccions externes que els participants d'IA no poden completar de principi a fi de manera fiable.
+
+**Com resoldre-ho:**
+
+- Crea un compte de prova que iniciï la sessió amb correu electrònic i contrasenya, i afegeix-lo amb **+ Add credentials**. Consulta [Credencials de participants](/ca/tester-credentials).
+- Redacta la tasca a partir d'aquest inici de sessió, per exemple: "Inicia la sessió amb el teu correu electrònic i la teva contrasenya i, després…".
+
+En una tasca de prototip de Figma, un botó d'inici de sessió social és només una pantalla més del prototip, així que els participants hi poden fer clic i continuar.
+
+## Codis de verificació
+
+> Warning: sign-up/register flow detected in this task. Make sure the flow does not require verification codes, validation emails, or 2FA because AI participants cannot complete those steps.
+
+Els codis per correu electrònic o SMS, els codis de 2FA i les contrasenyes d'un sol ús depenen d'una safata d'entrada o d'un dispositiu als quals els participants no poden accedir. El mateix passa amb els CAPTCHA. L'avís apareix sempre que la tasca esmenta registrar-se, donar-se d'alta o crear un compte. Si el flux no té cap pas de verificació, el pots ignorar.
+
+**Com resoldre-ho:**
+
+- Fes el test en un entorn de preproducció on la verificació per correu electrònic, la 2FA i el CAPTCHA estiguin desactivats per als comptes de prova.
+- Comença la tasca després del registre: dona als participants un compte de prova existent amb [credencials](/ca/tester-credentials) i prova el que ve després.
+- Acaba l'execució abans del pas de verificació amb una [condició d'aturada](/ca/stop-condition), com ara "Atura't quan et demanin un codi de verificació."
+
+## Instruccions de pensar en veu alta i de donar feedback
+
+> Warning: think-aloud or feedback instructions detected. AI participants already record observations during the test, so this wording will be removed before the test runs.
+
+Els participants d'IA ja comparteixen els seus pensaments i reaccions al llarg de totes les sessions. Les instruccions com ara "pensa en veu alta", "explica'ns la teva primera impressió" o "digues-nos què en penses", tant a la tasca com a la condició d'aturada, s'eliminen abans que s'executi el test.
+
+**Com resoldre-ho:**
+
+- Treu la instrucció i fes que la [tasca](/ca/mission) se centri en l'acció.
+- Per recollir opinions, afegeix un [bloc d'enquesta](/ca/survey-block) després de la tasca.
+
+## Protecció contra bots i accés denegat
+
+Alguns llocs web bloquegen els navegadors automatitzats amb mesures antibot o amb una pàgina d'accés denegat.
+
+- **Quan afegeixes l'enllaç.** Si Uxia detecta protecció contra bots, el modal de l'enllaç mostra *"This live page may not be navigable by testers."* i no pots desar l'enllaç. Fes clic a **Contact us** i donarem al teu equip d'informàtica les instruccions per afegir els participants d'IA d'Uxia a la llista d'accés permès. Consulta [Enllaços de llocs web en producció i de Figma](/ca/source#protecció-contra-bots).
+- **Durant l'execució.** Si un lloc web bloqueja un participant d'IA a mitja sessió, aquest participant queda marcat com a **Drop-off | Access denied** a la transcripció.
+- **Si es bloquegen tots els participants d'IA**, el test no es pot completar i es reemborsa el 80 % dels crèdits a la teva organització. Un bàner als resultats confirma el reemborsament.
+
+Per mantenir els participants d'IA dins de l'objectiu i lluny de les dades de producció, consulta [Restriccions dels participants d'IA](/ca/account/security/ai-participant-restrictions).
+
+<CardGroup cols={2}>
+  <Card title="Credencials de participants" icon="key" href="/ca/tester-credentials">
+    Dona als participants d'IA accés amb correu electrònic i contrasenya per als fluxos restringits.
+  </Card>
+  <Card title="Restriccions dels participants d'IA" icon="shield-check" href="/ca/account/security/ai-participant-restrictions">
+    Controla a què poden accedir els participants d'IA i què hi poden fer.
+  </Card>
+</CardGroup>

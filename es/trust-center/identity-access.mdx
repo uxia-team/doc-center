@@ -1,0 +1,40 @@
+---
+title: "Identidad y acceso"
+sidebarTitle: "Identidad y acceso"
+description: "Inicio de sesión único con SAML y OIDC, aprovisionamiento con SCIM y cómo se concede, supervisa y retira el acceso de los usuarios a Uxia."
+icon: "key-round"
+---
+
+Puedes gestionar el acceso a Uxia desde tu propio proveedor de identidad. SSO, SCIM, la creación de cuentas JIT, los registros de auditoría y el envío de logs están disponibles en el plan Custom.
+
+## Inicio de sesión único
+
+Tu equipo puede iniciar sesión a través de tu proveedor de identidad con SAML u OIDC. Entre los proveedores compatibles están Okta, Microsoft Entra ID y Google Workspace.
+
+También puedes verificar los dominios de tu organización y decidir si se permiten invitaciones de dominios externos.
+
+## Aprovisionamiento del acceso
+
+| Método | Cómo funciona |
+|---|---|
+| **SCIM** | Los usuarios que añades o actualizas en tu proveedor de identidad se crean o se actualizan en Uxia automáticamente. |
+| **Creación de cuentas JIT** | Los usuarios nuevos de un dominio verificado obtienen una cuenta la primera vez que inician sesión con SSO. |
+| **Invitaciones** | Los administradores del espacio de trabajo invitan directamente a las personas y les asignan un rol. |
+
+Los roles del espacio de trabajo determinan quién puede gestionar las personas y la configuración. Con tu proveedor de identidad, también puedes asignar roles y controlar el acceso a los espacios de trabajo desde un único lugar.
+
+## Retirada del acceso
+
+- **Con SCIM.** Cuando eliminas a un usuario en tu proveedor de identidad, su cuenta de Uxia se desactiva y sus sesiones activas finalizan.
+- **Solo con SSO.** Cuando eliminas a un usuario en tu proveedor de identidad, ya no puede iniciar sesión a través de él. Un administrador del espacio de trabajo también debería eliminarlo de Uxia para retirarle el acceso de inmediato.
+- **Sin SSO.** Un administrador del espacio de trabajo elimina al usuario del espacio de trabajo, y este pierde el acceso a sus tests y resultados.
+
+## Supervisión del acceso
+
+Los registros de auditoría recogen las acciones clave que se realizan dentro de tu organización. El envío de logs reenvía esos eventos a tu SIEM o plataforma de observabilidad, para que tu equipo de seguridad pueda supervisarlos junto con el resto de tu infraestructura.
+
+Para ver los detalles de configuración, consulta [SSO y aprovisionamiento de usuarios en Uxia](/es/account/security/sso).
+
+<Card title="Siguiente: Tests con inicio de sesión" icon="log-in" href="/es/trust-center/authenticated-testing">
+  Las dos formas de probar flujos autenticados y cómo reconocer a los participantes de IA.
+</Card>

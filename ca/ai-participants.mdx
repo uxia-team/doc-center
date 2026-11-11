@@ -1,0 +1,80 @@
+---
+title: "Participants d'IA"
+description: "Tria audiències, defineix quants participants d'IA fan el teu test, comprova l'estimació de crèdits i llança'l."
+---
+
+Els participants d'IA són participants sintètics generats a partir de les teves [audiències](/ca/audiences/overview). Fan el test igual que una persona, pensant en veu alta mentre avancen, i els seus resultats comencen a arribar a Analyze en pocs minuts.
+
+Per obrir aquesta vista, fes clic a **AI participants** a la fase [Recruit](/ca/recruit-participants). Quan fas clic a **Start recruiting** a Build, s'obre directament. La pàgina diu *"Choose your synthetic participants. You can also combine them with human participants."*
+
+## Configura i llança
+
+<Steps>
+  <Step title="Selecciona les audiències">
+    A **Select your audiences**, fes clic en la targeta d'una audiència per incloure-la. Pots incloure fins a 3 audiències. Fes servir **Search audiences...** per trobar-ne una pel nom o la descripció.
+
+    Per crear-ne una de nova, fes clic a **Create audience**. S'obre el [creador d'audiències](/ca/audiences/building-an-audience), i l'audiència nova s'inclou tan bon punt la deses. Espera que se n'acabin de generar els participants abans de llançar el test.
+  </Step>
+  <Step title="Defineix el nombre de participants">
+    El tauler **Participants** de la dreta mostra el total respecte al màxim, amb un recompte per a cada audiència. Canvia un recompte directament o fes servir:
+
+    - **Distribute evenly** per repartir el màxim a parts iguals entre les audiències.
+    - **Handpick participants** per triar exactament els participants d'IA que vols i, després, **Save selection**.
+    - **Remove**, al menú **···** d'una audiència, per treure aquella audiència.
+
+    Mentre no incloguis cap audiència, el tauler mostra *"No audiences included yet."*
+  </Step>
+  <Step title="Comprova l'estimació de crèdits">
+    **Credit estimate** mostra el cost de cada bloc i el **Total credits** per als participants seleccionats.
+  </Step>
+  <Step title="Llança el test">
+    Fes clic a **Launch test**. Primer Uxia fa una breu [revisió del test](/ca/recruit-participants#revisió-del-test). Si la supera, els participants d'IA comencen.
+  </Step>
+</Steps>
+
+## Límits de participants
+
+| | Pla Free | Plans de pagament |
+|---|---|---|
+| Participants d'IA per test | 3 | 5–10 |
+| Audiències per test | Fins a 3 | Fins a 3 |
+
+Al pla Free, si augmentes el recompte per sobre de 3, s'obre **Upgrade to add more AI participants**.
+
+Si el total queda fora del rang del teu pla, es mostra en vermell i **Launch test** continua desactivat. Passa el ratolí per sobre del total per veure quants participants has d'afegir o treure. També pots veure aquests missatges:
+
+| Missatge | Què has de fer |
+|---|---|
+| *You can include up to 3 audiences* | Treu una audiència abans d'afegir-ne una altra. |
+| *You can select at most 10 AI participants* | Redueix el recompte d'una o més audiències. |
+| *Not enough credits remaining for this launch* | Redueix els participants o els blocs, o [aconsegueix més crèdits](/ca/account/plans-and-credits). |
+
+## Com se sumen els crèdits
+
+Cada bloc es cobra per participant d'IA:
+
+| Bloc | Cost |
+|---|---|
+| Tasca (qualsevol tipus) | 20 crèdits, +1 per cada benchmark ([SUS](/ca/sus), [UXIA-Q](/ca/uxia-q-score)) activat |
+| Enquesta | 1 crèdit per pregunta |
+| Card sorting | 10 crèdits |
+| Revisió d'accessibilitat | 10 crèdits per frame, independentment dels participants |
+
+Per exemple, un test amb una tasca de lloc web en producció (amb SUS activat) i una enquesta de 6 preguntes, fet amb 5 participants d'IA, costa (21 + 6) × 5 = **135 crèdits**. Les [variants A/B](/ca/ab-variants) dupliquen els costos per participant i afegeixen 100 crèdits per a la comparació.
+
+Si el teu test té dret a un llançament gratuït, l'estimació mostra els crèdits ratllats i marcats com a **Free**. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+## Després del llançament
+
+Tornes al resum de Recruit, on la fila de participants d'IA mostra **Processing** i després **Completed**. Fes clic a **Go to analyze** per seguir els resultats a mesura que acaba cada bloc. Pots sortir de la pàgina: t'enviarem un correu electrònic quan acabi el test.
+
+Un cop llançats els participants d'IA, els blocs del test i la selecció d'audiències queden bloquejats. Encara pots afegir [enllaços de test](/ca/test-links) o sol·licitar un [panell humà](/ca/human-panel) per al mateix test.
+
+<CardGroup cols={2}>
+  <Card title="Enllaços de test" icon="link" href="/ca/test-links">
+    Afegeix els teus propis participants humans al mateix test.
+  </Card>
+  <Card title="Analitza els resultats" icon="chart-bar" href="/ca/analyze-results">
+    Consulta els resultats bloc per bloc.
+  </Card>
+</CardGroup>

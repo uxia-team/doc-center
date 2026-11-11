@@ -1,0 +1,99 @@
+---
+title: "Bloc de tasca"
+sidebarTitle: "Visió general"
+description: "Fes que els participants completin una tasca al teu lloc web en producció, prototip de Figma o prototip d'imatges mentre pensen en veu alta."
+---
+
+Un **bloc de tasca** demana als participants que completin una tasca concreta al teu producte o prototip. Els participants d'IA pensen en veu alta mentre naveguen, de manera que veus on dubten, on es perden o on es rendeixen, i per què. Els participants humans queden enregistrats mentre fan la mateixa tasca.
+
+## Tria un tipus de tasca
+
+A **Add a block**, la secció **Task** té tres blocs. Es diferencien pel tipus de contingut per on naveguen els participants:
+
+| Bloc | Serveix per provar | Font | Condició d'aturada | Credencials i fitxers |
+|---|---|---|---|---|
+| **Live website task** | Un lloc web en producció, una aplicació web, una versió de staging o un prototip programat | Un URL públic | Obligatòria | Disponibles |
+| **Figma prototype task** | Un prototip de Figma | Un enllaç de prototip de Figma (`figma.com/proto/…`) | Obligatòria | Disponibles |
+| **Media prototype task** | Dissenys que encara no estan construïts | Imatges que puges i connectes en un llenç | Cap: la tasca acaba al frame final | No disponibles |
+
+Una tasca de lloc web en producció funciona amb gairebé qualsevol cosa que tingui un URL públic:
+
+- Llocs web i aplicacions web públics, versions de staging o de preproducció i productes que requereixen iniciar sessió.
+- Prototips programats i aplicacions generades, com ara Lovable, Base44, Cursor, Google Stitch o Claude.
+
+També pots connectar Uxia als teus agents de programació amb l'[MCP d'Uxia](/ca/integrations/mcp).
+
+Per definir la font, consulta [Enllaços de llocs web en producció i de Figma](/ca/source) o [Prototip multimèdia](/ca/media-canvas).
+
+## Què inclou un bloc de tasca
+
+A sota de la font, cada bloc té els camps que defineixen la sessió:
+
+- **Task**: l'única cosa que els participants intenten fer. Consulta [Tasca](/ca/mission).
+- **Scenario**: la situació i la motivació que hi ha darrere. Consulta [Escenari](/ca/test-scenario).
+- **Stop condition**: l'estat final a la pantalla que posa fi a l'execució. Només en les tasques de lloc web en producció i de prototip de Figma. Consulta [Condició d'aturada](/ca/stop-condition).
+
+Tots els camps són obligatoris i admeten fins a 500 caràcters. Cadascun té també un botó **Tips** que suggereix maneres de reescriure'l.
+
+## Prova diversos fluxos en un sol test
+
+Mantén un sol objectiu per tasca i afegeix un bloc de tasca per a cada flux que vulguis provar. Un test pot tenir fins a 3 blocs de tasca als plans de pagament, i 1 al pla Free. Els participants fan els blocs en ordre.
+
+- Quan afegeixes un altre bloc del mateix tipus, Uxia n'emplena la font (l'URL, o els frames i el flux) a partir de l'anterior.
+- Quan una tasca de lloc web en producció o de prototip de Figma fa servir el mateix URL que una d'anterior, pots activar **Continue from where participants left the previous task**. Així, els participants continuen des d'on s'havien quedat en lloc de tornar a començar. Està desactivat per defecte.
+
+## Benchmarks
+
+A la part inferior de cada bloc de tasca, dos interruptors afegeixen un benchmark: afirmacions estandarditzades que els participants valoren després de la tasca i que es combinen en una puntuació.
+
+- **Measure usability with SUS**. Consulta [SUS](/ca/sus).
+- **Measure user experience with UXIA-Q**. Consulta [Puntuació UXIA-Q](/ca/uxia-q-score).
+
+Tots dos estan desactivats per defecte. Els benchmarks no estan disponibles al pla Free, on els interruptors mostren una etiqueta **Upgrade**.
+
+## Crèdits i límits
+
+Un bloc de tasca costa **20 crèdits per participant d'IA**, més 1 crèdit per participant d'IA per cada benchmark que activis. Per exemple, 5 participants d'IA en una tasca amb SUS i UXIA-Q costen 5 × 22 = 110 crèdits. Els participants humans convidats amb enllaços de test no costen crèdits.
+
+| | Pla Free | Plans de pagament |
+|---|---|---|
+| Blocs de tasca per test | 1 | 3 |
+| Benchmarks (SUS, UXIA-Q) | No disponibles | Disponibles |
+
+Si el lloc web en producció bloqueja tots els participants d'IA, es reemborsa el 80 % dels crèdits. Consulta [Fluxos que els participants d'IA no poden completar](/ca/unsupported-flows).
+
+## Credencials i fitxers
+
+Si el teu flux comença darrere d'un inici de sessió o demana als participants que pugin alguna cosa, fes servir **+ Add credentials** i **+ Add files** a sota de l'URL d'una tasca de lloc web en producció o de prototip de Figma.
+
+<CardGroup cols={2}>
+  <Card title="Credencials de participants" icon="key" href="/ca/tester-credentials">
+    Dona als participants d'IA dades d'accés i valors de camps per als fluxos restringits.
+  </Card>
+  <Card title="Fitxers de participants" icon="file-up" href="/ca/tester-files">
+    Dona als participants d'IA els fitxers que un flux els demana que pugin.
+  </Card>
+</CardGroup>
+
+## Què obtens
+
+A la fase **Analyze**, cada bloc de tasca té les seves pròpies pestanyes: **Insights**, **Transcripts**, **Analytics**, **Journeys** i, quan hi ha algun benchmark activat, **Benchmarks**.
+
+<CardGroup cols={2}>
+  <Card title="Insights i UOS" icon="lightbulb" href="/ca/results">
+    Insights d'usabilitat ordenats per rellevància, la puntuació UOS i suggeriments de millora.
+  </Card>
+  <Card title="Transcripcions" icon="scroll-text" href="/ca/test-transcripts">
+    Sessions pas a pas amb pantalles i comentaris en veu alta.
+  </Card>
+  <Card title="Analítica i recorreguts" icon="chart-line" href="/ca/analytics">
+    Com s'han mogut els participants pel flux i on hi ha hagut fricció.
+  </Card>
+  <Card title="Resultats dels benchmarks" icon="gauge" href="/ca/benchmark-results">
+    Puntuacions SUS i UXIA-Q de la tasca.
+  </Card>
+</CardGroup>
+
+<Card title="Següent: Enllaços de llocs web en producció i de Figma" icon="arrow-right" href="/ca/source">
+  Afegeix l'URL per on naveguen els participants i deixa que Uxia el verifiqui.
+</Card>

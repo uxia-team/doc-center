@@ -1,0 +1,120 @@
+---
+title: "Archivos para participantes"
+sidebarTitle: "Archivos para participantes"
+description: "Da a los participantes de IA los archivos que una tarea les pide subir, y descubre cómo Uxia los guarda y los protege."
+---
+
+Algunas tareas no se pueden completar sin algo que subir. Si tu flujo pide a los participantes adjuntar un CV a una solicitud de empleo, subir un documento de identidad para una verificación, importar un CSV o añadir una foto de perfil, los participantes de IA necesitan un archivo real que entregar.
+
+Para eso sirven los **archivos**. Los importas una vez en un bloque de tarea, y los participantes de IA los usan siempre que el flujo llega a un paso de subida.
+
+## Añadir archivos
+
+<Steps>
+  <Step title="Abre el modal de archivos">
+    En una tarea de sitio web en producción o de prototipo de Figma, haz clic en **+ Add files** debajo de la URL.
+  </Step>
+  <Step title="Importa tus archivos">
+    Arrastra y suelta los archivos en el modal, o haz clic para buscarlos. Elimina un archivo con su botón **X**.
+  </Step>
+  <Step title="Cierra el modal">
+    Haz clic en **Done**. El botón del bloque muestra ahora cuántos archivos has añadido, por ejemplo **2 files added**.
+  </Step>
+</Steps>
+
+## Qué puedes subir
+
+Importa cualquier archivo que el flujo pueda pedir. Casos habituales:
+
+| Caso de uso | Archivo típico |
+|---|---|
+| Solicitud de empleo | Un CV o una carta de presentación en PDF |
+| Paso de identificación o verificación | Un documento escaneado o una foto |
+| Importación de datos | Un CSV o una hoja de cálculo |
+| Configuración del perfil | Un avatar o una imagen de perfil |
+| Subida de contenido multimedia | Un vídeo o un clip de audio cortos |
+
+### Formatos admitidos y límites
+
+<CardGroup cols={2}>
+  <Card title="Formatos" icon="file">
+    **Cualquier tipo de archivo**, excepto:
+
+    - Ejecutables
+    - Scripts
+    - Archivos web activos, como HTML o SVG
+    - Documentos con macros
+  </Card>
+
+  <Card title="Límites" icon="gauge">
+    **Hasta 100 MB** por archivo
+
+    **Hasta 5 archivos** por bloque de tarea
+  </Card>
+</CardGroup>
+
+Estas exclusiones existen porque el archivo se entrega a un navegador real durante la sesión. Todo lo que pueda ejecutar código se bloquea, por tu protección y por la nuestra.
+
+<Tip>
+  Si el flujo tiene más de un paso de subida, importa un archivo para cada uno. Ponles nombres que describan lo que son, como `cv.pdf` o `id-document.png`. Los participantes de IA ven los nombres de los archivos, así que los nombres claros les ayudan a elegir el archivo correcto en cada paso.
+</Tip>
+
+## Cómo gestiona Uxia tus archivos
+
+Un archivo puede contener muchos más datos personales que un campo de formulario, así que se trata con el mismo cuidado que las [credenciales](/es/tester-credentials).
+
+### Cifrados en tránsito y en reposo
+
+Los archivos viajan por TLS y se guardan cifrados en reposo. Se quedan vinculados al bloque de tarea en el que los importaste, así que puedes volver a ejecutar el test sin subirlos de nuevo. Solo se recuperan cuando una sesión llega a un paso de subida.
+
+### El modelo de IA nunca los lee
+
+Los participantes de IA solo ven el nombre y el tipo de cada archivo, nunca su contenido. Cuando el flujo llega a un campo de subida, el archivo se adjunta directamente, igual que cuando una persona lo elige en un selector de archivos. Por eso, nada de lo que hay dentro de tu archivo puede filtrarse a las transcripciones ni a los insights.
+
+<Note>
+  Esto también significa que los participantes no pueden actuar en función del contenido de un archivo. Si tu tarea depende de saber algo, como un nombre, una fecha o un número de referencia, ponlo en la [tarea](/es/mission) o en una [credencial](/es/tester-credentials), no dentro del archivo.
+</Note>
+
+### Nunca se usan para entrenar modelos
+
+Nada de lo que envías a Uxia se usa para entrenar ni ajustar ningún modelo, ni de Uxia ni de terceros. Los archivos quedan excluidos por diseño, ya que su contenido nunca llega a un modelo.
+
+### Limitados a tu espacio de trabajo
+
+Los archivos pertenecen al test en el que se importaron, dentro de tu espacio de trabajo. Solo tú y los compañeros que hayas invitado a ese espacio de trabajo pueden acceder a ellos: nunca otras organizaciones ni otros clientes de Uxia.
+
+Si eliminas a alguien del espacio de trabajo, pierde el acceso al test y, con él, a sus archivos.
+
+<Warning>
+  Considera la pertenencia al espacio de trabajo como el límite de acceso. Cualquiera que pueda abrir un test puede acceder a los archivos adjuntos, así que invita solo a compañeros que deban tener ese nivel de acceso.
+</Warning>
+
+## Buenas prácticas
+
+El archivo más seguro es aquel que no importaría que viera otra persona.
+
+<Steps>
+  <Step title="Usa documentos ficticios, no reales">
+    El CV de un candidato inventado sirve igual que uno real para probar un flujo de subida. Nunca subas el CV de un candidato real, el contrato de un cliente real ni tu propio documento de identidad.
+  </Step>
+  <Step title="Elimina los datos personales antes de subirlo">
+    Si tienes que partir de un documento real, sustituye primero los nombres, correos electrónicos, números de teléfono, direcciones y números de identificación por valores de prueba.
+  </Step>
+  <Step title="Usa archivos pequeños y sencillos">
+    El límite es de 100 MB, pero un PDF de una página se sube más rápido y falla menos que un escaneo grande. Los participantes solo necesitan que la subida funcione, no que el documento sea realista.
+  </Step>
+  <Step title="Usa el formato que espera el flujo">
+    Si el formulario solo acepta PDF, importar un DOCX hace que el flujo falle en el paso de subida, y ese fallo aparece en tus resultados como un problema de usabilidad que no lo es.
+  </Step>
+  <Step title="Elimina los archivos que ya no necesites">
+    Los archivos siguen vinculados al bloque de tarea hasta que los eliminas. Quita los que ya no vayas a usar.
+  </Step>
+</Steps>
+
+<Warning>
+  No subas nada que esté sujeto a un acuerdo de confidencialidad, ni ningún documento que contenga datos personales reales de terceros. Usa un equivalente sintético en su lugar.
+</Warning>
+
+<Card title="Siguiente: Flujos que los participantes de IA no pueden completar" icon="arrow-right" href="/es/unsupported-flows">
+  Inicios de sesión con redes sociales, códigos de verificación y protección contra bots, y cómo sortearlos.
+</Card>

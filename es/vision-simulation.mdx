@@ -1,0 +1,66 @@
+---
+title: "Simulación de visión"
+description: "Compara tus frames lado a lado con daltonismo, visión borrosa y pérdida de campo visual para comprobar que tu diseño sigue funcionando."
+---
+
+La pestaña **Vision Simulation** muestra el mismo frame con dos condiciones de visión, una al lado de la otra. Úsala para comprobar si tu diseño sigue comunicando cuando cambia la percepción. Es la forma más rápida de detectar significados que dependen solo del color o un contraste que se desvanece para parte de tus usuarios.
+
+La encontrarás junto a **Results** en el bloque de revisión de accesibilidad, en la fase **Analyze**.
+
+## Compara dos condiciones
+
+<Steps>
+  <Step title="Elige un frame">
+    Haz clic en una de las miniaturas numeradas de la parte superior para elegir el frame que quieres simular.
+  </Step>
+  <Step title="Elige una condición para cada panel">
+    Cada panel tiene su propio desplegable de condiciones. El panel izquierdo empieza en **Normal Vision** y el derecho en **Red-Blind**, así que partes de una referencia junto a una simulación.
+  </Step>
+  <Step title="Ajusta la intensidad">
+    Arrastra el control deslizante **Severity**, junto al desplegable, para que la condición sea más leve o más fuerte, del 1 % al 100 %. Cada panel empieza en el 50 %. El control está desactivado con **Normal Vision**.
+  </Step>
+  <Step title="Mira más de cerca">
+    Haz clic en una imagen simulada para abrirla a tamaño completo.
+  </Step>
+</Steps>
+
+Para comparar dos condiciones directamente, pon una simulación en cada panel, por ejemplo **Red-Blind** junto a **Green-Blind**.
+
+## Condiciones
+
+| Grupo | Condición | Qué simula |
+|---|---|---|
+| | **Normal Vision** | Percepción del color estándar con plena nitidez visual |
+| **Color Blindness** | **Red-Blind** | Protanopía: dificultad para distinguir el rojo del verde |
+| | **Green-Blind** | Deuteranopía, la forma más común de daltonismo |
+| | **Blue-Blind** | Tritanopía: dificultad con el azul y el amarillo |
+| | **Total Color Blindness** | Acromatopsia: visión solo en escala de grises |
+| **Clarity Issues** | **Cataracts** | Un cristalino opaco: visión borrosa y velada, con tono amarillento |
+| | **Astigmatism** | Visión borrosa con imágenes fantasma |
+| | **Presbyopia** | Pérdida del enfoque de cerca asociada a la edad |
+| **Field Loss** | **Glaucoma** | Pérdida de la visión periférica, como mirar a través de un túnel |
+| | **Macular Degeneration** | Pérdida de la visión central, que afecta a los detalles |
+
+## Qué revisar
+
+- **Daltonismo.** Comprueba que los estados, los errores, los enlaces y las series de los gráficos no dependan solo del color. Un mensaje de error en rojo debe seguir leyéndose como un error con **Total Color Blindness**.
+- **Problemas de nitidez.** Comprueba que el texto pequeño, los iconos finos y las etiquetas de poco contraste sigan siendo legibles cuando la imagen se ve borrosa.
+- **Pérdida de campo visual.** Comprueba dónde están el contenido y las acciones clave. Con **Glaucoma**, el contenido cercano a los bordes se desvanece. Con **Macular Degeneration**, lo que se desvanece es el centro de la pantalla.
+- **Jerarquía.** Comprueba que el elemento más importante siga destacando cuando cambian el color y la nitidez.
+
+Cuando detectes un problema, vuelve a la pestaña **Results** y busca el criterio relacionado, como *Use of Color* (1.4.1) o *Contrast (Minimum)* (1.4.3). Consulta [Evaluación de criterios](/es/criteria-evaluation).
+
+## Conviene saber
+
+- Las simulaciones son aproximaciones pensadas para sensibilizar. La experiencia real de estas condiciones varía mucho de una persona a otra.
+- Las simulaciones se aplican a frames de imagen. Los frames que Uxia omitió por no ser contenido de interfaz muestran el mismo aviso que en **Results**.
+- La pestaña necesita un navegador con WebGL. Si WebGL no está disponible, la pestaña muestra **WebGL Required**. Prueba con otro navegador o activa WebGL en la configuración de tu navegador.
+
+<CardGroup cols={2}>
+  <Card title="Bloque de revisión de accesibilidad" icon="person-standing" href="/es/accessibility-block">
+    Qué cubre la revisión de accesibilidad y cuándo usarla.
+  </Card>
+  <Card title="Evaluación de criterios" icon="list-checks" href="/es/criteria-evaluation">
+    Lee los resultados criterio por criterio.
+  </Card>
+</CardGroup>

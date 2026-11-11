@@ -1,0 +1,40 @@
+---
+title: "Identitat i accés"
+sidebarTitle: "Identitat i accés"
+description: "Inici de sessió únic amb SAML i OIDC, aprovisionament amb SCIM i com es concedeix, se supervisa i es retira l'accés dels usuaris a Uxia."
+icon: "key-round"
+---
+
+Pots gestionar l'accés a Uxia des del teu propi proveïdor d'identitat. L'SSO, l'SCIM, la creació de comptes JIT, els registres d'auditoria i la transmissió de registres estan disponibles al pla Custom.
+
+## Inici de sessió únic
+
+El teu equip pot iniciar sessió a través del teu proveïdor d'identitat amb SAML o OIDC. Entre els proveïdors compatibles hi ha Okta, Microsoft Entra ID i Google Workspace.
+
+També pots verificar els dominis de la teva organització i decidir si es permeten les invitacions des de dominis externs.
+
+## Aprovisionament de l'accés
+
+| Mètode | Com funciona |
+|---|---|
+| **SCIM** | Els usuaris que afegeixes o actualitzes al teu proveïdor d'identitat es creen o s'actualitzen automàticament a Uxia. |
+| **Creació de comptes JIT** | Els usuaris nous d'un domini verificat obtenen un compte el primer cop que inicien sessió amb SSO. |
+| **Invitacions** | Els administradors de l'espai de treball conviden les persones directament i els assignen un rol. |
+
+Els rols de l'espai de treball determinen qui pot gestionar les persones i la configuració. Amb el teu proveïdor d'identitat, també pots assignar rols i controlar l'accés als espais de treball des d'un sol lloc.
+
+## Retirada de l'accés
+
+- **Amb SCIM.** Quan elimines un usuari al teu proveïdor d'identitat, el seu compte d'Uxia es desactiva i se'n tanquen les sessions actives.
+- **Només amb SSO.** Quan elimines un usuari al teu proveïdor d'identitat, ja no pot iniciar sessió a través d'aquest proveïdor. Un administrador de l'espai de treball també l'hauria d'eliminar d'Uxia per retirar-li l'accés immediatament.
+- **Sense SSO.** Un administrador de l'espai de treball elimina l'usuari de l'espai de treball, i aquest perd l'accés als tests i als resultats d'aquell espai.
+
+## Supervisió de l'accés
+
+Els registres d'auditoria recullen les accions clau que es fan dins de la teva organització. La transmissió de registres envia aquests esdeveniments al teu SIEM o a la teva plataforma d'observabilitat, perquè l'equip de seguretat els pugui supervisar juntament amb la resta de la infraestructura.
+
+Per als detalls de configuració, consulta [SSO i aprovisionament d'usuaris](/ca/account/security/sso).
+
+<Card title="Següent: Tests amb inici de sessió" icon="log-in" href="/ca/trust-center/authenticated-testing">
+  Les dues maneres de fer tests en fluxos amb autenticació i com reconèixer els participants d'IA.
+</Card>

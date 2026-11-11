@@ -1,0 +1,95 @@
+---
+title: "Prototip multimèdia"
+description: "Crea un prototip clicable a partir de les teves pròpies imatges en una tasca de prototip multimèdia i prova'l amb participants."
+---
+
+Una **Media prototype task** et permet provar dissenys que encara no estan construïts. Puges les teves pantalles com a imatges, les connectes en un flux al llenç i els participants hi naveguen com si fos una interfície real.
+
+## Quan s'ha de fer servir
+
+Recorre a un prototip multimèdia quan vulguis provar:
+
+- Pantalles estàtiques exportades de Figma, Sketch o qualsevol altra eina de disseny.
+- Un conjunt d'imatges que representen un flux que encara no està construït.
+- Iteracions inicials del disseny, abans de tenir un prototip funcional.
+
+Un prototip multimèdia només admet imatges. Per provar un prototip de Figma a partir del seu enllaç, fes servir una [tasca de prototip de Figma](/ca/source).
+
+## Construeix el prototip
+
+<Steps>
+  <Step title="Obre el llenç">
+    Al bloc, fes clic a **Add prototype**.
+  </Step>
+  <Step title="Selecciona un mode">
+    A **Select mode**, tria **Interactive** o **Sequential** i fes clic a **Continue**. Consulta [Modes](#modes).
+  </Step>
+  <Step title="Importa els teus dissenys">
+    Fes clic a **Import designs** i tria les teves imatges. Més endavant pots afegir-ne més amb **Import Files** a la barra lateral **Frames**. Un prototip admet fins a 35 frames.
+  </Step>
+  <Step title="Configura el flux">
+    En un flux interactiu, tria el frame inicial i després el frame final, i connecta els frames amb àrees d'interacció. En un flux seqüencial, arrossega els frames a la barra lateral **Frames** per posar-los en l'ordre en què els veuran els participants.
+  </Step>
+  <Step title="Previsualitza i desa">
+    Obre la pestanya **Preview** per recórrer un flux interactiu tal com ho faria un participant. Després, fes clic a **Save**.
+  </Step>
+</Steps>
+
+L'execució acaba quan els participants arriben al frame final, de manera que una tasca de prototip multimèdia no té condició d'aturada. Igualment has d'escriure una [tasca](/ca/mission) i un [escenari](/ca/test-scenario), com en qualsevol bloc de tasca.
+
+## Modes
+
+| Mode | Com funciona | Tria'l quan |
+|---|---|---|
+| **Interactive** (Recommended) | Un prototip interactiu amb àrees clicables i diferents camins. | Vols un flux realista amb bifurcacions. |
+| **Sequential** | Una seqüència lineal de frames que els participants veuen en ordre. | Vols un recorregut senzill i ràpid. |
+
+## Fluxos interactius
+
+Un flux interactiu necessita com a mínim 2 frames. Després d'importar-los, Uxia et demana que triïs el frame inicial i després el frame final, que queden marcats com a **Start** i **End**.
+
+Per connectar frames, fes clic a la icona de la diana de la barra d'eines (**Create interaction areas**), dibuixa una àrea sobre un frame i connecta-la al frame al qual porta. Després, tria l'acció que l'activa.
+
+Una llista de pendents al llenç et mostra el que falta: un inici i un final, com a mínim una connexió de sortida a cada frame i un camí des de cada frame fins al final. La pestanya **Preview** està disponible un cop has definit el frame inicial.
+
+## Accions
+
+| Acció | Serveix per a |
+|---|---|
+| **Click** | Botons, enllaços o qualsevol element que porti a un altre frame quan s'hi fa clic. |
+| **Input** | Camps de text o barres de cerca. Simula que s'escriu abans de passar al frame següent. |
+| **Scroll / Swipe** | Pàgines llargues, carrusels o contingut que es pot lliscar. Defineix la direcció: amunt, avall, esquerra, dreta o qualsevol. |
+| **Wait** | Frames que canvien automàticament al cap d'un temps. Defineix el temps d'espera en mil·lisegons. |
+| **Drag** | Controls lliscants o objectes que l'usuari ha d'arrossegar d'un punt a un altre. |
+| **Hover** | Elements que mostren informació addicional o canvien quan el cursor hi passa per sobre. |
+
+## Controls del llenç
+
+- **Click mode.** Quan està activat, arrossega els frames per canviar-los de posició. Quan està desactivat, arrossega per desplaçar-te pel llenç.
+- **Create interaction areas.** Dibuixa regions interactives sobre un frame i connecta-les al pas següent. Només en mode interactiu.
+- **Zoom.** Fes servir el menú de zoom de la barra d'eines (apropar, allunyar, 50 %, 100 %, 200 %), pessiga el trackpad o desplaça't mentre mantens premuda la tecla Ctrl o Cmd.
+- **Fit all images in view.** Ajusta la vista per mostrar tots els frames del llenç.
+- **Pan.** Desplaça't amb el trackpad o la roda del ratolí, arrossega el llenç quan el mode de clic està desactivat, o mantén premuda la **barra espaiadora** i arrossega.
+
+A la barra lateral **Frames**, també pots canviar el nom dels frames, eliminar-los i saltar-hi.
+
+## Preguntes freqüents
+
+<AccordionGroup>
+  <Accordion title="Com puc crear un desplaçament de pantalla completa?">
+    Crea una àrea d'interacció que cobreixi tot el frame, assigna-li l'acció **Scroll / Swipe** i connecta-la al frame següent, que mostra la vista ja desplaçada.
+  </Accordion>
+  <Accordion title="Com puc simular l'escriptura de text?">
+    Crea una interacció **Input** sobre el camp buit i connecta-la a un frame on el camp aparegui emplenat. En els formularis amb diversos camps, pots emplenar-los tots en un sol pas o crear frames separats per tenir una experiència més realista.
+  </Accordion>
+  <Accordion title="L'ordre dels frames és important?">
+    En un flux seqüencial, sí: els participants veuen els frames en l'ordre de la barra lateral **Frames**. En un flux interactiu, no: el camí el defineixen les àrees d'interacció i les seves connexions, no la numeració dels frames.
+  </Accordion>
+  <Accordion title="Els participants veuen els efectes de transició?">
+    No. Les animacions de transició de **Preview** només serveixen per construir i revisar el prototip. Els participants només experimenten les interaccions i els frames resultants.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Següent: Tasca" icon="arrow-right" href="/ca/mission">
+  Explica als participants què han d'intentar aconseguir.
+</Card>

@@ -1,0 +1,65 @@
+---
+title: "Antigravity"
+sidebarTitle: "Antigravity"
+description: "Connecta Uxia a Antigravity 2.0 i a l'IDE d'Antigravity amb MCP per crear tests i consultar resultats."
+---
+
+## Antigravity 2.0
+
+### Configuració
+
+1. Obre el fitxer de configuració MCP a `~/.gemini/config/mcp_config.json` (crea'l si no existeix).
+2. Afegeix el servidor d'Uxia a l'objecte `mcpServers`:
+   ```json
+   {
+     "mcpServers": {
+       "Uxia": {
+         "serverUrl": "https://platform.uxia.app/api/mcp-v2/mcp"
+       }
+     }
+   }
+   ```
+3. A Antigravity, ves a **Settings** \> **Customizations**.
+4. Desplaça't fins a **Installed MCP Servers** i fes clic a **Refresh**.
+5. Fes clic a **Authenticate** al costat de l'entrada d'Uxia.
+6. S'obrirà una finestra del navegador. Inicia sessió amb el teu compte d'Uxia i fes clic a **Authorize** per autoritzar l'accés.
+7. Copia el codi d'autenticació de la pàgina de retorn, enganxa'l al camp del codi d'autenticació d'Antigravity i fes clic a **Submit**.
+8. Antigravity hauria d'actualitzar automàticament els servidors MCP. Si no ho fa, fes clic al botó **Refresh**. Després de l'actualització, el servidor MCP d'Uxia hauria d'aparèixer com a actiu i habilitat.
+
+### Ús
+
+Un cop connectat, pots demanar a Antigravity 2.0 que treballi amb Uxia:
+
+```plaintext
+Crea un test nou per provar la meva aplicació nova a www.example.com
+```
+
+## IDE d'Antigravity
+
+### Configuració
+
+1. Obre el fitxer de configuració MCP a `~/.gemini/config/mcp_config.json` (crea'l si no existeix).
+2. Afegeix el servidor d'Uxia a l'objecte `mcpServers`:
+   ```json
+   {
+     "mcpServers": {
+       "Uxia": {
+         "serverUrl": "https://platform.uxia.app/api/mcp-v2/mcp"
+       }
+     }
+   }
+   ```
+3. Obre **User Settings** fent clic a la icona de l'engranatge, a la part superior dreta.
+4. Fes clic a **Customizations**.
+5. Desplaça't fins a **Installed MCP Servers** i fes clic a **Refresh**.
+6. Fes clic a **Authenticate** al costat de l'entrada d'Uxia.
+7. S'obrirà una finestra del navegador. Inicia sessió amb el teu compte d'Uxia i fes clic a **Authorize** per autoritzar l'accés.
+8. Copia el codi d'autenticació de la pàgina de retorn, enganxa'l al camp del codi d'autenticació de l'IDE d'Antigravity i fes clic a **Submit**.
+
+### Ús
+
+Un cop connectat, pots demanar a l'IDE d'Antigravity que treballi amb Uxia directament:
+
+```plaintext
+Crea un test nou per provar la meva aplicació nova a www.example.com
+```

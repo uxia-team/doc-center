@@ -1,0 +1,45 @@
+---
+title: "Tests con inicio de sesión"
+sidebarTitle: "Tests con inicio de sesión"
+description: "Las dos formas de probar con Uxia productos protegidos por credenciales, y cómo incluir en listas de permitidos y reconocer a los participantes de IA."
+icon: "log-in"
+---
+
+Hay dos formas de probar un producto que está detrás de un inicio de sesión. Eliges una para cada test.
+
+## Credenciales
+
+Puedes introducir credenciales en la sección **Credentials** de un bloque de tarea, pensada específicamente para ello.
+
+- Las credenciales se guardan de forma segura y se cifran en reposo.
+- Solo se descifran en los casos en que son necesarias.
+- Te recomendamos no introducir credenciales sensibles o potencialmente peligrosas, y cambiarlas inmediatamente después de completar el test.
+
+Consulta [Credenciales de participantes](/es/tester-credentials) para configurarlas.
+
+## Inicio de sesión interactivo
+
+Puedes preparar tú mismo el estado del test desde la interfaz de Uxia e iniciar sesión como lo harías normalmente. Capturamos la sesión iniciada, así que no guardamos ninguna credencial.
+
+Todos los participantes de IA del test usan esa sesión iniciada. Se cifra mientras está guardada y se elimina automáticamente una hora después de que la guardes.
+
+Consulta [Inicio de sesión interactivo](/es/tester-credentials#inicio-de-sesión-interactivo) para configurarlo.
+
+## Listas de permitidos y reconocimiento de los participantes de IA
+
+Podemos compartir contigo nuestras direcciones IP para que tu equipo las incluya en una lista de permitidos y a los participantes de IA les resulte más fácil superar los inicios de sesión y la protección contra bots.
+
+Todas las solicitudes de navegación de los participantes de IA llevan las mismas cabeceras, así que es fácil reconocerlas y detectarlas en tus logs y herramientas de seguridad.
+
+Para obtener las direcciones IP y los detalles de las cabeceras, escribe a [hello@uxia.app](mailto:hello@uxia.app).
+
+## Configuración recomendada
+
+- Prueba en un entorno de staging o UAT con datos sintéticos.
+- Usa cuentas de prueba específicas, con solo los permisos que necesita la tarea.
+
+Para más orientación, consulta [IA responsable](/es/trust-center/ai#configuración-recomendada).
+
+<Card title="Siguiente: Protección de datos" icon="database" href="/es/trust-center/data-protection">
+  Residencia, conservación y eliminación de datos, y tus derechos.
+</Card>

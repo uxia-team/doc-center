@@ -1,0 +1,91 @@
+---
+title: "Insights y UOS"
+sidebarTitle: "Insights"
+description: "Consulta los insights de un bloque de tarea, entiende su Usability Optimization Score y abre el impacto, la evidencia y la solución de cada insight."
+---
+
+Cuando un [bloque de tarea](/es/task-block) termina, ábrelo en la fase **Analyze** para ver con qué se encontraron los participantes. La pestaña **Insights** enumera cada problema y hallazgo, ordenados por prioridad, y la cabecera del bloque resume el resultado en un solo número: el **Usability Optimization Score (UOS)**.
+
+## Las pestañas de un bloque de tarea
+
+| Pestaña | Qué muestra |
+|---|---|
+| **Insights** | Insights ordenados por prioridad, con evidencias y soluciones (esta página) |
+| **Transcripts** | La sesión de cada participante, paso a paso ([Transcripciones](/es/test-transcripts)) |
+| **Analytics** | Éxito, abandono, clics erróneos y mapas de calor ([Analítica y recorridos](/es/analytics)) |
+| **Journeys** | Los caminos que siguieron los participantes ([Analítica y recorridos](/es/analytics)) |
+| **Benchmarks** | Las puntuaciones SUS y UXIA-Q, cuando están activadas ([Resultados de los benchmarks](/es/benchmark-results)) |
+
+Mientras el bloque se está ejecutando, solo está disponible **Transcripts**, que se va llenando en directo. Las demás pestañas se desbloquean cuando termina la ejecución. Si se bloqueó a todos los participantes de IA en un sitio web en producción, solo sigue disponible **Transcripts**.
+
+## La cabecera del bloque
+
+Haz clic en el chevrón junto al título del bloque para desplegar **Test setup**: el **Scenario**, la **Stop condition** (tareas de sitio web en producción y de prototipo de Figma), el **Product status** (**Finished product** o **Prototype**) y la **Source**. Haz clic en la fuente para abrir el sitio web en una pestaña nueva o para ver los frames del prototipo que has probado.
+
+## Usability Optimization Score
+
+La insignia del UOS, a la derecha de la cabecera del bloque, muestra una puntuación de 0 a 100 dentro de un anillo, con un breve comentario. Haz clic en ella para leer **What is the Usability Optimization Score?** y qué significa tu resultado.
+
+La puntuación pondera cada insight según su relevancia y según cuántos participantes se encontraron con él, de modo que refleja lo que vivió un participante típico:
+
+- Una audiencia más grande saca a la luz más insights, pero eso por sí solo no baja la puntuación.
+- Un flujo más largo no se penaliza por dar más cosas que hacer a los participantes.
+- Los participantes que no completan la tarea bajan la puntuación.
+- Los insights con la relevancia **Prototype** quedan fuera. Señalan limitaciones del prototipo, no de tu diseño.
+
+| Comentario | Qué significa |
+|---|---|
+| **High drop-off** | Más de la mitad de los participantes no completaron la tarea. Revisa sus recorridos y la configuración del test. |
+| **Improvement opportunities** | Al menos un insight de relevancia High necesita atención. Empieza por ahí. |
+| **Frictions worth fixing** | Hay oportunidades importantes para mejorar la experiencia. |
+| **Minor frictions** | La experiencia funciona bien en general, con algunos aspectos que mejorar. |
+| **Strong foundation** | La experiencia está en buena forma, con margen para mejorarla aún más. |
+| **Highly optimized** | Se ha encontrado poca fricción en este test. |
+
+Cuando filtras los resultados por audiencia, el UOS se recalcula para las audiencias que has seleccionado. Los benchmarks (SUS y UXIA-Q) se muestran por separado y no influyen en el UOS.
+
+## La pestaña Insights
+
+La pestaña empieza con el número de insights detectados (por ejemplo, **12 insights reported**) y un cuadro **Search** que busca en títulos, descripciones y categorías. La tabla tiene cuatro columnas:
+
+| Columna | Qué muestra |
+|---|---|
+| **Title** | El insight. Haz clic en el marcador para destacarlo y moverlo al principio de la tabla. |
+| **Relevance** | **High**, **Medium**, **Low** o **Prototype** (puede deberse a una limitación del prototipo y no a tu diseño). Puedes cambiarla. |
+| **Reporters** | Las etiquetas de audiencia y cuántos participantes señalaron el insight, por ejemplo **2 out of 5**. |
+| **Category** | El tipo de problema. Pasa el cursor por encima para ver su definición. |
+
+Las categorías son **Navigation**, **CTAs**, **Copy**, **Trust**, **Usability**, **Visual Design** y **Other**. Los insights se ordenan primero por los destacados, luego por relevancia y luego por el número de participantes que los señalaron.
+
+### Cambiar la relevancia de un insight
+
+Haz clic en la relevancia de cualquier insight y elige un valor nuevo. La etiqueta muestra entonces **Edited**, y el desplegable marca la **(original rating)** para que puedas volver a ella. Tu cambio actualiza el UOS. Asigna a un insight la relevancia **Prototype** para sacarlo de la puntuación.
+
+## Detalles de un insight
+
+Haz clic en una fila para abrir **Insight details**. El panel muestra el título, la relevancia, la categoría, quién lo señaló, una descripción y los frames afectados en los que apareció el problema. Debajo hay tres pestañas:
+
+- **Impact.** Una **Impact Assessment** dividida en **User Impact** y **Business Impact**.
+- **Evidence.** **What Testers Said**: citas agrupadas por participante. Haz clic en una cita para ir al momento en que el participante la dijo. Cuando el insight trata de un comportamiento y no de palabras, ves en su lugar **What Testers Did**, y en **Observed in**, los participantes en los que se observó.
+- **Fix.** Una **Fix Suggestion** con sus **Acceptance criteria**, seguida de un **Prompt** que puedes copiar con **Copy** o ampliar con **Expand** y pegar en una herramienta de programación con IA. Los resultados más antiguos muestran en su lugar una valoración de **Technical Complexity**: **Quick fix**, **Requires planning** o **Major redesign**.
+
+<Tip>
+  Para llevar los insights a Claude Code, Cursor u otra herramienta de IA sin copiar y pegar, conecta el [servidor MCP de Uxia](/es/integrations/mcp).
+</Tip>
+
+## Límites del plan Free
+
+En el plan Free, la pestaña Insights muestra solo los insights principales (hasta 5) e indica cuántos están ocultos: **You are missing +N insights**. La descripción, los frames afectados y la pestaña **Impact** siguen visibles; **Evidence** y **Fix** están bloqueadas. Los planes de pago lo ven todo. Consulta [Planes y créditos](/es/account/plans-and-credits).
+
+## Participantes humanos
+
+Estas pestañas muestran los resultados de los participantes de IA. Para ver qué hicieron los participantes humanos en la misma tarea, cambia el tipo de participante a **Human participants**. Consulta [Resultados de participantes humanos](/es/human-insights) y [Analiza los resultados](/es/analyze-results).
+
+<CardGroup cols={2}>
+  <Card title="Siguiente: Transcripciones" icon="arrow-right" href="/es/test-transcripts">
+    Sigue la sesión de cada participante, paso a paso.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/es/ask-ai">
+    Haz preguntas sobre tus resultados en lenguaje natural.
+  </Card>
+</CardGroup>

@@ -1,0 +1,66 @@
+---
+title: "Resultats de l'enquesta"
+sidebarTitle: "Resultats"
+description: "Consulta els resultats d'un bloc d'enquesta: gràfics i temes recurrents per pregunta, i totes les respostes i raonaments de cada participant."
+---
+
+Quan obres un bloc d'enquesta a la fase **Analyze**, els resultats es divideixen en dues pestanyes:
+
+- **Responses** mostra com ha respost *tothom* cada pregunta.
+- **Participants** mostra com ha respost *un* participant totes les preguntes.
+
+## Responses
+
+Cada pregunta té la seva pròpia targeta. A l'esquerra hi ha el número de la pregunta amb una etiqueta del tipus, el text de la pregunta i el context que hi hagis afegit. A la dreta hi ha els resultats, representats segons el [tipus de pregunta](/ca/question-types):
+
+| Tipus de pregunta | Com es mostra |
+|---|---|
+| Multiple choice | Una barra per a cada opció, amb les imatges de les opcions si n'hi has afegit |
+| Rating scale | Una barra per a cada valoració, amb les teves etiquetes inferior i superior |
+| Ranking | Els elements ordenats per posició mitjana, primer el preferit |
+| Budget allocation | Un gràfic de tipus waffle amb el repartiment mitjà dels 100 punts |
+| Open-ended | Temes recurrents, cadascun amb el nombre de mencions i exemples breus |
+
+Les respostes obertes s'agrupen en temes, de manera que desenes de respostes de text lliure es converteixen en un grapat d'idees recurrents en lloc d'una paret de text.
+
+### Passa d'una xifra a les persones que hi ha darrere
+
+Cada gràfic és una porta d'entrada, no un punt final. Fes clic a una barra, una valoració o un tema per obrir un panell lateral només amb els participants que han donat aquella resposta. Hi veuràs quants participants l'han donada, un resum del que han dit i l'explicació de cada participant.
+
+Per llegir totes les respostes a una pregunta, fes clic a **See all N responses** a sota de la pregunta. Fes clic a **View summary** per tornar al gràfic. A les pantalles amples, l'índex **Questions** de la dreta et permet saltar d'una pregunta a una altra.
+
+### Avisos que pots veure
+
+- **"Only testers who completed the mission answered this question."** La pregunta tenia activat **Only ask testers who complete the flow** al [bloc d'enquesta](/ca/survey-block), així que els participants d'IA que no han completat la tasca se l'han saltada.
+- **"Clusters were calculated from the whole participant group."** Has filtrat per audiència. Els temes es continuen construint a partir de tots els participants, i els temes sense respostes de les audiències filtrades apareixen atenuats.
+- **No response.** El participant no ha respost, per exemple perquè ha abandonat abans de completar la tasca.
+
+## Participants
+
+La pestanya **Participants** et permet llegir l'enquesta d'un participant de principi a fi, el més semblant a seure amb ell i repassar les teves preguntes una per una.
+
+- Tria un participant de la llista, o fes servir **Search participant** per trobar algú pel nom. Cada persona mostra quantes preguntes ha respost, com ara **4 of 5 answered**.
+- Totes les respostes apareixen en ordre: l'opció triada, la valoració, la classificació o el repartiment, seguit de l'explicació del participant amb les seves pròpies paraules.
+- Fes clic a **View profile** per veure qui és el participant: les seves dades demogràfiques, la seva trajectòria i els seus trets. Quan una resposta et sorprengui, el perfil és el primer lloc on has de mirar.
+- Fes clic a **Chat** per fer preguntes de seguiment al participant. Consulta [Xateja amb els participants](/ca/chat-with-testers).
+
+<Tip>
+  Perquè els perfils reflecteixin les persones per a qui dissenyes, fes servir l'[enriquiment d'audiències](/ca/audiences/enrichment) per basar els teus participants d'IA en la teva pròpia recerca d'usuaris.
+</Tip>
+
+## Pla Free
+
+Al pla Free, les respostes de l'enquesta estan bloquejades: els gràfics i les respostes dels participants queden ocults darrere del missatge "Upgrade your plan to unlock charts and participant answers." Passa a un pla de pagament per veure-les. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+## Participants humans
+
+Les respostes dels participants humans apareixen a les mateixes pestanyes **Responses** i **Participants**, amb un botó **Play recording** que salta al moment en què el participant ha respost. El xat no està disponible per als participants humans. Consulta [Resultats dels participants humans](/ca/human-insights).
+
+<CardGroup cols={2}>
+  <Card title="Xateja amb els participants" icon="message-circle" href="/ca/chat-with-testers">
+    Fes preguntes de seguiment a qualsevol participant d'IA sobre les seves respostes.
+  </Card>
+  <Card title="Ask AI" icon="sparkles" href="/ca/ask-ai">
+    Fes preguntes sobre tot el test en llenguatge planer.
+  </Card>
+</CardGroup>

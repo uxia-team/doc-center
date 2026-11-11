@@ -1,0 +1,59 @@
+---
+title: "Privacidad de datos en Uxia"
+sidebarTitle: "Privacidad de datos"
+description: "Cómo trata Uxia tus diseños, datos de tests, grabaciones de participantes y credenciales, con la seguridad y la privacidad como punto de partida."
+---
+
+Uxia está diseñado para tratar con cuidado los materiales de investigación sensibles. Tanto si subes archivos de diseño como si compartes URL de sitios en producción, registras grabaciones de participantes humanos o pruebas flujos que requieren autenticación, todos los datos que llevas a la plataforma se procesan con la seguridad y la privacidad como punto de partida, no como algo secundario. Esta página explica cómo se tratan tus datos en toda la plataforma.
+
+## Tus diseños y URL
+
+Cuando subes un archivo de diseño o indicas una URL para un test, Uxia procesa ese material de forma segura para ejecutar la sesión de cada participante.
+
+- **Tus datos nunca se usan para entrenar modelos.** Los diseños, las URL y el contenido de los tests que envías no se usan para mejorar ni ajustar ningún modelo de IA, ni de Uxia ni de terceros.
+- **Tus datos no se comparten con otros usuarios ni organizaciones.** Cada espacio de trabajo está aislado. Solo pueden acceder a los materiales de tus tests tú y los compañeros a los que invites expresamente.
+- **Los materiales se guardan solo el tiempo necesario.** Los archivos subidos y las URL se conservan mientras dura el test y para que puedas seguir accediendo a los resultados y los informes. No se guardan indefinidamente más allá de lo necesario para prestar el servicio.
+
+## Grabaciones de participantes humanos
+
+Cuando invitas a participantes humanos con un [enlace de test](/es/test-links) o un [panel humano](/es/human-panel), Uxia graba cada sesión: la pantalla y el micrófono del participante, y también la cámara frontal si decide activarla. Estas grabaciones:
+
+- **Se guardan de forma segura** en la plataforma de Uxia y solo son accesibles dentro de tu espacio de trabajo.
+- **Son privadas para tu organización.** Las grabaciones nunca se venden ni se comparten con los partners del panel, y solo llegan a los subencargados del tratamiento que ayudan a prestar el servicio, por ejemplo para la transcripción.
+- **Están disponibles para revisarlas y analizarlas** en el panel de tu espacio de trabajo, junto con los insights generados por IA para ese test.
+
+Las grabaciones te aportan la profundidad cualitativa que complementa los hallazgos sintetizados por la IA y se conservan en tu espacio de trabajo mientras tu cuenta esté activa.
+
+## Credenciales para tests con acceso restringido o autenticación
+
+Si el producto o la sección que pruebas está detrás de una pantalla de inicio de sesión, puedes facilitar credenciales para que los participantes de IA accedan a los flujos protegidos. En ese caso:
+
+- Las credenciales se cifran en tránsito y en reposo, y solo se descifran cuando la sesión de un participante de IA necesita usarlas.
+- Nunca se incluyen en las instrucciones que se envían al modelo de IA. En su lugar, se inyectan de forma segura en la sesión del navegador y se introducen directamente en los campos correspondientes, así que el modelo de IA nunca las ve.
+- Los campos de contraseña permanecen ocultos en las transcripciones y las capturas de pantalla, pero otros valores escritos, como un nombre de usuario o un correo electrónico, pueden verse.
+- Se limitan al test al que se añadieron y solo son visibles dentro de tu espacio de trabajo, nunca para otras organizaciones.
+- Tú mantienes el control de esas credenciales. No introduzcas credenciales sensibles o potencialmente peligrosas, y cámbialas en cuanto termine el test.
+
+Usa cuentas de prueba específicas, nunca cuentas reales de clientes ni de administrador. Para ver todos los detalles, consulta [Credenciales de participantes](/es/tester-credentials).
+
+También puedes usar el [inicio de sesión interactivo](/es/tester-credentials#inicio-de-sesión-interactivo). Inicias sesión tú mismo desde la interfaz de Uxia y nosotros capturamos la sesión iniciada, así que no guardamos ninguna credencial. Todos los participantes de IA del test usan esa sesión, que se elimina automáticamente una hora después de guardarla.
+
+## Archivos usados durante un test
+
+Si tu flujo pide a los participantes de IA que suban algo (un CV, un documento de identidad, una hoja de cálculo), puedes importar archivos para que los usen. En ese caso:
+
+- Los archivos se cifran en tránsito y en reposo, y solo se recuperan cuando la sesión de un participante de IA llega a un paso de subida.
+- Ningún modelo de IA lee nunca su contenido: el archivo se adjunta directamente al campo, así que nada de lo que contiene puede aparecer en transcripciones, insights ni informes.
+- Se limitan al test en el que se importaron y solo son visibles dentro de tu espacio de trabajo.
+- Puedes eliminarlos en cualquier momento.
+
+Te recomendamos subir documentos sintéticos en lugar de reales. Consulta [Archivos para participantes](/es/tester-files) para ver todos los detalles.
+
+<CardGroup cols={2}>
+  <Card title="Restricciones de los participantes de IA" icon="shield" href="/es/account/security/ai-participant-restrictions">
+    Controla a qué pueden acceder y qué pueden hacer los participantes de IA durante un test.
+  </Card>
+  <Card title="Credenciales de participantes" icon="key-round" href="/es/tester-credentials">
+    Cómo se guardan y se usan las credenciales de los flujos con acceso restringido.
+  </Card>
+</CardGroup>

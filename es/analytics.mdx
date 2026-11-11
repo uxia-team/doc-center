@@ -1,0 +1,89 @@
+---
+title: "Analítica y recorridos"
+description: "Mide cómo avanzaron los participantes de IA en un bloque de tarea: éxito, abandono, clics erróneos, pasos, mapas de calor por pantalla y caminos."
+---
+
+Mientras que [Insights](/es/results) te dice cuáles son los problemas, las pestañas **Analytics** y **Journeys** de un [bloque de tarea](/es/task-block) muestran cómo avanzaron realmente los participantes por el flujo y dónde hubo fricción. Todo lo que ves aquí se obtiene de las [transcripciones](/es/test-transcripts) de los participantes y refleja las audiencias seleccionadas en el filtro de resultados.
+
+Usa estas pestañas para responder a preguntas como: ¿cuántos participantes terminaron? ¿Qué pantalla provoca clics erróneos? ¿Cuántos pasos suele llevar el éxito? ¿En qué punto se separan los caminos con éxito de los fallidos?
+
+## Analítica
+
+### Métricas de resumen
+
+| Métrica | Qué muestra |
+|---|---|
+| **Testers** | Los participantes con actividad en este bloque, sobre el total de los que empezaron el test (por ejemplo, **4 / 5**). Los participantes que no completaron una tarea obligatoria anterior no llegan a esta. |
+| **Success Rate** | El porcentaje de participantes que completaron la tarea |
+| **Drop-off** | El porcentaje de participantes que no completaron la tarea |
+| **Misclick Rate** | El porcentaje de interacciones evaluadas que no activaron un área interactiva válida |
+| **Avg. Number of Steps** | La media de pasos por participante |
+| **Min Number of Steps**, **Max Number of Steps** | Las sesiones más corta y más larga |
+
+<AccordionGroup>
+  <Accordion title="Cómo se calculan el éxito y el abandono">
+    Un participante cuenta como exitoso cuando completa la tarea:
+
+    - En las tareas de **sitio web en producción** y de **prototipo de Figma**, cuando alcanza la [condición de parada](/es/stop-condition) en cualquier paso.
+    - En los **prototipos multimedia** con un frame final, cuando su último paso llega a ese frame.
+    - En los demás casos, cuando llega al final de la sesión.
+
+    Un participante que abandona en cualquier paso cuenta como no exitoso. **Success Rate** es el número de participantes con éxito dividido entre **Testers**. **Drop-off** es el 100 % menos la tasa de éxito.
+  </Accordion>
+
+  <Accordion title="Cómo se miden los clics erróneos">
+    - **Prototipos multimedia (Interactive flow):** de los clics que se pudieron asociar a las áreas interactivas de la pantalla, el porcentaje que no dio en ellas.
+    - **Prototipos de Figma:** se estima como el porcentaje de clics tras los que la pantalla no cambió. Las esperas no se tienen en cuenta.
+    - **Sitios web en producción:** no disponible, se muestra un guion. Un clic en un sitio web real puede cambiar la página de formas que no se pueden detectar de forma fiable.
+  </Accordion>
+
+  <Accordion title="Cómo se cuentan los pasos">
+    Los pasos son pasos lógicos, no acciones sin procesar. La reflexión final del participante no cuenta, y los desplazamientos consecutivos en la misma dirección dentro de un desplegable o una lista de sugerencias cuentan como un solo paso. La media, el mínimo y el máximo se calculan sobre todos los participantes.
+  </Accordion>
+</AccordionGroup>
+
+### Análisis por pantalla
+
+Debajo de las métricas, elige cualquier pantalla de la tira de miniaturas, o usa las teclas ← y →, para ver cómo se comportaron los participantes en ella. Las pantallas a las que no llegó nadie aparecen marcadas como **Not visited**. Haz clic en la pantalla para abrir una vista previa más grande.
+
+- **Visualización.** Cambia entre **Heatmap** (dónde se concentran los clics), **Clickmap** (cada clic) e **Image** (la pantalla sin más).
+- **Filtro de caminos.** Cuando unos participantes tuvieron éxito y otros no, elige **All paths**, **Successful paths** o **Failed paths** para compararlos.
+- **Métricas de la pantalla.** **Total Testers** (participantes que llegaron a la pantalla), **Total Clicks** (interacciones registradas en ella) y **Misclick Rate** de esa pantalla.
+- **Pasos de los participantes.** Las acciones y los comentarios de cada participante en esa pantalla, para que puedas leer por qué hicieron clic donde lo hicieron.
+
+### Exportar frames
+
+Haz clic en el botón de exportar, junto al menú de visualización, para abrir **Export Frames**. Elige una superposición (**Heatmap Overlay**, **Clickmap Overlay** o **None**), marca si quieres **Include hotspot areas** para mostrar las áreas interactivas del prototipo y, después, haz clic en **Export** para descargar la pantalla actual como PNG, o en **Export All (N)** para descargar todas las pantallas en un archivo ZIP.
+
+## Recorridos
+
+La pestaña **Journeys** muestra las rutas que siguieron los participantes. Usa el selector **Diagram** / **Paths** para cambiar de vista.
+
+- **Diagram.** Las columnas van desde **Start** hasta **Screen 2**, **Screen 3** y siguientes. Cada nodo es una pantalla en ese punto del recorrido, con el número y el porcentaje de participantes que pasaron por ella (por ejemplo, **3 testers (60%)**). Unos marcadores indican dónde completaron la tarea o la abandonaron los participantes. Pasa el cursor por un nodo para ver quién estuvo allí y haz clic en él para ver la pantalla.
+- **Paths.** Los participantes se agrupan según la secuencia exacta de pantallas que visitaron, empezando por la más común (**Path 1**, **Path 2**, etc.). Cada camino muestra **Success** solo si todos los participantes que lo siguieron completaron la tarea; si no, muestra **Drop-off** (o **Drop-off \| Access denied**). También muestra los participantes que lo siguieron y sus **Misclicks**. Haz clic en cualquier pantalla de un camino para verla.
+
+Las visitas repetidas seguidas a la misma pantalla se agrupan en una sola. En las tareas de sitio web en producción, puede que la vista Diagram no esté disponible; **Paths** siempre lo está.
+
+## Qué hay disponible para cada fuente
+
+| | Sitio web en producción | Prototipo de Figma | Prototipo multimedia, Interactive flow | Prototipo multimedia, Sequential flow |
+|---|---|---|---|---|
+| Success Rate y Drop-off | Sí | Sí | Sí | No |
+| Misclick Rate | No | Estimado | Sí | No |
+| Total Clicks por pantalla | No | Sí | Sí | No |
+| Pasos, mapas de calor y caminos | Sí | Sí | Sí | Sí |
+
+En un prototipo con **Sequential flow**, las métricas que no están disponibles muestran un guion. Configura el prototipo como **Interactive flow** en el [lienzo multimedia](/es/media-canvas) para obtenerlas.
+
+## Límites del plan Free
+
+En el plan Free, las métricas de resumen son visibles, pero el análisis por pantalla y la pestaña **Journeys** están bloqueados. Pásate a un plan de pago para desbloquearlos. Consulta [Planes y créditos](/es/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Siguiente: Resultados de los benchmarks" icon="arrow-right" href="/es/benchmark-results">
+    Consulta las puntuaciones SUS y UXIA-Q de la tarea.
+  </Card>
+  <Card title="Insights y UOS" icon="lightbulb" href="/es/results">
+    Descubre los problemas que hay detrás de los números.
+  </Card>
+</CardGroup>

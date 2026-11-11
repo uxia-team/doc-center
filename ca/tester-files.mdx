@@ -1,0 +1,120 @@
+---
+title: "Fitxers de participants"
+sidebarTitle: "Fitxers de participants"
+description: "Dona als participants d'IA els fitxers que una tasca els demana que pugin, i descobreix com els desa i protegeix Uxia."
+---
+
+Algunes tasques no es poden completar sense pujar alguna cosa. Si el teu flux demana als participants que adjuntin un CV a una candidatura de feina, que pugin un document d'identitat per a una verificació, que importin un CSV o que afegeixin una foto de perfil, els participants d'IA necessiten un fitxer real per poder-ho fer.
+
+Per a això serveixen els **fitxers**. Els importes una sola vegada a un bloc de tasca, i els participants d'IA els fan servir cada vegada que el flux arriba a un pas en què cal pujar un fitxer.
+
+## Afegeix fitxers
+
+<Steps>
+  <Step title="Obre el modal de fitxers">
+    En una tasca de lloc web en producció o de prototip de Figma, fes clic a **+ Add files** sota l'URL.
+  </Step>
+  <Step title="Importa els fitxers">
+    Arrossega i deixa anar els fitxers al modal, o fes-hi clic per cercar-los. Per eliminar un fitxer, fes clic al seu botó **X**.
+  </Step>
+  <Step title="Tanca el modal">
+    Fes clic a **Done**. Ara el botó del bloc mostra quants fitxers has afegit, com ara **2 files added**.
+  </Step>
+</Steps>
+
+## Què pots pujar
+
+Importa qualsevol fitxer que pugui demanar el flux. Casos habituals:
+
+| Cas d'ús | Fitxer habitual |
+|---|---|
+| Candidatura de feina | Un CV o una carta de presentació en PDF |
+| Pas d'identitat o de verificació | Un document escanejat o una foto |
+| Importació de dades | Un CSV o un full de càlcul |
+| Configuració del perfil | Un avatar o una imatge de perfil |
+| Pujada de contingut multimèdia | Un vídeo o un clip d'àudio curt |
+
+### Formats compatibles i límits
+
+<CardGroup cols={2}>
+  <Card title="Formats" icon="file">
+    **Qualsevol tipus de fitxer**, excepte:
+
+    - Executables
+    - Scripts
+    - Fitxers web actius, com ara HTML o SVG
+    - Documents amb macros
+  </Card>
+
+  <Card title="Límits" icon="gauge">
+    **Fins a 100 MB** per fitxer
+
+    **Fins a 5 fitxers** per bloc de tasca
+  </Card>
+</CardGroup>
+
+Aquestes exclusions existeixen perquè el fitxer es lliura a un navegador real durant la sessió. Tot el que pugui executar codi queda bloquejat, per la teva protecció i per la nostra.
+
+<Tip>
+  Si el flux té més d'un pas de pujada, importa un fitxer per a cadascun. Posa'ls noms que descriguin què són, com ara `cv.pdf` o `id-document.png`. Els participants d'IA veuen els noms dels fitxers, així que uns noms clars els ajuden a triar el fitxer correcte a cada pas.
+</Tip>
+
+## Com gestiona Uxia els teus fitxers
+
+Un fitxer pot contenir moltes més dades personals que un camp de formulari, per això es tracta amb la mateixa cura que les [credencials](/ca/tester-credentials).
+
+### Xifrats en trànsit i en repòs
+
+Els fitxers viatgen per TLS i es desen xifrats en repòs. Queden vinculats al bloc de tasca on els has importat, de manera que pots tornar a executar el test sense haver-los de pujar de nou. Només es recuperen quan una sessió arriba a un pas de pujada.
+
+### El model d'IA no els llegeix mai
+
+Els participants d'IA només veuen el nom i el tipus de cada fitxer, mai el contingut. Quan el flux arriba a un camp de pujada, el fitxer s'hi adjunta directament, de la mateixa manera que una persona el tria en un selector de fitxers. Per tant, res del que contingui el fitxer no es pot filtrar a les transcripcions ni als insights.
+
+<Note>
+  Això també vol dir que els participants no poden actuar en funció del que conté un fitxer. Si la tasca depèn de saber alguna dada, com ara un nom, una data o un número de referència, posa-la a la [tasca](/ca/mission) o en una [credencial](/ca/tester-credentials), no dins del fitxer.
+</Note>
+
+### No s'utilitzen mai per entrenar models
+
+Res del que envies a Uxia no s'utilitza mai per entrenar ni per ajustar cap model, ni d'Uxia ni de tercers. Els fitxers en queden exclosos per disseny, ja que el seu contingut no arriba mai a cap model.
+
+### Limitats al teu espai de treball
+
+Els fitxers pertanyen al test on s'han importat, dins del teu espai de treball. Només hi poden accedir tu i els companys que hagis convidat a aquest espai de treball: mai altres organitzacions ni altres clients d'Uxia.
+
+Si treus algú de l'espai de treball, perd l'accés al test i, amb ell, als seus fitxers.
+
+<Warning>
+  Considera la pertinença a l'espai de treball com el límit d'accés. Qualsevol persona que pugui obrir un test pot accedir als fitxers que té adjunts, així que convida només els companys que hagin de tenir aquest nivell d'accés.
+</Warning>
+
+## Bones pràctiques
+
+El fitxer més segur és aquell que no importaria que algú altre veiés.
+
+<Steps>
+  <Step title="Fes servir documents ficticis, no reals">
+    El CV d'un candidat inventat funciona igual de bé que un de real per provar un flux de pujada. No pugis mai el CV d'un candidat real, el contracte d'un client real ni el teu propi document d'identitat.
+  </Step>
+  <Step title="Elimina les dades personals abans de pujar-los">
+    Si has de partir d'un document real, substitueix primer els noms, els correus electrònics, els números de telèfon, les adreces i els números d'identificació per valors de prova.
+  </Step>
+  <Step title="Fes servir fitxers petits i senzills">
+    El límit és de 100 MB, però un PDF d'una pàgina es puja més de pressa i falla menys sovint que un escaneig gran. Els participants només necessiten que la pujada funcioni, no que el document sigui realista.
+  </Step>
+  <Step title="Fes servir el format que espera el flux">
+    Si el formulari només accepta PDF, importar un DOCX fa que el flux falli al pas de pujada, i aquest error apareix als resultats com un problema d'usabilitat que en realitat no ho és.
+  </Step>
+  <Step title="Elimina els fitxers que ja no necessitis">
+    Els fitxers queden vinculats al bloc de tasca fins que els eliminis. Treu tot el que ja no facis servir.
+  </Step>
+</Steps>
+
+<Warning>
+  Evita pujar res que estigui cobert per un acord de confidencialitat o qualsevol document que contingui dades personals reals d'un tercer. Fes servir un equivalent sintètic.
+</Warning>
+
+<Card title="Següent: Fluxos que els participants d'IA no poden completar" icon="arrow-right" href="/ca/unsupported-flows">
+  Inicis de sessió amb xarxes socials, codis de verificació i protecció contra bots, i com resoldre'ls.
+</Card>

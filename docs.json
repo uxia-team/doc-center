@@ -43,210 +43,650 @@
       ]
     },
     "directory": "card",
-    "tabs": [
+    "languages": [
       {
-        "tab": "Help Center",
-        "icon": "book-open",
-        "pages": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Get Started",
-            "icon": "rocket",
-            "expanded": true,
+            "tab": "Help Center",
+            "icon": "book-open",
             "pages": [
-              "introduction",
-              "quickstart",
-              "how-it-works"
-            ]
-          },
-          {
-            "group": "Unmoderated Tests",
-            "icon": "mouse-pointer-click",
-            "pages": [
-              "unmoderated-tests",
-              "build-your-test",
               {
-                "group": "Recruit Participants",
+                "group": "Get Started",
+                "icon": "rocket",
+                "expanded": true,
                 "pages": [
-                  "recruit-participants",
-                  "ai-participants",
-                  "test-links",
-                  "human-panel"
+                  "introduction",
+                  "quickstart",
+                  "how-it-works"
                 ]
               },
               {
-                "group": "Analyze Results",
-                "pages": [
-                  "analyze-results",
-                  "human-insights",
-                  "ask-ai",
-                  "chat-with-testers",
-                  "share-and-export"
-                ]
-              },
-              "ab-variants"
-            ]
-          },
-          {
-            "group": "Blocks",
-            "icon": "blocks",
-            "pages": [
-              {
-                "group": "Task Block",
+                "group": "Unmoderated Tests",
                 "icon": "mouse-pointer-click",
                 "pages": [
-                  "task-block",
-                  "source",
-                  "media-canvas",
-                  "mission",
-                  "test-scenario",
-                  "stop-condition",
-                  "sus",
-                  "uxia-q-score",
-                  "tester-credentials",
-                  "tester-files",
-                  "unsupported-flows",
+                  "unmoderated-tests",
+                  "build-your-test",
                   {
-                    "group": "Task Results",
+                    "group": "Recruit Participants",
                     "pages": [
-                      "results",
-                      "test-transcripts",
-                      "analytics",
-                      "benchmark-results"
+                      "recruit-participants",
+                      "ai-participants",
+                      "test-links",
+                      "human-panel"
+                    ]
+                  },
+                  {
+                    "group": "Analyze Results",
+                    "pages": [
+                      "analyze-results",
+                      "human-insights",
+                      "ask-ai",
+                      "chat-with-testers",
+                      "share-and-export"
+                    ]
+                  },
+                  "ab-variants"
+                ]
+              },
+              {
+                "group": "Blocks",
+                "icon": "blocks",
+                "pages": [
+                  {
+                    "group": "Task Block",
+                    "icon": "mouse-pointer-click",
+                    "pages": [
+                      "task-block",
+                      "source",
+                      "media-canvas",
+                      "mission",
+                      "test-scenario",
+                      "stop-condition",
+                      "sus",
+                      "uxia-q-score",
+                      "tester-credentials",
+                      "tester-files",
+                      "unsupported-flows",
+                      {
+                        "group": "Task Results",
+                        "pages": [
+                          "results",
+                          "test-transcripts",
+                          "analytics",
+                          "benchmark-results"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Survey Block",
+                    "icon": "clipboard-list",
+                    "pages": [
+                      "survey-block",
+                      "question-types",
+                      "survey-results"
+                    ]
+                  },
+                  {
+                    "group": "Card Sorting Block",
+                    "icon": "layers",
+                    "pages": [
+                      "card-sorting",
+                      "card-sorting-results"
+                    ]
+                  },
+                  {
+                    "group": "Accessibility Check Block",
+                    "icon": "person-standing",
+                    "pages": [
+                      "accessibility-block",
+                      "wcag-conformance-level",
+                      "frame-upload",
+                      {
+                        "group": "Accessibility Results",
+                        "pages": [
+                          "criteria-evaluation",
+                          "vision-simulation"
+                        ]
+                      }
                     ]
                   }
                 ]
               },
               {
-                "group": "Survey Block",
-                "icon": "clipboard-list",
+                "group": "AI-Moderated Tests",
+                "icon": "mic",
                 "pages": [
-                  "survey-block",
-                  "question-types",
-                  "survey-results"
+                  "ai-moderated-tests"
                 ]
               },
               {
-                "group": "Card Sorting Block",
-                "icon": "layers",
+                "group": "Audiences",
+                "icon": "users-round",
                 "pages": [
-                  "card-sorting",
-                  "card-sorting-results"
+                  "audiences/overview",
+                  "audiences/building-an-audience",
+                  "audiences/enrichment"
+                ]
+              },
+              "account/projects",
+              {
+                "group": "Account & Plans",
+                "icon": "settings",
+                "pages": [
+                  "account/plans-and-credits",
+                  "account/workspaces",
+                  "account/people",
+                  "account/usage"
                 ]
               },
               {
-                "group": "Accessibility Check Block",
-                "icon": "person-standing",
+                "group": "Integrations",
+                "icon": "plug",
                 "pages": [
-                  "accessibility-block",
-                  "wcag-conformance-level",
-                  "frame-upload",
+                  "integrations/overview",
+                  "integrations/figma",
+                  "integrations/enterprise-auth",
+                  "integrations/webhooks",
+                  "integrations/jira",
+                  "integrations/notion",
+                  "integrations/linear",
+                  "integrations/slack",
                   {
-                    "group": "Accessibility Results",
+                    "group": "MCP",
                     "pages": [
-                      "criteria-evaluation",
-                      "vision-simulation"
+                      "integrations/mcp",
+                      "guides/claude-code",
+                      "guides/chatgpt-codex",
+                      "guides/lovable",
+                      "guides/antigravity",
+                      "guides/cursor",
+                      "guides/microsoft-copilot"
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "group": "AI-Moderated Tests",
-            "icon": "mic",
-            "pages": [
-              "ai-moderated-tests"
-            ]
-          },
-          {
-            "group": "Audiences",
-            "icon": "users-round",
-            "pages": [
-              "audiences/overview",
-              "audiences/building-an-audience",
-              "audiences/enrichment"
-            ]
-          },
-          "account/projects",
-          {
-            "group": "Account & Plans",
-            "icon": "settings",
-            "pages": [
-              "account/plans-and-credits",
-              "account/workspaces",
-              "account/people",
-              "account/usage"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "icon": "plug",
-            "pages": [
-              "integrations/overview",
-              "integrations/figma",
-              "integrations/enterprise-auth",
-              "integrations/webhooks",
-              "integrations/jira",
-              "integrations/notion",
-              "integrations/linear",
-              "integrations/slack",
+              },
               {
-                "group": "MCP",
+                "group": "Security",
+                "icon": "shield-check",
                 "pages": [
-                  "integrations/mcp",
-                  "guides/claude-code",
-                  "guides/chatgpt-codex",
-                  "guides/lovable",
-                  "guides/antigravity",
-                  "guides/cursor",
-                  "guides/microsoft-copilot"
+                  "account/security/data-privacy",
+                  "account/security/ai-participant-restrictions",
+                  "account/security/sso",
+                  "account/security/policies"
                 ]
               }
             ]
           },
           {
-            "group": "Security",
+            "tab": "Trust Center",
             "icon": "shield-check",
-            "pages": [
-              "account/security/data-privacy",
-              "account/security/ai-participant-restrictions",
-              "account/security/sso",
-              "account/security/policies"
+            "groups": [
+              {
+                "group": "Trust Center",
+                "pages": [
+                  "trust-center/overview",
+                  "trust-center/compliance",
+                  "trust-center/documents"
+                ]
+              },
+              {
+                "group": "Security",
+                "pages": [
+                  "trust-center/controls",
+                  "trust-center/identity-access",
+                  "trust-center/authenticated-testing",
+                  "trust-center/incident-response"
+                ]
+              },
+              {
+                "group": "Privacy and AI",
+                "pages": [
+                  "trust-center/data-protection",
+                  "trust-center/ai",
+                  "trust-center/subprocessors",
+                  "trust-center/human-participants"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Trust Center",
-        "icon": "shield-check",
-        "groups": [
+        "language": "es",
+        "tabs": [
           {
-            "group": "Trust Center",
+            "tab": "Centro de ayuda",
+            "icon": "book-open",
             "pages": [
-              "trust-center/overview",
-              "trust-center/compliance",
-              "trust-center/documents"
+              {
+                "group": "Primeros pasos",
+                "icon": "rocket",
+                "expanded": true,
+                "pages": [
+                  "es/introduction",
+                  "es/quickstart",
+                  "es/how-it-works"
+                ]
+              },
+              {
+                "group": "Tests no moderados",
+                "icon": "mouse-pointer-click",
+                "pages": [
+                  "es/unmoderated-tests",
+                  "es/build-your-test",
+                  {
+                    "group": "Reclutar participantes",
+                    "pages": [
+                      "es/recruit-participants",
+                      "es/ai-participants",
+                      "es/test-links",
+                      "es/human-panel"
+                    ]
+                  },
+                  {
+                    "group": "Analizar resultados",
+                    "pages": [
+                      "es/analyze-results",
+                      "es/human-insights",
+                      "es/ask-ai",
+                      "es/chat-with-testers",
+                      "es/share-and-export"
+                    ]
+                  },
+                  "es/ab-variants"
+                ]
+              },
+              {
+                "group": "Bloques",
+                "icon": "blocks",
+                "pages": [
+                  {
+                    "group": "Bloque de tarea",
+                    "icon": "mouse-pointer-click",
+                    "pages": [
+                      "es/task-block",
+                      "es/source",
+                      "es/media-canvas",
+                      "es/mission",
+                      "es/test-scenario",
+                      "es/stop-condition",
+                      "es/sus",
+                      "es/uxia-q-score",
+                      "es/tester-credentials",
+                      "es/tester-files",
+                      "es/unsupported-flows",
+                      {
+                        "group": "Resultados de la tarea",
+                        "pages": [
+                          "es/results",
+                          "es/test-transcripts",
+                          "es/analytics",
+                          "es/benchmark-results"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Bloque de encuesta",
+                    "icon": "clipboard-list",
+                    "pages": [
+                      "es/survey-block",
+                      "es/question-types",
+                      "es/survey-results"
+                    ]
+                  },
+                  {
+                    "group": "Bloque de card sorting",
+                    "icon": "layers",
+                    "pages": [
+                      "es/card-sorting",
+                      "es/card-sorting-results"
+                    ]
+                  },
+                  {
+                    "group": "Bloque de revisión de accesibilidad",
+                    "icon": "person-standing",
+                    "pages": [
+                      "es/accessibility-block",
+                      "es/wcag-conformance-level",
+                      "es/frame-upload",
+                      {
+                        "group": "Resultados de accesibilidad",
+                        "pages": [
+                          "es/criteria-evaluation",
+                          "es/vision-simulation"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Tests moderados por IA",
+                "icon": "mic",
+                "pages": [
+                  "es/ai-moderated-tests"
+                ]
+              },
+              {
+                "group": "Audiencias",
+                "icon": "users-round",
+                "pages": [
+                  "es/audiences/overview",
+                  "es/audiences/building-an-audience",
+                  "es/audiences/enrichment"
+                ]
+              },
+              "es/account/projects",
+              {
+                "group": "Cuenta y planes",
+                "icon": "settings",
+                "pages": [
+                  "es/account/plans-and-credits",
+                  "es/account/workspaces",
+                  "es/account/people",
+                  "es/account/usage"
+                ]
+              },
+              {
+                "group": "Integraciones",
+                "icon": "plug",
+                "pages": [
+                  "es/integrations/overview",
+                  "es/integrations/figma",
+                  "es/integrations/enterprise-auth",
+                  "es/integrations/webhooks",
+                  "es/integrations/jira",
+                  "es/integrations/notion",
+                  "es/integrations/linear",
+                  "es/integrations/slack",
+                  {
+                    "group": "MCP",
+                    "pages": [
+                      "es/integrations/mcp",
+                      "es/guides/claude-code",
+                      "es/guides/chatgpt-codex",
+                      "es/guides/lovable",
+                      "es/guides/antigravity",
+                      "es/guides/cursor",
+                      "es/guides/microsoft-copilot"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Seguridad",
+                "icon": "shield-check",
+                "pages": [
+                  "es/account/security/data-privacy",
+                  "es/account/security/ai-participant-restrictions",
+                  "es/account/security/sso",
+                  "es/account/security/policies"
+                ]
+              }
             ]
           },
           {
-            "group": "Security",
-            "pages": [
-              "trust-center/controls",
-              "trust-center/identity-access",
-              "trust-center/authenticated-testing",
-              "trust-center/incident-response"
-            ]
-          },
-          {
-            "group": "Privacy and AI",
-            "pages": [
-              "trust-center/data-protection",
-              "trust-center/ai",
-              "trust-center/subprocessors",
-              "trust-center/human-participants"
+            "tab": "Centro de confianza",
+            "icon": "shield-check",
+            "groups": [
+              {
+                "group": "Centro de confianza",
+                "pages": [
+                  "es/trust-center/overview",
+                  "es/trust-center/compliance",
+                  "es/trust-center/documents"
+                ]
+              },
+              {
+                "group": "Seguridad",
+                "pages": [
+                  "es/trust-center/controls",
+                  "es/trust-center/identity-access",
+                  "es/trust-center/authenticated-testing",
+                  "es/trust-center/incident-response"
+                ]
+              },
+              {
+                "group": "Privacidad e IA",
+                "pages": [
+                  "es/trust-center/data-protection",
+                  "es/trust-center/ai",
+                  "es/trust-center/subprocessors",
+                  "es/trust-center/human-participants"
+                ]
+              }
             ]
           }
-        ]
+        ],
+        "navbar": {
+          "links": [],
+          "primary": {
+            "type": "button",
+            "label": "Empezar",
+            "href": "https://platform.uxia.app"
+          }
+        }
+      },
+      {
+        "language": "ca",
+        "tabs": [
+          {
+            "tab": "Centre d'ajuda",
+            "icon": "book-open",
+            "pages": [
+              {
+                "group": "Primers passos",
+                "icon": "rocket",
+                "expanded": true,
+                "pages": [
+                  "ca/introduction",
+                  "ca/quickstart",
+                  "ca/how-it-works"
+                ]
+              },
+              {
+                "group": "Tests no moderats",
+                "icon": "mouse-pointer-click",
+                "pages": [
+                  "ca/unmoderated-tests",
+                  "ca/build-your-test",
+                  {
+                    "group": "Reclutar participants",
+                    "pages": [
+                      "ca/recruit-participants",
+                      "ca/ai-participants",
+                      "ca/test-links",
+                      "ca/human-panel"
+                    ]
+                  },
+                  {
+                    "group": "Analitzar resultats",
+                    "pages": [
+                      "ca/analyze-results",
+                      "ca/human-insights",
+                      "ca/ask-ai",
+                      "ca/chat-with-testers",
+                      "ca/share-and-export"
+                    ]
+                  },
+                  "ca/ab-variants"
+                ]
+              },
+              {
+                "group": "Blocs",
+                "icon": "blocks",
+                "pages": [
+                  {
+                    "group": "Bloc de tasca",
+                    "icon": "mouse-pointer-click",
+                    "pages": [
+                      "ca/task-block",
+                      "ca/source",
+                      "ca/media-canvas",
+                      "ca/mission",
+                      "ca/test-scenario",
+                      "ca/stop-condition",
+                      "ca/sus",
+                      "ca/uxia-q-score",
+                      "ca/tester-credentials",
+                      "ca/tester-files",
+                      "ca/unsupported-flows",
+                      {
+                        "group": "Resultats de la tasca",
+                        "pages": [
+                          "ca/results",
+                          "ca/test-transcripts",
+                          "ca/analytics",
+                          "ca/benchmark-results"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Bloc d'enquesta",
+                    "icon": "clipboard-list",
+                    "pages": [
+                      "ca/survey-block",
+                      "ca/question-types",
+                      "ca/survey-results"
+                    ]
+                  },
+                  {
+                    "group": "Bloc de card sorting",
+                    "icon": "layers",
+                    "pages": [
+                      "ca/card-sorting",
+                      "ca/card-sorting-results"
+                    ]
+                  },
+                  {
+                    "group": "Bloc de revisió d'accessibilitat",
+                    "icon": "person-standing",
+                    "pages": [
+                      "ca/accessibility-block",
+                      "ca/wcag-conformance-level",
+                      "ca/frame-upload",
+                      {
+                        "group": "Resultats d'accessibilitat",
+                        "pages": [
+                          "ca/criteria-evaluation",
+                          "ca/vision-simulation"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Tests moderats per IA",
+                "icon": "mic",
+                "pages": [
+                  "ca/ai-moderated-tests"
+                ]
+              },
+              {
+                "group": "Audiències",
+                "icon": "users-round",
+                "pages": [
+                  "ca/audiences/overview",
+                  "ca/audiences/building-an-audience",
+                  "ca/audiences/enrichment"
+                ]
+              },
+              "ca/account/projects",
+              {
+                "group": "Compte i plans",
+                "icon": "settings",
+                "pages": [
+                  "ca/account/plans-and-credits",
+                  "ca/account/workspaces",
+                  "ca/account/people",
+                  "ca/account/usage"
+                ]
+              },
+              {
+                "group": "Integracions",
+                "icon": "plug",
+                "pages": [
+                  "ca/integrations/overview",
+                  "ca/integrations/figma",
+                  "ca/integrations/enterprise-auth",
+                  "ca/integrations/webhooks",
+                  "ca/integrations/jira",
+                  "ca/integrations/notion",
+                  "ca/integrations/linear",
+                  "ca/integrations/slack",
+                  {
+                    "group": "MCP",
+                    "pages": [
+                      "ca/integrations/mcp",
+                      "ca/guides/claude-code",
+                      "ca/guides/chatgpt-codex",
+                      "ca/guides/lovable",
+                      "ca/guides/antigravity",
+                      "ca/guides/cursor",
+                      "ca/guides/microsoft-copilot"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Seguretat",
+                "icon": "shield-check",
+                "pages": [
+                  "ca/account/security/data-privacy",
+                  "ca/account/security/ai-participant-restrictions",
+                  "ca/account/security/sso",
+                  "ca/account/security/policies"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Centre de confiança",
+            "icon": "shield-check",
+            "groups": [
+              {
+                "group": "Centre de confiança",
+                "pages": [
+                  "ca/trust-center/overview",
+                  "ca/trust-center/compliance",
+                  "ca/trust-center/documents"
+                ]
+              },
+              {
+                "group": "Seguretat",
+                "pages": [
+                  "ca/trust-center/controls",
+                  "ca/trust-center/identity-access",
+                  "ca/trust-center/authenticated-testing",
+                  "ca/trust-center/incident-response"
+                ]
+              },
+              {
+                "group": "Privadesa i IA",
+                "pages": [
+                  "ca/trust-center/data-protection",
+                  "ca/trust-center/ai",
+                  "ca/trust-center/subprocessors",
+                  "ca/trust-center/human-participants"
+                ]
+              }
+            ]
+          }
+        ],
+        "navbar": {
+          "links": [],
+          "primary": {
+            "type": "button",
+            "label": "Comença",
+            "href": "https://platform.uxia.app"
+          }
+        }
       }
     ]
   },

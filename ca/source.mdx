@@ -1,0 +1,85 @@
+---
+title: "Enllaços de llocs web en producció i de Figma"
+sidebarTitle: "Enllaços web i de Figma"
+description: "Afegeix l'URL per on navegaran els participants en una tasca de lloc web en producció o de prototip de Figma, tria un viewport i fes que Uxia el verifiqui."
+---
+
+Les tasques de lloc web en producció i de prototip de Figma parteixen d'un enllaç. L'afegeixes a la finestra modal de l'enllaç, i Uxia comprova que els participants hi poden accedir abans que el desis.
+
+Si en lloc d'això vols provar les teves pròpies imatges, fes servir una [tasca de prototip multimèdia](/ca/media-canvas).
+
+## Afegeix un enllaç
+
+<Steps>
+  <Step title="Obre la finestra modal de l'enllaç">
+    En una **Live website task** o una **Figma prototype task**, fes clic a **Add link**.
+  </Step>
+  <Step title="Enganxa l'URL">
+    A **URL**, enganxa una adreça pública, com ara `www.example.com` o `https://example.com`. En una tasca de prototip de Figma, enganxa l'enllaç del prototip, que comença per `https://www.figma.com/proto/`. Els participants obren exactament l'URL que introdueixes.
+  </Step>
+  <Step title="Tria un viewport">
+    A **Viewport**, tria la mida de pantalla que faran servir els participants. Consulta [Viewports](#viewports).
+  </Step>
+  <Step title="Defineix l'estat del producte">
+    En un lloc web en producció, tria **Work in progress** o **Production-ready**. Consulta [Estat del producte](#estat-del-producte).
+  </Step>
+  <Step title="Espera la verificació i desa">
+    Uxia verifica l'enllaç automàticament. Quan la verificació és correcta, fes clic a **Save**.
+  </Step>
+</Steps>
+
+Per canviar l'enllaç més endavant, fes-hi clic al bloc. Per eliminar-lo, passa-hi el cursor per sobre i fes clic a la icona de la paperera.
+
+## Viewports
+
+| Viewport | Mida |
+|---|---|
+| **Desktop** (per defecte) | 1920×1080 |
+| **Laptop** | 1366×768 |
+| **Tablet** | 1024×768 |
+| **Mobile** | 390×844 |
+
+## Estat del producte
+
+L'estat del producte indica als participants d'IA fins a quin punt el teu producte està acabat, perquè el valorin de manera justa. Només està disponible per a les tasques de lloc web en producció. Els prototips de Figma sempre es tracten com a treball en curs.
+
+| Estat | Què fan els participants |
+|---|---|
+| **Work in progress** (per defecte) | Alguns continguts o interaccions encara poden estar inacabats. Els participants ignoren els textos provisionals evidents i els elements incomplets. |
+| **Production-ready** | S'espera que tot estigui acabat. Els participants avaluen tots els continguts, les interaccions i els detalls que troben. |
+
+## Verificació de l'enllaç
+
+La verificació comença tan bon punt enganxes un URL vàlid, i es torna a fer si canvies l'URL o el viewport. En un lloc web en producció, Uxia carrega la pàgina i en fa una captura de pantalla amb el viewport que has triat. Normalment triga uns segons. **Save** està desactivat fins que acaba la verificació.
+
+| Missatge | Què vol dir | Què has de fer |
+|---|---|---|
+| *"Successfully verified. This page is navigable by testers."* | Els participants poden accedir a la pàgina. | Fes clic a **Save**. |
+| *"This live page may not be navigable by testers."* | Uxia ha detectat protecció contra bots a la pàgina. No pots desar l'enllaç. | Fes clic a **Contact us**. Consulta [Protecció contra bots](#protecció-contra-bots). |
+| *"The URL is not accessible."* | Uxia no ha pogut carregar la pàgina. | Comprova que l'URL sigui públic i estigui ben escrit, o fes clic a **Contact us**. |
+| *"Successfully verified. This Figma prototype is publicly accessible."* | Els participants poden obrir el prototip. | Fes clic a **Save**. |
+| *"This Figma prototype is not publicly accessible."* | La configuració de compartició del prototip impedeix l'accés als participants. | A Figma, permet que qualsevol persona amb l'enllaç pugui veure el prototip i, després, fes clic a **Verify again**. |
+
+<Note>
+  Si la teva organització té configurada una integració amb Uxia per a un lloc web, pots desar un URL que hi coincideixi sense previsualització. Comprova o afegeix-ne les credencials amb **+ Add credentials**. Consulta [Credencials de participants](/ca/tester-credentials#tria-un-mode).
+</Note>
+
+## Protecció contra bots
+
+Alguns llocs web tenen mesures antibot que bloquegen els navegadors automatitzats. Si te'n trobes una, posa't en contacte amb nosaltres i facilitarem al teu equip informàtic les nostres adreces IP i instruccions per autoritzar els participants d'IA d'Uxia, perquè puguin navegar per la teva experiència.
+
+Un lloc web també pot bloquejar els participants només durant l'execució. Consulta [Fluxos que els participants d'IA no poden completar](/ca/unsupported-flows#protecció-contra-bots-i-accés-denegat) per saber què passa en aquest cas, inclòs el reemborsament de crèdits.
+
+## Què pots provar
+
+- Llocs web i aplicacions web en producció: públics, de staging o de preproducció.
+- Productes que requereixen iniciar sessió. Afegeix les dades d'accés amb **+ Add credentials**, o inicia la sessió tu mateix amb un [inici de sessió interactiu](/ca/tester-credentials#inici-de-sessió-interactiu). Consulta [Credencials de participants](/ca/tester-credentials).
+- Prototips programats i aplicacions generades amb un URL públic, com ara Figma Make, Lovable, Base44, Google Stitch o Claude.
+- Prototips de Figma compartits per enllaç, en una tasca de prototip de Figma.
+- Fluxos complexos de diversos passos i amb bifurcacions.
+
+Per a pantalles estàtiques o fluxos que encara no estan construïts, fes servir una [tasca de prototip multimèdia](/ca/media-canvas).
+
+<Card title="Següent: Tasca" icon="arrow-right" href="/ca/mission">
+  Explica als participants què han d'intentar aconseguir.
+</Card>

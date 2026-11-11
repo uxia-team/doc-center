@@ -1,0 +1,85 @@
+---
+title: "Bloc de revisió d'accessibilitat"
+sidebarTitle: "Visió general"
+description: "Audita les teves pantalles segons el nivell AA o AAA de les WCAG 2.2 en la fase de disseny. No cal cap participant."
+---
+
+El bloc **Accessibility check** audita les teves pantalles segons les WCAG 2.2 abans que escriguis cap línia de codi. Puges les pantalles i tries un nivell de conformitat objectiu. Aleshores Uxia revisa cada pantalla criteri per criteri. Indica què compleix, què no compleix i què requereix una revisió humana, i etiqueta cada problema segons si probablement s'ha de resoldre al disseny o al codi.
+
+Com que l'auditoria es fa sobre pantalles estàtiques i no sobre una versió en funcionament, detectes els problemes d'accessibilitat en la fase de disseny. És quan resoldre'ls costa menys, en lloc de fer-ho tard, durant el control de qualitat, o després del llançament.
+
+## Què revisa
+
+- **Criteris de conformitat de les WCAG 2.2** del nivell AA o AAA. Els nivells són acumulatius, de manera que una auditoria AA també inclou el nivell A. Consulta [Nivell de conformitat WCAG](/ca/wcag-conformance-level).
+- **Els quatre principis de les WCAG**: perceptible, operable, comprensible i robust. Això inclou el contrast, les alternatives textuals, la mida dels objectius tàctils, la visibilitat del focus i les etiquetes.
+- **Suport per a la baixa visió**, amb una [simulació de visió](/ca/vision-simulation) que mostra cada pantalla amb daltonisme, visió borrosa i pèrdua del camp visual.
+- **Abast de disseny i de codi**. Alguns criteris no es poden confirmar a partir d'una captura de pantalla, com ara el comportament amb el teclat. Uxia els marca per revisar-los i els etiqueta com a **Code** perquè els teus enginyers els puguin verificar.
+
+## Quan s'ha de fer servir
+
+**Revisió del disseny abans del desenvolupament.** Audita les pantalles abans de lliurar-les, perquè els problemes d'accessibilitat apareguin en el disseny i no durant el control de qualitat o després de publicar el codi.
+
+**Repartiment de la feina entre dissenyadors i enginyers.** Cada problema que requereix feina s'etiqueta com a **Design** o **Code**. Tots dos equips tenen una llista de comprovació compartida i una manera clara de repartir-se la feina.
+
+**Revisions orientades al compliment normatiu.** Comprova les pantalles segons un estàndard reconegut: AA com a base legal habitual, o AAA quan vols la cobertura més àmplia.
+
+**Seguiment del progrés al llarg del temps.** Audita les pantalles actualitzades després de les correccions i observa com els recomptes de Passed, Failed i Review evolucionen en la bona direcció.
+
+## Afegeix el bloc
+
+<Steps>
+  <Step title="Obre el selector de blocs">
+    A la fase **Build**, obre **Add a block**. A **Audits**, tria **Accessibility check**.
+  </Step>
+  <Step title="Tria un nivell de conformitat">
+    Deixa **Recommended** (AA) o canvia a **Advanced** (AAA). Consulta [Nivell de conformitat WCAG](/ca/wcag-conformance-level).
+  </Step>
+  <Step title="Afegeix els frames">
+    Puja fins a 5 pantalles com a captures d'imatge (PNG, JPEG, WebP o GIF). Pots afegir l'URL en producció de cada pantalla per fer comprovacions addicionals a nivell de codi. Consulta [Frames](/ca/frame-upload).
+  </Step>
+  <Step title="Llança l'auditoria">
+    Fes clic a **Start recruiting**. Si el test no té cap altre bloc, llances l'auditoria directament des del resum de la fase Recruit. Consulta [Executa l'auditoria](/ca/frame-upload#executa-l’auditoria).
+  </Step>
+</Steps>
+
+## Límits i crèdits
+
+| | Pla Free | Plans de pagament (Starter, Pro, Custom) |
+|---|---|---|
+| Bloc de revisió d'accessibilitat | No disponible | 1 per test |
+| Frames | No disponible | Fins a 5 per test, de 100 MB cadascun |
+| Cost | No disponible | 10 crèdits per frame |
+
+- Al pla Free, el bloc mostra la insígnia **Upgrade** al selector. Si hi fas clic, s'obre el diàleg de plans **Upgrade to use accessibility**.
+- Un test només pot tenir un bloc de revisió d'accessibilitat. Quan n'afegeixes un, queda desactivat al selector. Tampoc no pots duplicar el bloc.
+- El cost només depèn del nombre de frames. Per exemple, una auditoria de 4 pantalles costa 40 crèdits, siguin quins siguin els participants del test.
+- En un test amb [variants A/B](/ca/ab-variants), el cost dels frames s'aplica a cada variant.
+
+## Combina'l amb altres blocs
+
+Una revisió d'accessibilitat pot formar part del mateix test que blocs de tasca, d'enquesta i de card sorting. No necessita participants:
+
+- **Participants d'IA.** L'auditoria s'executa quan llances els participants d'IA. Els crèdits dels frames se sumen al total del llançament.
+- **Participants humans.** Els participants que s'uneixen a través d'un [enllaç de test](/ca/test-links) o del [panell humà](/ca/human-panel) se salten el bloc. Si només reclutes participants humans, l'auditoria no s'executa.
+- **Només accessibilitat.** Si el test no té cap altre bloc, no hi ha res a reclutar. La fase Recruit t'ho indica, i llances l'auditoria des del seu resum.
+
+Els resultats apareixen a la fase **Analyze** com un bloc independent, al costat de la resta de resultats.
+
+<Note>
+  Uxia t'ajuda a detectar problemes aviat, però no substitueix una auditoria legal formal d'accessibilitat, la revisió d'un especialista ni una certificació.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Nivell de conformitat WCAG" icon="gauge" href="/ca/wcag-conformance-level">
+    Tria entre AA i AAA.
+  </Card>
+  <Card title="Frames" icon="image" href="/ca/frame-upload">
+    Puja les pantalles que auditarà Uxia.
+  </Card>
+  <Card title="Avaluació de criteris" icon="list-checks" href="/ca/criteria-evaluation">
+    Consulta els resultats criteri per criteri.
+  </Card>
+  <Card title="Simulació de visió" icon="eye" href="/ca/vision-simulation">
+    Mira les teves pantalles amb diferents condicions de visió.
+  </Card>
+</CardGroup>

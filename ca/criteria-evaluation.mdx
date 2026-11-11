@@ -1,0 +1,90 @@
+---
+title: "Avaluació de criteris"
+description: "Consulta els resultats de la revisió d'accessibilitat frame per frame, filtra els criteris WCAG i gestiona les correccions i la verificació manual."
+---
+
+Quan l'auditoria acaba, obre la fase **Analyze** i selecciona el bloc de revisió d'accessibilitat a la barra lateral. El bloc té dues pestanyes: **Results**, que s'explica en aquesta pàgina, i [**Vision Simulation**](/ca/vision-simulation).
+
+## Tria un frame
+
+Les miniatures dels frames apareixen a la part superior. Fes clic en una per seleccionar-la; aleshores el resum i la taula mostren només els resultats d'aquell frame. Torna a fer clic a la miniatura seleccionada per obrir-ne una previsualització més gran.
+
+Si un frame no és una interfície digital, Uxia l'omet i, en lloc de resultats, mostra un avís: **Photograph Detected**, **Artwork Detected**, **Document Detected** o **Non-UI Content Detected**.
+
+## La targeta de resum
+
+La targeta de resum de la capçalera del bloc mostra **Conformance Level Tested**, per exemple *A & AA*, seguit de tres recomptes:
+
+| Estat | Significat |
+|---|---|
+| **Passed** | El criteri es compleix o no s'aplica a aquest frame |
+| **Failed** | El criteri no es compleix |
+| **Review** | Una persona ha de revisar el criteri per confirmar-ne la conformitat |
+
+Fes clic en un recompte per filtrar la taula per aquell estat. Torna-hi a fer clic per treure el filtre. La icona d'informació que hi ha al costat dels recomptes mostra quants elements Failed i Review corresponen a cada **Review Scope**. Quan tots els criteris del frame es compleixen, la targeta mostra **Fully Compliant**.
+
+## Filtra els criteris
+
+A sobre de la taula:
+
+- **Search success criteria...** cerca criteris per codi, nom, nivell o categoria.
+- **Status** filtra per Passed, Failed o Review.
+- **Review Scope** filtra per **Design** o **Code**.
+- **Level** filtra per A, AA o AAA.
+
+El comptador de la dreta mostra **Showing X of Y criteria**. Quan hi ha filtres actius, la targeta de resum només compta els criteris que hi coincideixen.
+
+## Llegeix la taula
+
+| Columna | Què mostra |
+|---|---|
+| **WCAG Code** | El número del criteri, per exemple 1.4.3 |
+| **Success Criterion** | El seu nom, per exemple Contrast (Minimum) |
+| **WCAG Level** | A, AA o AAA |
+| **Category** | El principi de les WCAG: Perceivable, Operable, Understandable o Robust |
+| **Status** | Passed, Failed o Review |
+| **Review Scope** | On és el problema o la correcció, per als elements Failed i Review |
+
+**Review Scope** et diu qui ha d'actuar. **Design** vol dir que el problema o la correcció és a la capa de disseny: composició, contrast, textos, mides. **Code** vol dir que és a la implementació: semàntica, etiquetes, comportament amb el teclat. Alguns criteris s'han de revisar en tots dos àmbits.
+
+## Obre un criteri
+
+Fes clic en una fila, o a **See More**, per obrir el panell lateral **Success criterion details**. Mostra:
+
+- Una descripció del criteri en llenguatge planer, amb el seu estat, nivell, abast i categoria.
+- El frame. Si Uxia ha localitzat els elements implicats, activa **Show Affected Elements** per ressaltar-los amb un contorn. Fes clic al frame per ampliar-lo.
+- **How To Fix** per a un criteri Failed, **How To Verify** per a un en Review, o **Guidance** per a un que s'ha complert. Quan n'hi ha, les **Findings:** d'Uxia per a aquest frame apareixen primer.
+- Una **Checklist** amb els passos per corregir o verificar el criteri.
+- Un **Contrast Checker** per als criteris de contrast (1.4.3, 1.4.6 i 1.4.11). Selecciona del frame el color del text o de l'element i el color del fons, o escriu-ne els codis hexadecimals. El verificador mostra la ràtio de contrast, **Pass** o **Fail**, i la ràtio requerida.
+- **WCAG Criteria**, que obre l'explicació del criteri al web del W3C.
+
+<Tip>
+  El Contrast Checker aplica el requisit per a text de mida normal. El text gran només necessita una ràtio de 3:1 al nivell AA i de 4,5:1 al nivell AAA.
+</Tip>
+
+## Marca criteris com a complerts
+
+Quan hagis revisat tu mateix un element Failed o Review, marca'l com a complert d'una d'aquestes maneres:
+
+- Fes clic a **Mark as Passed** a la fila de la taula o al panell lateral.
+- Marca tots els elements de la **Checklist** del panell lateral. Uxia ho confirma amb *"All verification items completed. Success criteria passed!"*
+
+Aleshores el criteri es mostra com a **Manually Verified** al panell lateral. Per desfer-ho, fes clic a **Reset Status**. Els canvis manuals només s'apliquen al frame seleccionat i es desen amb els resultats.
+
+<Tip>
+  Treballa els resultats com una llista de comprovació. Resol primer els elements **Failed** i després reparteix els elements **Review** entre dissenyadors i enginyers fent servir les etiquetes d'abast.
+</Tip>
+
+## Comparteix i comenta els resultats
+
+- Les persones que obren un [enllaç de resultats compartit](/ca/share-and-export) veuen els mateixos resultats, en mode de només lectura. No poden marcar criteris com a complerts ni marcar els elements de la llista de comprovació.
+- L'informe en PDF (plans Pro i Custom) pot incloure l'auditoria. Per defecte, hi apareixen els elements Failed i Review.
+- [Ask AI](/ca/ask-ai) pot respondre preguntes sobre l'auditoria i enllaçar a criteris concrets. Fes clic a la targeta d'un criteri per obrir-ne els detalls.
+
+<Note>
+  **Fully Compliant** vol dir que tots els criteris que Uxia ha avaluat s'han complert per a aquell frame. No és una auditoria legal ni una certificació.
+</Note>
+
+<Card title="Següent: Simulació de visió" icon="arrow-right" href="/ca/vision-simulation">
+  Descobreix com es comporten els teus frames amb diferents condicions de visió.
+</Card>

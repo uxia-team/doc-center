@@ -1,0 +1,124 @@
+---
+title: "Controls de seguretat"
+sidebarTitle: "Controls de seguretat"
+description: "Els controls d'infraestructura, organitzatius, de producte, de procediment i de dades que protegeixen la plataforma Uxia."
+icon: "shield"
+---
+
+Els controls següents formen part del sistema de gestió de la seguretat de la informació (SGSI) d'Uxia i estan alineats amb la ISO/IEC 27001:2022. Els hem agrupat per àmbits perquè et sigui fàcil relacionar-los amb la teva pròpia avaluació de proveïdors.
+
+## Seguretat de la infraestructura
+
+<AccordionGroup>
+  <Accordion title="Infraestructura nativa al núvol" icon="cloud">
+    La plataforma funciona íntegrament amb proveïdors de núvol consolidats. No hi ha res allotjat en servidors propis. Avaluem la seguretat de cada proveïdor abans d'incorporar-lo i la revisem periòdicament.
+  </Accordion>
+  <Accordion title="Segmentació de la xarxa i tallafocs" icon="network">
+    Les xarxes al núvol estan segmentades i protegides amb tallafocs amb denegació per defecte. Tallafocs d'aplicacions web amb conjunts de regles gestionats i limitació de freqüència de peticions protegeixen el trànsit exposat a internet. Les connexions a les bases de dades estan restringides a orígens aprovats. Les regles dels tallafocs es revisen com a mínim cada sis mesos.
+  </Accordion>
+  <Accordion title="Entorns separats" icon="layers">
+    Els entorns de producció i de staging estan separats lògicament. Cada canvi es valida a staging abans d'arribar a producció.
+  </Accordion>
+  <Accordion title="Xifratge en trànsit i en repòs" icon="lock">
+    Tot el trànsit entre tu, l'aplicació, els serveis de backend i els magatzems de dades utilitza TLS 1.2 o superior. Les dades emmagatzemades es xifren amb AES-256 o un estàndard equivalent. Les claus de xifratge es guarden en serveis gestionats de gestió de claus, separades de les dades que protegeixen.
+  </Accordion>
+  <Accordion title="Gestió de secrets" icon="key-round">
+    Els secrets i les claus d'API es guarden en un gestor de secrets dedicat i no s'afegeixen mai al codi font.
+  </Accordion>
+  <Accordion title="Registre i detecció d'amenaces" icon="activity">
+    L'activitat dels nostres entorns al núvol es registra de manera centralitzada, amb alertes automàtiques davant d'intents d'accés sospitosos o no autoritzats i detecció contínua d'amenaces. Els secrets, les contrasenyes i el contingut de les dades dels clients no s'escriuen mai als registres.
+  </Accordion>
+</AccordionGroup>
+
+## Seguretat organitzativa
+
+<AccordionGroup>
+  <Accordion title="Abast i governança de l'SGSI" icon="landmark">
+    L'abast de l'SGSI està definit formalment i inclou tots els sistemes que donen suport a la plataforma Uxia. Els rols i les responsabilitats de seguretat estan assignats, i un Comitè de Seguretat supervisa el programa.
+  </Accordion>
+  <Accordion title="Polítiques i gestió de riscos" icon="file-check">
+    La direcció aprova les polítiques documentades de seguretat i privadesa, que es revisen com a mínim un cop l'any. Els riscos per a la seguretat de la informació s'avaluen periòdicament i se'n segueixen els plans de tractament.
+  </Accordion>
+  <Accordion title="Confidencialitat i formació" icon="graduation-cap">
+    Tothom a Uxia signa un acord de confidencialitat. La formació en conscienciació sobre seguretat i en protecció de dades és obligatòria i s'ha de completar durant el primer mes d'incorporació.
+  </Accordion>
+  <Accordion title="Incorporació i sortida del personal" icon="user-check">
+    L'accés es concedeix mitjançant un procés d'incorporació documentat. Quan algú deixa l'empresa, se li revoca l'accés el mateix dia.
+  </Accordion>
+  <Accordion title="Seguretat dels dispositius" icon="laptop">
+    Els portàtils de l'empresa requereixen xifratge complet del disc, bloqueig automàtic de pantalla i sistemes operatius actualitzats. L'estat de seguretat dels dispositius se supervisa de manera centralitzada.
+  </Accordion>
+  <Accordion title="Gestió de proveïdors" icon="briefcase">
+    Els proveïdors s'avaluen abans de contractar-los i queden obligats per condicions de protecció de dades i de confidencialitat. Els proveïdors que tracten dades dels clients es revisen com a mínim un cop l'any. Consulta [Subencarregats del tractament](/ca/trust-center/subprocessors).
+  </Accordion>
+  <Accordion title="Codi ètic i canal de denúncies" icon="scale">
+    Un codi ètic estableix què s'espera de tothom a Uxia, i hi ha disponible un canal de denúncies confidencial per comunicar qualsevol preocupació.
+  </Accordion>
+</AccordionGroup>
+
+## Seguretat del producte
+
+<AccordionGroup>
+  <Accordion title="Cicle de vida de desenvolupament segur" icon="git-pull-request">
+    Cada canvi passa per una pull request i una revisió per part d'un altre desenvolupador abans d'integrar-se. La infraestructura es defineix com a codi i es versiona. Les versions es poden revertir, de manera que un canvi defectuós es pot desfer ràpidament.
+  </Accordion>
+  <Accordion title="Gestió de vulnerabilitats" icon="scan-search">
+    Les dependències i les imatges de contenidors s'analitzen per detectar vulnerabilitats conegudes al pipeline de desplegament, i els nostres entorns s'analitzen periòdicament. Les troballes es classifiquen i es corregeixen segons la seva gravetat.
+  </Accordion>
+  <Accordion title="Validació de les entrades i integritat de les dades" icon="check-check">
+    Cada petició es valida al servidor amb un esquema definit, de manera que la validació no es pot eludir cridant l'API directament. Els processos asíncrons es concilien per confirmar que no es perd cap feina.
+  </Accordion>
+  <Accordion title="Aïllament entre clients" icon="boxes">
+    Cada espai de treball està aïllat lògicament. Els teus tests, resultats i fitxers només són accessibles per a tu i per a les persones de l'equip que convidis.
+  </Accordion>
+  <Accordion title="Controls d'accés per als clients" icon="users-round">
+    Els rols de l'espai de treball determinen qui pot gestionar les persones i la configuració. Al pla Custom, pots fer obligatori l'SSO amb el teu proveïdor d'identitat, aprovisionar usuaris amb SCIM i transmetre els registres d'auditoria al teu SIEM. Consulta [Identitat i accés](/ca/trust-center/identity-access).
+  </Accordion>
+  <Accordion title="Credencials i fitxers dels tests" icon="file-lock">
+    Les credencials i els fitxers que proporciones per als fluxos amb accés restringit es xifren en trànsit i en repòs, queden limitats al test al qual pertanyen i només són visibles dins del teu espai de treball. Les credencials no s'envien mai als models d'IA: s'injecten de manera segura a la sessió del navegador. També pots fer tests amb un inici de sessió interactiu, de manera que no es guarda cap credencial. Consulta [Tests amb inici de sessió](/ca/trust-center/authenticated-testing).
+  </Accordion>
+</AccordionGroup>
+
+## Procediments interns de seguretat
+
+<AccordionGroup>
+  <Accordion title="Gestió d'accessos" icon="key-square">
+    L'accés segueix els principis de mínim privilegi i de necessitat de conèixer. L'autenticació multifactor és obligatòria a tots els sistemes, els comptes amb privilegis són nominatius i tots els drets d'accés es revisen cada trimestre.
+  </Accordion>
+  <Accordion title="Gestió de canvis" icon="git-branch">
+    Els canvis als sistemes de producció es planifiquen, es revisen, es proven a staging i es registren.
+  </Accordion>
+  <Accordion title="Gestió d'incidents" icon="siren">
+    Un procés documentat de gestió d'incidents cobreix la detecció, la contenció, l'eradicació, la recuperació i les lliçons apreses, amb un protocol específic per als incidents en què intervenen participants d'IA. Consulta [Resposta a incidents](/ca/trust-center/incident-response).
+  </Accordion>
+  <Accordion title="Continuïtat del negoci i recuperació davant desastres" icon="life-buoy">
+    Hi ha un pla de continuïtat del negoci i un procediment de recuperació de la base de dades. Els procediments de recuperació es posen a prova com a mínim un cop l'any.
+  </Accordion>
+  <Accordion title="Auditoria interna i acció correctiva" icon="clipboard-check">
+    Un programa anual d'auditoria interna comprova la conformitat de l'SGSI. Les no conformitats es registren, se n'analitzen les causes arrel i les accions correctives se segueixen fins que es tanquen.
+  </Accordion>
+  <Accordion title="Requisits legals i normatius" icon="gavel">
+    Els requisits legals, normatius i contractuals rellevants per a la seguretat de la informació s'identifiquen, es documenten i es mantenen actualitzats.
+  </Accordion>
+</AccordionGroup>
+
+## Dades i privadesa
+
+<AccordionGroup>
+  <Accordion title="Classificació i tractament de la informació" icon="tags">
+    La informació es classifica segons la seva sensibilitat i es tracta d'acord amb aquesta classificació.
+  </Accordion>
+  <Accordion title="Conservació i supressió segura" icon="trash-2">
+    Cada categoria de dades té definit un termini de conservació. Quan s'acaba aquest termini, les dades se suprimeixen de manera segura o s'anonimitzen de manera irreversible. Consulta [Protecció de dades](/ca/trust-center/data-protection).
+  </Accordion>
+  <Accordion title="Privadesa des del disseny" icon="fingerprint">
+    Mantenim un registre de les activitats de tractament, documentem la base jurídica de cadascuna i fem avaluacions d'impacte relatives a la protecció de dades quan un tractament pot comportar un risc alt.
+  </Accordion>
+  <Accordion title="Drets de les persones interessades" icon="user-round-cog">
+    Un procediment documentat gestiona les sol·licituds d'accés, rectificació, supressió o exportació de dades personals.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Següent: Identitat i accés" icon="key-round" href="/ca/trust-center/identity-access">
+  SSO, aprovisionament amb SCIM i com es concedeix i es retira l'accés.
+</Card>

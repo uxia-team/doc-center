@@ -1,0 +1,77 @@
+---
+title: "Frames"
+description: "Puja les pantalles que audita la revisió d'accessibilitat, afegeix-hi URL de pàgina opcionals i llança l'auditoria."
+---
+
+Els frames són les pantalles que audita Uxia. Les afegeixes al camp **Files** del [bloc de revisió d'accessibilitat](/ca/accessibility-block). Cada fitxer es converteix en un frame als resultats.
+
+## Afegeix fitxers
+
+Fes clic a **Add files**, o arrossega els fitxers i deixa'ls anar sobre el botó. Mentre es pugen, el botó mostra **Uploading…**. Queda't a la pàgina fins que acabi. Després, cada fitxer apareix amb una miniatura, el seu nom i un camp **Optional URL**. Per treure un fitxer, fes clic a la icona de la paperera que hi ha al costat.
+
+| | Límit |
+|---|---|
+| Formats | Captures de pantalla d'interfície en PNG, JPEG, WebP o GIF |
+| Mida dels fitxers | Fins a 100 MB per fitxer |
+| Nombre de fitxers | Fins a 5 per test (plans de pagament) |
+| Noms dels fitxers | Cada fitxer ha de tenir un nom únic |
+| Mínim | Almenys 1 fitxer |
+
+Si selecciones més fitxers dels que hi caben, Uxia només n'afegeix els que hi caben. Quan arribes als 5 fitxers, el botó **Add files** desapareix.
+
+<Tip>
+  Puja pantalles representatives del flux real en lloc de maquetes aïllades i sense context.
+</Tip>
+
+<Warning>
+  El carregador també accepta fitxers de vídeo, però no es poden auditar: la comprovació prèvia al llançament et demana que els substitueixis per una captura de pantalla de la interfície en format PNG, JPEG, WebP o GIF.
+</Warning>
+
+Cada fitxer costa 10 crèdits, així que puja només pantalles d'una interfície digital. Uxia omet les fotografies, les obres artístiques i els documents escanejats, i mostra un avís per a cadascun als resultats.
+
+## Afegeix un URL de pàgina (opcional)
+
+Si una pantalla ja existeix com a pàgina web en producció, enganxa'n l'adreça al camp **Optional URL**, a sota del fitxer. Aleshores Uxia llegeix l'HTML de la pàgina a més de la imatge. Així pot revisar criteris que una captura de pantalla sola no permet confirmar, com ara:
+
+- Si la pàgina té un títol i un idioma declarat
+- Si les imatges tenen alternatives textuals
+- Si els camps dels formularis identifiquen la seva finalitat
+
+Deixa el camp buit per als dissenys que encara no estan publicats. L'URL ha de començar per `http://` o `https://`, i la pàgina ha de ser accessible públicament, perquè Uxia no hi pot iniciar sessió.
+
+## Missatges d'error
+
+| Missatge | Què has de fer |
+|---|---|
+| *Upload an image or video file.* | El fitxer no té un format compatible. Exporta la pantalla com a PNG, JPEG, WebP o GIF. |
+| *Files must be 100MB or smaller.* | Comprimeix el fitxer o exporta'l a una mida més petita. |
+| *A file named "…" has already been added.* | Canvia el nom del fitxer, o elimina primer el que ja hi ha. |
+| *Enter a valid URL starting with http:// or https://.* | Corregeix l'adreça a **Optional URL**, o esborra-la. |
+| *You need to add at least one file* | El bloc no té cap fitxer. Afegeix-ne almenys un abans de fer clic a **Start recruiting**. |
+
+## Executa l'auditoria
+
+La manera de llançar-la depèn de què més inclou el test.
+
+**El test també té blocs de tasca, d'enquesta o de card sorting.** Tria els participants a la fase Recruit com de costum. L'auditoria s'executa quan llances els participants d'IA, i els crèdits dels frames s'inclouen al total del llançament. Els participants humans se salten el bloc, així que, si només reclutes participants humans, l'auditoria no s'executa. Consulta [Recluta participants](/ca/recruit-participants).
+
+**El test només conté la revisió d'accessibilitat.** No hi ha res a reclutar, de manera que els mètodes de reclutament estan desactivats.
+
+<Steps>
+  <Step title="Obre la fase Recruit">
+    Fes clic a **Start recruiting**. El **Summary** mostra *"This test only contains an accessibility block, so recruiting testers is not necessary."*
+  </Step>
+  <Step title="Comprova el cost">
+    **Total credits** mostra el cost dels frames: 10 crèdits per frame.
+  </Step>
+  <Step title="Llança-la">
+    Fes clic a **Go to analyze** a la taula de resum. Uxia comprova la configuració del test i llança l'auditoria. L'estat canvia a **Processing**.
+  </Step>
+  <Step title="Obre els resultats">
+    Torna a fer clic a **Go to analyze** per obrir la fase Analyze. Mentre Uxia treballa, el bloc mostra *"Accessibility results are still processing."*
+  </Step>
+</Steps>
+
+<Card title="Següent: Avaluació de criteris" icon="arrow-right" href="/ca/criteria-evaluation">
+  Consulta els resultats criteri per criteri.
+</Card>

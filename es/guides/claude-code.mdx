@@ -1,0 +1,56 @@
+---
+title: "Claude"
+sidebarTitle: "Claude"
+description: "Conecta Uxia a Claude Code y Claude Desktop mediante MCP para crear tests y consultar resultados desde Claude."
+---
+
+## Claude Code
+
+### Configuración
+
+1. Ejecuta este comando en tu terminal para registrar el servidor MCP de Uxia:
+   ```bash
+   claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
+   ```
+
+Inicia una nueva sesión de Claude Code en tu terminal. En la lista de servidores MCP, selecciona **Uxia**.
+
+```bash
+claude /mcp
+```
+
+1. Selecciona **Authenticate**.
+2. Se abrirá automáticamente una ventana del navegador. Inicia sesión con tu cuenta de Uxia para autorizar el acceso.
+
+### Uso
+
+Una vez conectado, puedes pedirle a Claude que realice acciones en Uxia directamente:
+
+```plaintext
+Crea un test nuevo para probar mi nueva app en www.example.com
+```
+
+## Claude Desktop
+
+### Configuración
+
+1. En Claude Desktop, ve a **Customize \> Connectors**.
+2. Haz clic en el icono **\+**.
+3. Haz clic en **Add custom connector**.
+4. Escribe **Uxia** como nombre.
+5. Pega la URL del servidor:
+   ```plaintext
+   https://platform.uxia.app/api/mcp-v2/mcp
+   ```
+6. Haz clic en **Add**.
+7. La primera vez que lo uses, se abrirá automáticamente una ventana del navegador. Inicia sesión con tu cuenta de Uxia para autorizar el acceso.
+
+Si tu espacio de trabajo de Claude tiene un plan Team o Enterprise, es posible que tengas que pedir a quien administra o es propietario de ese espacio de trabajo que habilite el conector MCP de Uxia para tu equipo. Encontrarás más información en [esta página de soporte de Claude](https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities).
+
+### Uso
+
+Una vez conectado, puedes pedirle a Claude que se comunique con Uxia directamente:
+
+```plaintext
+Crea un test nuevo para probar mi nueva app en www.example.com
+```

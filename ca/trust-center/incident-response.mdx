@@ -1,0 +1,49 @@
+---
+title: "Resposta a incidents i continuïtat del negoci"
+sidebarTitle: "Resposta a incidents"
+description: "Com detecta i comunica Uxia els incidents de seguretat i hi respon, com manté el servei disponible i com informar d'una vulnerabilitat."
+icon: "siren"
+---
+
+## Resposta a incidents
+
+Uxia manté un procés documentat de gestió d'incidents que s'aplica a tots els incidents confirmats:
+
+<Steps>
+  <Step title="Detectar i avaluar">
+    Els esdeveniments de seguretat provenen de la supervisió i les alertes automàtiques, de les transcripcions dels participants d'IA i dels avisos del personal, dels clients i dels investigadors. Cada esdeveniment s'analitza i es classifica segons la seva gravetat.
+  </Step>
+  <Step title="Contenir">
+    Primer limitem l'impacte. En els incidents en què intervenen participants d'IA, això vol dir aturar les sessions afectades i revocar les credencials de sessió.
+  </Step>
+  <Step title="Eradicar i recuperar">
+    Eliminem la causa arrel i restablim els sistemes afectats a un estat correcte conegut.
+  </Step>
+  <Step title="Aprendre">
+    Cada incident té una revisió posterior. Les conclusions donen lloc a accions correctives i, quan cal, a controls nous.
+  </Step>
+</Steps>
+
+## Notificació als clients
+
+- **Violacions de la seguretat de les dades personals.** Ho notifiquem als clients afectats sense dilació indeguda i en un termini màxim de 24 hores des que en tenim coneixement.
+- **Incidents del servei.** Els incidents rellevants que afecten el servei es comuniquen per correu electrònic o amb un avís dins del producte, i n'enviem actualitzacions fins que es resolen.
+- **Manteniment programat.** Avisem amb un mínim de 48 hores d'antelació dels manteniments planificats que previsiblement provocaran una interrupció del servei.
+
+## Continuïtat del negoci i disponibilitat
+
+- **Serveis gestionats resilients.** La plataforma funciona amb serveis gestionats al núvol que incorporen alta disponibilitat. La base de dades es desplega com a conjunt de rèpliques amb còpies de seguretat automàtiques, i l'emmagatzematge de fitxers és redundant dins de cada regió.
+- **Còpies de seguretat.** Les còpies de seguretat es xifren i es conserven de manera rotativa durant un màxim de 90 dies.
+- **Versions reversibles.** Qualsevol versió es pot revertir a la versió anterior que se sap que funciona correctament.
+- **Plans provats.** Hi ha un pla de continuïtat del negoci i un procediment de recuperació davant desastres, que es posen a prova com a mínim un cop l'any.
+- **Nivells de servei.** Els clients amb contracte tenen a la seva disposició un acord de nivell de servei (SLA) amb compromisos de disponibilitat i de suport. Consulta [Documentació de seguretat](/ca/trust-center/documents).
+
+## Informa d'una vulnerabilitat
+
+Si creus que has trobat una vulnerabilitat de seguretat a Uxia, escriu a [hello@uxia.app](mailto:hello@uxia.app) amb "Security" a l'assumpte. Inclou els passos per reproduir-la i qualsevol detall que hi pugui ajudar.
+
+Mentre investigues, no accedeixis a dades d'altres usuaris ni les modifiquis, no degradis el servei i no facis públic el problema abans que hàgim tingut l'oportunitat de corregir-lo.
+
+<Card title="Tornar al Centre de confiança" icon="shield-check" href="/ca/trust-center/overview">
+  Visió general del programa de seguretat, compliment normatiu i privadesa d'Uxia.
+</Card>

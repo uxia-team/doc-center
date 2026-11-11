@@ -1,0 +1,63 @@
+---
+title: "Resultats dels benchmarks"
+sidebarTitle: "Benchmarks"
+description: "Consulta les puntuacions SUS i UXIA-Q d'un bloc de tasca, compara-les amb els benchmarks del sector i descobreix què explica cada puntuació."
+---
+
+Els benchmarks converteixen una tasca en xifres estandarditzades que pots comparar entre tests i seguir al llarg del temps. Quan actives **Measure usability with SUS** o **Measure user experience with UXIA-Q** en un [bloc de tasca](/ca/task-block), cada participant d'IA respon el qüestionari estàndard després de la tasca. Els resultats apareixen a la pestanya **Benchmarks** del bloc, amb una secció per a cada benchmark.
+
+La pestanya **Benchmarks** només apareix si s'ha activat almenys un benchmark, i està disponible quan l'execució ha acabat.
+
+## SUS
+
+La **System Usability Scale** és un qüestionari de 10 preguntes molt utilitzat que es puntua de 0 a 100. La secció mostra la puntuació en una escala de colors, amb una insígnia de qualificació, una marca per a la mitjana del sector (**Average**), que és 68, i una breu explicació del resultat.
+
+| Qualificació | Etiqueta | Puntuació |
+|---|---|---|
+| **F** | Poor | Menys de 51 |
+| **B** | Acceptable | De 51 a 68 |
+| **A** | Good | De 68 a 80,3 |
+| **A+** | Excellent | Més de 80,3 |
+
+Una puntuació superior a 68 vol dir que als participants l'experiència els ha semblat més fàcil d'utilitzar que la mitjana. Fes servir el SUS per comparar versions d'un mateix flux o per seguir la usabilitat versió rere versió. Consulta [SUS](/ca/sus) per veure les 10 preguntes.
+
+## UXIA-Q
+
+**UXIA-Q** mesura la qualitat global de l'experiència a partir de quatre pilars, amb dues preguntes cadascun:
+
+| Pilar | Què mesura | Preguntes |
+|---|---|---|
+| **Usability** | Com de fàcil és utilitzar el producte i navegar-hi | Fàcil d'utilitzar, fàcil de navegar |
+| **Trust** | Com de creïble sembla el producte i quanta confiança tindrien els participants per fer-hi negocis | Informació creïble, confiança per fer-hi negocis |
+| **Appearance** | Com d'atractiva i neta és la presentació | Atractiu, presentació neta |
+| **Loyalty** | Quina probabilitat hi ha que els participants hi tornin i recomanin el producte | Probabilitat de tornar-hi, probabilitat de recomanar-lo |
+
+La secció comença amb un gràfic de radar dels quatre pilars en una escala de l'1 al 5. Passa el cursor per sobre d'un punt per veure'n l'explicació, o fes-hi clic per seleccionar aquell pilar. Les pestanyes dels pilars (**Usability**, **Trust**, **Appearance**, **Loyalty**) mostren, per al pilar seleccionat:
+
+- Una lectura en llenguatge planer, com ara "Quite easy to use".
+- La puntuació del pilar sobre 5.
+- **Questions asked**: cada pregunta amb la seva puntuació mitjana.
+- Una explicació dels motius de la puntuació.
+
+Junts, els pilars formen l'**UXIA-Q Score**. Consulta [Puntuació UXIA-Q](/ca/uxia-q-score) per veure les preguntes completes.
+
+## Filtra per audiència
+
+Quan filtres els resultats per audiència, les puntuacions es tornen a calcular per a les audiències que has seleccionat, i la secció mostra **Calculated for filtered audiences:** amb les seves insígnies. Si una puntuació no es pot tornar a calcular per al filtre, la secció mostra **All audiences** perquè sàpigues que continua incloent tothom. Consulta [Analitza els resultats](/ca/analyze-results) per saber com funcionen els filtres.
+
+## Com es relacionen els benchmarks amb l'UOS
+
+Els benchmarks recullen el que els participants *diuen* de l'experiència. L'[Usability Optimization Score](/ca/results) es construeix a partir dels insights, és a dir, dels problemes amb què els participants *s'han trobat*. Les dues mesures no s'alimenten l'una a l'altra, així que llegeix-les en paral·lel. Per exemple, un SUS bo amb un UOS baix pot voler dir que, en conjunt, el producte ha agradat als participants, però que tot i així han topat amb problemes concrets que val la pena resoldre.
+
+## Plans i crèdits
+
+Els benchmarks estan disponibles als plans de pagament. Cada benchmark afegeix 1 crèdit per participant d'IA al cost del bloc de tasca. Al pla Free no pots activar els benchmarks, i les puntuacions de benchmark estan bloquejades. Consulta [Plans i crèdits](/ca/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="SUS" icon="clipboard-list" href="/ca/sus">
+    Les 10 preguntes del SUS i com les aplica Uxia.
+  </Card>
+  <Card title="Puntuació UXIA-Q" icon="gauge" href="/ca/uxia-q-score">
+    Els quatre pilars i les vuit preguntes en què es basa UXIA-Q.
+  </Card>
+</CardGroup>

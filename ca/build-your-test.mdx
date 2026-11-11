@@ -1,0 +1,90 @@
+---
+title: "Construeix el teu test"
+description: "Crea un test no moderat, afegeix-hi blocs de tasca, enquesta, card sorting i accessibilitat, i deixa'l a punt per reclutar participants."
+---
+
+Un test és una seqüència de **blocs**. Els participants passen pels blocs en ordre: per exemple, una tasca sobre el teu procés de registre i, després, una enquesta sobre l'experiència. Construeixes el test a la fase **Build** i després passes a **Recruit**.
+
+## Crea un test
+
+<Steps>
+  <Step title="Obre el diàleg de creació">
+    Fes clic a **Create test** des de la barra lateral, la pàgina d'inici, la pàgina **Tests** o dins d'un projecte.
+  </Step>
+  <Step title="Tria Unmoderated test">
+    Selecciona **Unmoderated test**: els participants fan el test pel seu compte, i obtens insights, recorreguts i clics. (Els tests moderats per IA [arribaran aviat](/ca/ai-moderated-tests).)
+  </Step>
+  <Step title="Posa-li nom i tria un projecte">
+    Escriu un **Title** (fins a 72 caràcters) i tria un **Project**, o **No project**. També pots crear un projecte nou des d'aquí. Fes clic a **Create test** per obrir l'editor.
+  </Step>
+</Steps>
+
+## Afegeix blocs
+
+En un test buit, el selector **Add a block** s'obre automàticament. Més endavant, fes servir **Add new block** al final del llenç, o **Add new block here** entre dos blocs per inserir-ne un en una posició concreta.
+
+| Secció | Bloc | Fes-lo servir per |
+|---|---|---|
+| **Task** | **Live website task** | Provar un lloc web en producció, una plataforma o un prototip programat a partir de l'URL |
+| | **Figma prototype task** | Provar un prototip de Figma a partir del seu enllaç per compartir |
+| | **Media prototype task** | Crear i provar un prototip amb les teves pròpies imatges |
+| **Research** | **Survey** | Fer preguntes de diferents tipus |
+| | **Card sorting** | Veure com agrupen i etiqueten els participants el teu contingut |
+| **Audits** | **Accessibility check** | Revisar les teves pantalles segons les WCAG 2.2 AA o AAA |
+
+Cada bloc té la seva pròpia pàgina: [Bloc de tasca](/ca/task-block), [Bloc d'enquesta](/ca/survey-block), [Bloc de card sorting](/ca/card-sorting) i [Bloc de revisió d'accessibilitat](/ca/accessibility-block).
+
+<Tip>
+  Quan afegeixes un segon bloc del mateix tipus, Uxia n'omple prèviament la font (URL o prototip) a partir de l'anterior, de manera que provar diversos fluxos del mateix producte només et porta uns segons.
+</Tip>
+
+### Límits per test
+
+| | Pla Free | Plans de pagament |
+|---|---|---|
+| Blocs de tasca (els tres tipus en conjunt) | 1 | 3 |
+| Blocs d'enquesta | 1 | 3 |
+| Preguntes d'enquesta (a tot el test) | 5 | 30 |
+| Blocs de revisió d'accessibilitat | No disponible | 1 (fins a 5 frames) |
+| Blocs de card sorting | Sense límit | Sense límit |
+
+Quan arribes a un límit, el bloc apareix desactivat al selector. Al pla Free, els blocs bloquejats mostren una etiqueta **Upgrade**.
+
+## Organitza els blocs
+
+La barra lateral esquerra mostra tots els blocs en ordre, amb el títol i un breu resum: el text de la tasca o el nombre de preguntes, targetes o frames.
+
+- **Reordena** els blocs arrossegant-los a la barra lateral, o fes servir **Move up** / **Move down** des del menú **…** del bloc.
+- **Duplica** un bloc des del menú **…** per copiar-lo amb tota la configuració.
+- **Elimina** un bloc des del menú **…**.
+
+<Warning>
+  L'eliminació d'un bloc és immediata i no es pot desfer.
+</Warning>
+
+Els canvis es desen automàticament mentre treballes.
+
+### L'ordre importa
+
+Els participants fan els blocs en l'ordre que defineixes. Hi ha dues opcions que en depenen:
+
+- En un bloc d'enquesta situat després d'una tasca, cada pregunta es pot limitar als participants d'IA que han completat la tasca amb **Only ask testers who complete the flow**. Així és com fas preguntes posteriors a la tasca. Consulta [Bloc d'enquesta](/ca/survey-block).
+- Una tasca de lloc web en producció o de Figma que fa servir el mateix URL que una tasca anterior pot activar **Continue from where participants left the previous task**, perquè els participants continuïn a la mateixa sessió del navegador.
+
+## Corregeix els problemes abans de reclutar
+
+Els camps obligatoris es comproven mentre treballes. Quan a un bloc li falta alguna cosa (un URL, una tasca, un escenari, una pregunta), es marca amb una icona d'alerta vermella a la barra lateral i el camp indica què cal, com ara *"You need to describe the task"*.
+
+El comptador vermell de problemes de la capçalera mostra tots els problemes pendents per bloc. Fes clic en un element per anar-hi directament.
+
+## Comença a reclutar
+
+Quan tinguis els blocs a punt, fes clic a **Start recruiting**. Uxia comprova tots els blocs; si falta alguna cosa, et porta al primer problema. Si no, s'obre la fase **Recruit**, on tries els participants.
+
+<Note>
+  Pots continuar editant els blocs fins que llancis els participants d'IA. Abans que comencin, Uxia fa una breu [revisió del test](/ca/recruit-participants#revisió-del-test) per detectar tasques o preguntes poc clares.
+</Note>
+
+<Card title="Següent: Recluta participants" icon="arrow-right" href="/ca/recruit-participants">
+  Tria participants d'IA, convida els teus propis participants o sol·licita un panell humà.
+</Card>

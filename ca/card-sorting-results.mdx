@@ -1,0 +1,71 @@
+---
+title: "Resultats del card sorting"
+sidebarTitle: "Resultats"
+description: "Consulta els resultats d'un card sorting: l'acord per targeta i per categoria, la matriu d'acord i la matriu de similitud."
+---
+
+Quan obres un [bloc de card sorting](/ca/card-sorting) a la fase **Analyze**, els resultats es divideixen en tres pestanyes: **Results**, **Agreement Matrix** i **Similarity Matrix**. Els resultats dels participants d'IA i dels humans es mostren per separat; fes servir el commutador que es descriu a [Analitza els resultats](/ca/analyze-results) per passar d'uns als altres.
+
+## Acord
+
+Totes les vistes es basen en una sola mesura:
+
+> L'acord és la proporció de participants que han posat una targeta en una categoria, sobre el total de persones que han classificat aquella targeta. L'acord mitjà d'una categoria és la mitjana de l'acord de les targetes que s'hi han posat.
+
+Per exemple, si 8 participants han classificat la targeta "Reemborsaments" i 6 l'han posada a "Facturació", el seu acord per a "Facturació" és del 75 %. Els participants no han de classificar totes les targetes, així que l'acord només compta les persones que han classificat aquella targeta. A tots els resultats, com més intens és el blau, més alt és l'acord.
+
+## Resultats
+
+Fes servir el commutador **Categories** / **Cards** per triar com s'agrupa la taula.
+
+<Tabs>
+  <Tab title="Categories">
+    Una fila per categoria, amb les columnes **Category**, **Number of cards**, **Agreement** (l'acord mitjà de la categoria) i **Participants**. Les categories amb l'acord mitjà més alt apareixen primer. Desplega una fila per veure totes les targetes que s'han posat en aquella categoria, cadascuna amb la seva barra d'acord i quants participants l'hi han posada.
+  </Tab>
+  <Tab title="Targetes">
+    Una fila per targeta, amb les columnes **Card**, **Categories**, **Agreement** i **Participants**. Al costat del nom de cada targeta veus la categoria on s'ha posat més sovint, i la barra mostra l'acord per a aquella categoria. Desplega una fila per veure totes les categories on s'ha posat la targeta. Les targetes que no ha classificat ningú mostren **Not sorted**.
+  </Tab>
+</Tabs>
+
+## Matriu d'acord
+
+> Amb quina freqüència s'ha posat cada targeta en cada categoria. Les targetes s'agrupen sota la categoria on els participants les han posades més sovint.
+
+Cada fila és una targeta i cada columna, una categoria. Cada cel·la mostra l'acord de la targeta per a aquella categoria, i el valor més alt de cada fila apareix en negreta. Recorre una columna de dalt a baix per veure quines targetes pertanyen clarament a una categoria i quines només en part.
+
+## Matriu de similitud
+
+> Amb quina freqüència els participants han classificat cada parella de targetes en la mateixa categoria. Les targetes molt relacionades s'agrupen al llarg de la vora de la taula.
+
+Cada cel·la compara dues targetes: la proporció de participants que les han posades totes dues en la mateixa categoria, sobre els que les han classificat totes dues. Uxia ordena les targetes amb un algorisme d'agrupament, de manera que les targetes relacionades queden les unes al costat de les altres i formen blocs foscos. Com que la matriu no té en compte els noms de les categories, és especialment útil en les classificacions obertes, en què els participants etiqueten la mateixa idea de maneres diferents.
+
+## Categories creades pels participants
+
+En una classificació oberta, les categories que els participants creen amb el mateix nom es fusionen, sense tenir en compte les majúscules ni els espais sobrants. Si un participant crea una categoria amb el mateix nom que una de les teves categories inicials, compta com la teva categoria. Les categories amb noms diferents es mantenen separades, encara que vulguin dir el mateix; fes servir la matriu de similitud per detectar-les.
+
+## Com s'han de llegir els resultats
+
+- **Acord alt.** Una targeta amb un acord alt per a una categoria té un lloc clar. Deixa-la allà.
+- **Targetes dividides.** Una targeta amb l'acord repartit entre dues o més categories és ambigua. Planteja't canviar-li el nom, afegir-hi una descripció o fer-la accessible des de tots dos llocs.
+- **Categories febles.** Una categoria amb un acord mitjà baix pot tenir un nom poc clar o solapar-se amb una altra categoria.
+- **Targetes que van juntes.** Els blocs foscos de la matriu de similitud mostren els grups que els participants formen pel seu compte. En una classificació oberta, són candidats a convertir-se en les teves categories, independentment de les etiquetes que hagin fet servir els participants.
+- **El vocabulari dels participants.** En una classificació oberta, els noms que els participants donen a les seves categories mostren les paraules que buscarien a la teva navegació.
+
+## Estats buits
+
+- **"No AI participants completed this card sort."** o **"No participants have completed this card sort yet."** No hi ha resultats disponibles per al tipus de participant seleccionat.
+- **"The agreement matrix appears once participants have sorted cards."**
+- **"The similarity matrix appears once participants have sorted at least two cards."**
+
+<Note>
+  Els resultats del card sorting encara no es poden exportar a PDF, i [Ask AI](/ca/ask-ai) no els llegeix.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Bloc de card sorting" icon="layout-grid" href="/ca/card-sorting">
+    Configura un card sorting obert o tancat.
+  </Card>
+  <Card title="Analitza els resultats" icon="chart-bar" href="/ca/analyze-results">
+    Canvia entre participants d'IA i humans, filtra i comparteix.
+  </Card>
+</CardGroup>

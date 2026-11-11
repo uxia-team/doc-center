@@ -1,0 +1,84 @@
+---
+title: "Analiza los resultados"
+sidebarTitle: "Descripción general"
+description: "Sigue tu test en directo y lee sus resultados bloque a bloque: progreso, participantes de IA y humanos, filtros, cómo detener un test y reembolsos."
+---
+
+En la fase **Analyze** están tus resultados. No tienes que esperar a que termine el test: los resultados van llegando bloque a bloque mientras los participantes avanzan por tu test. Haz clic en **Analyze** en la cabecera del test para abrirla. Está disponible en cuanto lanzas el test, creas un enlace de test o solicitas un panel humano.
+
+## Oriéntate
+
+- **Cabecera.** Haz clic en el título del test para ver el número de participantes y la fecha, y para usar **Rename**, **Export** o **Share** (consulta [Compartir y exportar](/es/share-and-export)). A la derecha están el indicador de créditos devueltos, **Stop test** mientras el test se ejecuta, y el selector de participantes.
+- **Barra lateral.** En la parte superior hay un selector **Blocks | Chat**. **Blocks** muestra una fila por bloque; **Chat** abre [Ask AI](/es/ask-ai).
+- **Resultados.** Los resultados del bloque seleccionado, con pestañas que dependen del tipo de bloque. Usa la burbuja **Share feedback on these results** para contarnos si te han resultado útiles.
+
+Cada fila de bloque muestra su título y un subtítulo. Mientras el test se ejecuta, el subtítulo muestra el estado del bloque:
+
+| Estado | Significado |
+|---|---|
+| **Waiting...** | El bloque aún no ha empezado. |
+| Paso actual y porcentaje | El bloque se está ejecutando. |
+| **Failed** | El bloque no pudo terminar. |
+| **Stopped** | Detuviste el test antes de que este bloque terminara. |
+| **Not executed** | El bloque no se ejecutó. |
+| Icono de advertencia rojo | Los participantes no llegaron a este bloque, y se devolvieron sus créditos. |
+
+## Sigue un test en curso
+
+Una barra de progreso encima de los resultados muestra qué bloque se está ejecutando y el porcentaje total del test. La fila de la barra lateral del bloque en curso muestra su paso actual; por ejemplo, "Gathering tester feedback..." o "Identifying key issues..." en una tarea, "Collecting participant responses..." en una encuesta, "Sorting cards..." en un card sorting o "Scanning interface..." en una revisión de accesibilidad.
+
+Mientras se ejecuta un bloque de tarea, se abre en su pestaña **Transcripts** para que puedas ver a los participantes en directo. Las demás pestañas se desbloquean cuando el bloque termina. Consulta [Transcripciones](/es/test-transcripts).
+
+<Tip>
+  No necesitas mantener la página abierta. "You can leave this page and come back later. We'll email you as soon as it finishes."
+</Tip>
+
+## Alterna entre participantes de IA y humanos
+
+El selector de participantes de la cabecera cambia toda la vista de Analyze entre **AI participants** y **Human participants** (consulta [Resultados de participantes humanos](/es/human-insights)).
+
+Para acotar los resultados, haz clic en el contador junto al selector, selecciona audiencias (participantes de IA) o enlaces de test (participantes humanos) y haz clic en **Filter**. La selección se aplica a toda la vista de Analyze. Los filtros funcionan cuando el test termina de analizar los resultados. En el plan Free, el selector y los filtros están bloqueados; el filtrado está disponible a partir del plan Starter.
+
+## Lee los resultados de cada bloque
+
+| Bloque | Pestañas | Más información |
+|---|---|---|
+| Tarea | **Insights**, **Transcripts**, **Analytics**, **Journeys**, además de **Benchmarks** cuando SUS o UXIA-Q están activados | [Insights y UOS](/es/results), [Transcripciones](/es/test-transcripts), [Analítica](/es/analytics), [Benchmarks](/es/benchmark-results) |
+| Encuesta | **Responses**, **Participants** | [Resultados de la encuesta](/es/survey-results) |
+| Card sorting | **Results**, **Agreement Matrix**, **Similarity Matrix** | [Resultados del card sorting](/es/card-sorting-results) |
+| Revisión de accesibilidad | **Results**, **Vision Simulation** | [Evaluación de criterios](/es/criteria-evaluation), [Simulación de visión](/es/vision-simulation) |
+
+En lugar de resultados, un bloque puede mostrar **Waiting for previous blocks to finish...**, **Test stopped** (el test se detuvo antes de que terminara el bloque) o **No participants reached this block** (todos abandonaron antes). Antes de lanzar los participantes de IA, verás **No AI participants yet**; haz clic en **Recruit AI participants** para ir a la fase Recruit.
+
+## Detén un test en curso
+
+<Steps>
+  <Step title="Haz clic en Stop test">
+    Aparece en la cabecera mientras se ejecutan los participantes de IA.
+  </Step>
+  <Step title="Revisa el reembolso">
+    El diálogo explica: "You'll receive a partial credit refund. Only results from blocks completed before the interrupted block will remain available." Muestra el reembolso de cada bloque y el total en **Credits to return**.
+  </Step>
+  <Step title="Confirma">
+    Vuelve a hacer clic en **Stop test**. Los bloques que no terminaron muestran **Stopped**.
+  </Step>
+</Steps>
+
+| Estado del bloque al detener el test | Reembolso |
+|---|---|
+| Sin empezar | El 100 % de sus créditos |
+| En ejecución | El 50 % de sus créditos |
+| Completado | Ninguno; sus resultados siguen disponibles |
+
+## Créditos devueltos
+
+Cuando se te devuelven créditos, aparece en la cabecera un indicador con una moneda y el total, una vez terminada la ejecución. Esto ocurre cuando detienes un test y cuando los participantes abandonan antes de llegar a bloques posteriores: "We returned the credits for tasks and questions that some participants did not get to carry out." Haz clic en el indicador para ver el reembolso por bloque. Consulta [Planes y créditos](/es/account/plans-and-credits).
+
+<CardGroup cols={2}>
+  <Card title="Ask AI" icon="sparkles" href="/es/ask-ai">
+    Haz preguntas sobre todo tu test en lenguaje natural.
+  </Card>
+  <Card title="Compartir y exportar" icon="share-2" href="/es/share-and-export">
+    Comparte un enlace de solo lectura o exporta un informe en PDF.
+  </Card>
+</CardGroup>

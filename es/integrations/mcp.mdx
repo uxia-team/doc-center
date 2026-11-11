@@ -1,0 +1,116 @@
+---
+title: "Conecta Uxia a Claude, Cursor y otras herramientas de IA mediante MCP"
+sidebarTitle: "Primeros pasos"
+description: "Usa el servidor MCP de Uxia para crear y lanzar tests, gestionar audiencias y ver resultados desde Claude Code, Cursor, Codex, v0 y otros clientes MCP."
+---
+
+El servidor MCP de Uxia permite que tus herramientas de IA favoritas se comuniquen directamente con tu espacio de trabajo de Uxia. Una vez conectados, Claude Code, Cursor, Codex, v0 y otros clientes de [Model Context Protocol](https://modelcontextprotocol.io) pueden trabajar con Uxia en el mismo chat en el que escribes código o iteras sobre el diseño, sin copiar y pegar ni cambiar de contexto.
+
+## Qué puedes hacer
+
+- **Crear y lanzar tests.** Describe lo que quieres probar y tu herramienta de IA configura el test por ti: la tarea, las preguntas de seguimiento y la audiencia. Lanzar un test consume créditos, así que el asistente te muestra el coste y te pide aprobación antes de lanzarlo.
+- **Gestionar audiencias.** Consulta tus audiencias, crea otras nuevas y elige los participantes de IA de un test.
+- **Consultar resultados e insights.** Trae a tu conversación insights, citas de participantes, transcripciones, rutas de navegación, respuestas de encuestas, puntuaciones de benchmarks y hallazgos de accesibilidad. Consulta el progreso y los créditos que te quedan.
+
+Todo ocurre con tu cuenta de Uxia, así que se aplican el mismo acceso al espacio de trabajo, los mismos créditos y los mismos [límites del plan](/es/account/plans-and-credits).
+
+## Configuración
+
+Conectar Uxia lleva tres pasos: elegir la herramienta de IA que quieres usar, registrar el servidor MCP de Uxia e iniciar sesión para autorizar la conexión.
+
+<Steps>
+  <Step title="Elige tu herramienta de IA">
+    Clientes compatibles de serie:
+
+    | Cliente | Tipo | Notas |
+    | --- | --- | --- |
+    | **Claude Code** | CLI / IDE | Recomendado para ingenieros que trabajan en la terminal o en VS Code. |
+    | **Cursor** | IDE | Compatibilidad nativa con MCP: lleva los datos de Uxia al chat de Cursor. |
+    | **Codex** | CLI | Para flujos de trabajo con OpenAI Codex CLI. |
+    | **v0** | Web | Lleva los insights de Uxia a la generación de diseños de v0. |
+    | **Microsoft Copilot** | Microsoft 365 Copilot, Teams | Añade Uxia a un agente de Copilot Studio. |
+    | **Otros** | Cualquier cliente MCP | Usa el transporte HTTP genérico para Claude Desktop, agentes personalizados y otros clientes. |
+
+    También puedes conectar herramientas que no son de programación, como **Claude Desktop**, **ChatGPT** y **Microsoft Copilot**. Consulta las guías de [Claude](/es/guides/claude-code), [ChatGPT y Codex](/es/guides/chatgpt-codex), [Cursor](/es/guides/cursor), [Lovable](/es/guides/lovable), [Antigravity](/es/guides/antigravity) y [Microsoft Copilot](/es/guides/microsoft-copilot).
+  </Step>
+  <Step title="Registra el servidor MCP de Uxia">
+    Añade el servidor con la configuración de la herramienta que hayas elegido.
+
+    #### Claude Code
+
+    Ejecuta este comando en tu terminal:
+
+    ```bash
+    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Cursor
+
+    En Cursor, abre **Customize** y añade un servidor MCP personalizado, o edita directamente `~/.cursor/mcp.json`. Añade esta entrada al objeto `mcpServers`:
+
+    ```json
+    {
+      "mcpServers": {
+        "Uxia": {
+          "type": "http",
+          "url": "https://platform.uxia.app/api/mcp-v2/mcp",
+          "headers": {}
+        }
+      }
+    }
+    ```
+
+    #### Codex
+
+    Ejecuta este comando en tu terminal:
+
+    ```bash
+    codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+
+    #### Microsoft Copilot
+
+    En Copilot Studio, abre la página **Tools** de tu agente y selecciona **Add a tool** › **New tool** › **Model Context Protocol**. Usa `https://platform.uxia.app/api/mcp-v2/mcp` como **Server URL** y **OAuth 2.0** con **Dynamic discovery** para la autenticación. Consulta la [guía de Microsoft Copilot](/es/guides/microsoft-copilot) para ver todos los pasos, incluido cómo usar el agente en Microsoft 365 Copilot y Teams.
+
+    #### Otros
+
+    Añade un nuevo servidor MCP HTTP y pega esta URL.
+
+    ```text
+    https://platform.uxia.app/api/mcp-v2/mcp
+    ```
+  </Step>
+  <Step title="Autentícate">
+    La primera vez que tu cliente llame al servidor MCP de Uxia, se te redirigirá para iniciar sesión en Uxia y hacer clic en **Authorize**. A partir de ahí, tu herramienta de IA tendrá acceso limitado a los tests, las audiencias y los resultados de tu espacio de trabajo.
+  </Step>
+  <Step title="Pruébalo">
+    En tu herramienta de IA, pide algo como:
+
+    - _"Muestra mis últimos 5 tests de Uxia."_
+    - _"Resume los insights del test del flujo de checkout."_
+    - _"Crea un test de Uxia para el flujo de registro de www.example.com con 5 participantes de IA."_
+    - _"¿Cuáles fueron los principales problemas de usabilidad en mi último test de sitio web en producción?"_
+
+    Tu cliente llamará al servidor MCP de Uxia, obtendrá los datos pertinentes y responderá con contexto real de tu espacio de trabajo.
+  </Step>
+</Steps>
+
+## Páginas relacionadas
+
+<CardGroup cols={2}>
+  <Card title="Transcripciones" icon="scroll-text" href="/es/test-transcripts">
+    Descubre qué datos puede obtener tu herramienta de IA mediante MCP: transcripciones, insights y puntuaciones de benchmarks.
+  </Card>
+
+  <Card title="Planes y créditos" icon="credit-card" href="/es/account/plans-and-credits">
+    Consulta cuántos créditos cuestan los tests cuando los lanzas mediante MCP.
+  </Card>
+
+  <Card title="Espacios de trabajo de la organización" icon="users" href="/es/account/workspaces">
+    Gestiona el acceso y los permisos del equipo: las conexiones MCP respetan los mismos permisos.
+  </Card>
+
+  <Card title="Seguridad" icon="shield-check" href="/es/account/security/data-privacy">
+    Descubre cómo gestiona Uxia la autenticación, el acceso a los datos y la revocación en integraciones como MCP.
+  </Card>
+</CardGroup>
