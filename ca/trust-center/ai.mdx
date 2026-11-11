@@ -1,0 +1,55 @@
+---
+title: "IA responsable"
+sidebarTitle: "IA responsable"
+description: "Com utilitza Uxia els proveïdors de models d'IA, per què el teu contingut no s'utilitza mai per entrenar i com es limita l'abast dels participants d'IA."
+icon: "sparkles"
+---
+
+Uxia utilitza grans models de llenguatge per fer funcionar els participants d'IA i per generar transcripcions, insights i puntuacions. Aquesta pàgina explica com els utilitzem de manera responsable.
+
+## Sense entrenament amb el teu contingut
+
+Uxia no utilitza el teu contingut per entrenar, ajustar ni millorar cap model d'IA. El nostre annex de tractament de dades (DPA) també exigeix que els nostres subencarregats del tractament no:
+
+- Utilitzin les teves dades per entrenar, ajustar o millorar cap model públic, compartit o fundacional.
+- Incloguin les teves dades en conjunts de dades que es facin servir per a l'aprenentatge o la comparativa entre clients.
+- Utilitzin embeddings, metadades, registres o altres dades derivades del teu contingut per entrenar o avaluar models.
+
+Aquest compromís s'aplica per defecte. No cal que en sol·licitis l'exclusió, i continua vigent després que finalitzi el teu contracte.
+
+## Proveïdors de models d'IA
+
+Uxia envia el contingut dels tests als proveïdors de models d'IA a través de les seves API comercials. Els nostres proveïdors figuren a la pàgina [Subencarregats del tractament](/ca/trust-center/subprocessors). Les condicions de les seves API comercials exclouen les teves dades de l'entrenament de models. La inferència d'IA està disponible a la UE o als EUA. No oferim inferència específica per al Regne Unit.
+
+- **Conservació limitada per part dels proveïdors.** Els proveïdors poden conservar les dades de l'API durant un període curt i limitat, exclusivament per detectar abusos. Després se suprimeixen i no s'utilitzen mai per entrenar.
+- **Zero Data Retention.** Per als clients empresarials amb contracte anual, podem activar Zero Data Retention amb els nostres proveïdors de models d'IA perquè aquesta conservació per detectar abusos no s'apliqui. Cobreix la conservació per part dels proveïdors de models d'IA. Els teus tests i resultats es conserven a Uxia durant els terminis indicats a [Protecció de dades](/ca/trust-center/data-protection).
+- **Avís de canvis.** T'avisem amb un mínim de 30 dies d'antelació abans de contractar un nou proveïdor de models d'IA, i t'hi pots oposar per motius raonables.
+
+## Sense ús entre clients
+
+El teu contingut no s'exposa mai a altres clients ni influeix mai en els resultats que es generen per a ells. Cap aprenentatge no es conserva d'un espai de treball a un altre.
+
+## Els participants d'IA es mantenen dins de l'abast
+
+Els participants d'IA són perfils sintètics, no persones reals. Actuen dins dels límits que tu estableixes:
+
+- **Tu controles l'objectiu.** Els participants d'IA només actuen sobre les URL o els prototips que configures i no naveguen més enllà.
+- **Tu delimites cada sessió.** La tasca i la condició d'aturada que defineixes determinen fins on arriba una sessió, de manera que pots aturar-la abans de qualsevol acció irreversible.
+- **Les entrades són sintètiques.** Els valors que introdueixen els participants d'IA són generats, de manera que no s'envien dades de cap persona real.
+- **Cada acció és visible.** Cada sessió genera una transcripció pas a pas del que el participant d'IA ha vist i ha fet.
+
+Per a orientació pràctica, consulta [Restriccions dels participants d'IA](/ca/account/security/ai-participant-restrictions).
+
+## Configuració recomanada
+
+- Fes els tests en entorns de staging o UAT amb dades sintètiques.
+- Per als fluxos que requereixen iniciar sessió, fes servir comptes de prova dedicats que només continguin dades sintètiques, o bé un [inici de sessió interactiu](/ca/trust-center/authenticated-testing#inici-de-sessió-interactiu).
+- Als passos de pujada de fitxers, puja documents sintètics, no documents reals.
+
+## Quan alguna cosa va malament
+
+Mantenim un protocol específic de resposta a incidents per als participants d'IA. Si un participant d'IA actua fora de l'abast configurat, o si apareixen dades personals reals als resultats d'un test, aturem les sessions afectades, contenim el problema, suprimim el contingut afectat quan cal i t'ho comuniquem. Consulta [Resposta a incidents](/ca/trust-center/incident-response).
+
+<Card title="Següent: Subencarregats del tractament" icon="network" href="/ca/trust-center/subprocessors">
+  Els tercers que ens ajuden a prestar el servei.
+</Card>

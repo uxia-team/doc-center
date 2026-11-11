@@ -1,0 +1,49 @@
+---
+title: "Respuesta a incidentes y continuidad del negocio"
+sidebarTitle: "Respuesta a incidentes"
+description: "Cómo detecta, gestiona y comunica Uxia los incidentes de seguridad, cómo mantiene el servicio disponible y cómo comunicar una vulnerabilidad."
+icon: "siren"
+---
+
+## Respuesta a incidentes
+
+Uxia mantiene un proceso documentado de gestión de incidentes que se aplica a todos los incidentes confirmados:
+
+<Steps>
+  <Step title="Detectar y evaluar">
+    Los eventos de seguridad proceden de la monitorización y las alertas automáticas, de las transcripciones de los participantes de IA y de los avisos del personal, los clientes y los investigadores. Cada evento se analiza y se clasifica según su gravedad.
+  </Step>
+  <Step title="Contener">
+    Primero limitamos el impacto. En los incidentes en los que intervienen participantes de IA, esto implica detener las sesiones afectadas y revocar las credenciales de sesión.
+  </Step>
+  <Step title="Erradicar y recuperar">
+    Eliminamos la causa raíz y restauramos los sistemas afectados a un estado correcto conocido.
+  </Step>
+  <Step title="Aprender">
+    Cada incidente pasa por una revisión posterior. Los hallazgos dan lugar a acciones correctivas y, cuando es necesario, a nuevos controles.
+  </Step>
+</Steps>
+
+## Notificación a los clientes
+
+- **Violaciones de la seguridad de los datos personales.** Notificamos a los clientes afectados sin dilación indebida y, como máximo, 24 horas después de tener conocimiento de la violación.
+- **Incidentes del servicio.** Los incidentes relevantes que afectan al servicio se comunican por correo electrónico o mediante un aviso en el producto, con actualizaciones hasta que se resuelven.
+- **Mantenimiento programado.** Avisamos con al menos 48 horas de antelación de los mantenimientos planificados que se prevé que causen una interrupción del servicio.
+
+## Continuidad del negocio y disponibilidad
+
+- **Servicios gestionados resilientes.** La plataforma se ejecuta en servicios gestionados en la nube con alta disponibilidad integrada. La base de datos se despliega como un conjunto de réplicas con copias de seguridad automáticas, y el almacenamiento de archivos es redundante dentro de cada región.
+- **Copias de seguridad.** Las copias de seguridad se cifran y se conservan de forma rotatoria durante un máximo de 90 días.
+- **Despliegues reversibles.** Cualquier despliegue se puede revertir a la versión anterior que se sabe correcta.
+- **Planes probados.** Contamos con un plan de continuidad del negocio y un runbook de recuperación ante desastres, que se ponen a prueba al menos una vez al año.
+- **Niveles de servicio.** Los clientes con contrato tienen a su disposición un acuerdo de nivel de servicio (SLA) con compromisos de disponibilidad y soporte. Consulta [Documentación de seguridad](/es/trust-center/documents).
+
+## Comunica una vulnerabilidad
+
+Si crees que has encontrado una vulnerabilidad de seguridad en Uxia, escribe a [hello@uxia.app](mailto:hello@uxia.app) con "Security" en el asunto. Incluye los pasos para reproducirla y cualquier detalle que lo respalde.
+
+Mientras investigas, no accedas a los datos de otros usuarios ni los modifiques, no degrades el servicio y no hagas público el problema antes de que hayamos tenido ocasión de solucionarlo.
+
+<Card title="Volver al Centro de confianza" icon="shield-check" href="/es/trust-center/overview">
+  Resumen del programa de seguridad, cumplimiento y privacidad de Uxia.
+</Card>

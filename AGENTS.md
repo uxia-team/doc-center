@@ -141,7 +141,8 @@ English is the source of truth: change the English page first, then update `es/`
   and `/images/...` paths stay the same.
 - Anchors follow the translated heading: a link to `/es/mission#refine-it-with-tips` must use the slug of the
   Spanish heading (for example `#ajústala-con-consejos`). Slugs are the heading in lowercase, punctuation
-  removed, spaces as hyphens; accents are kept.
+  removed, spaces as hyphens; accents are kept. An apostrophe becomes a typographic ’ and stays in the slug
+  (`Executa l'auditoria` → `#executa-l’auditoria`).
 
 **What stays as-is**
 
