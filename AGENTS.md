@@ -125,3 +125,82 @@ participant is blocked from a live website (anti-bot, access denied), 80% of the
   Português (Brasil), Português (Portugal) and Italian.
 - Human sessions are recorded (screen and microphone; face camera optional) and capped at 60 minutes.
   Participants need a desktop browser that supports screen sharing.
+
+## Translations (Spanish and Catalan)
+
+The help center and trust center are published in English (default), Spanish (`es/`) and Catalan (`ca/`).
+English is the source of truth: change the English page first, then update `es/` and `ca/` in the same PR.
+
+**Files and navigation**
+
+- A translated page has the same path under the language folder: `quickstart.mdx` → `es/quickstart.mdx`,
+  `ca/quickstart.mdx`. Never rename or translate file names or slugs.
+- Each language has its own navigation in `docs.json` under `navigation.languages`. A new page must be added
+  to all three. Translate tab and group names there.
+- Prefix every internal link with the language: `/mission` → `/es/mission` (or `/ca/mission`). External links
+  and `/images/...` paths stay the same.
+- Anchors follow the translated heading: a link to `/es/mission#refine-it-with-tips` must use the slug of the
+  Spanish heading (for example `#ajústala-con-consejos`). Slugs are the heading in lowercase, punctuation
+  removed, spaces as hyphens; accents are kept.
+
+**What stays as-is**
+
+- MDX structure: every component, attribute other than `title`, icon, code block, table shape and image stays
+  identical. Translate `title="..."` attributes, Badge text, table cells and Card text.
+- UI labels in bold (**Start recruiting**, **Add a block**, the **Build › Recruit › Analyze** phases, picker
+  names like **Live website task**). The app is English only, so readers must see the exact English label.
+  Do not add translations in parentheses.
+- Product and plan names: Uxia, UXIA-Q, SUS, Figma, Jira, Free, Starter, Pro, Custom, MCP, SSO, SAML, SCIM.
+- Code and configuration. Natural-language prompt examples inside code blocks may be translated.
+
+**Style**
+
+- Spanish: neutral Spanish, addressed as *tú*. Catalan: standard Catalan, addressed as *tu*.
+- Titles and headings in sentence case (`Primeros pasos`, not `Primeros Pasos`).
+- Write natural prose, not a word-for-word rendering. Keep the meaning, facts, numbers and limits exact.
+- Dates: `octubre de 2026` (both languages). `Next: …` cards become `Siguiente: …` / `Següent: …`.
+
+**Glossary**
+
+| English | Spanish | Catalan |
+|---|---|---|
+| unmoderated test | test no moderado | test no moderat |
+| AI-moderated test | test moderado por IA | test moderat per IA |
+| test (noun) | test | test |
+| block | bloque | bloc |
+| Task block | bloque de tarea | bloc de tasca |
+| task (the field) | tarea | tasca |
+| Survey block | bloque de encuesta | bloc d'enquesta |
+| Card sorting block | bloque de card sorting | bloc de card sorting |
+| Accessibility check block | bloque de revisión de accesibilidad | bloc de revisió d'accessibilitat |
+| AI participants | participantes de IA | participants d'IA |
+| human participants | participantes humanos | participants humans |
+| participant | participante | participant |
+| human panel | panel humano | panell humà |
+| test link | enlace de test | enllaç de test |
+| audience | audiencia | audiència |
+| enrichment | enriquecimiento | enriquiment |
+| credits | créditos | crèdits |
+| paid plans | planes de pago | plans de pagament |
+| workspace | espacio de trabajo | espai de treball |
+| organization | organización | organització |
+| project | proyecto | projecte |
+| results | resultados | resultats |
+| insights | insights | insights |
+| transcript | transcripción | transcripció |
+| benchmarks | benchmarks | benchmarks |
+| test scenario | escenario de test | escenari de test |
+| stop condition | condición de parada | condició d'aturada |
+| live website | sitio web en producción | lloc web en producció |
+| prototype | prototipo | prototip |
+| frame (screen) | frame | frame |
+| viewport | viewport | viewport |
+| think aloud | pensar en voz alta | pensar en veu alta |
+| launch (a test) | lanzar | llançar |
+| credentials | credenciales | credencials |
+| integration | integración | integració |
+| webhook | webhook | webhook |
+| accessibility | accesibilidad | accessibilitat |
+| conformance level | nivel de conformidad | nivell de conformitat |
+| subprocessor | subencargado del tratamiento | subencarregat del tractament |
+| data processing addendum | anexo de tratamiento de datos (DPA) | annex de tractament de dades (DPA) |
