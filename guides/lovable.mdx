@@ -3,15 +3,22 @@ title: "Lovable"
 description: "Connect Uxia to Lovable through MCP to test the apps you build."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 ## Setup
 
 1. In Lovable, go to **Settings \> Connectors \> Personal connectors**.
 2. Click **New MCP server**.
 3. Enter **Uxia** as the name.
 4. Paste the server URL:
+   <RegionalUrl block value={"https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```plaintext
    https://platform.uxia.app/api/mcp-v2/mcp
    ```
+   </Visibility>
 5. On first use, a browser window will open automatically. Sign in with your Uxia account to authorize access.
 
 ## Usage

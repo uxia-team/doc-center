@@ -4,12 +4,18 @@ sidebarTitle: "Antigravity"
 description: "Verbinden Sie Uxia über MCP mit Antigravity 2.0 und der Antigravity IDE, um Tests zu erstellen und Ergebnisse zu lesen."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 ## Antigravity 2.0
 
 ### Einrichtung
 
 1. Öffnen Sie die MCP-Konfigurationsdatei unter `~/.gemini/config/mcp_config.json` (legen Sie die Datei an, falls sie nicht existiert).
 2. Fügen Sie den UXIA-Server zum Objekt `mcpServers` hinzu:
+   <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"serverUrl\": \"https://platform.uxia.app/api/mcp-v2/mcp\"\n    }\n  }\n}"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```json
    {
      "mcpServers": {
@@ -19,6 +25,7 @@ description: "Verbinden Sie Uxia über MCP mit Antigravity 2.0 und der Antigravi
      }
    }
    ```
+   </Visibility>
 3. Gehen Sie in Antigravity zu **Settings** \> **Customizations**.
 4. Scrollen Sie nach unten zu **Installed MCP Servers** und klicken Sie auf **Refresh**.
 5. Klicken Sie neben dem Uxia-Eintrag auf **Authenticate**.
@@ -40,6 +47,10 @@ Erstelle einen neuen Test für meine neue App auf www.example.com
 
 1. Öffnen Sie die MCP-Konfigurationsdatei unter `~/.gemini/config/mcp_config.json` (legen Sie die Datei an, falls sie nicht existiert).
 2. Fügen Sie den Uxia-Server zum Objekt `mcpServers` hinzu:
+   <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"serverUrl\": \"https://platform.uxia.app/api/mcp-v2/mcp\"\n    }\n  }\n}"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```json
    {
      "mcpServers": {
@@ -49,6 +60,7 @@ Erstelle einen neuen Test für meine neue App auf www.example.com
      }
    }
    ```
+   </Visibility>
 3. Öffnen Sie **User Settings**, indem Sie oben rechts auf das Zahnradsymbol klicken.
 4. Klicken Sie auf **Customizations**.
 5. Scrollen Sie nach unten zu **Installed MCP Servers** und klicken Sie auf **Refresh**.

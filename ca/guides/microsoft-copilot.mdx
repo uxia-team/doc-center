@@ -4,6 +4,8 @@ sidebarTitle: "Microsoft Copilot"
 description: "Afegeix Uxia a un agent de Copilot Studio amb MCP i fes-lo servir a Microsoft 365 Copilot i a Teams per crear tests i consultar resultats."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 Microsoft Copilot es connecta a servidors MCP mitjançant agents que crees a [Microsoft Copilot Studio](https://copilotstudio.microsoft.com). Afegeix Uxia com a eina d'un agent de Copilot Studio i podràs fer servir aquest agent a Microsoft 365 Copilot i a Microsoft Teams per crear tests, comprovar-ne el progrés i portar els resultats d'Uxia a les teves converses.
 
 ## Abans de començar
@@ -31,7 +33,7 @@ Necessites:
     | --- | --- |
     | **Server name** | `Uxia` |
     | **Server description** | `Creates and launches Uxia usability tests, manages audiences, and reads test results, insights, and transcripts.` |
-    | **Server URL** | `https://platform.uxia.app/api/mcp-v2/mcp` |
+    | **Server URL** | <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> |
 
     Copilot fa servir la descripció per decidir quan ha de cridar Uxia, així que fes-la clara i concreta.
   </Step>
@@ -83,7 +85,7 @@ Prova l'agent al xat de prova de Copilot Studio abans de compartir-lo. Demana-li
 
 ## Resolució de problemes
 
-- **Uxia no apareix com a eina.** Comprova que la URL del servidor sigui exactament `https://platform.uxia.app/api/mcp-v2/mcp` i que les polítiques de dades de la teva organització permetin la connexió.
+- **Uxia no apareix com a eina.** Comprova que la URL del servidor sigui exactament <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> i que les polítiques de dades de la teva organització permetin la connexió.
 - **L'opció Model Context Protocol no està disponible.** És possible que l'assistent de configuració MCP encara no estigui activat al teu entorn de Copilot Studio. Contacta amb l'administrador de Microsoft de la teva organització.
 - **Se't demana que tornis a iniciar sessió.** La teva autorització d'Uxia ha caducat o s'ha revocat. Inicia sessió a Uxia i torna a fer clic a **Authorize**.
 - **L'agent de Teams no mostra els teus últims canvis.** Torna a publicar l'agent a Copilot Studio i escriu **Start over** al xat per començar una conversa nova.

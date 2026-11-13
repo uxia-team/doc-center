@@ -4,6 +4,8 @@ sidebarTitle: "Microsoft Copilot"
 description: "Add Uxia to a Copilot Studio agent through MCP, then use it in Microsoft 365 Copilot and Teams to create tests and read results."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 Microsoft Copilot connects to MCP servers through agents you build in [Microsoft Copilot Studio](https://copilotstudio.microsoft.com). Add Uxia as a tool on a Copilot Studio agent, and you can use that agent in Microsoft 365 Copilot and Microsoft Teams to create tests, check progress, and bring Uxia results into your conversations.
 
 ## Before you begin
@@ -31,7 +33,7 @@ You need:
     | --- | --- |
     | **Server name** | `Uxia` |
     | **Server description** | `Creates and launches Uxia usability tests, manages audiences, and reads test results, insights, and transcripts.` |
-    | **Server URL** | `https://platform.uxia.app/api/mcp-v2/mcp` |
+    | **Server URL** | <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> |
 
     Copilot uses the description to decide when to call Uxia, so keep it clear and specific.
   </Step>
@@ -83,7 +85,7 @@ Test the agent in Copilot Studio's test chat before you share it. Ask something 
 
 ## Troubleshooting
 
-- **Uxia doesn't appear as a tool.** Confirm the server URL is exactly `https://platform.uxia.app/api/mcp-v2/mcp`, and that your organization's data policies allow the connection.
+- **Uxia doesn't appear as a tool.** Confirm the server URL is exactly <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" />, and that your organization's data policies allow the connection.
 - **The Model Context Protocol option isn't available.** The MCP onboarding wizard may not be enabled in your Copilot Studio environment yet. Contact your Microsoft admin.
 - **You're asked to sign in again.** Your Uxia authorization expired or was revoked. Sign in to Uxia and click **Authorize** again.
 - **The agent in Teams doesn't reflect your latest changes.** Republish the agent in Copilot Studio, then type **Start over** in the chat to begin a new conversation.

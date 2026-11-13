@@ -4,6 +4,8 @@ sidebarTitle: "Cursor"
 description: "Connect Uxia to Cursor through MCP to create tests and bring results, transcripts, and UX insights into Cursor Chat."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 Uxia's MCP server connects your workspace to Cursor so you can bring test results, transcripts, and UX insights into your coding and design conversations.
 
 ## Before you begin
@@ -21,6 +23,10 @@ You need:
   <Step title="Add the Uxia server configuration">
     Paste the following JSON configuration:
 
+    <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"type\": \"http\",\n      \"url\": \"https://platform.uxia.app/api/mcp-v2/mcp\",\n      \"headers\": {}\n    }\n  }\n}"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```json
     {
       "mcpServers": {
@@ -32,6 +38,7 @@ You need:
       }
     }
     ```
+    </Visibility>
 
     If you already have MCP servers configured, add the `Uxia` entry inside the existing `mcpServers` object.
   </Step>
@@ -63,7 +70,7 @@ Once connected, Cursor can use your Uxia data as context while you work:
 
 ## Troubleshooting
 
-If Uxia does not appear as connected in Cursor, confirm the URL is exactly `https://platform.uxia.app/api/mcp-v2/mcp`, save the MCP server configuration, then restart Cursor. If authentication does not open automatically, disable and re-enable the Uxia server from **Customize**.
+If Uxia does not appear as connected in Cursor, confirm the URL is exactly <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" />, save the MCP server configuration, then restart Cursor. If authentication does not open automatically, disable and re-enable the Uxia server from **Customize**.
 
 <Card title="MCP getting started" icon="plug" href="/integrations/mcp">
   Learn about Uxia MCP access, supported clients, and general setup.

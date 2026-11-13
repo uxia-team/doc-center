@@ -4,6 +4,8 @@ sidebarTitle: "Cursor"
 description: "Verbinden Sie Uxia über MCP mit Cursor, um Tests zu erstellen und Ergebnisse, Transkripte und UX-Insights in den Cursor-Chat zu holen."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 Der MCP-Server von Uxia verbindet Ihren Workspace mit Cursor. So holen Sie Testergebnisse, Transkripte und UX-Insights in Ihre Unterhaltungen über Code und Design.
 
 ## Bevor Sie beginnen
@@ -21,6 +23,10 @@ Sie benötigen:
   <Step title="Die Uxia-Serverkonfiguration hinzufügen">
     Fügen Sie die folgende JSON-Konfiguration ein:
 
+    <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"type\": \"http\",\n      \"url\": \"https://platform.uxia.app/api/mcp-v2/mcp\",\n      \"headers\": {}\n    }\n  }\n}"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```json
     {
       "mcpServers": {
@@ -32,6 +38,7 @@ Sie benötigen:
       }
     }
     ```
+    </Visibility>
 
     Wenn Sie bereits MCP-Server konfiguriert haben, fügen Sie den Eintrag `Uxia` in das bestehende Objekt `mcpServers` ein.
   </Step>
@@ -63,7 +70,7 @@ Nach der Verbindung kann Cursor Ihre Uxia-Daten bei der Arbeit als Kontext nutze
 
 ## Fehlerbehebung
 
-Wenn Uxia in Cursor nicht als verbunden angezeigt wird, prüfen Sie, ob die URL genau `https://platform.uxia.app/api/mcp-v2/mcp` lautet, speichern Sie die MCP-Serverkonfiguration und starten Sie Cursor neu. Wenn sich die Authentifizierung nicht automatisch öffnet, deaktivieren Sie den Uxia-Server unter **Customize** und aktivieren Sie ihn wieder.
+Wenn Uxia in Cursor nicht als verbunden angezeigt wird, prüfen Sie, ob die URL genau <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> lautet, speichern Sie die MCP-Serverkonfiguration und starten Sie Cursor neu. Wenn sich die Authentifizierung nicht automatisch öffnet, deaktivieren Sie den Uxia-Server unter **Customize** und aktivieren Sie ihn wieder.
 
 <Card title="Erste Schritte mit MCP" icon="plug" href="/de/integrations/mcp">
   Erfahren Sie mehr über den MCP-Zugriff von Uxia, unterstützte Clients und die allgemeine Einrichtung.

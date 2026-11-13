@@ -4,14 +4,21 @@ sidebarTitle: "Claude"
 description: "Conecta Uxia a Claude Code y Claude Desktop mediante MCP para crear tests y consultar resultados desde Claude."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 ## Claude Code
 
 ### Configuración
 
 1. Ejecuta este comando en tu terminal para registrar el servidor MCP de Uxia:
+   <RegionalUrl block value={"claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```bash
    claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
    ```
+   </Visibility>
 
 Inicia una nueva sesión de Claude Code en tu terminal. En la lista de servidores MCP, selecciona **Uxia**.
 
@@ -39,9 +46,14 @@ Crea un test nuevo para probar mi nueva app en www.example.com
 3. Haz clic en **Add custom connector**.
 4. Escribe **Uxia** como nombre.
 5. Pega la URL del servidor:
+   <RegionalUrl block value={"https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```plaintext
    https://platform.uxia.app/api/mcp-v2/mcp
    ```
+   </Visibility>
 6. Haz clic en **Add**.
 7. La primera vez que lo uses, se abrirá automáticamente una ventana del navegador. Inicia sesión con tu cuenta de Uxia para autorizar el acceso.
 
