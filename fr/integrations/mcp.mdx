@@ -4,6 +4,8 @@ sidebarTitle: "Premiers pas"
 description: "Utilisez le serveur MCP d'Uxia pour créer et lancer des tests, gérer les audiences et lire les résultats depuis Claude Code, Cursor, Codex, v0 et autres."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 Le serveur MCP d'Uxia permet à vos outils d'IA préférés de communiquer directement avec votre espace de travail Uxia. Une fois connectés, Claude Code, Cursor, Codex, v0 et les autres clients [Model Context Protocol](https://modelcontextprotocol.io) peuvent travailler avec Uxia dans la même conversation où vous écrivez du code ou itérez sur un design, sans copier-coller ni changer de contexte.
 
 ## Ce que vous pouvez faire
@@ -40,14 +42,23 @@ La connexion d'Uxia se fait en trois étapes : choisissez l'outil d'IA à utilis
 
     Exécutez cette commande dans votre terminal :
 
+    <RegionalUrl block value={"claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```bash
     claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
 
     #### Cursor
 
     Dans Cursor, ouvrez **Customize** et ajoutez un serveur MCP personnalisé, ou modifiez directement `~/.cursor/mcp.json`. Ajoutez cette entrée à l'objet `mcpServers` :
 
+    <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"type\": \"http\",\n      \"url\": \"https://platform.uxia.app/api/mcp-v2/mcp\",\n      \"headers\": {}\n    }\n  }\n}"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```json
     {
       "mcpServers": {
@@ -59,26 +70,37 @@ La connexion d'Uxia se fait en trois étapes : choisissez l'outil d'IA à utilis
       }
     }
     ```
+    </Visibility>
 
     #### Codex
 
     Exécutez cette commande dans votre terminal :
 
+    <RegionalUrl block value={"codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```bash
     codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
 
     #### Microsoft Copilot
 
-    Dans Copilot Studio, ouvrez la page **Tools** de votre agent et sélectionnez **Add a tool** › **New tool** › **Model Context Protocol**. Utilisez `https://platform.uxia.app/api/mcp-v2/mcp` comme **Server URL** et **OAuth 2.0** avec **Dynamic discovery** pour l'authentification. Consultez le [guide Microsoft Copilot](/fr/guides/microsoft-copilot) pour toutes les étapes, y compris l'utilisation de l'agent dans Microsoft 365 Copilot et Teams.
+    Dans Copilot Studio, ouvrez la page **Tools** de votre agent et sélectionnez **Add a tool** › **New tool** › **Model Context Protocol**. Utilisez <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> comme **Server URL** et **OAuth 2.0** avec **Dynamic discovery** pour l'authentification. Consultez le [guide Microsoft Copilot](/fr/guides/microsoft-copilot) pour toutes les étapes, y compris l'utilisation de l'agent dans Microsoft 365 Copilot et Teams.
 
     #### Autres
 
     Ajoutez un nouveau serveur MCP HTTP et collez l'URL ci-dessous.
 
+    <RegionalUrl block value={"https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```text
     https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
   </Step>
   <Step title="Authentifiez-vous">
     La première fois que votre client appelle le serveur MCP d'Uxia, vous êtes redirigé pour vous connecter à Uxia et cliquer sur **Authorize**. Votre outil d'IA dispose ensuite d'un accès limité aux tests, aux audiences et aux résultats de votre espace de travail.

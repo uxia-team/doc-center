@@ -4,12 +4,18 @@ sidebarTitle: "Antigravity"
 description: "Conecta Uxia a Antigravity 2.0 y al IDE de Antigravity mediante MCP para crear tests y consultar resultados."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 ## Antigravity 2.0
 
 ### Configuración
 
 1. Abre el archivo de configuración de MCP en `~/.gemini/config/mcp_config.json` (créalo si no existe).
 2. Añade el servidor de UXIA al objeto `mcpServers`:
+   <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"serverUrl\": \"https://platform.uxia.app/api/mcp-v2/mcp\"\n    }\n  }\n}"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```json
    {
      "mcpServers": {
@@ -19,6 +25,7 @@ description: "Conecta Uxia a Antigravity 2.0 y al IDE de Antigravity mediante MC
      }
    }
    ```
+   </Visibility>
 3. En Antigravity, ve a **Settings** \> **Customizations**.
 4. Desplázate hasta **Installed MCP Servers** y haz clic en **Refresh**.
 5. Haz clic en **Authenticate** junto a la entrada de Uxia.
@@ -40,6 +47,10 @@ Crea un test nuevo para probar mi nueva app en www.example.com
 
 1. Abre el archivo de configuración de MCP en `~/.gemini/config/mcp_config.json` (créalo si no existe).
 2. Añade el servidor de Uxia al objeto `mcpServers`:
+   <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"serverUrl\": \"https://platform.uxia.app/api/mcp-v2/mcp\"\n    }\n  }\n}"} />
+
+   <Visibility for="agents">
+   Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
    ```json
    {
      "mcpServers": {
@@ -49,6 +60,7 @@ Crea un test nuevo para probar mi nueva app en www.example.com
      }
    }
    ```
+   </Visibility>
 3. Abre **User Settings** haciendo clic en el icono del engranaje de la esquina superior derecha.
 4. Haz clic en **Customizations**.
 5. Desplázate hasta **Installed MCP Servers** y haz clic en **Refresh**.

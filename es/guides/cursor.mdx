@@ -4,6 +4,8 @@ sidebarTitle: "Cursor"
 description: "Conecta Uxia a Cursor mediante MCP para crear tests y llevar resultados, transcripciones e insights de UX a Cursor Chat."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 El servidor MCP de Uxia conecta tu espacio de trabajo con Cursor para que puedas llevar los resultados de tus tests, las transcripciones y los insights de UX a tus conversaciones de programación y diseño.
 
 ## Antes de empezar
@@ -21,6 +23,10 @@ Necesitas:
   <Step title="Añade la configuración del servidor de Uxia">
     Pega esta configuración JSON:
 
+    <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"type\": \"http\",\n      \"url\": \"https://platform.uxia.app/api/mcp-v2/mcp\",\n      \"headers\": {}\n    }\n  }\n}"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```json
     {
       "mcpServers": {
@@ -32,6 +38,7 @@ Necesitas:
       }
     }
     ```
+    </Visibility>
 
     Si ya tienes servidores MCP configurados, añade la entrada `Uxia` dentro del objeto `mcpServers` existente.
   </Step>
@@ -63,7 +70,7 @@ Una vez conectado, Cursor puede usar tus datos de Uxia como contexto mientras tr
 
 ## Solución de problemas
 
-Si Uxia no aparece como conectado en Cursor, comprueba que la URL sea exactamente `https://platform.uxia.app/api/mcp-v2/mcp`, guarda la configuración del servidor MCP y reinicia Cursor. Si la autenticación no se abre automáticamente, desactiva y vuelve a activar el servidor de Uxia desde **Customize**.
+Si Uxia no aparece como conectado en Cursor, comprueba que la URL sea exactamente <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" />, guarda la configuración del servidor MCP y reinicia Cursor. Si la autenticación no se abre automáticamente, desactiva y vuelve a activar el servidor de Uxia desde **Customize**.
 
 <Card title="Primeros pasos con MCP" icon="plug" href="/es/integrations/mcp">
   Descubre cómo funciona el acceso MCP de Uxia, qué clientes son compatibles y cómo hacer la configuración general.

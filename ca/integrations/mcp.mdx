@@ -4,6 +4,8 @@ sidebarTitle: "Primers passos"
 description: "Fes servir el servidor MCP d'Uxia per crear i llançar tests, gestionar audiències i consultar resultats des de Claude Code, Cursor, Codex, v0 i més."
 ---
 
+import { RegionalUrl } from "/snippets/regional-url.jsx";
+
 El servidor MCP d'Uxia permet que les teves eines d'IA preferides es comuniquin directament amb el teu espai de treball d'Uxia. Un cop connectats, Claude Code, Cursor, Codex, v0 i altres clients del [Model Context Protocol](https://modelcontextprotocol.io) poden treballar amb Uxia al mateix xat on escrius codi o iteres sobre el disseny, sense copiar i enganxar ni canviar de context.
 
 ## Què pots fer
@@ -40,14 +42,23 @@ Connectar Uxia té tres passos: tria l'eina d'IA que vols fer servir, registra e
 
     Executa aquesta ordre al terminal:
 
+    <RegionalUrl block value={"claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```bash
     claude mcp add uxia --scope user --transport http https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
 
     #### Cursor
 
     A Cursor, obre **Customize** i afegeix un servidor MCP personalitzat, o edita directament `~/.cursor/mcp.json`. Afegeix aquesta entrada a l'objecte `mcpServers`:
 
+    <RegionalUrl block value={"{\n  \"mcpServers\": {\n    \"Uxia\": {\n      \"type\": \"http\",\n      \"url\": \"https://platform.uxia.app/api/mcp-v2/mcp\",\n      \"headers\": {}\n    }\n  }\n}"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```json
     {
       "mcpServers": {
@@ -59,26 +70,37 @@ Connectar Uxia té tres passos: tria l'eina d'IA que vols fer servir, registra e
       }
     }
     ```
+    </Visibility>
 
     #### Codex
 
     Executa aquesta ordre al terminal:
 
+    <RegionalUrl block value={"codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```bash
     codex mcp add uxia --url https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
 
     #### Microsoft Copilot
 
-    A Copilot Studio, obre la pàgina **Tools** del teu agent i selecciona **Add a tool** › **New tool** › **Model Context Protocol**. Fes servir `https://platform.uxia.app/api/mcp-v2/mcp` com a **Server URL**, i **OAuth 2.0** amb **Dynamic discovery** per a l'autenticació. Consulta la [guia de Microsoft Copilot](/ca/guides/microsoft-copilot) per veure tots els passos, inclòs com fer servir l'agent a Microsoft 365 Copilot i a Teams.
+    A Copilot Studio, obre la pàgina **Tools** del teu agent i selecciona **Add a tool** › **New tool** › **Model Context Protocol**. Fes servir <RegionalUrl value="https://platform.uxia.app/api/mcp-v2/mcp" /> com a **Server URL**, i **OAuth 2.0** amb **Dynamic discovery** per a l'autenticació. Consulta la [guia de Microsoft Copilot](/ca/guides/microsoft-copilot) per veure tots els passos, inclòs com fer servir l'agent a Microsoft 365 Copilot i a Teams.
 
     #### Altres
 
     Afegeix un servidor MCP HTTP nou i enganxa-hi aquesta URL.
 
+    <RegionalUrl block value={"https://platform.uxia.app/api/mcp-v2/mcp"} />
+
+    <Visibility for="agents">
+    Use the endpoint for the account region: US uses `https://platform.uxia.app`; EU uses `https://eu.uxia.app`.
     ```text
     https://platform.uxia.app/api/mcp-v2/mcp
     ```
+    </Visibility>
   </Step>
   <Step title="Autentica't">
     La primera vegada que el teu client cridi el servidor MCP d'Uxia, se't redirigirà perquè iniciïs sessió a Uxia i facis clic a **Authorize**. A partir d'aquí, la teva eina d'IA té accés limitat als tests, les audiències i els resultats del teu espai de treball.
